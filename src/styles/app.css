@@ -516,8 +516,8 @@ textarea {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: 24px;
-  height: 24px;
+  width: 22px;
+  height: 22px;
   padding: 0;
   border-radius: 999px;
   background: var(--color-surface-raised);
@@ -529,7 +529,7 @@ button.marker-chip {
 }
 
 button.marker-chip:hover {
-  transform: scale(1.15);
+  transform: scale(1.5);
 }
 
 .marker-chip.light {
