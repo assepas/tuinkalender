@@ -70,11 +70,15 @@ te testen en zelfs te hergebruiken buiten deze app.
 
 - **Maandoverzicht** — per maand een kaart met wat er die maand te doen is.
   Handig voor "wat moet ik nu doen".
-- **Tijdlijn** — per plant één rij met een iconenstrip: bloeiperiode (in
-  bloemkleur), en per taaktype een eigen "lane" over de 12 maanden (balk,
-  icoon of stip, afhankelijk van het taaktype). Handig voor "hoe ziet het
-  jaar van deze plant eruit". Klik op het plant-icoon voor soortinfo, of op
-  een taak-/bloei-marker voor de details van die specifieke taak.
+- **Tijdlijn** — per plant één regel over de 12 maanden: de bloeiperiode is
+  een doorlopende balk in bloemkleur, en de taken staan als icoontjes per
+  maand eroverheen (bij meerdere taken in één maand naast elkaar). Elke soort
+  staat er maar één keer op, ook als je hem meerdere keren in je tuin hebt.
+  Alleen de taaktypes met `"timeline": true` doen mee: zaaien (kas / volle
+  grond), planten, bemesten, snoeien (hoofd / licht), oogsten en overig
+  onderhoud.
+  Klik op het plant-icoon voor soortinfo, of op een icoon/de bloeibalk voor
+  de details.
 
 ## Een nieuwe plant toevoegen
 
@@ -108,9 +112,13 @@ plant verschijnt gewoon zonder badge/bloei-lane in de tijdlijn. Waarden:
 - `appearance.shape`: `bloem` | `kruid` | `bes` | `boom` | `bol` | `struik`
   — bepaalt welk icoonsilhouet getekend wordt
 - `appearance.flowerColor`: een hex-kleur — kleurt zowel het plant-icoon als
-  de bloei-balk in de tijdlijn
-- Op een taak kan `"importance": "licht"` staan (standaard `"hoofd"`) om in
-  de tijdlijn onderscheid te maken tussen verplichte en optionele snoei
+  de bloei-balk in de tijdlijn. Lichte/witte kleuren krijgen automatisch een
+  donkerdere rand (`src/lib/domain/color.js`) zodat ze zichtbaar blijven
+- Op een snoeitaak kan `"importance": "licht"` staan (standaard `"hoofd"`) om
+  in de tijdlijn onderscheid te maken tussen verplichte en optionele snoei
+- Op een zaaitaak kan `"location": "kas"` staan (standaard `"grond"`, dus
+  volle grond) voor voorzaaien in de kas of binnen — die krijgt in de
+  tijdlijn een eigen icoon
 
 Drie soorten `window`:
 
@@ -132,19 +140,24 @@ bestandsnaam en reden.
 Voeg een regel toe aan `data/taskTypes.json`:
 
 ```json
-{ "id": "afdekken", "label": "Afdekken", "color": "#7A5C8C", "markerStyle": "icon", "icon": "snowflake" }
+{ "id": "afdekken", "label": "Afdekken", "color": "#7A5C8C", "icon": "snowflake", "timeline": true }
 ```
 
-- `markerStyle`: `bar` (doorlopende balk, voor iets continus zoals water
-  geven), `icon` (een icoontje per actieve maand) of `dot` (kleine stip,
-  zoals bij oogsten)
 - `icon`: één van de bestaande glyph-namen in `src/components/Icon.svelte`
-  (`seed`, `sprout`, `droplet`, `leaf`, `scissors`, `split`, `snowflake`,
-  `dot`, `dot-outline`) — voor een echt nieuw icoon voeg je daar één
-  `{#if name === "..."}`-tak toe
+  (`seed`, `seed-kas`, `sprout`, `droplet`, `leaf`, `scissors`, `split`,
+  `snowflake`, `basket`, `poop`, `ellipsis`, `dot`, `dot-outline`) — voor een echt nieuw icoon voeg je
+  daar één `{#if name === "..."}`-tak toe
+- `timeline`: `true` om het type als icoontje in de tijdlijn te tonen. Laat
+  het weg en het type staat alleen in het maandoverzicht en de printweergave.
+  De volgorde in dit bestand is de volgorde waarin icoontjes binnen één
+  maand naast elkaar komen.
+- Optioneel: varianten met een eigen label/icoon, gekozen op een veld van de
+  taak. Zie `zaaien` (`"variantBy": "location"`) en `snoeien`
+  (`"variantBy": "importance"`), met `"defaultVariant"` voor taken zonder
+  dat veld; `"light": true` op een variant tekent het icoon dun/gestippeld.
 
-Er is verder geen code die deze lijst kent — kleur, label en markerstijl in
-het maandoverzicht, de tijdlijn, de legenda en de printweergave komen
+Er is verder geen code die deze lijst kent — kleur en label in het
+maandoverzicht, de tijdlijn, de legenda en de printweergave komen
 automatisch mee.
 
 ## Een nieuwe regio toevoegen

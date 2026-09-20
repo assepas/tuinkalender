@@ -94,39 +94,59 @@ export function getBloomMonths(species) {
 }
 
 /**
- * Bouwt de rijen voor de tijdlijnweergave: per planting één rij met een
- * "lane" per informatiesoort (bloei + één lane per actief taaktype), elk met
- * de maanden waarin die lane speelt. Losstaand van buildCalendar() omdat de
- * tijdlijn per-plant/per-type geordend is, niet per-maand.
+ * Een taak kan binnen één taaktype een variant hebben (zaaien: kas/grond,
+ * snoeien: hoofd/licht). De variant geeft een eigen label/icoon; de
+ * kleur blijft die van het taaktype. Zonder variantBy is er één "variant"
+ * (het taaktype zelf).
+ */
+function resolveMarkerMeta(task, typeMeta) {
+  const key = typeMeta.variantBy ? (task[typeMeta.variantBy] ?? typeMeta.defaultVariant) : null;
+  const variant = key ? typeMeta.variants?.[key] : null;
+  const variantOrder = key ? Object.keys(typeMeta.variants ?? {}).indexOf(key) : 0;
+  return {
+    variantKey: key,
+    variantOrder,
+    meta: { ...typeMeta, ...variant },
+  };
+}
+
+/**
+ * Bouwt de rijen voor de tijdlijnweergave: per planting één rij met de
+ * bloeiperiode (een doorlopende balk) en per maand de taak-markers die daar
+ * overheen komen. Elke soort komt maar één keer voor (de eerste planting wint). Losstaand van buildCalendar() omdat de tijdlijn per plant
+ * is opgebouwd, niet per maand.
  *
- * @param {string[]} taskTypeOrder  taaktype-id's in de volgorde waarin lanes getoond moeten worden
+ * @param {string[]} taskTypeOrder  taaktype-id's die getoond worden, in de volgorde waarin markers
+ *   binnen één maand naast elkaar komen. Taaktypes die hier niet in staan blijven weg.
+ * @returns {Array<{ planting: object, species: object, bloom: { months: number[], color: string } | null,
+ *   cells: Array<Array<{ taskType: string, variantKey: string | null, meta: object, entry: object }>> }>}
+ *   `cells[m - 1]` zijn de markers van maand `m`.
  */
 export function buildTimelineRows(garden, speciesIndex, taskTypeIndex, regionProfile, taskTypeOrder) {
   const orderIndex = new Map(taskTypeOrder.map((id, i) => [id, i]));
   const rows = [];
+  const seenSpecies = new Set();
 
   for (const planting of garden.plantings ?? []) {
     const species = speciesIndex[planting.speciesId];
     if (!species) continue;
 
+    // Elke soort maar één keer: bij meerdere plantingen van dezelfde soort telt de eerste.
+    if (seenSpecies.has(species.id)) continue;
+    seenSpecies.add(species.id);
+
     const muted = new Set(planting.mutedTasks ?? []);
     const tasks = [
       ...species.tasks.filter((t) => !muted.has(t.id)),
       ...(planting.extraTasks ?? []),
-    ].filter((t) => conditionMatches(t.conditions, planting));
-
-    const lanes = [];
+    ].filter((t) => orderIndex.has(t.type) && conditionMatches(t.conditions, planting));
 
     const bloomMonths = getBloomMonths(species);
-    if (bloomMonths) {
-      lanes.push({
-        kind: "bloom",
-        months: bloomMonths,
-        color: species.appearance?.flowerColor ?? "#8A8672",
-      });
-    }
+    const bloom = bloomMonths
+      ? { months: bloomMonths, color: species.appearance?.flowerColor ?? "#8A8672" }
+      : null;
 
-    const byType = new Map();
+    const cells = Array.from({ length: 12 }, () => []);
     for (const task of tasks) {
       let evaluated;
       try {
@@ -135,18 +155,23 @@ export function buildTimelineRows(garden, speciesIndex, taskTypeIndex, regionPro
         console.warn(`[timeline] kon taak "${task.id}" van "${species.id}" niet evalueren:`, err.message);
         continue;
       }
+      const typeMeta = taskTypeIndex[task.type];
+      if (!typeMeta) continue;
+
+      const { variantKey, variantOrder, meta } = resolveMarkerMeta(task, typeMeta);
       const entry = { task, months: evaluated.months, frequency: evaluated.frequency ?? null };
-      if (!byType.has(task.type)) byType.set(task.type, []);
-      byType.get(task.type).push(entry);
+      for (const m of evaluated.months) {
+        cells[m - 1].push({ taskType: task.type, variantKey, variantOrder, meta, entry });
+      }
     }
 
-    const taskLanes = [...byType.entries()]
-      .map(([type, entries]) => ({ kind: "task", taskType: type, meta: taskTypeIndex[type], entries }))
-      .sort((a, b) => (orderIndex.get(a.taskType) ?? 99) - (orderIndex.get(b.taskType) ?? 99));
+    for (const cell of cells) {
+      cell.sort(
+        (a, b) => orderIndex.get(a.taskType) - orderIndex.get(b.taskType) || a.variantOrder - b.variantOrder
+      );
+    }
 
-    lanes.push(...taskLanes);
-
-    rows.push({ planting, species, lanes });
+    rows.push({ planting, species, bloom, cells });
   }
 
   return rows;

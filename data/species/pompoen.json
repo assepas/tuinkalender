@@ -9,7 +9,7 @@
   "appearance": { "shape": "bloem", "flowerColor": "#E8873A", "flowerColorName": "oranje" },
   "bloom": { "from": "07-01", "to": "08-15" },
   "tasks": [
-    { "id": "zaaien-voor", "type": "zaaien", "window": { "kind": "dates", "from": "04-15", "to": "05-01" }, "note": "Voorzaaien binnen" },
+    { "id": "zaaien-voor", "type": "zaaien", "location": "kas", "window": { "kind": "dates", "from": "04-15", "to": "05-01" }, "note": "Voorzaaien binnen" },
     { "id": "uitplanten", "type": "planten", "window": { "kind": "relative", "anchor": "lastFrost", "fromWeeks": 1, "toWeeks": 3 } },
     { "id": "water", "type": "water", "window": { "kind": "recurring", "from": "06-01", "to": "09-01", "every": "week" } },
     { "id": "bemesten", "type": "bemesten", "window": { "kind": "dates", "from": "06-01", "to": "07-15" } },

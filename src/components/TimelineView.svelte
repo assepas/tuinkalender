@@ -1,5 +1,6 @@
 <script>
   import { buildTimelineRows, MONTH_NAMES } from "../lib/domain/calendar.js";
+  import { outlineColor } from "../lib/domain/color.js";
   import { toVisualSegments } from "../lib/domain/windows.js";
   import { speciesIndex, taskTypes, taskTypeIndex } from "../lib/generated/data.js";
   import { gardenState } from "../lib/state/garden.svelte.js";
@@ -8,7 +9,16 @@
   import NativeBadge from "./NativeBadge.svelte";
   import PlantIcon from "./PlantIcon.svelte";
 
-  const taskTypeOrder = taskTypes.map((t) => t.id);
+  // Alleen taaktypes met "timeline": true in taskTypes.json komen in de tijdlijn.
+  const timelineTypes = taskTypes.filter((t) => t.timeline);
+  const taskTypeOrder = timelineTypes.map((t) => t.id);
+
+  // Legenda: elk taaktype, of per variant als het type varianten heeft.
+  const legendItems = timelineTypes.flatMap((t) =>
+    t.variants
+      ? Object.entries(t.variants).map(([key, v]) => ({ ...t, ...v, key: `${t.id}-${key}` }))
+      : [{ key: t.id, ...t }]
+  );
   const MONTH_SHORT = MONTH_NAMES.map((m) => m.slice(0, 3));
 
   let rows = $derived(
@@ -21,18 +31,18 @@
     selected = { kind: "species", species: row.species, planting: row.planting };
   }
 
-  function showBloom(row, lane) {
-    selected = { kind: "bloom", species: row.species, planting: row.planting, months: lane.months };
+  function showBloom(row) {
+    selected = { kind: "bloom", species: row.species, planting: row.planting, months: row.bloom.months };
   }
 
-  function showTask(row, lane, entry) {
+  function showTask(row, marker) {
     selected = {
       kind: "task",
       species: row.species,
       planting: row.planting,
-      taskType: lane.taskType,
-      meta: lane.meta,
-      entry,
+      taskType: marker.taskType,
+      meta: marker.meta,
+      entry: marker.entry,
     };
   }
 </script>
@@ -42,18 +52,12 @@
     <span class="legend-swatch bloom-swatch"></span>
     Bloei (in bloemkleur)
   </span>
-  <span class="legend-item">
-    <Icon name="scissors" color="var(--color-ink)" size={15} strokeWidth={2} />
-    hoofdsnoei
-  </span>
-  <span class="legend-item">
-    <span class="light-icon"><Icon name="scissors" color="var(--color-ink-faint)" size={15} strokeWidth={1.3} /></span>
-    lichte/optionele snoei
-  </span>
-  {#each taskTypes.filter((t) => t.id !== "snoeien") as type (type.id)}
+  {#each legendItems as item (item.key)}
     <span class="legend-item">
-      <Icon name={type.icon} color={type.color} size={15} />
-      {type.label}
+      <span class="marker-chip" class:light={item.light}>
+        <Icon name={item.icon} color={item.color} size={12} strokeWidth={item.light ? 1.2 : 1.8} />
+      </span>
+      {item.label}
     </span>
   {/each}
   <span class="hint">Klik op een plant- of taakicoon voor details.</span>
@@ -86,79 +90,43 @@
           <NativeBadge status={row.species.nativeStatus} />
         </button>
 
-        <div class="timeline-lanes">
-          {#each row.lanes as lane (lane.kind + (lane.taskType ?? ""))}
-            <div class="timeline-lane">
-              <span class="lane-icon">
-                {#if lane.kind === "bloom"}
-                  <span class="lane-bloom-dot" style:background={lane.color}></span>
-                {:else}
-                  <Icon name={lane.meta?.icon ?? "dot"} color={lane.meta?.color ?? "#999"} size={14} />
-                {/if}
-              </span>
-              <div class="lane-track">
-                {#if lane.kind === "bloom"}
-                  {#each toVisualSegments(lane.months) as [start, end] (start)}
-                    <button
-                      type="button"
-                      class="lane-bar bloom-bar"
-                      style:grid-column={`${start} / ${end + 1}`}
-                      style:background={lane.color}
-                      style:border-color={`${lane.color}99`}
-                      onclick={() => showBloom(row, lane)}
-                      title="Bloei"
-                    ></button>
-                  {/each}
-                {:else if lane.meta?.markerStyle === "bar"}
-                  {#each lane.entries as entry (entry.task.id)}
-                    {#each toVisualSegments(entry.months) as [start, end] (start)}
-                      <button
-                        type="button"
-                        class="lane-bar"
-                        style:grid-column={`${start} / ${end + 1}`}
-                        style:background={lane.meta.color}
-                        onclick={() => showTask(row, lane, entry)}
-                        title={lane.meta.label}
-                      ></button>
-                    {/each}
-                  {/each}
-                {:else if lane.meta?.markerStyle === "dot"}
-                  {#each lane.entries as entry (entry.task.id)}
-                    {#each entry.months as m}
-                      <button
-                        type="button"
-                        class="lane-marker"
-                        style:grid-column={`${m} / ${m + 1}`}
-                        onclick={() => showTask(row, lane, entry)}
-                        title={lane.meta.label}
-                      >
-                        <Icon name="dot" color={lane.meta.color} size={9} />
-                      </button>
-                    {/each}
-                  {/each}
-                {:else}
-                  {#each lane.entries as entry (entry.task.id)}
-                    {#each entry.months as m}
-                      <button
-                        type="button"
-                        class="lane-marker"
-                        class:light={entry.task.importance === "licht"}
-                        style:grid-column={`${m} / ${m + 1}`}
-                        onclick={() => showTask(row, lane, entry)}
-                        title={lane.meta.label}
-                      >
-                        <Icon
-                          name={lane.meta.icon}
-                          color={lane.meta.color}
-                          size={13}
-                          strokeWidth={entry.task.importance === "licht" ? 1.2 : 1.8}
-                        />
-                      </button>
-                    {/each}
-                  {/each}
-                {/if}
+        <div class="lane-track">
+          {#if row.bloom}
+            {#each toVisualSegments(row.bloom.months) as [start, end] (start)}
+              <button
+                type="button"
+                class="bloom-bar"
+                style:grid-column={`${start} / ${end + 1}`}
+                style:background={row.bloom.color}
+                style:border-color={outlineColor(row.bloom.color)}
+                onclick={() => showBloom(row)}
+                title="Bloei"
+                aria-label="Bloei"
+              ></button>
+            {/each}
+          {/if}
+          {#each row.cells as markers, i}
+            {#if markers.length > 0}
+              <div class="month-cell" style:grid-column={`${i + 1} / ${i + 2}`}>
+                {#each markers as marker}
+                  <button
+                    type="button"
+                    class="marker-chip"
+                    class:light={marker.meta.light}
+                    onclick={() => showTask(row, marker)}
+                    title={marker.meta.label}
+                    aria-label={marker.meta.label}
+                  >
+                    <Icon
+                      name={marker.meta.icon}
+                      color={marker.meta.color}
+                      size={12}
+                      strokeWidth={marker.meta.light ? 1.2 : 1.8}
+                    />
+                  </button>
+                {/each}
               </div>
-            </div>
+            {/if}
           {/each}
         </div>
       </div>

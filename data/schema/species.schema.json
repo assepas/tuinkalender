@@ -67,6 +67,11 @@
           "enum": ["hoofd", "licht"],
           "description": "Alleen relevant voor weergave (bv. dikte/opacity van het snoei-icoon). Standaard 'hoofd' als weggelaten."
         },
+        "location": {
+          "type": "string",
+          "enum": ["kas", "grond"],
+          "description": "Alleen relevant voor zaaien: 'kas' (ook voorzaaien binnen) of 'grond' (volle grond). Standaard 'grond' als weggelaten."
+        },
         "note": { "type": "string" },
         "conditions": {
           "type": "object",

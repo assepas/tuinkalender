@@ -392,12 +392,6 @@ textarea {
   background: linear-gradient(90deg, #d46a8c, #8fa6c9, #e8c547);
 }
 
-.light-icon {
-  display: inline-flex;
-  align-items: center;
-  opacity: 0.75;
-}
-
 .timeline-scroll {
   overflow-x: auto;
   padding-bottom: var(--space-2);
@@ -406,7 +400,7 @@ textarea {
 .timeline {
   display: flex;
   flex-direction: column;
-  min-width: 54rem;
+  min-width: 60rem;
 }
 
 .timeline-header-row {
@@ -434,8 +428,8 @@ textarea {
   display: grid;
   grid-template-columns: 15rem 1fr;
   gap: var(--space-3);
-  align-items: start;
-  padding: var(--space-3) 0;
+  align-items: center;
+  padding: var(--space-2) 0;
   border-bottom: 1px solid var(--color-line);
 }
 
@@ -484,41 +478,17 @@ textarea {
   text-overflow: ellipsis;
 }
 
-.timeline-lanes {
-  display: flex;
-  flex-direction: column;
-  gap: 3px;
-}
-
-.timeline-lane {
-  display: flex;
-  align-items: center;
-  gap: var(--space-2);
-}
-
-.lane-icon {
-  width: 16px;
-  flex: none;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.lane-bloom-dot {
-  width: 10px;
-  height: 10px;
-  border-radius: 999px;
-}
-
+/* Eén regel per plant: de bloei is een doorlopende balk, de taken zijn
+   icoontjes per maand die er bovenop staan (naast elkaar bij meerdere taken). */
 .lane-track {
-  flex: 1;
   display: grid;
   grid-template-columns: repeat(12, 1fr);
   gap: 2px;
-  height: 22px;
+  height: 26px;
+  align-items: stretch;
 }
 
-.lane-bar {
+.bloom-bar {
   grid-row: 1;
   border-radius: 4px;
   border: 1px solid transparent;
@@ -527,29 +497,41 @@ textarea {
   padding: 0;
 }
 
-.lane-bar:hover {
+.bloom-bar:hover {
   filter: brightness(0.92);
 }
 
-.bloom-bar {
-  border-width: 1px;
-}
-
-.lane-marker {
+.month-cell {
   grid-row: 1;
   display: flex;
   align-items: center;
   justify-content: center;
-  background: transparent;
-  border: none;
-  cursor: pointer;
-  padding: 0;
+  gap: 2px;
+  min-width: 0;
 }
 
-.lane-marker:hover {
+/* Lichte achtergrond met rand, zodat het icoon leesbaar blijft op elke bloemkleur. */
+.marker-chip {
+  flex: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 18px;
+  height: 18px;
+  padding: 0;
+  border-radius: 999px;
+  background: var(--color-surface-raised);
+  border: 1px solid var(--color-line-strong);
+}
+
+button.marker-chip {
+  cursor: pointer;
+}
+
+button.marker-chip:hover {
   transform: scale(1.15);
 }
 
-.lane-marker.light {
-  opacity: 0.75;
+.marker-chip.light {
+  border-style: dashed;
 }

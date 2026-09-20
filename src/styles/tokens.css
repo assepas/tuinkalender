@@ -21,6 +21,9 @@
   --color-line-strong: #b7b090;
   --color-danger: #a64b2a;
   --color-focus: #3e7cb1;
+  /* Ondergrond van plant-icoontjes: neutraal met een vleugje groen */
+  --color-plant-bg: #f1f2e4;
+  --color-plant-line: #cfd4b6;
 
   /* Typografie */
   --font-display: "Newsreader", "Iowan Old Style", Georgia, serif;
@@ -46,6 +49,8 @@
   --border: 1px solid var(--color-line);
 }
 
+/* Dark mode staat voorlopig uit. Aanzetten: haal de commentaarmarkeringen om dit blok weg
+   (en voeg de plant-tokens hierboven toe aan de donkere set).
 @media (prefers-color-scheme: dark) {
   :root {
     --color-bg: #1b1e17;
@@ -60,4 +65,4 @@
     --color-line-strong: #4c5540;
     --color-focus: #7fb4e0;
   }
-}
+} */

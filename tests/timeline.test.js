@@ -10,8 +10,11 @@ const speciesIndex = {
     appearance: { shape: "bloem", flowerColor: "#E8C547" },
     bloom: { from: "06-15", to: "09-01" },
     tasks: [
+      { id: "zaai-kas", type: "zaaien", location: "kas", window: { kind: "dates", from: "03-01", to: "03-31" } },
+      { id: "zaai-grond", type: "zaaien", window: { kind: "dates", from: "03-15", to: "04-15" } },
       { id: "water", type: "water", window: { kind: "dates", from: "06-01", to: "08-01" } },
       { id: "snoei", type: "snoeien", importance: "hoofd", window: { kind: "dates", from: "06-01", to: "07-01" } },
+      { id: "snoei-licht", type: "snoeien", importance: "licht", window: { kind: "dates", from: "06-01", to: "06-30" } },
     ],
   },
   sla: {
@@ -22,11 +25,32 @@ const speciesIndex = {
 };
 
 const taskTypeIndex = {
-  water: { id: "water", label: "Water geven", color: "#3E7CB1", markerStyle: "bar" },
-  snoeien: { id: "snoeien", label: "Snoeien", color: "#6B7A3A", markerStyle: "icon" },
+  zaaien: {
+    id: "zaaien",
+    label: "Zaaien",
+    color: "#C08A2E",
+    icon: "seed",
+    variantBy: "location",
+    defaultVariant: "grond",
+    variants: {
+      kas: { label: "Zaaien in kas", icon: "seed-kas" },
+      grond: { label: "Zaaien in volle grond", icon: "seed" },
+    },
+  },
+  water: { id: "water", label: "Water geven", color: "#3E7CB1", icon: "droplet" },
+  snoeien: {
+    id: "snoeien",
+    label: "Snoeien",
+    color: "#6B7A3A",
+    icon: "scissors",
+    variantBy: "importance",
+    defaultVariant: "hoofd",
+    variants: { hoofd: { label: "Hoofdsnoei" }, licht: { label: "Lichte snoei", light: true } },
+  },
 };
 
-const taskTypeOrder = ["water", "snoeien"];
+// "water" is bewust weggelaten: taaktypes buiten deze lijst komen niet in de tijdlijn.
+const taskTypeOrder = ["zaaien", "snoeien"];
 
 function baseGarden(plantings) {
   return { schemaVersion: 1, region: "nl-utrecht", plantings };
@@ -43,24 +67,62 @@ describe("getBloomMonths", () => {
 });
 
 describe("buildTimelineRows", () => {
-  it("geeft één rij per planting, met bloei-lane vooraan als die bestaat", () => {
-    const garden = baseGarden([{ uid: "p1", speciesId: "tomaat" }]);
-    const rows = buildTimelineRows(garden, speciesIndex, taskTypeIndex, region, taskTypeOrder);
+  const rowFor = (speciesId, extra = {}) =>
+    buildTimelineRows(baseGarden([{ uid: "p1", speciesId, ...extra }]), speciesIndex, taskTypeIndex, region, taskTypeOrder)[0];
+  const typesIn = (row, month) => row.cells[month - 1].map((m) => m.variantKey ?? m.taskType);
+
+  it("geeft één rij per planting, met 12 maandcellen", () => {
+    const rows = buildTimelineRows(
+      baseGarden([{ uid: "p1", speciesId: "tomaat" }]), speciesIndex, taskTypeIndex, region, taskTypeOrder
+    );
     expect(rows).toHaveLength(1);
-    expect(rows[0].lanes[0].kind).toBe("bloom");
+    expect(rows[0].cells).toHaveLength(12);
   });
 
-  it("slaat de bloei-lane over als de soort geen bloom-data heeft", () => {
-    const garden = baseGarden([{ uid: "p1", speciesId: "sla" }]);
-    const rows = buildTimelineRows(garden, speciesIndex, taskTypeIndex, region, taskTypeOrder);
-    expect(rows[0].lanes.every((l) => l.kind !== "bloom")).toBe(true);
+  it("geeft de bloeiperiode en -kleur mee", () => {
+    expect(rowFor("tomaat").bloom).toEqual({ months: [6, 7, 8, 9], color: "#E8C547" });
   });
 
-  it("sorteert task-lanes volgens de opgegeven taskTypeOrder", () => {
-    const garden = baseGarden([{ uid: "p1", speciesId: "tomaat" }]);
+  it("geeft bloom = null als de soort geen bloom-data heeft", () => {
+    expect(rowFor("sla").bloom).toBeNull();
+  });
+
+  it("laat taaktypes weg die niet in taskTypeOrder staan", () => {
+    const row = rowFor("tomaat");
+    const allTypes = row.cells.flat().map((m) => m.taskType);
+    expect(allTypes).not.toContain("water");
+    expect(rowFor("sla").cells.flat()).toHaveLength(0);
+  });
+
+  it("zet taken in dezelfde maand naast elkaar, in de volgorde van taskTypeOrder", () => {
+    // Maart: zaaien in kas + zaaien in volle grond. Juni: hoofd- en lichte snoei.
+    expect(typesIn(rowFor("tomaat"), 3)).toEqual(["kas", "grond"]);
+    expect(typesIn(rowFor("tomaat"), 6)).toEqual(["hoofd", "licht"]);
+  });
+
+  it("onderscheidt zaaien in kas van volle grond via location (standaard grond)", () => {
+    const [kas, grond] = rowFor("tomaat").cells[2];
+    expect(kas.meta.icon).toBe("seed-kas");
+    expect(grond.meta.icon).toBe("seed");
+    expect(grond.meta.label).toBe("Zaaien in volle grond");
+    expect(kas.meta.color).toBe("#C08A2E");
+  });
+
+  it("markeert lichte snoei via meta.light", () => {
+    const [hoofd, licht] = rowFor("tomaat").cells[5];
+    expect(hoofd.meta.light).toBeUndefined();
+    expect(licht.meta.light).toBe(true);
+  });
+
+  it("toont elke soort maar één keer, ook bij meerdere plantingen (de eerste wint)", () => {
+    const garden = baseGarden([
+      { uid: "p1", speciesId: "tomaat", label: "Tomaat kas" },
+      { uid: "p2", speciesId: "sla" },
+      { uid: "p3", speciesId: "tomaat", label: "Tomaat buiten" },
+    ]);
     const rows = buildTimelineRows(garden, speciesIndex, taskTypeIndex, region, taskTypeOrder);
-    const taskLaneTypes = rows[0].lanes.filter((l) => l.kind === "task").map((l) => l.taskType);
-    expect(taskLaneTypes).toEqual(["water", "snoeien"]);
+    expect(rows.map((r) => r.species.id)).toEqual(["tomaat", "sla"]);
+    expect(rows[0].planting.uid).toBe("p1");
   });
 
   it("negeert plantings met een onbekende soort", () => {
