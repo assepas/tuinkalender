@@ -1,0 +1,12 @@
+{
+  "schemaVersion": 1,
+  "id": "nl-utrecht",
+  "name": "Utrecht (NL)",
+  "hardinessZone": "8a",
+  "anchors": {
+    "lastFrost": "05-12",
+    "firstFrost": "10-20",
+    "soilWarm": "04-20"
+  },
+  "notes": "Gemiddelde data o.b.v. KNMI-klimaatnormalen 1991-2020 voor het middenoosten van Nederland. Individuele jaren wijken af; gebruik dit als richtlijn, niet als garantie."
+}

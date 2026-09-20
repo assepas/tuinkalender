@@ -1,0 +1,18 @@
+{
+  "schemaVersion": 1,
+  "id": "hortensia",
+  "name": "Hortensia",
+  "latin": "Hydrangea macrophylla",
+  "category": "struik",
+  "tags": ["meerjarig"],
+  "nativeStatus": "exoot",
+  "appearance": { "shape": "struik", "flowerColor": "#C97FAE", "flowerColorName": "roze" },
+  "bloom": { "from": "06-01", "to": "09-01" },
+  "tasks": [
+    { "id": "planten", "type": "planten", "window": { "kind": "dates", "from": "03-15", "to": "05-01" } },
+    { "id": "water", "type": "water", "window": { "kind": "recurring", "from": "05-01", "to": "08-31", "every": "week" }, "note": "Gevoelig voor uitdroging" },
+    { "id": "bemesten", "type": "bemesten", "window": { "kind": "dates", "from": "03-01", "to": "04-15" } },
+    { "id": "snoeien", "type": "snoeien", "importance": "licht", "window": { "kind": "dates", "from": "03-01", "to": "03-31" }, "note": "Uitgebloeide bloemschermen boven het eerste gezonde knoppenpaar" },
+    { "id": "winterhard", "type": "winterhard", "window": { "kind": "dates", "from": "11-01", "to": "11-30" }, "note": "Bloemknoppen beschermen bij strenge vorst" }
+  ]
+}

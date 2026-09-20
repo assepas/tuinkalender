@@ -1,0 +1,100 @@
+@page {
+  size: A4 portrait;
+  margin: 14mm;
+}
+
+@media print {
+  .no-print {
+    display: none !important;
+  }
+
+  body {
+    background: #fff;
+    color: #111;
+  }
+
+  .print-page {
+    display: block !important;
+  }
+
+  .print-month {
+    break-inside: avoid;
+    border: 1px solid #999;
+    padding: 3mm 4mm;
+    margin-bottom: 4mm;
+  }
+
+  .print-month h2 {
+    font-family: var(--font-display);
+    font-size: 13pt;
+    margin: 0 0 2mm;
+    border-bottom: 1px solid #999;
+    padding-bottom: 1mm;
+  }
+
+  .print-task-row {
+    font-size: 9.5pt;
+    padding: 0.5mm 0;
+    display: flex;
+    gap: 2mm;
+  }
+
+  .print-task-row .dot {
+    width: 2mm;
+    height: 2mm;
+    border-radius: 999px;
+    margin-top: 1.3mm;
+    flex: none;
+    /* print-color-adjust zorgt dat achtergrondkleuren echt afdrukken */
+    print-color-adjust: exact;
+    -webkit-print-color-adjust: exact;
+  }
+
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+}
+
+/* Buiten printcontext blijft de printweergave verborgen op het scherm;
+   PrintView.svelte toont er wél een schermvoorbeeld van, zie die component. */
+@media screen {
+  .print-page {
+    background: #fff;
+    color: #111;
+    max-width: 210mm;
+    margin: 0 auto;
+    padding: 14mm;
+    border: var(--border);
+    box-shadow: 0 0 0 1px var(--color-line);
+  }
+
+  .print-month {
+    border: 1px solid #ccc;
+    padding: 3mm 4mm;
+    margin-bottom: 4mm;
+  }
+
+  .print-month h2 {
+    font-family: var(--font-display);
+    font-size: 14pt;
+    margin: 0 0 2mm;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 1mm;
+  }
+
+  .print-task-row {
+    font-size: 10pt;
+    padding: 0.5mm 0;
+    display: flex;
+    gap: 2mm;
+  }
+
+  .print-task-row .dot {
+    width: 2mm;
+    height: 2mm;
+    border-radius: 999px;
+    margin-top: 1.3mm;
+    flex: none;
+  }
+}

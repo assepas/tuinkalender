@@ -1,0 +1,17 @@
+{
+  "schemaVersion": 1,
+  "id": "rozemarijn",
+  "name": "Rozemarijn",
+  "latin": "Salvia rosmarinus",
+  "category": "kruid",
+  "tags": ["meerjarig", "mediterraan"],
+  "nativeStatus": "exoot",
+  "appearance": { "shape": "kruid", "flowerColor": "#8FA6C9", "flowerColorName": "blauw" },
+  "bloom": { "from": "04-01", "to": "05-15" },
+  "tasks": [
+    { "id": "planten", "type": "planten", "window": { "kind": "relative", "anchor": "lastFrost", "fromWeeks": 0, "toWeeks": 4 } },
+    { "id": "snoeien", "type": "snoeien", "importance": "licht", "window": { "kind": "dates", "from": "05-15", "to": "06-01" }, "note": "Na de bloei licht snoeien; nooit tot in kaal oud hout" },
+    { "id": "oogsten", "type": "oogsten", "window": { "kind": "dates", "from": "01-01", "to": "12-31" }, "note": "Jaarrond te oogsten, blijvend groen" },
+    { "id": "winterhard", "type": "winterhard", "window": { "kind": "dates", "from": "11-01", "to": "11-30" }, "note": "In pot: beschutte plek of vlies bij strenge vorst" }
+  ]
+}

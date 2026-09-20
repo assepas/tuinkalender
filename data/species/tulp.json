@@ -1,0 +1,17 @@
+{
+  "schemaVersion": 1,
+  "id": "tulp",
+  "name": "Tulp",
+  "latin": "Tulipa spp.",
+  "category": "bolgewas",
+  "tags": ["voorjaarsbloeier"],
+  "nativeStatus": "exoot",
+  "appearance": { "shape": "bol", "flowerColor": "#C0392B", "flowerColorName": "rood" },
+  "bloom": { "from": "04-01", "to": "05-01" },
+  "tasks": [
+    { "id": "planten", "type": "planten", "window": { "kind": "dates", "from": "10-15", "to": "12-01" }, "note": "Bollen op ongeveer 15 cm diepte" },
+    { "id": "bemesten", "type": "bemesten", "window": { "kind": "dates", "from": "02-15", "to": "03-15" } },
+    { "id": "oogsten", "type": "oogsten", "window": { "kind": "dates", "from": "04-15", "to": "05-15" }, "note": "Bloemen snijden, blad laten staan tot het vergeelt" },
+    { "id": "onderhoud", "type": "onderhoud", "window": { "kind": "dates", "from": "06-01", "to": "06-15" }, "note": "Verdroogd blad verwijderen, evt. bollen rooien" }
+  ]
+}

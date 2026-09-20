@@ -1,0 +1,118 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "species.schema.json",
+  "title": "Species",
+  "type": "object",
+  "required": ["schemaVersion", "id", "name", "category", "tasks"],
+  "additionalProperties": false,
+  "properties": {
+    "schemaVersion": { "const": 1 },
+    "id": { "type": "string", "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$" },
+    "name": { "type": "string", "minLength": 1 },
+    "latin": { "type": "string" },
+    "category": {
+      "type": "string",
+      "enum": ["groente", "fruit", "kruid", "vaste-plant", "bolgewas", "struik", "boom"]
+    },
+    "tags": { "type": "array", "items": { "type": "string" } },
+    "nativeStatus": {
+      "type": "string",
+      "enum": ["inheems", "archeofyt", "exoot", "onbekend"],
+      "description": "Herkomststatus t.o.v. de Nederlandse flora, voor de tijdlijnweergave. 'onbekend' dekt ook soort-onzekerheid (bv. verzamelnamen als 'Hosta spp.')."
+    },
+    "appearance": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["shape", "flowerColor"],
+      "properties": {
+        "shape": {
+          "type": "string",
+          "enum": ["bloem", "kruid", "bes", "boom", "bol", "struik"],
+          "description": "Bepaalt welk icoonsilhouet wordt getekend."
+        },
+        "flowerColor": { "type": "string", "pattern": "^#[0-9a-fA-F]{6}$" },
+        "flowerColorName": { "type": "string" }
+      }
+    },
+    "bloom": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["from", "to"],
+      "properties": {
+        "from": { "$ref": "#/definitions/monthDay" },
+        "to": { "$ref": "#/definitions/monthDay" }
+      },
+      "description": "Bloeiperiode, puur informatief (geen taak) — kleur komt uit appearance.flowerColor."
+    },
+    "tasks": {
+      "type": "array",
+      "minItems": 1,
+      "items": { "$ref": "#/definitions/task" }
+    }
+  },
+  "definitions": {
+    "monthDay": {
+      "type": "string",
+      "pattern": "^(0[1-9]|1[0-2])-(0[1-9]|[12][0-9]|3[01])$"
+    },
+    "task": {
+      "type": "object",
+      "required": ["id", "type", "window"],
+      "additionalProperties": false,
+      "properties": {
+        "id": { "type": "string", "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$" },
+        "type": { "type": "string" },
+        "importance": {
+          "type": "string",
+          "enum": ["hoofd", "licht"],
+          "description": "Alleen relevant voor weergave (bv. dikte/opacity van het snoei-icoon). Standaard 'hoofd' als weggelaten."
+        },
+        "note": { "type": "string" },
+        "conditions": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "position": { "type": "array", "items": { "type": "string" } },
+            "soil": { "type": "array", "items": { "type": "string" } }
+          }
+        },
+        "window": {
+          "oneOf": [
+            {
+              "type": "object",
+              "required": ["kind", "from", "to"],
+              "additionalProperties": false,
+              "properties": {
+                "kind": { "const": "dates" },
+                "from": { "$ref": "#/definitions/monthDay" },
+                "to": { "$ref": "#/definitions/monthDay" }
+              }
+            },
+            {
+              "type": "object",
+              "required": ["kind", "from", "to", "every"],
+              "additionalProperties": false,
+              "properties": {
+                "kind": { "const": "recurring" },
+                "from": { "$ref": "#/definitions/monthDay" },
+                "to": { "$ref": "#/definitions/monthDay" },
+                "every": { "type": "string", "enum": ["week", "2weeks", "month"] }
+              }
+            },
+            {
+              "type": "object",
+              "required": ["kind", "anchor", "fromWeeks", "toWeeks"],
+              "additionalProperties": false,
+              "properties": {
+                "kind": { "const": "relative" },
+                "anchor": { "type": "string", "enum": ["lastFrost", "firstFrost", "soilWarm"] },
+                "fromWeeks": { "type": "integer" },
+                "toWeeks": { "type": "integer" }
+              }
+            }
+          ]
+        }
+      }
+    }
+  }
+}

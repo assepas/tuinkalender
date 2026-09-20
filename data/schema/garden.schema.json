@@ -1,0 +1,47 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "garden.schema.json",
+  "title": "Garden",
+  "type": "object",
+  "required": ["schemaVersion", "region", "plantings"],
+  "additionalProperties": false,
+  "properties": {
+    "schemaVersion": { "type": "integer", "minimum": 1 },
+    "region": { "type": "string" },
+    "plantings": {
+      "type": "array",
+      "items": { "$ref": "#/definitions/planting" }
+    }
+  },
+  "definitions": {
+    "planting": {
+      "type": "object",
+      "required": ["uid", "speciesId"],
+      "additionalProperties": false,
+      "properties": {
+        "uid": { "type": "string" },
+        "speciesId": { "type": "string" },
+        "label": { "type": "string" },
+        "position": { "type": "string" },
+        "soil": { "type": "string" },
+        "plantedOn": { "type": "string" },
+        "notes": { "type": "string" },
+        "mutedTasks": { "type": "array", "items": { "type": "string" } },
+        "extraTasks": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": ["id", "type", "window"],
+            "additionalProperties": true,
+            "properties": {
+              "id": { "type": "string" },
+              "type": { "type": "string" },
+              "note": { "type": "string" },
+              "window": { "type": "object" }
+            }
+          }
+        }
+      }
+    }
+  }
+}

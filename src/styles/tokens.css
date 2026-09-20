@@ -1,0 +1,63 @@
+/*
+  Ontwerptaal: een tuin-almanak, geen SaaS-dashboard.
+  - Achtergrond: warm, papierachtig linnen — geen puur wit, geen grijs.
+  - Koppen/maanden: Newsreader (serif) — het "wanneer".
+  - UI/labels/lopende tekst: Work Sans (grotesk) — het "wat te doen".
+  - Taaktype-kleuren komen uit data/taskTypes.json, niet hier: dat is de
+    plek waar je een nieuw taaktype toevoegt zonder deze CSS aan te raken.
+*/
+
+:root {
+  /* Kleur */
+  --color-bg: #eae7d6;
+  --color-surface: #f6f4e8;
+  --color-surface-raised: #fdfcf6;
+  --color-ink: #232a1e;
+  --color-ink-muted: #5c6350;
+  --color-ink-faint: #8a8672;
+  --color-primary: #3a4a2e;
+  --color-primary-ink: #f6f4e8;
+  --color-line: #d6d0b8;
+  --color-line-strong: #b7b090;
+  --color-danger: #a64b2a;
+  --color-focus: #3e7cb1;
+
+  /* Typografie */
+  --font-display: "Newsreader", "Iowan Old Style", Georgia, serif;
+  --font-ui: "Work Sans", "Segoe UI", system-ui, sans-serif;
+
+  --step-1: 0.8125rem;
+  --step0: 0.9375rem;
+  --step1: 1.125rem;
+  --step2: 1.375rem;
+  --step3: 1.875rem;
+  --step4: 2.5rem;
+
+  /* Ruimte */
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-5: 1.5rem;
+  --space-6: 2rem;
+  --space-7: 3rem;
+
+  --radius: 3px;
+  --border: 1px solid var(--color-line);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-bg: #1b1e17;
+    --color-surface: #232921;
+    --color-surface-raised: #2a3126;
+    --color-ink: #eae7d6;
+    --color-ink-muted: #b3b096;
+    --color-ink-faint: #83806a;
+    --color-primary: #a9c08e;
+    --color-primary-ink: #1b1e17;
+    --color-line: #3a4132;
+    --color-line-strong: #4c5540;
+    --color-focus: #7fb4e0;
+  }
+}
