@@ -6,7 +6,6 @@
   import { gardenState } from "../lib/state/garden.svelte.js";
   import DetailModal from "./DetailModal.svelte";
   import Icon from "./Icon.svelte";
-  import NativeBadge from "./NativeBadge.svelte";
   import PlantIcon from "./PlantIcon.svelte";
 
   // Alleen taaktypes met "timeline": true in taskTypes.json komen in de tijdlijn.
@@ -55,7 +54,7 @@
   {#each legendItems as item (item.key)}
     <span class="legend-item">
       <span class="marker-chip" class:light={item.light}>
-        <Icon name={item.icon} color={item.color} size={12} strokeWidth={item.light ? 1.2 : 1.8} />
+        <Icon name={item.icon} color={item.color} size={16} strokeWidth={item.light ? 1.2 : 1.8} />
       </span>
       {item.label}
     </span>
@@ -87,7 +86,6 @@
             <span class="plant-name">{row.planting.label || row.species.name}</span>
             {#if row.species.latin}<span class="plant-latin">{row.species.latin}</span>{/if}
           </span>
-          <NativeBadge status={row.species.nativeStatus} />
         </button>
 
         <div class="lane-track">
@@ -120,7 +118,7 @@
                     <Icon
                       name={marker.meta.icon}
                       color={marker.meta.color}
-                      size={12}
+                      size={16}
                       strokeWidth={marker.meta.light ? 1.2 : 1.8}
                     />
                   </button>
