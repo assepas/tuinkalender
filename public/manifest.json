@@ -1,0 +1,26 @@
+{
+  "name": "Tuinkalender",
+  "short_name": "Tuinkalender",
+  "description": "Persoonlijke tuinkalender met onderhoudstaken per maand.",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "portrait-primary",
+  "background_color": "#eae7d6",
+  "theme_color": "#3a4a2e",
+  "lang": "nl",
+  "icons": [
+    {
+      "src": "icons/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "icons/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
+}

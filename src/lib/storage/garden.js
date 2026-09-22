@@ -5,6 +5,10 @@
 import { migrateGarden, createEmptyGarden } from "../domain/migrate.js";
 
 const STORAGE_KEY = "tuinkalender:garden:v1";
+// Los van het tuin-JSON opgeslagen (eigen sleutel), zodat dit tijdstip niet
+// meekomt in een export/import — dat is metadata over déze browser, niet
+// over de tuin zelf.
+const LAST_EXPORTED_KEY = "tuinkalender:lastExportedAt";
 const DEFAULT_REGION = "nl-utrecht";
 
 export function loadGarden() {
@@ -44,6 +48,18 @@ export function importGardenFromJson(jsonText) {
 
 export function makePlantingUid() {
   return `p_${Math.random().toString(36).slice(2, 10)}`;
+}
+
+/** Timestamp (ms) van de laatste export, of null als die er nog nooit was. */
+export function getLastExportedAt() {
+  const raw = localStorage.getItem(LAST_EXPORTED_KEY);
+  if (!raw) return null;
+  const timestamp = Number(raw);
+  return Number.isFinite(timestamp) ? timestamp : null;
+}
+
+export function setLastExportedAt(timestamp = Date.now()) {
+  localStorage.setItem(LAST_EXPORTED_KEY, String(timestamp));
 }
 
 export { DEFAULT_REGION };

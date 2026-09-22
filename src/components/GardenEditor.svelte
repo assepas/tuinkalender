@@ -11,15 +11,43 @@
     return (planting.mutedTasks ?? []).includes(taskId);
   }
 
-  function downloadExport() {
-    const json = gardenState.exportAsJson();
+  function exportFilename() {
+    return `tuinkalender-${new Date().toISOString().slice(0, 10)}.json`;
+  }
+
+  function downloadExport(json, filename) {
     const blob = new Blob([json], { type: "application/json" });
     const url = URL.createObjectURL(blob);
     const a = document.createElement("a");
     a.href = url;
-    a.download = `tuinkalender-${new Date().toISOString().slice(0, 10)}.json`;
+    a.download = filename;
     a.click();
     URL.revokeObjectURL(url);
+    gardenState.recordExport();
+  }
+
+  // Op mobiel liever het native deelvenster (Bewaar in Bestanden, AirDrop,
+  // appen naar iemand) dan alleen een download — val terug op de downloadlink
+  // als de browser geen bestanden kan delen.
+  async function shareOrDownloadExport() {
+    const json = gardenState.exportAsJson();
+    const filename = exportFilename();
+
+    if (navigator.share && navigator.canShare) {
+      const file = new File([json], filename, { type: "application/json" });
+      if (navigator.canShare({ files: [file] })) {
+        try {
+          await navigator.share({ files: [file], title: "Tuinkalender" });
+          gardenState.recordExport();
+          return;
+        } catch (err) {
+          if (err?.name === "AbortError") return; // gebruiker annuleerde het deelvenster
+          console.error("[export] delen mislukt, val terug op download:", err);
+        }
+      }
+    }
+
+    downloadExport(json, filename);
   }
 
   function handleFile(event) {
@@ -136,8 +164,22 @@
     Je tuin staat lokaal in deze browser. Exporteer regelmatig een back-up, en gebruik dezelfde
     export om je tuin op een ander apparaat te openen of met iemand anders te delen.
   </p>
+  {#if gardenState.needsBackupWarning}
+    <p class="error-text">
+      {#if gardenState.lastExportedAt == null}
+        Je hebt nog nooit een back-up geëxporteerd. Doe dat even, dan ben je niet afhankelijk van
+        alleen deze browser.
+      {:else}
+        Je laatste back-up is van {new Date(gardenState.lastExportedAt).toLocaleDateString("nl-NL", {
+          day: "numeric",
+          month: "long",
+          year: "numeric",
+        })} — tijd voor een nieuwe export.
+      {/if}
+    </p>
+  {/if}
   <div class="btn-row">
-    <button type="button" class="btn btn-primary" onclick={downloadExport}>
+    <button type="button" class="btn btn-primary" onclick={shareOrDownloadExport}>
       Tuin exporteren (.json)
     </button>
     <button type="button" class="btn" onclick={() => fileInput.click()}> Tuin importeren… </button>

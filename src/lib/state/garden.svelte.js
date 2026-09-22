@@ -9,11 +9,15 @@ import {
   exportGardenAsJson,
   importGardenFromJson,
   makePlantingUid,
+  getLastExportedAt,
+  setLastExportedAt,
 } from "../storage/garden.js";
+import { shouldWarnAboutBackup } from "../domain/backup.js";
 import { speciesIndex, regions } from "../generated/data.js";
 
 function createGardenState() {
   let garden = $state(loadGarden());
+  let lastExportedAt = $state(getLastExportedAt());
 
   function persist() {
     saveGarden(garden);
@@ -28,6 +32,12 @@ function createGardenState() {
     },
     get regionProfile() {
       return regions[garden.region];
+    },
+    get lastExportedAt() {
+      return lastExportedAt;
+    },
+    get needsBackupWarning() {
+      return shouldWarnAboutBackup(lastExportedAt);
     },
 
     addPlanting({ speciesId, label = "", position = "", soil = "", notes = "" }) {
@@ -72,6 +82,12 @@ function createGardenState() {
 
     exportAsJson() {
       return exportGardenAsJson(garden);
+    },
+
+    /** Aanroepen nadat een export daadwerkelijk is gelukt (download of deel-actie). */
+    recordExport() {
+      lastExportedAt = Date.now();
+      setLastExportedAt(lastExportedAt);
     },
 
     importFromJson(jsonText) {

@@ -41,6 +41,14 @@ data/               Broninformatie — dit bewerk je om de app uit te breiden
 ├─ regions/*.json       Regioprofiel (vorstdata Utrecht)
 └─ schema/*.json        JSON Schema's — vangen tikfouten in de data op
 
+design/
+└─ icon-source.svg     Bronbestand voor de PWA-iconen in public/icons/ (zie daar voor regenereren)
+
+public/                Statisch meegekopieerd naar dist/ (Vite publicDir)
+├─ manifest.json        PWA-manifest (naam, iconen, standalone-modus)
+├─ sw.js                 Service worker: cachet de app-shell voor offline gebruik
+└─ icons/                icon-192.png, icon-512.png, apple-touch-icon.png
+
 scripts/
 ├─ build-species.mjs    Bundelt /data naar src/lib/generated/data.js
 └─ validate.mjs         Valideert /data tegen de schema's (draait vóór elke build)
@@ -49,14 +57,17 @@ src/
 ├─ lib/domain/          Pure logica, geen Svelte, geen browser-API's
 │  ├─ windows.js           Wanneer is een taak actief (dates/recurring/relative)
 │  ├─ calendar.js          tuin + soorten + regio → 12 maanden met taken
-│  └─ migrate.js           Migratieketen voor het opgeslagen tuindocument
-├─ lib/storage/garden.js   localStorage lezen/schrijven/export/import
+│  ├─ migrate.js           Migratieketen voor het opgeslagen tuindocument
+│  └─ backup.js            Puur: is de laatste export lang genoeg geleden voor een waarschuwing?
+├─ lib/storage/
+│  ├─ garden.js             localStorage lezen/schrijven/export/import + lastExportedAt
+│  └─ persistence.js        navigator.storage.persist() aanvragen (best-effort)
 ├─ lib/state/garden.svelte.js   Reactieve laag (Svelte 5 runes) boven de repository
 └─ components/
    ├─ CalendarView.svelte, MonthCard.svelte      Maandoverzicht
    ├─ TimelineView.svelte, DetailModal.svelte    Tijdlijn + klikbare details
    ├─ Icon.svelte, PlantIcon.svelte, NativeBadge.svelte   Parametrische iconen/badges
-   ├─ GardenEditor.svelte, SpeciesPicker.svelte   Tuinbeheer
+   ├─ GardenEditor.svelte, SpeciesPicker.svelte   Tuinbeheer (incl. back-up-waarschuwing + export)
    └─ PrintView.svelte, Legend.svelte             Print + legenda
 
 tests/                 Vitest — vooral gericht op lib/domain
@@ -176,6 +187,30 @@ In **Mijn tuin** kun je per plant:
   taak die alleen voor die ene plant geldt (dit heeft nog geen UI, maar het
   datamodel en `buildCalendar()` ondersteunen het al — zie
   `tests/calendar.test.js` voor een voorbeeld).
+
+## Installeren als app (belangrijk voor je data)
+
+De app is een installeerbare PWA (`public/manifest.json` + `public/sw.js`,
+handmatig geregistreerd in `src/main.js` — geen extra dependency). Dat is
+niet alleen fijn voor het gebruiksgemak, het is ook een vangnet voor je
+tuindata:
+
+- **iOS Safari** ruimt localStorage van een gewoon open tabblad soms op na
+  een periode zonder bezoek. Een pagina die je via **Deel-icoon → Zet op
+  beginscherm** installeert draait als een eigen standalone-app-instantie
+  (dankzij `apple-mobile-web-app-capable` in `index.html`), los van Safari
+  zelf — die opslag wordt niet op dezelfde manier opgeruimd.
+- Bij het opstarten vraagt de app via `navigator.storage.persist()`
+  (`src/lib/storage/persistence.js`) ook expliciet om persistente opslag;
+  de browser mag dit weigeren, dus dit is een extra laag, geen garantie.
+- De service worker cachet alleen de app-shell, zodat de kalender ook
+  zonder netwerkverbinding opent.
+
+**Dit vervangt geen back-ups.** Gebruik **Tuin exporteren (.json)** in
+**Mijn tuin** regelmatig — de app herinnert je daaraan als het langer dan
+twee weken geleden is. Op een telefoon met Web Share-support (iOS/Android)
+opent exporteren het native deelvenster, zodat je het bestand direct naar
+Bestanden/iCloud/Drive kunt zetten; elders krijg je een gewone download.
 
 ## Delen met je mede-tuiniers
 

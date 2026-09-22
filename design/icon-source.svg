@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 24 24">
+  <!--
+    Bronbestand voor de PWA-iconen in public/icons/ (icon-192.png,
+    icon-512.png, apple-touch-icon.png). Simpele kiem/sprout-vorm in de
+    tokens.css-kleuren, met genoeg marge rond de tekening om ook als
+    maskable icon (Android safe zone) te werken. Staat bewust buiten
+    public/, zodat dit bronbestand niet meegebouwd wordt naar dist/.
+
+    Aanpassen? Bewerk dit bestand en raster opnieuw naar de PNG's, bv. met
+    (macOS): `qlmanage -t -s 512 -o public/icons design/icon-source.svg`,
+    dan hernoemen naar icon-512.png en met `sips -z <maat> <maat>
+    public/icons/icon-512.png --out public/icons/icon-<maat>.png`
+    downscalen naar de overige formaten (192, en 180 voor
+    apple-touch-icon.png).
+  -->
+  <rect width="24" height="24" fill="#3a4a2e" />
+  <g fill="none" stroke="#f6f4e8" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M12 20v-8" />
+    <path d="M12 12c0-3 2.2-5.3 5.3-5.3-0.3 3.2-2.4 5.3-5.3 5.3Z" fill="#f6f4e8" fill-opacity="0.92" />
+    <path d="M12 12c0-3-2.2-5.3-5.3-5.3 0.3 3.2 2.4 5.3 5.3 5.3Z" fill="#f6f4e8" fill-opacity="0.92" />
+  </g>
+</svg>
