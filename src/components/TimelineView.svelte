@@ -234,12 +234,17 @@
 
     {#each visibleRows as row (row.planting.uid)}
       <div class="timeline-row">
-        <button type="button" class="timeline-plant-head" onclick={() => showSpecies(row)}>
+        <button
+          type="button"
+          class="timeline-plant-icon"
+          onclick={() => showSpecies(row)}
+          aria-label={row.planting.label || row.species.name}
+        >
           <PlantIcon species={row.species} size={34} />
-          <span class="timeline-plant-names">
-            <span class="plant-name">{row.planting.label || row.species.name}</span>
-            {#if row.species.latin}<span class="plant-latin">{row.species.latin}</span>{/if}
-          </span>
+        </button>
+        <button type="button" class="timeline-plant-name" onclick={() => showSpecies(row)}>
+          <span class="plant-name">{row.planting.label || row.species.name}</span>
+          {#if row.species.latin}<span class="plant-latin">{row.species.latin}</span>{/if}
         </button>
 
         <div class="lane-track">
