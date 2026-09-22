@@ -35,6 +35,15 @@
 
 <li class="planting-row" class:expanded>
   <div class="planting-row-summary">
+    <button
+      type="button"
+      class="planting-row-toggle"
+      onclick={() => (expanded = !expanded)}
+      aria-expanded={expanded}
+      aria-label={expanded ? "Details inklappen" : "Details uitklappen"}
+    >
+      {expanded ? "▾" : "▸"}
+    </button>
     <PlantIcon {species} size={28} />
     <span class="planting-row-names">
       <span class="plant-name">{planting.label || species?.name || "Onbekende soort"}</span>
@@ -51,15 +60,6 @@
       </span>
     {/if}
 
-    <button
-      type="button"
-      class="btn planting-row-toggle"
-      onclick={() => (expanded = !expanded)}
-      aria-expanded={expanded}
-      aria-label={expanded ? "Details inklappen" : "Details uitklappen"}
-    >
-      {expanded ? "▾" : "▸"}
-    </button>
     <button type="button" class="btn btn-danger" onclick={() => gardenState.removePlanting(planting.uid)}>
       Verwijderen
     </button>

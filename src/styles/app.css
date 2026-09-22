@@ -204,16 +204,16 @@ nav.tabs button[aria-current="page"] {
 }
 
 .panel h2 {
-  font-family: var(--font-display);
+  font-family: var(--font-ui);
   font-weight: 500;
-  font-size: var(--step2);
+  font-size: var(--step1);
   margin: 0 0 0;
 }
 
 .panel h3 {
-  font-family: var(--font-display);
+  font-family: var(--font-ui);
   font-weight: 500;
-  font-size: var(--step1);
+  font-size: var(--step0);
   margin: 0 0 0;
 }
 
@@ -223,7 +223,7 @@ nav.tabs button[aria-current="page"] {
 .panel-toggle {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: flex-start;
   gap: var(--space-2);
   width: 100%;
   font: inherit;
@@ -241,7 +241,7 @@ nav.tabs button[aria-current="page"] {
 }
 
 .panel-toggle .chevron {
-  font-size: 0.7em;
+  font-size: 1.3em;
   color: var(--color-ink-faint);
   flex: none;
 }
@@ -276,6 +276,34 @@ textarea {
 textarea {
   resize: vertical;
   min-height: 4rem;
+}
+
+/* Native <select> heeft per besturingssysteem/browser een eigen uiterlijk
+   (pijltje, padding) dat niet bij de rest van de UI past — hier zelf een
+   chevron tekenen die dezelfde taal spreekt als .chevron elders. */
+select {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  padding-right: calc(var(--space-3) * 2 + 0.9em);
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath d='M4 6l4 4 4-4' fill='none' stroke='%238a8672' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right var(--space-3) center;
+  background-size: 0.9em;
+  cursor: pointer;
+}
+
+select:hover {
+  border-color: var(--color-line-strong);
+}
+
+select:disabled {
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+select::-ms-expand {
+  display: none;
 }
 
 .btn {
@@ -350,9 +378,20 @@ textarea {
 }
 
 .planting-row-toggle {
-  font-size: var(--step0);
+  flex: none;
+  font: inherit;
+  font-size: 1.3em;
   line-height: 1;
-  padding: var(--space-2) var(--space-3);
+  color: var(--color-ink-faint);
+  background: transparent;
+  border: none;
+  padding: 0;
+  margin: 0;
+  cursor: pointer;
+}
+
+.planting-row-toggle:hover {
+  color: var(--color-primary);
 }
 
 .planting-row-detail {
@@ -498,18 +537,23 @@ textarea {
 
 /* ---------- Tijdlijn ---------- */
 
-/* Legenda (1/3) + filter-/sorteerbalk (2/3), beide los uitklapbaar — zie
-   .panel-toggle hierboven. Op smalle schermen onder elkaar (volle breedte). */
+/* Legenda en filter-/sorteerbalk, beide los uitklapbaar — zie .panel-toggle
+   hierboven. Geen paneel-"blokken" (geen achtergrond/rand), gewoon twee
+   gelijk brede kolommen naast elkaar. Op smalle schermen onder elkaar. */
 .timeline-toolbar {
   display: grid;
-  grid-template-columns: 1fr 2fr;
+  grid-template-columns: 1fr 1fr;
   gap: var(--space-4);
   margin-bottom: var(--space-4);
   align-items: start;
 }
 
-/* ".panel + .panel" (zie hierboven) voegt normaal verticale marge toe voor
-   gestapelde panelen — hier staan ze naast elkaar, dat regelt de grid-gap al. */
+.timeline-toolbar > .panel {
+  background: transparent;
+  border: none;
+  padding: 0;
+}
+
 .timeline-toolbar > .panel + .panel {
   margin-top: 0;
 }
@@ -559,6 +603,8 @@ textarea {
 }
 
 .timeline {
+  --timeline-icon-col: 2.75rem;
+  --timeline-name-col: calc(13rem - 2.75rem);
   display: flex;
   flex-direction: column;
   min-width: 70rem;
@@ -566,7 +612,7 @@ textarea {
 
 .timeline-header-row {
   display: grid;
-  grid-template-columns: 13rem 1fr;
+  grid-template-columns: var(--timeline-icon-col) var(--timeline-name-col) 1fr;
   gap: var(--space-2);
   padding-bottom: var(--space-1);
   margin-bottom: var(--space-1);
@@ -574,6 +620,7 @@ textarea {
 }
 
 .timeline-months {
+  grid-column: 3; /* expliciet, want .timeline-head-spacer spant niet altijd kolom 1/3 (zie mobiele breakpoint) */
   display: grid;
   grid-template-columns: repeat(12, 1fr);
   gap: 1px;
@@ -587,7 +634,7 @@ textarea {
 
 .timeline-row {
   display: grid;
-  grid-template-columns: 13rem 1fr;
+  grid-template-columns: var(--timeline-icon-col) var(--timeline-name-col) 1fr;
   gap: var(--space-2);
   align-items: center;
   padding: var(--space-1) 0;
@@ -598,23 +645,38 @@ textarea {
   border-bottom: none;
 }
 
-/* Blijft staan tijdens horizontaal scrollen (vooral relevant op mobiel,
-   waar .timeline altijd breder is dan het scherm) — .timeline-head-spacer
-   is de lege cel erboven in de maandenrij, zelfde behandeling voor een
-   doorlopend vastgeprikte linkerkolom. */
+/* .timeline-head-spacer blijft de lege cel boven icoon+naam; die spant beide
+   kolommen zodat de maandenrij op dezelfde plek begint als .lane-track. */
+.timeline-head-spacer {
+  grid-column: 1 / 3;
+}
+
+/* Blijven staan tijdens horizontaal scrollen (vooral relevant op mobiel,
+   waar .timeline altijd breder is dan het scherm). Icoon en naam zijn losse
+   sticky elementen (i.p.v. één gecombineerde kolom) zodat de naam op smalle
+   schermen uit de sticky positionering gehaald kan worden — anders wordt de
+   permanent zichtbare kolom te breed voor mobiel. */
 .timeline-head-spacer,
-.timeline-plant-head {
+.timeline-plant-icon,
+.timeline-plant-name {
   position: sticky;
-  left: 0;
   z-index: 2; /* ruim onder .combobox-listbox (30) / .modal-overlay (100) */
   background: var(--color-bg); /* Tijdlijn zit niet in een .panel, dus paginabackground */
+}
+
+.timeline-head-spacer,
+.timeline-plant-icon {
+  left: 0;
+}
+
+.timeline-plant-name {
+  left: var(--timeline-icon-col);
   box-shadow: 6px 0 8px -6px rgba(0, 0, 0, 0.3); /* zachte rand: kolom "zweeft" boven scrollende balken/iconen */
 }
 
-.timeline-plant-head {
-  display: flex;
-  align-items: center;
-  gap: var(--space-2);
+.timeline-plant-icon,
+.timeline-plant-name {
+  grid-row: 1;
   border: none;
   padding: 0;
   text-align: left;
@@ -622,14 +684,46 @@ textarea {
   border-radius: var(--radius);
 }
 
-.timeline-plant-head:hover .plant-name {
-  text-decoration: underline;
+.timeline-plant-icon {
+  grid-column: 1;
+  display: flex;
+  align-items: center;
 }
 
-.timeline-plant-names {
+.timeline-plant-name {
+  grid-column: 2;
   display: flex;
   flex-direction: column;
   min-width: 0;
+}
+
+.timeline-plant-name:hover .plant-name {
+  text-decoration: underline;
+}
+
+/* Op smalle schermen blijft alleen het icoon vastgeplakt: de naam scrollt
+   gewoon mee met de tijdlijn, anders wordt de permanent zichtbare kolom
+   (icoon + naam) te breed voor mobiel. */
+@media (max-width: 34rem) {
+  /* Sticky kop-cel moet even breed blijven als het sticky icoon eronder
+     (kolom 1), anders blijft hij de eerste maandlabels verbergen tot ze
+     de volledige oude icoon+naam-breedte gepasseerd zijn. */
+  .timeline-head-spacer {
+    grid-column: 1;
+  }
+
+  .timeline-plant-name {
+    position: relative; /* niet meer sticky, maar wel z-index zodat het onder het icoon door schuift i.p.v. eroverheen */
+    left: auto;
+    z-index: 1;
+    box-shadow: none;
+    background: none;
+  }
+
+  .timeline-plant-icon {
+    z-index: 3;
+    box-shadow: 6px 0 8px -6px rgba(0, 0, 0, 0.3);
+  }
 }
 
 .plant-name {

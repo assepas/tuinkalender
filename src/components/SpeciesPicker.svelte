@@ -43,8 +43,8 @@
       aria-expanded={expanded}
       aria-controls="add-plant-body"
     >
-      Plant toevoegen
       <span class="chevron">{expanded ? "▾" : "▸"}</span>
+      Plant toevoegen
     </button>
   </h2>
 

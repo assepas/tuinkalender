@@ -107,38 +107,6 @@
 </script>
 
 <div class="timeline-toolbar no-print">
-  <div class="panel timeline-toolbar-legend">
-    <h3>
-      <button
-        type="button"
-        class="panel-toggle"
-        aria-expanded={legendExpanded}
-        aria-controls="timeline-legend-body"
-        onclick={() => (legendExpanded = !legendExpanded)}
-      >
-        Legenda
-        <span class="chevron">{legendExpanded ? "▾" : "▸"}</span>
-      </button>
-    </h3>
-    {#if legendExpanded}
-      <div id="timeline-legend-body" class="timeline-legend">
-        <span class="legend-item">
-          <span class="legend-swatch bloom-swatch"></span>
-          Bloei (in bloemkleur)
-        </span>
-        {#each legendItems as item (item.key)}
-          <span class="legend-item">
-            <span class="marker-chip" class:light={item.light}>
-              <Icon name={item.icon} color={item.color} size={16} strokeWidth={item.light ? 1.2 : 1.8} />
-            </span>
-            {item.label}
-          </span>
-        {/each}
-        <span class="hint">Klik op een plant- of taakicoon voor details.</span>
-      </div>
-    {/if}
-  </div>
-
   <div class="panel timeline-toolbar-filters">
     <h3>
       <button
@@ -148,8 +116,8 @@
         aria-controls="timeline-filters-body"
         onclick={() => (filtersExpanded = !filtersExpanded)}
       >
-        Filteren &amp; sorteren
         <span class="chevron">{filtersExpanded ? "▾" : "▸"}</span>
+        Filteren &amp; sorteren
       </button>
     </h3>
     {#if filtersExpanded}
@@ -212,6 +180,39 @@
       </div>
     {/if}
   </div>
+
+  <div class="panel timeline-toolbar-legend">
+    <h3>
+      <button
+        type="button"
+        class="panel-toggle"
+        aria-expanded={legendExpanded}
+        aria-controls="timeline-legend-body"
+        onclick={() => (legendExpanded = !legendExpanded)}
+      >
+        <span class="chevron">{legendExpanded ? "▾" : "▸"}</span>
+        Legenda
+      </button>
+    </h3>
+    {#if legendExpanded}
+      <div id="timeline-legend-body" class="timeline-legend">
+        <span class="legend-item">
+          <span class="legend-swatch bloom-swatch"></span>
+          Bloei (in bloemkleur)
+        </span>
+        {#each legendItems as item (item.key)}
+          <span class="legend-item">
+            <span class="marker-chip" class:light={item.light}>
+              <Icon name={item.icon} color={item.color} size={16} strokeWidth={item.light ? 1.2 : 1.8} />
+            </span>
+            {item.label}
+          </span>
+        {/each}
+        <span class="hint">Klik op een plant- of taakicoon voor details.</span>
+      </div>
+    {/if}
+  </div>
+
 </div>
 
 {#if rows.length === 0}
@@ -234,12 +235,17 @@
 
     {#each visibleRows as row (row.planting.uid)}
       <div class="timeline-row">
-        <button type="button" class="timeline-plant-head" onclick={() => showSpecies(row)}>
+        <button
+          type="button"
+          class="timeline-plant-icon"
+          onclick={() => showSpecies(row)}
+          aria-label={row.planting.label || row.species.name}
+        >
           <PlantIcon species={row.species} size={34} />
-          <span class="timeline-plant-names">
-            <span class="plant-name">{row.planting.label || row.species.name}</span>
-            {#if row.species.latin}<span class="plant-latin">{row.species.latin}</span>{/if}
-          </span>
+        </button>
+        <button type="button" class="timeline-plant-name" onclick={() => showSpecies(row)}>
+          <span class="plant-name">{row.planting.label || row.species.name}</span>
+          {#if row.species.latin}<span class="plant-latin">{row.species.latin}</span>{/if}
         </button>
 
         <div class="lane-track">
