@@ -204,7 +204,7 @@ nav.tabs button[aria-current="page"] {
 }
 
 .panel h2 {
-  font-family: var(--font-display);
+  font-family: var(--font-ui);
   font-weight: 500;
   font-size: var(--step1);
   margin: 0 0 0;
