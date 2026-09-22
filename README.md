@@ -86,15 +86,20 @@ te testen en zelfs te hergebruiken buiten deze app.
 
 - **Maandoverzicht** — per maand een kaart met wat er die maand te doen is.
   Handig voor "wat moet ik nu doen".
-- **Tijdlijn** — per plant één regel over de 12 maanden: de bloeiperiode is
-  een doorlopende balk in bloemkleur, en de taken staan als icoontjes per
-  maand eroverheen (bij meerdere taken in één maand naast elkaar). Elke soort
-  staat er maar één keer op, ook als je hem meerdere keren in je tuin hebt.
+- **Tijdlijn** — per planting één regel over de 12 maanden: de bloeiperiode
+  is een doorlopende balk in bloemkleur, en de taken staan als icoontjes per
+  maand eroverheen (bij meerdere taken in één maand naast elkaar). Elke
+  planting staat op een eigen regel — sta je dezelfde soort op meerdere
+  standplaatsen, dan zie je ze los van elkaar (dezelfde soort kan toch al
+  niet dubbel op dezelfde standplaats, zie "Standplaatsen" hieronder).
   Alleen de taaktypes met `"timeline": true` doen mee: zaaien (kas / volle
   grond), planten, bemesten, snoeien (hoofd / licht), oogsten, delen/
   verspreiden, winterhard maken en overig onderhoud.
   Klik op het plant-icoon voor soortinfo, of op een icoon/de bloeibalk voor
-  de details.
+  de details. De plantnaam-kolom blijft vastgeprikt tijdens horizontaal
+  scrollen op smalle schermen. Legenda en filter-/sorteeropties (zelfde als
+  Mijn Tuin: standplaats, type, Naam/Soort/Standplaats) staan uitklapbaar
+  boven het grid.
 
 ## Een nieuwe plant toevoegen
 

@@ -122,8 +122,13 @@ function resolveMarkerMeta(task, typeMeta) {
 /**
  * Bouwt de rijen voor de tijdlijnweergave: per planting één rij met de
  * bloeiperiode (een doorlopende balk) en per maand de taak-markers die daar
- * overheen komen. Elke soort komt maar één keer voor (de eerste planting wint). Losstaand van buildCalendar() omdat de tijdlijn per plant
- * is opgebouwd, niet per maand.
+ * overheen komen. Elke planting krijgt een eigen rij — ook als je dezelfde
+ * soort meerdere keren hebt staan (op verschillende standplaatsen, of met
+ * een andere eigen naam). Dezelfde soort+standplaats-combinatie kan toch al
+ * niet dubbel voorkomen (zie gardenState.canAddPlanting), dus dit levert
+ * geen ruis op — en zo blijft de Tijdlijn hetzelfde tonen als "Mijn tuin".
+ * Losstaand van buildCalendar() omdat de tijdlijn per plant is opgebouwd,
+ * niet per maand.
  *
  * @param {string[]} taskTypeOrder  taaktype-id's die getoond worden, in de volgorde waarin markers
  *   binnen één maand naast elkaar komen. Taaktypes die hier niet in staan blijven weg.
@@ -138,15 +143,10 @@ export function buildTimelineRows(garden, speciesIndex, taskTypeIndex, regionPro
   const orderIndex = new Map(taskTypeOrder.map((id, i) => [id, i]));
   const locationIndex = buildLocationIndex(garden.locations);
   const rows = [];
-  const seenSpecies = new Set();
 
   for (const planting of garden.plantings ?? []) {
     const species = speciesIndex[planting.speciesId];
     if (!species) continue;
-
-    // Elke soort maar één keer: bij meerdere plantingen van dezelfde soort telt de eerste.
-    if (seenSpecies.has(species.id)) continue;
-    seenSpecies.add(species.id);
 
     const muted = new Set(planting.mutedTasks ?? []);
     const tasks = [

@@ -1,7 +1,13 @@
 <script>
   import { speciesIndex } from "../lib/generated/data.js";
   import { gardenState } from "../lib/state/garden.svelte.js";
-  import { CATEGORY_ORDER, CATEGORY_LABELS } from "../lib/domain/plantings.js";
+  import {
+    CATEGORY_ORDER,
+    CATEGORY_LABELS,
+    toggleInSet,
+    compareByKey,
+    filterPlantingRows,
+  } from "../lib/domain/plantings.js";
   import LocationManager from "./LocationManager.svelte";
   import SpeciesPicker from "./SpeciesPicker.svelte";
   import PlantingRow from "./PlantingRow.svelte";
@@ -20,31 +26,22 @@
   const locationIndex = $derived(Object.fromEntries(gardenState.locations.map((l) => [l.id, l])));
 
   const visiblePlantings = $derived.by(() => {
-    let rows = gardenState.plantings.map((planting) => ({
+    const rows = gardenState.plantings.map((planting) => ({
       planting,
       species: speciesIndex[planting.speciesId],
       location: locationIndex[planting.locationId],
     }));
 
-    if (filterLocationIds.size > 0) {
-      rows = rows.filter((r) => r.planting.locationId && filterLocationIds.has(r.planting.locationId));
-    }
-    if (filterCategories.size > 0) {
-      rows = rows.filter((r) => r.species && filterCategories.has(r.species.category));
-    }
+    const filtered = filterPlantingRows(rows, filterLocationIds, filterCategories);
 
     // Ontbrekende waarden (verwijderde soort/standplaats) sorteren als lege
     // string mee naar het begin — geen crash, geen verrassende volgorde.
-    const collator = new Intl.Collator("nl");
     const keyFor = (r) => {
       if (sortKey === "soort") return r.species?.name ?? "";
       if (sortKey === "standplaats") return r.location?.name ?? "";
       return r.planting.label || r.species?.name || "";
     };
-    rows = [...rows].sort((a, b) => collator.compare(keyFor(a), keyFor(b)));
-    if (sortDir === "desc") rows.reverse();
-
-    return rows;
+    return [...filtered].sort(compareByKey(keyFor, sortDir));
   });
 
   function toggleSort(key) {
@@ -54,15 +51,6 @@
       sortKey = key;
       sortDir = "asc";
     }
-  }
-
-  // Sets zijn geen Svelte-runes-state op zichzelf — een nieuwe Set toewijzen
-  // (i.p.v. de bestaande muteren) is wat de $derived hierboven laat herrekenen.
-  function toggleInSet(set, value) {
-    const next = new Set(set);
-    if (next.has(value)) next.delete(value);
-    else next.add(value);
-    return next;
   }
 
   // aria-sort hoort op een <th>, niet op een <button> — dus een gewone
@@ -217,8 +205,8 @@
   {#if gardenState.needsBackupWarning}
     <p class="error-text">
       {#if gardenState.lastExportedAt == null}
-        Je hebt nog nooit een back-up geëxporteerd. Doe dat even, dan ben je niet afhankelijk van
-        alleen deze browser.
+        Je hebt nog nooit een back-up geëxporteerd. Doe dat nu, dan ben je niet afhankelijk van
+        de data die deze browser onthoudt.
       {:else}
         Je laatste back-up is van {new Date(gardenState.lastExportedAt).toLocaleDateString("nl-NL", {
           day: "numeric",

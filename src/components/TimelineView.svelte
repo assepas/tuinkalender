@@ -2,7 +2,14 @@
   import { buildTimelineRows, MONTH_NAMES } from "../lib/domain/calendar.js";
   import { outlineColor } from "../lib/domain/color.js";
   import { toVisualSegments } from "../lib/domain/windows.js";
-  import { buildLocationIndex } from "../lib/domain/plantings.js";
+  import {
+    buildLocationIndex,
+    CATEGORY_ORDER,
+    CATEGORY_LABELS,
+    toggleInSet,
+    compareByKey,
+    filterPlantingRows,
+  } from "../lib/domain/plantings.js";
   import { speciesIndex, taskTypes, taskTypeIndex } from "../lib/generated/data.js";
   import { gardenState } from "../lib/state/garden.svelte.js";
   import DetailModal from "./DetailModal.svelte";
@@ -25,6 +32,43 @@
     buildTimelineRows(gardenState.garden, speciesIndex, taskTypeIndex, gardenState.regionProfile, taskTypeOrder)
   );
   let locationIndex = $derived(buildLocationIndex(gardenState.garden.locations));
+
+  // Legenda en filters/sorteren zijn los uitklapbaar, en starten allebei
+  // ingeklapt — zelfde standaard als "Standplaatsen"/"Plant toevoegen" in
+  // Mijn Tuin. Dezelfde filter-/sorteeropties als daar (zie GardenEditor.svelte).
+  let legendExpanded = $state(false);
+  let filtersExpanded = $state(false);
+  let sortKey = $state("naam"); // "naam" | "soort" | "standplaats"
+  let sortDir = $state("asc"); // "asc" | "desc"
+  let filterLocationIds = $state(new Set());
+  let filterCategories = $state(new Set());
+
+  let visibleRows = $derived.by(() => {
+    const filtered = filterPlantingRows(rows, filterLocationIds, filterCategories);
+    const keyFor = (r) => {
+      if (sortKey === "soort") return r.species?.name ?? "";
+      if (sortKey === "standplaats") return locationIndex[r.planting.locationId]?.name ?? "";
+      return r.planting.label || r.species?.name || "";
+    };
+    return [...filtered].sort(compareByKey(keyFor, sortDir));
+  });
+
+  function toggleSort(key) {
+    if (sortKey === key) {
+      sortDir = sortDir === "asc" ? "desc" : "asc";
+    } else {
+      sortKey = key;
+      sortDir = "asc";
+    }
+  }
+
+  // aria-sort hoort op een <th>, niet op een <button> — dus een gewone
+  // aria-label die de huidige sorteerstand uitspreekt i.p.v. dat attribuut.
+  function sortLabel(key, columnLabel) {
+    if (sortKey !== key) return `Sorteer op ${columnLabel}`;
+    const richting = sortDir === "asc" ? "oplopend" : "aflopend";
+    return `Sorteer op ${columnLabel} (nu ${richting} — klik om om te draaien)`;
+  }
 
   let selected = $state(null);
 
@@ -62,26 +106,120 @@
   }
 </script>
 
-<div class="timeline-legend no-print">
-  <span class="legend-item">
-    <span class="legend-swatch bloom-swatch"></span>
-    Bloei (in bloemkleur)
-  </span>
-  {#each legendItems as item (item.key)}
-    <span class="legend-item">
-      <span class="marker-chip" class:light={item.light}>
-        <Icon name={item.icon} color={item.color} size={16} strokeWidth={item.light ? 1.2 : 1.8} />
-      </span>
-      {item.label}
-    </span>
-  {/each}
-  <span class="hint">Klik op een plant- of taakicoon voor details.</span>
+<div class="timeline-toolbar no-print">
+  <div class="panel timeline-toolbar-legend">
+    <h3>
+      <button
+        type="button"
+        class="panel-toggle"
+        aria-expanded={legendExpanded}
+        aria-controls="timeline-legend-body"
+        onclick={() => (legendExpanded = !legendExpanded)}
+      >
+        Legenda
+        <span class="chevron">{legendExpanded ? "▾" : "▸"}</span>
+      </button>
+    </h3>
+    {#if legendExpanded}
+      <div id="timeline-legend-body" class="timeline-legend">
+        <span class="legend-item">
+          <span class="legend-swatch bloom-swatch"></span>
+          Bloei (in bloemkleur)
+        </span>
+        {#each legendItems as item (item.key)}
+          <span class="legend-item">
+            <span class="marker-chip" class:light={item.light}>
+              <Icon name={item.icon} color={item.color} size={16} strokeWidth={item.light ? 1.2 : 1.8} />
+            </span>
+            {item.label}
+          </span>
+        {/each}
+        <span class="hint">Klik op een plant- of taakicoon voor details.</span>
+      </div>
+    {/if}
+  </div>
+
+  <div class="panel timeline-toolbar-filters">
+    <h3>
+      <button
+        type="button"
+        class="panel-toggle"
+        aria-expanded={filtersExpanded}
+        aria-controls="timeline-filters-body"
+        onclick={() => (filtersExpanded = !filtersExpanded)}
+      >
+        Filteren &amp; sorteren
+        <span class="chevron">{filtersExpanded ? "▾" : "▸"}</span>
+      </button>
+    </h3>
+    {#if filtersExpanded}
+      <div id="timeline-filters-body">
+        {#if gardenState.locations.length > 0}
+          <div class="filter-bar">
+            <span class="filter-bar-label">Standplaats</span>
+            {#each gardenState.locations as location (location.id)}
+              <button
+                type="button"
+                class="filter-chip"
+                aria-pressed={filterLocationIds.has(location.id)}
+                onclick={() => (filterLocationIds = toggleInSet(filterLocationIds, location.id))}
+              >
+                {location.name}
+              </button>
+            {/each}
+          </div>
+        {/if}
+        <div class="filter-bar">
+          <span class="filter-bar-label">Type</span>
+          {#each CATEGORY_ORDER as category (category)}
+            <button
+              type="button"
+              class="filter-chip"
+              aria-pressed={filterCategories.has(category)}
+              onclick={() => (filterCategories = toggleInSet(filterCategories, category))}
+            >
+              {CATEGORY_LABELS[category]}
+            </button>
+          {/each}
+        </div>
+        <div class="filter-bar">
+          <span class="filter-bar-label">Sorteren</span>
+          <button
+            type="button"
+            class="sort-button"
+            aria-label={sortLabel("naam", "Naam")}
+            onclick={() => toggleSort("naam")}
+          >
+            Naam{#if sortKey === "naam"} {sortDir === "asc" ? "▲" : "▼"}{/if}
+          </button>
+          <button
+            type="button"
+            class="sort-button"
+            aria-label={sortLabel("soort", "Soort")}
+            onclick={() => toggleSort("soort")}
+          >
+            Soort{#if sortKey === "soort"} {sortDir === "asc" ? "▲" : "▼"}{/if}
+          </button>
+          <button
+            type="button"
+            class="sort-button"
+            aria-label={sortLabel("standplaats", "Standplaats")}
+            onclick={() => toggleSort("standplaats")}
+          >
+            Standplaats{#if sortKey === "standplaats"} {sortDir === "asc" ? "▲" : "▼"}{/if}
+          </button>
+        </div>
+      </div>
+    {/if}
+  </div>
 </div>
 
 {#if rows.length === 0}
   <p class="empty-state">
     Je tuin is nog leeg. Ga naar <strong>Mijn tuin</strong> om planten toe te voegen.
   </p>
+{:else if visibleRows.length === 0}
+  <p class="empty-state">Geen planten gevonden met deze filters.</p>
 {:else}
   <div class="timeline-scroll">
   <div class="timeline">
@@ -94,7 +232,7 @@
       </div>
     </div>
 
-    {#each rows as row (row.planting.uid)}
+    {#each visibleRows as row (row.planting.uid)}
       <div class="timeline-row">
         <button type="button" class="timeline-plant-head" onclick={() => showSpecies(row)}>
           <PlantIcon species={row.species} size={34} />

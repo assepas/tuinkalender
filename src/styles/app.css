@@ -196,7 +196,7 @@ nav.tabs button[aria-current="page"] {
   background: var(--color-surface);
   border: var(--border);
   border-radius: var(--radius);
-  padding: var(--space-5);
+  padding: var(--space-4);
 }
 
 .panel + .panel {
@@ -207,7 +207,14 @@ nav.tabs button[aria-current="page"] {
   font-family: var(--font-display);
   font-weight: 500;
   font-size: var(--step2);
-  margin: 0 0 var(--space-4);
+  margin: 0 0 0;
+}
+
+.panel h3 {
+  font-family: var(--font-display);
+  font-weight: 500;
+  font-size: var(--step1);
+  margin: 0 0 0;
 }
 
 /* Inklapbare paneelkop: de knop zit ín de <h2> (niet andersom), zodat de
@@ -491,6 +498,28 @@ textarea {
 
 /* ---------- Tijdlijn ---------- */
 
+/* Legenda (1/3) + filter-/sorteerbalk (2/3), beide los uitklapbaar — zie
+   .panel-toggle hierboven. Op smalle schermen onder elkaar (volle breedte). */
+.timeline-toolbar {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: var(--space-4);
+  margin-bottom: var(--space-4);
+  align-items: start;
+}
+
+/* ".panel + .panel" (zie hierboven) voegt normaal verticale marge toe voor
+   gestapelde panelen — hier staan ze naast elkaar, dat regelt de grid-gap al. */
+.timeline-toolbar > .panel + .panel {
+  margin-top: 0;
+}
+
+@media (max-width: 56rem) {
+  .timeline-toolbar {
+    grid-template-columns: 1fr;
+  }
+}
+
 .timeline-legend {
   display: flex;
   flex-wrap: wrap;
@@ -569,11 +598,23 @@ textarea {
   border-bottom: none;
 }
 
+/* Blijft staan tijdens horizontaal scrollen (vooral relevant op mobiel,
+   waar .timeline altijd breder is dan het scherm) — .timeline-head-spacer
+   is de lege cel erboven in de maandenrij, zelfde behandeling voor een
+   doorlopend vastgeprikte linkerkolom. */
+.timeline-head-spacer,
+.timeline-plant-head {
+  position: sticky;
+  left: 0;
+  z-index: 2; /* ruim onder .combobox-listbox (30) / .modal-overlay (100) */
+  background: var(--color-bg); /* Tijdlijn zit niet in een .panel, dus paginabackground */
+  box-shadow: 6px 0 8px -6px rgba(0, 0, 0, 0.3); /* zachte rand: kolom "zweeft" boven scrollende balken/iconen */
+}
+
 .timeline-plant-head {
   display: flex;
   align-items: center;
   gap: var(--space-2);
-  background: transparent;
   border: none;
   padding: 0;
   text-align: left;

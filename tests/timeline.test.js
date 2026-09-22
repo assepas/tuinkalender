@@ -117,15 +117,18 @@ describe("buildTimelineRows", () => {
     expect(licht.meta.light).toBe(true);
   });
 
-  it("toont elke soort maar één keer, ook bij meerdere plantingen (de eerste wint)", () => {
+  it("toont elke planting als eigen rij, ook bij meerdere plantingen van dezelfde soort", () => {
+    // Dezelfde soort+standplaats-combinatie kan al niet dubbel voorkomen
+    // (zie gardenState.canAddPlanting), dus meerdere rijen van dezelfde
+    // soort zijn hier altijd legitiem (andere standplaats/eigen naam).
     const garden = baseGarden([
       { uid: "p1", speciesId: "tomaat", label: "Tomaat kas" },
       { uid: "p2", speciesId: "sla" },
       { uid: "p3", speciesId: "tomaat", label: "Tomaat buiten" },
     ]);
     const rows = buildTimelineRows(garden, speciesIndex, taskTypeIndex, region, taskTypeOrder);
-    expect(rows.map((r) => r.species.id)).toEqual(["tomaat", "sla"]);
-    expect(rows[0].planting.uid).toBe("p1");
+    expect(rows.map((r) => r.planting.uid)).toEqual(["p1", "p2", "p3"]);
+    expect(rows.map((r) => r.species.id)).toEqual(["tomaat", "sla", "tomaat"]);
   });
 
   it("groepeert taken met markerStyle 'bar' (oogsten) tot doorlopende balken i.p.v. maandcellen", () => {

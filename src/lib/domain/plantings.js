@@ -52,3 +52,51 @@ export function findDuplicatePlantings(garden, speciesId, locationId, excludeUid
     (p) => p.speciesId === speciesId && p.locationId === locationId && p.uid !== excludeUid
   );
 }
+
+// Gedeelde filter-/sorteerhulpen voor plantingsrijen — gebruikt door zowel
+// "Mijn tuin" (GardenEditor.svelte, rijen {planting, species, location}) als
+// de Tijdlijn (TimelineView.svelte, de rijkere buildTimelineRows()-rijen).
+// Beide rij-vormen hebben altijd `planting` en `species`, dus filteren kan
+// generiek; sorteren krijgt een key-extractor mee omdat "standplaats" per
+// aanroeper anders wordt opgezocht (rechtstreeks vs. via een locationIndex).
+
+/** Toggle een waarde in een Set zonder de gegeven Set te muteren — Svelte 5
+ * runes reageren op reassignment, niet op Set.add/delete in-place. */
+export function toggleInSet(set, value) {
+  const next = new Set(set);
+  if (next.has(value)) next.delete(value);
+  else next.add(value);
+  return next;
+}
+
+/** NL-collator-sortcomparator, geparametriseerd met een key-extractor.
+ * @param {(row: object) => string} keyFor
+ * @param {"asc"|"desc"} [dir]
+ */
+export function compareByKey(keyFor, dir = "asc") {
+  const collator = new Intl.Collator("nl");
+  const sign = dir === "desc" ? -1 : 1;
+  return (a, b) => sign * collator.compare(keyFor(a), keyFor(b));
+}
+
+/**
+ * Filtert rijen (die minimaal `{ planting, species }` bevatten) op
+ * standplaats-id en soort-categorie. Beide filters zijn AND-gecombineerd;
+ * een lege Set betekent "geen filter op deze dimensie". Een rij zonder
+ * `species` (verwijderde soort) of zonder `planting.locationId` (nog geen
+ * standplaats) valt weg zodra het bijbehorende filter actief is.
+ *
+ * @param {Array<{planting: object, species: object}>} rows
+ * @param {Set<string>} locationIds
+ * @param {Set<string>} categories
+ */
+export function filterPlantingRows(rows, locationIds, categories) {
+  let result = rows;
+  if (locationIds.size > 0) {
+    result = result.filter((r) => r.planting.locationId && locationIds.has(r.planting.locationId));
+  }
+  if (categories.size > 0) {
+    result = result.filter((r) => r.species && categories.has(r.species.category));
+  }
+  return result;
+}
