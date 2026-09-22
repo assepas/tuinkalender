@@ -1,6 +1,6 @@
-# Tuinkalender
+# TuinTaak
 
-Persoonlijke tuinkalender: per maand zie je welke onderhoudstaken horen bij
+TuinTaak is je persoonlijke tuinkalender: per maand zie je welke onderhoudstaken horen bij
 de planten die je hebt staan, afgestemd op regio Utrecht. Geen backend —
 de gedeelde plantendata zit in de repo, je eigen tuin staat lokaal in de
 browser, en delen gaat via een JSON-export of dezelfde gehoste app.

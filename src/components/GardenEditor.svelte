@@ -12,7 +12,7 @@
   }
 
   function exportFilename() {
-    return `tuinkalender-${new Date().toISOString().slice(0, 10)}.json`;
+    return `tuintaak-${new Date().toISOString().slice(0, 10)}.json`;
   }
 
   function downloadExport(json, filename) {
@@ -37,7 +37,7 @@
       const file = new File([json], filename, { type: "application/json" });
       if (navigator.canShare({ files: [file] })) {
         try {
-          await navigator.share({ files: [file], title: "Tuinkalender" });
+          await navigator.share({ files: [file], title: "TuinTaak" });
           gardenState.recordExport();
           return;
         } catch (err) {

@@ -4,11 +4,11 @@
 
 import { migrateGarden, createEmptyGarden } from "../domain/migrate.js";
 
-const STORAGE_KEY = "tuinkalender:garden:v1";
+const STORAGE_KEY = "tuintaak:garden:v1";
 // Los van het tuin-JSON opgeslagen (eigen sleutel), zodat dit tijdstip niet
 // meekomt in een export/import — dat is metadata over déze browser, niet
 // over de tuin zelf.
-const LAST_EXPORTED_KEY = "tuinkalender:lastExportedAt";
+const LAST_EXPORTED_KEY = "tuintaak:lastExportedAt";
 const DEFAULT_REGION = "nl-utrecht";
 
 export function loadGarden() {
@@ -41,7 +41,7 @@ export function importGardenFromJson(jsonText) {
     throw new Error("Dit is geen geldige JSON.");
   }
   if (!parsed || typeof parsed !== "object" || !Array.isArray(parsed.plantings)) {
-    throw new Error('Bestand mist een "plantings"-lijst — is dit een tuinkalender-export?');
+    throw new Error('Bestand mist een "plantings"-lijst — is dit een tuintaak-export?');
   }
   return migrateGarden(parsed);
 }
