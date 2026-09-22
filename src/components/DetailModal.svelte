@@ -63,7 +63,7 @@
         <p class="modal-meta">{detail.planting.notes}</p>
       {/if}
 
-      <h3>Taken van deze plant</h3>
+      <h3>Taken</h3>
       <ul class="modal-task-list">
         {#each detail.species.tasks as task (task.id)}
           <li>
@@ -85,6 +85,9 @@
           <p class="latin">{detail.planting.label || detail.species.name}</p>
         </div>
       </div>
+      {#if detail.entry.task.note}
+        <p class="modal-meta">{detail.entry.task.note}</p>
+      {/if}
       <p class="modal-meta">Actief: {monthRangeLabel(detail.entry.months)}</p>
       {#if detail.entry.frequency}
         <p class="modal-meta">Frequentie: {detail.entry.frequency}</p>
@@ -93,9 +96,6 @@
         <p class="modal-meta">
           Belang: {detail.entry.task.importance === "hoofd" ? "hoofdsnoei (nodig)" : "lichte/optionele snoei"}
         </p>
-      {/if}
-      {#if detail.entry.task.note}
-        <p class="modal-meta">{detail.entry.task.note}</p>
       {/if}
     {/if}
   </div>
