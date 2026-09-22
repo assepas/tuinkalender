@@ -12,12 +12,6 @@
     return `${MONTH_NAMES[months[0] - 1]} t/m ${MONTH_NAMES[months[months.length - 1] - 1]}`;
   }
 
-  function bloomSentence(detail) {
-    const range = monthRangeLabel(detail.months);
-    const colorName = detail.species.appearance?.flowerColorName;
-    return colorName ? `Bloeit ${range}, bloemkleur ${colorName}.` : `Bloeit ${range}.`;
-  }
-
   function handleKeydown(event) {
     if (event.key === "Escape") onclose();
   }
@@ -79,19 +73,6 @@
           </li>
         {/each}
       </ul>
-    {:else if detail.kind === "bloom"}
-      <div class="modal-head">
-        <PlantIcon species={detail.species} size={44} />
-        <div>
-          <h2>{detail.planting.label || detail.species.name}</h2>
-          <p class="latin">Bloei</p>
-        </div>
-      </div>
-      <p class="modal-meta">
-        <span class="swatch" style:background={detail.species.appearance?.flowerColor}></span>
-        {bloomSentence(detail)}
-      </p>
-      <p class="hint">Bloei is informatief — er hoort geen onderhoudstaak bij.</p>
     {:else if detail.kind === "task"}
       <div class="modal-head">
         <span class="task-icon-badge" style:background={`${detail.meta?.color ?? "#999"}26`}>

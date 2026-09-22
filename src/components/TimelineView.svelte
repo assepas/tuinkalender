@@ -30,10 +30,6 @@
     selected = { kind: "species", species: row.species, planting: row.planting };
   }
 
-  function showBloom(row) {
-    selected = { kind: "bloom", species: row.species, planting: row.planting, months: row.bloom.months };
-  }
-
   function showTask(row, marker) {
     selected = {
       kind: "task",
@@ -104,16 +100,14 @@
         <div class="lane-track">
           {#if row.bloom}
             {#each toVisualSegments(row.bloom.months) as [start, end] (start)}
-              <button
-                type="button"
+              <!-- Puur informatief (geen taak), dus geen button/onclick — zie DetailModal. -->
+              <div
                 class="bloom-bar"
                 style:grid-column={`${start} / ${end + 1}`}
                 style:background={row.bloom.color}
                 style:border-color={outlineColor(row.bloom.color)}
-                onclick={() => showBloom(row)}
                 title="Bloei"
-                aria-label="Bloei"
-              ></button>
+              ></div>
             {/each}
           {/if}
           {#each row.bars as bar (bar.taskType)}
