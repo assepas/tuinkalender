@@ -6,7 +6,7 @@
   "category": "vaste-plant",
   "tags": ["niet-winterhard", "kuipplant"],
   "nativeStatus": "exoot",
-  "appearance": { "shape": "bloem", "flowerColor": "#C0392B", "flowerColorName": "rood" },
+  "appearance": { "shape": "bloem", "count": 5, "flowerColor": "#C0392B", "flowerColorName": "rood" },
   "bloom": { "from": "05-15", "to": "10-01" },
   "tasks": [
     { "id": "planten", "type": "planten", "window": { "kind": "relative", "anchor": "lastFrost", "fromWeeks": 0, "toWeeks": 2 } },

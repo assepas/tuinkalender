@@ -6,7 +6,7 @@
   "category": "vaste-plant",
   "tags": ["meerjarig", "bloemenweide"],
   "nativeStatus": "inheems",
-  "appearance": { "shape": "bloem", "flowerColor": "#7C8FC4", "flowerColorName": "blauwpaars" },
+  "appearance": { "shape": "bloem", "count": 5, "flowerColor": "#7C8FC4", "flowerColorName": "blauwpaars" },
   "bloom": { "from": "06-01", "to": "08-01" },
   "tasks": [
     { "id": "planten", "type": "planten", "window": { "kind": "dates", "from": "03-15", "to": "05-01" } },

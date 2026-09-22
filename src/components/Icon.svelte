@@ -1,20 +1,12 @@
 <script>
-  // Eén centrale plek voor alle kleine SVG-iconen: het plant-silhouet
-  // (op category.appearance.shape) én de taak-glyphs (op taskTypes.icon).
-  // Alles is parametriseerbaar op kleur, dus een nieuw taaktype of een
-  // nieuwe plantvorm in de data levert meteen een passend icoon op zonder
-  // dat er iets in deze component hoeft te veranderen — zolang het om een
-  // van de bestaande "shape"/"icon"-namen gaat. Een echt nieuwe vorm vraagt
-  // hier één extra {#if}-tak.
-
-  // `outline` is alleen voor de plant-silhouetten: de randkleur van de bloem
-  // (donkerder dan `color`, zodat ook witte bloemen zichtbaar blijven).
-  let { name, color = "currentColor", size = 16, strokeWidth = 1.6, outline = undefined } = $props();
-  const edge = $derived(outline ?? color);
-
-  // Het groen van steel en blad in de plant-silhouetten staat los van de bloemkleur.
-  const STEM = "#4E6B32";
-  const LEAF = "#86A552";
+  // Centrale plek voor de taak-glyphs (op taskTypes.icon). De plant-silhouetten
+  // (op species.appearance.shape) zitten in PlantGlyph.svelte — een aparte
+  // component, want die geometrie is countgedreven en heeft niets gemeen met
+  // deze vaste taak-iconen. Een nieuw taaktype in de data levert meteen een
+  // passend icoon op zonder dat er hier iets hoeft te veranderen, zolang het
+  // om een bestaande "icon"-naam gaat. Een echt nieuw icoon vraagt hier één
+  // extra {#if}-tak.
+  let { name, color = "currentColor", size = 16, strokeWidth = 1.6 } = $props();
 </script>
 
 <svg
@@ -28,64 +20,7 @@
   stroke-linejoin="round"
   aria-hidden="true"
 >
-  {#if name === "bloem"}
-    <path d="M12 22v-9.5" stroke={STEM} stroke-width="1.6" />
-    <path d="M12 19.5c-3.6 0-5.6-2-5.8-5 3.4 0 5.6 2 5.8 5Z" fill={LEAF} stroke={STEM} stroke-width="1" />
-    <path d="M12 17c3-0.2 4.8-1.8 5-4.4-3 0-4.8 1.6-5 4.4Z" fill={LEAF} stroke={STEM} stroke-width="1" />
-    <g fill={color} stroke={edge} stroke-width="1.1">
-      <circle cx="12" cy="4.7" r="2.7" />
-      <circle cx="15.14" cy="6.98" r="2.7" />
-      <circle cx="13.94" cy="10.67" r="2.7" />
-      <circle cx="10.06" cy="10.67" r="2.7" />
-      <circle cx="8.86" cy="6.98" r="2.7" />
-    </g>
-    <circle cx="12" cy="8" r="1.9" fill={edge} stroke="none" />
-  {:else if name === "kruid"}
-    <path d="M12 22V9" stroke={STEM} stroke-width="1.6" />
-    <path d="M12 18.5c0-3.4 2.4-5.6 6-5.6-0.2 3.4-2.6 5.6-6 5.6Z" fill={LEAF} stroke={STEM} stroke-width="1" />
-    <path d="M12 15c0-3.4-2.4-5.6-6-5.6 0.2 3.4 2.6 5.6 6 5.6Z" fill={LEAF} stroke={STEM} stroke-width="1" />
-    <g fill={color} stroke={edge} stroke-width="1.1">
-      <circle cx="12" cy="4.2" r="2.2" />
-      <circle cx="9.6" cy="7.4" r="2.2" />
-      <circle cx="14.4" cy="7.4" r="2.2" />
-    </g>
-  {:else if name === "bes"}
-    <path d="M12 4.5v8" stroke={STEM} stroke-width="1.5" />
-    <path d="M12 6c0.8-2.6 3.8-3.4 6.2-2.6-0.6 2.6-3.6 4-6.2 2.6Z" fill={LEAF} stroke={STEM} stroke-width="1" />
-    <g fill={color} stroke={edge} stroke-width="1.1">
-      <circle cx="8.6" cy="14" r="3.3" />
-      <circle cx="15.4" cy="14" r="3.3" />
-      <circle cx="12" cy="18.6" r="3.3" />
-    </g>
-  {:else if name === "boom"}
-    <path d="M12 22v-7" stroke={STEM} stroke-width="1.8" />
-    <path d="M12 19c2.8 0 4.6-1.4 5-3.8-2.8 0-4.6 1.4-5 3.8Z" fill={LEAF} stroke={STEM} stroke-width="1" />
-    <circle cx="12" cy="9" r="6.3" fill={color} stroke={edge} stroke-width="1.2" />
-    <g fill={edge} fill-opacity="0.45" stroke="none">
-      <circle cx="9.5" cy="8" r="1" />
-      <circle cx="14.2" cy="7" r="1" />
-      <circle cx="12.5" cy="11.5" r="1" />
-    </g>
-  {:else if name === "bol"}
-    <path d="M12 22v-8" stroke={STEM} stroke-width="1.6" />
-    <path d="M12 21.5C8.2 20.6 6.2 16.8 6.6 12.6c3.2 1.4 5.4 4.4 5.4 8.9Z" fill={LEAF} stroke={STEM} stroke-width="1" />
-    <path d="M12 21.5c3.8-0.9 5.8-4.7 5.4-8.9-3.2 1.4-5.4 4.4-5.4 8.9Z" fill={LEAF} stroke={STEM} stroke-width="1" />
-    <path
-      d="M12 3c2.8 0 5 3.4 5 6.6 0 2.6-2.2 4.4-5 4.4s-5-1.8-5-4.4C7 6.4 9.2 3 12 3Z"
-      fill={color}
-      stroke={edge}
-      stroke-width="1.2"
-    />
-  {:else if name === "struik"}
-    <path d="M12 22v-8" stroke={STEM} stroke-width="1.6" />
-    <path d="M12 21c-3.4 0-5.4-1.6-5.8-4.4 3.2 0 5.4 1.6 5.8 4.4Z" fill={LEAF} stroke={STEM} stroke-width="1" />
-    <path d="M12 20c3-0.2 4.8-1.6 5-4-3 0-4.8 1.6-5 4Z" fill={LEAF} stroke={STEM} stroke-width="1" />
-    <g fill={color} stroke={edge} stroke-width="1.1">
-      <circle cx="8.4" cy="11.5" r="3.7" />
-      <circle cx="15.6" cy="11.5" r="3.7" />
-      <circle cx="12" cy="7.8" r="3.7" />
-    </g>
-  {:else if name === "seed"}
+  {#if name === "seed"}
     <path d="M4 18c6-1 14-8 16-14-6 2-13 10-14 16Z" fill={color} fill-opacity="0.35" />
   {:else if name === "seed-kas"}
     <g transform="translate(0, -2)">

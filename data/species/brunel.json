@@ -6,7 +6,7 @@
   "category": "vaste-plant",
   "tags": ["bodembedekker", "bloemenweide"],
   "nativeStatus": "inheems",
-  "appearance": { "shape": "bloem", "flowerColor": "#6E5A9E", "flowerColorName": "paars" },
+  "appearance": { "shape": "bloem", "count": 3, "flowerColor": "#6E5A9E", "flowerColorName": "paars" },
   "bloom": { "from": "06-01", "to": "09-01" },
   "tasks": [
     { "id": "planten", "type": "planten", "window": { "kind": "dates", "from": "03-15", "to": "05-01" } },

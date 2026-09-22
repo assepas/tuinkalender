@@ -6,7 +6,7 @@
   "category": "fruit",
   "tags": ["struik", "zomerdragend"],
   "nativeStatus": "inheems",
-  "appearance": { "shape": "bes", "flowerColor": "#F5F1E6", "flowerColorName": "wit" },
+  "appearance": { "shape": "vrucht", "count": 5, "flowerColor": "#F5F1E6", "flowerColorName": "wit", "fruitColor": "#C4443A" },
   "bloom": { "from": "05-15", "to": "06-15" },
   "tasks": [
     { "id": "snoeien", "type": "snoeien", "importance": "hoofd", "window": { "kind": "dates", "from": "02-15", "to": "03-15" }, "note": "Oude vruchtdragende ranken wegknippen" },

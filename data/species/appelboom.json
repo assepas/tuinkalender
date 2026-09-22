@@ -6,7 +6,7 @@
   "category": "boom",
   "tags": ["meerjarig", "fruitboom"],
   "nativeStatus": "archeofyt",
-  "appearance": { "shape": "boom", "flowerColor": "#F0D9DC", "flowerColorName": "wit-roze" },
+  "appearance": { "shape": "vrucht", "count": 1, "flowerColor": "#F0D9DC", "flowerColorName": "wit-roze", "fruitColor": "#B33A2E" },
   "bloom": { "from": "04-15", "to": "05-15" },
   "tasks": [
     { "id": "snoeien", "type": "snoeien", "importance": "hoofd", "window": { "kind": "dates", "from": "01-15", "to": "02-28" }, "note": "Wintersnoei, kies een vorstvrije dag" },

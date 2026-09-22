@@ -6,7 +6,7 @@
   "category": "kruid",
   "tags": ["meerjarig", "mediterraan"],
   "nativeStatus": "exoot",
-  "appearance": { "shape": "kruid", "flowerColor": "#C598B8", "flowerColorName": "roze-lila" },
+  "appearance": { "shape": "aar", "count": 5, "flowerColor": "#C598B8", "flowerColorName": "roze-lila" },
   "bloom": { "from": "05-15", "to": "07-01" },
   "tasks": [
     { "id": "planten", "type": "planten", "window": { "kind": "dates", "from": "04-01", "to": "05-15" } },

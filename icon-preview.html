@@ -1,0 +1,259 @@
+<!doctype html>
+<!--
+  Losse dev-pagina, geen onderdeel van de app: niet gelinkt vanuit index.html/App.svelte
+  en niet meegenomen in `npm run build` (Vite bundelt standaard alleen index.html).
+  Draai `npm run dev` en open /icon-preview.html — importeert rechtstreeks
+  src/lib/domain/plantGlyph.js en color.js, dus elke edit + save daar herlaadt
+  deze pagina automatisch (Vite HMR/full-reload) met het nieuwe resultaat.
+-->
+<html lang="nl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Icoon-preview (dev)</title>
+    <link rel="stylesheet" href="./src/styles/tokens.css" />
+    <style>
+      * { box-sizing: border-box; }
+      body {
+        margin: 0;
+        background: var(--color-bg);
+        color: var(--color-ink);
+        font-family: var(--font-ui);
+        padding: var(--space-5) var(--space-4) var(--space-7);
+      }
+      .page { max-width: 60rem; margin: 0 auto; }
+      h1 {
+        font-family: var(--font-display);
+        font-weight: 500;
+        font-size: var(--step3);
+        margin: 0 0 var(--space-2);
+      }
+      header p {
+        margin: 0 0 var(--space-5);
+        color: var(--color-ink-muted);
+        font-size: var(--step-1);
+        max-width: 42rem;
+      }
+      code {
+        font-family: ui-monospace, "SF Mono", Menlo, monospace;
+        background: var(--color-surface);
+        border: var(--border);
+        border-radius: var(--radius);
+        padding: 0.05em 0.35em;
+        font-size: 0.9em;
+      }
+      .shape-block {
+        background: var(--color-surface);
+        border: var(--border);
+        border-radius: 6px;
+        padding: var(--space-4);
+        margin-bottom: var(--space-4);
+      }
+      .shape-head {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: baseline;
+        justify-content: space-between;
+        gap: var(--space-1) var(--space-4);
+      }
+      .shape-name {
+        font-family: var(--font-display);
+        font-size: var(--step1);
+        font-weight: 500;
+      }
+      .shape-examples {
+        color: var(--color-ink-faint);
+        font-size: var(--step-1);
+      }
+      .shape-controls {
+        display: flex;
+        flex-wrap: wrap;
+        gap: var(--space-4);
+        align-items: center;
+        margin: var(--space-3) 0 var(--space-4);
+        font-size: var(--step-1);
+        color: var(--color-ink-muted);
+      }
+      .shape-controls label {
+        display: inline-flex;
+        align-items: center;
+        gap: 5px;
+      }
+      .shape-controls input[type="color"] {
+        width: 22px;
+        height: 22px;
+        padding: 0;
+        border: var(--border);
+        border-radius: var(--radius);
+        background: none;
+        cursor: pointer;
+      }
+      .shape-controls input[type="range"] {
+        width: 90px;
+      }
+      .cells {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(74px, 1fr));
+        gap: var(--space-3);
+      }
+      .cell {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 6px;
+      }
+      .badge {
+        width: 74px;
+        height: 74px;
+        border-radius: 999px;
+        background: var(--color-plant-bg);
+        border: 1px solid var(--color-plant-line);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex: none;
+      }
+      .badge svg { display: block; }
+      .cell .count-label {
+        font-size: var(--step-1);
+        color: var(--color-ink-muted);
+      }
+      footer {
+        margin-top: var(--space-3);
+        padding-top: var(--space-3);
+        border-top: var(--border);
+        color: var(--color-ink-faint);
+        font-size: var(--step-1);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="page">
+      <header>
+        <h1>Icoon-preview</h1>
+        <p>
+          Rechtstreekse import van <code>src/lib/domain/plantGlyph.js</code> en
+          <code>color.js</code> — sla een van die bestanden op en deze pagina
+          herlaadt automatisch met het resultaat. Los custom-count-veld en
+          kleurbolletjes voor snel experimenteren zonder soortendata aan te
+          hoeven passen.
+        </p>
+      </header>
+
+      <div id="blocks"></div>
+
+      <footer>
+        Badge 74px → icoon 50px (zelfde 0.68-verhouding als <code>PlantIcon.svelte</code>).
+        Productiematen in de app: 15px (SpeciesCombobox) t/m 30px (DetailModal).
+      </footer>
+    </div>
+
+    <script type="module">
+      import { outlineColor, heartColor } from "./src/lib/domain/color.js";
+      import {
+        STEM,
+        LEAF,
+        LEAF_BL_D,
+        LEAF_TR_D,
+        stemPath,
+        petalPath,
+        petalAngle,
+        BLOEM_CENTER,
+        spikeSegments,
+        cloudCircles,
+        fruitCircles,
+        clampCount,
+      } from "./src/lib/domain/plantGlyph.js";
+
+      function glyphSvg(shape, count, color, fruitColor, size) {
+        const edge = outlineColor(color);
+        const fruitEdge = outlineColor(fruitColor ?? color);
+        const leafD = shape === "vrucht" ? LEAF_TR_D : LEAF_BL_D;
+        const stem = stemPath(shape, count);
+        let inner = "";
+        if (stem) inner += `<path d="${stem}" stroke="${STEM}" stroke-width="1.6" stroke-linecap="round" fill="none"/>`;
+        inner += `<path d="${leafD}" fill="${LEAF}" stroke="${STEM}" stroke-width="1"/>`;
+        if (shape === "bloem") {
+          const n = clampCount(count);
+          for (let i = 0; i < n; i++) {
+            inner += `<path d="${petalPath(count)}" fill="${color}" stroke="${edge}" stroke-width="0.9" transform="translate(${BLOEM_CENTER.cx} ${BLOEM_CENTER.cy}) rotate(${petalAngle(i, count)})"/>`;
+          }
+          inner += `<circle cx="${BLOEM_CENTER.cx}" cy="${BLOEM_CENTER.cy}" r="1.3" fill="${heartColor(color)}" stroke="none"/>`;
+        } else if (shape === "aar") {
+          for (const seg of spikeSegments(count)) {
+            inner += `<ellipse cx="${seg.cx}" cy="${seg.cy}" rx="${seg.rx}" ry="${seg.ry}" fill="${color}" stroke="${edge}" stroke-width="0.8"/>`;
+          }
+        } else if (shape === "losse-wolk") {
+          for (const c of cloudCircles(count)) {
+            inner += `<circle cx="${c.cx}" cy="${c.cy}" r="${c.r}" fill="${color}" stroke="${edge}" stroke-width="0.7"/>`;
+          }
+        } else if (shape === "vrucht") {
+          for (const f of fruitCircles(count)) {
+            inner += `<circle cx="${f.cx}" cy="${f.cy}" r="${f.r}" fill="${fruitColor}" stroke="${fruitEdge}" stroke-width="0.9"/>`;
+          }
+        }
+        return `<svg width="${size}" height="${size}" viewBox="0 0 24 24" fill="none" aria-hidden="true">${inner}</svg>`;
+      }
+
+      const DEFAULT_COUNTS = [1, 2, 3, 5, 8, 12];
+      const SHAPES = [
+        { key: "bloem", label: "bloem", examples: "aardappel · akelei · dahlia · tulp", color: "#8A6BB0", fruit: false },
+        { key: "aar", label: "aar", examples: "lavendel · rozemarijn · tijm · vingerhoedskruid", color: "#8A6BB0", fruit: false },
+        { key: "losse-wolk", label: "losse-wolk", examples: "hortensia · sla · vrouwenmantel", color: "#C97FAE", fruit: false },
+        { key: "vrucht", label: "vrucht", examples: "appelboom · aalbes · tomaat · braam", color: "#F5F1E6", fruit: true, fruitColor: "#D1382A" },
+      ];
+
+      const blocksEl = document.getElementById("blocks");
+
+      for (const shape of SHAPES) {
+        const block = document.createElement("section");
+        block.className = "shape-block";
+
+        const head = document.createElement("div");
+        head.className = "shape-head";
+        head.innerHTML = `<span class="shape-name">${shape.label}</span><span class="shape-examples">${shape.examples}</span>`;
+        block.appendChild(head);
+
+        const controls = document.createElement("div");
+        controls.className = "shape-controls";
+        let controlsHtml = `<label>flowerColor <input type="color" class="in-color" value="${shape.color}"></label>`;
+        if (shape.fruit) {
+          controlsHtml += `<label>fruitColor <input type="color" class="in-fruitcolor" value="${shape.fruitColor}"></label>`;
+        }
+        controlsHtml += `<label>extra count <input type="range" class="in-extra" min="1" max="12" value="6"> <span class="in-extra-val">6</span></label>`;
+        controls.innerHTML = controlsHtml;
+        block.appendChild(controls);
+
+        const cells = document.createElement("div");
+        cells.className = "cells";
+        block.appendChild(cells);
+
+        function redraw() {
+          const color = controls.querySelector(".in-color").value;
+          const fruitColor = shape.fruit ? controls.querySelector(".in-fruitcolor").value : undefined;
+          const extra = Number(controls.querySelector(".in-extra").value);
+          controls.querySelector(".in-extra-val").textContent = extra;
+          const counts = [...DEFAULT_COUNTS, extra].sort((a, b) => a - b);
+          cells.innerHTML = "";
+          for (const count of counts) {
+            const cell = document.createElement("div");
+            cell.className = "cell";
+            const badge = document.createElement("div");
+            badge.className = "badge";
+            badge.innerHTML = glyphSvg(shape.key, count, color, fruitColor, 50);
+            const label = document.createElement("div");
+            label.className = "count-label";
+            label.textContent = `count=${count}`;
+            cell.appendChild(badge);
+            cell.appendChild(label);
+            cells.appendChild(cell);
+          }
+        }
+
+        controls.addEventListener("input", redraw);
+        redraw();
+        blocksEl.appendChild(block);
+      }
+    </script>
+  </body>
+</html>

@@ -6,7 +6,7 @@
   "category": "fruit",
   "tags": ["bodembedekker"],
   "nativeStatus": "inheems",
-  "appearance": { "shape": "bes", "flowerColor": "#F5F1E6", "flowerColorName": "wit" },
+  "appearance": { "shape": "vrucht", "count": 1, "flowerColor": "#F5F1E6", "flowerColorName": "wit", "fruitColor": "#C23A2E" },
   "bloom": { "from": "04-15", "to": "06-01" },
   "tasks": [
     { "id": "planten", "type": "planten", "window": { "kind": "dates", "from": "03-15", "to": "05-01" } },

@@ -6,7 +6,7 @@
   "category": "struik",
   "tags": ["klimmer", "meerjarig"],
   "nativeStatus": "exoot",
-  "appearance": { "shape": "struik", "flowerColor": "#7A5C99", "flowerColorName": "paars" },
+  "appearance": { "shape": "bloem", "count": 8, "flowerColor": "#7A5C99", "flowerColorName": "paars" },
   "bloom": { "from": "06-01", "to": "09-01" },
   "tasks": [
     { "id": "planten", "type": "planten", "window": { "kind": "dates", "from": "03-15", "to": "05-01" }, "note": "Wortels diep en koel/beschaduwd planten (\"voeten in de schaduw, kop in de zon\")" },

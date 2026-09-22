@@ -6,7 +6,7 @@
   "category": "groente",
   "tags": ["eenjarig", "vorstgevoelig"],
   "nativeStatus": "exoot",
-  "appearance": { "shape": "bloem", "flowerColor": "#E8C547", "flowerColorName": "geel" },
+  "appearance": { "shape": "vrucht", "count": 1, "flowerColor": "#E8C547", "flowerColorName": "geel", "fruitColor": "#D1382A" },
   "bloom": { "from": "06-15", "to": "09-01" },
   "tasks": [
     { "id": "zaaien-binnen", "type": "zaaien", "location": "kas", "window": { "kind": "dates", "from": "03-01", "to": "03-31" }, "note": "Voorzaaien binnen, ~20°C" },

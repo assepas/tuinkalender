@@ -6,7 +6,7 @@
   "category": "vaste-plant",
   "tags": ["bodembedekker"],
   "nativeStatus": "onbekend",
-  "appearance": { "shape": "bloem", "flowerColor": "#D488B5", "flowerColorName": "roze" },
+  "appearance": { "shape": "bloem", "count": 5, "flowerColor": "#D488B5", "flowerColorName": "roze" },
   "bloom": { "from": "06-01", "to": "09-01" },
   "tasks": [
     { "id": "planten", "type": "planten", "window": { "kind": "dates", "from": "03-15", "to": "05-01" }, "note": "Knolletjes ondiep planten" },

@@ -6,7 +6,7 @@
   "category": "fruit",
   "tags": ["struik"],
   "nativeStatus": "inheems",
-  "appearance": { "shape": "bes", "flowerColor": "#F5F1E6", "flowerColorName": "wit" },
+  "appearance": { "shape": "vrucht", "count": 6, "flowerColor": "#F5F1E6", "flowerColorName": "wit", "fruitColor": "#2E2340" },
   "bloom": { "from": "05-15", "to": "06-30" },
   "tasks": [
     { "id": "planten", "type": "planten", "window": { "kind": "dates", "from": "10-15", "to": "03-15" } },

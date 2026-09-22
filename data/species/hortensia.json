@@ -6,7 +6,7 @@
   "category": "struik",
   "tags": ["meerjarig"],
   "nativeStatus": "exoot",
-  "appearance": { "shape": "struik", "flowerColor": "#C97FAE", "flowerColorName": "roze" },
+  "appearance": { "shape": "losse-wolk", "count": 10, "flowerColor": "#C97FAE", "flowerColorName": "roze" },
   "bloom": { "from": "06-01", "to": "09-01" },
   "tasks": [
     { "id": "planten", "type": "planten", "window": { "kind": "dates", "from": "03-15", "to": "05-01" } },

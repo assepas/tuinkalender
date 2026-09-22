@@ -6,7 +6,7 @@
   "category": "struik",
   "tags": ["klimmer", "meerjarig", "geurend"],
   "nativeStatus": "inheems",
-  "appearance": { "shape": "struik", "flowerColor": "#E8D9A0", "flowerColorName": "crème-roze" },
+  "appearance": { "shape": "bloem", "count": 4, "flowerColor": "#E8D9A0", "flowerColorName": "crème-roze" },
   "bloom": { "from": "06-01", "to": "08-15" },
   "tasks": [
     { "id": "planten", "type": "planten", "window": { "kind": "dates", "from": "10-01", "to": "11-15" } },

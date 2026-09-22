@@ -6,7 +6,7 @@
   "category": "bolgewas",
   "tags": ["voorjaarsbloeier"],
   "nativeStatus": "exoot",
-  "appearance": { "shape": "bol", "flowerColor": "#C0392B", "flowerColorName": "rood" },
+  "appearance": { "shape": "bloem", "count": 1, "flowerColor": "#C0392B", "flowerColorName": "rood" },
   "bloom": { "from": "04-01", "to": "05-01" },
   "tasks": [
     { "id": "planten", "type": "planten", "window": { "kind": "dates", "from": "10-15", "to": "12-01" }, "note": "Bollen op ongeveer 15 cm diepte" },

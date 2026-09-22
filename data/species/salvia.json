@@ -6,7 +6,7 @@
   "category": "vaste-plant",
   "tags": ["meerjarig", "vlinderplant"],
   "nativeStatus": "exoot",
-  "appearance": { "shape": "bloem", "flowerColor": "#5E5FA8", "flowerColorName": "blauwpaars" },
+  "appearance": { "shape": "bloem", "count": 2, "flowerColor": "#5E5FA8", "flowerColorName": "blauwpaars" },
   "bloom": { "from": "06-01", "to": "08-15" },
   "tasks": [
     { "id": "planten", "type": "planten", "window": { "kind": "dates", "from": "04-01", "to": "05-15" } },

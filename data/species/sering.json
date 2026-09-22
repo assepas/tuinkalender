@@ -6,7 +6,7 @@
   "category": "struik",
   "tags": ["meerjarig", "geurend"],
   "nativeStatus": "exoot",
-  "appearance": { "shape": "struik", "flowerColor": "#B79FC9", "flowerColorName": "lila" },
+  "appearance": { "shape": "aar", "count": 8, "flowerColor": "#B79FC9", "flowerColorName": "lila" },
   "bloom": { "from": "05-01", "to": "05-31" },
   "tasks": [
     { "id": "planten", "type": "planten", "window": { "kind": "dates", "from": "10-01", "to": "11-30" } },

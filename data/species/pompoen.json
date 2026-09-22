@@ -6,7 +6,7 @@
   "category": "groente",
   "tags": ["eenjarig", "vorstgevoelig", "veel-ruimte"],
   "nativeStatus": "exoot",
-  "appearance": { "shape": "bloem", "flowerColor": "#E8873A", "flowerColorName": "oranje" },
+  "appearance": { "shape": "vrucht", "count": 1, "flowerColor": "#E8873A", "flowerColorName": "oranje", "fruitColor": "#D97B2B" },
   "bloom": { "from": "07-01", "to": "08-15" },
   "tasks": [
     { "id": "zaaien-voor", "type": "zaaien", "location": "kas", "window": { "kind": "dates", "from": "04-15", "to": "05-01" }, "note": "Voorzaaien binnen" },

@@ -6,7 +6,7 @@
   "category": "kruid",
   "tags": ["eenjarig", "vorstgevoelig"],
   "nativeStatus": "exoot",
-  "appearance": { "shape": "kruid", "flowerColor": "#F5F1E6", "flowerColorName": "wit" },
+  "appearance": { "shape": "aar", "count": 4, "flowerColor": "#F5F1E6", "flowerColorName": "wit" },
   "bloom": { "from": "07-15", "to": "09-01" },
   "tasks": [
     { "id": "zaaien", "type": "zaaien", "location": "kas", "window": { "kind": "dates", "from": "04-01", "to": "05-15" }, "note": "Binnen op de vensterbank of in de kas" },

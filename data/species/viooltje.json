@@ -6,7 +6,7 @@
   "category": "vaste-plant",
   "tags": ["meerjarig"],
   "nativeStatus": "exoot",
-  "appearance": { "shape": "bloem", "flowerColor": "#8A6BB0", "flowerColorName": "paars-geel" },
+  "appearance": { "shape": "bloem", "count": 5, "flowerColor": "#8A6BB0", "flowerColorName": "paars-geel" },
   "bloom": { "from": "03-01", "to": "10-15" },
   "tasks": [
     { "id": "planten", "type": "planten", "window": { "kind": "dates", "from": "03-15", "to": "05-01" } },

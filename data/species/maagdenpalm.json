@@ -6,7 +6,7 @@
   "category": "vaste-plant",
   "tags": ["bodembedekker", "groenblijvend"],
   "nativeStatus": "archeofyt",
-  "appearance": { "shape": "bloem", "flowerColor": "#6B8CC4", "flowerColorName": "blauwpaars" },
+  "appearance": { "shape": "bloem", "count": 5, "flowerColor": "#6B8CC4", "flowerColorName": "blauwpaars" },
   "bloom": { "from": "03-15", "to": "05-15" },
   "tasks": [
     { "id": "planten", "type": "planten", "window": { "kind": "dates", "from": "03-15", "to": "05-01" } },

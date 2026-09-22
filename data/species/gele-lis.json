@@ -6,7 +6,7 @@
   "category": "bolgewas",
   "tags": ["moerasplant", "vijverrand"],
   "nativeStatus": "inheems",
-  "appearance": { "shape": "bloem", "flowerColor": "#E8C93A", "flowerColorName": "geel" },
+  "appearance": { "shape": "bloem", "count": 3, "flowerColor": "#E8C93A", "flowerColorName": "geel" },
   "bloom": { "from": "05-15", "to": "07-01" },
   "tasks": [
     { "id": "planten", "type": "planten", "window": { "kind": "dates", "from": "03-15", "to": "05-01" }, "note": "Natte grond of ondiep water" },

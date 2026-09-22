@@ -6,7 +6,7 @@
   "category": "vaste-plant",
   "tags": ["meerjarig", "bodembedekker"],
   "nativeStatus": "exoot",
-  "appearance": { "shape": "bloem", "flowerColor": "#C9CB8F", "flowerColorName": "geelgroen" },
+  "appearance": { "shape": "losse-wolk", "count": 6, "flowerColor": "#C9CB8F", "flowerColorName": "geelgroen" },
   "bloom": { "from": "06-01", "to": "08-01" },
   "tasks": [
     { "id": "planten", "type": "planten", "window": { "kind": "dates", "from": "03-15", "to": "05-01" } },

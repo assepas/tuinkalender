@@ -6,7 +6,7 @@
   "category": "struik",
   "tags": ["klimmer", "meerjarig"],
   "nativeStatus": "exoot",
-  "appearance": { "shape": "struik", "flowerColor": "#E8873A", "flowerColorName": "oranje" },
+  "appearance": { "shape": "bloem", "count": 4, "flowerColor": "#E8873A", "flowerColorName": "oranje" },
   "bloom": { "from": "07-15", "to": "09-15" },
   "tasks": [
     { "id": "planten", "type": "planten", "window": { "kind": "dates", "from": "03-15", "to": "05-01" } },

@@ -6,7 +6,7 @@
   "category": "groente",
   "tags": ["eenjarig"],
   "nativeStatus": "exoot",
-  "appearance": { "shape": "bloem", "flowerColor": "#D8CBE0", "flowerColorName": "lila-wit" },
+  "appearance": { "shape": "bloem", "count": 5, "flowerColor": "#D8CBE0", "flowerColorName": "lila-wit" },
   "bloom": { "from": "06-01", "to": "07-01" },
   "tasks": [
     { "id": "poten", "type": "planten", "window": { "kind": "dates", "from": "04-01", "to": "04-30" }, "note": "Pootaardappelen; hou rekening met laat-voorjaarsvorst" },

@@ -6,7 +6,7 @@
   "category": "groente",
   "tags": ["eenjarig"],
   "nativeStatus": "archeofyt",
-  "appearance": { "shape": "kruid", "flowerColor": "#D9C24A", "flowerColorName": "geel" },
+  "appearance": { "shape": "losse-wolk", "count": 5, "flowerColor": "#D9C24A", "flowerColorName": "geel" },
   "bloom": { "from": "07-01", "to": "08-01" },
   "tasks": [
     { "id": "zaaien", "type": "zaaien", "window": { "kind": "recurring", "from": "03-15", "to": "08-15", "every": "2weeks" }, "note": "Successiezaai voor continue oogst" },

@@ -6,7 +6,7 @@
   "category": "kruid",
   "tags": ["niet-winterhard", "kuipplant"],
   "nativeStatus": "exoot",
-  "appearance": { "shape": "kruid", "flowerColor": "#E9E4D8", "flowerColorName": "wit-lila" },
+  "appearance": { "shape": "aar", "count": 4, "flowerColor": "#E9E4D8", "flowerColorName": "wit-lila" },
   "bloom": { "from": "07-01", "to": "09-01" },
   "tasks": [
     { "id": "planten", "type": "planten", "window": { "kind": "relative", "anchor": "lastFrost", "fromWeeks": 0, "toWeeks": 2 } },

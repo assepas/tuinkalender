@@ -6,7 +6,7 @@
   "category": "kruid",
   "tags": ["meerjarig", "bodembedekker", "schaduwplant"],
   "nativeStatus": "inheems",
-  "appearance": { "shape": "kruid", "flowerColor": "#F5F1E6", "flowerColorName": "wit" },
+  "appearance": { "shape": "losse-wolk", "count": 5, "flowerColor": "#F5F1E6", "flowerColorName": "wit" },
   "bloom": { "from": "05-01", "to": "06-01" },
   "tasks": [
     { "id": "planten", "type": "planten", "window": { "kind": "dates", "from": "03-15", "to": "05-01" }, "note": "Groeit het best in de schaduw" },

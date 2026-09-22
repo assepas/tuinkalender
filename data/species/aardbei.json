@@ -6,7 +6,7 @@
   "category": "fruit",
   "tags": ["vaste-plant", "bodembedekker"],
   "nativeStatus": "exoot",
-  "appearance": { "shape": "bes", "flowerColor": "#F5F1E6", "flowerColorName": "wit" },
+  "appearance": { "shape": "vrucht", "count": 1, "flowerColor": "#F5F1E6", "flowerColorName": "wit", "fruitColor": "#D1352B" },
   "bloom": { "from": "05-01", "to": "06-01" },
   "tasks": [
     { "id": "planten", "type": "planten", "window": { "kind": "dates", "from": "09-01", "to": "10-15" }, "note": "Plant nieuwe planten na de zomer" },

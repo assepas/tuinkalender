@@ -6,7 +6,7 @@
   "category": "groente",
   "tags": ["eenjarig", "vorstgevoelig"],
   "nativeStatus": "exoot",
-  "appearance": { "shape": "bloem", "flowerColor": "#F5F1E6", "flowerColorName": "wit" },
+  "appearance": { "shape": "bloem", "count": 4, "flowerColor": "#F5F1E6", "flowerColorName": "wit" },
   "bloom": { "from": "07-01", "to": "08-15" },
   "tasks": [
     { "id": "zaaien", "type": "zaaien", "window": { "kind": "relative", "anchor": "lastFrost", "fromWeeks": 0, "toWeeks": 4 } },

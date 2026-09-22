@@ -6,7 +6,7 @@
   "category": "kruid",
   "tags": ["meerjarig", "woekert"],
   "nativeStatus": "onbekend",
-  "appearance": { "shape": "kruid", "flowerColor": "#C598B8", "flowerColorName": "lila" },
+  "appearance": { "shape": "aar", "count": 6, "flowerColor": "#C598B8", "flowerColorName": "lila" },
   "bloom": { "from": "07-01", "to": "09-01" },
   "tasks": [
     { "id": "planten", "type": "planten", "window": { "kind": "dates", "from": "04-01", "to": "05-15" }, "note": "Woekert fors — het best in een pot of ingegraven rand planten" },

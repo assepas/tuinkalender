@@ -6,7 +6,7 @@
   "category": "struik",
   "tags": ["meerjarig"],
   "nativeStatus": "onbekend",
-  "appearance": { "shape": "struik", "flowerColor": "#C0392B", "flowerColorName": "rood" },
+  "appearance": { "shape": "bloem", "count": 10, "flowerColor": "#C0392B", "flowerColorName": "rood" },
   "bloom": { "from": "06-01", "to": "09-15" },
   "tasks": [
     { "id": "planten", "type": "planten", "window": { "kind": "dates", "from": "03-01", "to": "04-30" } },

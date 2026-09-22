@@ -6,7 +6,7 @@
   "category": "vaste-plant",
   "tags": ["meerjarig", "droogtebestendig"],
   "nativeStatus": "exoot",
-  "appearance": { "shape": "kruid", "flowerColor": "#8A6BB0", "flowerColorName": "paars" },
+  "appearance": { "shape": "aar", "count": 8, "flowerColor": "#8A6BB0", "flowerColorName": "paars" },
   "bloom": { "from": "07-01", "to": "08-01" },
   "tasks": [
     { "id": "planten", "type": "planten", "window": { "kind": "dates", "from": "04-01", "to": "05-15" } },

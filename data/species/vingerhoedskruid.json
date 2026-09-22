@@ -6,7 +6,7 @@
   "category": "vaste-plant",
   "tags": ["tweejarig", "giftig"],
   "nativeStatus": "inheems",
-  "appearance": { "shape": "bloem", "flowerColor": "#C097B0", "flowerColorName": "roze-paars" },
+  "appearance": { "shape": "aar", "count": 8, "flowerColor": "#C097B0", "flowerColorName": "roze-paars" },
   "bloom": { "from": "06-01", "to": "07-31" },
   "tasks": [
     { "id": "zaaien", "type": "zaaien", "window": { "kind": "dates", "from": "05-15", "to": "07-15" }, "note": "Bloeit pas het tweede jaar; zaai jaarlijks bij voor een doorlopend effect" },

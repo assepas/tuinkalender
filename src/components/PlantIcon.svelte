@@ -1,11 +1,13 @@
 <script>
-  import Icon from "./Icon.svelte";
+  import PlantGlyph from "./PlantGlyph.svelte";
   import { outlineColor } from "../lib/domain/color.js";
 
   let { species, size = 34, onclick = null } = $props();
 
   const shape = $derived(species?.appearance?.shape ?? "bloem");
+  const count = $derived(species?.appearance?.count ?? 5);
   const color = $derived(species?.appearance?.flowerColor ?? "#5C6350");
+  const fruitColor = $derived(species?.appearance?.fruitColor);
   const outline = $derived(outlineColor(color));
 </script>
 
@@ -18,7 +20,7 @@
     {onclick}
     title={`Meer over ${species?.name ?? "deze plant"}`}
   >
-    <Icon name={shape} {color} {outline} size={Math.round(size * 0.68)} />
+    <PlantGlyph {shape} {count} {color} {outline} {fruitColor} size={Math.round(size * 0.68)} />
   </button>
 {:else}
   <span
@@ -26,7 +28,7 @@
     style:width={`${size}px`}
     style:height={`${size}px`}
   >
-    <Icon name={shape} {color} {outline} size={Math.round(size * 0.68)} />
+    <PlantGlyph {shape} {count} {color} {outline} {fruitColor} size={Math.round(size * 0.68)} />
   </span>
 {/if}
 

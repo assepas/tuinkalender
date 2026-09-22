@@ -6,7 +6,7 @@
   "category": "vaste-plant",
   "tags": ["meerjarig"],
   "nativeStatus": "inheems",
-  "appearance": { "shape": "bloem", "flowerColor": "#5E5FA8", "flowerColorName": "blauwpaars" },
+  "appearance": { "shape": "bloem", "count": 5, "flowerColor": "#5E5FA8", "flowerColorName": "blauwpaars" },
   "bloom": { "from": "05-01", "to": "06-15" },
   "tasks": [
     { "id": "zaaien", "type": "zaaien", "window": { "kind": "dates", "from": "03-01", "to": "05-01" } },

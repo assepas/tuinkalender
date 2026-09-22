@@ -23,16 +23,29 @@
     "appearance": {
       "type": "object",
       "additionalProperties": false,
-      "required": ["shape", "flowerColor"],
+      "required": ["shape", "count", "flowerColor"],
       "properties": {
         "shape": {
           "type": "string",
-          "enum": ["bloem", "kruid", "bes", "boom", "bol", "struik"],
-          "description": "Bepaalt welk icoonsilhouet wordt getekend."
+          "enum": ["vrucht", "aar", "bloem", "losse-wolk"],
+          "description": "Bepaalt de volledige opbouw/silhouet van het icoon."
+        },
+        "count": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 10,
+          "description": "Aantal elementen (vruchtjes/aar-segmenten/bloemblaadjes/wolk-vlekken)."
         },
         "flowerColor": { "type": "string", "pattern": "^#[0-9a-fA-F]{6}$" },
-        "flowerColorName": { "type": "string" }
-      }
+        "flowerColorName": { "type": "string" },
+        "fruitColor": {
+          "type": "string",
+          "pattern": "^#[0-9a-fA-F]{6}$",
+          "description": "Kleurt de vruchtjes van het icoon; verplicht wanneer shape=\"vrucht\"."
+        }
+      },
+      "if": { "properties": { "shape": { "const": "vrucht" } } },
+      "then": { "required": ["fruitColor"] }
     },
     "bloom": {
       "type": "object",

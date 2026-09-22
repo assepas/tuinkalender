@@ -6,7 +6,7 @@
   "category": "vaste-plant",
   "tags": ["meerjarig", "schaduwplant"],
   "nativeStatus": "onbekend",
-  "appearance": { "shape": "bloem", "flowerColor": "#B79FC9", "flowerColorName": "lila" },
+  "appearance": { "shape": "bloem", "count": 6, "flowerColor": "#B79FC9", "flowerColorName": "lila" },
   "bloom": { "from": "07-15", "to": "08-15" },
   "tasks": [
     { "id": "planten", "type": "planten", "window": { "kind": "dates", "from": "03-15", "to": "05-01" } },

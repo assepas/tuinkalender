@@ -6,7 +6,7 @@
   "category": "vaste-plant",
   "tags": ["eenjarig", "eetbaar", "klimmer"],
   "nativeStatus": "exoot",
-  "appearance": { "shape": "bloem", "flowerColor": "#E8873A", "flowerColorName": "oranje" },
+  "appearance": { "shape": "bloem", "count": 5, "flowerColor": "#E8873A", "flowerColorName": "oranje" },
   "bloom": { "from": "06-01", "to": "10-01" },
   "tasks": [
     { "id": "zaaien", "type": "zaaien", "window": { "kind": "relative", "anchor": "lastFrost", "fromWeeks": 0, "toWeeks": 1 }, "note": "Groot zaad, kan direct de grond in" },

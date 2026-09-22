@@ -6,7 +6,7 @@
   "category": "vaste-plant",
   "tags": ["eenjarig"],
   "nativeStatus": "exoot",
-  "appearance": { "shape": "bloem", "flowerColor": "#E8873A", "flowerColorName": "oranje" },
+  "appearance": { "shape": "bloem", "count": 8, "flowerColor": "#E8873A", "flowerColorName": "oranje" },
   "bloom": { "from": "06-01", "to": "10-01" },
   "tasks": [
     { "id": "voorzaaien", "type": "zaaien", "location": "kas", "window": { "kind": "dates", "from": "03-15", "to": "04-15" } },

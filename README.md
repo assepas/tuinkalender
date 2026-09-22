@@ -112,7 +112,7 @@ Maak een bestand `data/species/<id>.json` aan, bijvoorbeeld:
   "name": "Courgette",
   "category": "groente",
   "nativeStatus": "exoot",
-  "appearance": { "shape": "bloem", "flowerColor": "#E8873A", "flowerColorName": "oranje" },
+  "appearance": { "shape": "bloem", "count": 5, "flowerColor": "#E8873A", "flowerColorName": "oranje" },
   "bloom": { "from": "07-01", "to": "08-15" },
   "tasks": [
     { "id": "zaaien", "type": "zaaien",
@@ -130,11 +130,20 @@ plant verschijnt gewoon zonder badge/bloei-lane in de tijdlijn. Waarden:
 
 - `nativeStatus`: `inheems` | `archeofyt` | `exoot` | `onbekend` (dat laatste
   ook voor soort-onzekerheid, zoals bij een verzamelnaam als `Hosta spp.`)
-- `appearance.shape`: `bloem` | `kruid` | `bes` | `boom` | `bol` | `struik`
-  — bepaalt welk icoonsilhouet getekend wordt
-- `appearance.flowerColor`: een hex-kleur — kleurt zowel het plant-icoon als
-  de bloei-balk in de tijdlijn. Lichte/witte kleuren krijgen automatisch een
-  donkerdere rand (`src/lib/domain/color.js`) zodat ze zichtbaar blijven
+- `appearance.shape`: `vrucht` | `aar` | `bloem` | `losse-wolk` — bepaalt de
+  volledige opbouw van het icoon (zie `src/lib/domain/plantGlyph.js`). Het
+  blad staat automatisch rechtsboven bij `vrucht` en linksonder bij de
+  andere drie; alleen `aar` en `bloem` krijgen een steel
+- `appearance.count`: geheel getal 1-10 — aantal vruchtjes/aar-segmenten/
+  bloemblaadjes/wolk-vlekken. Bij `vrucht` loopt het silhouet mee op van
+  appel (1) via kersenpaar (2) naar een aalbessen- (~5) en druiventros (10)
+- `appearance.flowerColor`: een hex-kleur — kleurt de bloei-balk in de
+  tijdlijn, en (behalve bij `vrucht`) ook het plant-icoon zelf. Lichte/witte
+  kleuren krijgen automatisch een donkerdere rand (`src/lib/domain/color.js`)
+  zodat ze zichtbaar blijven
+- `appearance.fruitColor`: verplicht wanneer `shape` = `vrucht` — kleurt
+  alleen de vruchtjes van het icoon, los van `flowerColor` (dat voor de
+  bloei-balk blijft staan, ook bij een fruitsoort)
 - Op een snoeitaak kan `"importance": "licht"` staan (standaard `"hoofd"`) om
   in de tijdlijn onderscheid te maken tussen verplichte en optionele snoei
 - Op een zaaitaak kan `"location": "kas"` staan (standaard `"grond"`, dus

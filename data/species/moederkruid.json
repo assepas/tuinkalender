@@ -6,7 +6,7 @@
   "category": "kruid",
   "tags": ["meerjarig", "zelfzaaiend"],
   "nativeStatus": "exoot",
-  "appearance": { "shape": "bloem", "flowerColor": "#F5F1E6", "flowerColorName": "wit-geel" },
+  "appearance": { "shape": "bloem", "count": 10, "flowerColor": "#F5F1E6", "flowerColorName": "wit-geel" },
   "bloom": { "from": "06-01", "to": "09-01" },
   "tasks": [
     { "id": "zaaien", "type": "zaaien", "window": { "kind": "dates", "from": "04-01", "to": "05-15" } },
