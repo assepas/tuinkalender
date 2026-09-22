@@ -10,7 +10,6 @@
   "bloom": { "from": "05-15", "to": "06-15" },
   "tasks": [
     { "id": "snoeien", "type": "snoeien", "importance": "hoofd", "window": { "kind": "dates", "from": "02-15", "to": "03-15" }, "note": "Oude vruchtdragende ranken wegknippen" },
-    { "id": "water", "type": "water", "window": { "kind": "recurring", "from": "05-01", "to": "08-15", "every": "week" } },
     { "id": "bemesten", "type": "bemesten", "window": { "kind": "dates", "from": "03-01", "to": "03-31" } },
     { "id": "oogsten", "type": "oogsten", "window": { "kind": "dates", "from": "07-01", "to": "08-31" } },
     { "id": "delen", "type": "delen", "window": { "kind": "dates", "from": "10-15", "to": "11-15" }, "note": "Wortelopslag uitgraven en verplanten" }

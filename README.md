@@ -86,8 +86,8 @@ te testen en zelfs te hergebruiken buiten deze app.
   maand eroverheen (bij meerdere taken in één maand naast elkaar). Elke soort
   staat er maar één keer op, ook als je hem meerdere keren in je tuin hebt.
   Alleen de taaktypes met `"timeline": true` doen mee: zaaien (kas / volle
-  grond), planten, bemesten, snoeien (hoofd / licht), oogsten en overig
-  onderhoud.
+  grond), planten, bemesten, snoeien (hoofd / licht), oogsten, delen/
+  verspreiden, winterhard maken en overig onderhoud.
   Klik op het plant-icoon voor soortinfo, of op een icoon/de bloeibalk voor
   de details.
 
@@ -107,8 +107,8 @@ Maak een bestand `data/species/<id>.json` aan, bijvoorbeeld:
   "tasks": [
     { "id": "zaaien", "type": "zaaien",
       "window": { "kind": "relative", "anchor": "lastFrost", "fromWeeks": 0, "toWeeks": 2 } },
-    { "id": "water", "type": "water",
-      "window": { "kind": "recurring", "from": "06-01", "to": "09-15", "every": "week" } },
+    { "id": "bemesten", "type": "bemesten",
+      "window": { "kind": "recurring", "from": "06-01", "to": "09-15", "every": "2weeks" } },
     { "id": "oogsten", "type": "oogsten",
       "window": { "kind": "dates", "from": "07-01", "to": "10-01" } }
   ]

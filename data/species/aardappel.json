@@ -11,7 +11,6 @@
   "tasks": [
     { "id": "poten", "type": "planten", "window": { "kind": "dates", "from": "04-01", "to": "04-30" }, "note": "Pootaardappelen; hou rekening met laat-voorjaarsvorst" },
     { "id": "aanaarden", "type": "onderhoud", "window": { "kind": "recurring", "from": "05-01", "to": "06-15", "every": "2weeks" }, "note": "Aanaarden tegen groene knollen" },
-    { "id": "water", "type": "water", "window": { "kind": "recurring", "from": "06-01", "to": "08-15", "every": "week" } },
     { "id": "oogsten", "type": "oogsten", "window": { "kind": "dates", "from": "08-01", "to": "09-30" } }
   ]
 }

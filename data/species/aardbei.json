@@ -10,7 +10,6 @@
   "bloom": { "from": "05-01", "to": "06-01" },
   "tasks": [
     { "id": "planten", "type": "planten", "window": { "kind": "dates", "from": "09-01", "to": "10-15" }, "note": "Plant nieuwe planten na de zomer" },
-    { "id": "water", "type": "water", "window": { "kind": "recurring", "from": "05-01", "to": "08-15", "every": "week" } },
     { "id": "bemesten", "type": "bemesten", "window": { "kind": "dates", "from": "03-15", "to": "04-15" } },
     { "id": "oogsten", "type": "oogsten", "window": { "kind": "dates", "from": "06-01", "to": "07-15" } },
     { "id": "delen", "type": "delen", "window": { "kind": "dates", "from": "08-01", "to": "09-01" }, "note": "Uitlopers verplanten" },
