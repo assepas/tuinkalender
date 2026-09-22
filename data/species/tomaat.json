@@ -11,7 +11,6 @@
   "tasks": [
     { "id": "zaaien-binnen", "type": "zaaien", "location": "kas", "window": { "kind": "dates", "from": "03-01", "to": "03-31" }, "note": "Voorzaaien binnen, ~20°C" },
     { "id": "uitplanten", "type": "planten", "window": { "kind": "relative", "anchor": "lastFrost", "fromWeeks": 0, "toWeeks": 2 } },
-    { "id": "water", "type": "water", "window": { "kind": "recurring", "from": "05-15", "to": "09-30", "every": "week" } },
     { "id": "opbinden-dieven", "type": "snoeien", "importance": "hoofd", "window": { "kind": "recurring", "from": "06-01", "to": "09-01", "every": "week" }, "conditions": { "position": ["kas", "buiten"] }, "note": "Zijscheuten verwijderen en opbinden" },
     { "id": "bemesten", "type": "bemesten", "window": { "kind": "recurring", "from": "06-01", "to": "08-15", "every": "2weeks" } },
     { "id": "oogsten", "type": "oogsten", "window": { "kind": "dates", "from": "07-15", "to": "10-01" } }

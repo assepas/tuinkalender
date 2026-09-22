@@ -10,7 +10,6 @@
   "bloom": { "from": "07-15", "to": "08-15" },
   "tasks": [
     { "id": "planten", "type": "planten", "window": { "kind": "dates", "from": "03-15", "to": "05-01" } },
-    { "id": "water", "type": "water", "window": { "kind": "recurring", "from": "05-01", "to": "08-31", "every": "week" } },
     { "id": "bemesten", "type": "bemesten", "window": { "kind": "dates", "from": "04-01", "to": "04-30" } },
     { "id": "delen", "type": "delen", "window": { "kind": "dates", "from": "09-15", "to": "10-15" }, "note": "Elke 3-4 jaar delen houdt de plant vitaal" },
     { "id": "winterhard", "type": "winterhard", "window": { "kind": "dates", "from": "11-01", "to": "11-30" }, "note": "Blad laten zitten als winterbescherming, in voorjaar verwijderen" }

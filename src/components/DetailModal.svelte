@@ -12,12 +12,6 @@
     return `${MONTH_NAMES[months[0] - 1]} t/m ${MONTH_NAMES[months[months.length - 1] - 1]}`;
   }
 
-  function bloomSentence(detail) {
-    const range = monthRangeLabel(detail.months);
-    const colorName = detail.species.appearance?.flowerColorName;
-    return colorName ? `Bloeit ${range}, bloemkleur ${colorName}.` : `Bloeit ${range}.`;
-  }
-
   function handleKeydown(event) {
     if (event.key === "Escape") onclose();
   }
@@ -57,17 +51,19 @@
         {/if}
       </div>
 
-      {#if detail.planting.position || detail.planting.soil}
+      {#if detail.location}
         <p class="modal-meta">
-          {#if detail.planting.position}Standplaats: {detail.planting.position}. {/if}
-          {#if detail.planting.soil}Grondsoort: {detail.planting.soil}.{/if}
+          Standplaats: {detail.location.name}.
+          {#if detail.location.soil}Grondsoort: {detail.location.soil}.{/if}
         </p>
+      {:else if detail.planting.locationId}
+        <p class="error-text">Onbekende standplaats — mogelijk verwijderd.</p>
       {/if}
       {#if detail.planting.notes}
         <p class="modal-meta">{detail.planting.notes}</p>
       {/if}
 
-      <h3>Taken van deze plant</h3>
+      <h3>Taken</h3>
       <ul class="modal-task-list">
         {#each detail.species.tasks as task (task.id)}
           <li>
@@ -79,19 +75,6 @@
           </li>
         {/each}
       </ul>
-    {:else if detail.kind === "bloom"}
-      <div class="modal-head">
-        <PlantIcon species={detail.species} size={44} />
-        <div>
-          <h2>{detail.planting.label || detail.species.name}</h2>
-          <p class="latin">Bloei</p>
-        </div>
-      </div>
-      <p class="modal-meta">
-        <span class="swatch" style:background={detail.species.appearance?.flowerColor}></span>
-        {bloomSentence(detail)}
-      </p>
-      <p class="hint">Bloei is informatief — er hoort geen onderhoudstaak bij.</p>
     {:else if detail.kind === "task"}
       <div class="modal-head">
         <span class="task-icon-badge" style:background={`${detail.meta?.color ?? "#999"}26`}>
@@ -102,6 +85,9 @@
           <p class="latin">{detail.planting.label || detail.species.name}</p>
         </div>
       </div>
+      {#if detail.entry.task.note}
+        <p class="modal-meta">{detail.entry.task.note}</p>
+      {/if}
       <p class="modal-meta">Actief: {monthRangeLabel(detail.entry.months)}</p>
       {#if detail.entry.frequency}
         <p class="modal-meta">Frequentie: {detail.entry.frequency}</p>
@@ -110,9 +96,6 @@
         <p class="modal-meta">
           Belang: {detail.entry.task.importance === "hoofd" ? "hoofdsnoei (nodig)" : "lichte/optionele snoei"}
         </p>
-      {/if}
-      {#if detail.entry.task.note}
-        <p class="modal-meta">{detail.entry.task.note}</p>
       {/if}
     {/if}
   </div>

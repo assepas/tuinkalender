@@ -10,9 +10,7 @@
   "bloom": { "from": "07-15", "to": "10-01" },
   "tasks": [
     { "id": "planten", "type": "planten", "window": { "kind": "relative", "anchor": "lastFrost", "fromWeeks": 0, "toWeeks": 2 }, "note": "Knollen pas de grond in na de laatste nachtvorst" },
-    { "id": "water", "type": "water", "window": { "kind": "recurring", "from": "06-01", "to": "09-15", "every": "week" } },
     { "id": "bemesten", "type": "bemesten", "window": { "kind": "recurring", "from": "06-01", "to": "08-15", "every": "2weeks" } },
-    { "id": "oogsten", "type": "oogsten", "window": { "kind": "recurring", "from": "07-15", "to": "10-01", "every": "week" }, "note": "Regelmatig snijden geeft meer bloei" },
     { "id": "winterhard", "type": "winterhard", "window": { "kind": "dates", "from": "10-20", "to": "11-15" }, "note": "Knollen rooien en vorstvrij bewaren; niet winterhard in Utrecht" }
   ]
 }

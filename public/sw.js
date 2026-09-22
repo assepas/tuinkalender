@@ -5,7 +5,7 @@
 //
 // Versienummer ophogen als de app-shell-lijst hieronder verandert; dat
 // forceert een schone cache bij de volgende activatie.
-const CACHE_NAME = "tuinkalender-shell-v1";
+const CACHE_NAME = "tuintaak-shell-v1";
 const APP_SHELL = ["./", "./index.html", "./manifest.json", "./icons/icon-192.png", "./icons/icon-512.png"];
 
 self.addEventListener("install", (event) => {

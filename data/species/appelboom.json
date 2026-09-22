@@ -11,7 +11,6 @@
   "tasks": [
     { "id": "snoeien", "type": "snoeien", "importance": "hoofd", "window": { "kind": "dates", "from": "01-15", "to": "02-28" }, "note": "Wintersnoei, kies een vorstvrije dag" },
     { "id": "bemesten", "type": "bemesten", "window": { "kind": "dates", "from": "03-01", "to": "03-31" } },
-    { "id": "water", "type": "water", "window": { "kind": "recurring", "from": "06-01", "to": "08-15", "every": "week" }, "note": "Vooral in droge periodes, jonge bomen" },
     { "id": "oogsten", "type": "oogsten", "window": { "kind": "dates", "from": "09-01", "to": "10-15" } },
     { "id": "winterhard", "type": "winterhard", "window": { "kind": "dates", "from": "11-01", "to": "11-30" }, "note": "Stam beschermen tegen vorstscheuren en wildvraat" }
   ]

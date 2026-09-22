@@ -17,7 +17,7 @@
 <div class="app-shell">
   <header class="app-header no-print">
     <div>
-      <h1>Tuinkalender</h1>
+      <h1>TuinTaak</h1>
       <span class="subtitle">Onderhoudstaken per maand, op basis van jouw planten</span>
     </div>
     <nav class="tabs" aria-label="Weergave">

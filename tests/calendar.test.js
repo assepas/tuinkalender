@@ -19,8 +19,13 @@ const speciesIndex = {
   },
 };
 
-function baseGarden(plantings) {
-  return { schemaVersion: 1, region: "nl-utrecht", plantings };
+const locations = [
+  { id: "loc-kas", name: "Kas", kind: "kas" },
+  { id: "loc-buiten", name: "Border noord", kind: "buiten" },
+];
+
+function baseGarden(plantings, extraLocations = locations) {
+  return { schemaVersion: 2, region: "nl-utrecht", locations: extraLocations, plantings };
 }
 
 describe("buildCalendar", () => {
@@ -31,15 +36,15 @@ describe("buildCalendar", () => {
   });
 
   it("plaatst een taak in elke maand die het venster overspant", () => {
-    const garden = baseGarden([{ uid: "p1", speciesId: "tomaat", position: "buiten" }]);
+    const garden = baseGarden([{ uid: "p1", speciesId: "tomaat", locationId: "loc-buiten" }]);
     const months = buildCalendar(garden, speciesIndex, region);
     const waterMonths = months.filter((m) => m.entries.some((e) => e.taskId === "water"));
     expect(waterMonths.map((m) => m.month)).toEqual([6, 7, 8]);
   });
 
-  it("respecteert condities op de planting (position)", () => {
-    const buiten = baseGarden([{ uid: "p1", speciesId: "tomaat", position: "buiten" }]);
-    const kas = baseGarden([{ uid: "p2", speciesId: "tomaat", position: "kas" }]);
+  it("respecteert condities op de standplaats (position/kind)", () => {
+    const buiten = baseGarden([{ uid: "p1", speciesId: "tomaat", locationId: "loc-buiten" }]);
+    const kas = baseGarden([{ uid: "p2", speciesId: "tomaat", locationId: "loc-kas" }]);
 
     const monthsBuiten = buildCalendar(buiten, speciesIndex, region);
     const monthsKas = buildCalendar(kas, speciesIndex, region);
@@ -48,8 +53,21 @@ describe("buildCalendar", () => {
     expect(monthsKas[5].entries.some((e) => e.taskId === "opbinden")).toBe(true);
   });
 
+  it("behandelt een onopgeloste locationId als 'geen conditie' i.p.v. te crashen", () => {
+    // Zelfde permissieve gedrag als vroeger bij een lege planting.position:
+    // de conditie kan niet falen als er niets is om tegen te matchen, dus
+    // de taak blijft gewoon staan.
+    const garden = baseGarden([{ uid: "p1", speciesId: "tomaat", locationId: "loc-verwijderd" }]);
+    expect(() => buildCalendar(garden, speciesIndex, region)).not.toThrow();
+    const months = buildCalendar(garden, speciesIndex, region);
+    expect(months[5].entries.some((e) => e.taskId === "opbinden")).toBe(true);
+    expect(months[5].entries.some((e) => e.taskId === "water")).toBe(true);
+  });
+
   it("sluit taken uit die op de planting zijn gemute", () => {
-    const garden = baseGarden([{ uid: "p1", speciesId: "tomaat", position: "kas", mutedTasks: ["water"] }]);
+    const garden = baseGarden([
+      { uid: "p1", speciesId: "tomaat", locationId: "loc-kas", mutedTasks: ["water"] },
+    ]);
     const months = buildCalendar(garden, speciesIndex, region);
     expect(months[5].entries.some((e) => e.taskId === "water")).toBe(false);
     expect(months[5].entries.some((e) => e.taskId === "opbinden")).toBe(true);
@@ -60,7 +78,7 @@ describe("buildCalendar", () => {
       {
         uid: "p1",
         speciesId: "tomaat",
-        position: "kas",
+        locationId: "loc-kas",
         extraTasks: [
           { id: "eigen-1", type: "bemesten", window: { kind: "dates", from: "04-01", to: "04-15" } },
         ],
@@ -85,7 +103,7 @@ describe("buildCalendar", () => {
       },
     };
     const garden = baseGarden([
-      { uid: "p1", speciesId: "tomaat", position: "buiten" },
+      { uid: "p1", speciesId: "tomaat", locationId: "loc-buiten" },
       { uid: "p2", speciesId: "appel" },
     ]);
     const months = buildCalendar(garden, twoSpecies, region);

@@ -1,17 +1,53 @@
 // Migratieketen voor het tuindocument (het document dat in localStorage
 // staat en dat je kunt exporteren/importeren als JSON).
 //
-// Er is nu nog maar één versie, maar de infrastructuur staat klaar:
-// als het schema ooit verandert, komt er een migratiefunctie bij deze
-// `migrations`-map (sleutel = versie waar de migratie VANAF gaat) en
-// hoeft de rest van de app niet te weten dat oude data ooit anders was.
+// De `migrations`-map (sleutel = versie waar de migratie VANAF gaat) zorgt
+// dat de rest van de app niet hoeft te weten dat oude data ooit anders was.
 
-export const CURRENT_GARDEN_VERSION = 1;
+import { makeId } from "./id.js";
+import { LOCATION_KINDS } from "./plantings.js";
+
+export const CURRENT_GARDEN_VERSION = 2;
 
 /** @type {Record<number, (doc: object) => object>} */
 const migrations = {
-  // Voorbeeld voor de toekomst:
-  // 1: (doc) => ({ ...doc, schemaVersion: 2, plantings: doc.plantings.map(...) }),
+  // v1 -> v2: standplaats en grondsoort waren vrije tekst per planting
+  // (`position`/`soil`). Vanaf hier zijn standplaatsen eigen, herbruikbare
+  // objecten (`garden.locations`) met een vrije naam en een optioneel vast
+  // "soort plek"-label (`kind`) — plantingen verwijzen ernaar via
+  // `locationId`. Per unieke, niet-lege legacy `position`-waarde komt er
+  // precies één Location; meerdere plantingen met dezelfde tekst delen 'm.
+  1: (doc) => {
+    const legacyPlantings = doc.plantings ?? [];
+    const locationsByPosition = new Map(); // exacte legacy position-string -> nieuwe Location
+
+    for (const p of legacyPlantings) {
+      const position = (p.position ?? "").trim();
+      if (!position) continue; // geen standplaats: niets om te migreren (en dus ook geen plek voor een evt. soil)
+
+      let location = locationsByPosition.get(position);
+      if (!location) {
+        const kind = LOCATION_KINDS.includes(position.toLowerCase()) ? position.toLowerCase() : undefined;
+        location = { id: makeId("loc"), name: position, ...(kind ? { kind } : {}) };
+        locationsByPosition.set(position, location);
+      }
+      // Eerste niet-lege soil die we bij deze positie tegenkomen wint.
+      if (p.soil && !location.soil) location.soil = p.soil;
+    }
+
+    const plantings = legacyPlantings.map(({ position, soil, ...rest }) => {
+      const trimmed = (position ?? "").trim();
+      const location = trimmed ? locationsByPosition.get(trimmed) : null;
+      return { ...rest, locationId: location ? location.id : null };
+    });
+
+    return {
+      ...doc,
+      schemaVersion: 2,
+      locations: [...locationsByPosition.values()],
+      plantings,
+    };
+  },
 };
 
 export function migrateGarden(doc) {
@@ -45,6 +81,7 @@ export function createEmptyGarden(regionId) {
   return {
     schemaVersion: CURRENT_GARDEN_VERSION,
     region: regionId,
+    locations: [],
     plantings: [],
   };
 }

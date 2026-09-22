@@ -88,12 +88,16 @@
   {:else if name === "seed"}
     <path d="M4 18c6-1 14-8 16-14-6 2-13 10-14 16Z" fill={color} fill-opacity="0.35" />
   {:else if name === "seed-kas"}
-    <path d="M3 21V11l9-7 9 7v10" />
-    <path d="M7.5 19c3.5-0.5 7.5-4 8.5-8-3.5 1-7.5 5-8.5 8Z" fill={color} fill-opacity="0.35" />
+    <g transform="translate(0, -2)">
+      <path d="M3 21V11l9-7 9 7v10" />
+      <path d="M7.5 19c3.5-0.5 7.5-4 8.5-8-3.5 1-7.5 5-8.5 8Z" fill={color} fill-opacity="0.35" />
+    </g>
   {:else if name === "sprout"}
-    <path d="M12 21v-8" />
-    <path d="M12 13c0-3 2.2-5.3 5.3-5.3-0.3 3.2-2.4 5.3-5.3 5.3Z" fill={color} fill-opacity="0.5" />
-    <path d="M12 13c0-3-2.2-5.3-5.3-5.3 0.3 3.2 2.4 5.3 5.3 5.3Z" fill={color} fill-opacity="0.5" />
+    <g transform="translate(0, -2.3)">
+      <path d="M12 21v-8" />
+      <path d="M12 13c0-3 2.2-5.3 5.3-5.3-0.3 3.2-2.4 5.3-5.3 5.3Z" fill={color} fill-opacity="0.5" />
+      <path d="M12 13c0-3-2.2-5.3-5.3-5.3 0.3 3.2 2.4 5.3 5.3 5.3Z" fill={color} fill-opacity="0.5" />
+    </g>
   {:else if name === "droplet"}
     <path
       d="M12 3.5c3 4 5.5 7.4 5.5 10.3a5.5 5.5 0 1 1-11 0C6.5 10.9 9 7.5 12 3.5Z"
@@ -124,15 +128,19 @@
     <path d="M5 7.5 19 16.5" />
     <path d="M19 7.5 5 16.5" />
   {:else if name === "basket"}
-    <path d="M7.5 10c0-5.5 9-5.5 9 0" />
-    <path
-      d="M4 10h16l-1.8 9.2a1.5 1.5 0 0 1-1.5 1.3H7.3a1.5 1.5 0 0 1-1.5-1.3Z"
-      fill={color}
-      fill-opacity="0.35"
-    />
-    <path d="M9 10.5l0.6 9.5" />
-    <path d="M12 10.5V20" />
-    <path d="M15 10.5l-0.6 9.5" />
+    <!-- translate: de mand is een stuk zwaarder dan het hengsel erboven,
+         dus zakt het silhouet geometrisch onder het midden. -->
+    <g transform="translate(0, -1.1)">
+      <path d="M7.5 10c0-5.5 9-5.5 9 0" />
+      <path
+        d="M4 10h16l-1.8 9.2a1.5 1.5 0 0 1-1.5 1.3H7.3a1.5 1.5 0 0 1-1.5-1.3Z"
+        fill={color}
+        fill-opacity="0.35"
+      />
+      <path d="M9 10.5l0.6 9.5" />
+      <path d="M12 10.5V20" />
+      <path d="M15 10.5l-0.6 9.5" />
+    </g>
   {:else if name === "poop"}
     <rect x="3.5" y="15.5" width="17" height="5.5" rx="2.75" fill={color} stroke="none" />
     <rect x="6" y="10.5" width="12" height="5.8" rx="2.9" fill={color} stroke="none" />

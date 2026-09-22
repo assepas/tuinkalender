@@ -1,18 +1,68 @@
 <script>
   import { speciesIndex } from "../lib/generated/data.js";
   import { gardenState } from "../lib/state/garden.svelte.js";
+  import {
+    CATEGORY_ORDER,
+    CATEGORY_LABELS,
+    toggleInSet,
+    compareByKey,
+    filterPlantingRows,
+  } from "../lib/domain/plantings.js";
+  import LocationManager from "./LocationManager.svelte";
   import SpeciesPicker from "./SpeciesPicker.svelte";
+  import PlantingRow from "./PlantingRow.svelte";
 
   let importText = $state("");
   let importError = $state("");
   let fileInput;
 
-  function isMuted(planting, taskId) {
-    return (planting.mutedTasks ?? []).includes(taskId);
+  // Sorteren/filteren van het overzicht — puur client-side, geen paginering
+  // nodig bij de tientallen (niet honderden) plantingen die een tuin heeft.
+  let sortKey = $state("naam"); // "naam" | "soort" | "standplaats"
+  let sortDir = $state("asc"); // "asc" | "desc"
+  let filterLocationIds = $state(new Set());
+  let filterCategories = $state(new Set());
+
+  const locationIndex = $derived(Object.fromEntries(gardenState.locations.map((l) => [l.id, l])));
+
+  const visiblePlantings = $derived.by(() => {
+    const rows = gardenState.plantings.map((planting) => ({
+      planting,
+      species: speciesIndex[planting.speciesId],
+      location: locationIndex[planting.locationId],
+    }));
+
+    const filtered = filterPlantingRows(rows, filterLocationIds, filterCategories);
+
+    // Ontbrekende waarden (verwijderde soort/standplaats) sorteren als lege
+    // string mee naar het begin — geen crash, geen verrassende volgorde.
+    const keyFor = (r) => {
+      if (sortKey === "soort") return r.species?.name ?? "";
+      if (sortKey === "standplaats") return r.location?.name ?? "";
+      return r.planting.label || r.species?.name || "";
+    };
+    return [...filtered].sort(compareByKey(keyFor, sortDir));
+  });
+
+  function toggleSort(key) {
+    if (sortKey === key) {
+      sortDir = sortDir === "asc" ? "desc" : "asc";
+    } else {
+      sortKey = key;
+      sortDir = "asc";
+    }
+  }
+
+  // aria-sort hoort op een <th>, niet op een <button> — dus een gewone
+  // aria-label die de huidige sorteerstand uitspreekt i.p.v. dat attribuut.
+  function sortLabel(key, columnLabel) {
+    if (sortKey !== key) return `Sorteer op ${columnLabel}`;
+    const richting = sortDir === "asc" ? "oplopend" : "aflopend";
+    return `Sorteer op ${columnLabel} (nu ${richting} — klik om om te draaien)`;
   }
 
   function exportFilename() {
-    return `tuinkalender-${new Date().toISOString().slice(0, 10)}.json`;
+    return `tuintaak-${new Date().toISOString().slice(0, 10)}.json`;
   }
 
   function downloadExport(json, filename) {
@@ -37,7 +87,7 @@
       const file = new File([json], filename, { type: "application/json" });
       if (navigator.canShare({ files: [file] })) {
         try {
-          await navigator.share({ files: [file], title: "Tuinkalender" });
+          await navigator.share({ files: [file], title: "TuinTaak" });
           gardenState.recordExport();
           return;
         } catch (err) {
@@ -70,6 +120,8 @@
   }
 </script>
 
+<LocationManager />
+
 <SpeciesPicker />
 
 <div class="panel">
@@ -77,84 +129,70 @@
   {#if gardenState.plantings.length === 0}
     <p class="empty-state">Nog geen planten toegevoegd.</p>
   {:else}
-    <ul class="planting-list">
-      {#each gardenState.plantings as planting (planting.uid)}
-        {@const species = speciesIndex[planting.speciesId]}
-        <li class="planting-card">
-          <div class="planting-card-head">
-            <div>
-              <h3>{planting.label || species?.name || "Onbekende soort"}</h3>
-              {#if species && planting.label}
-                <span class="species-name">{species.name}</span>
-              {/if}
-            </div>
-            <button
-              type="button"
-              class="btn btn-danger"
-              onclick={() => gardenState.removePlanting(planting.uid)}
-            >
-              Verwijderen
-            </button>
-          </div>
-
-          {#if !species}
-            <p class="error-text">
-              Onbekende soort-id "{planting.speciesId}" — mogelijk verwijderd uit de soortdata.
-            </p>
-          {:else}
-            <div class="field-grid">
-              <div>
-                <label for={`label-${planting.uid}`}>Eigen naam</label>
-                <input
-                  id={`label-${planting.uid}`}
-                  type="text"
-                  value={planting.label}
-                  onchange={(e) => gardenState.updatePlanting(planting.uid, { label: e.target.value })}
-                />
-              </div>
-              <div>
-                <label for={`position-${planting.uid}`}>Standplaats</label>
-                <input
-                  id={`position-${planting.uid}`}
-                  type="text"
-                  value={planting.position}
-                  onchange={(e) => gardenState.updatePlanting(planting.uid, { position: e.target.value })}
-                />
-              </div>
-              <div>
-                <label for={`soil-${planting.uid}`}>Grondsoort</label>
-                <input
-                  id={`soil-${planting.uid}`}
-                  type="text"
-                  value={planting.soil}
-                  onchange={(e) => gardenState.updatePlanting(planting.uid, { soil: e.target.value })}
-                />
-              </div>
-            </div>
-            <label for={`notes-${planting.uid}`}>Notities</label>
-            <textarea
-              id={`notes-${planting.uid}`}
-              value={planting.notes}
-              onchange={(e) => gardenState.updatePlanting(planting.uid, { notes: e.target.value })}
-            ></textarea>
-
-            <div class="muted-tasks">
-              {#each species.tasks as task (task.id)}
-                <label>
-                  <input
-                    type="checkbox"
-                    checked={!isMuted(planting, task.id)}
-                    onchange={() => gardenState.toggleMutedTask(planting.uid, task.id)}
-                  />
-                  {task.type}: {task.id}
-                </label>
-              {/each}
-            </div>
-            <p class="hint">Vink een taak uit als die voor deze plant niet van toepassing is.</p>
-          {/if}
-        </li>
+    {#if gardenState.locations.length > 0}
+      <div class="filter-bar">
+        <span class="filter-bar-label">Standplaats</span>
+        {#each gardenState.locations as location (location.id)}
+          <button
+            type="button"
+            class="filter-chip"
+            aria-pressed={filterLocationIds.has(location.id)}
+            onclick={() => (filterLocationIds = toggleInSet(filterLocationIds, location.id))}
+          >
+            {location.name}
+          </button>
+        {/each}
+      </div>
+    {/if}
+    <div class="filter-bar">
+      <span class="filter-bar-label">Type</span>
+      {#each CATEGORY_ORDER as category (category)}
+        <button
+          type="button"
+          class="filter-chip"
+          aria-pressed={filterCategories.has(category)}
+          onclick={() => (filterCategories = toggleInSet(filterCategories, category))}
+        >
+          {CATEGORY_LABELS[category]}
+        </button>
       {/each}
-    </ul>
+    </div>
+
+    {#if visiblePlantings.length === 0}
+      <p class="empty-state">Geen planten gevonden met deze filters.</p>
+    {:else}
+      <div class="planting-table-head">
+        <button
+          type="button"
+          class="sort-button"
+          aria-label={sortLabel("naam", "Naam")}
+          onclick={() => toggleSort("naam")}
+        >
+          Naam{#if sortKey === "naam"} {sortDir === "asc" ? "▲" : "▼"}{/if}
+        </button>
+        <button
+          type="button"
+          class="sort-button"
+          aria-label={sortLabel("soort", "Soort")}
+          onclick={() => toggleSort("soort")}
+        >
+          Soort{#if sortKey === "soort"} {sortDir === "asc" ? "▲" : "▼"}{/if}
+        </button>
+        <button
+          type="button"
+          class="sort-button"
+          aria-label={sortLabel("standplaats", "Standplaats")}
+          onclick={() => toggleSort("standplaats")}
+        >
+          Standplaats{#if sortKey === "standplaats"} {sortDir === "asc" ? "▲" : "▼"}{/if}
+        </button>
+      </div>
+      <ul class="planting-list">
+        {#each visiblePlantings as { planting } (planting.uid)}
+          <PlantingRow {planting} />
+        {/each}
+      </ul>
+    {/if}
   {/if}
 </div>
 
@@ -167,8 +205,8 @@
   {#if gardenState.needsBackupWarning}
     <p class="error-text">
       {#if gardenState.lastExportedAt == null}
-        Je hebt nog nooit een back-up geëxporteerd. Doe dat even, dan ben je niet afhankelijk van
-        alleen deze browser.
+        Je hebt nog nooit een back-up geëxporteerd. Doe dat nu, dan ben je niet afhankelijk van
+        de data die deze browser onthoudt.
       {:else}
         Je laatste back-up is van {new Date(gardenState.lastExportedAt).toLocaleDateString("nl-NL", {
           day: "numeric",

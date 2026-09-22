@@ -1,6 +1,6 @@
-# Tuinkalender
+# TuinTaak
 
-Persoonlijke tuinkalender: per maand zie je welke onderhoudstaken horen bij
+TuinTaak is je persoonlijke tuinkalender: per maand zie je welke onderhoudstaken horen bij
 de planten die je hebt staan, afgestemd op regio Utrecht. Geen backend —
 de gedeelde plantendata zit in de repo, je eigen tuin staat lokaal in de
 browser, en delen gaat via een JSON-export of dezelfde gehoste app.
@@ -58,6 +58,8 @@ src/
 │  ├─ windows.js           Wanneer is een taak actief (dates/recurring/relative)
 │  ├─ calendar.js          tuin + soorten + regio → 12 maanden met taken
 │  ├─ migrate.js           Migratieketen voor het opgeslagen tuindocument
+│  ├─ plantings.js         Standplaats-/categorie-vocab + dubbele-combinatie-check
+│  ├─ id.js                Gedeelde id-generator (plantingen + standplaatsen)
 │  └─ backup.js            Puur: is de laatste export lang genoeg geleden voor een waarschuwing?
 ├─ lib/storage/
 │  ├─ garden.js             localStorage lezen/schrijven/export/import + lastExportedAt
@@ -68,6 +70,9 @@ src/
    ├─ TimelineView.svelte, DetailModal.svelte    Tijdlijn + klikbare details
    ├─ Icon.svelte, PlantIcon.svelte, NativeBadge.svelte   Parametrische iconen/badges
    ├─ GardenEditor.svelte, SpeciesPicker.svelte   Tuinbeheer (incl. back-up-waarschuwing + export)
+   ├─ SpeciesCombobox.svelte    Doorzoekbare soortenkiezer (ARIA-combobox, groepeert op categorie)
+   ├─ LocationManager.svelte, LocationSelect.svelte   Standplaatsen beheren + kiezen
+   ├─ PlantingRow.svelte        Eén rij in het (sorteerbare/filterbare) tuinoverzicht
    └─ PrintView.svelte, Legend.svelte             Print + legenda
 
 tests/                 Vitest — vooral gericht op lib/domain
@@ -81,15 +86,20 @@ te testen en zelfs te hergebruiken buiten deze app.
 
 - **Maandoverzicht** — per maand een kaart met wat er die maand te doen is.
   Handig voor "wat moet ik nu doen".
-- **Tijdlijn** — per plant één regel over de 12 maanden: de bloeiperiode is
-  een doorlopende balk in bloemkleur, en de taken staan als icoontjes per
-  maand eroverheen (bij meerdere taken in één maand naast elkaar). Elke soort
-  staat er maar één keer op, ook als je hem meerdere keren in je tuin hebt.
+- **Tijdlijn** — per planting één regel over de 12 maanden: de bloeiperiode
+  is een doorlopende balk in bloemkleur, en de taken staan als icoontjes per
+  maand eroverheen (bij meerdere taken in één maand naast elkaar). Elke
+  planting staat op een eigen regel — sta je dezelfde soort op meerdere
+  standplaatsen, dan zie je ze los van elkaar (dezelfde soort kan toch al
+  niet dubbel op dezelfde standplaats, zie "Standplaatsen" hieronder).
   Alleen de taaktypes met `"timeline": true` doen mee: zaaien (kas / volle
-  grond), planten, bemesten, snoeien (hoofd / licht), oogsten en overig
-  onderhoud.
+  grond), planten, bemesten, snoeien (hoofd / licht), oogsten, delen/
+  verspreiden, winterhard maken en overig onderhoud.
   Klik op het plant-icoon voor soortinfo, of op een icoon/de bloeibalk voor
-  de details.
+  de details. De plantnaam-kolom blijft vastgeprikt tijdens horizontaal
+  scrollen op smalle schermen. Legenda en filter-/sorteeropties (zelfde als
+  Mijn Tuin: standplaats, type, Naam/Soort/Standplaats) staan uitklapbaar
+  boven het grid.
 
 ## Een nieuwe plant toevoegen
 
@@ -107,8 +117,8 @@ Maak een bestand `data/species/<id>.json` aan, bijvoorbeeld:
   "tasks": [
     { "id": "zaaien", "type": "zaaien",
       "window": { "kind": "relative", "anchor": "lastFrost", "fromWeeks": 0, "toWeeks": 2 } },
-    { "id": "water", "type": "water",
-      "window": { "kind": "recurring", "from": "06-01", "to": "09-15", "every": "week" } },
+    { "id": "bemesten", "type": "bemesten",
+      "window": { "kind": "recurring", "from": "06-01", "to": "09-15", "every": "2weeks" } },
     { "id": "oogsten", "type": "oogsten",
       "window": { "kind": "dates", "from": "07-01", "to": "10-01" } }
   ]
@@ -140,7 +150,9 @@ Drie soorten `window`:
 | `relative`  | `anchor` (`lastFrost`\|`firstFrost`\|`soilWarm`), `fromWeeks`, `toWeeks` | t.o.v. een regio-datum, bv. "2 weken na de laatste vorst" |
 
 Optioneel: `"conditions": { "position": ["kas"], "soil": ["zand"] }` op een
-taak beperkt hem tot plantingen met die standplaats/grondsoort.
+taak beperkt hem tot plantingen waarvan de standplaats dat "soort plek"-label
+(`kind`) resp. die grondsoort heeft (zie "Standplaatsen" hieronder) — niet de
+vrije naam die de gebruiker aan de standplaats gaf.
 
 Draai daarna `npm run validate` (of gewoon `npm run dev`/`build`, die roepen
 het zelf aan) — een tikfout of onbekend taaktype wordt direct gemeld met
@@ -158,10 +170,17 @@ Voeg een regel toe aan `data/taskTypes.json`:
   (`seed`, `seed-kas`, `sprout`, `droplet`, `leaf`, `scissors`, `split`,
   `snowflake`, `basket`, `poop`, `ellipsis`, `dot`, `dot-outline`) — voor een echt nieuw icoon voeg je
   daar één `{#if name === "..."}`-tak toe
-- `timeline`: `true` om het type als icoontje in de tijdlijn te tonen. Laat
-  het weg en het type staat alleen in het maandoverzicht en de printweergave.
-  De volgorde in dit bestand is de volgorde waarin icoontjes binnen één
-  maand naast elkaar komen.
+- `timeline`: `true` om het type in de tijdlijn te tonen. Laat het weg en
+  het type staat alleen in het maandoverzicht en de printweergave. De
+  volgorde in dit bestand is de volgorde waarin icoontjes binnen één maand
+  naast elkaar komen.
+- `markerStyle: "bar"`: optioneel, alleen relevant met `"timeline": true`.
+  Standaard (weggelaten, of `"icon"`) krijgt het type een icoontje in elke
+  actieve maand — prima voor een taak die op een paar momenten speelt, maar
+  bij een taak die maandenlang actief is (zoals oogsten) geeft dat een
+  wand van identieke icoontjes. Met `"bar"` wordt het in plaats daarvan één
+  doorlopende streep onderin de rij, eindigend in het taak-icoontje — zie
+  `oogsten` in `data/taskTypes.json`.
 - Optioneel: varianten met een eigen label/icoon, gekozen op een veld van de
   taak. Zie `zaaien` (`"variantBy": "location"`) en `snoeien`
   (`"variantBy": "importance"`), met `"defaultVariant"` voor taken zonder
@@ -177,6 +196,33 @@ Nieuw bestand in `data/regions/`, met dezelfde vorm als
 `nl-utrecht.json`. Op dit moment kiest de app altijd `nl-utrecht` als
 standaard (zie `DEFAULT_REGION` in `src/lib/storage/garden.js`) — voor
 meerdere regio's zou je daar een keuzemenu aan toevoegen.
+
+## Standplaatsen
+
+Standplaatsen (bv. "Kas", "Border noord") zijn — anders dan soorten en
+taaktypes — géén gedeelde data uit `/data`, maar een puur tuin-eigen concept:
+ze staan in je eigen tuindocument (`garden.locations`), want elke tuinier
+noemt zijn plekken anders. Beheer ze bovenaan **Mijn tuin**, vóór je een
+plant toevoegt.
+
+Een standplaats heeft een vrije `name` en optioneel:
+- `kind` — een klein vast "soort plek"-label (`kas` | `buiten` | `pot`,
+  zie `LOCATION_KINDS` in `src/lib/domain/plantings.js`), los van de vrije
+  naam. Dit is wat `conditions.position` op een taak matcht — vul dit dus
+  alleen in als het letterlijk klopt, niet als vrije categorisering.
+- `soil` — grondsoort, wat `conditions.soil` op een taak matcht. Geldt voor
+  de hele standplaats, niet per plant.
+
+Een standplaats verwijderen die nog in gebruik is cascadeert niet: de
+planting blijft bestaan en toont "Onbekende standplaats" (zelfde patroon als
+een verwijderde soort-id).
+
+**Dezelfde soort kan niet twee keer op dezelfde standplaats** — dat wordt
+hard tegengehouden (`gardenState.canAddPlanting()`,
+`src/lib/domain/plantings.js#findDuplicatePlantings`). Wil je bewust meerdere
+planten van dezelfde soort op wat feitelijk één plek is los van elkaar
+bijhouden, maak dan meerdere standplaatsen aan (bv. "Kas — plek 1",
+"Kas — plek 2").
 
 ## Per plant afwijken van de standaardtaken
 
@@ -241,3 +287,9 @@ soortkennis is gedeeld, jouw specifieke tuin niet.
   onderliggende logica: `windows.js`, `calendar.js`, `migrate.js` inclusief
   `buildTimelineRows`) — als je componenten flink gaat uitbreiden is
   `@testing-library/svelte` de voor de hand liggende toevoeging.
+- Sorteer-/filterstand in het tuinoverzicht (`GardenEditor.svelte`) wordt
+  niet onthouden tussen herladen — reset bij elke paginabezoek naar
+  Naam/oplopend, geen filters.
+- Dubbele-combinatie-detectie is exact `(speciesId, locationId)` en hard
+  geblokkeerd (zie "Standplaatsen" hierboven) — geen "bijna gelijk"-detectie
+  (bv. twee losstaande standplaatsen die toevallig dezelfde naam hebben).

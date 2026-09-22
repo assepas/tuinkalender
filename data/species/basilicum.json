@@ -11,7 +11,6 @@
   "tasks": [
     { "id": "zaaien", "type": "zaaien", "location": "kas", "window": { "kind": "dates", "from": "04-01", "to": "05-15" }, "note": "Binnen op de vensterbank of in de kas" },
     { "id": "uitplanten", "type": "planten", "window": { "kind": "relative", "anchor": "lastFrost", "fromWeeks": 1, "toWeeks": 3 } },
-    { "id": "water", "type": "water", "window": { "kind": "recurring", "from": "06-01", "to": "09-15", "every": "week" } },
     { "id": "oogsten", "type": "oogsten", "window": { "kind": "recurring", "from": "06-15", "to": "09-30", "every": "week" }, "note": "Toppen knijpen bevordert de groei" }
   ]
 }

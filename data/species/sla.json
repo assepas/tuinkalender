@@ -10,7 +10,6 @@
   "bloom": { "from": "07-01", "to": "08-01" },
   "tasks": [
     { "id": "zaaien", "type": "zaaien", "window": { "kind": "recurring", "from": "03-15", "to": "08-15", "every": "2weeks" }, "note": "Successiezaai voor continue oogst" },
-    { "id": "water", "type": "water", "window": { "kind": "recurring", "from": "04-01", "to": "09-15", "every": "week" } },
     { "id": "oogsten", "type": "oogsten", "window": { "kind": "recurring", "from": "05-01", "to": "10-01", "every": "week" } }
   ]
 }

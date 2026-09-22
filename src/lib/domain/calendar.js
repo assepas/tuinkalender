@@ -4,18 +4,26 @@
 // en herbruikbaar voor zowel de schermweergave als de printweergave.
 
 import { evaluateWindow, monthsBetween } from "./windows.js";
+import { buildLocationIndex } from "./plantings.js";
 
 const MONTH_NAMES = [
   "Januari", "Februari", "Maart", "April", "Mei", "Juni",
   "Juli", "Augustus", "September", "Oktober", "November", "December",
 ];
 
-function conditionMatches(conditions, planting) {
+// `locationIndex` komt uit buildLocationIndex(garden.locations) — condities
+// matchen op het "soort plek"-label (kind) en de grondsoort van de
+// standplaats, niet meer op vrije tekst op de planting zelf. Een
+// onopgeloste locationId (verwijderde standplaats) levert `undefined` op:
+// de conditie faalt dan stil (geen match), net als vroeger bij een lege
+// planting.position/.soil — geen crash, geen verrassend wél-matchen.
+function conditionMatches(conditions, planting, locationIndex) {
   if (!conditions) return true;
-  if (conditions.position && planting.position && !conditions.position.includes(planting.position)) {
+  const location = locationIndex[planting.locationId];
+  if (conditions.position && location?.kind && !conditions.position.includes(location.kind)) {
     return false;
   }
-  if (conditions.soil && planting.soil && !conditions.soil.includes(planting.soil)) {
+  if (conditions.soil && location?.soil && !conditions.soil.includes(location.soil)) {
     return false;
   }
   return true;
@@ -33,6 +41,7 @@ export function buildCalendar(garden, speciesIndex, regionProfile) {
     name: MONTH_NAMES[i],
     entries: [],
   }));
+  const locationIndex = buildLocationIndex(garden.locations);
 
   for (const planting of garden.plantings ?? []) {
     const species = speciesIndex[planting.speciesId];
@@ -45,7 +54,7 @@ export function buildCalendar(garden, speciesIndex, regionProfile) {
     ];
 
     for (const task of tasks) {
-      if (!conditionMatches(task.conditions, planting)) continue;
+      if (!conditionMatches(task.conditions, planting, locationIndex)) continue;
 
       let evaluated;
       try {
@@ -113,33 +122,37 @@ function resolveMarkerMeta(task, typeMeta) {
 /**
  * Bouwt de rijen voor de tijdlijnweergave: per planting één rij met de
  * bloeiperiode (een doorlopende balk) en per maand de taak-markers die daar
- * overheen komen. Elke soort komt maar één keer voor (de eerste planting wint). Losstaand van buildCalendar() omdat de tijdlijn per plant
- * is opgebouwd, niet per maand.
+ * overheen komen. Elke planting krijgt een eigen rij — ook als je dezelfde
+ * soort meerdere keren hebt staan (op verschillende standplaatsen, of met
+ * een andere eigen naam). Dezelfde soort+standplaats-combinatie kan toch al
+ * niet dubbel voorkomen (zie gardenState.canAddPlanting), dus dit levert
+ * geen ruis op — en zo blijft de Tijdlijn hetzelfde tonen als "Mijn tuin".
+ * Losstaand van buildCalendar() omdat de tijdlijn per plant is opgebouwd,
+ * niet per maand.
  *
  * @param {string[]} taskTypeOrder  taaktype-id's die getoond worden, in de volgorde waarin markers
  *   binnen één maand naast elkaar komen. Taaktypes die hier niet in staan blijven weg.
  * @returns {Array<{ planting: object, species: object, bloom: { months: number[], color: string } | null,
+ *   bars: Array<{ taskType: string, meta: object, months: number[], entries: object[] }>,
  *   cells: Array<Array<{ taskType: string, variantKey: string | null, meta: object, entry: object }>> }>}
- *   `cells[m - 1]` zijn de markers van maand `m`.
+ *   `cells[m - 1]` zijn de markers van maand `m`. `bars` zijn taaktypes met
+ *   `markerStyle: "bar"` (zie buildCalendar-header en README) — die staan
+ *   los van `cells`, als doorlopende balk over hun actieve maanden.
  */
 export function buildTimelineRows(garden, speciesIndex, taskTypeIndex, regionProfile, taskTypeOrder) {
   const orderIndex = new Map(taskTypeOrder.map((id, i) => [id, i]));
+  const locationIndex = buildLocationIndex(garden.locations);
   const rows = [];
-  const seenSpecies = new Set();
 
   for (const planting of garden.plantings ?? []) {
     const species = speciesIndex[planting.speciesId];
     if (!species) continue;
 
-    // Elke soort maar één keer: bij meerdere plantingen van dezelfde soort telt de eerste.
-    if (seenSpecies.has(species.id)) continue;
-    seenSpecies.add(species.id);
-
     const muted = new Set(planting.mutedTasks ?? []);
     const tasks = [
       ...species.tasks.filter((t) => !muted.has(t.id)),
       ...(planting.extraTasks ?? []),
-    ].filter((t) => orderIndex.has(t.type) && conditionMatches(t.conditions, planting));
+    ].filter((t) => orderIndex.has(t.type) && conditionMatches(t.conditions, planting, locationIndex));
 
     const bloomMonths = getBloomMonths(species);
     const bloom = bloomMonths
@@ -147,6 +160,8 @@ export function buildTimelineRows(garden, speciesIndex, taskTypeIndex, regionPro
       : null;
 
     const cells = Array.from({ length: 12 }, () => []);
+    const barsByType = new Map();
+
     for (const task of tasks) {
       let evaluated;
       try {
@@ -158,8 +173,29 @@ export function buildTimelineRows(garden, speciesIndex, taskTypeIndex, regionPro
       const typeMeta = taskTypeIndex[task.type];
       if (!typeMeta) continue;
 
-      const { variantKey, variantOrder, meta } = resolveMarkerMeta(task, typeMeta);
       const entry = { task, months: evaluated.months, frequency: evaluated.frequency ?? null };
+
+      // Taaktypes met markerStyle "bar" (bv. oogsten) krijgen één doorlopende
+      // balk in plaats van een icoontje per maand — anders levert een taak
+      // die maandenlang loopt een wand van identieke icoontjes op. Meerdere
+      // taken van hetzelfde type (zeldzaam) smelten samen tot één balk.
+      if (typeMeta.markerStyle === "bar") {
+        const bar = barsByType.get(task.type);
+        if (bar) {
+          for (const m of evaluated.months) bar.months.add(m);
+          bar.entries.push(entry);
+        } else {
+          barsByType.set(task.type, {
+            taskType: task.type,
+            meta: typeMeta,
+            months: new Set(evaluated.months),
+            entries: [entry],
+          });
+        }
+        continue;
+      }
+
+      const { variantKey, variantOrder, meta } = resolveMarkerMeta(task, typeMeta);
       for (const m of evaluated.months) {
         cells[m - 1].push({ taskType: task.type, variantKey, variantOrder, meta, entry });
       }
@@ -171,7 +207,12 @@ export function buildTimelineRows(garden, speciesIndex, taskTypeIndex, regionPro
       );
     }
 
-    rows.push({ planting, species, bloom, cells });
+    const bars = [...barsByType.values()].map((bar) => ({
+      ...bar,
+      months: [...bar.months].sort((a, b) => a - b),
+    }));
+
+    rows.push({ planting, species, bloom, bars, cells });
   }
 
   return rows;

@@ -10,7 +10,6 @@
       }
     },
     { "id": "planten",    "label": "Planten",          "color": "#3A4A2E", "icon": "sprout",      "timeline": true },
-    { "id": "water",      "label": "Water geven",      "color": "#3E7CB1", "icon": "droplet" },
     { "id": "bemesten",   "label": "Bemesten",         "color": "#8B5E34", "icon": "poop",        "timeline": true },
     {
       "id": "snoeien", "label": "Snoeien", "color": "#6B7A3A", "icon": "scissors", "timeline": true,
@@ -20,9 +19,12 @@
         "licht": { "label": "Lichte/optionele snoei", "light": true }
       }
     },
-    { "id": "oogsten",    "label": "Oogsten",          "color": "#A64B2A", "icon": "basket",      "timeline": true },
-    { "id": "delen",      "label": "Delen/verspreiden","color": "#7A5C8C", "icon": "split" },
-    { "id": "winterhard", "label": "Winterhard maken", "color": "#5B6B73", "icon": "snowflake" },
+    {
+      "id": "oogsten", "label": "Oogsten", "color": "#A64B2A", "icon": "basket", "timeline": true,
+      "markerStyle": "bar"
+    },
+    { "id": "delen",      "label": "Delen/verspreiden","color": "#7A5C8C", "icon": "split",       "timeline": true },
+    { "id": "winterhard", "label": "Winterhard maken", "color": "#5B6B73", "icon": "snowflake",   "timeline": true },
     { "id": "onderhoud",  "label": "Overig onderhoud", "color": "#8A8672", "icon": "ellipsis",    "timeline": true }
   ]
 }

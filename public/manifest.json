@@ -1,7 +1,7 @@
 {
-  "name": "Tuinkalender",
-  "short_name": "Tuinkalender",
-  "description": "Persoonlijke tuinkalender met onderhoudstaken per maand.",
+  "name": "TuinTaak",
+  "short_name": "TuinTaak",
+  "description": "TuinTaak: persoonlijke tuinkalender met onderhoudstaken per maand.",
   "start_url": "./",
   "scope": "./",
   "display": "standalone",
