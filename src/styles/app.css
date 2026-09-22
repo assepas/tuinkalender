@@ -210,6 +210,35 @@ nav.tabs button[aria-current="page"] {
   margin: 0 0 var(--space-4);
 }
 
+/* Inklapbare paneelkop: de knop zit ín de <h2> (niet andersom), zodat de
+   kopniveau-structuur voor schermlezers intact blijft — standaard
+   "disclosure"-patroon. */
+.panel-toggle {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-2);
+  width: 100%;
+  font: inherit;
+  color: inherit;
+  background: transparent;
+  border: none;
+  padding: 0;
+  margin: 0;
+  cursor: pointer;
+  text-align: left;
+}
+
+.panel-toggle:hover {
+  color: var(--color-primary);
+}
+
+.panel-toggle .chevron {
+  font-size: 0.7em;
+  color: var(--color-ink-faint);
+  flex: none;
+}
+
 .field-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(11rem, 1fr));
