@@ -35,8 +35,8 @@
       aria-expanded={expanded}
       aria-controls="locations-body"
     >
-      Standplaatsen ({gardenState.locations.length})
       <span class="chevron">{expanded ? "▾" : "▸"}</span>
+      Standplaatsen ({gardenState.locations.length})
     </button>
   </h2>
 
