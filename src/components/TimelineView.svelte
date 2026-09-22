@@ -2,6 +2,7 @@
   import { buildTimelineRows, MONTH_NAMES } from "../lib/domain/calendar.js";
   import { outlineColor } from "../lib/domain/color.js";
   import { toVisualSegments } from "../lib/domain/windows.js";
+  import { buildLocationIndex } from "../lib/domain/plantings.js";
   import { speciesIndex, taskTypes, taskTypeIndex } from "../lib/generated/data.js";
   import { gardenState } from "../lib/state/garden.svelte.js";
   import DetailModal from "./DetailModal.svelte";
@@ -23,11 +24,17 @@
   let rows = $derived(
     buildTimelineRows(gardenState.garden, speciesIndex, taskTypeIndex, gardenState.regionProfile, taskTypeOrder)
   );
+  let locationIndex = $derived(buildLocationIndex(gardenState.garden.locations));
 
   let selected = $state(null);
 
   function showSpecies(row) {
-    selected = { kind: "species", species: row.species, planting: row.planting };
+    selected = {
+      kind: "species",
+      species: row.species,
+      planting: row.planting,
+      location: locationIndex[row.planting.locationId] ?? null,
+    };
   }
 
   function showTask(row, marker) {

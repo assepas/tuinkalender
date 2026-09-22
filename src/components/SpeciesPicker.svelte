@@ -1,19 +1,35 @@
 <script>
   import { speciesList } from "../lib/generated/data.js";
   import { gardenState } from "../lib/state/garden.svelte.js";
+  import SpeciesCombobox from "./SpeciesCombobox.svelte";
+  import LocationSelect from "./LocationSelect.svelte";
 
-  let speciesId = $state(speciesList[0]?.id ?? "");
+  let speciesId = $state(null);
   let label = $state("");
-  let position = $state("");
-  let soil = $state("");
+  let locationId = $state(null);
+  let submitError = $state("");
+
+  // Live, vóór submit: dezelfde soort+standplaats staat al in de tuin? De
+  // combinatie is hard geblokkeerd (bewuste keuze), dus we laten dat al
+  // zien terwijl je nog aan het kiezen bent, niet pas na een mislukte klik.
+  const isDuplicate = $derived(
+    speciesId && locationId ? !gardenState.canAddPlanting(speciesId, locationId) : false
+  );
+  const duplicateSpeciesName = $derived(speciesList.find((s) => s.id === speciesId)?.name ?? "");
+  const duplicateLocationName = $derived(gardenState.locations.find((l) => l.id === locationId)?.name ?? "");
 
   function submit(event) {
     event.preventDefault();
+    submitError = "";
     if (!speciesId) return;
-    gardenState.addPlanting({ speciesId, label, position, soil });
-    label = "";
-    position = "";
-    soil = "";
+    try {
+      gardenState.addPlanting({ speciesId, label, locationId });
+      speciesId = null;
+      label = "";
+      locationId = null;
+    } catch (err) {
+      submitError = err.message;
+    }
   }
 </script>
 
@@ -22,28 +38,34 @@
   <div class="field-grid">
     <div>
       <label for="species-select">Soort</label>
-      <select id="species-select" bind:value={speciesId}>
-        {#each speciesList as species (species.id)}
-          <option value={species.id}>{species.name}</option>
-        {/each}
-      </select>
+      <SpeciesCombobox id="species-select" {speciesList} bind:value={speciesId} />
     </div>
     <div>
       <label for="label-input">Eigen naam (optioneel)</label>
       <input id="label-input" type="text" placeholder="bv. Tomaten achterin" bind:value={label} />
     </div>
     <div>
-      <label for="position-input">Standplaats (optioneel)</label>
-      <input id="position-input" type="text" placeholder="bv. kas, buiten, border" bind:value={position} />
-    </div>
-    <div>
-      <label for="soil-input">Grondsoort (optioneel)</label>
-      <input id="soil-input" type="text" placeholder="bv. klei, zand, potgrond" bind:value={soil} />
+      <label for="location-select">Standplaats (optioneel)</label>
+      <LocationSelect
+        id="location-select"
+        locations={gardenState.locations}
+        value={locationId}
+        onchange={(v) => (locationId = v)}
+      />
     </div>
   </div>
-  <button type="submit" class="btn btn-primary">Toevoegen aan tuin</button>
+  {#if isDuplicate}
+    <p class="error-text">
+      Je hebt hier al een {duplicateSpeciesName} op "{duplicateLocationName}" staan — dezelfde soort
+      kan niet twee keer op dezelfde standplaats.
+    </p>
+  {/if}
+  <button type="submit" class="btn btn-primary" disabled={isDuplicate}>Toevoegen aan tuin</button>
+  {#if submitError}
+    <p class="error-text">{submitError}</p>
+  {/if}
   <p class="hint">
-    Standplaats en grondsoort zijn vrije tekst; sommige taken (zoals opbinden bij tomaat in de kas)
-    reageren erop als de waarde overeenkomt met wat in de soortdata staat.
+    Nog geen standplaats voor deze plant? Laat het veld leeg, of maak er hierboven eerst een aan bij
+    "Standplaatsen".
   </p>
 </form>

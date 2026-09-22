@@ -284,31 +284,134 @@ textarea {
   gap: var(--space-3);
 }
 
-.planting-card {
+/* Compacte samenvattingsrij per planting (i.p.v. een altijd volledig
+   uitgeklapte kaart — nodig zodra een tuin tientallen planten heeft).
+   .plant-name/.plant-latin zijn dezelfde regels als de Tijdlijn gebruikt
+   (zie "Tijdlijn" verderop), voor visuele consistentie tussen de twee
+   plekken waar een plant met icoon + naam + Latijnse naam getoond wordt. */
+.planting-row {
   border: var(--border);
   border-radius: var(--radius);
-  padding: var(--space-4);
+  padding: var(--space-3) var(--space-4);
   background: var(--color-surface-raised);
 }
 
-.planting-card-head {
+.planting-row-summary {
   display: flex;
-  align-items: baseline;
-  justify-content: space-between;
+  align-items: center;
   gap: var(--space-3);
+}
+
+.planting-row-names {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  margin-right: auto;
+}
+
+.planting-row-location select {
+  width: auto;
+}
+
+.planting-row-toggle {
+  font-size: var(--step0);
+  line-height: 1;
+  padding: var(--space-2) var(--space-3);
+}
+
+.planting-row-detail {
+  margin-top: var(--space-3);
+  padding-top: var(--space-3);
+  border-top: var(--border);
+}
+
+/* Filterchips: zelfde pil-vorm als .muted-tasks label, als eigen klasse
+   (i.p.v. die regel hergebruiken) om de werkende bestaande stijl niet te
+   raken — met een "actief"-stand via aria-pressed. */
+.filter-bar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--space-2);
   margin-bottom: var(--space-3);
 }
 
-.planting-card-head h3 {
-  font-family: var(--font-display);
-  font-weight: 500;
-  font-size: var(--step1);
-  margin: 0;
+.filter-bar-label {
+  font-size: var(--step-1);
+  color: var(--color-ink-muted);
+  margin-right: var(--space-1);
 }
 
-.planting-card-head .species-name {
-  color: var(--color-ink-muted);
+.filter-chip {
+  display: inline-flex;
+  align-items: center;
+  border: var(--border);
+  border-radius: 999px;
+  padding: var(--space-1) var(--space-3);
+  font-size: 0.8em;
+  background: var(--color-surface-raised);
+  color: var(--color-ink);
+  cursor: pointer;
+}
+
+.filter-chip[aria-pressed="true"] {
+  background: var(--color-primary);
+  border-color: var(--color-primary);
+  color: var(--color-primary-ink);
+}
+
+.planting-table-head {
+  display: flex;
+  gap: var(--space-4);
+  padding: 0 var(--space-4) var(--space-2);
+  border-bottom: var(--border);
+  margin-bottom: var(--space-3);
+}
+
+.sort-button {
+  background: transparent;
+  border: none;
+  padding: 0;
   font-size: var(--step-1);
+  font-weight: 500;
+  color: var(--color-ink-muted);
+  cursor: pointer;
+}
+
+.sort-button:hover {
+  color: var(--color-ink);
+}
+
+.sort-button[aria-sort]:not([aria-sort="none"]) {
+  color: var(--color-primary);
+}
+
+/* Standplaatsenbeheer: lichter dan .planting-list/.planting-card — één
+   compacte rij per standplaats i.p.v. een volledige kaart. */
+.location-list {
+  list-style: none;
+  margin: var(--space-4) 0 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.location-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--space-2);
+  padding: var(--space-2) var(--space-3);
+  border: var(--border);
+  border-radius: var(--radius);
+  background: var(--color-surface-raised);
+}
+
+.location-row input,
+.location-row select {
+  width: auto;
+  flex: 1 1 10rem;
 }
 
 .muted-tasks {

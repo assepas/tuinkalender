@@ -8,12 +8,31 @@
   "properties": {
     "schemaVersion": { "type": "integer", "minimum": 1 },
     "region": { "type": "string" },
+    "locations": {
+      "type": "array",
+      "items": { "$ref": "#/definitions/location" }
+    },
     "plantings": {
       "type": "array",
       "items": { "$ref": "#/definitions/planting" }
     }
   },
   "definitions": {
+    "location": {
+      "type": "object",
+      "required": ["id", "name"],
+      "additionalProperties": false,
+      "properties": {
+        "id": { "type": "string" },
+        "name": { "type": "string", "minLength": 1 },
+        "kind": {
+          "type": "string",
+          "enum": ["kas", "buiten", "pot"],
+          "description": "Vast 'soort plek'-label, los van de vrije naam — houdt taak-condities (conditions.position in soortdata) betrouwbaar werkend."
+        },
+        "soil": { "type": "string" }
+      }
+    },
     "planting": {
       "type": "object",
       "required": ["uid", "speciesId"],
@@ -22,8 +41,7 @@
         "uid": { "type": "string" },
         "speciesId": { "type": "string" },
         "label": { "type": "string" },
-        "position": { "type": "string" },
-        "soil": { "type": "string" },
+        "locationId": { "type": ["string", "null"] },
         "plantedOn": { "type": "string" },
         "notes": { "type": "string" },
         "mutedTasks": { "type": "array", "items": { "type": "string" } },

@@ -9,10 +9,13 @@ import {
   exportGardenAsJson,
   importGardenFromJson,
   makePlantingUid,
+  makeLocationId,
   getLastExportedAt,
   setLastExportedAt,
 } from "../storage/garden.js";
 import { shouldWarnAboutBackup } from "../domain/backup.js";
+import { createEmptyGarden } from "../domain/migrate.js";
+import { findDuplicatePlantings } from "../domain/plantings.js";
 import { speciesIndex, regions } from "../generated/data.js";
 
 function createGardenState() {
@@ -30,6 +33,9 @@ function createGardenState() {
     get plantings() {
       return garden.plantings;
     },
+    get locations() {
+      return garden.locations ?? [];
+    },
     get regionProfile() {
       return regions[garden.region];
     },
@@ -40,16 +46,27 @@ function createGardenState() {
       return shouldWarnAboutBackup(lastExportedAt);
     },
 
-    addPlanting({ speciesId, label = "", position = "", soil = "", notes = "" }) {
+    /** Mag speciesId/locationId (nog) toegevoegd worden zonder een dubbele soort+standplaats te maken? */
+    canAddPlanting(speciesId, locationId, excludeUid = null) {
+      return findDuplicatePlantings(garden, speciesId, locationId, excludeUid).length === 0;
+    },
+
+    addPlanting({ speciesId, label = "", locationId = null, notes = "" }) {
       if (!speciesIndex[speciesId]) {
         throw new Error(`Onbekende soort: "${speciesId}"`);
+      }
+      if (!this.canAddPlanting(speciesId, locationId)) {
+        const species = speciesIndex[speciesId];
+        const location = garden.locations?.find((l) => l.id === locationId);
+        throw new Error(
+          `Je hebt al een ${species.name} op "${location?.name ?? "deze standplaats"}" staan.`
+        );
       }
       garden.plantings.push({
         uid: makePlantingUid(),
         speciesId,
         label,
-        position,
-        soil,
+        locationId,
         notes,
         plantedOn: "",
         mutedTasks: [],
@@ -67,6 +84,32 @@ function createGardenState() {
       const planting = garden.plantings.find((p) => p.uid === uid);
       if (!planting) return;
       Object.assign(planting, patch);
+      persist();
+    },
+
+    addLocation({ name, kind = null, soil = "" }) {
+      const trimmed = (name ?? "").trim();
+      if (!trimmed) {
+        throw new Error("Standplaats moet een naam hebben.");
+      }
+      const location = { id: makeLocationId(), name: trimmed };
+      if (kind) location.kind = kind;
+      if (soil) location.soil = soil;
+      garden.locations = [...(garden.locations ?? []), location];
+      persist();
+      return location;
+    },
+
+    updateLocation(id, patch) {
+      const location = garden.locations?.find((l) => l.id === id);
+      if (!location) return;
+      Object.assign(location, patch);
+      persist();
+    },
+
+    /** Geen cascade naar plantingen — zelfde tolerantie als bij een verwijderde soort-id. */
+    removeLocation(id) {
+      garden.locations = (garden.locations ?? []).filter((l) => l.id !== id);
       persist();
     },
 
@@ -96,7 +139,7 @@ function createGardenState() {
     },
 
     reset(regionId = garden.region) {
-      garden = { schemaVersion: garden.schemaVersion, region: regionId, plantings: [] };
+      garden = createEmptyGarden(regionId);
       persist();
     },
   };

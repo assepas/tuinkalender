@@ -4,18 +4,26 @@
 // en herbruikbaar voor zowel de schermweergave als de printweergave.
 
 import { evaluateWindow, monthsBetween } from "./windows.js";
+import { buildLocationIndex } from "./plantings.js";
 
 const MONTH_NAMES = [
   "Januari", "Februari", "Maart", "April", "Mei", "Juni",
   "Juli", "Augustus", "September", "Oktober", "November", "December",
 ];
 
-function conditionMatches(conditions, planting) {
+// `locationIndex` komt uit buildLocationIndex(garden.locations) — condities
+// matchen op het "soort plek"-label (kind) en de grondsoort van de
+// standplaats, niet meer op vrije tekst op de planting zelf. Een
+// onopgeloste locationId (verwijderde standplaats) levert `undefined` op:
+// de conditie faalt dan stil (geen match), net als vroeger bij een lege
+// planting.position/.soil — geen crash, geen verrassend wél-matchen.
+function conditionMatches(conditions, planting, locationIndex) {
   if (!conditions) return true;
-  if (conditions.position && planting.position && !conditions.position.includes(planting.position)) {
+  const location = locationIndex[planting.locationId];
+  if (conditions.position && location?.kind && !conditions.position.includes(location.kind)) {
     return false;
   }
-  if (conditions.soil && planting.soil && !conditions.soil.includes(planting.soil)) {
+  if (conditions.soil && location?.soil && !conditions.soil.includes(location.soil)) {
     return false;
   }
   return true;
@@ -33,6 +41,7 @@ export function buildCalendar(garden, speciesIndex, regionProfile) {
     name: MONTH_NAMES[i],
     entries: [],
   }));
+  const locationIndex = buildLocationIndex(garden.locations);
 
   for (const planting of garden.plantings ?? []) {
     const species = speciesIndex[planting.speciesId];
@@ -45,7 +54,7 @@ export function buildCalendar(garden, speciesIndex, regionProfile) {
     ];
 
     for (const task of tasks) {
-      if (!conditionMatches(task.conditions, planting)) continue;
+      if (!conditionMatches(task.conditions, planting, locationIndex)) continue;
 
       let evaluated;
       try {
@@ -127,6 +136,7 @@ function resolveMarkerMeta(task, typeMeta) {
  */
 export function buildTimelineRows(garden, speciesIndex, taskTypeIndex, regionProfile, taskTypeOrder) {
   const orderIndex = new Map(taskTypeOrder.map((id, i) => [id, i]));
+  const locationIndex = buildLocationIndex(garden.locations);
   const rows = [];
   const seenSpecies = new Set();
 
@@ -142,7 +152,7 @@ export function buildTimelineRows(garden, speciesIndex, taskTypeIndex, regionPro
     const tasks = [
       ...species.tasks.filter((t) => !muted.has(t.id)),
       ...(planting.extraTasks ?? []),
-    ].filter((t) => orderIndex.has(t.type) && conditionMatches(t.conditions, planting));
+    ].filter((t) => orderIndex.has(t.type) && conditionMatches(t.conditions, planting, locationIndex));
 
     const bloomMonths = getBloomMonths(species);
     const bloom = bloomMonths

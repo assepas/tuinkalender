@@ -58,6 +58,8 @@ src/
 │  ├─ windows.js           Wanneer is een taak actief (dates/recurring/relative)
 │  ├─ calendar.js          tuin + soorten + regio → 12 maanden met taken
 │  ├─ migrate.js           Migratieketen voor het opgeslagen tuindocument
+│  ├─ plantings.js         Standplaats-/categorie-vocab + dubbele-combinatie-check
+│  ├─ id.js                Gedeelde id-generator (plantingen + standplaatsen)
 │  └─ backup.js            Puur: is de laatste export lang genoeg geleden voor een waarschuwing?
 ├─ lib/storage/
 │  ├─ garden.js             localStorage lezen/schrijven/export/import + lastExportedAt
@@ -68,6 +70,9 @@ src/
    ├─ TimelineView.svelte, DetailModal.svelte    Tijdlijn + klikbare details
    ├─ Icon.svelte, PlantIcon.svelte, NativeBadge.svelte   Parametrische iconen/badges
    ├─ GardenEditor.svelte, SpeciesPicker.svelte   Tuinbeheer (incl. back-up-waarschuwing + export)
+   ├─ SpeciesCombobox.svelte    Doorzoekbare soortenkiezer (ARIA-combobox, groepeert op categorie)
+   ├─ LocationManager.svelte, LocationSelect.svelte   Standplaatsen beheren + kiezen
+   ├─ PlantingRow.svelte        Eén rij in het (sorteerbare/filterbare) tuinoverzicht
    └─ PrintView.svelte, Legend.svelte             Print + legenda
 
 tests/                 Vitest — vooral gericht op lib/domain
@@ -140,7 +145,9 @@ Drie soorten `window`:
 | `relative`  | `anchor` (`lastFrost`\|`firstFrost`\|`soilWarm`), `fromWeeks`, `toWeeks` | t.o.v. een regio-datum, bv. "2 weken na de laatste vorst" |
 
 Optioneel: `"conditions": { "position": ["kas"], "soil": ["zand"] }` op een
-taak beperkt hem tot plantingen met die standplaats/grondsoort.
+taak beperkt hem tot plantingen waarvan de standplaats dat "soort plek"-label
+(`kind`) resp. die grondsoort heeft (zie "Standplaatsen" hieronder) — niet de
+vrije naam die de gebruiker aan de standplaats gaf.
 
 Draai daarna `npm run validate` (of gewoon `npm run dev`/`build`, die roepen
 het zelf aan) — een tikfout of onbekend taaktype wordt direct gemeld met
@@ -184,6 +191,33 @@ Nieuw bestand in `data/regions/`, met dezelfde vorm als
 `nl-utrecht.json`. Op dit moment kiest de app altijd `nl-utrecht` als
 standaard (zie `DEFAULT_REGION` in `src/lib/storage/garden.js`) — voor
 meerdere regio's zou je daar een keuzemenu aan toevoegen.
+
+## Standplaatsen
+
+Standplaatsen (bv. "Kas", "Border noord") zijn — anders dan soorten en
+taaktypes — géén gedeelde data uit `/data`, maar een puur tuin-eigen concept:
+ze staan in je eigen tuindocument (`garden.locations`), want elke tuinier
+noemt zijn plekken anders. Beheer ze bovenaan **Mijn tuin**, vóór je een
+plant toevoegt.
+
+Een standplaats heeft een vrije `name` en optioneel:
+- `kind` — een klein vast "soort plek"-label (`kas` | `buiten` | `pot`,
+  zie `LOCATION_KINDS` in `src/lib/domain/plantings.js`), los van de vrije
+  naam. Dit is wat `conditions.position` op een taak matcht — vul dit dus
+  alleen in als het letterlijk klopt, niet als vrije categorisering.
+- `soil` — grondsoort, wat `conditions.soil` op een taak matcht. Geldt voor
+  de hele standplaats, niet per plant.
+
+Een standplaats verwijderen die nog in gebruik is cascadeert niet: de
+planting blijft bestaan en toont "Onbekende standplaats" (zelfde patroon als
+een verwijderde soort-id).
+
+**Dezelfde soort kan niet twee keer op dezelfde standplaats** — dat wordt
+hard tegengehouden (`gardenState.canAddPlanting()`,
+`src/lib/domain/plantings.js#findDuplicatePlantings`). Wil je bewust meerdere
+planten van dezelfde soort op wat feitelijk één plek is los van elkaar
+bijhouden, maak dan meerdere standplaatsen aan (bv. "Kas — plek 1",
+"Kas — plek 2").
 
 ## Per plant afwijken van de standaardtaken
 
@@ -248,3 +282,9 @@ soortkennis is gedeeld, jouw specifieke tuin niet.
   onderliggende logica: `windows.js`, `calendar.js`, `migrate.js` inclusief
   `buildTimelineRows`) — als je componenten flink gaat uitbreiden is
   `@testing-library/svelte` de voor de hand liggende toevoeging.
+- Sorteer-/filterstand in het tuinoverzicht (`GardenEditor.svelte`) wordt
+  niet onthouden tussen herladen — reset bij elke paginabezoek naar
+  Naam/oplopend, geen filters.
+- Dubbele-combinatie-detectie is exact `(speciesId, locationId)` en hard
+  geblokkeerd (zie "Standplaatsen" hierboven) — geen "bijna gelijk"-detectie
+  (bv. twee losstaande standplaatsen die toevallig dezelfde naam hebben).

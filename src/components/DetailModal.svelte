@@ -51,11 +51,13 @@
         {/if}
       </div>
 
-      {#if detail.planting.position || detail.planting.soil}
+      {#if detail.location}
         <p class="modal-meta">
-          {#if detail.planting.position}Standplaats: {detail.planting.position}. {/if}
-          {#if detail.planting.soil}Grondsoort: {detail.planting.soil}.{/if}
+          Standplaats: {detail.location.name}.
+          {#if detail.location.soil}Grondsoort: {detail.location.soil}.{/if}
         </p>
+      {:else if detail.planting.locationId}
+        <p class="error-text">Onbekende standplaats — mogelijk verwijderd.</p>
       {/if}
       {#if detail.planting.notes}
         <p class="modal-meta">{detail.planting.notes}</p>

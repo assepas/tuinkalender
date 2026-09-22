@@ -56,7 +56,7 @@ const taskTypeIndex = {
 const taskTypeOrder = ["zaaien", "snoeien", "oogsten"];
 
 function baseGarden(plantings) {
-  return { schemaVersion: 1, region: "nl-utrecht", plantings };
+  return { schemaVersion: 2, region: "nl-utrecht", locations: [], plantings };
 }
 
 describe("getBloomMonths", () => {
