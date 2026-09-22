@@ -1,0 +1,16 @@
+{
+  "schemaVersion": 1,
+  "id": "goudsbloem",
+  "name": "Goudsbloem",
+  "latin": "Calendula officinalis",
+  "category": "vaste-plant",
+  "tags": ["eenjarig", "eetbaar"],
+  "nativeStatus": "exoot",
+  "appearance": { "shape": "bloem", "flowerColor": "#E8A93A", "flowerColorName": "geeloranje" },
+  "bloom": { "from": "06-01", "to": "10-15" },
+  "tasks": [
+    { "id": "zaaien", "type": "zaaien", "window": { "kind": "dates", "from": "04-01", "to": "05-15" }, "note": "Winterhard genoeg om direct buiten te zaaien" },
+    { "id": "oogsten", "type": "oogsten", "window": { "kind": "dates", "from": "06-15", "to": "10-01" }, "note": "Bloemblaadjes eetbaar/geneeskrachtig" },
+    { "id": "dode-bloemen-verwijderen", "type": "onderhoud", "window": { "kind": "recurring", "from": "06-15", "to": "10-01", "every": "week" } }
+  ]
+}

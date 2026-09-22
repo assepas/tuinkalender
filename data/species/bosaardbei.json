@@ -1,0 +1,16 @@
+{
+  "schemaVersion": 1,
+  "id": "bosaardbei",
+  "name": "Bosaardbei",
+  "latin": "Fragaria vesca",
+  "category": "fruit",
+  "tags": ["bodembedekker"],
+  "nativeStatus": "inheems",
+  "appearance": { "shape": "bes", "flowerColor": "#F5F1E6", "flowerColorName": "wit" },
+  "bloom": { "from": "04-15", "to": "06-01" },
+  "tasks": [
+    { "id": "planten", "type": "planten", "window": { "kind": "dates", "from": "03-15", "to": "05-01" } },
+    { "id": "oogsten", "type": "oogsten", "window": { "kind": "dates", "from": "06-01", "to": "08-15" } },
+    { "id": "delen", "type": "delen", "window": { "kind": "dates", "from": "08-01", "to": "09-15" }, "note": "Uitlopers (stolonen) afsnijden en verplanten" }
+  ]
+}

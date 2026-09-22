@@ -1,0 +1,16 @@
+{
+  "schemaVersion": 1,
+  "id": "vrouwenmantel",
+  "name": "Vrouwenmantel",
+  "latin": "Alchemilla mollis",
+  "category": "vaste-plant",
+  "tags": ["meerjarig", "bodembedekker"],
+  "nativeStatus": "exoot",
+  "appearance": { "shape": "bloem", "flowerColor": "#C9CB8F", "flowerColorName": "geelgroen" },
+  "bloom": { "from": "06-01", "to": "08-01" },
+  "tasks": [
+    { "id": "planten", "type": "planten", "window": { "kind": "dates", "from": "03-15", "to": "05-01" } },
+    { "id": "onderhoud", "type": "onderhoud", "window": { "kind": "dates", "from": "08-01", "to": "08-31" }, "note": "Na de bloei fors terugknippen voor fris nieuw blad en minder zelfzaai" },
+    { "id": "delen", "type": "delen", "window": { "kind": "dates", "from": "09-15", "to": "10-15" } }
+  ]
+}

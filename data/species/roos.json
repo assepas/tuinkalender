@@ -1,0 +1,17 @@
+{
+  "schemaVersion": 1,
+  "id": "roos",
+  "name": "Roos",
+  "latin": "Rosa spp.",
+  "category": "struik",
+  "tags": ["meerjarig"],
+  "nativeStatus": "onbekend",
+  "appearance": { "shape": "struik", "flowerColor": "#C0392B", "flowerColorName": "rood" },
+  "bloom": { "from": "06-01", "to": "09-15" },
+  "tasks": [
+    { "id": "planten", "type": "planten", "window": { "kind": "dates", "from": "03-01", "to": "04-30" } },
+    { "id": "snoeien", "type": "snoeien", "importance": "hoofd", "window": { "kind": "dates", "from": "02-15", "to": "03-15" } },
+    { "id": "bemesten", "type": "bemesten", "window": { "kind": "dates", "from": "03-15", "to": "04-15" } },
+    { "id": "dode-bloemen-verwijderen", "type": "onderhoud", "window": { "kind": "recurring", "from": "06-01", "to": "09-15", "every": "week" }, "note": "Uitgebloeide bloemen verwijderen stimuleert nabloei" }
+  ]
+}

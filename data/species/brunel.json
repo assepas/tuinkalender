@@ -1,0 +1,15 @@
+{
+  "schemaVersion": 1,
+  "id": "brunel",
+  "name": "Gewone brunel",
+  "latin": "Prunella vulgaris",
+  "category": "vaste-plant",
+  "tags": ["bodembedekker", "bloemenweide"],
+  "nativeStatus": "inheems",
+  "appearance": { "shape": "bloem", "flowerColor": "#6E5A9E", "flowerColorName": "paars" },
+  "bloom": { "from": "06-01", "to": "09-01" },
+  "tasks": [
+    { "id": "planten", "type": "planten", "window": { "kind": "dates", "from": "03-15", "to": "05-01" } },
+    { "id": "delen", "type": "delen", "window": { "kind": "dates", "from": "09-01", "to": "10-01" } }
+  ]
+}

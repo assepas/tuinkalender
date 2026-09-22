@@ -1,0 +1,17 @@
+{
+  "schemaVersion": 1,
+  "id": "framboos-herfstdrager",
+  "name": "Framboos (herfstdragend)",
+  "latin": "Rubus idaeus",
+  "category": "fruit",
+  "tags": ["struik", "herfstdragend"],
+  "nativeStatus": "inheems",
+  "appearance": { "shape": "bes", "flowerColor": "#F5F1E6", "flowerColorName": "wit" },
+  "bloom": { "from": "06-15", "to": "08-15" },
+  "tasks": [
+    { "id": "snoeien", "type": "snoeien", "importance": "hoofd", "window": { "kind": "dates", "from": "02-01", "to": "02-28" }, "note": "In tegenstelling tot zomerframboos: alle ranken tot de grond afknippen" },
+    { "id": "bemesten", "type": "bemesten", "window": { "kind": "dates", "from": "03-01", "to": "03-31" } },
+    { "id": "oogsten", "type": "oogsten", "window": { "kind": "dates", "from": "08-15", "to": "10-15" } },
+    { "id": "delen", "type": "delen", "window": { "kind": "dates", "from": "10-15", "to": "11-15" }, "note": "Wortelopslag uitgraven en verplanten" }
+  ]
+}

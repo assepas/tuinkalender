@@ -1,0 +1,17 @@
+{
+  "schemaVersion": 1,
+  "id": "geranium",
+  "name": "Geranium (tuingeranium)",
+  "latin": "Pelargonium x hortorum",
+  "category": "vaste-plant",
+  "tags": ["niet-winterhard", "kuipplant"],
+  "nativeStatus": "exoot",
+  "appearance": { "shape": "bloem", "flowerColor": "#C0392B", "flowerColorName": "rood" },
+  "bloom": { "from": "05-15", "to": "10-01" },
+  "tasks": [
+    { "id": "planten", "type": "planten", "window": { "kind": "relative", "anchor": "lastFrost", "fromWeeks": 0, "toWeeks": 2 } },
+    { "id": "bemesten", "type": "bemesten", "window": { "kind": "recurring", "from": "06-01", "to": "08-31", "every": "2weeks" } },
+    { "id": "dode-bloemen-verwijderen", "type": "onderhoud", "window": { "kind": "recurring", "from": "06-01", "to": "09-30", "every": "week" } },
+    { "id": "winterhard", "type": "winterhard", "window": { "kind": "dates", "from": "10-01", "to": "10-31" }, "note": "Niet winterhard: vorstvrij en licht overwinteren binnen" }
+  ]
+}

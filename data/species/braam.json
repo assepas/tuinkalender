@@ -1,0 +1,16 @@
+{
+  "schemaVersion": 1,
+  "id": "braam",
+  "name": "Braam",
+  "latin": "Rubus fruticosus",
+  "category": "fruit",
+  "tags": ["struik"],
+  "nativeStatus": "inheems",
+  "appearance": { "shape": "bes", "flowerColor": "#F5F1E6", "flowerColorName": "wit" },
+  "bloom": { "from": "05-15", "to": "06-30" },
+  "tasks": [
+    { "id": "planten", "type": "planten", "window": { "kind": "dates", "from": "10-15", "to": "03-15" } },
+    { "id": "snoeien", "type": "snoeien", "importance": "hoofd", "window": { "kind": "dates", "from": "08-15", "to": "09-30" }, "note": "Uitgevruchte ranken tot de grond wegknippen" },
+    { "id": "oogsten", "type": "oogsten", "window": { "kind": "dates", "from": "08-01", "to": "09-30" } }
+  ]
+}

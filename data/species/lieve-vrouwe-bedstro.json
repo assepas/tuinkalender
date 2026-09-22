@@ -1,0 +1,16 @@
+{
+  "schemaVersion": 1,
+  "id": "lieve-vrouwe-bedstro",
+  "name": "Lieve-vrouwe-bedstro",
+  "latin": "Galium odoratum",
+  "category": "kruid",
+  "tags": ["meerjarig", "bodembedekker", "schaduwplant"],
+  "nativeStatus": "inheems",
+  "appearance": { "shape": "kruid", "flowerColor": "#F5F1E6", "flowerColorName": "wit" },
+  "bloom": { "from": "05-01", "to": "06-01" },
+  "tasks": [
+    { "id": "planten", "type": "planten", "window": { "kind": "dates", "from": "03-15", "to": "05-01" }, "note": "Groeit het best in de schaduw" },
+    { "id": "oogsten", "type": "oogsten", "window": { "kind": "dates", "from": "04-15", "to": "05-15" }, "note": "Voor meiwijn: vlak vóór de bloei plukken" },
+    { "id": "delen", "type": "delen", "window": { "kind": "dates", "from": "09-15", "to": "10-15" } }
+  ]
+}

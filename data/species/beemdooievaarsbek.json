@@ -1,0 +1,16 @@
+{
+  "schemaVersion": 1,
+  "id": "beemdooievaarsbek",
+  "name": "Beemdooievaarsbek",
+  "latin": "Geranium pratense",
+  "category": "vaste-plant",
+  "tags": ["meerjarig", "bloemenweide"],
+  "nativeStatus": "inheems",
+  "appearance": { "shape": "bloem", "flowerColor": "#7C8FC4", "flowerColorName": "blauwpaars" },
+  "bloom": { "from": "06-01", "to": "08-01" },
+  "tasks": [
+    { "id": "planten", "type": "planten", "window": { "kind": "dates", "from": "03-15", "to": "05-01" } },
+    { "id": "delen", "type": "delen", "window": { "kind": "dates", "from": "09-01", "to": "10-01" }, "note": "Elke 3-4 jaar delen houdt de plant vitaal" },
+    { "id": "onderhoud", "type": "onderhoud", "window": { "kind": "dates", "from": "08-01", "to": "08-31" }, "note": "Na de bloei terugknippen voor mogelijke nabloei" }
+  ]
+}

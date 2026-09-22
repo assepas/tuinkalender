@@ -1,0 +1,16 @@
+{
+  "schemaVersion": 1,
+  "id": "trompetklimmer",
+  "name": "Trompetklimmer",
+  "latin": "Campsis radicans",
+  "category": "struik",
+  "tags": ["klimmer", "meerjarig"],
+  "nativeStatus": "exoot",
+  "appearance": { "shape": "struik", "flowerColor": "#E8873A", "flowerColorName": "oranje" },
+  "bloom": { "from": "07-15", "to": "09-15" },
+  "tasks": [
+    { "id": "planten", "type": "planten", "window": { "kind": "dates", "from": "03-15", "to": "05-01" } },
+    { "id": "snoeien", "type": "snoeien", "importance": "hoofd", "window": { "kind": "dates", "from": "02-01", "to": "03-01" }, "note": "Vorig jaar hout terugzetten tot 2-3 knoppen; bloeit op nieuw hout" },
+    { "id": "bemesten", "type": "bemesten", "window": { "kind": "dates", "from": "03-15", "to": "04-15" } }
+  ]
+}

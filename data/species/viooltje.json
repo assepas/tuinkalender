@@ -1,0 +1,16 @@
+{
+  "schemaVersion": 1,
+  "id": "viooltje",
+  "name": "Viooltje",
+  "latin": "Viola cornuta",
+  "category": "vaste-plant",
+  "tags": ["meerjarig"],
+  "nativeStatus": "exoot",
+  "appearance": { "shape": "bloem", "flowerColor": "#8A6BB0", "flowerColorName": "paars-geel" },
+  "bloom": { "from": "03-01", "to": "10-15" },
+  "tasks": [
+    { "id": "planten", "type": "planten", "window": { "kind": "dates", "from": "03-15", "to": "05-01" } },
+    { "id": "dode-bloemen-verwijderen", "type": "onderhoud", "window": { "kind": "recurring", "from": "04-01", "to": "09-30", "every": "2weeks" }, "note": "Verlengt de bloeiperiode" },
+    { "id": "delen", "type": "delen", "window": { "kind": "dates", "from": "09-01", "to": "10-01" } }
+  ]
+}
