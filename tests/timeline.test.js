@@ -15,6 +15,8 @@ const speciesIndex = {
       { id: "water", type: "water", window: { kind: "dates", from: "06-01", to: "08-01" } },
       { id: "snoei", type: "snoeien", importance: "hoofd", window: { kind: "dates", from: "06-01", to: "07-01" } },
       { id: "snoei-licht", type: "snoeien", importance: "licht", window: { kind: "dates", from: "06-01", to: "06-30" } },
+      { id: "oogst1", type: "oogsten", window: { kind: "dates", from: "07-01", to: "07-15" } },
+      { id: "oogst2", type: "oogsten", window: { kind: "dates", from: "08-01", to: "08-31" } },
     ],
   },
   sla: {
@@ -38,6 +40,7 @@ const taskTypeIndex = {
     },
   },
   water: { id: "water", label: "Water geven", color: "#3E7CB1", icon: "droplet" },
+  oogsten: { id: "oogsten", label: "Oogsten", color: "#A64B2A", icon: "basket", markerStyle: "bar" },
   snoeien: {
     id: "snoeien",
     label: "Snoeien",
@@ -50,7 +53,7 @@ const taskTypeIndex = {
 };
 
 // "water" is bewust weggelaten: taaktypes buiten deze lijst komen niet in de tijdlijn.
-const taskTypeOrder = ["zaaien", "snoeien"];
+const taskTypeOrder = ["zaaien", "snoeien", "oogsten"];
 
 function baseGarden(plantings) {
   return { schemaVersion: 1, region: "nl-utrecht", plantings };
@@ -123,6 +126,23 @@ describe("buildTimelineRows", () => {
     const rows = buildTimelineRows(garden, speciesIndex, taskTypeIndex, region, taskTypeOrder);
     expect(rows.map((r) => r.species.id)).toEqual(["tomaat", "sla"]);
     expect(rows[0].planting.uid).toBe("p1");
+  });
+
+  it("groepeert taken met markerStyle 'bar' (oogsten) tot doorlopende balken i.p.v. maandcellen", () => {
+    const row = rowFor("tomaat");
+    expect(row.bars).toHaveLength(1);
+    const [bar] = row.bars;
+    expect(bar.taskType).toBe("oogsten");
+    // Twee losse oogsttaken (juli + augustus) smelten samen tot één balk.
+    expect(bar.months).toEqual([7, 8]);
+    expect(bar.entries).toHaveLength(2);
+
+    const allTypes = row.cells.flat().map((m) => m.taskType);
+    expect(allTypes).not.toContain("oogsten");
+  });
+
+  it("geeft een lege bars-lijst als de soort geen bar-taaktypes heeft", () => {
+    expect(rowFor("sla").bars).toEqual([]);
   });
 
   it("negeert plantings met een onbekende soort", () => {

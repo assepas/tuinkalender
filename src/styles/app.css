@@ -501,6 +501,66 @@ textarea {
   filter: brightness(0.92);
 }
 
+/* Taken met markerStyle "bar" (bv. oogsten): één doorlopende streep onderin
+   de rij (~4/5 hoogte) in plaats van een icoontje per maand — dat voorkomt
+   een wand van identieke icoontjes bij een taak die maandenlang loopt. De
+   lijn en het eind-icoontje zitten samen in één wrapper (i.p.v. los als
+   grid-items) zodat ze bij hover als één geheel vervormen; de wrapper zelf
+   is niet interactief (pointer-events: none), alleen de twee kinderen —
+   anders zou zijn volle, gestretchte hitbox de bloei-balk eronder blokkeren. */
+.task-bar-segment {
+  grid-row: 1;
+  position: relative;
+  pointer-events: none;
+}
+
+.task-bar-line {
+  position: absolute;
+  left: 2px;
+  right: 2px;
+  bottom: 0;
+  height: 3px;
+  border: none;
+  border-radius: 2px;
+  padding: 0;
+  cursor: pointer;
+  pointer-events: auto;
+  background: var(--bar-color);
+}
+
+/* Zelfde hoogte/grootte als de gewone taak-icoontjes (.marker-chip), maar
+   zonder cirkel erachter — dit icoon staat aan het eind van een balk, niet
+   los in een maand. De dubbele drop-shadow werkt als lichte gloed rond de
+   icoonvorm zelf, zodat hij ook op een gelijkaardig gekleurde bloei-balk
+   (bv. rood bij tulp) zichtbaar blijft. */
+.task-bar-end {
+  position: absolute;
+  right: 0;
+  /* 3px ruimte boven de balk: de lijn is 4px hoog (incl. rand), het icoon
+     staat daar nog eens ~4px boven. Bij een andere balkhoogte hier ook naar kijken. */
+  bottom: 4px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 16px;
+  height: 16px;
+  padding: 0;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  pointer-events: auto;
+  filter: drop-shadow(0 0 1.5px var(--color-surface-raised))
+    drop-shadow(0 0 1.5px var(--color-surface-raised));
+}
+
+.task-bar-segment:hover .task-bar-line {
+  height: 4px;
+}
+
+.task-bar-segment:hover .task-bar-end {
+  transform: scale(1.2);
+}
+
 .month-cell {
   grid-row: 1;
   display: flex;
@@ -508,6 +568,10 @@ textarea {
   justify-content: center;
   gap: 1px;
   min-width: 0;
+  /* De cel vult de hele rijhoogte (grid-stretch), ook waar geen icoon staat —
+     zonder dit zou die lege ruimte klikken op een task-bar eronder blokkeren
+     (bv. de oogst-balk in dezelfde maand als een ander taak-icoon). */
+  pointer-events: none;
 }
 
 /* Lichte achtergrond met rand, zodat het icoon leesbaar blijft op elke bloemkleur. */
@@ -522,6 +586,7 @@ textarea {
   border-radius: 999px;
   background: var(--color-surface-raised);
   border: 1px solid var(--color-line-strong);
+  pointer-events: auto;
 }
 
 button.marker-chip {

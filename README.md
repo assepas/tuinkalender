@@ -158,10 +158,17 @@ Voeg een regel toe aan `data/taskTypes.json`:
   (`seed`, `seed-kas`, `sprout`, `droplet`, `leaf`, `scissors`, `split`,
   `snowflake`, `basket`, `poop`, `ellipsis`, `dot`, `dot-outline`) — voor een echt nieuw icoon voeg je
   daar één `{#if name === "..."}`-tak toe
-- `timeline`: `true` om het type als icoontje in de tijdlijn te tonen. Laat
-  het weg en het type staat alleen in het maandoverzicht en de printweergave.
-  De volgorde in dit bestand is de volgorde waarin icoontjes binnen één
-  maand naast elkaar komen.
+- `timeline`: `true` om het type in de tijdlijn te tonen. Laat het weg en
+  het type staat alleen in het maandoverzicht en de printweergave. De
+  volgorde in dit bestand is de volgorde waarin icoontjes binnen één maand
+  naast elkaar komen.
+- `markerStyle: "bar"`: optioneel, alleen relevant met `"timeline": true`.
+  Standaard (weggelaten, of `"icon"`) krijgt het type een icoontje in elke
+  actieve maand — prima voor een taak die op een paar momenten speelt, maar
+  bij een taak die maandenlang actief is (zoals oogsten) geeft dat een
+  wand van identieke icoontjes. Met `"bar"` wordt het in plaats daarvan één
+  doorlopende streep onderin de rij, eindigend in het taak-icoontje — zie
+  `oogsten` in `data/taskTypes.json`.
 - Optioneel: varianten met een eigen label/icoon, gekozen op een veld van de
   taak. Zie `zaaien` (`"variantBy": "location"`) en `snoeien`
   (`"variantBy": "importance"`), met `"defaultVariant"` voor taken zonder

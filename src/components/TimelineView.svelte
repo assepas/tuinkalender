@@ -44,6 +44,19 @@
       entry: marker.entry,
     };
   }
+
+  // Bars (markerStyle "bar", bv. oogsten) hebben geen los marker-object per
+  // maand — de eerste entry is representatief genoeg voor het detailvenster.
+  function showBar(row, bar) {
+    selected = {
+      kind: "task",
+      species: row.species,
+      planting: row.planting,
+      taskType: bar.taskType,
+      meta: bar.meta,
+      entry: bar.entries[0],
+    };
+  }
 </script>
 
 <div class="timeline-legend no-print">
@@ -103,6 +116,32 @@
               ></button>
             {/each}
           {/if}
+          {#each row.bars as bar (bar.taskType)}
+            {#each toVisualSegments(bar.months) as [start, end] (start)}
+              <div
+                class="task-bar-segment"
+                style:grid-column={`${start} / ${end + 1}`}
+                style:--bar-color={bar.meta.color}
+              >
+                <button
+                  type="button"
+                  class="task-bar-line"
+                  onclick={() => showBar(row, bar)}
+                  title={bar.meta.label}
+                  aria-label={bar.meta.label}
+                ></button>
+                <button
+                  type="button"
+                  class="task-bar-end"
+                  onclick={() => showBar(row, bar)}
+                  title={bar.meta.label}
+                  aria-label={bar.meta.label}
+                >
+                  <Icon name={bar.meta.icon} color={bar.meta.color} size={16} strokeWidth={1.8} />
+                </button>
+              </div>
+            {/each}
+          {/each}
           {#each row.cells as markers, i}
             {#if markers.length > 0}
               <div class="month-cell" style:grid-column={`${i + 1} / ${i + 2}`}>

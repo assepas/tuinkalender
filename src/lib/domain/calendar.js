@@ -119,8 +119,11 @@ function resolveMarkerMeta(task, typeMeta) {
  * @param {string[]} taskTypeOrder  taaktype-id's die getoond worden, in de volgorde waarin markers
  *   binnen één maand naast elkaar komen. Taaktypes die hier niet in staan blijven weg.
  * @returns {Array<{ planting: object, species: object, bloom: { months: number[], color: string } | null,
+ *   bars: Array<{ taskType: string, meta: object, months: number[], entries: object[] }>,
  *   cells: Array<Array<{ taskType: string, variantKey: string | null, meta: object, entry: object }>> }>}
- *   `cells[m - 1]` zijn de markers van maand `m`.
+ *   `cells[m - 1]` zijn de markers van maand `m`. `bars` zijn taaktypes met
+ *   `markerStyle: "bar"` (zie buildCalendar-header en README) — die staan
+ *   los van `cells`, als doorlopende balk over hun actieve maanden.
  */
 export function buildTimelineRows(garden, speciesIndex, taskTypeIndex, regionProfile, taskTypeOrder) {
   const orderIndex = new Map(taskTypeOrder.map((id, i) => [id, i]));
@@ -147,6 +150,8 @@ export function buildTimelineRows(garden, speciesIndex, taskTypeIndex, regionPro
       : null;
 
     const cells = Array.from({ length: 12 }, () => []);
+    const barsByType = new Map();
+
     for (const task of tasks) {
       let evaluated;
       try {
@@ -158,8 +163,29 @@ export function buildTimelineRows(garden, speciesIndex, taskTypeIndex, regionPro
       const typeMeta = taskTypeIndex[task.type];
       if (!typeMeta) continue;
 
-      const { variantKey, variantOrder, meta } = resolveMarkerMeta(task, typeMeta);
       const entry = { task, months: evaluated.months, frequency: evaluated.frequency ?? null };
+
+      // Taaktypes met markerStyle "bar" (bv. oogsten) krijgen één doorlopende
+      // balk in plaats van een icoontje per maand — anders levert een taak
+      // die maandenlang loopt een wand van identieke icoontjes op. Meerdere
+      // taken van hetzelfde type (zeldzaam) smelten samen tot één balk.
+      if (typeMeta.markerStyle === "bar") {
+        const bar = barsByType.get(task.type);
+        if (bar) {
+          for (const m of evaluated.months) bar.months.add(m);
+          bar.entries.push(entry);
+        } else {
+          barsByType.set(task.type, {
+            taskType: task.type,
+            meta: typeMeta,
+            months: new Set(evaluated.months),
+            entries: [entry],
+          });
+        }
+        continue;
+      }
+
+      const { variantKey, variantOrder, meta } = resolveMarkerMeta(task, typeMeta);
       for (const m of evaluated.months) {
         cells[m - 1].push({ taskType: task.type, variantKey, variantOrder, meta, entry });
       }
@@ -171,7 +197,12 @@ export function buildTimelineRows(garden, speciesIndex, taskTypeIndex, regionPro
       );
     }
 
-    rows.push({ planting, species, bloom, cells });
+    const bars = [...barsByType.values()].map((bar) => ({
+      ...bar,
+      months: [...bar.months].sort((a, b) => a - b),
+    }));
+
+    rows.push({ planting, species, bloom, bars, cells });
   }
 
   return rows;
