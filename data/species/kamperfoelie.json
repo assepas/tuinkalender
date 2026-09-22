@@ -1,0 +1,16 @@
+{
+  "schemaVersion": 1,
+  "id": "kamperfoelie",
+  "name": "Kamperfoelie",
+  "latin": "Lonicera periclymenum",
+  "category": "struik",
+  "tags": ["klimmer", "meerjarig", "geurend"],
+  "nativeStatus": "inheems",
+  "appearance": { "shape": "struik", "flowerColor": "#E8D9A0", "flowerColorName": "crème-roze" },
+  "bloom": { "from": "06-01", "to": "08-15" },
+  "tasks": [
+    { "id": "planten", "type": "planten", "window": { "kind": "dates", "from": "10-01", "to": "11-15" } },
+    { "id": "snoeien", "type": "snoeien", "importance": "licht", "window": { "kind": "dates", "from": "08-15", "to": "09-15" }, "note": "Direct na de bloei uitdunnen" },
+    { "id": "bemesten", "type": "bemesten", "window": { "kind": "dates", "from": "03-01", "to": "03-31" } }
+  ]
+}

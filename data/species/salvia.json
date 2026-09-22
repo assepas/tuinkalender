@@ -1,0 +1,16 @@
+{
+  "schemaVersion": 1,
+  "id": "salvia",
+  "name": "Salvia (tuinsalie)",
+  "latin": "Salvia nemorosa",
+  "category": "vaste-plant",
+  "tags": ["meerjarig", "vlinderplant"],
+  "nativeStatus": "exoot",
+  "appearance": { "shape": "bloem", "flowerColor": "#5E5FA8", "flowerColorName": "blauwpaars" },
+  "bloom": { "from": "06-01", "to": "08-15" },
+  "tasks": [
+    { "id": "planten", "type": "planten", "window": { "kind": "dates", "from": "04-01", "to": "05-15" } },
+    { "id": "snoeien", "type": "snoeien", "importance": "licht", "window": { "kind": "dates", "from": "07-15", "to": "08-01" }, "note": "Terugknippen na eerste bloei geeft een tweede bloeigolf" },
+    { "id": "delen", "type": "delen", "window": { "kind": "dates", "from": "03-15", "to": "04-15" }, "note": "Elke 3 jaar delen voorkomt kale middens" }
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "schemaVersion": 1,
+  "id": "afrikaantjes",
+  "name": "Afrikaantjes",
+  "latin": "Tagetes patula",
+  "category": "vaste-plant",
+  "tags": ["eenjarig"],
+  "nativeStatus": "exoot",
+  "appearance": { "shape": "bloem", "flowerColor": "#E8873A", "flowerColorName": "oranje" },
+  "bloom": { "from": "06-01", "to": "10-01" },
+  "tasks": [
+    { "id": "voorzaaien", "type": "zaaien", "location": "kas", "window": { "kind": "dates", "from": "03-15", "to": "04-15" } },
+    { "id": "planten", "type": "planten", "window": { "kind": "relative", "anchor": "lastFrost", "fromWeeks": 0, "toWeeks": 2 } },
+    { "id": "dode-bloemen-verwijderen", "type": "onderhoud", "window": { "kind": "recurring", "from": "06-15", "to": "09-30", "every": "week" } }
+  ]
+}

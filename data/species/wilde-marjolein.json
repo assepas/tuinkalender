@@ -1,0 +1,16 @@
+{
+  "schemaVersion": 1,
+  "id": "wilde-marjolein",
+  "name": "Wilde marjolein",
+  "latin": "Origanum vulgare",
+  "category": "kruid",
+  "tags": ["meerjarig", "vlinderplant"],
+  "nativeStatus": "inheems",
+  "appearance": { "shape": "kruid", "flowerColor": "#C598B8", "flowerColorName": "roze-paars" },
+  "bloom": { "from": "07-01", "to": "09-01" },
+  "tasks": [
+    { "id": "planten", "type": "planten", "window": { "kind": "dates", "from": "04-15", "to": "05-31" } },
+    { "id": "oogsten", "type": "oogsten", "window": { "kind": "dates", "from": "06-15", "to": "09-15" } },
+    { "id": "delen", "type": "delen", "window": { "kind": "dates", "from": "09-15", "to": "10-15" } }
+  ]
+}

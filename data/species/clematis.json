@@ -1,0 +1,16 @@
+{
+  "schemaVersion": 1,
+  "id": "clematis",
+  "name": "Clematis",
+  "latin": "Clematis spp.",
+  "category": "struik",
+  "tags": ["klimmer", "meerjarig"],
+  "nativeStatus": "exoot",
+  "appearance": { "shape": "struik", "flowerColor": "#7A5C99", "flowerColorName": "paars" },
+  "bloom": { "from": "06-01", "to": "09-01" },
+  "tasks": [
+    { "id": "planten", "type": "planten", "window": { "kind": "dates", "from": "03-15", "to": "05-01" }, "note": "Wortels diep en koel/beschaduwd planten (\"voeten in de schaduw, kop in de zon\")" },
+    { "id": "snoeien", "type": "snoeien", "importance": "hoofd", "window": { "kind": "dates", "from": "02-01", "to": "03-01" }, "note": "Snoeitiming hangt af van de snoeigroep van de cultivar" },
+    { "id": "bemesten", "type": "bemesten", "window": { "kind": "dates", "from": "03-15", "to": "04-15" } }
+  ]
+}

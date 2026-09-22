@@ -1,0 +1,16 @@
+{
+  "schemaVersion": 1,
+  "id": "sering",
+  "name": "Sering",
+  "latin": "Syringa vulgaris",
+  "category": "struik",
+  "tags": ["meerjarig", "geurend"],
+  "nativeStatus": "exoot",
+  "appearance": { "shape": "struik", "flowerColor": "#B79FC9", "flowerColorName": "lila" },
+  "bloom": { "from": "05-01", "to": "05-31" },
+  "tasks": [
+    { "id": "planten", "type": "planten", "window": { "kind": "dates", "from": "10-01", "to": "11-30" } },
+    { "id": "bemesten", "type": "bemesten", "window": { "kind": "dates", "from": "03-01", "to": "03-31" } },
+    { "id": "snoeien", "type": "snoeien", "importance": "hoofd", "window": { "kind": "dates", "from": "06-01", "to": "06-15" }, "note": "Direct na de bloei, anders snoei je volgend jaar de knoppen weg" }
+  ]
+}

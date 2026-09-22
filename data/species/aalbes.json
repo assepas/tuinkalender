@@ -1,0 +1,17 @@
+{
+  "schemaVersion": 1,
+  "id": "aalbes",
+  "name": "Aalbes",
+  "latin": "Ribes rubrum",
+  "category": "fruit",
+  "tags": ["struik"],
+  "nativeStatus": "inheems",
+  "appearance": { "shape": "bes", "flowerColor": "#D9D6A0", "flowerColorName": "geelgroen" },
+  "bloom": { "from": "04-01", "to": "05-01" },
+  "tasks": [
+    { "id": "planten", "type": "planten", "window": { "kind": "dates", "from": "10-15", "to": "03-15" } },
+    { "id": "snoeien", "type": "snoeien", "importance": "hoofd", "window": { "kind": "dates", "from": "01-15", "to": "02-28" }, "note": "Oudste takken (4+ jaar) uitdunnen bij de grond" },
+    { "id": "bemesten", "type": "bemesten", "window": { "kind": "dates", "from": "03-01", "to": "03-31" } },
+    { "id": "oogsten", "type": "oogsten", "window": { "kind": "dates", "from": "07-01", "to": "08-15" } }
+  ]
+}

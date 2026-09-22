@@ -1,0 +1,16 @@
+{
+  "schemaVersion": 1,
+  "id": "tijm",
+  "name": "Tijm",
+  "latin": "Thymus vulgaris",
+  "category": "kruid",
+  "tags": ["meerjarig", "mediterraan"],
+  "nativeStatus": "exoot",
+  "appearance": { "shape": "kruid", "flowerColor": "#C598B8", "flowerColorName": "roze-lila" },
+  "bloom": { "from": "05-15", "to": "07-01" },
+  "tasks": [
+    { "id": "planten", "type": "planten", "window": { "kind": "dates", "from": "04-01", "to": "05-15" } },
+    { "id": "snoeien", "type": "snoeien", "importance": "licht", "window": { "kind": "dates", "from": "07-01", "to": "07-15" }, "note": "Na de bloei licht terugknippen houdt de plant compact" },
+    { "id": "oogsten", "type": "oogsten", "window": { "kind": "dates", "from": "01-01", "to": "12-31" }, "note": "Jaarrond te oogsten, blijvend groen" }
+  ]
+}

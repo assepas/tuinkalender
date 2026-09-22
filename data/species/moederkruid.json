@@ -1,0 +1,16 @@
+{
+  "schemaVersion": 1,
+  "id": "moederkruid",
+  "name": "Moederkruid",
+  "latin": "Tanacetum parthenium",
+  "category": "kruid",
+  "tags": ["meerjarig", "zelfzaaiend"],
+  "nativeStatus": "exoot",
+  "appearance": { "shape": "bloem", "flowerColor": "#F5F1E6", "flowerColorName": "wit-geel" },
+  "bloom": { "from": "06-01", "to": "09-01" },
+  "tasks": [
+    { "id": "zaaien", "type": "zaaien", "window": { "kind": "dates", "from": "04-01", "to": "05-15" } },
+    { "id": "oogsten", "type": "oogsten", "window": { "kind": "dates", "from": "06-01", "to": "09-01" } },
+    { "id": "onderhoud", "type": "onderhoud", "window": { "kind": "dates", "from": "09-01", "to": "09-30" }, "note": "Uitgebloeide stengels verwijderen om overmatige zelfzaai te beperken" }
+  ]
+}

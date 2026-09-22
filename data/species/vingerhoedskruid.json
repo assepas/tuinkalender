@@ -1,0 +1,16 @@
+{
+  "schemaVersion": 1,
+  "id": "vingerhoedskruid",
+  "name": "Vingerhoedskruid",
+  "latin": "Digitalis purpurea",
+  "category": "vaste-plant",
+  "tags": ["tweejarig", "giftig"],
+  "nativeStatus": "inheems",
+  "appearance": { "shape": "bloem", "flowerColor": "#C097B0", "flowerColorName": "roze-paars" },
+  "bloom": { "from": "06-01", "to": "07-31" },
+  "tasks": [
+    { "id": "zaaien", "type": "zaaien", "window": { "kind": "dates", "from": "05-15", "to": "07-15" }, "note": "Bloeit pas het tweede jaar; zaai jaarlijks bij voor een doorlopend effect" },
+    { "id": "planten", "type": "planten", "window": { "kind": "dates", "from": "09-01", "to": "10-01" } },
+    { "id": "onderhoud", "type": "onderhoud", "window": { "kind": "dates", "from": "08-01", "to": "08-31" }, "note": "Uitgebloeide aren laten staan voor zelfzaai, of verwijderen om verspreiding te beperken" }
+  ]
+}

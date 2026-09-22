@@ -1,0 +1,16 @@
+{
+  "schemaVersion": 1,
+  "id": "akelei",
+  "name": "Akelei",
+  "latin": "Aquilegia vulgaris",
+  "category": "vaste-plant",
+  "tags": ["meerjarig"],
+  "nativeStatus": "inheems",
+  "appearance": { "shape": "bloem", "flowerColor": "#5E5FA8", "flowerColorName": "blauwpaars" },
+  "bloom": { "from": "05-01", "to": "06-15" },
+  "tasks": [
+    { "id": "zaaien", "type": "zaaien", "window": { "kind": "dates", "from": "03-01", "to": "05-01" } },
+    { "id": "planten", "type": "planten", "window": { "kind": "dates", "from": "03-15", "to": "05-01" } },
+    { "id": "onderhoud", "type": "onderhoud", "window": { "kind": "dates", "from": "06-15", "to": "07-15" }, "note": "Uitgebloeide stengels verwijderen tegen mineervlieg en voor nette zelfzaai" }
+  ]
+}
