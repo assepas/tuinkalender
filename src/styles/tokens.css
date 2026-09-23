@@ -9,13 +9,13 @@
 
 :root {
   /* Kleur */
-  --color-bg: #eae7d6;
-  --color-surface: #f6f4e8;
-  --color-surface-raised: #fdfcf6;
+  --color-bg: #b4d6a0;
+  --color-surface: #f0fee8;
+  --color-surface-raised: #f7fff2;
   --color-ink: #232a1e;
   --color-ink-muted: #5c6350;
   --color-ink-faint: #8a8672;
-  --color-primary: #3a4a2e;
+  --color-primary: #486234;
   --color-primary-ink: #f6f4e8;
   --color-line: #d6d0b8;
   --color-line-strong: #b7b090;
@@ -26,7 +26,7 @@
   --color-plant-line: #cfd4b6;
 
   /* Typografie */
-  --font-display: "Newsreader", "Iowan Old Style", Georgia, serif;
+  --font-display: "Ubuntu Mono", "Iowan Old Style", Georgia, serif;
   --font-ui: "Work Sans", "Segoe UI", system-ui, sans-serif;
 
   --step-1: 0.8125rem;

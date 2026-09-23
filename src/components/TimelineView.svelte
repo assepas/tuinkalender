@@ -215,6 +215,7 @@
 
 </div>
 
+<div class="panel">
 {#if rows.length === 0}
   <p class="empty-state">
     Je tuin is nog leeg. Ga naar <strong>Mijn tuin</strong> om planten toe te voegen.
@@ -316,6 +317,7 @@
   </div>
   </div>
 {/if}
+</div>
 
 {#if selected}
   <DetailModal detail={selected} onclose={() => (selected = null)} />

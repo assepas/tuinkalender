@@ -120,10 +120,6 @@
   }
 </script>
 
-<LocationManager />
-
-<SpeciesPicker />
-
 <div class="panel">
   <h2>Planten in je tuin ({gardenState.plantings.length})</h2>
   {#if gardenState.plantings.length === 0}
@@ -195,6 +191,10 @@
     {/if}
   {/if}
 </div>
+
+<LocationManager />
+
+<SpeciesPicker />
 
 <div class="panel">
   <h2>Back-up &amp; delen</h2>
