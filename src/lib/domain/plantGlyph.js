@@ -2,17 +2,19 @@
 // Geen Svelte-afhankelijkheden — zo is dit los testbaar (tests/plantGlyph.test.js)
 // en blijft PlantGlyph.svelte een dunne render-laag rond deze berekeningen.
 
-export const STEM = "#4E6B32";
+export const STEM = "#558429";
 export const LEAF = "#86A552";
 
 // Eén vast bladpad per positie — de positie volgt puur uit de shape, nooit uit data.
 // LEAF_TR_D is de puntgespiegelde/herpositioneerde variant van LEAF_BL_D, bij de
 // kop van de vrucht(en) in plaats van linksonder bij de voet van de steel.
 export const LEAF_BL_D = "M9 19.8c-3.4 0.4-5.6-1.4-6.1-4.4 3.4-0.3 5.8 1.4 6.1 4.4Z";
-export const LEAF_TR_D = "M15 2.2c3.4-0.4 5.6 1.4 6.1 4.4-3.4 0.3-5.8-1.4-6.1-4.4Z";
+export const LEAF_TR_D = "M15 6.2c3.4 0.4 5.6-1.4 6.1-4.4-3.4-0.3-5.8 1.4-6.1 4.4Z";
 
-const AAR_TOP_Y = 3.4;
-const AAR_DY = 1.5;
+const AAR_TOP_Y = 2;
+const AAR_LENGTH = 14;
+const AAR_X_BASE = 0.5;
+const AAR_X_SPREAD = 3;
 
 // Toegestane `count`-waarden — een fibonacci-achtige reeks zodat elk icoon
 // visueel duidelijk drukker/voller oogt dan de vorige stap.
@@ -24,18 +26,18 @@ export function clampCount(count) {
   return COUNT_STEPS.reduce((closest, step) => (Math.abs(step - c) < Math.abs(closest - c) ? step : closest));
 }
 
-function aarBottomY(count) {
-  return AAR_TOP_Y + (clampCount(count) - 1) * AAR_DY;
+function aarBottomY() {
+  return AAR_TOP_Y + AAR_LENGTH;
 }
 
 /** Steelpad onder de kop. */
-export function stemPath(shape, count) {
-  if (shape === "bloem") return "M12 22 L12 10.4";
-  if (shape === "aar") return `M12 22 L12 ${(aarBottomY(count) + 0.8).toFixed(2)}`;
+export function stemPath(shape) {
+  if (shape === "bloem") return "M12 22 L12 10";
+  if (shape === "aar") return `M12 22 L12 4}`;
   return null;
 }
 
-export const BLOEM_CENTER = { cx: 12, cy: 7.4 };
+export const BLOEM_CENTER = { cx: 12, cy: 9.5 };
 
 /** Hoek (graden) van bloemblaadje `index` van de `count` blaadjes, 0° = boven. */
 export function petalAngle(index, count) {
@@ -49,36 +51,52 @@ export function petalAngle(index, count) {
  */
 export function petalPath(count) {
   const n = clampCount(count);
-  const L = n === 1 ? 6.4 : 6.0;
-  const W = Math.max(1.5, 3.8 - 0.28 * n);
+  const L = n === 1 ? 8.0 : 7.5;
+  const W = Math.max(1.9, 4.75 - 0.35 * n);
   const t = Math.min(1, n / 12);
   const waist = 0.55 - 0.1 * t;
   const tipSpread = (1 - t) * W * 0.95;
   const wy = -(L * waist);
   const tipY = -L;
-  const tipInset = tipY - (1 - t) * 0.4;
+  const tipInset = tipY - 0.35 - (1 - t) * 0.25;
   const r2 = (v) => Number(v.toFixed(2));
 
   return [
     `M 0,0`,
-    `C ${r2(-W * 0.6)},${r2(wy * 0.35)} ${r2(-W)},${r2(wy)} ${r2(-tipSpread)},${r2(tipY)}`,
-    `C ${r2(-tipSpread * 0.3)},${r2(tipInset)} ${r2(tipSpread * 0.3)},${r2(tipInset)} ${r2(tipSpread)},${r2(tipY)}`,
-    `C ${r2(W)},${r2(wy)} ${r2(W * 0.6)},${r2(wy * 0.35)} 0,0`,
+    `C ${r2(-W * 0.72)},${r2(wy * 0.42)} ${r2(-W)},${r2(wy)} ${r2(-tipSpread)},${r2(tipY)}`,
+    `C ${r2(-tipSpread * 0.55)},${r2(tipInset)} ${r2(tipSpread * 0.55)},${r2(tipInset)} ${r2(tipSpread)},${r2(tipY)}`,
+    `C ${r2(W)},${r2(wy)} ${r2(W * 0.72)},${r2(wy * 0.42)} 0,0`,
     `Z`,
   ].join(" ");
 }
 
-/** `count` kleine ovale segmentjes, van groot (onder) naar klein (boven). */
+/**
+ * `count` kleine ovale segmentjes, van groot (onder) naar klein (boven), verspreid
+ * over een vaste totale lengte (`AAR_LENGTH`) — `count` verandert dus alleen hoe
+ * dicht de segmentjes op elkaar zitten, niet de lengte van de aar zelf.
+ */
 export function spikeSegments(count) {
   const n = clampCount(count);
-  const rMax = n === 1 ? 1.7 : 1.6;
+  const rMax = n === 1 ? 5 : 1.7;
   const rMin = 0.9;
+  const dy = n > 1 ? AAR_LENGTH / (n - 1) : 0;
+  const rightCount = Math.ceil(n / 2);
+  const leftCount = n - rightCount;
   const segs = [];
   for (let j = 0; j < n; j++) {
-    const cy = AAR_TOP_Y + j * AAR_DY;
+    const cy = n === 1 ? AAR_TOP_Y + 5 : AAR_TOP_Y + j * dy;
     const r = n === 1 ? rMax : rMin + (rMax - rMin) * (j / (n - 1));
-    const xOff = (j % 2 === 0 ? -1 : 1) * (j / n) * 2;
-    segs.push({ cx: 12 + xOff, cy, rx: r, ry: r * 1.2 });
+    // Parabolisch (wortelvormig, dus convex: bolt naar buiten toe i.p.v. hol) zodat
+    // de twee kolommen smal bij elkaar starten boven en gebogen uitwaaieren naar
+    // onder. De fractie wordt per kolom apart geteld (niet op de gedeelde index
+    // `j`), anders belanden bij een oneven `count` het eerste én laatste segment
+    // aan dezelfde kant en waaiert de aar scheef naar één kant uit i.p.v. symmetrisch.
+    const isLeft = j % 2 === 0;
+    const sideCount = isLeft ? leftCount : rightCount;
+    const sideIndex = Math.floor(j / 2);
+    const frac = sideCount > 1 ? sideIndex / (sideCount - 1) : n > 1 ? j / (n - 1) : 0;
+    const xOff = (isLeft ? -1 : 1) * (AAR_X_BASE + AAR_X_SPREAD * Math.sqrt(frac));
+    segs.push({ cx: n===1 ? 12 : 12 + xOff, cy, rx: n === 1 ? r : r * 1.2, ry:  n === 1 ? r * 1.2 : r });
   }
   return segs;
 }
@@ -99,10 +117,14 @@ function mulberry32(seed) {
 const CLOUD_SEED = 0x9e3779b9;
 const GOLDEN_ANGLE = 137.50776;
 
+const CLOUD_TILT = (-12 * Math.PI) / 180;
+
 /**
  * `count + 5` losjes verspreide cirkeltjes rond de kop, zonder duidelijke
  * rangschikking. Deterministisch op `count` (kleur beïnvloedt alleen de
  * vulling, niet de posities), dus reproduceerbaar zonder Math.random().
+ * De wolk is opzettelijk langwerpig (breed, plat) en licht gekanteld, zodat
+ * de rechterkant omhoog "waait" — geen symmetrische ellips.
  */
 export function cloudCircles(count) {
   const n = clampCount(count);
@@ -115,9 +137,11 @@ export function cloudCircles(count) {
     const r = 1.4 + rng() * 0.3;
     const angle = ((k * GOLDEN_ANGLE + jitterA) * Math.PI) / 180;
     const radius = Math.max(0.6, 6.2 * Math.sqrt((k + 0.5) / total) + jitterR);
+    const ex = radius * Math.cos(angle) * 1.6;
+    const ey = radius * Math.sin(angle) * 0.7;
     out.push({
-      cx: 12 + radius * Math.cos(angle) * 1.05,
-      cy: 9 + radius * Math.sin(angle) * 0.82,
+      cx: 12 + ex * Math.cos(CLOUD_TILT) - ey * Math.sin(CLOUD_TILT),
+      cy: 9 + ex * Math.sin(CLOUD_TILT) + ey * Math.cos(CLOUD_TILT),
       r,
     });
   }
@@ -130,15 +154,10 @@ const FRUIT_ROWS = {
   3: [2, 1],
   5: [2, 2, 1],
   8: [3, 3, 2],
-  12: [4, 4, 3, 1],
+  12: [3, 4, 3, 2, 1],
 };
 
-/**
- * `count` vruchtjes: 1 = appel (één grote cirkel), 2 = kersenpaar, 3-12 =
- * kegelvormige tros (smal onder, breed boven) van aalbessentros tot druiventros.
- */
-export function fruitCircles(count) {
-  const n = clampCount(count);
+function fruitCirclesRaw(n) {
   if (n === 1) return [{ cx: 12, cy: 12, r: 7 }];
   if (n === 2)
     return [
@@ -151,11 +170,41 @@ export function fruitCircles(count) {
     // Bovenste rijen kleiner, onderste (dichtst bij de steel) groter.
     const rowR = Math.max(3, 3.5 - 0.2 * (rows.length - 1 - r));
     const colSpacing = rowR * 1.7;
-    const rowY = 6.2 + r * 4.0;
+    const rowY = 12 - 2 * (rows.length - 1) + r * 4.0;
     const width = (rowCount - 1) * colSpacing;
     for (let c = 0; c < rowCount; c++) {
       out.push({ cx: 12 - width / 2 + c * colSpacing, cy: rowY, r: rowR });
     }
   });
   return out;
+}
+
+function boundingExtent(circles) {
+  const minX = Math.min(...circles.map((c) => c.cx - c.r));
+  const maxX = Math.max(...circles.map((c) => c.cx + c.r));
+  const minY = Math.min(...circles.map((c) => c.cy - c.r));
+  const maxY = Math.max(...circles.map((c) => c.cy + c.r));
+  return Math.max(maxX - minX, maxY - minY);
+}
+
+// Referentiegrootte (silhouet van count=8) waarop elke andere count wordt
+// uitgeschaald, zodat de vrucht altijd ongeveer even groot oogt — een hogere
+// count betekent dan meer/kleinere vruchtjes i.p.v. een groter icoon.
+const FRUIT_REFERENCE_EXTENT = boundingExtent(fruitCirclesRaw(8));
+
+/**
+ * `count` vruchtjes: 1 = appel (één grote cirkel), 2 = kersenpaar, 3-12 =
+ * kegelvormige tros (smal onder, breed boven) van aalbessentros tot druiventros.
+ * Uitgeschaald rond het middelpunt zodat het totale silhouet voor elke count
+ * ongeveer even groot blijft (zie `FRUIT_REFERENCE_EXTENT`).
+ */
+export function fruitCircles(count) {
+  const n = clampCount(count);
+  const raw = fruitCirclesRaw(n);
+  const scale = FRUIT_REFERENCE_EXTENT / boundingExtent(raw);
+  return raw.map(({ cx, cy, r }) => ({
+    cx: 12 + (cx - 12) * scale,
+    cy: 12 + (cy - 12) * scale,
+    r: r * scale,
+  }));
 }

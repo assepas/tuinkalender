@@ -25,7 +25,7 @@
   const edge = $derived(outline ?? outlineColor(color));
   const fruitEdge = $derived(outlineColor(fruitColor ?? color));
   const leafD = $derived(shape === "vrucht" ? LEAF_TR_D : LEAF_BL_D);
-  const stem = $derived(stemPath(shape, count));
+  const stem = $derived(stemPath(shape));
 
   const n = $derived(clampCount(count));
   const petals = $derived(
@@ -42,7 +42,9 @@
   {#if stem}
     <path d={stem} stroke={STEM} stroke-width="1.6" stroke-linecap="round" />
   {/if}
-  <path d={leafD} fill={LEAF} stroke={STEM} stroke-width="1" />
+  {#if shape !== "vrucht"}
+    <path d={leafD} fill={LEAF} stroke={STEM} stroke-width="1" />
+  {/if}
 
   {#if shape === "bloem"}
     {#each petals as petal}
@@ -67,5 +69,6 @@
     {#each fruits as f}
       <circle cx={f.cx} cy={f.cy} r={f.r} fill={fruitColor} stroke={fruitEdge} stroke-width="0.9" />
     {/each}
+    <path d={leafD} fill={LEAF} stroke={STEM} stroke-width="1" />
   {/if}
 </svg>

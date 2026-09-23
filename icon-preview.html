@@ -88,9 +88,6 @@
         background: none;
         cursor: pointer;
       }
-      .shape-controls input[type="range"] {
-        width: 90px;
-      }
       .cells {
         display: grid;
         grid-template-columns: repeat(auto-fill, minmax(74px, 1fr));
@@ -169,10 +166,10 @@
         const edge = outlineColor(color);
         const fruitEdge = outlineColor(fruitColor ?? color);
         const leafD = shape === "vrucht" ? LEAF_TR_D : LEAF_BL_D;
-        const stem = stemPath(shape, count);
+        const stem = stemPath(shape);
         let inner = "";
         if (stem) inner += `<path d="${stem}" stroke="${STEM}" stroke-width="1.6" stroke-linecap="round" fill="none"/>`;
-        inner += `<path d="${leafD}" fill="${LEAF}" stroke="${STEM}" stroke-width="1"/>`;
+        if (shape !== "vrucht") inner += `<path d="${leafD}" fill="${LEAF}" stroke="${STEM}" stroke-width="1"/>`;
         if (shape === "bloem") {
           const n = clampCount(count);
           for (let i = 0; i < n; i++) {
@@ -191,6 +188,7 @@
           for (const f of fruitCircles(count)) {
             inner += `<circle cx="${f.cx}" cy="${f.cy}" r="${f.r}" fill="${fruitColor}" stroke="${fruitEdge}" stroke-width="0.9"/>`;
           }
+          inner += `<path d="${leafD}" fill="${LEAF}" stroke="${STEM}" stroke-width="1"/>`;
         }
         return `<svg width="${size}" height="${size}" viewBox="0 0 24 24" fill="none" aria-hidden="true">${inner}</svg>`;
       }
@@ -220,7 +218,6 @@
         if (shape.fruit) {
           controlsHtml += `<label>fruitColor <input type="color" class="in-fruitcolor" value="${shape.fruitColor}"></label>`;
         }
-        controlsHtml += `<label>extra count <input type="range" class="in-extra" min="1" max="12" value="6"> <span class="in-extra-val">6</span></label>`;
         controls.innerHTML = controlsHtml;
         block.appendChild(controls);
 
@@ -231,9 +228,7 @@
         function redraw() {
           const color = controls.querySelector(".in-color").value;
           const fruitColor = shape.fruit ? controls.querySelector(".in-fruitcolor").value : undefined;
-          const extra = Number(controls.querySelector(".in-extra").value);
-          controls.querySelector(".in-extra-val").textContent = extra;
-          const counts = [...DEFAULT_COUNTS, extra].sort((a, b) => a - b);
+          const counts = DEFAULT_COUNTS;
           cells.innerHTML = "";
           for (const count of counts) {
             const cell = document.createElement("div");
