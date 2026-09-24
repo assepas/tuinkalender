@@ -1,9 +1,13 @@
 # TuinTaak
 
 TuinTaak is je persoonlijke tuinkalender: per maand zie je welke onderhoudstaken horen bij
-de planten die je hebt staan, afgestemd op regio Utrecht. Geen backend —
-de gedeelde plantendata zit in de repo, je eigen tuin staat lokaal in de
-browser, en delen gaat via een JSON-export of dezelfde gehoste app.
+de planten die je hebt staan, afgestemd op regio Utrecht.
+
+De app is een statische site. Zonder account staat je tuin lokaal in de
+browser. Optioneel koppel je hem aan **Supabase** (zie
+[Account, synchronisatie en beheer](#account-synchronisatie-en-beheer-supabase)):
+dan kun je inloggen, je tuin op al je apparaten gebruiken, hem delen met
+mede-tuiniers, en als beheerder de plantendata in de app bewerken.
 
 ## Snel starten
 
@@ -269,18 +273,70 @@ Bestanden/iCloud/Drive kunt zetten; elders krijg je een gewone download.
 
 ## Delen met je mede-tuiniers
 
-Er is geen gedeelde server: jullie draaien ieder dezelfde app met dezelfde
-plantendata (die zit in de repo/build), maar hebben elk je eigen tuin in je
-eigen browser. Om te delen:
+Met Supabase gekoppeld: log in, ga naar **Mijn tuin → Opslaan & delen →
+Delen…** en maak een uitnodigingslink. Wie die opent en inlogt, kan de tuin
+bekijken en bewerken; wijzigingen zie je bij elkaar direct verschijnen.
 
-1. Zet `dist/` op een gratis static host (GitHub Pages, Cloudflare Pages) en
-   stuur die ene URL naar de andere twee.
-2. Gebruik **Tuin exporteren (.json)** in de app om een back-up te maken of
-   je eigen tuin over te zetten naar een ander apparaat.
+Zonder Supabase: zet `dist/` op een static host, stuur de URL rond, en
+gebruik **Tuin exporteren (.json)** om een tuin over te zetten.
 
-Nieuwe plantensoorten die je toevoegt aan `data/species/` komen bij iedereen
-terecht zodra je een nieuwe versie van de app publiceert — dat is bewust:
-soortkennis is gedeeld, jouw specifieke tuin niet.
+## Account, synchronisatie en beheer (Supabase)
+
+Alles hieronder is optioneel. Zonder de `VITE_SUPABASE_*`-variabelen bouwt de
+app precies zoals vroeger: meegebakken plantendata, tuin in localStorage.
+
+**Hoe het werkt**
+
+- De browser praat rechtstreeks met Supabase via de publieke *publishable key*. De
+  beveiliging zit in Row Level Security in `supabase/migrations/0001_init.sql`:
+  iedereen mag de plantendata lezen, alleen gebruikers in de tabel `admins`
+  mogen hem wijzigen, en een tuin is alleen zichtbaar voor zijn leden.
+- Inloggen gaat met een magic link per e-mail. Iedereen kan een account
+  maken; beheerder word je alleen door een rij in `admins`.
+- **Plantendata** (`species`, `task_types`, `regions`) komt bij het opstarten
+  uit de database (`src/lib/state/catalog.svelte.js`). Tot die binnen is,
+  of als je offline bent, gebruikt de app de vorige cache of de meegebakken
+  bestanden uit `data/`.
+- **Tuinen** (`gardens`) bevatten hetzelfde JSON-document als de lokale tuin.
+  Elke wijziging gaat eerst naar een offline-kopie en daarna naar de server
+  met een versiecheck. Was iemand anders je voor, dan worden beide versies
+  per planting/standplaats samengevoegd (`src/lib/domain/merge.js`), dus er
+  gaat niets verloren, ook niet na offline werken.
+- Admins zien de tab **Plantendata**: soorten toevoegen, bewerken (formulier
+  of JSON) en verwijderen, en taaktypes (naam, kleur, icoon) aanpassen. Bij
+  opslaan wordt gevalideerd met hetzelfde schema als `npm run validate`.
+
+**Eenmalig opzetten**
+
+1. Maak een (gratis) project op [supabase.com](https://supabase.com).
+2. Draai de migraties op volgorde: plak elk bestand uit
+   `supabase/migrations/` (`0001_init.sql`, dan `0002_grants.sql`) in de
+   **SQL Editor** en voer het uit (of gebruik `supabase db push` met de
+   Supabase CLI).
+3. Kopieer `.env.example` naar `.env.local` en vul de URL, de publishable
+   key en een secret key in (Project Settings → API Keys, de nieuwe keys,
+   niet de legacy anon/service_role). `.env.local` staat in `.gitignore`.
+   De secret key omzeilt alle beveiliging, dus zet hem nooit in een
+   `VITE_`-variabele.
+4. Zet de plantendata in de database: `npm run db:seed`.
+5. Stel onder **Authentication → URL Configuration** de *Site URL* in op het
+   adres van je gehoste app, en voeg zowel dat adres als
+   `http://localhost:5173` toe aan de *Redirect URLs*.
+6. Log één keer in via de app, en maak jezelf dan beheerder in de SQL Editor:
+   ```sql
+   insert into public.admins (user_id)
+   select id from auth.users where email = 'jij@voorbeeld.nl';
+   ```
+7. Bij je host (GitHub Pages, Netlify, …): zet `VITE_SUPABASE_URL` en
+   `VITE_SUPABASE_PUBLISHABLE_KEY` als omgevingsvariabelen voor de build.
+
+**Plantendata terug naar git**
+
+Wijzigingen die je in de app doet, staan in de database. Met
+`npm run db:export` schrijf je ze terug naar `data/` (als back-up in git, en
+zodat de meegebakken fallback actueel blijft). Bekijk het resultaat met
+`git diff data/`. De export schrijft alles als nette JSON, dus de eerste keer
+verandert de opmaak van de handgeschreven bestanden.
 
 ## Bekende beperkingen / logische vervolgstappen
 

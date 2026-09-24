@@ -1,5 +1,5 @@
 <script>
-  import { speciesIndex } from "../lib/generated/data.js";
+  import { catalog } from "../lib/state/catalog.svelte.js";
   import { gardenState } from "../lib/state/garden.svelte.js";
   import {
     CATEGORY_ORDER,
@@ -9,6 +9,7 @@
     filterPlantingRows,
   } from "../lib/domain/plantings.js";
   import { ui, closeLocationManager } from "../lib/state/ui.svelte.js";
+  import CloudGardenPanel from "./CloudGardenPanel.svelte";
   import LocationManager from "./LocationManager.svelte";
   import Modal from "./Modal.svelte";
   import NewPlantingRow from "./NewPlantingRow.svelte";
@@ -40,7 +41,7 @@
     const pinned = new Set(addedUids);
     const rows = gardenState.plantings.filter((p) => !pinned.has(p.uid)).map((planting) => ({
       planting,
-      species: speciesIndex[planting.speciesId],
+      species: catalog.speciesIndex[planting.speciesId],
       location: locationIndex[planting.locationId],
     }));
 
@@ -131,6 +132,8 @@
   }
 </script>
 
+<CloudGardenPanel />
+
 <div class="panel">
   <h2>Planten in je tuin ({gardenState.plantings.length})</h2>
   {#if gardenState.plantings.length > 0}
@@ -213,11 +216,18 @@
 {/if}
 
 <div class="panel">
-  <h2>Back-up &amp; delen</h2>
-  <p class="hint">
-    Je tuin staat lokaal in deze browser. Exporteer regelmatig een back-up, en gebruik dezelfde
-    export om je tuin op een ander apparaat te openen of met iemand anders te delen.
-  </p>
+  <h2>Back-up</h2>
+  {#if gardenState.mode === "cloud"}
+    <p class="hint">
+      Je tuin staat online in je account. Een export (.json) is een extra kopie voor je eigen archief;
+      importeren vervangt de inhoud van deze tuin voor alle leden.
+    </p>
+  {:else}
+    <p class="hint">
+      Je tuin staat lokaal in deze browser. Exporteer regelmatig een back-up, en gebruik dezelfde
+      export om je tuin op een ander apparaat te openen of met iemand anders te delen.
+    </p>
+  {/if}
   {#if gardenState.needsBackupWarning}
     <p class="error-text">
       {#if gardenState.lastExportedAt == null}

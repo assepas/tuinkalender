@@ -5,7 +5,7 @@
   // dus een kleine wijziging hier is laag risico). De rest (eigen naam,
   // notities, uitgeschakelde taken) staat achter een uitklapper, zodat een
   // tuin met tientallen planten overzichtelijk blijft.
-  import { speciesIndex } from "../lib/generated/data.js";
+  import { catalog } from "../lib/state/catalog.svelte.js";
   import { gardenState } from "../lib/state/garden.svelte.js";
   import LocationSelect from "./LocationSelect.svelte";
   import PlantIcon from "./PlantIcon.svelte";
@@ -26,7 +26,7 @@
   });
   let locationError = $state("");
 
-  const species = $derived(speciesIndex[planting.speciesId]);
+  const species = $derived(catalog.speciesIndex[planting.speciesId]);
   const location = $derived(gardenState.locations.find((l) => l.id === planting.locationId) ?? null);
 
   function isMuted(taskId) {

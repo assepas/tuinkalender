@@ -10,26 +10,29 @@
     compareByKey,
     filterPlantingRows,
   } from "../lib/domain/plantings.js";
-  import { speciesIndex, taskTypes, taskTypeIndex } from "../lib/generated/data.js";
+  import { catalog } from "../lib/state/catalog.svelte.js";
   import { gardenState } from "../lib/state/garden.svelte.js";
   import DetailModal from "./DetailModal.svelte";
   import Icon from "./Icon.svelte";
   import PlantIcon from "./PlantIcon.svelte";
 
-  // Alleen taaktypes met "timeline": true in taskTypes.json komen in de tijdlijn.
-  const timelineTypes = taskTypes.filter((t) => t.timeline);
-  const taskTypeOrder = timelineTypes.map((t) => t.id);
+  // Alleen taaktypes met "timeline": true in taskTypes komen in de tijdlijn.
+  // Afgeleid (niet const) omdat de catalogus na het laden kan wisselen.
+  const timelineTypes = $derived(catalog.taskTypes.filter((t) => t.timeline));
+  const taskTypeOrder = $derived(timelineTypes.map((t) => t.id));
 
   // Legenda: elk taaktype, of per variant als het type varianten heeft.
-  const legendItems = timelineTypes.flatMap((t) =>
-    t.variants
-      ? Object.entries(t.variants).map(([key, v]) => ({ ...t, ...v, key: `${t.id}-${key}` }))
-      : [{ key: t.id, ...t }]
+  const legendItems = $derived(
+    timelineTypes.flatMap((t) =>
+      t.variants
+        ? Object.entries(t.variants).map(([key, v]) => ({ ...t, ...v, key: `${t.id}-${key}` }))
+        : [{ key: t.id, ...t }]
+    )
   );
   const MONTH_SHORT = MONTH_NAMES.map((m) => m.slice(0, 3));
 
   let rows = $derived(
-    buildTimelineRows(gardenState.garden, speciesIndex, taskTypeIndex, gardenState.regionProfile, taskTypeOrder)
+    buildTimelineRows(gardenState.garden, catalog.speciesIndex, catalog.taskTypeIndex, gardenState.regionProfile, taskTypeOrder)
   );
   let locationIndex = $derived(buildLocationIndex(gardenState.garden.locations));
 

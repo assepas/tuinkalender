@@ -4,6 +4,9 @@
 
 export const ui = $state({
   locationManager: { open: false, onadded: null },
+  // Het account-/inlogvenster (AccountMenu.svelte) staat één keer in de
+  // header, maar is ook vanuit "Mijn tuin" te openen.
+  accountOpen: false,
 });
 
 /** @param {((location: {id: string}) => void) | null} [onadded]  aangeroepen met een nieuw toegevoegde standplaats */

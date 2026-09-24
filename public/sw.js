@@ -30,6 +30,8 @@ self.addEventListener("fetch", (event) => {
   const { request } = event;
   if (request.method !== "GET") return;
 
+  // Andere origins (o.a. Supabase) nooit cachen: die data moet live zijn;
+  // offline valt de app zelf terug op zijn localStorage-kopieën.
   const url = new URL(request.url);
   if (url.origin !== self.location.origin) return;
 

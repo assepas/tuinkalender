@@ -1,7 +1,7 @@
 <script>
   // Inhoud van de printmodal op het maandoverzicht: uitleg, afdrukknop en het
   // A4-voorbeeld. Bij afdrukken blijft alleen .print-page over (zie print.css).
-  import { taskTypeIndex } from "../lib/generated/data.js";
+  import { catalog } from "../lib/state/catalog.svelte.js";
 
   let { months } = $props();
 </script>
@@ -26,10 +26,10 @@
       {:else}
         {#each month.entries as entry (entry.plantingUid + entry.taskId)}
           <div class="print-task-row">
-            <span class="dot" style:background={taskTypeIndex[entry.taskType]?.color ?? "#999"}></span>
+            <span class="dot" style:background={catalog.taskTypeIndex[entry.taskType]?.color ?? "#999"}></span>
             <span>
               <strong>{entry.label}</strong>
-              — {taskTypeIndex[entry.taskType]?.label ?? entry.taskType}
+              — {catalog.taskTypeIndex[entry.taskType]?.label ?? entry.taskType}
               {#if entry.frequency}({entry.frequency}){/if}
               {#if entry.note}<br /><em>{entry.note}</em>{/if}
             </span>

@@ -1,6 +1,7 @@
-// Repository rond het tuindocument. Dit is de enige module die
-// localStorage aanraakt — als je dit ooit vervangt door bv. een synced
-// backend, verandert alleen dit bestand.
+// Repository rond het tuindocument in localStorage: de lokale tuin (zonder
+// account) en de offline-kopie van de actieve cloudtuin (met account, zie
+// cloudGarden.js voor de Supabase-kant). Die twee staan onder aparte
+// sleutels, zodat inloggen of uitloggen de lokale tuin nooit overschrijft.
 
 import { migrateGarden, createEmptyGarden } from "../domain/migrate.js";
 import { makeId } from "../domain/id.js";
@@ -10,6 +11,7 @@ const STORAGE_KEY = "tuintaak:garden:v1";
 // meekomt in een export/import — dat is metadata over déze browser, niet
 // over de tuin zelf.
 const LAST_EXPORTED_KEY = "tuintaak:lastExportedAt";
+const CLOUD_CACHE_KEY = "tuintaak:cloudGarden:v1";
 const DEFAULT_REGION = "nl-utrecht";
 
 export function loadGarden() {
@@ -27,6 +29,11 @@ export function loadGarden() {
 
 export function saveGarden(garden) {
   localStorage.setItem(STORAGE_KEY, JSON.stringify(garden));
+}
+
+/** Na uploaden naar een account: de lokale kopie is dan overbodig. */
+export function clearLocalGarden() {
+  localStorage.removeItem(STORAGE_KEY);
 }
 
 export function exportGardenAsJson(garden) {
@@ -65,6 +72,36 @@ export function getLastExportedAt() {
 
 export function setLastExportedAt(timestamp = Date.now()) {
   localStorage.setItem(LAST_EXPORTED_KEY, String(timestamp));
+}
+
+/**
+ * Offline-kopie van de actieve cloudtuin, incl. de laatst bekende
+ * serverversie (`base`, nodig om bij een conflict samen te voegen) en of er
+ * nog niet-gesynchroniseerde wijzigingen zijn (`dirty`).
+ * @returns {{ userId: string, gardenId: string, name: string, role: string, version: number,
+ *             base: object, garden: object, dirty: boolean } | null}
+ */
+export function loadCloudCache() {
+  try {
+    const cache = JSON.parse(localStorage.getItem(CLOUD_CACHE_KEY));
+    if (!cache?.gardenId || !cache.garden || !cache.base) return null;
+    return { ...cache, garden: migrateGarden(cache.garden), base: migrateGarden(cache.base) };
+  } catch {
+    return null;
+  }
+}
+
+export function saveCloudCache(cache) {
+  try {
+    localStorage.setItem(CLOUD_CACHE_KEY, JSON.stringify(cache));
+  } catch (err) {
+    console.warn("[garden] kon offline-kopie niet opslaan:", err);
+  }
+}
+
+/** Bij uitloggen: geen tuindata van dit account achterlaten op het apparaat. */
+export function clearCloudCache() {
+  localStorage.removeItem(CLOUD_CACHE_KEY);
 }
 
 export { DEFAULT_REGION };

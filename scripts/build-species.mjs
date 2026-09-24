@@ -1,41 +1,19 @@
 // Leest alle bronbestanden in /data en bundelt ze tot één ES-module in
-// src/lib/generated/data.js. Dit is de enige plek waar het filesystem
-// wordt aangeraakt — de rest van de app importeert gewoon een module.
+// src/lib/generated/data.js. Samen met scripts/lib/data-files.mjs de enige
+// plek die /data leest — de app importeert gewoon een module. Dit is de
+// meegebakken fallback; de actuele catalogus komt uit Supabase (catalog.svelte.js).
 //
 // Draait via `npm run build:data` (voor dev en build, zie package.json).
 
-import { readdirSync, readFileSync, writeFileSync, mkdirSync } from "node:fs";
-import { fileURLToPath } from "node:url";
+import { writeFileSync, mkdirSync } from "node:fs";
 import path from "node:path";
+import { root, loadSpecies, loadRegionList, loadTaskTypesFile } from "./lib/data-files.mjs";
 
-const root = path.dirname(path.dirname(fileURLToPath(import.meta.url)));
-const dataDir = path.join(root, "data");
 const outDir = path.join(root, "src", "lib", "generated");
 
-function readJson(p) {
-  return JSON.parse(readFileSync(p, "utf-8"));
-}
-
-function loadSpecies() {
-  const dir = path.join(dataDir, "species");
-  return readdirSync(dir)
-    .filter((f) => f.endsWith(".json"))
-    .map((f) => readJson(path.join(dir, f)))
-    .sort((a, b) => a.name.localeCompare(b.name, "nl"));
-}
-
-function loadRegions() {
-  const dir = path.join(dataDir, "regions");
-  const list = readdirSync(dir)
-    .filter((f) => f.endsWith(".json"))
-    .map((f) => readJson(path.join(dir, f)));
-  const byId = Object.fromEntries(list.map((r) => [r.id, r]));
-  return byId;
-}
-
 const species = loadSpecies();
-const taskTypes = readJson(path.join(dataDir, "taskTypes.json")).types;
-const regions = loadRegions();
+const taskTypes = loadTaskTypesFile().types;
+const regions = Object.fromEntries(loadRegionList().map((r) => [r.id, r]));
 
 const speciesIds = new Set();
 for (const s of species) {

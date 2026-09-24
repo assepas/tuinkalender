@@ -3,13 +3,21 @@
   import TimelineView from "./components/TimelineView.svelte";
   import GardenEditor from "./components/GardenEditor.svelte";
   import LocationsPage from "./components/LocationsPage.svelte";
+  import AccountMenu from "./components/AccountMenu.svelte";
+  import { auth } from "./lib/state/auth.svelte.js";
 
-  const tabs = [
+  const baseTabs = [
     { id: "tijdlijn", label: "Tijdlijn" },
     { id: "kalender", label: "Maandoverzicht" },
     { id: "tuin", label: "Mijn tuin" },
     { id: "standplaatsen", label: "Standplaatsen" },
   ];
+  // Alleen voor beheerders. Of je echt mag schrijven, bepaalt de database
+  // (RLS) — dit verbergt alleen de tab.
+  const tabs = $derived(auth.isAdmin ? [...baseTabs, { id: "beheer", label: "Plantendata" }] : baseTabs);
+
+  // Beheerpagina los laden: gewone bezoekers downloaden die code (en ajv) niet.
+  const loadAdminPage = () => import("./components/admin/AdminPage.svelte");
 
   // Tijdlijn is de landingspagina; de titel in de header leidt daar ook naartoe.
   const homeTab = "tijdlijn";
@@ -41,6 +49,7 @@
         </button>
       {/each}
     </nav>
+    <AccountMenu />
   </header>
 
   {#if activeTab === "tijdlijn"}
@@ -51,5 +60,13 @@
     <GardenEditor />
   {:else if activeTab === "standplaatsen"}
     <LocationsPage />
+  {:else if activeTab === "beheer" && auth.isAdmin}
+    {#await loadAdminPage()}
+      <p class="hint">Laden…</p>
+    {:then { default: AdminPage }}
+      <AdminPage />
+    {:catch err}
+      <p class="error-text">Beheerpagina laden mislukt: {err.message}</p>
+    {/await}
   {/if}
 </div>

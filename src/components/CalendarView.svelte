@@ -1,6 +1,6 @@
 <script>
   import { buildCalendar } from "../lib/domain/calendar.js";
-  import { speciesIndex } from "../lib/generated/data.js";
+  import { catalog } from "../lib/state/catalog.svelte.js";
   import { gardenState } from "../lib/state/garden.svelte.js";
   import Legend from "./Legend.svelte";
   import Modal from "./Modal.svelte";
@@ -8,7 +8,7 @@
   import PrintView from "./PrintView.svelte";
 
   let months = $derived(
-    buildCalendar(gardenState.garden, speciesIndex, gardenState.regionProfile)
+    buildCalendar(gardenState.garden, catalog.speciesIndex, gardenState.regionProfile)
   );
 
   let printOpen = $state(false);
