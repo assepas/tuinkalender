@@ -1,23 +1,20 @@
 <script>
-  import { buildCalendar } from "../lib/domain/calendar.js";
-  import { speciesIndex, taskTypeIndex } from "../lib/generated/data.js";
-  import { gardenState } from "../lib/state/garden.svelte.js";
-  import Legend from "./Legend.svelte";
+  // Inhoud van de printmodal op het maandoverzicht: uitleg, afdrukknop en het
+  // A4-voorbeeld. Bij afdrukken blijft alleen .print-page over (zie print.css).
+  import { taskTypeIndex } from "../lib/generated/data.js";
 
-  let months = $derived(
-    buildCalendar(gardenState.garden, speciesIndex, gardenState.regionProfile)
-  );
+  let { months } = $props();
 </script>
 
 <div class="no-print">
   <p class="print-hint">
-    Dit is het printvoorbeeld. Gebruik de printknop van je browser (of de knop hieronder) en kies
-    "Opslaan als PDF" om een printbaar bestand te krijgen.
+    Kies bij het afdrukken "Opslaan als PDF" om een printbaar bestand te krijgen.
   </p>
-  <button type="button" class="btn btn-primary" onclick={() => window.print()}>
-    Afdrukken / opslaan als PDF
-  </button>
-  <Legend />
+  <p>
+    <button type="button" class="btn btn-primary" onclick={() => window.print()}>
+      Afdrukken / opslaan als PDF
+    </button>
+  </p>
 </div>
 
 <div class="print-page">

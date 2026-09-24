@@ -3,14 +3,23 @@
   import { speciesIndex } from "../lib/generated/data.js";
   import { gardenState } from "../lib/state/garden.svelte.js";
   import Legend from "./Legend.svelte";
+  import Modal from "./Modal.svelte";
   import MonthCard from "./MonthCard.svelte";
+  import PrintView from "./PrintView.svelte";
 
   let months = $derived(
     buildCalendar(gardenState.garden, speciesIndex, gardenState.regionProfile)
   );
+
+  let printOpen = $state(false);
 </script>
 
-<Legend />
+<div class="calendar-toolbar no-print">
+  <Legend />
+  {#if gardenState.plantings.length > 0}
+    <button type="button" class="btn" onclick={() => (printOpen = true)}>Printen</button>
+  {/if}
+</div>
 
 {#if gardenState.plantings.length === 0}
   <p class="empty-state">
@@ -18,9 +27,15 @@
     vult zich daar automatisch mee.
   </p>
 {:else}
-  <div class="calendar-grid">
+  <div class="calendar-grid no-print">
     {#each months as month (month.month)}
       <MonthCard {month} />
     {/each}
   </div>
+{/if}
+
+{#if printOpen}
+  <Modal title="Printvoorbeeld" wide printable onclose={() => (printOpen = false)}>
+    <PrintView {months} />
+  </Modal>
 {/if}

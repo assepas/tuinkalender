@@ -17,6 +17,11 @@
     display: block !important;
   }
 
+  /* Staat de printmodal open, dan wordt alleen die afgedrukt. */
+  .app-shell:has(> .modal-overlay.printable) > :not(.modal-overlay.printable) {
+    display: none !important;
+  }
+
   .print-month {
     break-inside: avoid;
     border: 1px solid #999;
@@ -56,8 +61,8 @@
   }
 }
 
-/* Buiten printcontext blijft de printweergave verborgen op het scherm;
-   PrintView.svelte toont er wél een schermvoorbeeld van, zie die component. */
+/* Schermvoorbeeld van de printweergave, getoond in de printmodal op het
+   maandoverzicht (PrintView.svelte). */
 @media screen {
   .print-page {
     background: #fff;

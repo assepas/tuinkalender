@@ -2,8 +2,9 @@
   // Generieke modal-schil: overlay, paneel, sluitknop, Escape en klik-naast-
   // het-paneel. De inhoud komt als children-snippet binnen. `title` is
   // optioneel: zonder titel (bv. DetailModal, die een eigen kop met icoon
-  // heeft) is `label` alleen voor schermlezers.
-  let { title = "", label = title, wide = false, onclose, children } = $props();
+  // heeft) is `label` alleen voor schermlezers. Met `printable` blijft de
+  // inhoud zichtbaar bij afdrukken (overlay en paneel vallen dan weg).
+  let { title = "", label = title, wide = false, printable = false, onclose, children } = $props();
 
   function handleKeydown(event) {
     if (event.key === "Escape") onclose();
@@ -14,7 +15,13 @@
 
 <!-- svelte-ignore a11y_click_events_have_key_events -->
 <!-- svelte-ignore a11y_no_static_element_interactions -->
-<div class="modal-overlay no-print" role="presentation" onclick={onclose}>
+<div
+  class="modal-overlay"
+  class:no-print={!printable}
+  class:printable
+  role="presentation"
+  onclick={onclose}
+>
   <!-- svelte-ignore a11y_click_events_have_key_events -->
   <div
     class="modal-panel"
@@ -25,8 +32,8 @@
     tabindex="-1"
     onclick={(e) => e.stopPropagation()}
   >
-    <button type="button" class="modal-close" onclick={onclose} aria-label="Sluiten">✕</button>
-    {#if title}<h2 class="modal-title">{title}</h2>{/if}
+    <button type="button" class="modal-close no-print" onclick={onclose} aria-label="Sluiten">✕</button>
+    {#if title}<h2 class="modal-title no-print">{title}</h2>{/if}
     {@render children()}
   </div>
 </div>
@@ -78,5 +85,22 @@
     font-size: var(--step2);
     margin: 0 0 var(--space-3);
     padding-right: var(--space-5);
+  }
+
+  @media print {
+    .modal-overlay.printable {
+      position: static;
+      display: block;
+      background: none;
+      padding: 0;
+    }
+
+    .modal-overlay.printable .modal-panel {
+      border: none;
+      padding: 0;
+      max-width: none;
+      max-height: none;
+      overflow: visible;
+    }
   }
 </style>
