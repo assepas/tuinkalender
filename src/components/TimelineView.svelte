@@ -33,23 +33,40 @@
   );
   let locationIndex = $derived(buildLocationIndex(gardenState.garden.locations));
 
-  // Legenda en filters/sorteren zijn los uitklapbaar, en starten allebei
-  // ingeklapt — zelfde standaard als "Standplaatsen"/"Plant toevoegen" in
-  // Mijn Tuin. Dezelfde filter-/sorteeropties als daar (zie GardenEditor.svelte).
-  let legendExpanded = $state(false);
-  let filtersExpanded = $state(false);
-  let sortKey = $state("naam"); // "naam" | "soort" | "standplaats"
+  // Legenda en filters zijn los uitklapbaar en starten allebei uitgeklapt.
+  // Dezelfde filteropties als in Mijn Tuin (zie GardenEditor.svelte). Het
+  // sorteren staat vast boven de tijdlijn zelf en klapt niet in.
+  let legendExpanded = $state(true);
+  let filtersExpanded = $state(true);
+  let sortKey = $state("naam"); // "naam" | "standplaats" | "bloei"
   let sortDir = $state("asc"); // "asc" | "desc"
   let filterLocationIds = $state(new Set());
   let filterCategories = $state(new Set());
 
+  const nameKey = (r) => r.planting.label || r.species?.name || "";
+  const locationName = (r) => locationIndex[r.planting.locationId]?.name ?? "";
+  const byName = compareByKey(nameKey, "asc");
+
+  // Eerste bloeimaand: months[0] is de startmaand, ook bij bloei over de
+  // jaarwisseling heen (zie monthsBetween). Planten zonder bloei staan in
+  // beide richtingen onderaan; bij gelijke maand verder op naam.
+  function compareByBloom(dir) {
+    const sign = dir === "desc" ? -1 : 1;
+    return (a, b) => {
+      const ma = a.bloom?.months[0];
+      const mb = b.bloom?.months[0];
+      if (ma == null || mb == null) {
+        if (ma == null && mb == null) return byName(a, b);
+        return ma == null ? 1 : -1;
+      }
+      return sign * (ma - mb) || byName(a, b);
+    };
+  }
+
   let visibleRows = $derived.by(() => {
     const filtered = filterPlantingRows(rows, filterLocationIds, filterCategories);
-    const keyFor = (r) => {
-      if (sortKey === "soort") return r.species?.name ?? "";
-      if (sortKey === "standplaats") return locationIndex[r.planting.locationId]?.name ?? "";
-      return r.planting.label || r.species?.name || "";
-    };
+    if (sortKey === "bloei") return [...filtered].sort(compareByBloom(sortDir));
+    const keyFor = sortKey === "standplaats" ? locationName : nameKey;
     return [...filtered].sort(compareByKey(keyFor, sortDir));
   });
 
@@ -107,80 +124,6 @@
 </script>
 
 <div class="timeline-toolbar no-print">
-  <div class="panel timeline-toolbar-filters">
-    <h3>
-      <button
-        type="button"
-        class="panel-toggle"
-        aria-expanded={filtersExpanded}
-        aria-controls="timeline-filters-body"
-        onclick={() => (filtersExpanded = !filtersExpanded)}
-      >
-        <span class="chevron">{filtersExpanded ? "▾" : "▸"}</span>
-        Filteren &amp; sorteren
-      </button>
-    </h3>
-    {#if filtersExpanded}
-      <div id="timeline-filters-body">
-        {#if gardenState.locations.length > 0}
-          <div class="filter-bar">
-            <span class="filter-bar-label">Standplaats</span>
-            {#each gardenState.locations as location (location.id)}
-              <button
-                type="button"
-                class="filter-chip"
-                aria-pressed={filterLocationIds.has(location.id)}
-                onclick={() => (filterLocationIds = toggleInSet(filterLocationIds, location.id))}
-              >
-                {location.name}
-              </button>
-            {/each}
-          </div>
-        {/if}
-        <div class="filter-bar">
-          <span class="filter-bar-label">Type</span>
-          {#each CATEGORY_ORDER as category (category)}
-            <button
-              type="button"
-              class="filter-chip"
-              aria-pressed={filterCategories.has(category)}
-              onclick={() => (filterCategories = toggleInSet(filterCategories, category))}
-            >
-              {CATEGORY_LABELS[category]}
-            </button>
-          {/each}
-        </div>
-        <div class="filter-bar">
-          <span class="filter-bar-label">Sorteren</span>
-          <button
-            type="button"
-            class="sort-button"
-            aria-label={sortLabel("naam", "Naam")}
-            onclick={() => toggleSort("naam")}
-          >
-            Naam{#if sortKey === "naam"} {sortDir === "asc" ? "▲" : "▼"}{/if}
-          </button>
-          <button
-            type="button"
-            class="sort-button"
-            aria-label={sortLabel("soort", "Soort")}
-            onclick={() => toggleSort("soort")}
-          >
-            Soort{#if sortKey === "soort"} {sortDir === "asc" ? "▲" : "▼"}{/if}
-          </button>
-          <button
-            type="button"
-            class="sort-button"
-            aria-label={sortLabel("standplaats", "Standplaats")}
-            onclick={() => toggleSort("standplaats")}
-          >
-            Standplaats{#if sortKey === "standplaats"} {sortDir === "asc" ? "▲" : "▼"}{/if}
-          </button>
-        </div>
-      </div>
-    {/if}
-  </div>
-
   <div class="panel timeline-toolbar-legend">
     <h3>
       <button
@@ -202,7 +145,7 @@
         </span>
         {#each legendItems as item (item.key)}
           <span class="legend-item">
-            <span class="marker-chip" class:light={item.light}>
+            <span class="marker-chip" class:light={item.light} style:--chip-color={item.color}>
               <Icon name={item.icon} color={item.color} size={16} strokeWidth={item.light ? 1.2 : 1.8} />
             </span>
             {item.label}
@@ -213,9 +156,102 @@
     {/if}
   </div>
 
+  <div class="panel timeline-toolbar-filters">
+    <h3>
+      <button
+        type="button"
+        class="panel-toggle"
+        aria-expanded={filtersExpanded}
+        aria-controls="timeline-filters-body"
+        onclick={() => (filtersExpanded = !filtersExpanded)}
+      >
+        <span class="chevron">{filtersExpanded ? "▾" : "▸"}</span>
+        Filteren
+      </button>
+    </h3>
+    {#if filtersExpanded}
+      <div id="timeline-filters-body">
+        {#if gardenState.locations.length > 0}
+          <div class="filter-bar">
+            <span class="filter-bar-label">Standplaats</span>
+            {#each gardenState.locations as location (location.id)}
+              <button
+                type="button"
+                class="filter-chip"
+                aria-pressed={filterLocationIds.has(location.id)}
+                onclick={() => (filterLocationIds = toggleInSet(filterLocationIds, location.id))}
+              >
+                {location.name}
+              </button>
+            {/each}
+            {#if filterLocationIds.size > 0}
+              <button
+                type="button"
+                class="filter-clear"
+                title="Wissen"
+                aria-label="Standplaatsfilter wissen"
+                onclick={() => (filterLocationIds = new Set())}
+              >✕</button>
+            {/if}
+          </div>
+        {/if}
+        <div class="filter-bar">
+          <span class="filter-bar-label">Type</span>
+          {#each CATEGORY_ORDER as category (category)}
+            <button
+              type="button"
+              class="filter-chip"
+              aria-pressed={filterCategories.has(category)}
+              onclick={() => (filterCategories = toggleInSet(filterCategories, category))}
+            >
+              {CATEGORY_LABELS[category]}
+            </button>
+          {/each}
+          {#if filterCategories.size > 0}
+            <button
+              type="button"
+              class="filter-clear"
+              title="Wissen"
+              aria-label="Typefilter wissen"
+              onclick={() => (filterCategories = new Set())}
+            >✕</button>
+          {/if}
+        </div>
+      </div>
+    {/if}
+  </div>
 </div>
 
 <div class="panel timeline-panel">
+{#if rows.length > 0}
+  <div class="filter-bar timeline-sort no-print">
+    <span class="filter-bar-label">Sorteren</span>
+    <button
+      type="button"
+      class="sort-button"
+      aria-label={sortLabel("naam", "Naam")}
+      onclick={() => toggleSort("naam")}
+    >
+      Naam{#if sortKey === "naam"} {sortDir === "asc" ? "▲" : "▼"}{/if}
+    </button>
+    <button
+      type="button"
+      class="sort-button"
+      aria-label={sortLabel("standplaats", "Standplaats")}
+      onclick={() => toggleSort("standplaats")}
+    >
+      Standplaats{#if sortKey === "standplaats"} {sortDir === "asc" ? "▲" : "▼"}{/if}
+    </button>
+    <button
+      type="button"
+      class="sort-button"
+      aria-label={sortLabel("bloei", "Eerste bloeimaand")}
+      onclick={() => toggleSort("bloei")}
+    >
+      Eerste bloeimaand{#if sortKey === "bloei"} {sortDir === "asc" ? "▲" : "▼"}{/if}
+    </button>
+  </div>
+{/if}
 {#if rows.length === 0}
   <p class="empty-state">
     Je tuin is nog leeg. Ga naar <strong>Mijn tuin</strong> om planten toe te voegen.
@@ -234,7 +270,11 @@
       </div>
     </div>
 
-    {#each visibleRows as row (row.planting.uid)}
+    {#each visibleRows as row, i (row.planting.uid)}
+      <!-- Bij sorteren op standplaats: subkopje zodra de standplaats wisselt. -->
+      {#if sortKey === "standplaats" && (i === 0 || locationName(row) !== locationName(visibleRows[i - 1]))}
+        <div class="timeline-group-heading"><span>{locationName(row) || "Zonder standplaats"}</span></div>
+      {/if}
       <div class="timeline-row">
         <button
           type="button"
@@ -296,6 +336,7 @@
                     type="button"
                     class="marker-chip"
                     class:light={marker.meta.light}
+                    style:--chip-color={marker.meta.color}
                     onclick={() => showTask(row, marker)}
                     title={marker.meta.label}
                     aria-label={marker.meta.label}

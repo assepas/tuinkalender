@@ -509,6 +509,25 @@ select::-ms-expand {
   color: var(--color-primary-ink);
 }
 
+/* Wist alle chips van één filterbalk; alleen zichtbaar als er iets aan staat. */
+.filter-clear {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  border-radius: 999px;
+  padding: var(--space-1) var(--space-2);
+  font-size: 0.8em;
+  background: transparent;
+  color: var(--color-ink-muted);
+  cursor: pointer;
+}
+
+.filter-clear:hover {
+  color: var(--color-ink);
+  background: var(--color-surface-raised);
+}
+
 /* Zelfde kolommen en zijmarge (padding + 1px rand) als .planting-row, zodat
    "Naam" en "Standplaats" boven hun kolom staan. */
 .planting-table-head {
@@ -774,12 +793,12 @@ input[type="radio"]:checked {
 
 /* ---------- Tijdlijn ---------- */
 
-/* Legenda en filter-/sorteerbalk, beide los uitklapbaar — zie .panel-toggle
-   hierboven. Geen paneel-"blokken" (geen achtergrond/rand), gewoon twee
-   gelijk brede kolommen naast elkaar. Op smalle schermen onder elkaar. */
+/* Legenda en filterbalk, beide los uitklapbaar — zie .panel-toggle
+   hierboven. Geen paneel-"blokken" (geen achtergrond/rand), gewoon onder
+   elkaar over de volle breedte: eerst de legenda, dan de filters. */
 .timeline-toolbar {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr;
   gap: var(--space-4);
   margin-bottom: var(--space-4);
   align-items: start;
@@ -795,10 +814,9 @@ input[type="radio"]:checked {
   margin-top: 0;
 }
 
-@media (max-width: 56rem) {
-  .timeline-toolbar {
-    grid-template-columns: 1fr;
-  }
+/* Sorteren staat vast bovenaan in het tijdlijnpaneel (niet inklapbaar). */
+.timeline-sort {
+  gap: var(--space-2) var(--space-4);
 }
 
 .timeline-legend {
@@ -887,6 +905,21 @@ input[type="radio"]:checked {
 
 .timeline-row:last-child {
   border-bottom: none;
+}
+
+/* Onopvallend subkopje per standplaats (alleen bij sorteren op standplaats).
+   De naam is sticky, zodat hij bij horizontaal scrollen links in beeld blijft. */
+.timeline-group-heading {
+  padding: var(--space-3) 0 var(--space-1);
+  font-size: 0.75em;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--color-ink-muted);
+}
+
+.timeline-group-heading > span {
+  position: sticky;
+  left: 0;
 }
 
 /* .timeline-head-spacer blijft de lege cel boven icoon+naam; die spant beide
@@ -1080,7 +1113,11 @@ input[type="radio"]:checked {
   pointer-events: none;
 }
 
-/* Lichte achtergrond met rand, zodat het icoon leesbaar blijft op elke bloemkleur. */
+/* Lichte achtergrond met rand, zodat het icoon leesbaar blijft op elke bloemkleur.
+   De achtergrond is dezelfde tint van de taakkleur (~15%) als het icoon in het
+   detailvenster (.task-icon-badge in DetailModal), maar dekkend gemengd met de
+   paneelkleur, zodat een bloei-balk er niet doorheen schemert. De rand krijgt
+   de taakkleur zelf. */
 .marker-chip {
   flex: none;
   display: inline-flex;
@@ -1090,8 +1127,8 @@ input[type="radio"]:checked {
   height: 22px;
   padding: 0;
   border-radius: 999px;
-  background: var(--color-surface-raised);
-  border: 1px solid var(--color-line-strong);
+  background: color-mix(in srgb, var(--chip-color, transparent) 15%, var(--color-surface-raised));
+  border: 1px solid var(--chip-color, var(--color-line-strong));
   pointer-events: auto;
 }
 

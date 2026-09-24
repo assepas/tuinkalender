@@ -2,17 +2,17 @@
   "schemaVersion": 1,
   "types": [
     {
-      "id": "zaaien", "label": "Zaaien", "color": "#C08A2E", "icon": "seed", "timeline": true,
+      "id": "zaaien", "label": "Zaaien", "color": "#DAA03C", "icon": "seed", "timeline": true, 
       "variantBy": "location", "defaultVariant": "grond",
       "variants": {
         "kas":   { "label": "Zaaien in kas (of binnen)", "icon": "seed-kas" },
         "grond": { "label": "Zaaien in volle grond",     "icon": "seed" }
       }
     },
-    { "id": "planten",    "label": "Planten",          "color": "#3A4A2E", "icon": "sprout",      "timeline": true },
-    { "id": "bemesten",   "label": "Bemesten",         "color": "#8B5E34", "icon": "poop",        "timeline": true },
+    { "id": "planten",    "label": "Planten",          "color": "#547A37", "icon": "sprout",      "timeline": true },
+    { "id": "bemesten",   "label": "Bemesten",         "color": "#B67333", "icon": "poop",        "timeline": true },
     {
-      "id": "snoeien", "label": "Snoeien", "color": "#6B7A3A", "icon": "scissors", "timeline": true,
+      "id": "snoeien", "label": "Snoeien", "color": "#8DA63A", "icon": "scissors", "timeline": true,
       "variantBy": "importance", "defaultVariant": "hoofd",
       "variants": {
         "hoofd": { "label": "Hoofdsnoei" },
@@ -20,11 +20,11 @@
       }
     },
     {
-      "id": "oogsten", "label": "Oogsten", "color": "#A64B2A", "icon": "basket", "timeline": true,
+      "id": "oogsten", "label": "Oogsten", "color": "#D25629", "icon": "basket", "timeline": true,
       "markerStyle": "bar"
     },
-    { "id": "delen",      "label": "Delen/verspreiden","color": "#7A5C8C", "icon": "split",       "timeline": true },
-    { "id": "winterhard", "label": "Winterhard maken", "color": "#5B6B73", "icon": "snowflake",   "timeline": true },
-    { "id": "onderhoud",  "label": "Overig onderhoud", "color": "#8A8672", "icon": "ellipsis",    "timeline": true }
+    { "id": "delen",      "label": "Delen/verspreiden","color": "#925BB2", "icon": "split",       "timeline": true },
+    { "id": "winterhard", "label": "Winterhard maken", "color": "#59879E", "icon": "snowflake",   "timeline": true },
+    { "id": "onderhoud",  "label": "Overig onderhoud", "color": "#9F9A7F", "icon": "ellipsis",    "timeline": true }
   ]
 }
