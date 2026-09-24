@@ -10,9 +10,20 @@
   import LocationSelect from "./LocationSelect.svelte";
   import PlantIcon from "./PlantIcon.svelte";
 
-  let { planting } = $props();
+  // `autoExpand`: rij net toegevoegd via de toevoegrij — uitgeklapt, met
+  // de focus op "Eigen naam". Gaat dicht zodra er een nieuwere is toegevoegd.
+  let { planting, autoExpand = false } = $props();
 
   let expanded = $state(false);
+  let labelInput = $state();
+
+  $effect(() => {
+    expanded = autoExpand;
+  });
+
+  $effect(() => {
+    if (autoExpand) labelInput?.focus();
+  });
   let locationError = $state("");
 
   const species = $derived(speciesIndex[planting.speciesId]);
@@ -80,6 +91,7 @@
           <label for={`label-${planting.uid}`}>Eigen naam</label>
           <input
             id={`label-${planting.uid}`}
+            bind:this={labelInput}
             type="text"
             value={planting.label}
             onchange={(e) => gardenState.updatePlanting(planting.uid, { label: e.target.value })}

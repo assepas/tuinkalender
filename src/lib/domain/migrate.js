@@ -7,7 +7,12 @@
 import { makeId } from "./id.js";
 import { LOCATION_KINDS } from "./plantings.js";
 
-export const CURRENT_GARDEN_VERSION = 2;
+export const CURRENT_GARDEN_VERSION = 3;
+
+/** Beginwaarde van de standaardstandplaats: fallback voor plantingen zonder (geldige) standplaats. */
+export function createDefaultLocation() {
+  return { id: makeId("loc"), name: "Buiten", kind: "buiten" };
+}
 
 /** @type {Record<number, (doc: object) => object>} */
 const migrations = {
@@ -48,6 +53,32 @@ const migrations = {
       plantings,
     };
   },
+
+  // v2 -> v3: "geen standplaats" bestaat niet meer. Elke tuin heeft een
+  // standaardstandplaats (`defaultLocationId`, door de gebruiker te kiezen);
+  // plantingen zonder of met een onbekende locationId komen daarop. Een
+  // bestaande standplaats die al "Buiten" heet wordt hergebruikt i.p.v. een
+  // tweede aan te maken.
+  2: (doc) => {
+    let locations = doc.locations ?? [];
+    let defaultLocation = locations.find((l) => l.name.trim().toLowerCase() === "buiten");
+    if (!defaultLocation) {
+      defaultLocation = createDefaultLocation();
+      locations = [defaultLocation, ...locations];
+    }
+    const knownIds = new Set(locations.map((l) => l.id));
+    const plantings = (doc.plantings ?? []).map((p) =>
+      knownIds.has(p.locationId) ? p : { ...p, locationId: defaultLocation.id }
+    );
+
+    return {
+      ...doc,
+      schemaVersion: 3,
+      locations,
+      defaultLocationId: defaultLocation.id,
+      plantings,
+    };
+  },
 };
 
 export function migrateGarden(doc) {
@@ -78,10 +109,12 @@ export function migrateGarden(doc) {
 }
 
 export function createEmptyGarden(regionId) {
+  const defaultLocation = createDefaultLocation();
   return {
     schemaVersion: CURRENT_GARDEN_VERSION,
     region: regionId,
-    locations: [],
+    locations: [defaultLocation],
+    defaultLocationId: defaultLocation.id,
     plantings: [],
   };
 }

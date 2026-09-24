@@ -2,12 +2,14 @@
   import CalendarView from "./components/CalendarView.svelte";
   import TimelineView from "./components/TimelineView.svelte";
   import GardenEditor from "./components/GardenEditor.svelte";
+  import LocationsPage from "./components/LocationsPage.svelte";
   import PrintView from "./components/PrintView.svelte";
 
   const tabs = [
     { id: "kalender", label: "Maandoverzicht" },
     { id: "tijdlijn", label: "Tijdlijn" },
     { id: "tuin", label: "Mijn tuin" },
+    { id: "standplaatsen", label: "Standplaatsen" },
     { id: "print", label: "Print" },
   ];
 
@@ -38,6 +40,8 @@
     <TimelineView />
   {:else if activeTab === "tuin"}
     <GardenEditor />
+  {:else if activeTab === "standplaatsen"}
+    <LocationsPage />
   {:else}
     <PrintView />
   {/if}

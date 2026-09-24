@@ -351,6 +351,16 @@ select::-ms-expand {
   gap: var(--space-3);
 }
 
+/* Kolommen van het tuinoverzicht: uitklap, icoon, plant, standplaats, knop.
+   Gedeeld door de kolomkop, de toevoegrij en elke plantrij, zodat alles
+   onder elkaar uitlijnt. De knopkolom is vast, zodat "Toevoegen" en
+   "Verwijderen" even breed zijn. */
+.planting-list,
+.planting-table-head {
+  --planting-cols: 1.1rem 28px minmax(0, 1fr) 12rem 7.5rem;
+  --planting-areas: "toggle icon name location action";
+}
+
 .planting-list {
   list-style: none;
   margin: 0;
@@ -373,20 +383,47 @@ select::-ms-expand {
 }
 
 .planting-row-summary {
-  display: flex;
+  display: grid;
+  grid-template-columns: var(--planting-cols);
+  grid-template-areas: var(--planting-areas);
   align-items: center;
   gap: var(--space-3);
 }
 
+.planting-row-summary > :is(.planting-row-toggle, .planting-row-toggle-spacer) {
+  grid-area: toggle;
+}
+
+.planting-row-summary > :is(.plant-icon, .planting-row-icon-placeholder) {
+  grid-area: icon;
+}
+
 .planting-row-names {
+  grid-area: name;
   display: flex;
   flex-direction: column;
   min-width: 0;
-  margin-right: auto;
+}
+
+.planting-row-location {
+  grid-area: location;
 }
 
 .planting-row-location select {
-  width: auto;
+  width: 100%;
+}
+
+.planting-row-summary > .btn {
+  grid-area: action;
+  justify-content: center;
+}
+
+/* Smal scherm: naam op de eerste regel, standplaats + knop eronder. */
+@media (max-width: 34rem) {
+  .planting-list {
+    --planting-cols: 1.1rem 28px minmax(0, 1fr) auto;
+    --planting-areas: "toggle icon name name" "location location location action";
+  }
 }
 
 .planting-row-toggle {
@@ -404,6 +441,26 @@ select::-ms-expand {
 
 .planting-row-toggle:hover {
   color: var(--color-primary);
+}
+
+/* Vaste toevoegrij bovenaan het overzicht (NewPlantingRow.svelte), in
+   dezelfde kolommen als een plantrij. De gestippelde rand laat zien dat dit
+   (nog) geen echte plant is. Dezelfde taal als .location-row-new. */
+.planting-row-new {
+  border-style: dashed;
+  border-color: var(--color-line-strong);
+}
+
+.planting-row-icon-placeholder {
+  flex: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  border-radius: 999px;
+  border: 1px dashed var(--color-line-strong);
+  color: var(--color-ink-faint);
 }
 
 .planting-row-detail {
@@ -447,12 +504,33 @@ select::-ms-expand {
   color: var(--color-primary-ink);
 }
 
+/* Zelfde kolommen en zijmarge (padding + 1px rand) als .planting-row, zodat
+   "Naam" en "Standplaats" boven hun kolom staan. */
 .planting-table-head {
-  display: flex;
-  gap: var(--space-4);
-  padding: 0 var(--space-4) var(--space-2);
+  display: grid;
+  grid-template-columns: var(--planting-cols);
+  grid-template-areas: var(--planting-areas);
+  gap: var(--space-3);
+  padding: 0 calc(var(--space-4) + 1px) var(--space-2);
   border-bottom: var(--border);
   margin-bottom: var(--space-3);
+}
+
+.planting-table-head .sort-name {
+  grid-area: name;
+  justify-self: start;
+}
+
+.planting-table-head .sort-location {
+  grid-area: location;
+  justify-self: start;
+}
+
+@media (max-width: 34rem) {
+  .planting-table-head {
+    display: flex;
+    gap: var(--space-4);
+  }
 }
 
 .sort-button {
@@ -477,28 +555,162 @@ select::-ms-expand {
    compacte rij per standplaats i.p.v. een volledige kaart. */
 .location-list {
   list-style: none;
-  margin: var(--space-4) 0 0;
+  margin: var(--space-3) 0 0;
   padding: 0;
   display: flex;
   flex-direction: column;
-  gap: var(--space-2);
+  gap: var(--space-3);
 }
 
+/* Kolommen van de standplaatsenlijst: naam, soort plek, grondsoort, aantal
+   planten, standaard, knop — gedeeld door de kolomkop, de toevoegregel en
+   elke rij. Via grid-areas, zodat de toevoegregel (zonder aantal/standaard)
+   toch in dezelfde kolommen valt. Aantal-, radio- en knopkolom zijn vast,
+   zodat ze in elke rij (ieder een eigen grid) even breed zijn en
+   "Toevoegen" onder "Verwijderen" staat. Afstanden zoals .planting-row. */
+.location-list,
+.location-table-head {
+  --location-cols: minmax(0, 2fr) minmax(0, 1.3fr) minmax(0, 1.5fr) 6rem 7.5rem 7.5rem;
+  --location-areas: "name kind soil count default action";
+}
+
+.location-table-head {
+  display: grid;
+  grid-template-columns: var(--location-cols);
+  gap: var(--space-3);
+  margin-top: var(--space-4);
+  padding: 0 calc(var(--space-4) + 1px) var(--space-2);
+  border-bottom: var(--border);
+  font-size: var(--step-1);
+  font-weight: 500;
+  color: var(--color-ink-muted);
+}
+
+/* Grid i.p.v. flex-wrap: zo blijven de kolommen in elke rij gelijk, ook in
+   de smallere modal, en schuift een (onzichtbare) verwijderknop nooit naar
+   een eigen regel. */
 .location-row {
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: var(--location-cols);
+  grid-template-areas: var(--location-areas);
   align-items: center;
-  gap: var(--space-2);
-  padding: var(--space-2) var(--space-3);
+  gap: var(--space-3);
+  padding: var(--space-3) var(--space-4);
   border: var(--border);
   border-radius: var(--radius);
   background: var(--color-surface-raised);
 }
 
-.location-row input,
-.location-row select {
-  width: auto;
-  flex: 1 1 10rem;
+.location-row .location-name { grid-area: name; }
+.location-row .location-kind { grid-area: kind; }
+.location-row .location-soil { grid-area: soil; }
+.location-row .location-count { grid-area: count; }
+.location-row .default-radio { grid-area: default; }
+.location-row > .btn { grid-area: action; }
+
+.location-count {
+  font-size: var(--step-1);
+  color: var(--color-ink-muted);
+  white-space: nowrap;
+}
+
+.location-row input:not([type="radio"]),
+.location-row select,
+.location-row > .btn {
+  width: 100%;
+}
+
+.location-row > .btn {
+  justify-content: center;
+}
+
+/* Vaste toevoegregel (LocationManager.svelte): zelfde taal als .planting-row-new. */
+.location-row-new {
+  border-style: dashed;
+  border-color: var(--color-line-strong);
+}
+
+/* Smal: naam met het aantal planten eronder (zoals de Latijnse naam bij een
+   plant), dan soort plek + grondsoort, dan standaard + knop. Op de breedte
+   van de lijst zelf (container query), niet van het scherm — de modal is
+   smaller dan de pagina. */
+.location-manager {
+  container-type: inline-size;
+}
+
+@container (max-width: 52rem) {
+  .location-list {
+    --location-cols: 1fr 1fr;
+    --location-areas: "name name" "count count" "kind soil" "default action";
+  }
+
+  .location-table-head {
+    display: none;
+  }
+
+  .location-row {
+    row-gap: var(--space-2);
+  }
+
+  .location-row-new {
+    --location-areas: "name name" "kind soil" ". action";
+  }
+
+  .location-row .default-radio {
+    justify-self: start;
+  }
+
+  .location-row > .btn {
+    width: auto;
+    justify-self: end;
+  }
+}
+
+/* Van de standaardstandplaats is de verwijderknop onzichtbaar maar houdt
+   hij zijn plek, zodat de kolommen van alle rijen gelijk blijven. */
+.location-row .invisible {
+  visibility: hidden;
+}
+
+/* Radioknop in app-stijl: rond, primaire kleur als hij aan staat. */
+input[type="radio"] {
+  appearance: none;
+  -webkit-appearance: none;
+  flex: none;
+  width: 1rem;
+  height: 1rem;
+  margin: 0;
+  padding: 0;
+  border: 1px solid var(--color-line-strong);
+  border-radius: 999px;
+  background: var(--color-surface-raised);
+  cursor: pointer;
+}
+
+input[type="radio"]:checked {
+  border-color: var(--color-primary);
+  background: radial-gradient(var(--color-primary) 0 45%, var(--color-surface-raised) 50%);
+}
+
+/* "standaard"-keuze per standplaats: zelfde pilvorm als .filter-chip. */
+.default-radio {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  margin: 0;
+  border: var(--border);
+  border-radius: 999px;
+  padding: var(--space-1) var(--space-3);
+  font-size: var(--step-1);
+  color: var(--color-ink-muted);
+  background: var(--color-surface-raised);
+  cursor: pointer;
+}
+
+.default-radio:has(:checked) {
+  border-color: var(--color-primary);
+  color: var(--color-primary);
+  font-weight: 500;
 }
 
 .muted-tasks {

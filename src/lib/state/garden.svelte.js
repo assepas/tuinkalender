@@ -15,7 +15,7 @@ import {
 } from "../storage/garden.js";
 import { shouldWarnAboutBackup } from "../domain/backup.js";
 import { createEmptyGarden } from "../domain/migrate.js";
-import { findDuplicatePlantings } from "../domain/plantings.js";
+import { findDuplicatePlantings, reassignPlantings } from "../domain/plantings.js";
 import { speciesIndex, regions } from "../generated/data.js";
 
 function createGardenState() {
@@ -36,6 +36,10 @@ function createGardenState() {
     get locations() {
       return garden.locations ?? [];
     },
+    /** Standaardstandplaats: voor nieuwe plantingen en als fallback bij verwijderen. */
+    get defaultLocationId() {
+      return garden.defaultLocationId;
+    },
     get regionProfile() {
       return regions[garden.region];
     },
@@ -52,6 +56,7 @@ function createGardenState() {
     },
 
     addPlanting({ speciesId, label = "", locationId = null, notes = "" }) {
+      locationId ||= garden.defaultLocationId;
       if (!speciesIndex[speciesId]) {
         throw new Error(`Onbekende soort: "${speciesId}"`);
       }
@@ -62,8 +67,9 @@ function createGardenState() {
           `Je hebt al een ${species.name} op "${location?.name ?? "deze standplaats"}" staan.`
         );
       }
+      const uid = makePlantingUid();
       garden.plantings.push({
-        uid: makePlantingUid(),
+        uid,
         speciesId,
         label,
         locationId,
@@ -73,6 +79,7 @@ function createGardenState() {
         extraTasks: [],
       });
       persist();
+      return uid;
     },
 
     removePlanting(uid) {
@@ -107,8 +114,18 @@ function createGardenState() {
       persist();
     },
 
-    /** Geen cascade naar plantingen — zelfde tolerantie als bij een verwijderde soort-id. */
+    setDefaultLocation(id) {
+      if (!garden.locations?.some((l) => l.id === id)) return;
+      garden.defaultLocationId = id;
+      persist();
+    },
+
+    /** Plantingen op deze standplaats verhuizen naar de standaardstandplaats; die zelf is niet te verwijderen. */
     removeLocation(id) {
+      if (id === garden.defaultLocationId) {
+        throw new Error("Dit is de standaardstandplaats. Kies eerst een andere standaard.");
+      }
+      garden.plantings = reassignPlantings(garden.plantings, id, garden.defaultLocationId);
       garden.locations = (garden.locations ?? []).filter((l) => l.id !== id);
       persist();
     },

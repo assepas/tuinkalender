@@ -3,6 +3,7 @@
   import Icon from "./Icon.svelte";
   import NativeBadge from "./NativeBadge.svelte";
   import PlantIcon from "./PlantIcon.svelte";
+  import Modal from "./Modal.svelte";
 
   let { detail, onclose } = $props();
 
@@ -11,133 +12,77 @@
     if (months.length === 1) return MONTH_NAMES[months[0] - 1];
     return `${MONTH_NAMES[months[0] - 1]} t/m ${MONTH_NAMES[months[months.length - 1] - 1]}`;
   }
-
-  function handleKeydown(event) {
-    if (event.key === "Escape") onclose();
-  }
 </script>
 
-<svelte:window onkeydown={handleKeydown} />
-
-<!-- svelte-ignore a11y_click_events_have_key_events -->
-<!-- svelte-ignore a11y_no_static_element_interactions -->
-<div class="modal-overlay no-print" role="presentation" onclick={onclose}>
-  <!-- svelte-ignore a11y_click_events_have_key_events -->
-  <div
-    class="modal-panel"
-    role="dialog"
-    aria-modal="true"
-    aria-label="Details"
-    tabindex="-1"
-    onclick={(e) => e.stopPropagation()}
-  >
-    <button type="button" class="modal-close" onclick={onclose} aria-label="Sluiten">✕</button>
-
-    {#if detail.kind === "species"}
-      <div class="modal-head">
-        <PlantIcon species={detail.species} size={44} />
-        <div>
-          <h2>{detail.planting.label || detail.species.name}</h2>
-          {#if detail.species.latin}<p class="latin">{detail.species.latin}</p>{/if}
-        </div>
+<Modal label="Details" {onclose}>
+  {#if detail.kind === "species"}
+    <div class="modal-head">
+      <PlantIcon species={detail.species} size={44} />
+      <div>
+        <h2>{detail.planting.label || detail.species.name}</h2>
+        {#if detail.species.latin}<p class="latin">{detail.species.latin}</p>{/if}
       </div>
-      <div class="modal-badges">
-        <NativeBadge status={detail.species.nativeStatus} />
-        {#if detail.species.appearance?.flowerColorName}
-          <span class="swatch-chip">
-            <span class="swatch" style:background={detail.species.appearance.flowerColor}></span>
-            bloemkleur: {detail.species.appearance.flowerColorName}
-          </span>
-        {/if}
-      </div>
-
-      {#if detail.location}
-        <p class="modal-meta">
-          Standplaats: {detail.location.name}.
-          {#if detail.location.soil}Grondsoort: {detail.location.soil}.{/if}
-        </p>
-      {:else if detail.planting.locationId}
-        <p class="error-text">Onbekende standplaats — mogelijk verwijderd.</p>
-      {/if}
-      {#if detail.planting.notes}
-        <p class="modal-meta">{detail.planting.notes}</p>
-      {/if}
-
-      <h3>Taken</h3>
-      <ul class="modal-task-list">
-        {#each detail.species.tasks as task (task.id)}
-          <li>
-            <strong>{task.type}</strong>
-            {#if (detail.planting.mutedTasks ?? []).includes(task.id)}
-              <span class="muted-note">(uitgeschakeld voor deze plant)</span>
-            {/if}
-            {#if task.note}<span class="task-note">— {task.note}</span>{/if}
-          </li>
-        {/each}
-      </ul>
-    {:else if detail.kind === "task"}
-      <div class="modal-head">
-        <span class="task-icon-badge" style:background={`${detail.meta?.color ?? "#999"}26`}>
-          <Icon name={detail.meta?.icon ?? "dot"} color={detail.meta?.color ?? "#999"} size={22} />
+    </div>
+    <div class="modal-badges">
+      <NativeBadge status={detail.species.nativeStatus} />
+      {#if detail.species.appearance?.flowerColorName}
+        <span class="swatch-chip">
+          <span class="swatch" style:background={detail.species.appearance.flowerColor}></span>
+          bloemkleur: {detail.species.appearance.flowerColorName}
         </span>
-        <div>
-          <h2>{detail.meta?.label ?? detail.taskType}</h2>
-          <p class="latin">{detail.planting.label || detail.species.name}</p>
-        </div>
-      </div>
-      {#if detail.entry.task.note}
-        <p class="modal-meta">{detail.entry.task.note}</p>
       {/if}
-      <p class="modal-meta">Actief: {monthRangeLabel(detail.entry.months)}</p>
-      {#if detail.entry.frequency}
-        <p class="modal-meta">Frequentie: {detail.entry.frequency}</p>
-      {/if}
-      {#if detail.entry.task.importance}
-        <p class="modal-meta">
-          Belang: {detail.entry.task.importance === "hoofd" ? "hoofdsnoei (nodig)" : "lichte/optionele snoei"}
-        </p>
-      {/if}
+    </div>
+
+    {#if detail.location}
+      <p class="modal-meta">
+        Standplaats: {detail.location.name}.
+        {#if detail.location.soil}Grondsoort: {detail.location.soil}.{/if}
+      </p>
+    {:else if detail.planting.locationId}
+      <p class="error-text">Onbekende standplaats — mogelijk verwijderd.</p>
     {/if}
-  </div>
-</div>
+    {#if detail.planting.notes}
+      <p class="modal-meta">{detail.planting.notes}</p>
+    {/if}
+
+    <h3>Taken</h3>
+    <ul class="modal-task-list">
+      {#each detail.species.tasks as task (task.id)}
+        <li>
+          <strong>{task.type}</strong>
+          {#if (detail.planting.mutedTasks ?? []).includes(task.id)}
+            <span class="muted-note">(uitgeschakeld voor deze plant)</span>
+          {/if}
+          {#if task.note}<span class="task-note">— {task.note}</span>{/if}
+        </li>
+      {/each}
+    </ul>
+  {:else if detail.kind === "task"}
+    <div class="modal-head">
+      <span class="task-icon-badge" style:background={`${detail.meta?.color ?? "#999"}26`}>
+        <Icon name={detail.meta?.icon ?? "dot"} color={detail.meta?.color ?? "#999"} size={22} />
+      </span>
+      <div>
+        <h2>{detail.meta?.label ?? detail.taskType}</h2>
+        <p class="latin">{detail.planting.label || detail.species.name}</p>
+      </div>
+    </div>
+    {#if detail.entry.task.note}
+      <p class="modal-meta">{detail.entry.task.note}</p>
+    {/if}
+    <p class="modal-meta">Actief: {monthRangeLabel(detail.entry.months)}</p>
+    {#if detail.entry.frequency}
+      <p class="modal-meta">Frequentie: {detail.entry.frequency}</p>
+    {/if}
+    {#if detail.entry.task.importance}
+      <p class="modal-meta">
+        Belang: {detail.entry.task.importance === "hoofd" ? "hoofdsnoei (nodig)" : "lichte/optionele snoei"}
+      </p>
+    {/if}
+  {/if}
+</Modal>
 
 <style>
-  .modal-overlay {
-    position: fixed;
-    inset: 0;
-    background: rgba(35, 42, 30, 0.45);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: var(--space-4);
-    z-index: 100;
-  }
-
-  .modal-panel {
-    position: relative;
-    background: var(--color-surface-raised);
-    border: var(--border);
-    border-radius: var(--radius);
-    padding: var(--space-5);
-    max-width: 26rem;
-    width: 100%;
-    max-height: 85vh;
-    overflow-y: auto;
-  }
-
-  .modal-close {
-    position: absolute;
-    top: var(--space-3);
-    right: var(--space-3);
-    background: transparent;
-    border: none;
-    font-size: 1rem;
-    line-height: 1;
-    color: var(--color-ink-muted);
-    cursor: pointer;
-    padding: var(--space-1);
-  }
-
   .modal-head {
     display: flex;
     align-items: center;

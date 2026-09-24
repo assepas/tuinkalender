@@ -10,11 +10,13 @@
 // werkend ook al noemt de gebruiker zijn standplaatsen zelf. Nu gebruikt
 // door precies één taak (tomaat "opbinden-dieven": kas/buiten) — "pot" is
 // een bewuste voorbereiding op toekomstige soortdata/filtering, ook al
-// matcht er nu nog geen taak-conditie op.
+// matcht er nu nog geen taak-conditie op. De waarde "buiten" heet in de UI
+// "Volle grond"; de waarde zelf blijft, want die staat in opgeslagen tuinen,
+// exports, garden.schema.json en de taak-condities van de soortdata.
 export const LOCATION_KINDS = ["kas", "buiten", "pot"];
 export const LOCATION_KIND_LABELS = {
   kas: "Kas",
-  buiten: "Buiten",
+  buiten: "Volle grond",
   pot: "Pot",
 };
 
@@ -37,9 +39,9 @@ export function buildLocationIndex(locations) {
 
 /**
  * Plantingen die dezelfde soort+standplaats-combinatie hebben. Lege array
- * als speciesId of locationId ontbreekt — "geen standplaats" telt niet als
- * dubbel, want meerdere nog-niet-ingedeelde planten van dezelfde soort is
- * heel normaal (je hebt je tuin simpelweg nog niet verder ingedeeld).
+ * als speciesId of locationId ontbreekt. Sinds schema v3 heeft elke planting
+ * een standplaats (de standaardstandplaats als fallback), dus dat laatste
+ * komt alleen nog voor bij onvolledige invoer.
  *
  * @param {{ plantings: Array }} garden
  * @param {string} speciesId
@@ -59,6 +61,12 @@ export function findDuplicatePlantings(garden, speciesId, locationId, excludeUid
 // Beide rij-vormen hebben altijd `planting` en `species`, dus filteren kan
 // generiek; sorteren krijgt een key-extractor mee omdat "standplaats" per
 // aanroeper anders wordt opgezocht (rechtstreeks vs. via een locationIndex).
+
+/** Plantingen van standplaats `fromId` naar `toId` verhuizen (bij het
+ * verwijderen van een standplaats). Geeft een nieuwe array terug. */
+export function reassignPlantings(plantings, fromId, toId) {
+  return (plantings ?? []).map((p) => (p.locationId === fromId ? { ...p, locationId: toId } : p));
+}
 
 /** Toggle een waarde in een Set zonder de gegeven Set te muteren — Svelte 5
  * runes reageren op reassignment, niet op Set.add/delete in-place. */
@@ -83,8 +91,8 @@ export function compareByKey(keyFor, dir = "asc") {
  * Filtert rijen (die minimaal `{ planting, species }` bevatten) op
  * standplaats-id en soort-categorie. Beide filters zijn AND-gecombineerd;
  * een lege Set betekent "geen filter op deze dimensie". Een rij zonder
- * `species` (verwijderde soort) of zonder `planting.locationId` (nog geen
- * standplaats) valt weg zodra het bijbehorende filter actief is.
+ * `species` (verwijderde soort) of zonder `planting.locationId` (alleen nog
+ * bij oude/onvolledige data) valt weg zodra het bijbehorende filter actief is.
  *
  * @param {Array<{planting: object, species: object}>} rows
  * @param {Set<string>} locationIds

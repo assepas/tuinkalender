@@ -5,6 +5,7 @@ import {
   toggleInSet,
   compareByKey,
   filterPlantingRows,
+  reassignPlantings,
 } from "../src/lib/domain/plantings.js";
 
 describe("buildLocationIndex", () => {
@@ -120,5 +121,17 @@ describe("filterPlantingRows", () => {
   it("een rij zonder locationId valt weg bij een actief standplaatsfilter", () => {
     const result = filterPlantingRows(rows, new Set(["loc1"]), new Set());
     expect(result).not.toContain(rows[3]);
+  });
+});
+
+describe("reassignPlantings", () => {
+  it("verhuist alleen plantingen van de verwijderde standplaats, zonder te muteren", () => {
+    const plantings = [
+      { uid: "p1", locationId: "weg" },
+      { uid: "p2", locationId: "blijft" },
+    ];
+    const result = reassignPlantings(plantings, "weg", "standaard");
+    expect(result.map((p) => p.locationId)).toEqual(["standaard", "blijft"]);
+    expect(plantings[0].locationId).toBe("weg");
   });
 });

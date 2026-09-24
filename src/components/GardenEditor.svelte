@@ -8,8 +8,10 @@
     compareByKey,
     filterPlantingRows,
   } from "../lib/domain/plantings.js";
+  import { ui, closeLocationManager } from "../lib/state/ui.svelte.js";
   import LocationManager from "./LocationManager.svelte";
-  import SpeciesPicker from "./SpeciesPicker.svelte";
+  import Modal from "./Modal.svelte";
+  import NewPlantingRow from "./NewPlantingRow.svelte";
   import PlantingRow from "./PlantingRow.svelte";
 
   let importText = $state("");
@@ -18,15 +20,25 @@
 
   // Sorteren/filteren van het overzicht — puur client-side, geen paginering
   // nodig bij de tientallen (niet honderden) plantingen die een tuin heeft.
-  let sortKey = $state("naam"); // "naam" | "soort" | "standplaats"
+  let sortKey = $state("naam"); // "naam" | "standplaats"
   let sortDir = $state("asc"); // "asc" | "desc"
   let filterLocationIds = $state(new Set());
   let filterCategories = $state(new Set());
 
+  // In deze sessie toegevoegde plantingen (nieuwste eerst): die staan
+  // bovenaan, los van sortering en filters, zodat je ze direct verder kunt
+  // invullen. Niet opgeslagen — na een tabwissel staat alles weer gesorteerd.
+  let addedUids = $state([]);
+
+  const pinnedPlantings = $derived(
+    addedUids.map((uid) => gardenState.plantings.find((p) => p.uid === uid)).filter(Boolean)
+  );
+
   const locationIndex = $derived(Object.fromEntries(gardenState.locations.map((l) => [l.id, l])));
 
   const visiblePlantings = $derived.by(() => {
-    const rows = gardenState.plantings.map((planting) => ({
+    const pinned = new Set(addedUids);
+    const rows = gardenState.plantings.filter((p) => !pinned.has(p.uid)).map((planting) => ({
       planting,
       species: speciesIndex[planting.speciesId],
       location: locationIndex[planting.locationId],
@@ -37,7 +49,6 @@
     // Ontbrekende waarden (verwijderde soort/standplaats) sorteren als lege
     // string mee naar het begin — geen crash, geen verrassende volgorde.
     const keyFor = (r) => {
-      if (sortKey === "soort") return r.species?.name ?? "";
       if (sortKey === "standplaats") return r.location?.name ?? "";
       return r.planting.label || r.species?.name || "";
     };
@@ -122,10 +133,8 @@
 
 <div class="panel">
   <h2>Planten in je tuin ({gardenState.plantings.length})</h2>
-  {#if gardenState.plantings.length === 0}
-    <p class="empty-state">Nog geen planten toegevoegd.</p>
-  {:else}
-    {#if gardenState.locations.length > 0}
+  {#if gardenState.plantings.length > 0}
+    {#if gardenState.locations.length > 1}
       <div class="filter-bar">
         <span class="filter-bar-label">Standplaats</span>
         {#each gardenState.locations as location (location.id)}
@@ -154,47 +163,54 @@
       {/each}
     </div>
 
-    {#if visiblePlantings.length === 0}
-      <p class="empty-state">Geen planten gevonden met deze filters.</p>
-    {:else}
-      <div class="planting-table-head">
-        <button
-          type="button"
-          class="sort-button"
-          aria-label={sortLabel("naam", "Naam")}
-          onclick={() => toggleSort("naam")}
-        >
-          Naam{#if sortKey === "naam"} {sortDir === "asc" ? "▲" : "▼"}{/if}
-        </button>
-        <button
-          type="button"
-          class="sort-button"
-          aria-label={sortLabel("soort", "Soort")}
-          onclick={() => toggleSort("soort")}
-        >
-          Soort{#if sortKey === "soort"} {sortDir === "asc" ? "▲" : "▼"}{/if}
-        </button>
-        <button
-          type="button"
-          class="sort-button"
-          aria-label={sortLabel("standplaats", "Standplaats")}
-          onclick={() => toggleSort("standplaats")}
-        >
-          Standplaats{#if sortKey === "standplaats"} {sortDir === "asc" ? "▲" : "▼"}{/if}
-        </button>
-      </div>
-      <ul class="planting-list">
-        {#each visiblePlantings as { planting } (planting.uid)}
-          <PlantingRow {planting} />
-        {/each}
-      </ul>
-    {/if}
+    <div class="planting-table-head">
+      <button
+        type="button"
+        class="sort-button sort-name"
+        aria-label={sortLabel("naam", "Naam")}
+        onclick={() => toggleSort("naam")}
+      >
+        Naam{#if sortKey === "naam"} {sortDir === "asc" ? "▲" : "▼"}{/if}
+      </button>
+      <button
+        type="button"
+        class="sort-button sort-location"
+        aria-label={sortLabel("standplaats", "Standplaats")}
+        onclick={() => toggleSort("standplaats")}
+      >
+        Standplaats{#if sortKey === "standplaats"} {sortDir === "asc" ? "▲" : "▼"}{/if}
+      </button>
+    </div>
+  {/if}
+
+  <!-- De '+'-rij staat er altijd, ook bij een lege tuin of als de filters alles verbergen. -->
+  <ul class="planting-list">
+    <NewPlantingRow onadded={(uid) => (addedUids = [uid, ...addedUids])} />
+    {#each pinnedPlantings as planting (planting.uid)}
+      <PlantingRow {planting} autoExpand={planting.uid === addedUids[0]} />
+    {/each}
+    {#each visiblePlantings as { planting } (planting.uid)}
+      <PlantingRow {planting} />
+    {/each}
+  </ul>
+  {#if gardenState.plantings.length === 0}
+    <p class="empty-state">Nog geen planten toegevoegd.</p>
+  {:else if visiblePlantings.length === 0 && pinnedPlantings.length === 0}
+    <p class="empty-state">Geen planten gevonden met deze filters.</p>
   {/if}
 </div>
 
-<LocationManager />
-
-<SpeciesPicker />
+{#if ui.locationManager.open}
+  <Modal title="Standplaatsen" wide onclose={closeLocationManager}>
+    <LocationManager
+      idPrefix="modal"
+      onadded={(location) => {
+        ui.locationManager.onadded?.(location);
+        closeLocationManager();
+      }}
+    />
+  </Modal>
+{/if}
 
 <div class="panel">
   <h2>Back-up &amp; delen</h2>
