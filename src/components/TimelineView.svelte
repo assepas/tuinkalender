@@ -215,7 +215,7 @@
 
 </div>
 
-<div class="panel">
+<div class="panel timeline-panel">
 {#if rows.length === 0}
   <p class="empty-state">
     Je tuin is nog leeg. Ga naar <strong>Mijn tuin</strong> om planten toe te voegen.

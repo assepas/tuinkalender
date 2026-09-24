@@ -1,8 +1,10 @@
 /*
-  Ontwerptaal: een tuin-almanak, geen SaaS-dashboard.
-  - Achtergrond: warm, papierachtig linnen — geen puur wit, geen grijs.
-  - Koppen/maanden: Newsreader (serif) — het "wanneer".
-  - UI/labels/lopende tekst: Work Sans (grotesk) — het "wat te doen".
+  Ontwerptaal: fris en groen, maar nog steeds een tuin-almanak.
+  - Achtergrond: bladgroen; vlakken licht groengetint wit. Alle neutrale
+    tinten (lijnen, vage tekst) hebben een groene zweem — geen beige/grijs.
+  - Koppen/maanden/merk: Ubuntu Mono — het "wanneer". Alleen voor koppen,
+    niet voor lopende tekst of plantnamen in lijsten.
+  - UI/labels/lopende tekst/plantnamen: Roboto — het "wat te doen".
   - Taaktype-kleuren komen uit data/taskTypes.json, niet hier: dat is de
     plek waar je een nieuw taaktype toevoegt zonder deze CSS aan te raken.
 */
@@ -12,21 +14,23 @@
   --color-bg: #b4d6a0;
   --color-surface: #f0fee8;
   --color-surface-raised: #f7fff2;
-  --color-ink: #232a1e;
-  --color-ink-muted: #5c6350;
-  --color-ink-faint: #8a8672;
+  --color-ink: #1f2a1b;
+  --color-ink-muted: #4b5843;
+  --color-ink-faint: #7a8a6e;
   --color-primary: #486234;
-  --color-primary-ink: #f6f4e8;
-  --color-line: #d6d0b8;
-  --color-line-strong: #b7b090;
+  --color-primary-ink: #f4fbef;
+  /* Tekst op de primaire kleur die niet "actief" is (bv. header-tabs) */
+  --color-primary-muted: #cfe2c0;
+  --color-line: #d2e4c5;
+  --color-line-strong: #a9c395;
   --color-danger: #a64b2a;
   --color-focus: #3e7cb1;
   /* Ondergrond van plant-icoontjes: neutraal met een vleugje groen */
-  --color-plant-bg: #f1f2e4;
-  --color-plant-line: #cfd4b6;
+  --color-plant-bg: #eaf3e1;
+  --color-plant-line: #c6dab5;
 
   /* Typografie */
-  --font-display: "Ubuntu Mono", "Iowan Old Style", Georgia, serif;
+  --font-display: "Ubuntu Mono", ui-monospace, "SF Mono", Menlo, monospace;
   --font-ui: "Work Sans", "Segoe UI", system-ui, sans-serif;
 
   --step-1: 0.8125rem;
@@ -45,7 +49,7 @@
   --space-6: 2rem;
   --space-7: 3rem;
 
-  --radius: 3px;
+  --radius: 6px;
   --border: 1px solid var(--color-line);
 }
 

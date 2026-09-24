@@ -18,7 +18,7 @@
 <style>
   .native-badge {
     display: inline-block;
-    color: #f6f4e8;
+    color: var(--color-primary-ink);
     font-size: 0.7rem;
     font-weight: 600;
     padding: 0.1rem 0.55rem;
