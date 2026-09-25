@@ -43,3 +43,22 @@ describe("slugify", () => {
     expect(slugify("  Crème Brûlée! ")).toBe("creme-brulee");
   });
 });
+
+describe("validateSpecies: plantinformatie", () => {
+  it("accepteert growing, info en description", () => {
+    const good = {
+      ...aardbei,
+      growing: { sun: ["zon", "halfschaduw"], soil: ["zand", "klei"], moisture: ["normaal"], spacingCm: 30 },
+      info: { intro: "Lekker.", water: "Bij droogte.", tips: ["Stro eronder."] },
+      tasks: aardbei.tasks.map((t) => ({ ...t, description: "Zo doe je het." })),
+    };
+    expect(validateSpecies(good, { taskTypeIds })).toEqual([]);
+  });
+
+  it("geeft leesbare fouten voor onbekende waarden", () => {
+    const bad = { ...aardbei, growing: { sun: ["volle zon"], spacingCm: 0 } };
+    const errors = validateSpecies(bad, { taskTypeIds });
+    expect(errors).toContain("licht: kies een van zon, halfschaduw, schaduw");
+    expect(errors.some((e) => e.startsWith("plantafstand:"))).toBe(true);
+  });
+});

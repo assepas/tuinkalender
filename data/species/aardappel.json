@@ -8,9 +8,28 @@
   "nativeStatus": "exoot",
   "appearance": { "shape": "bloem", "count": 5, "flowerColor": "#D8CBE0", "flowerColorName": "lila-wit" },
   "bloom": { "from": "06-01", "to": "07-01" },
+  "growing": { "sun": ["zon"], "soil": ["zand", "leem", "klei"], "moisture": ["normaal"], "spacingCm": 35 },
+  "info": {
+    "intro": "Aardappels zijn dankbaar om zelf te telen: je poot een knol en oogst er later tien of meer. Vroege rassen kun je al in de zomer eten, late rassen zijn goed te bewaren.",
+    "water": "Geef vooral water als het droog is vanaf de bloei, want dan groeien de knollen. Liever een keer per week flink dan elke dag een beetje.",
+    "tips": [
+      "Laat pootaardappels vooraf een paar weken voorkiemen op een lichte, koele plek; ze groeien dan sneller.",
+      "Zie je bruine vlekken op het blad en rottende stengels? Dat is aardappelziekte (phytophthora): haal het loof direct weg.",
+      "Teel aardappels niet elk jaar op dezelfde plek, dat voorkomt ziektes."
+    ]
+  },
   "tasks": [
-    { "id": "poten", "type": "planten", "window": { "kind": "dates", "from": "04-01", "to": "04-30" }, "note": "Pootaardappelen; hou rekening met laat-voorjaarsvorst" },
-    { "id": "aanaarden", "type": "onderhoud", "window": { "kind": "recurring", "from": "05-01", "to": "06-15", "every": "2weeks" }, "note": "Aanaarden tegen groene knollen" },
-    { "id": "oogsten", "type": "oogsten", "window": { "kind": "dates", "from": "08-01", "to": "09-30" } }
+    {
+      "id": "poten", "type": "planten", "window": { "kind": "dates", "from": "04-01", "to": "04-30" },
+      "description": "Poot de (voorgekiemde) aardappels zo'n 10 cm diep, met de kiemen naar boven, op 30 tot 35 cm in de rij en 60 tot 70 cm tussen de rijen. Wacht tot de grond wat is opgewarmd. Komt er na opkomst nog nachtvorst, dek de jonge plantjes dan af of hark er wat grond over."
+    },
+    {
+      "id": "aanaarden", "type": "onderhoud", "window": { "kind": "recurring", "from": "05-01", "to": "06-15", "every": "2weeks" },
+      "description": "Hark als de planten zo'n 20 cm hoog zijn grond tegen de stengels op, zodat er een ruggetje ontstaat. Herhaal dat na een paar weken. De knollen blijven zo onder de grond en worden niet groen; groene plekken zijn giftig."
+    },
+    {
+      "id": "oogsten", "type": "oogsten", "window": { "kind": "dates", "from": "08-01", "to": "09-30" },
+      "description": "Vroege aardappels kun je rooien zodra de plant bloeit. Voor bewaaraardappels wacht je tot het loof is afgestorven en dan nog twee weken, zodat de schil stevig wordt. Rooi op een droge dag met een riek, laat ze even drogen en bewaar ze donker, koel en vorstvrij."
+    }
   ]
 }

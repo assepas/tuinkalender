@@ -8,10 +8,33 @@
   "nativeStatus": "inheems",
   "appearance": { "shape": "vrucht", "count": 5, "flowerColor": "#D9D6A0", "flowerColorName": "geelgroen", "fruitColor": "#B23A3A" },
   "bloom": { "from": "04-01", "to": "05-01" },
+  "growing": { "sun": ["zon", "halfschaduw"], "soil": ["zand", "klei", "leem"], "moisture": ["normaal", "vochtig"], "spacingCm": 150 },
+  "info": {
+    "intro": "Een sterke, makkelijke bessenstruik die jaar na jaar trossen rode bessen geeft. Ideaal voor beginners: hij verdraagt wat schaduw en vraagt weinig verzorging.",
+    "water": "Geef vooral in droge periodes tijdens de bloei en het rijpen van de bessen water, ongeveer een gieter per struik per week. Een laag mulch houdt de grond koel en vochtig.",
+    "tips": [
+      "Houd 8 tot 10 sterke hoofdtakken aan; de meeste bessen groeien aan takken van 2 tot 3 jaar oud.",
+      "Leg bij het rijpen een net over de struik, merels zijn er dol op.",
+      "Plant niet te diep: de wortelhals hoort net onder de grond."
+    ]
+  },
   "tasks": [
-    { "id": "planten", "type": "planten", "window": { "kind": "dates", "from": "10-15", "to": "03-15" } },
-    { "id": "snoeien", "type": "snoeien", "importance": "hoofd", "window": { "kind": "dates", "from": "01-15", "to": "02-28" }, "note": "Oudste takken (4+ jaar) uitdunnen bij de grond" },
-    { "id": "bemesten", "type": "bemesten", "window": { "kind": "dates", "from": "03-01", "to": "03-31" } },
-    { "id": "oogsten", "type": "oogsten", "window": { "kind": "dates", "from": "07-01", "to": "08-15" } }
+    {
+      "id": "planten", "type": "planten", "window": { "kind": "dates", "from": "10-15", "to": "03-15" },
+      "description": "Graaf een ruim plantgat, meng de grond met wat compost en zet de struik er zo in dat hij even diep staat als in de pot. Druk de grond aan en geef flink water. Planten kan de hele winter zolang het niet vriest."
+    },
+    {
+      "id": "snoeien", "type": "snoeien", "importance": "hoofd", "window": { "kind": "dates", "from": "01-15", "to": "02-28" },
+      "note": "Oudste takken bij de grond weg",
+      "description": "Knip de oudste, donkerste takken (4 jaar en ouder) vlak bij de grond weg, en ook takken die kruisen of over de grond hangen. Zo blijft de struik open en maakt hij jonge takken aan die veel bessen geven. Laat ongeveer 8 tot 10 gezonde hoofdtakken staan."
+    },
+    {
+      "id": "bemesten", "type": "bemesten", "window": { "kind": "dates", "from": "03-01", "to": "03-31" },
+      "description": "Strooi in het vroege voorjaar een laag compost of goed verteerde (gedroogde) koemest rond de struik, ongeveer een schep per struik. Werk het oppervlakkig in en houd het een paar centimeter van de takken af."
+    },
+    {
+      "id": "oogsten", "type": "oogsten", "window": { "kind": "dates", "from": "07-01", "to": "08-15" },
+      "description": "Pluk de trosjes in hun geheel zodra alle bessen aan het tros rood en glanzend zijn; knip of knijp het steeltje af. Rijpe bessen blijven een week of twee goed aan de struik hangen, dus je kunt in een paar keer oogsten."
+    }
   ]
 }

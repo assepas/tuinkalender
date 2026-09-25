@@ -8,9 +8,28 @@
   "nativeStatus": "inheems",
   "appearance": { "shape": "aar", "count": 6, "flowerColor": "#C598B8", "flowerColorName": "roze-paars" },
   "bloom": { "from": "07-01", "to": "09-01" },
+  "growing": { "sun": ["zon"], "soil": ["zand", "leem", "klei"], "moisture": ["droog", "normaal"], "spacingCm": 30 },
+  "info": {
+    "intro": "Een inheemse vaste plant en keukenkruid (oregano) met roze bloemtuiltjes in de zomer. Een van de beste vlinder- en bijenplanten die er is.",
+    "water": "Wilde marjolein kan goed tegen droogte. Geef alleen water na het planten en bij lange droge periodes.",
+    "tips": [
+      "Op arme, droge grond is de smaak het sterkst.",
+      "Laat een deel van de plant bloeien voor de insecten, en oogst van de rest.",
+      "Knip de plant in het voorjaar terug tot net boven de nieuwe scheutjes aan de voet."
+    ]
+  },
   "tasks": [
-    { "id": "planten", "type": "planten", "window": { "kind": "dates", "from": "04-15", "to": "05-31" } },
-    { "id": "oogsten", "type": "oogsten", "window": { "kind": "dates", "from": "06-15", "to": "09-15" } },
-    { "id": "delen", "type": "delen", "window": { "kind": "dates", "from": "09-15", "to": "10-15" } }
+    {
+      "id": "planten", "type": "planten", "window": { "kind": "dates", "from": "04-15", "to": "05-31" },
+      "description": "Plant op een zonnige plek op zo'n 30 cm afstand, even diep als in de pot. Geef na het planten water; daarna redt hij zich prima."
+    },
+    {
+      "id": "oogsten", "type": "oogsten", "window": { "kind": "dates", "from": "06-15", "to": "09-15" },
+      "description": "Knip takjes af net voor of tijdens de bloei, dan is de smaak het sterkst. Hang bosjes ondersteboven te drogen op een luchtige, schaduwrijke plek en rits daarna het blad af."
+    },
+    {
+      "id": "delen", "type": "delen", "window": { "kind": "dates", "from": "09-15", "to": "10-15" },
+      "description": "Steek de pol na een paar jaar in het najaar uit en verdeel hem in stukken. Plant de stukken terug of op een nieuwe plek; de plant wordt daar weer voller van."
+    }
   ]
 }

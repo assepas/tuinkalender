@@ -8,10 +8,33 @@
   "nativeStatus": "onbekend",
   "appearance": { "shape": "bloem", "count": 10, "flowerColor": "#C0392B", "flowerColorName": "rood" },
   "bloom": { "from": "06-01", "to": "09-15" },
+  "growing": { "sun": ["zon"], "soil": ["klei", "leem", "zand"], "moisture": ["normaal"], "spacingCm": 60 },
+  "info": {
+    "intro": "De koningin van de tuin: rozen bloeien van juni tot in de herfst en veel rassen geuren heerlijk. Er zijn struikrozen, klimrozen en bodembedekkende rozen.",
+    "water": "Geef in droge periodes een paar keer per week flink water aan de voet, niet over het blad; nat blad geeft sneller schimmelziektes.",
+    "tips": [
+      "Kies bij voorkeur een ras met een ADR-keurmerk: die zijn gezond en minder vatbaar voor ziektes.",
+      "Zwarte vlekken op het blad (sterroetdauw): haal aangetast blad weg en gooi het niet op de compost.",
+      "Een roos wil een open plek met veel zon en luchtige grond."
+    ]
+  },
   "tasks": [
-    { "id": "planten", "type": "planten", "window": { "kind": "dates", "from": "03-01", "to": "04-30" } },
-    { "id": "snoeien", "type": "snoeien", "importance": "hoofd", "window": { "kind": "dates", "from": "02-15", "to": "03-15" } },
-    { "id": "bemesten", "type": "bemesten", "window": { "kind": "dates", "from": "03-15", "to": "04-15" } },
-    { "id": "dode-bloemen-verwijderen", "type": "onderhoud", "window": { "kind": "recurring", "from": "06-01", "to": "09-15", "every": "week" }, "note": "Uitgebloeide bloemen verwijderen stimuleert nabloei" }
+    {
+      "id": "planten", "type": "planten", "window": { "kind": "dates", "from": "03-01", "to": "04-30" },
+      "description": "Zet een roos met blote wortels eerst een paar uur in een emmer water. Plant hem zo diep dat de verdikking waar de takken beginnen (de entplek) 5 cm onder de grond zit. Meng compost door de grond en geef flink water."
+    },
+    {
+      "id": "snoeien", "type": "snoeien", "importance": "hoofd", "window": { "kind": "dates", "from": "02-15", "to": "03-15" },
+      "note": "Snoeien als de forsythia bloeit",
+      "description": "Knip dood, dun en naar binnen groeiend hout weg. Snoei de overige takken van struikrozen terug tot 3 à 5 ogen (knoppen) boven de grond, schuin net boven een naar buiten wijzende knop. Klimrozen snoei je alleen licht: de zijtakjes tot 2 à 3 knoppen."
+    },
+    {
+      "id": "bemesten", "type": "bemesten", "window": { "kind": "dates", "from": "03-15", "to": "04-15" },
+      "description": "Strooi in het voorjaar na het snoeien een organische rozenmest of gedroogde koemest rond de struik en werk hem licht in. Een tweede, kleinere gift in juni helpt bij doorbloeiende rozen voor een tweede bloei."
+    },
+    {
+      "id": "dode-bloemen-verwijderen", "type": "onderhoud", "window": { "kind": "recurring", "from": "06-01", "to": "09-15", "every": "week" },
+      "description": "Knip uitgebloeide bloemen af tot net boven het eerste volledige blad met vijf blaadjes. Daar komt een nieuwe bloeitak uit. Zo blijven doorbloeiende rozen tot de herfst bloemen maken."
+    }
   ]
 }

@@ -8,10 +8,32 @@
   "nativeStatus": "exoot",
   "appearance": { "shape": "aar", "count": 5, "flowerColor": "#8FA6C9", "flowerColorName": "blauw" },
   "bloom": { "from": "04-01", "to": "05-15" },
+  "growing": { "sun": ["zon"], "soil": ["zand", "leem"], "moisture": ["droog", "normaal"], "spacingCm": 60 },
+  "info": {
+    "intro": "Een groenblijvend mediterraan kruid met naaldachtig, geurig blad en blauwe bloempjes in het voorjaar. Je kunt het hele jaar door plukken voor bij vlees, aardappels en brood.",
+    "water": "Rozemarijn kan goed tegen droogte. Geef alleen water als de grond helemaal droog is; te natte grond, vooral in de winter, laat de wortels rotten.",
+    "tips": [
+      "Meng bij zware grond grof zand of grind in het plantgat.",
+      "Snoei nooit terug tot in het kale hout, daar loopt hij niet meer uit.",
+      "In een pot kun je hem in strenge winters dicht tegen het huis of in een onverwarmde schuur zetten."
+    ]
+  },
   "tasks": [
-    { "id": "planten", "type": "planten", "window": { "kind": "relative", "anchor": "lastFrost", "fromWeeks": 0, "toWeeks": 4 } },
-    { "id": "snoeien", "type": "snoeien", "importance": "licht", "window": { "kind": "dates", "from": "05-15", "to": "06-01" }, "note": "Na de bloei licht snoeien; nooit tot in kaal oud hout" },
-    { "id": "oogsten", "type": "oogsten", "window": { "kind": "dates", "from": "01-01", "to": "12-31" }, "note": "Jaarrond te oogsten, blijvend groen" },
-    { "id": "winterhard", "type": "winterhard", "window": { "kind": "dates", "from": "11-01", "to": "11-30" }, "note": "In pot: beschutte plek of vlies bij strenge vorst" }
+    {
+      "id": "planten", "type": "planten", "window": { "kind": "relative", "anchor": "lastFrost", "fromWeeks": 0, "toWeeks": 4 },
+      "description": "Plant na de laatste vorst op de zonnigste en meest beschutte plek, in goed doorlatende grond. Tegen een zuidmuur doet hij het uitstekend. Geef na het planten eenmalig goed water."
+    },
+    {
+      "id": "snoeien", "type": "snoeien", "importance": "licht", "window": { "kind": "dates", "from": "05-15", "to": "06-01" },
+      "description": "Knip na de bloei de takken met een derde terug, altijd in het groene, beblaarde deel. Zo blijft de plant compact en voorkom je dat hij van onderen kaal wordt."
+    },
+    {
+      "id": "oogsten", "type": "oogsten", "window": { "kind": "dates", "from": "01-01", "to": "12-31" },
+      "description": "Knip het hele jaar door takjes van 10 cm af, net boven een zijtak. Pluk nooit meer dan een derde van de plant in één keer. In de winter liever wat zuiniger plukken, dan groeit hij nauwelijks bij."
+    },
+    {
+      "id": "winterhard", "type": "winterhard", "window": { "kind": "dates", "from": "11-01", "to": "11-30" },
+      "description": "In de volle grond overleeft rozemarijn de meeste winters als de grond goed doorlaat. Zet een pot bij strenge vorst tegen een muur of in een koude schuur, en bedek de plant met vlies bij temperaturen onder -10 °C."
+    }
   ]
 }

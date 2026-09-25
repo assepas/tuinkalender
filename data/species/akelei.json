@@ -8,9 +8,28 @@
   "nativeStatus": "inheems",
   "appearance": { "shape": "bloem", "count": 5, "flowerColor": "#5E5FA8", "flowerColorName": "blauwpaars" },
   "bloom": { "from": "05-01", "to": "06-15" },
+  "growing": { "sun": ["zon", "halfschaduw"], "soil": ["zand", "leem", "klei"], "moisture": ["normaal"], "spacingCm": 30 },
+  "info": {
+    "intro": "Een sierlijke vaste plant met klokjesachtige bloemen in mei en juni. Hij is inheems, trekt hommels en zaait zichzelf graag uit, zodat je er vanzelf meer van krijgt.",
+    "water": "Na het aanslaan heeft akelei weinig water nodig. Geef alleen in lange droge periodes, vooral in de eerste zomer na het planten.",
+    "tips": [
+      "Akelei leeft maar een paar jaar, maar zaait zichzelf uit; laat een paar zaaddozen staan als je nieuwe planten wilt.",
+      "Gele gangetjes in het blad komen van de akeleimineervlieg; knip aangetast blad weg.",
+      "Zaailingen lijken vaak niet op de ouderplant: kleuren mengen zich."
+    ]
+  },
   "tasks": [
-    { "id": "zaaien", "type": "zaaien", "window": { "kind": "dates", "from": "03-01", "to": "05-01" } },
-    { "id": "planten", "type": "planten", "window": { "kind": "dates", "from": "03-15", "to": "05-01" } },
-    { "id": "onderhoud", "type": "onderhoud", "window": { "kind": "dates", "from": "06-15", "to": "07-15" }, "note": "Uitgebloeide stengels verwijderen tegen mineervlieg en voor nette zelfzaai" }
+    {
+      "id": "zaaien", "type": "zaaien", "window": { "kind": "dates", "from": "03-01", "to": "05-01" },
+      "description": "Zaai buiten op een plek waar je ze wilt hebben, of in een bak. Akeleizaad heeft licht en een koude periode nodig om te kiemen: druk het alleen aan en bedek het niet. Zaad dat je in de herfst zaait, kiemt het voorjaar erna het best."
+    },
+    {
+      "id": "planten", "type": "planten", "window": { "kind": "dates", "from": "03-15", "to": "05-01" },
+      "description": "Plant op 30 cm afstand in gewone tuingrond, even diep als in de pot. Geef na het planten goed water en houd de grond de eerste weken vochtig."
+    },
+    {
+      "id": "onderhoud", "type": "onderhoud", "window": { "kind": "dates", "from": "06-15", "to": "07-15" },
+      "description": "Knip na de bloei de uitgebloeide stengels af tot vlak boven het blad. Dat houdt de plant netjes, beperkt de mineervlieg en voorkomt dat hij overal uitzaait. Wil je nieuwe planten, laat dan een paar stengels met zaaddozen staan."
+    }
   ]
 }

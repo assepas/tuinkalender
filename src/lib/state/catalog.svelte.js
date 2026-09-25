@@ -14,6 +14,9 @@ const CACHE_KEY = "tuintaak:catalog:v1";
 const bundledParts = { species: speciesList, taskTypes, regions: Object.values(regions) };
 
 function readCache() {
+  // Zonder backend geen databasekopie gebruiken: dan zijn de bestanden in
+  // data/ (meegebakken) leidend, ook als er nog een oude cache in de browser staat.
+  if (!supabase) return null;
   try {
     const parts = JSON.parse(localStorage.getItem(CACHE_KEY));
     return isValidCatalogParts(parts) ? parts : null;

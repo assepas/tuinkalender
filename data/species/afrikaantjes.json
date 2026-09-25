@@ -8,9 +8,29 @@
   "nativeStatus": "exoot",
   "appearance": { "shape": "bloem", "count": 8, "flowerColor": "#E8873A", "flowerColorName": "oranje" },
   "bloom": { "from": "06-01", "to": "10-01" },
+  "growing": { "sun": ["zon"], "soil": ["zand", "leem", "klei"], "moisture": ["normaal", "droog"], "spacingCm": 20 },
+  "info": {
+    "intro": "Vrolijke, makkelijke zomerbloeiers in oranje en geel die tot de eerste vorst doorbloeien. Ze worden vaak tussen groenten gezet omdat hun wortels schadelijke aaltjes in de grond tegengaan.",
+    "water": "Afrikaantjes kunnen tegen een stootje. Geef water als de grond droog aanvoelt, vooral kort na het uitplanten en in pot.",
+    "tips": [
+      "Zet ze tussen tomaten, kool of aardappels: ze helpen tegen aaltjes in de bodem.",
+      "Slakken lusten de jonge plantjes; bescherm ze de eerste weken.",
+      "Ze zijn eenjarig: na de vorst gaan ze dood en kun je ze op de composthoop gooien."
+    ]
+  },
   "tasks": [
-    { "id": "voorzaaien", "type": "zaaien", "location": "kas", "window": { "kind": "dates", "from": "03-15", "to": "04-15" } },
-    { "id": "planten", "type": "planten", "window": { "kind": "relative", "anchor": "lastFrost", "fromWeeks": 0, "toWeeks": 2 } },
-    { "id": "dode-bloemen-verwijderen", "type": "onderhoud", "window": { "kind": "recurring", "from": "06-15", "to": "09-30", "every": "week" } }
+    {
+      "id": "voorzaaien", "type": "zaaien", "location": "kas", "window": { "kind": "dates", "from": "03-15", "to": "04-15" },
+      "description": "Zaai in potjes of een zaaibak met zaaigrond op de vensterbank, de zaadjes net onder de grond. Houd de grond vochtig en warm (rond 18 °C). Zet de zaailingen als ze een paar blaadjes hebben apart in eigen potjes."
+    },
+    {
+      "id": "planten", "type": "planten", "window": { "kind": "relative", "anchor": "lastFrost", "fromWeeks": 0, "toWeeks": 2 },
+      "note": "Pas na de laatste nachtvorst",
+      "description": "Laat de plantjes eerst een week wennen aan buiten door ze overdag buiten te zetten (afharden). Plant ze daarna op 20 cm afstand op een zonnige plek en geef water. Ze kunnen niet tegen vorst."
+    },
+    {
+      "id": "dode-bloemen-verwijderen", "type": "onderhoud", "window": { "kind": "recurring", "from": "06-15", "to": "09-30", "every": "week" },
+      "description": "Knijp of knip uitgebloeide bloemen weg, net boven een blad. De plant steekt zijn energie dan in nieuwe knoppen in plaats van in zaad, en blijft zo de hele zomer bloeien."
+    }
   ]
 }

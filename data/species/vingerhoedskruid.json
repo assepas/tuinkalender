@@ -8,9 +8,29 @@
   "nativeStatus": "inheems",
   "appearance": { "shape": "aar", "count": 8, "flowerColor": "#C097B0", "flowerColorName": "roze-paars" },
   "bloom": { "from": "06-01", "to": "07-31" },
+  "growing": { "sun": ["halfschaduw", "zon", "schaduw"], "soil": ["zand", "leem", "veen"], "moisture": ["normaal", "vochtig"], "spacingCm": 40 },
+  "info": {
+    "intro": "Een tweejarige met hoge aren vol klokvormige bloemen in juni. Het eerste jaar maakt hij alleen een bladrozet, het tweede jaar bloeit hij en daarna sterft hij af. Hommels kruipen graag in de bloemen.",
+    "water": "Houd de grond licht vochtig, vooral in het eerste jaar. Op een plek in de halfschaduw is dat meestal vanzelf zo.",
+    "tips": [
+      "Alle delen van de plant zijn erg giftig; niet planten waar kleine kinderen of huisdieren eraan kunnen knabbelen.",
+      "Laat een paar aren uitzaaien, dan heb je er elk jaar vanzelf bloeiende planten.",
+      "Draag handschoenen als je hem snoeit of verplant."
+    ]
+  },
   "tasks": [
-    { "id": "zaaien", "type": "zaaien", "window": { "kind": "dates", "from": "05-15", "to": "07-15" }, "note": "Bloeit pas het tweede jaar; zaai jaarlijks bij voor een doorlopend effect" },
-    { "id": "planten", "type": "planten", "window": { "kind": "dates", "from": "09-01", "to": "10-01" } },
-    { "id": "onderhoud", "type": "onderhoud", "window": { "kind": "dates", "from": "08-01", "to": "08-31" }, "note": "Uitgebloeide aren laten staan voor zelfzaai, of verwijderen om verspreiding te beperken" }
+    {
+      "id": "zaaien", "type": "zaaien", "window": { "kind": "dates", "from": "05-15", "to": "07-15" },
+      "note": "Bloeit pas volgend jaar",
+      "description": "Zaai in de zomer in een bak of direct op de plek. Het zaad is heel fijn en heeft licht nodig: strooi het uit en druk het alleen aan. De plantjes vormen dit jaar een rozet en bloeien volgend jaar."
+    },
+    {
+      "id": "planten", "type": "planten", "window": { "kind": "dates", "from": "09-01", "to": "10-01" },
+      "description": "Plant de rozetten in september op zo'n 40 cm afstand op hun vaste plek. Ze wortelen dan nog voor de winter en bloeien volgend voorjaar. Geef na het planten water."
+    },
+    {
+      "id": "onderhoud", "type": "onderhoud", "window": { "kind": "dates", "from": "08-01", "to": "08-31" },
+      "description": "Laat een paar uitgebloeide aren staan tot de zaaddozen bruin zijn en openspringen: zo zaait hij zich uit. Knip de overige aren weg; soms komen er dan nog kleinere zijaren."
+    }
   ]
 }

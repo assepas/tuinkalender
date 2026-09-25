@@ -22,10 +22,20 @@ const FIELD_LABELS = {
   "/bloom/from": "bloei van",
   "/bloom/to": "bloei tot",
   "/tasks": "taken",
+  "/growing/sun": "licht",
+  "/growing/soil": "grond",
+  "/growing/moisture": "vocht",
+  "/growing/spacingCm": "plantafstand",
+  "/info/intro": "introductie",
+  "/info/water": "water geven",
+  "/info/tips": "tips",
 };
 
 function describePath(path) {
   if (FIELD_LABELS[path]) return FIELD_LABELS[path];
+  // Een los item in een lijst, bv. /growing/sun/0 → "licht".
+  const parent = path.replace(/\/\d+$/, "");
+  if (parent !== path && FIELD_LABELS[parent]) return FIELD_LABELS[parent];
   const task = path.match(/^\/tasks\/(\d+)(\/.*)?$/);
   if (task) return `taak ${Number(task[1]) + 1}${task[2] ? ` (${task[2].slice(1).replaceAll("/", " → ")})` : ""}`;
   return path.slice(1).replaceAll("/", " → ") || "soort";

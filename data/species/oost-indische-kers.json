@@ -8,9 +8,29 @@
   "nativeStatus": "exoot",
   "appearance": { "shape": "bloem", "count": 5, "flowerColor": "#E8873A", "flowerColorName": "oranje" },
   "bloom": { "from": "06-01", "to": "10-01" },
+  "growing": { "sun": ["zon", "halfschaduw"], "soil": ["zand", "leem", "klei"], "moisture": ["normaal", "droog"], "spacingCm": 30 },
+  "info": {
+    "intro": "Een snelgroeiende eenjarige met oranje, gele of rode bloemen en ronde bladeren. Blad, bloemen en onrijpe zaden zijn eetbaar en smaken pittig, een beetje als tuinkers.",
+    "water": "Geef water als de grond droog is. Op arme, niet te natte grond bloeit hij het rijkst; te veel water en mest geven vooral blad.",
+    "tips": [
+      "Klimmende rassen kunnen langs een hek of rek omhoog; kruipende rassen bedekken de grond.",
+      "Geef hem geen mest, anders krijg je veel blad en weinig bloemen.",
+      "Zaait zich soms zelf uit met de grote zaden die op de grond vallen."
+    ]
+  },
   "tasks": [
-    { "id": "zaaien", "type": "zaaien", "window": { "kind": "relative", "anchor": "lastFrost", "fromWeeks": 0, "toWeeks": 1 }, "note": "Groot zaad, kan direct de grond in" },
-    { "id": "oogsten", "type": "oogsten", "window": { "kind": "dates", "from": "06-15", "to": "09-30" }, "note": "Blad, bloem en onrijp zaad zijn eetbaar" },
-    { "id": "onderhoud", "type": "onderhoud", "window": { "kind": "recurring", "from": "06-01", "to": "09-15", "every": "2weeks" }, "note": "Trekt bladluis aan — goed te gebruiken als vangplant" }
+    {
+      "id": "zaaien", "type": "zaaien", "window": { "kind": "relative", "anchor": "lastFrost", "fromWeeks": 0, "toWeeks": 1 },
+      "note": "Pas na de laatste nachtvorst",
+      "description": "Leg de grote zaden 2 cm diep direct op de plek waar ze moeten groeien, op zo'n 30 cm afstand. Een nacht weken in lauw water maakt het kiemen sneller. Na een week of twee komen ze op."
+    },
+    {
+      "id": "oogsten", "type": "oogsten", "window": { "kind": "dates", "from": "06-15", "to": "09-30" },
+      "description": "Pluk jonge bladeren en open bloemen voor in een salade. De groene, onrijpe zaden kun je inleggen in azijn als 'kappertjes'. Oogst liefst 's ochtends, dan zijn ze het frisst."
+    },
+    {
+      "id": "onderhoud", "type": "onderhoud", "window": { "kind": "recurring", "from": "06-01", "to": "09-15", "every": "2weeks" },
+      "description": "Oost-Indische kers trekt zwarte bladluis aan en werkt zo als lokplant: de luizen gaan dan niet naar je bonen. Kijk regelmatig onder de bladeren en knip zwaar aangetaste stengels weg, of spuit ze schoon met water."
+    }
   ]
 }

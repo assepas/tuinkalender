@@ -32,6 +32,24 @@ export const CATEGORY_LABELS = {
   boom: "Boom",
 };
 
+// Groeiomstandigheden (species.growing, vaste enums in species.schema.json).
+// Gedeeld door het detailvenster, de beheer-editor en een eventueel filter.
+// "Licht" i.p.v. "standplaats": dat woord is in de app al de plek in je tuin.
+export const SUN_ORDER = ["zon", "halfschaduw", "schaduw"];
+export const SUN_LABELS = { zon: "Zon", halfschaduw: "Halfschaduw", schaduw: "Schaduw" };
+
+export const SOIL_ORDER = ["zand", "klei", "leem", "veen"];
+export const SOIL_LABELS = { zand: "Zand", klei: "Klei", leem: "Leem", veen: "Veen" };
+
+export const MOISTURE_ORDER = ["droog", "normaal", "vochtig", "nat"];
+export const MOISTURE_LABELS = { droog: "Droog", normaal: "Normaal", vochtig: "Vochtig", nat: "Nat" };
+
+/** ["halfschaduw", "zon"] → "Zon, halfschaduw" (in vaste volgorde). */
+export function formatEnumList(values, order, labels) {
+  const text = order.filter((v) => values?.includes(v)).map((v) => labels[v].toLowerCase()).join(", ");
+  return text.charAt(0).toUpperCase() + text.slice(1);
+}
+
 /** @param {Array<{id: string}>} locations */
 export function buildLocationIndex(locations) {
   return Object.fromEntries((locations ?? []).map((l) => [l.id, l]));

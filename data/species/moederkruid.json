@@ -8,9 +8,28 @@
   "nativeStatus": "exoot",
   "appearance": { "shape": "bloem", "count": 10, "flowerColor": "#F5F1E6", "flowerColorName": "wit-geel" },
   "bloom": { "from": "06-01", "to": "09-01" },
+  "growing": { "sun": ["zon", "halfschaduw"], "soil": ["zand", "leem", "klei"], "moisture": ["normaal", "droog"], "spacingCm": 30 },
+  "info": {
+    "intro": "Een oud geneeskruid met massa's kleine witte madeliefjesbloemen in de zomer. Het is makkelijk, bloeit lang en trekt zweefvliegen en andere nuttige insecten.",
+    "water": "Moederkruid kan goed tegen droogte. Geef alleen water na het zaaien of planten en tijdens lange droge periodes.",
+    "tips": [
+      "Zaait zichzelf flink uit; knip op tijd uitgebloeide bloemen weg als je dat niet wilt.",
+      "Het blad heeft een sterke, bittere geur die sommige plagen op afstand houdt.",
+      "Leeft een paar jaar; laat een paar zaailingen staan om het te vernieuwen."
+    ]
+  },
   "tasks": [
-    { "id": "zaaien", "type": "zaaien", "window": { "kind": "dates", "from": "04-01", "to": "05-15" } },
-    { "id": "oogsten", "type": "oogsten", "window": { "kind": "dates", "from": "06-01", "to": "09-01" } },
-    { "id": "onderhoud", "type": "onderhoud", "window": { "kind": "dates", "from": "09-01", "to": "09-30" }, "note": "Uitgebloeide stengels verwijderen om overmatige zelfzaai te beperken" }
+    {
+      "id": "zaaien", "type": "zaaien", "window": { "kind": "dates", "from": "04-01", "to": "05-15" },
+      "description": "Zaai buiten op de plek waar je het wilt, of in een bak. Het zaad is fijn en heeft licht nodig: strooi het uit en druk het alleen aan. Dun later uit tot zo'n 30 cm afstand."
+    },
+    {
+      "id": "oogsten", "type": "oogsten", "window": { "kind": "dates", "from": "06-01", "to": "09-01" },
+      "description": "Pluk bloemen en blad als de plant in bloei staat, op een droge dag. Hang de stengels in bosjes ondersteboven te drogen op een luchtige, schaduwrijke plek."
+    },
+    {
+      "id": "onderhoud", "type": "onderhoud", "window": { "kind": "dates", "from": "09-01", "to": "09-30" },
+      "description": "Knip na de bloei de uitgebloeide stengels af tot een handbreedte boven de grond. Dat voorkomt dat hij zich overal uitzaait en de plant komt voller terug."
+    }
   ]
 }

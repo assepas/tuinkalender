@@ -8,9 +8,29 @@
   "nativeStatus": "exoot",
   "appearance": { "shape": "aar", "count": 4, "flowerColor": "#F5F1E6", "flowerColorName": "wit" },
   "bloom": { "from": "07-15", "to": "09-01" },
+  "growing": { "sun": ["zon"], "soil": ["zand", "leem", "klei"], "moisture": ["normaal"], "spacingCm": 25 },
+  "info": {
+    "intro": "Het bekende geurige keukenkruid voor tomaat en pesto. Basilicum houdt van warmte en groeit in Nederland het best in een pot op een zonnige, beschutte plek of in de kas.",
+    "water": "Geef 's ochtends water op de grond, niet over het blad, en laat de grond tussendoor iets opdrogen. Te nat en koud is de grootste vijand.",
+    "tips": [
+      "Pluk altijd de toppen boven een bladpaar, niet losse onderste blaadjes; zo wordt de plant voller.",
+      "Haal bloemknoppen weg: na de bloei wordt het blad minder lekker.",
+      "Een supermarktpot bestaat uit veel plantjes in één pot; verdeel ze over een paar potten, dan groeien ze beter."
+    ]
+  },
   "tasks": [
-    { "id": "zaaien", "type": "zaaien", "location": "kas", "window": { "kind": "dates", "from": "04-01", "to": "05-15" }, "note": "Binnen op de vensterbank of in de kas" },
-    { "id": "uitplanten", "type": "planten", "window": { "kind": "relative", "anchor": "lastFrost", "fromWeeks": 1, "toWeeks": 3 } },
-    { "id": "oogsten", "type": "oogsten", "window": { "kind": "recurring", "from": "06-15", "to": "09-30", "every": "week" }, "note": "Toppen knijpen bevordert de groei" }
+    {
+      "id": "zaaien", "type": "zaaien", "location": "kas", "window": { "kind": "dates", "from": "04-01", "to": "05-15" },
+      "description": "Zaai in een potje met zaaigrond op een warme vensterbank (20 °C of meer) en bedek de zaadjes nauwelijks. Houd de grond vochtig, maar niet nat. Na een week of twee komen ze op."
+    },
+    {
+      "id": "uitplanten", "type": "planten", "window": { "kind": "relative", "anchor": "lastFrost", "fromWeeks": 1, "toWeeks": 3 },
+      "note": "Pas als de nachten warm zijn",
+      "description": "Zet basilicum pas buiten als het ook 's nachts boven de 10 °C blijft, meestal eind mei. Kies de zonnigste, beschutte plek of een grote pot. Bij koude nachten gaat hij snel achteruit."
+    },
+    {
+      "id": "oogsten", "type": "oogsten", "window": { "kind": "recurring", "from": "06-15", "to": "09-30", "every": "week" },
+      "description": "Knip of knijp wekelijks de toppen eraf, net boven een paar blaadjes. Op die plek groeien twee nieuwe scheuten, zodat de plant voller wordt en je steeds meer oogst."
+    }
   ]
 }

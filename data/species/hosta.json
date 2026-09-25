@@ -8,10 +8,32 @@
   "nativeStatus": "onbekend",
   "appearance": { "shape": "bloem", "count": 6, "flowerColor": "#B79FC9", "flowerColorName": "lila" },
   "bloom": { "from": "07-15", "to": "08-15" },
+  "growing": { "sun": ["schaduw", "halfschaduw"], "soil": ["klei", "leem", "veen"], "moisture": ["vochtig", "normaal"], "spacingCm": 50 },
+  "info": {
+    "intro": "Een bladplant voor de schaduw met grote groene, blauwe of bonte bladeren en in de zomer lila of witte bloemtrossen. Een hosta kan tientallen jaren op dezelfde plek staan.",
+    "water": "Houd de grond vochtig, zeker in de zomer. Geef bij droogte op de grond en niet over het blad, dan krijgen slakken minder kans.",
+    "tips": [
+      "Slakken zijn de grootste vijand; bescherm de jonge scheuten in april en mei.",
+      "Blauwbladige hosta's houden hun kleur het best in de schaduw.",
+      "In een pot blijft de plant vaak slakvrijer."
+    ]
+  },
   "tasks": [
-    { "id": "planten", "type": "planten", "window": { "kind": "dates", "from": "03-15", "to": "05-01" } },
-    { "id": "bemesten", "type": "bemesten", "window": { "kind": "dates", "from": "04-01", "to": "04-30" } },
-    { "id": "delen", "type": "delen", "window": { "kind": "dates", "from": "09-15", "to": "10-15" }, "note": "Elke 3-4 jaar delen houdt de plant vitaal" },
-    { "id": "winterhard", "type": "winterhard", "window": { "kind": "dates", "from": "11-01", "to": "11-30" }, "note": "Blad laten zitten als winterbescherming, in voorjaar verwijderen" }
+    {
+      "id": "planten", "type": "planten", "window": { "kind": "dates", "from": "03-15", "to": "05-01" },
+      "description": "Plant de hosta even diep als in de pot, in grond met veel compost. Kies een plek in de schaduw of halfschaduw; in de volle zon verbrandt het blad. Houd de eerste weken vochtig."
+    },
+    {
+      "id": "bemesten", "type": "bemesten", "window": { "kind": "dates", "from": "04-01", "to": "04-30" },
+      "description": "Strooi in april, als de scheuten opkomen, een laag compost of gedroogde koemest rond de plant. Dat geeft groot, stevig blad."
+    },
+    {
+      "id": "delen", "type": "delen", "window": { "kind": "dates", "from": "09-15", "to": "10-15" },
+      "description": "Steek de pol om de paar jaar in het najaar uit en snijd hem met een scherpe schop in stukken met elk een paar knoppen. Plant de stukken meteen terug en geef water."
+    },
+    {
+      "id": "winterhard", "type": "winterhard", "window": { "kind": "dates", "from": "11-01", "to": "11-30" },
+      "description": "Laat het afgestorven blad in de winter liggen: het beschermt de wortels. Haal het in het vroege voorjaar weg, voordat de nieuwe scheuten komen, dan hebben slakken minder schuilplekken."
+    }
   ]
 }

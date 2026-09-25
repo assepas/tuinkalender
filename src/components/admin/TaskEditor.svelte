@@ -39,6 +39,11 @@
     if (value) task.note = value;
     else delete task.note;
   }
+
+  function setDescription(value) {
+    if (value.trim()) task.description = value;
+    else delete task.description;
+  }
 </script>
 
 <fieldset class="task-editor">
@@ -120,7 +125,17 @@
     {/if}
   </div>
 
-  <label for="{prefix}-note">Notitie</label>
+  <label for="{prefix}-description">Uitleg <span class="hint">(detailvenster: hoe, waar op letten, waarom)</span></label>
+  <textarea
+    id="{prefix}-description"
+    rows="3"
+    value={task.description ?? ""}
+    oninput={(e) => setDescription(e.currentTarget.value)}
+  ></textarea>
+
+  <label for="{prefix}-note" class="note-label">
+    Korte notitie <span class="hint">(maandoverzicht en print — alleen als het echt nodig is)</span>
+  </label>
   <input id="{prefix}-note" type="text" value={task.note ?? ""} oninput={(e) => setNote(e.currentTarget.value)} />
 
   {#if task.conditions}
@@ -148,6 +163,10 @@
 
   .task-editor .field-grid {
     margin-bottom: var(--space-3);
+  }
+
+  .note-label {
+    margin-top: var(--space-3);
   }
 
   .task-actions {

@@ -8,9 +8,30 @@
   "nativeStatus": "exoot",
   "appearance": { "shape": "aar", "count": 4, "flowerColor": "#E9E4D8", "flowerColorName": "wit-lila" },
   "bloom": { "from": "07-01", "to": "09-01" },
+  "growing": { "sun": ["zon"], "soil": ["zand", "leem"], "moisture": ["normaal"], "spacingCm": 60 },
+  "info": {
+    "intro": "Een struikje met blad dat heerlijk naar citroen ruikt; lekker als thee of in desserts. Hij is niet winterhard en staat daarom het best in een grote pot die je binnen kunt zetten.",
+    "water": "Geef in de zomer regelmatig water, zodat de potgrond licht vochtig blijft. In de winter binnen maar heel weinig: net genoeg om de kluit niet helemaal te laten uitdrogen.",
+    "tips": [
+      "Gebruik potgrond met wat zand of grit erdoor; hij houdt niet van natte voeten.",
+      "In het voorjaar lijkt de plant soms dood; wacht rustig af, hij loopt vaak pas in mei weer uit.",
+      "Knip in het voorjaar kale takken een derde terug, dan wordt hij voller."
+    ]
+  },
   "tasks": [
-    { "id": "planten", "type": "planten", "window": { "kind": "relative", "anchor": "lastFrost", "fromWeeks": 0, "toWeeks": 2 } },
-    { "id": "oogsten", "type": "oogsten", "window": { "kind": "dates", "from": "06-01", "to": "09-30" } },
-    { "id": "winterhard", "type": "winterhard", "window": { "kind": "dates", "from": "10-01", "to": "10-31" }, "note": "Niet winterhard: vorstvrij overwinteren, blad valt binnen deels af" }
+    {
+      "id": "planten", "type": "planten", "window": { "kind": "relative", "anchor": "lastFrost", "fromWeeks": 0, "toWeeks": 2 },
+      "note": "Pas na de laatste nachtvorst",
+      "description": "Zet de plant na de ijsheiligen buiten op een zonnige, beschutte plek. Verpot hem zo nodig in een grotere pot met goed doorlatende grond. Wen hem eerst een paar dagen aan de buitenlucht."
+    },
+    {
+      "id": "oogsten", "type": "oogsten", "window": { "kind": "dates", "from": "06-01", "to": "09-30" },
+      "description": "Pluk steeds de jonge toppen en bladeren; zo blijft de plant compact. Blad dat je niet direct gebruikt kun je in een bosje laten drogen voor thee in de winter."
+    },
+    {
+      "id": "winterhard", "type": "winterhard", "window": { "kind": "dates", "from": "10-01", "to": "10-31" },
+      "note": "Vorstvrij binnenzetten",
+      "description": "Zet de pot binnen voordat het gaat vriezen, op een koele en lichte plek (5 tot 10 °C), zoals een onverwarmde serre of garage met raam. Het blad valt dan vaak af; dat is normaal. Geef in de winter heel weinig water."
+    }
   ]
 }

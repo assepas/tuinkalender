@@ -3,7 +3,16 @@
   // schema als `npm run validate`. Werkt op een kopie (draft); pas bij
   // "Opslaan" gaat het naar de database.
   import { catalog } from "../../lib/state/catalog.svelte.js";
-  import { CATEGORY_ORDER, CATEGORY_LABELS } from "../../lib/domain/plantings.js";
+  import {
+    CATEGORY_ORDER,
+    CATEGORY_LABELS,
+    SUN_ORDER,
+    SUN_LABELS,
+    SOIL_ORDER,
+    SOIL_LABELS,
+    MOISTURE_ORDER,
+    MOISTURE_LABELS,
+  } from "../../lib/domain/plantings.js";
   import { validateSpecies, slugify } from "../../lib/domain/speciesValidation.js";
   import { saveSpecies, deleteSpecies } from "../../lib/storage/catalogAdmin.js";
   import { gardenState } from "../../lib/state/garden.svelte.js";
@@ -30,7 +39,14 @@
     };
   }
 
-  let draft = $state(structuredClone($state.snapshot(species) ?? blankSpecies()));
+  let draft = $state(withEditableInfo(structuredClone($state.snapshot(species) ?? blankSpecies())));
+
+  // Het formulier bindt direct op growing/info; lege velden haalt cleaned() weer weg.
+  function withEditableInfo(s) {
+    s.growing ??= {};
+    s.info ??= {};
+    return s;
+  }
   let idTouched = $state(!isNew);
   let tab = $state("form"); // "form" | "json"
   let jsonText = $state("");
@@ -63,12 +79,44 @@
       delete out.appearance.fruitColor;
     }
     if (Array.isArray(out.tags) && out.tags.length === 0) delete out.tags;
+    if (out.growing) {
+      for (const k of ["sun", "soil", "moisture"]) if (!out.growing[k]?.length) delete out.growing[k];
+      if (!out.growing.spacingCm) delete out.growing.spacingCm;
+      if (Object.keys(out.growing).length === 0) delete out.growing;
+    }
+    if (out.info) {
+      for (const k of ["intro", "water"]) if (!out.info[k]?.trim()) delete out.info[k];
+      if (!out.info.tips?.length) delete out.info.tips;
+      if (Object.keys(out.info).length === 0) delete out.info;
+    }
     return out;
   }
 
   function setName(value) {
     draft.name = value;
     if (!idTouched) draft.id = slugify(value);
+  }
+
+  /** Zet of haalt één waarde weg uit een growing-lijst (checkboxgroep). */
+  function toggleGrowing(field, value, on) {
+    const current = new Set(draft.growing[field] ?? []);
+    if (on) current.add(value);
+    else current.delete(value);
+    const order = { sun: SUN_ORDER, soil: SOIL_ORDER, moisture: MOISTURE_ORDER }[field];
+    draft.growing[field] = order.filter((v) => current.has(v));
+  }
+
+  function setTips(value) {
+    draft.info.tips = value
+      .split("\n")
+      .map((t) => t.trim())
+      .filter(Boolean);
+  }
+
+  function setSpacing(value) {
+    const n = Number.parseInt(value, 10);
+    if (Number.isFinite(n) && n > 0) draft.growing.spacingCm = n;
+    else delete draft.growing.spacingCm;
   }
 
   function setTags(value) {
@@ -210,6 +258,35 @@
       </div>
     </div>
 
+    <h3>Plantinformatie</h3>
+    <div class="field-grid">
+      {#each [["sun", "Licht", SUN_ORDER, SUN_LABELS], ["soil", "Grond", SOIL_ORDER, SOIL_LABELS], ["moisture", "Vocht", MOISTURE_ORDER, MOISTURE_LABELS]] as [field, title, order, labels] (field)}
+        <fieldset class="check-group">
+          <legend>{title}</legend>
+          {#each order as value (value)}
+            <label class="checkbox-label">
+              <input
+                type="checkbox"
+                checked={draft.growing[field]?.includes(value) ?? false}
+                onchange={(e) => toggleGrowing(field, value, e.currentTarget.checked)}
+              />
+              {labels[value]}
+            </label>
+          {/each}
+        </fieldset>
+      {/each}
+      <div>
+        <label for="sp-spacing">Plantafstand (cm)</label>
+        <input id="sp-spacing" type="number" min="1" value={draft.growing.spacingCm ?? ""} onchange={(e) => setSpacing(e.currentTarget.value)} />
+      </div>
+    </div>
+    <label for="sp-intro">Introductie <span class="hint">(wat voor plant, waarom kweken)</span></label>
+    <textarea id="sp-intro" rows="3" bind:value={draft.info.intro}></textarea>
+    <label for="sp-water" class="spaced-label">Water geven</label>
+    <textarea id="sp-water" rows="2" bind:value={draft.info.water}></textarea>
+    <label for="sp-tips" class="spaced-label">Tips <span class="hint">(één per regel)</span></label>
+    <textarea id="sp-tips" rows="4" value={(draft.info.tips ?? []).join("\n")} onchange={(e) => setTips(e.currentTarget.value)}></textarea>
+
     <h3>Uiterlijk</h3>
     <div class="field-grid">
       <div>
@@ -340,6 +417,26 @@
 
   .checkbox-label input {
     width: auto;
+  }
+
+  .check-group {
+    border: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .check-group legend {
+    font-size: var(--step-1);
+    color: var(--color-ink-muted);
+    margin-bottom: var(--space-1);
+  }
+
+  .check-group .checkbox-label {
+    margin-bottom: var(--space-1);
+  }
+
+  .spaced-label {
+    margin-top: var(--space-3);
   }
 
   .json-editor {

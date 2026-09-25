@@ -8,9 +8,29 @@
   "nativeStatus": "exoot",
   "appearance": { "shape": "bloem", "count": 2, "flowerColor": "#5E5FA8", "flowerColorName": "blauwpaars" },
   "bloom": { "from": "06-01", "to": "08-15" },
+  "growing": { "sun": ["zon"], "soil": ["zand", "leem", "klei"], "moisture": ["normaal", "droog"], "spacingCm": 40 },
+  "info": {
+    "intro": "Een vaste plant met rechte, paarsblauwe bloemaren in juni en juli, en na terugknippen vaak nog een keer in de nazomer. Een topper voor bijen en vlinders.",
+    "water": "Salvia kan goed tegen droogte zodra hij aangeslagen is. Geef in de eerste zomer regelmatig water, daarna alleen bij lange droogte.",
+    "tips": [
+      "Plant in groepjes van drie of vijf voor een mooi effect in de border.",
+      "Te rijke of natte grond maakt de plant slap; hij bloeit het best op wat armere grond.",
+      "Laat de laatste bloei in de herfst staan; de stengels zien er in de winter mooi uit met rijp."
+    ]
+  },
   "tasks": [
-    { "id": "planten", "type": "planten", "window": { "kind": "dates", "from": "04-01", "to": "05-15" } },
-    { "id": "snoeien", "type": "snoeien", "importance": "licht", "window": { "kind": "dates", "from": "07-15", "to": "08-01" }, "note": "Terugknippen na eerste bloei geeft een tweede bloeigolf" },
-    { "id": "delen", "type": "delen", "window": { "kind": "dates", "from": "03-15", "to": "04-15" }, "note": "Elke 3 jaar delen voorkomt kale middens" }
+    {
+      "id": "planten", "type": "planten", "window": { "kind": "dates", "from": "04-01", "to": "05-15" },
+      "description": "Plant op zo'n 40 cm afstand op een zonnige plek, even diep als in de pot. Geef na het planten goed water en houd de grond de eerste weken vochtig."
+    },
+    {
+      "id": "snoeien", "type": "snoeien", "importance": "licht", "window": { "kind": "dates", "from": "07-15", "to": "08-01" },
+      "note": "Na eerste bloei terugknippen",
+      "description": "Knip na de eerste bloei alle bloemstengels terug tot net boven het blad aan de voet. Binnen een paar weken komen er nieuwe knoppen, voor een tweede bloei in augustus en september."
+    },
+    {
+      "id": "delen", "type": "delen", "window": { "kind": "dates", "from": "03-15", "to": "04-15" },
+      "description": "Steek in het voorjaar de pol uit en verdeel hem in stukken met wortels en jonge scheuten. Gooi het houtige, kale midden weg en plant de verse buitenste stukken terug."
+    }
   ]
 }

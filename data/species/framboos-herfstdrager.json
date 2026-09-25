@@ -8,10 +8,33 @@
   "nativeStatus": "inheems",
   "appearance": { "shape": "vrucht", "count": 5, "flowerColor": "#F5F1E6", "flowerColorName": "wit", "fruitColor": "#C4443A" },
   "bloom": { "from": "06-15", "to": "08-15" },
+  "growing": { "sun": ["zon", "halfschaduw"], "soil": ["leem", "zand", "klei"], "moisture": ["normaal", "vochtig"], "spacingCm": 50 },
+  "info": {
+    "intro": "Een framboos die vrucht draagt op de ranken van hetzelfde jaar, van eind augustus tot de vorst. Hij is makkelijker dan de zomerframboos, want je knipt in de winter gewoon alles af.",
+    "water": "Frambozen hebben ondiepe wortels en drogen snel uit. Geef tijdens het rijpen in droge periodes twee keer per week water en houd de grond bedekt met mulch.",
+    "tips": [
+      "Houd de grond onder de planten bedekt met compost of houtsnippers; frambozen houden van humusrijke grond.",
+      "Zet ze niet op natte, zware grond: de wortels rotten dan.",
+      "Een paar draden langs de rij voorkomt dat de ranken omvallen onder het gewicht van de vruchten."
+    ]
+  },
   "tasks": [
-    { "id": "snoeien", "type": "snoeien", "importance": "hoofd", "window": { "kind": "dates", "from": "02-01", "to": "02-28" }, "note": "In tegenstelling tot zomerframboos: alle ranken tot de grond afknippen" },
-    { "id": "bemesten", "type": "bemesten", "window": { "kind": "dates", "from": "03-01", "to": "03-31" } },
-    { "id": "oogsten", "type": "oogsten", "window": { "kind": "dates", "from": "08-15", "to": "10-15" } },
-    { "id": "delen", "type": "delen", "window": { "kind": "dates", "from": "10-15", "to": "11-15" }, "note": "Wortelopslag uitgraven en verplanten" }
+    {
+      "id": "snoeien", "type": "snoeien", "importance": "hoofd", "window": { "kind": "dates", "from": "02-01", "to": "02-28" },
+      "note": "Alle ranken tot de grond",
+      "description": "Knip in februari alle ranken vlak bij de grond af. In het voorjaar komen er nieuwe ranken die in de herfst vrucht dragen. Zo heb je geen gedoe met oude en jonge ranken uit elkaar houden."
+    },
+    {
+      "id": "bemesten", "type": "bemesten", "window": { "kind": "dates", "from": "03-01", "to": "03-31" },
+      "description": "Strooi in maart een laag compost of gedroogde koemest over de rij. Frambozen houden van humusrijke grond, dus ook een laag blad of houtsnippers helpt."
+    },
+    {
+      "id": "oogsten", "type": "oogsten", "window": { "kind": "dates", "from": "08-15", "to": "10-15" },
+      "description": "Pluk de frambozen als ze helemaal rood zijn en zonder trekken van het kegeltje loslaten. Pluk om de twee dagen; overrijpe vruchten trekken fruitvliegjes aan."
+    },
+    {
+      "id": "delen", "type": "delen", "window": { "kind": "dates", "from": "10-15", "to": "11-15" },
+      "description": "Frambozen maken wortelopslag, nieuwe scheuten buiten de rij. Steek die in het najaar met een stuk wortel uit en plant ze op een nieuwe plek, of haal ze weg als de rij te breed wordt."
+    }
   ]
 }

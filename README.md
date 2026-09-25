@@ -16,6 +16,14 @@ npm install
 npm run dev
 ```
 
+Heb je Supabase ingesteld in `.env.local`, dan praat `npm run dev` met de
+database. Wil je lokaal zonder database werken (plantendata uit `data/`,
+tuin alleen in de browser), gebruik dan:
+
+```bash
+npm run dev:local
+```
+
 Open de getoonde localhost-URL. `npm run dev` bouwt eerst automatisch de
 databundel uit `/data` (via de `predev`-hook), dus wijzigingen in
 soortbestanden zijn zichtbaar na een herstart van de dev-server.

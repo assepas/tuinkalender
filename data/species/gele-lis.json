@@ -8,9 +8,28 @@
   "nativeStatus": "inheems",
   "appearance": { "shape": "bloem", "count": 3, "flowerColor": "#E8C93A", "flowerColorName": "geel" },
   "bloom": { "from": "05-15", "to": "07-01" },
+  "growing": { "sun": ["zon", "halfschaduw"], "soil": ["klei", "veen", "leem"], "moisture": ["nat", "vochtig"], "spacingCm": 50 },
+  "info": {
+    "intro": "Een inheemse iris met stralend gele bloemen in mei en juni. Hij groeit in natte grond en ondiep water, dus ideaal voor de rand van een vijver of een natte hoek.",
+    "water": "Gele lis wil altijd natte voeten. Staat hij niet in het water, houd de grond dan permanent nat, vooral in de zomer.",
+    "tips": [
+      "In een vijver kun je hem in een mand in 10 tot 20 cm water zetten.",
+      "Hij verspreidt zich flink in een natuurlijke oever; een mand houdt hem in toom.",
+      "Alle delen zijn giftig; draag handschoenen bij het delen."
+    ]
+  },
   "tasks": [
-    { "id": "planten", "type": "planten", "window": { "kind": "dates", "from": "03-15", "to": "05-01" }, "note": "Natte grond of ondiep water" },
-    { "id": "onderhoud", "type": "onderhoud", "window": { "kind": "dates", "from": "07-01", "to": "07-31" }, "note": "Uitgebloeide stengels verwijderen" },
-    { "id": "delen", "type": "delen", "window": { "kind": "dates", "from": "09-01", "to": "10-01" }, "note": "Elke 3-4 jaar delen houdt de plant vitaal" }
+    {
+      "id": "planten", "type": "planten", "window": { "kind": "dates", "from": "03-15", "to": "05-01" },
+      "description": "Plant de wortelstok net onder de grond in natte, zware grond, of in een vijvermand met klei op 10 tot 20 cm onder water. Houd hem de eerste weken goed nat."
+    },
+    {
+      "id": "onderhoud", "type": "onderhoud", "window": { "kind": "dates", "from": "07-01", "to": "07-31" },
+      "description": "Knip na de bloei de uitgebloeide bloemstengels af tot net boven het blad. Zo voorkom je dat hij zich overal uitzaait en blijft de plant netjes."
+    },
+    {
+      "id": "delen", "type": "delen", "window": { "kind": "dates", "from": "09-01", "to": "10-01" },
+      "description": "Haal de pol om de paar jaar uit de grond of mand en snijd de wortelstok in stukken met elk een waaier van blad. Knip het blad in tot een handbreedte en plant de stukken terug."
+    }
   ]
 }

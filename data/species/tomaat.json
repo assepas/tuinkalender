@@ -8,11 +8,38 @@
   "nativeStatus": "exoot",
   "appearance": { "shape": "vrucht", "count": 1, "flowerColor": "#E8C547", "flowerColorName": "geel", "fruitColor": "#D1382A" },
   "bloom": { "from": "06-15", "to": "09-01" },
+  "growing": { "sun": ["zon"], "soil": ["klei", "leem", "zand"], "moisture": ["normaal"], "spacingCm": 50 },
+  "info": {
+    "intro": "Zelfgekweekte tomaten zijn zoeter en geuriger dan welke winkeltomaat ook. Ze hebben veel warmte en zon nodig; in de kas of tegen een zuidmuur lukt het het best.",
+    "water": "Geef regelmatig en gelijkmatig water op de grond, niet over het blad. Wisselend nat en droog geeft gebarsten vruchten en neusrot (zwarte onderkant).",
+    "tips": [
+      "Buiten krijgt tomaat snel de tomatenziekte (bruine vlekken, rottend blad); een afdakje tegen regen helpt veel.",
+      "Kies voor buiten een ras dat ook buiten goed doet, bijvoorbeeld een cherrytomaat.",
+      "Haal in augustus de top eruit: late bloemen worden toch niet meer rijp."
+    ]
+  },
   "tasks": [
-    { "id": "zaaien-binnen", "type": "zaaien", "location": "kas", "window": { "kind": "dates", "from": "03-01", "to": "03-31" }, "note": "Voorzaaien binnen, ~20°C" },
-    { "id": "uitplanten", "type": "planten", "window": { "kind": "relative", "anchor": "lastFrost", "fromWeeks": 0, "toWeeks": 2 } },
-    { "id": "opbinden-dieven", "type": "snoeien", "importance": "hoofd", "window": { "kind": "recurring", "from": "06-01", "to": "09-01", "every": "week" }, "conditions": { "position": ["kas", "buiten"] }, "note": "Zijscheuten verwijderen en opbinden" },
-    { "id": "bemesten", "type": "bemesten", "window": { "kind": "recurring", "from": "06-01", "to": "08-15", "every": "2weeks" } },
-    { "id": "oogsten", "type": "oogsten", "window": { "kind": "dates", "from": "07-15", "to": "10-01" } }
+    {
+      "id": "zaaien-binnen", "type": "zaaien", "location": "kas", "window": { "kind": "dates", "from": "03-01", "to": "03-31" },
+      "description": "Zaai in maart in een potje of tray met zaaigrond, zo'n 0,5 cm diep, op een warme plek (rond 20 °C). Zet de plantjes na het opkomen koeler en heel licht, anders worden ze lang en slap. Verspeen ze naar eigen potjes als ze twee echte blaadjes hebben."
+    },
+    {
+      "id": "uitplanten", "type": "planten", "window": { "kind": "relative", "anchor": "lastFrost", "fromWeeks": 0, "toWeeks": 2 },
+      "note": "Pas na de laatste nachtvorst",
+      "description": "Plant uit als het 's nachts niet meer koud wordt. Plant diep, tot aan de onderste blaadjes: de stengel maakt extra wortels. Zet meteen een stevige stok of touw bij elke plant, zo'n 50 cm uit elkaar."
+    },
+    {
+      "id": "opbinden-dieven", "type": "snoeien", "importance": "hoofd", "window": { "kind": "recurring", "from": "06-01", "to": "09-01", "every": "week" }, "conditions": { "position": ["kas", "buiten"] },
+      "note": "Zijscheuten wegknijpen",
+      "description": "Knijp wekelijks de zijscheuten weg die in de oksel tussen stengel en blad groeien (dieven). Zo gaat de energie naar de vruchten en blijft de plant luchtig. Bind de hoofdstengel losjes aan de stok of draai hem om het touw. Struik- en cherrytomaten in een pot hoef je niet zo streng te dieven."
+    },
+    {
+      "id": "bemesten", "type": "bemesten", "window": { "kind": "recurring", "from": "06-01", "to": "08-15", "every": "2weeks" },
+      "description": "Geef vanaf de eerste vruchten om de twee weken vloeibare tomatenmest (rijk aan kalium) door het gietwater. Te veel stikstof geeft vooral blad en weinig tomaten."
+    },
+    {
+      "id": "oogsten", "type": "oogsten", "window": { "kind": "dates", "from": "07-15", "to": "10-01" },
+      "description": "Pluk tomaten als ze helemaal op kleur zijn en iets zacht aanvoelen; de smaak is dan op z'n best. Aan het eind van het seizoen kun je groene tomaten binnen naast een appel of banaan laten narijpen."
+    }
   ]
 }

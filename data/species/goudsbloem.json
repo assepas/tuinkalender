@@ -8,9 +8,28 @@
   "nativeStatus": "exoot",
   "appearance": { "shape": "bloem", "count": 9, "flowerColor": "#E8A93A", "flowerColorName": "geeloranje" },
   "bloom": { "from": "06-01", "to": "10-15" },
+  "growing": { "sun": ["zon", "halfschaduw"], "soil": ["zand", "leem", "klei"], "moisture": ["normaal"], "spacingCm": 25 },
+  "info": {
+    "intro": "Een makkelijke eenjarige met oranje en gele bloemen van juni tot de vorst. De bloemblaadjes zijn eetbaar en de plant lokt zweefvliegen, die bladluis opeten.",
+    "water": "Goudsbloemen zijn weinig veeleisend. Geef alleen water na het zaaien en in lange droge periodes.",
+    "tips": [
+      "Zaait zichzelf uit: je hebt er volgend jaar vanzelf weer, zonder te zaaien.",
+      "Staat mooi tussen de groenten en trekt nuttige insecten aan.",
+      "Bij hitte kan meeldauw (wit poeder op het blad) optreden; haal aangetast blad weg."
+    ]
+  },
   "tasks": [
-    { "id": "zaaien", "type": "zaaien", "window": { "kind": "dates", "from": "04-01", "to": "05-15" }, "note": "Winterhard genoeg om direct buiten te zaaien" },
-    { "id": "oogsten", "type": "oogsten", "window": { "kind": "dates", "from": "06-15", "to": "10-01" }, "note": "Bloemblaadjes eetbaar/geneeskrachtig" },
-    { "id": "dode-bloemen-verwijderen", "type": "onderhoud", "window": { "kind": "recurring", "from": "06-15", "to": "10-01", "every": "week" } }
+    {
+      "id": "zaaien", "type": "zaaien", "window": { "kind": "dates", "from": "04-01", "to": "05-15" },
+      "description": "Zaai direct buiten op de plek waar ze moeten bloeien, zo'n 1 cm diep. Dun de plantjes later uit tot 25 cm uit elkaar. Het zaad is groot en kiemt makkelijk, ideaal voor een eerste keer zaaien."
+    },
+    {
+      "id": "oogsten", "type": "oogsten", "window": { "kind": "dates", "from": "06-15", "to": "10-01" },
+      "description": "Pluk open bloemen op een droge ochtend. Trek de bloemblaadjes los voor salades of thee, of laat ze drogen op een schaal. Hoe meer je plukt, hoe meer nieuwe bloemen er komen."
+    },
+    {
+      "id": "dode-bloemen-verwijderen", "type": "onderhoud", "window": { "kind": "recurring", "from": "06-15", "to": "10-01", "every": "week" },
+      "description": "Knip uitgebloeide bloemen af, net boven een blad. Zo blijft de plant tot de herfst bloeien. Laat aan het eind van de zomer een paar bloemen zaad maken als je volgend jaar weer goudsbloemen wilt."
+    }
   ]
 }

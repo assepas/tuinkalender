@@ -8,10 +8,33 @@
   "nativeStatus": "archeofyt",
   "appearance": { "shape": "vrucht", "count": 1, "flowerColor": "#F0D9DC", "flowerColorName": "wit-roze", "fruitColor": "#B33A2E" },
   "bloom": { "from": "04-15", "to": "05-15" },
+  "growing": { "sun": ["zon"], "soil": ["klei", "leem", "zand"], "moisture": ["normaal"], "spacingCm": 400 },
+  "info": {
+    "intro": "Een eigen appelboom geeft jaren fruit en is in het voorjaar een feest van bloesem voor bijen. Kies een ras op een zwakke onderstam (bv. M9) als je weinig ruimte hebt.",
+    "water": "Een jonge boom heeft de eerste twee jaar in droge periodes wekelijks een flinke emmer water nodig. Oudere bomen redden zich meestal zelf.",
+    "tips": [
+      "Veel appelrassen hebben een andere appelboom in de buurt nodig voor bestuiving; vraag ernaar bij het kopen.",
+      "Dun in juni te volle trossen uit tot 1 of 2 appels, dan worden ze groter en draagt de boom elk jaar.",
+      "Houd een cirkel rond de stam vrij van gras, dat concurreert om water en voeding."
+    ]
+  },
   "tasks": [
-    { "id": "snoeien", "type": "snoeien", "importance": "hoofd", "window": { "kind": "dates", "from": "01-15", "to": "02-28" }, "note": "Wintersnoei, kies een vorstvrije dag" },
-    { "id": "bemesten", "type": "bemesten", "window": { "kind": "dates", "from": "03-01", "to": "03-31" } },
-    { "id": "oogsten", "type": "oogsten", "window": { "kind": "dates", "from": "09-01", "to": "10-15" } },
-    { "id": "winterhard", "type": "winterhard", "window": { "kind": "dates", "from": "11-01", "to": "11-30" }, "note": "Stam beschermen tegen vorstscheuren en wildvraat" }
+    {
+      "id": "snoeien", "type": "snoeien", "importance": "hoofd", "window": { "kind": "dates", "from": "01-15", "to": "02-28" },
+      "note": "Op een vorstvrije dag",
+      "description": "Knip eerst dood, ziek en naar binnen groeiend hout weg, en takken die elkaar kruisen. Houd de kroon open, zodat er licht en lucht bij het fruit komt. Knip net boven een knop of bij de aanzet van een tak, en haal nooit meer dan een kwart van de kroon in één keer weg."
+    },
+    {
+      "id": "bemesten", "type": "bemesten", "window": { "kind": "dates", "from": "03-01", "to": "03-31" },
+      "description": "Strooi in maart compost of gedroogde koemest onder de kroon, tot waar de takken reiken; daar zitten de wortels die voeding opnemen. Een organische fruitmest kan ook. Niet tegen de stam aan strooien."
+    },
+    {
+      "id": "oogsten", "type": "oogsten", "window": { "kind": "dates", "from": "09-01", "to": "10-15" },
+      "description": "Een appel is rijp als hij met een kwartslag draaien loslaat en de pitten bruin zijn. Pluk voorzichtig met de hand, want gekneusde appels rotten snel. Bewaarappels leg je los naast elkaar op een koele, vorstvrije plek."
+    },
+    {
+      "id": "winterhard", "type": "winterhard", "window": { "kind": "dates", "from": "11-01", "to": "11-30" },
+      "description": "Bescherm de stam van jonge bomen tegen konijnen en vorstscheuren met een stamkoker of een laag witkalk. Controleer ook of de boompaal en het bandje nog goed zitten en niet in de schors snijden."
+    }
   ]
 }

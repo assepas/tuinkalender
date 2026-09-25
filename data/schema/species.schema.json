@@ -57,6 +57,44 @@
       },
       "description": "Bloeiperiode, puur informatief (geen taak) — kleur komt uit appearance.flowerColor."
     },
+    "growing": {
+      "type": "object",
+      "additionalProperties": false,
+      "description": "Groeiomstandigheden als vaste waarden, zodat erop te filteren is.",
+      "properties": {
+        "sun": {
+          "type": "array",
+          "minItems": 1,
+          "uniqueItems": true,
+          "items": { "type": "string", "enum": ["zon", "halfschaduw", "schaduw"] }
+        },
+        "soil": {
+          "type": "array",
+          "minItems": 1,
+          "uniqueItems": true,
+          "items": { "type": "string", "enum": ["zand", "klei", "leem", "veen"] },
+          "description": "Grondsoorten waarop de plant goed groeit."
+        },
+        "moisture": {
+          "type": "array",
+          "minItems": 1,
+          "uniqueItems": true,
+          "items": { "type": "string", "enum": ["droog", "normaal", "vochtig", "nat"] },
+          "description": "Hoe vochtig de grond mag/moet zijn."
+        },
+        "spacingCm": { "type": "integer", "minimum": 1, "description": "Plantafstand in centimeters." }
+      }
+    },
+    "info": {
+      "type": "object",
+      "additionalProperties": false,
+      "description": "Plantinformatie voor in het detailvenster.",
+      "properties": {
+        "intro": { "type": "string", "minLength": 1, "description": "Wat voor plant het is en waarom je hem kweekt (2-3 zinnen)." },
+        "water": { "type": "string", "minLength": 1, "description": "Hoeveel en wanneer water geven." },
+        "tips": { "type": "array", "items": { "type": "string", "minLength": 1 }, "description": "Losse tips en valkuilen." }
+      }
+    },
     "tasks": {
       "type": "array",
       "minItems": 1,
@@ -85,7 +123,15 @@
           "enum": ["kas", "grond"],
           "description": "Alleen relevant voor zaaien: 'kas' (ook voorzaaien binnen) of 'grond' (volle grond). Standaard 'grond' als weggelaten."
         },
-        "note": { "type": "string" },
+        "note": {
+          "type": "string",
+          "description": "Korte hint voor maandoverzicht en print. Spaarzaam gebruiken: alleen als het echt helpt."
+        },
+        "description": {
+          "type": "string",
+          "minLength": 1,
+          "description": "Uitgebreidere uitleg (een paar zinnen): hoe, waar op letten en waarom. Alleen in het detailvenster."
+        },
         "conditions": {
           "type": "object",
           "additionalProperties": false,

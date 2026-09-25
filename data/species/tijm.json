@@ -8,9 +8,28 @@
   "nativeStatus": "exoot",
   "appearance": { "shape": "aar", "count": 5, "flowerColor": "#C598B8", "flowerColorName": "roze-lila" },
   "bloom": { "from": "05-15", "to": "07-01" },
+  "growing": { "sun": ["zon"], "soil": ["zand", "leem"], "moisture": ["droog", "normaal"], "spacingCm": 25 },
+  "info": {
+    "intro": "Een laag, groenblijvend mediterraan kruid met een sterke geur en roze bloempjes in juni. Het is het hele jaar te plukken en populair bij bijen.",
+    "water": "Tijm heeft weinig water nodig. Geef alleen water bij lange droogte; natte grond, vooral in de winter, is fataal.",
+    "tips": [
+      "Geef geen mest: op arme grond is de smaak het sterkst.",
+      "Na een paar jaar wordt tijm houtig en kaal; zet dan een nieuwe plant of stek erbij.",
+      "Tussen stenen of in een rotstuintje voelt tijm zich thuis."
+    ]
+  },
   "tasks": [
-    { "id": "planten", "type": "planten", "window": { "kind": "dates", "from": "04-01", "to": "05-15" } },
-    { "id": "snoeien", "type": "snoeien", "importance": "licht", "window": { "kind": "dates", "from": "07-01", "to": "07-15" }, "note": "Na de bloei licht terugknippen houdt de plant compact" },
-    { "id": "oogsten", "type": "oogsten", "window": { "kind": "dates", "from": "01-01", "to": "12-31" }, "note": "Jaarrond te oogsten, blijvend groen" }
+    {
+      "id": "planten", "type": "planten", "window": { "kind": "dates", "from": "04-01", "to": "05-15" },
+      "description": "Plant op een zonnige plek in goed doorlatende grond, op zo'n 25 cm afstand. Meng bij zware grond zand of grind door het plantgat. Geef na het planten eenmalig water."
+    },
+    {
+      "id": "snoeien", "type": "snoeien", "importance": "licht", "window": { "kind": "dates", "from": "07-01", "to": "07-15" },
+      "description": "Knip na de bloei de hele plant met een schaar een derde terug, alleen in het groene deel. Zo blijft de plant compact en bladrijk en wordt hij van onderen niet kaal."
+    },
+    {
+      "id": "oogsten", "type": "oogsten", "window": { "kind": "dates", "from": "01-01", "to": "12-31" },
+      "description": "Knip het hele jaar door takjes af, net boven een paar blaadjes. De smaak is het sterkst vlak voor de bloei. Voor de voorraad kun je bosjes op een droge, luchtige plek drogen en daarna het blad afristen."
+    }
   ]
 }

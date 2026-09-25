@@ -8,10 +8,34 @@
   "nativeStatus": "exoot",
   "appearance": { "shape": "bloem", "count": 5, "flowerColor": "#C0392B", "flowerColorName": "rood" },
   "bloom": { "from": "05-15", "to": "10-01" },
+  "growing": { "sun": ["zon"], "soil": ["zand", "leem"], "moisture": ["droog", "normaal"], "spacingCm": 30 },
+  "info": {
+    "intro": "De klassieke balkon- en terrasplant die de hele zomer bloeit in rood, roze of wit. Hij is niet winterhard, maar je kunt hem makkelijk binnen overwinteren en jaren houden.",
+    "water": "Geef water als de bovenste centimeters potgrond droog zijn. Geraniums kunnen beter iets te droog dan te nat staan.",
+    "tips": [
+      "Een zonnige plek geeft de meeste bloemen.",
+      "Van een geranium kun je makkelijk stekken: zet een topscheut van 10 cm in een potje met stekgrond.",
+      "Gele onderste blaadjes betekenen meestal te veel water."
+    ]
+  },
   "tasks": [
-    { "id": "planten", "type": "planten", "window": { "kind": "relative", "anchor": "lastFrost", "fromWeeks": 0, "toWeeks": 2 } },
-    { "id": "bemesten", "type": "bemesten", "window": { "kind": "recurring", "from": "06-01", "to": "08-31", "every": "2weeks" } },
-    { "id": "dode-bloemen-verwijderen", "type": "onderhoud", "window": { "kind": "recurring", "from": "06-01", "to": "09-30", "every": "week" } },
-    { "id": "winterhard", "type": "winterhard", "window": { "kind": "dates", "from": "10-01", "to": "10-31" }, "note": "Niet winterhard: vorstvrij en licht overwinteren binnen" }
+    {
+      "id": "planten", "type": "planten", "window": { "kind": "relative", "anchor": "lastFrost", "fromWeeks": 0, "toWeeks": 2 },
+      "note": "Pas na de laatste nachtvorst",
+      "description": "Zet de planten na half mei in bakken of potten met potgrond, of in de volle grond op een zonnige plek. Wen overwinterde planten eerst een week aan buiten, overdag in de schaduw."
+    },
+    {
+      "id": "bemesten", "type": "bemesten", "window": { "kind": "recurring", "from": "06-01", "to": "08-31", "every": "2weeks" },
+      "description": "Geef om de twee weken vloeibare balkonplantenmest (met veel kalium) door het gietwater. Planten in potten hebben de voeding in de potgrond na een paar weken opgebruikt."
+    },
+    {
+      "id": "dode-bloemen-verwijderen", "type": "onderhoud", "window": { "kind": "recurring", "from": "06-01", "to": "09-30", "every": "week" },
+      "description": "Knip of breek uitgebloeide bloemschermen met steel en al af, vlak bij de stengel. Zo blijft de plant bloeien en voorkom je dat er schimmel op rottende bloemen komt."
+    },
+    {
+      "id": "winterhard", "type": "winterhard", "window": { "kind": "dates", "from": "10-01", "to": "10-31" },
+      "note": "Vorstvrij binnenzetten",
+      "description": "Haal de planten binnen voor de eerste nachtvorst. Knip ze een derde terug en zet ze op een koele, lichte plek (5 tot 12 °C). Geef in de winter heel weinig water. In maart kun je ze verpotten en wat warmer zetten."
+    }
   ]
 }

@@ -8,8 +8,24 @@
   "nativeStatus": "inheems",
   "appearance": { "shape": "bloem", "count": 3, "flowerColor": "#6E5A9E", "flowerColorName": "paars" },
   "bloom": { "from": "06-01", "to": "09-01" },
+  "growing": { "sun": ["zon", "halfschaduw"], "soil": ["klei", "leem", "zand"], "moisture": ["normaal", "vochtig"], "spacingCm": 25 },
+  "info": {
+    "intro": "Een laag, inheems plantje met paarse bloemaartjes van juni tot september. Het groeit vanzelf in gazons en bloemrijk grasland en is een echte bijen- en vlinderplant.",
+    "water": "Brunel heeft weinig zorg nodig. Houd de grond de eerste weken na het planten vochtig; daarna alleen water bij lange droogte.",
+    "tips": [
+      "Brunel kan tegen maaien en laat zich dus ook in een bloemrijk gazon gebruiken.",
+      "Hij verspreidt zich met uitlopers en vormt zo een tapijt.",
+      "Uitgebloeide aren kun je laten staan voor zaad en voor vogels."
+    ]
+  },
   "tasks": [
-    { "id": "planten", "type": "planten", "window": { "kind": "dates", "from": "03-15", "to": "05-01" } },
-    { "id": "delen", "type": "delen", "window": { "kind": "dates", "from": "09-01", "to": "10-01" } }
+    {
+      "id": "planten", "type": "planten", "window": { "kind": "dates", "from": "03-15", "to": "05-01" },
+      "description": "Plant de plantjes op 20 tot 25 cm afstand in gewone tuingrond en geef goed water. Binnen een seizoen groeien ze door hun uitlopers samen tot een dichte mat."
+    },
+    {
+      "id": "delen", "type": "delen", "window": { "kind": "dates", "from": "09-01", "to": "10-01" },
+      "description": "Steek in het najaar een stuk van de mat met wortels uit en plant het ergens anders. Zo verjong je een oude, kale plek en krijg je gratis nieuwe planten."
+    }
   ]
 }

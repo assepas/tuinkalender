@@ -8,9 +8,29 @@
   "nativeStatus": "archeofyt",
   "appearance": { "shape": "bloem", "count": 5, "flowerColor": "#6B8CC4", "flowerColorName": "blauwpaars" },
   "bloom": { "from": "03-15", "to": "05-15" },
+  "growing": { "sun": ["schaduw", "halfschaduw"], "soil": ["klei", "leem", "zand"], "moisture": ["normaal"], "spacingCm": 30 },
+  "info": {
+    "intro": "Een groenblijvende bodembedekker met blauwe bloemetjes in het voorjaar. Hij houdt onkruid onder de struiken weg en blijft ook in de winter groen.",
+    "water": "Na het aanslaan is maagdenpalm erg sterk. Geef alleen water na het planten en bij lange droogte.",
+    "tips": [
+      "Een goede keuze voor een lastige schaduwplek of een talud.",
+      "Hij kan woekeren; plant hem niet naast kwetsbare, kleine planten.",
+      "Wieden in het eerste jaar helpt, daarna sluit hij zelf de bodem."
+    ]
+  },
   "tasks": [
-    { "id": "planten", "type": "planten", "window": { "kind": "dates", "from": "03-15", "to": "05-01" } },
-    { "id": "snoeien", "type": "snoeien", "importance": "licht", "window": { "kind": "dates", "from": "03-01", "to": "03-31" }, "note": "Terugknippen houdt de bodembedekker compact" },
-    { "id": "onderhoud", "type": "onderhoud", "window": { "kind": "recurring", "from": "05-01", "to": "09-01", "every": "month" }, "note": "Kan woekeren — uitlopers op tijd begrenzen" }
+    {
+      "id": "planten", "type": "planten", "window": { "kind": "dates", "from": "03-15", "to": "05-01" },
+      "description": "Plant op zo'n 30 cm afstand. De lange ranken kun je met een haakje of steen tegen de grond drukken; daar wortelen ze en wordt de mat sneller dicht."
+    },
+    {
+      "id": "snoeien", "type": "snoeien", "importance": "licht", "window": { "kind": "dates", "from": "03-01", "to": "03-31" },
+      "description": "Knip in maart de mat met een heggenschaar of grasschaar terug tot 10 à 15 cm. Dat houdt hem compact en dicht, en geeft meer bloemen."
+    },
+    {
+      "id": "onderhoud", "type": "onderhoud", "window": { "kind": "recurring", "from": "05-01", "to": "09-01", "every": "month" },
+      "note": "Uitlopers begrenzen",
+      "description": "Knip ranken weg die buiten de gewenste plek groeien of andere planten overwoekeren. Doe dat regelmatig; eenmaal gewortelde ranken zijn lastiger te verwijderen."
+    }
   ]
 }

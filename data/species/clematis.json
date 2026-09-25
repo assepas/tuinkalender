@@ -8,9 +8,29 @@
   "nativeStatus": "exoot",
   "appearance": { "shape": "bloem", "count": 8, "flowerColor": "#7A5C99", "flowerColorName": "paars" },
   "bloom": { "from": "06-01", "to": "09-01" },
+  "growing": { "sun": ["zon", "halfschaduw"], "soil": ["klei", "leem", "zand"], "moisture": ["normaal"], "spacingCm": 100 },
+  "info": {
+    "intro": "Een klimplant met grote of juist kleine sierlijke bloemen, voor een hek, pergola of muur. Er zijn soorten die in het voorjaar, de zomer of de herfst bloeien.",
+    "water": "Houd de grond rond de voet koel en vochtig. Geef in droge periodes een emmer water per week; een klimplant tegen een muur droogt snel uit.",
+    "tips": [
+      "Kijk op het label naar de snoeigroep (1, 2 of 3); dat bepaalt hoe en wanneer je snoeit.",
+      "Leg stenen, mulch of lage planten over de voet: 'voeten in de schaduw, kop in de zon'.",
+      "Plant iets schuin richting het rek en geef de jonge scheuten een stokje om naartoe te groeien."
+    ]
+  },
   "tasks": [
-    { "id": "planten", "type": "planten", "window": { "kind": "dates", "from": "03-15", "to": "05-01" }, "note": "Wortels diep en koel/beschaduwd planten (\"voeten in de schaduw, kop in de zon\")" },
-    { "id": "snoeien", "type": "snoeien", "importance": "hoofd", "window": { "kind": "dates", "from": "02-01", "to": "03-01" }, "note": "Snoeitiming hangt af van de snoeigroep van de cultivar" },
-    { "id": "bemesten", "type": "bemesten", "window": { "kind": "dates", "from": "03-15", "to": "04-15" } }
+    {
+      "id": "planten", "type": "planten", "window": { "kind": "dates", "from": "03-15", "to": "05-01" },
+      "description": "Plant de clematis 5 tot 10 cm dieper dan hij in de pot stond; dan maakt hij extra knoppen onder de grond en herstelt hij beter als hij ziek wordt. Zet hem zo'n 30 cm van de muur, zodat er regen bij de wortels komt, en bedek de voet met mulch of lage planten."
+    },
+    {
+      "id": "snoeien", "type": "snoeien", "importance": "hoofd", "window": { "kind": "dates", "from": "02-01", "to": "03-01" },
+      "note": "Snoeiwijze hangt af van de soort",
+      "description": "Groep 1 (bloeit in het voorjaar) snoei je alleen na de bloei licht. Groep 2 (grote bloemen in mei-juni) knip je nu licht terug tot een paar sterke knoppen. Groep 3 (bloeit in de zomer) knip je nu stevig terug tot 30 à 50 cm boven de grond. Twijfel je, snoei dan liever te weinig."
+    },
+    {
+      "id": "bemesten", "type": "bemesten", "window": { "kind": "dates", "from": "03-15", "to": "04-15" },
+      "description": "Strooi in het voorjaar een handje organische mest met extra kalium (bv. rozen- of bloeimest) rond de voet en een laagje compost erover. Dat geeft sterke scheuten en veel bloemen."
+    }
   ]
 }

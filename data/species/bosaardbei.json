@@ -8,9 +8,28 @@
   "nativeStatus": "inheems",
   "appearance": { "shape": "vrucht", "count": 1, "flowerColor": "#F5F1E6", "flowerColorName": "wit", "fruitColor": "#C23A2E" },
   "bloom": { "from": "04-15", "to": "06-01" },
+  "growing": { "sun": ["halfschaduw", "schaduw", "zon"], "soil": ["zand", "leem", "klei"], "moisture": ["normaal", "vochtig"], "spacingCm": 25 },
+  "info": {
+    "intro": "Een inheemse, kleine aardbei met heel aromatische vruchtjes. Hij groeit ook in de halfschaduw onder struiken en vormt een mooie bodembedekker.",
+    "water": "Houd de grond licht vochtig; in de schaduw is dat meestal vanzelf zo. Geef in droge zomers extra water, anders stopt de vruchtzetting.",
+    "tips": [
+      "Bosaardbeien verspreiden zich met uitlopers en vullen zo zelf lege plekken op.",
+      "Pluk vaak: de vruchtjes zijn klein en rijpen de hele zomer door.",
+      "Er bestaan ook rassen zonder uitlopers (maandaardbei) voor een rand of pot."
+    ]
+  },
   "tasks": [
-    { "id": "planten", "type": "planten", "window": { "kind": "dates", "from": "03-15", "to": "05-01" } },
-    { "id": "oogsten", "type": "oogsten", "window": { "kind": "dates", "from": "06-01", "to": "08-15" } },
-    { "id": "delen", "type": "delen", "window": { "kind": "dates", "from": "08-01", "to": "09-15" }, "note": "Uitlopers (stolonen) afsnijden en verplanten" }
+    {
+      "id": "planten", "type": "planten", "window": { "kind": "dates", "from": "03-15", "to": "05-01" },
+      "description": "Plant op zo'n 25 cm afstand met het hartje precies op de grondlijn. Een plek onder een struik of langs een schaduwrand is prima. Geef na het planten water."
+    },
+    {
+      "id": "oogsten", "type": "oogsten", "window": { "kind": "dates", "from": "06-01", "to": "08-15" },
+      "description": "Pluk de vruchtjes als ze helemaal rood en zacht zijn; ze vallen dan bijna vanzelf los. Eet ze snel op, want ze bewaren maar kort."
+    },
+    {
+      "id": "delen", "type": "delen", "window": { "kind": "dates", "from": "08-01", "to": "09-15" },
+      "description": "Knip na de zomer de uitlopers met een geworteld plantje los van de moederplant en plant ze op een nieuwe plek. Wil je dat de plant zich niet verder verspreidt, knip overige uitlopers dan weg."
+    }
   ]
 }

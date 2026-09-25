@@ -8,9 +8,29 @@
   "nativeStatus": "exoot",
   "appearance": { "shape": "aar", "count": 8, "flowerColor": "#8A6BB0", "flowerColorName": "paars" },
   "bloom": { "from": "07-01", "to": "08-01" },
+  "growing": { "sun": ["zon"], "soil": ["zand", "leem"], "moisture": ["droog", "normaal"], "spacingCm": 40 },
+  "info": {
+    "intro": "Een geurige, grijsbladige halfstruik met paarse bloemaren in juli. Bijen en vlinders zijn er dol op, en de gedroogde bloemen geuren nog maanden.",
+    "water": "Lavendel houdt van droog. Geef alleen water na het planten en bij extreme droogte; natte voeten in de winter zijn de grootste doodsoorzaak.",
+    "tips": [
+      "Zware, natte grond? Meng zand of grind door de grond of zet hem op een verhoging.",
+      "Nooit tot in het kale, oude hout snoeien: daar loopt hij niet meer uit.",
+      "Geef geen mest; op arme grond geurt en bloeit hij het best."
+    ]
+  },
   "tasks": [
-    { "id": "planten", "type": "planten", "window": { "kind": "dates", "from": "04-01", "to": "05-15" } },
-    { "id": "snoeien", "type": "snoeien", "importance": "hoofd", "window": { "kind": "dates", "from": "08-15", "to": "09-15" }, "note": "Direct na bloei terugsnoeien, niet in het oude hout" },
-    { "id": "winterhard", "type": "winterhard", "window": { "kind": "dates", "from": "11-01", "to": "11-15" }, "note": "Goede drainage is belangrijker dan afdekken" }
+    {
+      "id": "planten", "type": "planten", "window": { "kind": "dates", "from": "04-01", "to": "05-15" },
+      "description": "Plant op een zonnige plek in goed doorlatende grond, op 30 tot 40 cm afstand voor een haagje. Meng bij zware grond wat grof zand of grind in het plantgat. Geef na het planten één keer goed water."
+    },
+    {
+      "id": "snoeien", "type": "snoeien", "importance": "hoofd", "window": { "kind": "dates", "from": "08-15", "to": "09-15" },
+      "note": "Na de bloei, niet in oud hout",
+      "description": "Knip na de bloei de bloemstelen af en snoei de plant in een bolle vorm terug, zodat er nog ongeveer 5 cm groen blad blijft. Knip nooit in het kale, houtige deel. In april kun je nog licht bijknippen voor een mooie vorm."
+    },
+    {
+      "id": "winterhard", "type": "winterhard", "window": { "kind": "dates", "from": "11-01", "to": "11-15" },
+      "description": "Lavendel kan tegen vorst, maar niet tegen natte grond in de winter. Zorg dat water goed weg kan, en dek hem niet af met blad: dat houdt vocht vast. Planten in potten zet je tegen een muur, uit de regen."
+    }
   ]
 }

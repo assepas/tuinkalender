@@ -8,10 +8,33 @@
   "nativeStatus": "exoot",
   "appearance": { "shape": "vrucht", "count": 1, "flowerColor": "#E8873A", "flowerColorName": "oranje", "fruitColor": "#D97B2B" },
   "bloom": { "from": "07-01", "to": "08-15" },
+  "growing": { "sun": ["zon"], "soil": ["klei", "leem", "zand"], "moisture": ["normaal", "vochtig"], "spacingCm": 150 },
+  "info": {
+    "intro": "Een snelgroeiende groente met grote bladeren en ranken, en in de herfst prachtige vruchten die je maanden kunt bewaren. Eén plant heeft wel een paar vierkante meter nodig.",
+    "water": "Pompoenen hebben veel water nodig, vooral als de vruchten groeien. Geef in droge periodes een paar keer per week een flinke gieter aan de voet, niet over het blad.",
+    "tips": [
+      "Plant op of naast een oude composthoop: pompoenen houden van rijke grond.",
+      "Leg een plankje of tegel onder de vruchten, dan rotten ze niet op natte grond.",
+      "Wit poeder op het blad aan het eind van de zomer (meeldauw) is normaal en niet erg."
+    ]
+  },
   "tasks": [
-    { "id": "zaaien-voor", "type": "zaaien", "location": "kas", "window": { "kind": "dates", "from": "04-15", "to": "05-01" }, "note": "Voorzaaien binnen" },
-    { "id": "uitplanten", "type": "planten", "window": { "kind": "relative", "anchor": "lastFrost", "fromWeeks": 1, "toWeeks": 3 } },
-    { "id": "bemesten", "type": "bemesten", "window": { "kind": "dates", "from": "06-01", "to": "07-15" } },
-    { "id": "oogsten", "type": "oogsten", "window": { "kind": "dates", "from": "09-15", "to": "10-31" } }
+    {
+      "id": "zaaien-voor", "type": "zaaien", "location": "kas", "window": { "kind": "dates", "from": "04-15", "to": "05-01" },
+      "description": "Zaai in half april één of twee zaden per pot van 8 à 10 cm, 2 cm diep, op een warme vensterbank. Houd het zwakste plantje weg als er twee opkomen. Na een paar weken heb je stevige plantjes."
+    },
+    {
+      "id": "uitplanten", "type": "planten", "window": { "kind": "relative", "anchor": "lastFrost", "fromWeeks": 1, "toWeeks": 3 },
+      "note": "Pas als de nachten warm zijn",
+      "description": "Plant uit als het ook 's nachts niet meer koud wordt, meestal eind mei of begin juni. Maak een plantgat met een schep compost of mest erin en zet de plant daarbovenop. Geef flink water en bescherm de jonge plant tegen slakken."
+    },
+    {
+      "id": "bemesten", "type": "bemesten", "window": { "kind": "dates", "from": "06-01", "to": "07-15" },
+      "description": "Geef in de groeiperiode een paar keer een laag compost of gedroogde koemest rond de plant, of om de twee weken vloeibare organische mest. Pompoenen zijn 'veelvraten' en groeien daar enorm van."
+    },
+    {
+      "id": "oogsten", "type": "oogsten", "window": { "kind": "dates", "from": "09-15", "to": "10-31" },
+      "description": "Een pompoen is rijp als de steel verhout en droog wordt, en de schil zo hard is dat je er met je nagel niet doorheen komt. Snijd hem af met een stuk steel eraan, voor de eerste nachtvorst. Laat hem een paar weken op een warme plek nadrogen, dan is hij maanden houdbaar."
+    }
   ]
 }

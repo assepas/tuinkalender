@@ -8,8 +8,25 @@
   "nativeStatus": "exoot",
   "appearance": { "shape": "bloem", "count": 4, "flowerColor": "#F5F1E6", "flowerColorName": "wit" },
   "bloom": { "from": "07-01", "to": "08-15" },
+  "growing": { "sun": ["zon"], "soil": ["zand", "leem", "klei"], "moisture": ["normaal"], "spacingCm": 10 },
+  "info": {
+    "intro": "Makkelijke en productieve groente: een paar meter bonen geeft al weken lang een schaal per keer. Er zijn lage struikbonen en klimmende stokbonen.",
+    "water": "Geef tijdens de bloei en het groeien van de peulen regelmatig water, zeker bij droogte. Anders vallen de bloemen af en worden de peulen taai.",
+    "tips": [
+      "Bonen maken zelf stikstof aan; extra mest is meestal niet nodig.",
+      "Pluk vaak en jong: hoe meer je plukt, hoe meer nieuwe peulen er komen.",
+      "Stokbonen hebben een rek van zo'n 2 meter hoog nodig."
+    ]
+  },
   "tasks": [
-    { "id": "zaaien", "type": "zaaien", "window": { "kind": "relative", "anchor": "lastFrost", "fromWeeks": 0, "toWeeks": 4 } },
-    { "id": "oogsten", "type": "oogsten", "window": { "kind": "dates", "from": "07-15", "to": "09-30" } }
+    {
+      "id": "zaaien", "type": "zaaien", "window": { "kind": "relative", "anchor": "lastFrost", "fromWeeks": 0, "toWeeks": 4 },
+      "note": "Pas als de grond warm is",
+      "description": "Zaai de bonen 3 à 4 cm diep, pas als de grond is opgewarmd (meestal half mei). Struikbonen zaai je om de 5 à 10 cm in een rij, of in groepjes van 5 op 40 cm afstand. Stokbonen zet je 6 tot 8 per stok. In koude, natte grond rotten de bonen voordat ze kiemen."
+    },
+    {
+      "id": "oogsten", "type": "oogsten", "window": { "kind": "dates", "from": "07-15", "to": "09-30" },
+      "description": "Pluk de peulen als ze zo dik zijn als een potlood en knappen als je ze breekt, voordat de boontjes erin gaan bollen. Houd de plant vast terwijl je plukt, zodat hij niet uit de grond trekt. Pluk om de twee à drie dagen."
+    }
   ]
 }

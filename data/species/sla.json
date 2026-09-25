@@ -8,8 +8,25 @@
   "nativeStatus": "archeofyt",
   "appearance": { "shape": "losse-wolk", "count": 5, "flowerColor": "#D9C24A", "flowerColorName": "geel" },
   "bloom": { "from": "07-01", "to": "08-01" },
+  "growing": { "sun": ["zon", "halfschaduw"], "soil": ["zand", "leem", "klei"], "moisture": ["normaal", "vochtig"], "spacingCm": 25 },
+  "info": {
+    "intro": "Snelle, makkelijke bladgroente: van zaaien tot oogst duurt het maar een paar weken. Er zijn krop-, pluk- en snijslarassen, zodat je de hele zomer vers blad hebt.",
+    "water": "Sla heeft ondiepe wortels en wil een gelijkmatig vochtige grond. Geef bij droogte liefst 's ochtends water; droogte laat de plant snel doorschieten.",
+    "tips": [
+      "Zaai om de twee weken een klein beetje, dan heb je steeds verse sla in plaats van alles tegelijk.",
+      "In de zomerhitte schiet sla snel door (maakt een bloemstengel en wordt bitter); zaai dan op een plek met wat middagschaduw.",
+      "Slakken lusten jonge sla; bescherm de plantjes of pluk slakken 's avonds weg."
+    ]
+  },
   "tasks": [
-    { "id": "zaaien", "type": "zaaien", "window": { "kind": "recurring", "from": "03-15", "to": "08-15", "every": "2weeks" }, "note": "Successiezaai voor continue oogst" },
-    { "id": "oogsten", "type": "oogsten", "window": { "kind": "recurring", "from": "05-01", "to": "10-01", "every": "week" } }
+    {
+      "id": "zaaien", "type": "zaaien", "window": { "kind": "recurring", "from": "03-15", "to": "08-15", "every": "2weeks" },
+      "note": "Om de 2 weken een beetje",
+      "description": "Zaai een kort rijtje direct in de grond, heel ondiep (sla kiemt in het licht), en dun later uit tot 25 cm voor kropsla of 10 cm voor pluksla. Je kunt ook in trays voorzaaien en uitplanten. Sla kiemt slecht bij hitte boven de 25 °C; zaai dan 's avonds en houd het zaaibed koel."
+    },
+    {
+      "id": "oogsten", "type": "oogsten", "window": { "kind": "recurring", "from": "05-01", "to": "10-01", "every": "week" },
+      "description": "Kropsla oogst je als de krop stevig aanvoelt: snijd hem net boven de grond af. Van pluksla pluk je steeds de buitenste bladeren, dan groeit het hart door. Oogst 's ochtends, dan is de sla het knapperigst."
+    }
   ]
 }

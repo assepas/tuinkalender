@@ -8,9 +8,30 @@
   "nativeStatus": "exoot",
   "appearance": { "shape": "bloem", "count": 10, "flowerColor": "#D46A8C", "flowerColorName": "roze" },
   "bloom": { "from": "07-15", "to": "10-01" },
+  "growing": { "sun": ["zon"], "soil": ["klei", "leem", "zand"], "moisture": ["normaal"], "spacingCm": 60 },
+  "info": {
+    "intro": "Dahlia's bloeien van juli tot de eerste vorst in bijna elke kleur en vorm, en zijn geweldig als snijbloem. Ze groeien uit een knol die je elk jaar opnieuw kunt gebruiken.",
+    "water": "Geef in de zomer flink water, vooral bij warmte: een grote dahlia heeft veel nodig. Direct na het planten juist weinig, anders rot de knol.",
+    "tips": [
+      "Zet bij het planten meteen een stevige stok bij hoge rassen; later prik je door de knollen.",
+      "Knip regelmatig bloemen voor de vaas; hoe meer je knipt, hoe meer hij bloeit.",
+      "Slakken lusten jonge scheuten; bescherm ze in het begin."
+    ]
+  },
   "tasks": [
-    { "id": "planten", "type": "planten", "window": { "kind": "relative", "anchor": "lastFrost", "fromWeeks": 0, "toWeeks": 2 }, "note": "Knollen pas de grond in na de laatste nachtvorst" },
-    { "id": "bemesten", "type": "bemesten", "window": { "kind": "recurring", "from": "06-01", "to": "08-15", "every": "2weeks" } },
-    { "id": "winterhard", "type": "winterhard", "window": { "kind": "dates", "from": "10-20", "to": "11-15" }, "note": "Knollen rooien en vorstvrij bewaren; niet winterhard in Utrecht" }
+    {
+      "id": "planten", "type": "planten", "window": { "kind": "relative", "anchor": "lastFrost", "fromWeeks": 0, "toWeeks": 2 },
+      "note": "Pas na de laatste nachtvorst",
+      "description": "Plant de knol zo'n 10 cm diep met de oude stengel naar boven, op 50 tot 70 cm afstand. Geef pas water als de eerste scheuten boven de grond komen. Wil je eerder bloemen, laat de knollen dan vanaf april binnen in een pot voorlopen."
+    },
+    {
+      "id": "bemesten", "type": "bemesten", "window": { "kind": "recurring", "from": "06-01", "to": "08-15", "every": "2weeks" },
+      "description": "Geef vanaf juni om de twee weken vloeibare bloeimest met veel kalium (zoals tomatenmest) door het gietwater. Te veel stikstof geeft veel blad en weinig bloemen."
+    },
+    {
+      "id": "winterhard", "type": "winterhard", "window": { "kind": "dates", "from": "10-20", "to": "11-15" },
+      "note": "Knollen rooien en vorstvrij bewaren",
+      "description": "Knip na de eerste nachtvorst de stengels af tot 10 cm en graaf de knollen voorzichtig op. Laat ze een paar dagen ondersteboven drogen en bewaar ze in een doos met droge potgrond of krant, op een koele en vorstvrije plek (5 tot 8 °C). Kijk in de winter af en toe of er geen rot in zit."
+    }
   ]
 }

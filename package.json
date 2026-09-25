@@ -8,6 +8,7 @@
     "validate": "node scripts/validate.mjs",
     "predev": "npm run build:data",
     "dev": "vite",
+    "dev:local": "npm run build:data && vite --mode offline",
     "prebuild": "npm run validate && npm run build:data",
     "build": "vite build",
     "preview": "vite preview",

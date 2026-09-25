@@ -8,9 +8,29 @@
   "nativeStatus": "inheems",
   "appearance": { "shape": "vrucht", "count": 6, "flowerColor": "#F5F1E6", "flowerColorName": "wit", "fruitColor": "#2E2340" },
   "bloom": { "from": "05-15", "to": "06-30" },
+  "growing": { "sun": ["zon", "halfschaduw"], "soil": ["klei", "leem", "zand"], "moisture": ["normaal"], "spacingCm": 250 },
+  "info": {
+    "intro": "Een sterke klimmende struik met zoete zwarte bramen in de nazomer. Kies voor de tuin een doornloos ras; die zijn net zo lekker en veel prettiger in het onderhoud.",
+    "water": "Geef in droge periodes tijdens het rijpen van de vruchten water, liefst een grote gieter per plant. Mulch houdt de grond vochtig.",
+    "tips": [
+      "Bramen dragen op ranken van vorig jaar; houd nieuwe en oude ranken gescheiden aan het rek, dan snoei je makkelijk.",
+      "Geef de plant een stevig rek of draden langs een hek of schutting.",
+      "Een braam groeit hard; houd ranken die de grond raken kort, anders wortelen ze."
+    ]
+  },
   "tasks": [
-    { "id": "planten", "type": "planten", "window": { "kind": "dates", "from": "10-15", "to": "03-15" } },
-    { "id": "snoeien", "type": "snoeien", "importance": "hoofd", "window": { "kind": "dates", "from": "08-15", "to": "09-30" }, "note": "Uitgevruchte ranken tot de grond wegknippen" },
-    { "id": "oogsten", "type": "oogsten", "window": { "kind": "dates", "from": "08-01", "to": "09-30" } }
+    {
+      "id": "planten", "type": "planten", "window": { "kind": "dates", "from": "10-15", "to": "03-15" },
+      "description": "Plant de braam in een ruim gat met compost, langs een hek of rek met draden. Knip de ranken na het planten terug tot zo'n 30 cm; dan groeien er sterke nieuwe ranken."
+    },
+    {
+      "id": "snoeien", "type": "snoeien", "importance": "hoofd", "window": { "kind": "dates", "from": "08-15", "to": "09-30" },
+      "note": "Afgedragen ranken tot de grond",
+      "description": "Knip na de oogst de ranken die vrucht hebben gedragen tot vlak bij de grond weg. Bind de jonge, groene ranken van dit jaar aan het rek; die dragen volgend jaar. Houd per plant 6 tot 8 sterke nieuwe ranken aan."
+    },
+    {
+      "id": "oogsten", "type": "oogsten", "window": { "kind": "dates", "from": "08-01", "to": "09-30" },
+      "description": "Een braam is rijp als hij glanzend zwart is en zonder trekken loslaat. Pluk om de paar dagen, liefst als het droog is, en eet of vries ze snel in."
+    }
   ]
 }
