@@ -1,0 +1,39 @@
+{
+  "schemaVersion": 1,
+  "id": "kruisbes",
+  "name": "Kruisbes",
+  "latin": "Ribes uva-crispa",
+  "category": "fruit",
+  "tags": ["struik"],
+  "nativeStatus": "inheems",
+  "appearance": { "shape": "vrucht", "count": 3, "flowerColor": "#C7C27A", "flowerColorName": "groengeel", "fruitColor": "#8FB356" },
+  "bloom": { "from": "04-01", "to": "04-30" },
+  "growing": { "sun": ["zon", "halfschaduw"], "soil": ["klei", "leem", "zand"], "moisture": ["normaal"], "spacingCm": 120 },
+  "info": {
+    "intro": "Een stekelige bessenstruik met grote, sappige bessen die groen, geel of rood rijpen. Vroeg geplukt zijn ze zuur voor jam en taart, laat geplukt zoet uit de hand.",
+    "water": "Geef in droge periodes water, vooral als de bessen groeien.",
+    "tips": [
+      "Houd de struik open: meeldauw (wit viltje) heeft dan minder kans.",
+      "Let op de kruisbesbladwesp: groene rupsjes die het blad in een paar dagen kaalvreten.",
+      "Draag handschoenen bij snoeien en plukken."
+    ]
+  },
+  "tasks": [
+    {
+      "id": "planten", "type": "planten", "window": { "kind": "dates", "from": "11-01", "to": "03-15" },
+      "description": "Plant in de winterrust op zo'n 1,2 meter afstand, even diep als in de pot."
+    },
+    {
+      "id": "snoeien", "type": "snoeien", "window": { "kind": "dates", "from": "12-01", "to": "02-28" },
+      "description": "Snoei in de winter oude, donkere takken weg en houd het midden open. Kort de zijtakken van vorig jaar in tot 2-3 knoppen."
+    },
+    {
+      "id": "bladwesp-controleren", "type": "onderhoud", "window": { "kind": "recurring", "from": "05-01", "to": "06-30", "every": "week" },
+      "description": "Kijk wekelijks onder de bladeren in het midden van de struik naar groene rupsjes met zwarte stippen en haal ze weg."
+    },
+    {
+      "id": "oogsten", "type": "oogsten", "window": { "kind": "dates", "from": "06-15", "to": "07-31" },
+      "description": "Pluk halfrijpe bessen in juni voor jam, en rijpe, zachte bessen in juli om zo te eten."
+    }
+  ]
+}

@@ -1,0 +1,40 @@
+{
+  "schemaVersion": 1,
+  "id": "siererwt",
+  "name": "Siererwt (reukerwt)",
+  "latin": "Lathyrus odoratus",
+  "category": "vaste-plant",
+  "tags": ["eenjarig", "klimmer", "geurend", "snijbloem", "giftig"],
+  "nativeStatus": "exoot",
+  "appearance": { "shape": "bloem", "count": 5, "flowerColor": "#C48BC9", "flowerColorName": "roze-paars" },
+  "bloom": { "from": "06-15", "to": "09-15" },
+  "growing": { "sun": ["zon"], "soil": ["klei", "leem"], "moisture": ["normaal", "vochtig"], "spacingCm": 15 },
+  "info": {
+    "intro": "Een eenjarige klimmer met heerlijk geurende bloemen in roze, paars, wit en rood. Hoe meer je plukt, hoe meer hij bloeit. Een klassieker voor de snijbloementuin.",
+    "water": "Geef in droge periodes royaal water; siererwten mogen niet uitdrogen.",
+    "tips": [
+      "Zet een rek, gaas of takken neer waar hij in kan klimmen, tot zo'n 2 meter.",
+      "Pluk minstens twee keer per week: als de plant zaad maakt, stopt de bloei.",
+      "Niet eten: de erwten zijn giftig, anders dan gewone doperwten."
+    ]
+  },
+  "tasks": [
+    {
+      "id": "zaaien-binnen", "type": "zaaien", "location": "kas", "window": { "kind": "dates", "from": "02-15", "to": "03-31" },
+      "description": "Laat de zaden een nacht weken en zaai ze in diepe potjes, 2 cm diep. Zet ze koel en licht. Knip de top eruit als de plant vier blaadjes heeft, dan vertakt hij."
+    },
+    {
+      "id": "zaaien", "type": "zaaien", "window": { "kind": "dates", "from": "04-01", "to": "05-15" },
+      "description": "Zaai direct buiten bij het klimrek, 2 cm diep en om de 10-15 cm. Bescherm de kiemplantjes tegen slakken en vogels."
+    },
+    {
+      "id": "uitplanten", "type": "planten", "window": { "kind": "dates", "from": "04-15", "to": "05-15" },
+      "description": "Plant voorgezaaide plantjes uit bij een klimrek. Ze kunnen een beetje vorst hebben. Leid ze de eerste keer naar het rek."
+    },
+    {
+      "id": "plukken", "type": "oogsten", "window": { "kind": "recurring", "from": "06-15", "to": "09-15", "every": "week" },
+      "note": "Vaak plukken",
+      "description": "Pluk de bloemen minstens één à twee keer per week voor de vaas en knip uitgebloeide bloemen weg. Zo blijft de plant tot september bloeien."
+    }
+  ]
+}

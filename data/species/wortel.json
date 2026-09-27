@@ -1,0 +1,34 @@
+{
+  "schemaVersion": 1,
+  "id": "wortel",
+  "name": "Wortel",
+  "latin": "Daucus carota subsp. sativus",
+  "category": "groente",
+  "tags": ["eenjarig"],
+  "nativeStatus": "exoot",
+  "appearance": { "shape": "vrucht", "count": 1, "flowerColor": "#F2EEE0", "flowerColorName": "wit", "fruitColor": "#E8782A" },
+  "growing": { "sun": ["zon"], "soil": ["zand", "leem"], "moisture": ["normaal"], "spacingCm": 5 },
+  "info": {
+    "intro": "Zelfgekweekte wortels zijn zoet en knapperig. Er zijn vroege rassen voor de zomer en late rassen om te bewaren. Ze houden van losse grond zonder stenen.",
+    "water": "Houd de grond vochtig tot het zaad opkomt; dat kan twee à drie weken duren. Daarna gelijkmatig water: wisselend nat en droog geeft gebarsten wortels.",
+    "tips": [
+      "Tegen de wortelvlieg helpt insectengaas over het bed.",
+      "Geen verse mest gebruiken: dan krijg je gevorkte wortels.",
+      "Meng wat radijszaad door het wortelzaad: de radijs komt snel op en markeert de rij."
+    ]
+  },
+  "tasks": [
+    {
+      "id": "zaaien", "type": "zaaien", "window": { "kind": "dates", "from": "03-15", "to": "07-15" },
+      "description": "Zaai dun in rijen op 20 cm afstand, 1 cm diep. Zaai vroege rassen vanaf maart, bewaarwortels in mei-juni. Houd de grond vochtig tot ze op zijn."
+    },
+    {
+      "id": "uitdunnen", "type": "onderhoud", "window": { "kind": "dates", "from": "05-01", "to": "08-15" },
+      "description": "Dun de plantjes uit tot 3-5 cm afstand als ze een paar blaadjes hebben. Doe dat 's avonds en druk de grond weer aan, zodat de wortelvlieg de geur niet ruikt."
+    },
+    {
+      "id": "oogsten", "type": "oogsten", "window": { "kind": "dates", "from": "06-15", "to": "11-15" },
+      "description": "Trek vroege wortels als ze vingerdik zijn. Bewaarwortels oogst je in oktober-november, voor de strenge vorst."
+    }
+  ]
+}

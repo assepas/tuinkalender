@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "id": "ijzerhard-argentijns",
+  "name": "IJzerhard (Argentijns)",
+  "latin": "Verbena bonariensis",
+  "category": "vaste-plant",
+  "tags": ["meerjarig", "vlinderplant", "zelfzaaiend", "droogtebestendig"],
+  "nativeStatus": "exoot",
+  "appearance": { "shape": "losse-wolk", "count": 5, "flowerColor": "#8E5FB8", "flowerColorName": "paars" },
+  "bloom": { "from": "07-01", "to": "10-15" },
+  "growing": { "sun": ["zon"], "soil": ["zand", "leem", "klei"], "moisture": ["droog", "normaal"], "spacingCm": 40 },
+  "info": {
+    "intro": "Een hoge, luchtige plant met dunne, stijve stengels en kleine paarse bloemtrosjes die tot ver in de herfst bloeien. Doordat hij zo ijl is, kun je hem overal tussen zetten, ook vooraan. Vlinders zijn er dol op.",
+    "water": "Kan goed tegen droogte. Geef alleen water na het planten en in lange droge periodes.",
+    "tips": [
+      "Niet helemaal winterhard: op natte grond overleeft hij de winter vaak niet, maar hij zaait zich meestal royaal uit.",
+      "Laat de stengels in de winter staan; dat beschermt de plant en vogels eten het zaad.",
+      "Zaailingen komen pas laat op, vaak in mei; wied niet te vroeg."
+    ]
+  },
+  "tasks": [
+    {
+      "id": "zaaien-binnen", "type": "zaaien", "location": "kas", "window": { "kind": "dates", "from": "02-15", "to": "03-31" },
+      "description": "Zaai binnen in een tray en bedek het zaad nauwelijks. Het kiemt traag en onregelmatig; een paar weken in de koelkast vooraf helpt. Verspeen de plantjes naar eigen potjes."
+    },
+    {
+      "id": "uitplanten", "type": "planten", "window": { "kind": "relative", "anchor": "lastFrost", "fromWeeks": 0, "toWeeks": 3 },
+      "description": "Plant uit na de laatste nachtvorst, op een zonnige plek in doorlatende grond, op zo'n 40 cm afstand. Zet hem in groepjes voor het mooiste effect."
+    },
+    {
+      "id": "terugknippen", "type": "snoeien", "window": { "kind": "dates", "from": "03-15", "to": "04-15" },
+      "description": "Laat de oude stengels de winter over staan. Knip ze in het voorjaar af tot net boven het nieuwe blad aan de voet; knip niet te vroeg, dan kan late vorst de plant alsnog schaden."
+    }
+  ]
+}

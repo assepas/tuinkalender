@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "id": "perzikbladklokje",
+  "name": "Perzikbladklokje",
+  "latin": "Campanula persicifolia",
+  "category": "vaste-plant",
+  "tags": ["meerjarig", "zelfzaaiend"],
+  "nativeStatus": "exoot",
+  "appearance": { "shape": "aar", "count": 5, "flowerColor": "#8FA5E0", "flowerColorName": "lichtblauw" },
+  "bloom": { "from": "06-01", "to": "07-31" },
+  "growing": { "sun": ["zon", "halfschaduw"], "soil": ["klei", "leem", "zand"], "moisture": ["normaal"], "spacingCm": 35 },
+  "info": {
+    "intro": "Een sierlijke klokjesbloem met open, blauwe of witte klokken aan dunne stengels boven een rozet van smal blad. Hij past overal tussen en zaait zich rustig uit.",
+    "water": "Geef water in lange droge periodes; verder weinig zorg.",
+    "tips": [
+      "Knip uitgebloeide klokjes weg, dan bloeit hij langer door.",
+      "Staat mooi tussen rozen en andere vaste planten.",
+      "Slakken lusten het jonge blad in het voorjaar."
+    ]
+  },
+  "tasks": [
+    {
+      "id": "planten", "type": "planten", "window": { "kind": "dates", "from": "03-15", "to": "05-01" },
+      "description": "Plant op zo'n 35 cm afstand in gewone tuingrond, op een zonnige of licht beschaduwde plek."
+    },
+    {
+      "id": "dode-bloemen-verwijderen", "type": "snoeien", "importance": "licht", "window": { "kind": "recurring", "from": "06-15", "to": "07-31", "every": "2weeks" },
+      "description": "Knip uitgebloeide bloemen weg of knip de hele stengel af na de bloei. Dan komen er vaak nog nieuwe bloemen."
+    },
+    {
+      "id": "delen", "type": "delen", "window": { "kind": "dates", "from": "03-15", "to": "04-15" },
+      "description": "Verdeel grote pollen om de drie à vier jaar in het voorjaar."
+    }
+  ]
+}

@@ -1,0 +1,36 @@
+{
+  "schemaVersion": 1,
+  "id": "duizendschoon",
+  "name": "Duizendschoon",
+  "latin": "Dianthus barbatus",
+  "category": "vaste-plant",
+  "tags": ["tweejarig", "geurend", "snijbloem"],
+  "nativeStatus": "exoot",
+  "appearance": { "shape": "losse-wolk", "count": 7, "flowerColor": "#C23A5E", "flowerColorName": "rood-roze" },
+  "bloom": { "from": "06-01", "to": "07-31" },
+  "growing": { "sun": ["zon"], "soil": ["zand", "leem", "klei"], "moisture": ["normaal"], "spacingCm": 25 },
+  "info": {
+    "intro": "Een ouderwetse tweejarige met dichte, geurende bloemschermen in rood, roze en wit, vaak met een oog. Een echte boerentuinplant en een lang houdbare snijbloem.",
+    "water": "Geef water in droge periodes, vooral in het eerste jaar.",
+    "tips": [
+      "Tweejarig: dit jaar zaaien, volgend jaar bloei.",
+      "Laat een paar schermen zaad zetten, dan zaait hij zich uit.",
+      "Houdt niet van natte, zure grond."
+    ]
+  },
+  "tasks": [
+    {
+      "id": "zaaien", "type": "zaaien", "window": { "kind": "dates", "from": "05-15", "to": "07-15" },
+      "note": "Bloeit pas volgend jaar",
+      "description": "Zaai in de zomer in een zaaibed of potjes. De plantjes bloeien volgend jaar."
+    },
+    {
+      "id": "planten", "type": "planten", "window": { "kind": "dates", "from": "09-01", "to": "10-15" },
+      "description": "Zet de jonge planten in het najaar op hun vaste plek, op zo'n 25 cm afstand."
+    },
+    {
+      "id": "uitgebloeid-afknippen", "type": "snoeien", "importance": "licht", "window": { "kind": "dates", "from": "07-15", "to": "08-15" },
+      "description": "Knip uitgebloeide schermen af. Laat er een paar staan als je nieuwe zaailingen wilt."
+    }
+  ]
+}

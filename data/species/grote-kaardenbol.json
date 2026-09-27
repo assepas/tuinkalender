@@ -1,0 +1,32 @@
+{
+  "schemaVersion": 1,
+  "id": "grote-kaardenbol",
+  "name": "Grote kaardenbol",
+  "latin": "Dipsacus fullonum",
+  "category": "vaste-plant",
+  "tags": ["tweejarig", "zelfzaaiend", "vlinderplant"],
+  "nativeStatus": "inheems",
+  "appearance": { "shape": "aar", "count": 8, "flowerColor": "#B99AD2", "flowerColorName": "lila" },
+  "bloom": { "from": "07-01", "to": "08-31" },
+  "growing": { "sun": ["zon", "halfschaduw"], "soil": ["klei", "leem"], "moisture": ["normaal", "vochtig"], "spacingCm": 50 },
+  "info": {
+    "intro": "Een tot 2 meter hoge, stekelige tweejarige met eivormige bloemhoofden waarop ringen van lila bloempjes bloeien. In de winter eten puttertjes het zaad uit de droge koppen.",
+    "water": "Geen extra water nodig.",
+    "tips": [
+      "Laat de droge koppen staan: vogels én een mooi winterbeeld.",
+      "Zaait zich flink uit; trek teveel rozetten tijdig weg.",
+      "In de bladoksels blijft regenwater staan, waar insecten in drinken."
+    ]
+  },
+  "tasks": [
+    {
+      "id": "zaaien", "type": "zaaien", "window": { "kind": "dates", "from": "04-01", "to": "06-30" },
+      "note": "Bloeit pas volgend jaar",
+      "description": "Zaai direct op de plek. Het eerste jaar maakt hij een rozet, het tweede jaar bloeit hij."
+    },
+    {
+      "id": "opruimen", "type": "onderhoud", "window": { "kind": "dates", "from": "03-01", "to": "03-31" },
+      "description": "Haal de oude, uitgedroogde stengels na de winter weg. Ze sterven na de bloei af."
+    }
+  ]
+}

@@ -1,0 +1,36 @@
+{
+  "schemaVersion": 1,
+  "id": "moerbei",
+  "name": "Moerbei",
+  "latin": "Morus nigra",
+  "category": "boom",
+  "tags": ["meerjarig", "fruitboom"],
+  "nativeStatus": "exoot",
+  "appearance": { "shape": "vrucht", "count": 5, "flowerColor": "#C8D29A", "flowerColorName": "groen", "fruitColor": "#3B1030" },
+  "bloom": { "from": "05-01", "to": "05-31" },
+  "growing": { "sun": ["zon"], "soil": ["klei", "leem", "zand"], "moisture": ["normaal"], "spacingCm": 500 },
+  "info": {
+    "intro": "Een langzaam groeiende boom met grote, hartvormige bladeren en zwarte, sappige bessen die op een langwerpige braam lijken. Hij kan heel oud worden en wordt een prachtige, knoestige boom.",
+    "water": "Geef een jonge boom de eerste jaren in droge periodes veel water. Oudere bomen redden zich meestal zelf.",
+    "tips": [
+      "Draagt pas na een paar jaar; geduld loont.",
+      "De rijpe bessen geven vlekken die moeilijk uitgaan; zet hem niet boven een terras.",
+      "Leg een laken onder de boom en schud de takken: rijpe bessen vallen er vanzelf af."
+    ]
+  },
+  "tasks": [
+    {
+      "id": "planten", "type": "planten", "window": { "kind": "dates", "from": "11-01", "to": "03-31" },
+      "description": "Plant in de winter of vroege voorjaar, als de grond niet bevroren is. Kies een zonnige, beschutte plek met veel ruimte. Wees voorzichtig met de wortels: die zijn kwetsbaar en breken snel."
+    },
+    {
+      "id": "snoeien", "type": "snoeien", "importance": "licht", "window": { "kind": "dates", "from": "12-01", "to": "02-15" },
+      "note": "Alleen in winterrust",
+      "description": "Snoei alleen als het nodig is: dode, kruisende of te laag hangende takken. Doe dat in de winter, als de boom in rust is; in het voorjaar 'bloedt' hij sterk. Grote snoeiwonden herstellen slecht."
+    },
+    {
+      "id": "oogsten", "type": "oogsten", "window": { "kind": "dates", "from": "07-15", "to": "09-15" },
+      "description": "Pluk de bessen als ze zwart en zacht zijn; ze rijpen niet tegelijk. Eet ze meteen of maak er jam van: ze bederven snel."
+    }
+  ]
+}

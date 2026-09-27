@@ -1,0 +1,31 @@
+{
+  "schemaVersion": 1,
+  "id": "blauw-vlas",
+  "name": "Blauw vlas",
+  "latin": "Linum perenne",
+  "category": "vaste-plant",
+  "tags": ["meerjarig", "droogtebestendig"],
+  "nativeStatus": "exoot",
+  "appearance": { "shape": "bloem", "count": 5, "flowerColor": "#6D95D8", "flowerColorName": "hemelsblauw" },
+  "bloom": { "from": "05-15", "to": "08-15" },
+  "growing": { "sun": ["zon"], "soil": ["zand", "leem"], "moisture": ["droog", "normaal"], "spacingCm": 30 },
+  "info": {
+    "intro": "Een fijne, luchtige plant met dunne stengels en hemelsblauwe bloemen. Elke bloem bloeit maar een dag, maar er komen er maandenlang nieuwe.",
+    "water": "Houdt van droog; alleen water geven na het zaaien of planten.",
+    "tips": [
+      "Doet het best op arme, doorlatende grond.",
+      "Leeft een paar jaar, maar zaait zich uit.",
+      "De bloemen gaan 's middags dicht."
+    ]
+  },
+  "tasks": [
+    {
+      "id": "zaaien", "type": "zaaien", "window": { "kind": "dates", "from": "04-01", "to": "05-31" },
+      "description": "Zaai direct op de plek, dun bedekt, en dun uit tot 30 cm."
+    },
+    {
+      "id": "terugknippen", "type": "snoeien", "importance": "licht", "window": { "kind": "dates", "from": "08-15", "to": "09-15" },
+      "description": "Knip de plant na de bloei een derde terug; hij blijft dan compacter."
+    }
+  ]
+}

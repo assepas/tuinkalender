@@ -1,0 +1,40 @@
+{
+  "schemaVersion": 1,
+  "id": "cosmea",
+  "name": "Cosmea",
+  "latin": "Cosmos bipinnatus",
+  "category": "vaste-plant",
+  "tags": ["eenjarig", "snijbloem", "vlinderplant"],
+  "nativeStatus": "exoot",
+  "appearance": { "shape": "bloem", "count": 8, "flowerColor": "#E07BB0", "flowerColorName": "roze" },
+  "bloom": { "from": "07-01", "to": "10-15" },
+  "growing": { "sun": ["zon"], "soil": ["zand", "leem", "klei"], "moisture": ["normaal", "droog"], "spacingCm": 40 },
+  "info": {
+    "intro": "Een luchtige eenjarige met grote roze, witte of karmijnrode bloemen boven fijn, veerachtig blad. Hij bloeit tot de eerste vorst en trekt veel bijen en vlinders.",
+    "water": "Geef na het uitplanten water tot hij groeit. Daarna kan hij prima tegen droogte.",
+    "tips": [
+      "Geef geen mest: op rijke grond krijg je veel blad en weinig bloemen.",
+      "Knip regelmatig bloemen voor de vaas, dan blijft hij bloeien.",
+      "Hoge planten kunnen omvallen; zet ze dicht bij elkaar of geef steun."
+    ]
+  },
+  "tasks": [
+    {
+      "id": "zaaien-binnen", "type": "zaaien", "location": "kas", "window": { "kind": "dates", "from": "03-15", "to": "04-30" },
+      "description": "Zaai in potjes of een tray, zo'n 0,5 cm diep, op een lichte plek. Het zaad kiemt snel."
+    },
+    {
+      "id": "zaaien", "type": "zaaien", "window": { "kind": "dates", "from": "05-15", "to": "06-15" },
+      "description": "Zaai direct buiten na de laatste nachtvorst. De planten bloeien dan iets later."
+    },
+    {
+      "id": "uitplanten", "type": "planten", "window": { "kind": "relative", "anchor": "lastFrost", "fromWeeks": 0, "toWeeks": 3 },
+      "note": "Pas na de laatste nachtvorst",
+      "description": "Plant uit na de laatste nachtvorst, op zo'n 40 cm afstand. Knijp de top eruit als de plant 30 cm hoog is: dan vertakt hij en krijg je meer bloemen."
+    },
+    {
+      "id": "dode-bloemen-verwijderen", "type": "onderhoud", "window": { "kind": "recurring", "from": "07-15", "to": "10-01", "every": "week" },
+      "description": "Knip uitgebloeide bloemen af tot boven een blad, of pluk ze voor de vaas. Zo bloeit hij tot de vorst."
+    }
+  ]
+}

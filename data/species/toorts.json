@@ -1,0 +1,36 @@
+{
+  "schemaVersion": 1,
+  "id": "toorts",
+  "name": "Toorts",
+  "latin": "Verbascum spp.",
+  "category": "vaste-plant",
+  "tags": ["tweejarig", "zelfzaaiend", "droogtebestendig"],
+  "nativeStatus": "onbekend",
+  "appearance": { "shape": "aar", "count": 10, "flowerColor": "#F2D33A", "flowerColorName": "geel" },
+  "bloom": { "from": "06-15", "to": "08-31" },
+  "growing": { "sun": ["zon"], "soil": ["zand", "leem"], "moisture": ["droog", "normaal"], "spacingCm": 50 },
+  "info": {
+    "intro": "Een hoge, rechtopgaande plant met een grote bladrozet en aren vol gele bloemen. Hij geeft hoogte en structuur aan de border. Veel toortsen zijn tweejarig; ze zaaien zich uit.",
+    "water": "Kan goed tegen droogte; alleen water na het planten.",
+    "tips": [
+      "Laat de uitgebloeide aren staan: vogels eten het zaad en het ziet er in de winter mooi uit.",
+      "De rupsen van de helmkruidvlinder kunnen het blad kaalvreten; laat ze, de plant herstelt.",
+      "Er zijn ook soorten met witte, roze of paarse bloemen."
+    ]
+  },
+  "tasks": [
+    {
+      "id": "zaaien", "type": "zaaien", "window": { "kind": "dates", "from": "05-01", "to": "07-15" },
+      "note": "Bloeit pas volgend jaar",
+      "description": "Zaai in de zomer direct op de plek, zaad alleen aandrukken. De rozet bloeit volgend jaar."
+    },
+    {
+      "id": "planten", "type": "planten", "window": { "kind": "dates", "from": "09-01", "to": "10-15" },
+      "description": "Zet jonge rozetten in het najaar op hun vaste plek, op zo'n 50 cm afstand."
+    },
+    {
+      "id": "terugknippen", "type": "snoeien", "window": { "kind": "dates", "from": "02-15", "to": "03-31" },
+      "description": "Knip de oude aren eind van de winter af, nadat ze zaad hebben verspreid."
+    }
+  ]
+}

@@ -1,0 +1,31 @@
+{
+  "schemaVersion": 1,
+  "id": "moeraswolfsmelk",
+  "name": "Moeraswolfsmelk",
+  "latin": "Euphorbia palustris",
+  "category": "vaste-plant",
+  "tags": ["meerjarig", "vijverrand", "giftig"],
+  "nativeStatus": "inheems",
+  "appearance": { "shape": "losse-wolk", "count": 7, "flowerColor": "#D9D23A", "flowerColorName": "geelgroen" },
+  "bloom": { "from": "05-01", "to": "06-30" },
+  "growing": { "sun": ["zon", "halfschaduw"], "soil": ["klei", "veen", "leem"], "moisture": ["vochtig", "nat"], "spacingCm": 70 },
+  "info": {
+    "intro": "Een stoere, inheemse vaste plant met geelgroene bloemschermen in het voorjaar en oranje herfstkleur. Hij doet het goed in natte grond en langs de vijver.",
+    "water": "Houdt van vochtig tot nat; op een drogere plek regelmatig water geven.",
+    "tips": [
+      "Het melksap is giftig en irriteert de huid: draag handschoenen.",
+      "Wordt een grote pol van zo'n 1 meter.",
+      "Mooie combinatie met gele lis en kattenstaart."
+    ]
+  },
+  "tasks": [
+    {
+      "id": "planten", "type": "planten", "window": { "kind": "dates", "from": "03-15", "to": "05-15" },
+      "description": "Plant op een vochtige plek of langs de vijver, op zo'n 70 cm afstand."
+    },
+    {
+      "id": "terugknippen", "type": "snoeien", "window": { "kind": "dates", "from": "11-01", "to": "03-15" },
+      "description": "Knip de stengels in de herfst of eind van de winter af. Draag handschoenen tegen het melksap."
+    }
+  ]
+}

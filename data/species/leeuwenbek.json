@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "id": "leeuwenbek",
+  "name": "Leeuwenbek",
+  "latin": "Antirrhinum majus",
+  "category": "vaste-plant",
+  "tags": ["eenjarig", "snijbloem"],
+  "nativeStatus": "exoot",
+  "appearance": { "shape": "aar", "count": 7, "flowerColor": "#E86A6A", "flowerColorName": "roze-rood" },
+  "bloom": { "from": "07-01", "to": "10-15" },
+  "growing": { "sun": ["zon"], "soil": ["klei", "leem", "zand"], "moisture": ["normaal"], "spacingCm": 25 },
+  "info": {
+    "intro": "Een vrolijke zomerbloeier met aren vol bloemen in bijna elke kleur. Als je de bloem opzij knijpt, gaat het 'bekje' open. Hommels kruipen erin.",
+    "water": "Geef in droge periodes water; verder weinig zorg.",
+    "tips": [
+      "Knip de hoofdaar na de bloei af, dan maken de zijscheuten nieuwe aren.",
+      "Overleeft soms een zachte winter en bloeit dan vroeger.",
+      "Hoge rassen zijn mooie snijbloemen."
+    ]
+  },
+  "tasks": [
+    {
+      "id": "zaaien-binnen", "type": "zaaien", "location": "kas", "window": { "kind": "dates", "from": "02-15", "to": "03-31" },
+      "description": "Zaai binnen in een tray, het zaad alleen aandrukken: het kiemt in het licht. Verspeen de plantjes naar potjes en knijp de top eruit voor meer vertakking."
+    },
+    {
+      "id": "uitplanten", "type": "planten", "window": { "kind": "relative", "anchor": "lastFrost", "fromWeeks": -2, "toWeeks": 2 },
+      "description": "Plant uit rond de laatste nachtvorst, op zo'n 25 cm afstand. Licht vorst kan hij hebben."
+    },
+    {
+      "id": "dode-bloemen-verwijderen", "type": "onderhoud", "window": { "kind": "recurring", "from": "07-15", "to": "10-01", "every": "2weeks" },
+      "description": "Knip uitgebloeide aren af tot boven een blad, dan komen er nieuwe."
+    }
+  ]
+}

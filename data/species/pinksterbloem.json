@@ -1,0 +1,32 @@
+{
+  "schemaVersion": 1,
+  "id": "pinksterbloem",
+  "name": "Pinksterbloem",
+  "latin": "Cardamine pratensis",
+  "category": "vaste-plant",
+  "tags": ["meerjarig", "gazon", "vlinderplant"],
+  "nativeStatus": "inheems",
+  "appearance": { "shape": "bloem", "count": 4, "flowerColor": "#E6CDE3", "flowerColorName": "lila" },
+  "bloom": { "from": "04-01", "to": "05-31" },
+  "growing": { "sun": ["zon", "halfschaduw"], "soil": ["klei", "leem", "veen"], "moisture": ["vochtig", "nat"], "spacingCm": 20 },
+  "info": {
+    "intro": "Een voorjaarsbloeier van vochtige graslanden met tere, lila bloemen rond Pinksteren. Het is de waardplant van het oranjetipje: de rupsen eten van de bloemen en zaaddozen.",
+    "water": "Houdt van vochtige grond. Op een droge plek houdt hij het niet lang vol.",
+    "tips": [
+      "Maai de plekken met pinksterbloem pas na half juni, dan kan hij zaad zetten en kunnen de rupsen van het oranjetipje zich ontwikkelen.",
+      "Groeit het best in een laag of nat deel van het gazon.",
+      "Uit afgevallen blaadjes groeien soms nieuwe plantjes."
+    ]
+  },
+  "tasks": [
+    {
+      "id": "zaaien", "type": "zaaien", "window": { "kind": "dates", "from": "08-15", "to": "09-30" },
+      "description": "Zaai in de nazomer of in april-mei (lukt ook) op kale, losgeharkte plekken in het gras of mee in een bloemrijk gazonmengsel. Strooi het zaad breed uit, druk het aan en houd het een paar weken vochtig. Zaai liefst op een vochtige plek."
+    },
+    {
+      "id": "niet-maaien", "type": "onderhoud", "window": { "kind": "dates", "from": "04-01", "to": "06-15" },
+      "note": "Pas maaien na half juni",
+      "description": "Maai de plekken waar pinksterbloem staat pas na half juni. Zo kan hij zaad zetten en overleven de rupsen van het oranjetipje. Daarna mag je gewoon maaien op 5 tot 8 cm."
+    }
+  ]
+}

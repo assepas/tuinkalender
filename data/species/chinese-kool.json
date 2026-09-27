@@ -1,0 +1,31 @@
+{
+  "schemaVersion": 1,
+  "id": "chinese-kool",
+  "name": "Chinese kool",
+  "latin": "Brassica rapa subsp. pekinensis",
+  "category": "groente",
+  "tags": ["eenjarig"],
+  "nativeStatus": "exoot",
+  "appearance": { "shape": "losse-wolk", "count": 3, "flowerColor": "#D6E0A8", "flowerColorName": "lichtgroen" },
+  "growing": { "sun": ["zon", "halfschaduw"], "soil": ["klei", "leem", "zand"], "moisture": ["normaal", "vochtig"], "spacingCm": 35 },
+  "info": {
+    "intro": "Een langwerpige, zachte kool voor rauwkost, roerbak of kimchi. Net als paksoi zaai je hem na de langste dag, anders gaat hij bloeien.",
+    "water": "Houd de grond gelijkmatig vochtig.",
+    "tips": [
+      "Zaai niet voor half juni: in lange dagen schiet hij door.",
+      "Bescherm tegen slakken en koolvlieg.",
+      "Houdt het weken in de koelkast."
+    ]
+  },
+  "tasks": [
+    {
+      "id": "zaaien", "type": "zaaien", "window": { "kind": "dates", "from": "06-20", "to": "08-15" },
+      "note": "Pas na de langste dag",
+      "description": "Zaai direct in rijen of in potjes, en dun uit tot 35 cm."
+    },
+    {
+      "id": "oogsten", "type": "oogsten", "window": { "kind": "dates", "from": "09-01", "to": "11-15" },
+      "description": "Snijd de krop af als hij stevig en gesloten is."
+    }
+  ]
+}

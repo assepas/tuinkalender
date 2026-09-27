@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "id": "zeeuws-knoopje",
+  "name": "Zeeuws knoopje",
+  "latin": "Astrantia major",
+  "category": "vaste-plant",
+  "tags": ["meerjarig", "snijbloem", "schaduwplant"],
+  "nativeStatus": "exoot",
+  "appearance": { "shape": "bloem", "count": 10, "flowerColor": "#E8C9D2", "flowerColorName": "wit-roze" },
+  "bloom": { "from": "06-01", "to": "08-31" },
+  "growing": { "sun": ["halfschaduw", "zon"], "soil": ["klei", "leem"], "moisture": ["normaal", "vochtig"], "spacingCm": 40 },
+  "info": {
+    "intro": "Een vaste plant met bijzondere, speldenkussenachtige bloemetjes omringd door een kraag van papierachtige blaadjes. Hij bloeit lang en doet het goed in de halfschaduw.",
+    "water": "Houd de grond vochtig; in de volle zon heeft hij meer water nodig.",
+    "tips": [
+      "Mooi als snij- en droogbloem.",
+      "Knip na de eerste bloei terug voor een tweede bloei.",
+      "Zaait zich rustig uit."
+    ]
+  },
+  "tasks": [
+    {
+      "id": "planten", "type": "planten", "window": { "kind": "dates", "from": "03-15", "to": "05-01" },
+      "description": "Plant op een licht beschaduwde plek in vochthoudende grond, op zo'n 40 cm afstand."
+    },
+    {
+      "id": "terugknippen-na-bloei", "type": "snoeien", "importance": "licht", "window": { "kind": "dates", "from": "07-15", "to": "08-15" },
+      "description": "Knip de uitgebloeide stengels af tot op het blad; er volgt vaak een tweede bloei."
+    },
+    {
+      "id": "delen", "type": "delen", "window": { "kind": "dates", "from": "03-15", "to": "04-15" },
+      "description": "Verdeel grote pollen om de paar jaar in het voorjaar."
+    }
+  ]
+}

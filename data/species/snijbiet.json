@@ -1,0 +1,30 @@
+{
+  "schemaVersion": 1,
+  "id": "snijbiet",
+  "name": "Snijbiet",
+  "latin": "Beta vulgaris var. cicla",
+  "category": "groente",
+  "tags": ["tweejarig"],
+  "nativeStatus": "exoot",
+  "appearance": { "shape": "losse-wolk", "count": 3, "flowerColor": "#B0C27A", "flowerColorName": "groen" },
+  "growing": { "sun": ["zon", "halfschaduw"], "soil": ["klei", "leem", "zand"], "moisture": ["normaal", "vochtig"], "spacingCm": 30 },
+  "info": {
+    "intro": "Een makkelijke bladgroente met stevige, vaak gekleurde stelen. Je plukt maandenlang, van de zomer tot in de winter, en hij schiet veel minder snel door dan spinazie.",
+    "water": "Geef regelmatig water, dan blijft het blad mals.",
+    "tips": [
+      "De rode en gele rassen zijn ook mooi in de siertuin.",
+      "Pluk steeds de buitenste bladeren; het hart groeit door.",
+      "Overleeft vaak de winter en geeft in het voorjaar nog een oogst."
+    ]
+  },
+  "tasks": [
+    {
+      "id": "zaaien", "type": "zaaien", "window": { "kind": "dates", "from": "04-15", "to": "07-15" },
+      "description": "Zaai in rijen op 40 cm afstand, 2 cm diep. Dun uit tot 30 cm."
+    },
+    {
+      "id": "oogsten", "type": "oogsten", "window": { "kind": "dates", "from": "06-15", "to": "11-30" },
+      "description": "Snijd of breek de buitenste bladeren met steel af. Laat het hart staan, dan groeit hij door."
+    }
+  ]
+}

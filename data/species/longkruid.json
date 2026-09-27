@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "id": "longkruid",
+  "name": "Longkruid",
+  "latin": "Pulmonaria officinalis",
+  "category": "vaste-plant",
+  "tags": ["meerjarig", "schaduwplant", "voorjaarsbloeier", "bodembedekker"],
+  "nativeStatus": "inheems",
+  "appearance": { "shape": "bloem", "count": 5, "flowerColor": "#8D6CC0", "flowerColorName": "roze-blauw" },
+  "bloom": { "from": "03-01", "to": "05-01" },
+  "growing": { "sun": ["halfschaduw", "schaduw"], "soil": ["klei", "leem"], "moisture": ["normaal", "vochtig"], "spacingCm": 30 },
+  "info": {
+    "intro": "Een lage schaduwplant met wit gevlekt blad en bloemen die van roze naar blauw verkleuren. Hij bloeit vroeg in het voorjaar en is dan heel belangrijk voor hommelkoninginnen.",
+    "water": "Houd de grond vochtig; in de zon verwelkt het blad snel.",
+    "tips": [
+      "Knip na de bloei het oude blad weg; er komt fris, gevlekt blad voor in de plaats.",
+      "Mooie bodembedekker onder struiken.",
+      "Last van meeldauw? Zet hem op een koelere, vochtigere plek."
+    ]
+  },
+  "tasks": [
+    {
+      "id": "planten", "type": "planten", "window": { "kind": "dates", "from": "03-01", "to": "04-30" },
+      "description": "Plant in de halfschaduw in humusrijke grond, op zo'n 30 cm afstand."
+    },
+    {
+      "id": "terugknippen-na-bloei", "type": "snoeien", "window": { "kind": "dates", "from": "05-01", "to": "05-31" },
+      "description": "Knip de uitgebloeide stengels en het oude blad af. Er groeit snel nieuw, mooi blad."
+    },
+    {
+      "id": "delen", "type": "delen", "window": { "kind": "dates", "from": "09-15", "to": "10-15" },
+      "description": "Verdeel grote pollen in het najaar of na de bloei."
+    }
+  ]
+}

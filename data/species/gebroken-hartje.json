@@ -1,0 +1,31 @@
+{
+  "schemaVersion": 1,
+  "id": "gebroken-hartje",
+  "name": "Gebroken hartje",
+  "latin": "Lamprocapnos spectabilis",
+  "category": "vaste-plant",
+  "tags": ["meerjarig", "schaduwplant", "giftig"],
+  "nativeStatus": "exoot",
+  "appearance": { "shape": "bloem", "count": 5, "flowerColor": "#E36B96", "flowerColorName": "roze" },
+  "bloom": { "from": "04-15", "to": "06-15" },
+  "growing": { "sun": ["halfschaduw", "schaduw"], "soil": ["klei", "leem"], "moisture": ["normaal", "vochtig"], "spacingCm": 60 },
+  "info": {
+    "intro": "Een sierlijke vaste plant met gebogen stengels vol hartvormige, roze en witte bloempjes. Hij bloeit in het voorjaar in de halfschaduw en trekt daarna in.",
+    "water": "Houd de grond vochtig; bij droogte trekt hij eerder in.",
+    "tips": [
+      "Na de bloei sterft het blad af; zet er hosta's of varens naast.",
+      "Alle delen zijn giftig.",
+      "Bescherm de jonge scheuten tegen late nachtvorst."
+    ]
+  },
+  "tasks": [
+    {
+      "id": "planten", "type": "planten", "window": { "kind": "dates", "from": "03-15", "to": "04-30" },
+      "description": "Plant op een beschutte plek in de halfschaduw, in humusrijke grond, op zo'n 60 cm afstand."
+    },
+    {
+      "id": "terugknippen", "type": "snoeien", "window": { "kind": "dates", "from": "07-01", "to": "07-31" },
+      "description": "Knip het vergeelde blad na het intrekken af tot boven de grond. Markeer de plek, zodat je er later niet in spit."
+    }
+  ]
+}

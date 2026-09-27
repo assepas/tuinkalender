@@ -1,0 +1,39 @@
+{
+  "schemaVersion": 1,
+  "id": "perenboom",
+  "name": "Perenboom",
+  "latin": "Pyrus communis",
+  "category": "boom",
+  "tags": ["meerjarig", "fruitboom"],
+  "nativeStatus": "archeofyt",
+  "appearance": { "shape": "vrucht", "count": 1, "flowerColor": "#F4F1EA", "flowerColorName": "wit", "fruitColor": "#B5B04A" },
+  "bloom": { "from": "04-01", "to": "04-30" },
+  "growing": { "sun": ["zon"], "soil": ["klei", "leem"], "moisture": ["normaal"], "spacingCm": 400 },
+  "info": {
+    "intro": "Een fruitboom die in april vol witte bloesem staat en in de nazomer peren geeft. Er zijn handperen om zo te eten en stoofperen zoals de Gieser Wildeman.",
+    "water": "Geef een jonge boom de eerste twee jaar in droge periodes wekelijks een emmer water.",
+    "tips": [
+      "De meeste perenrassen hebben een ander ras in de buurt nodig voor bestuiving.",
+      "Oranje vlekken op het blad (perenroest) zijn lelijk maar meestal onschuldig.",
+      "Handperen pluk je iets onrijp en laat je binnen narijpen."
+    ]
+  },
+  "tasks": [
+    {
+      "id": "planten", "type": "planten", "window": { "kind": "dates", "from": "11-01", "to": "03-15" },
+      "description": "Plant in de winterrust, als de grond niet bevroren is. Zet de boom even diep als hij in de kwekerij stond (de entplek boven de grond), op zo'n 4 meter afstand, met een paal ernaast. Geef na het planten flink water."
+    },
+    {
+      "id": "snoeien", "type": "snoeien", "window": { "kind": "dates", "from": "12-01", "to": "02-28" },
+      "description": "Snoei in de winter dode, zieke en kruisende takken weg en houd de kroon open, zodat er licht in komt."
+    },
+    {
+      "id": "vruchten-dunnen", "type": "onderhoud", "window": { "kind": "dates", "from": "06-15", "to": "07-15" },
+      "description": "Dun in juni te volle trossen uit tot één of twee peren. Zo worden ze groter en draagt de boom elk jaar."
+    },
+    {
+      "id": "oogsten", "type": "oogsten", "window": { "kind": "dates", "from": "08-15", "to": "10-31" },
+      "description": "Pluk handperen als ze bij optillen makkelijk loslaten en laat ze binnen narijpen. Stoofperen blijven hard en bewaar je koel."
+    }
+  ]
+}

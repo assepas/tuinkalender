@@ -1,0 +1,31 @@
+{
+  "schemaVersion": 1,
+  "id": "oosterse-papaver",
+  "name": "Oosterse papaver",
+  "latin": "Papaver orientale",
+  "category": "vaste-plant",
+  "tags": ["meerjarig"],
+  "nativeStatus": "exoot",
+  "appearance": { "shape": "bloem", "count": 4, "flowerColor": "#E8552B", "flowerColorName": "oranjerood" },
+  "bloom": { "from": "05-15", "to": "06-30" },
+  "growing": { "sun": ["zon"], "soil": ["klei", "leem", "zand"], "moisture": ["droog", "normaal"], "spacingCm": 60 },
+  "info": {
+    "intro": "Een vaste plant met enorme, papierachtige bloemen in oranje, rood, roze of wit met een zwart hart. Na de bloei sterft het blad af en komt in de herfst opnieuw op.",
+    "water": "Kan goed tegen droogte dankzij een diepe penwortel.",
+    "tips": [
+      "Zet laat bloeiende planten ernaast die de kale plek in juli opvullen.",
+      "Verplant hem niet: elk stukje wortel kan weer uitgroeien.",
+      "De zaaddozen zijn mooi in droogboeketten."
+    ]
+  },
+  "tasks": [
+    {
+      "id": "planten", "type": "planten", "window": { "kind": "dates", "from": "03-15", "to": "05-01" },
+      "description": "Plant op een zonnige plek op zo'n 60 cm afstand. Zet er een steun bij als de bloemen zwaar worden."
+    },
+    {
+      "id": "terugknippen", "type": "snoeien", "window": { "kind": "dates", "from": "07-01", "to": "07-31" },
+      "description": "Knip na de bloei de stengels en het afstervende blad af tot net boven de grond. In de herfst komt er nieuw blad."
+    }
+  ]
+}

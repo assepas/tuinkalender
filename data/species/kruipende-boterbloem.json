@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "id": "kruipende-boterbloem",
+  "name": "Kruipende boterbloem",
+  "latin": "Ranunculus repens",
+  "category": "vaste-plant",
+  "tags": ["meerjarig", "gazon", "woekert", "giftig"],
+  "nativeStatus": "inheems",
+  "appearance": { "shape": "bloem", "count": 5, "flowerColor": "#F5D11D", "flowerColorName": "glanzend geel" },
+  "bloom": { "from": "05-01", "to": "08-31" },
+  "growing": { "sun": ["zon", "halfschaduw"], "soil": ["klei", "leem", "veen"], "moisture": ["vochtig", "nat"], "spacingCm": 25 },
+  "info": {
+    "intro": "Een vaste plant met glanzende gele bloemen die zich snel verspreidt met lange uitlopers. Hij doet het goed op natte, zware grond en bloeit volop in het voorjaar.",
+    "water": "Houdt van vochtige grond; geen extra water nodig.",
+    "tips": [
+      "Verspreidt zich snel en kan in borders en groentebedden lastig zijn; houd de randen van het gazon in de gaten.",
+      "Vers is hij licht giftig voor vee; gedroogd in hooi niet meer.",
+      "Veel boterbloem wijst op natte, verdichte grond."
+    ]
+  },
+  "tasks": [
+    {
+      "id": "zaaien", "type": "zaaien", "window": { "kind": "dates", "from": "08-15", "to": "09-30" },
+      "description": "Zaai in de nazomer of in april-mei (lukt ook) op kale, losgeharkte plekken in het gras of mee in een bloemrijk gazonmengsel. Strooi het zaad breed uit, druk het aan en houd het een paar weken vochtig. Meestal komt hij vanzelf, zaaien is zelden nodig."
+    },
+    {
+      "id": "maaien", "type": "onderhoud", "window": { "kind": "recurring", "from": "04-15", "to": "10-15", "every": "2weeks" },
+      "description": "Maai het gazon niet te kort, op 5 tot 8 cm, dan blijft deze plant bloeien. Hij bloeit ook laag bij de grond door."
+    },
+    {
+      "id": "uitlopers-verwijderen", "type": "onderhoud", "window": { "kind": "dates", "from": "05-01", "to": "09-30" },
+      "description": "Trek uitlopers die vanuit het gazon de borders of groentebedden in kruipen eruit, met wortel en al. Een scherpe graskant helpt."
+    }
+  ]
+}

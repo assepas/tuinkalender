@@ -1,0 +1,34 @@
+{
+  "schemaVersion": 1,
+  "id": "meiraap",
+  "name": "Meiraap",
+  "latin": "Brassica rapa subsp. rapa",
+  "category": "groente",
+  "tags": ["eenjarig"],
+  "nativeStatus": "exoot",
+  "appearance": { "shape": "vrucht", "count": 1, "flowerColor": "#F2D548", "flowerColorName": "geel", "fruitColor": "#EDE8F0" },
+  "growing": { "sun": ["zon", "halfschaduw"], "soil": ["klei", "leem", "zand"], "moisture": ["normaal", "vochtig"], "spacingCm": 10 },
+  "info": {
+    "intro": "Een snelle knolgroente met witte, soms paars gekleurde knolletjes. Hij groeit in zo'n acht weken en is lekker gestoofd of rauw geraspt.",
+    "water": "Houd de grond vochtig: bij droogte worden de knollen houtig en scherp.",
+    "tips": [
+      "Oogst niet te laat; grote knollen worden voos.",
+      "Het jonge blad kun je eten als raapstelen.",
+      "Gebruik insectengaas tegen de koolvlieg."
+    ]
+  },
+  "tasks": [
+    {
+      "id": "zaaien", "type": "zaaien", "window": { "kind": "dates", "from": "03-15", "to": "05-15" },
+      "description": "Zaai in rijen op 25 cm afstand, 1 cm diep, en dun uit tot 10 cm."
+    },
+    {
+      "id": "zaaien-najaar", "type": "zaaien", "window": { "kind": "dates", "from": "07-15", "to": "08-31" },
+      "description": "Zaai opnieuw in de zomer voor een herfstoogst (stoppelknollen)."
+    },
+    {
+      "id": "oogsten", "type": "oogsten", "window": { "kind": "dates", "from": "05-15", "to": "10-31" },
+      "description": "Trek de knollen als ze 5-7 cm doorsnee zijn."
+    }
+  ]
+}

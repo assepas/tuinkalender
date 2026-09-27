@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "id": "echte-salie",
+  "name": "Echte salie",
+  "latin": "Salvia officinalis",
+  "category": "kruid",
+  "tags": ["meerjarig", "mediterraan", "eetbaar", "groenblijvend"],
+  "nativeStatus": "exoot",
+  "appearance": { "shape": "aar", "count": 5, "flowerColor": "#8A7BD1", "flowerColorName": "lila" },
+  "bloom": { "from": "06-01", "to": "07-15" },
+  "growing": { "sun": ["zon"], "soil": ["zand", "leem"], "moisture": ["droog", "normaal"], "spacingCm": 50 },
+  "info": {
+    "intro": "Een geurige halfstruik met grijsgroen, fluweelachtig blad en lila bloemaren. Het blad is lekker bij pasta, vlees en in thee, en de bloemen zijn geliefd bij hommels.",
+    "water": "Houdt van droog. Alleen water geven na het planten en bij lange droogte.",
+    "tips": [
+      "Knip niet in het kale, oude hout; daar loopt hij niet meer uit.",
+      "Na vier à vijf jaar wordt hij houtig; vervang hem dan door een stek.",
+      "Natte grond in de winter is gevaarlijker dan kou."
+    ]
+  },
+  "tasks": [
+    {
+      "id": "planten", "type": "planten", "window": { "kind": "dates", "from": "04-15", "to": "05-31" },
+      "description": "Plant op een zonnige plek in doorlatende grond, op zo'n 50 cm afstand."
+    },
+    {
+      "id": "oogsten", "type": "oogsten", "window": { "kind": "dates", "from": "04-15", "to": "10-31" },
+      "description": "Pluk steeds de jonge toppen. Om te drogen oogst je vlak voor de bloei."
+    },
+    {
+      "id": "snoeien", "type": "snoeien", "window": { "kind": "dates", "from": "04-01", "to": "04-30" },
+      "description": "Knip de plant in april een derde terug, maar niet tot in het kale hout. Zo blijft hij compact."
+    }
+  ]
+}

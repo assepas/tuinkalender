@@ -1,0 +1,40 @@
+{
+  "schemaVersion": 1,
+  "id": "aubergine",
+  "name": "Aubergine",
+  "latin": "Solanum melongena",
+  "category": "groente",
+  "tags": ["eenjarig", "vorstgevoelig"],
+  "nativeStatus": "exoot",
+  "appearance": { "shape": "vrucht", "count": 1, "flowerColor": "#B08ACD", "flowerColorName": "lila", "fruitColor": "#3C1F4F" },
+  "bloom": { "from": "06-15", "to": "08-31" },
+  "growing": { "sun": ["zon"], "soil": ["klei", "leem"], "moisture": ["normaal"], "spacingCm": 50 },
+  "info": {
+    "intro": "Een warmteminnende groente die in Nederland vooral in de kas lukt. De glanzende paarse vruchten zijn lekker gegrild of in stoofgerechten.",
+    "water": "Geef regelmatig water; nooit laten uitdrogen.",
+    "tips": [
+      "Beperk het aantal vruchten tot vijf à zes per plant voor grotere aubergines.",
+      "Spint (kleine spinnetjes onder het blad) houdt van droge lucht; nevel de kas af en toe.",
+      "Kies voor buiten een klein, vroeg ras."
+    ]
+  },
+  "tasks": [
+    {
+      "id": "zaaien-binnen", "type": "zaaien", "location": "kas", "window": { "kind": "dates", "from": "02-01", "to": "03-15" },
+      "description": "Zaai binnen op 25 °C, 0,5 cm diep. Verspeen naar potjes."
+    },
+    {
+      "id": "uitplanten", "type": "planten", "window": { "kind": "relative", "anchor": "lastFrost", "fromWeeks": 2, "toWeeks": 5 },
+      "note": "Pas bij warm weer",
+      "description": "Plant in de kas of op een zeer warme plek buiten als het ook 's nachts warm blijft."
+    },
+    {
+      "id": "bemesten", "type": "bemesten", "window": { "kind": "recurring", "from": "06-15", "to": "08-31", "every": "2weeks" },
+      "description": "Geef om de twee weken tomatenmest."
+    },
+    {
+      "id": "oogsten", "type": "oogsten", "window": { "kind": "dates", "from": "08-01", "to": "10-15" },
+      "description": "Snijd de aubergines af als ze glanzen en licht meegeven bij drukken. Doffe vruchten zijn overrijp."
+    }
+  ]
+}

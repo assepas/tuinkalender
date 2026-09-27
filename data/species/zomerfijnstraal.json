@@ -1,0 +1,31 @@
+{
+  "schemaVersion": 1,
+  "id": "zomerfijnstraal",
+  "name": "Zomerfijnstraal",
+  "latin": "Erigeron annuus",
+  "category": "vaste-plant",
+  "tags": ["eenjarig", "zelfzaaiend"],
+  "nativeStatus": "exoot",
+  "appearance": { "shape": "bloem", "count": 10, "flowerColor": "#F4F1EA", "flowerColorName": "wit" },
+  "bloom": { "from": "06-01", "to": "10-15" },
+  "growing": { "sun": ["zon"], "soil": ["klei", "leem", "zand"], "moisture": ["normaal"], "spacingCm": 30 },
+  "info": {
+    "intro": "Een losse, hoge plant met honderden kleine, witte madeliefachtige bloemen. Hij bloeit lang en geeft een natuurlijke, wilde sfeer.",
+    "water": "Heeft geen extra water nodig.",
+    "tips": [
+      "Zaait zich sterk uit; knip uitgebloeide stengels af als je dat wilt beperken.",
+      "Mooi als vuller tussen andere planten.",
+      "Kort af en toe in voor een compactere plant."
+    ]
+  },
+  "tasks": [
+    {
+      "id": "zaaien", "type": "zaaien", "window": { "kind": "dates", "from": "04-01", "to": "05-31" },
+      "description": "Zaai direct op de plek; het zaad kiemt makkelijk."
+    },
+    {
+      "id": "uitgebloeid-afknippen", "type": "snoeien", "importance": "licht", "window": { "kind": "dates", "from": "08-01", "to": "09-30" },
+      "description": "Knip de uitgebloeide stengels af om te veel uitzaaien te voorkomen."
+    }
+  ]
+}

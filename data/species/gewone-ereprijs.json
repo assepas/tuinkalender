@@ -1,0 +1,31 @@
+{
+  "schemaVersion": 1,
+  "id": "gewone-ereprijs",
+  "name": "Gewone ereprijs",
+  "latin": "Veronica chamaedrys",
+  "category": "vaste-plant",
+  "tags": ["meerjarig", "gazon", "bodembedekker"],
+  "nativeStatus": "inheems",
+  "appearance": { "shape": "bloem", "count": 4, "flowerColor": "#3E6FC9", "flowerColorName": "helderblauw" },
+  "bloom": { "from": "04-15", "to": "06-30" },
+  "growing": { "sun": ["zon", "halfschaduw"], "soil": ["klei", "leem", "zand"], "moisture": ["normaal"], "spacingCm": 20 },
+  "info": {
+    "intro": "Een laag, kruipend plantje met helderblauwe bloempjes met een wit oog in het voorjaar. Het groeit graag in de randen van het gazon, onder heggen en in halfschaduw.",
+    "water": "Heeft geen extra water nodig.",
+    "tips": [
+      "Herken hem aan de twee rijen haartjes aan weerszijden van de stengel.",
+      "Voelt zich thuis in de halfschaduw, waar het gras dunner is.",
+      "Verspreidt zich met kruipende stengels die wortelen."
+    ]
+  },
+  "tasks": [
+    {
+      "id": "zaaien", "type": "zaaien", "window": { "kind": "dates", "from": "08-15", "to": "09-30" },
+      "description": "Zaai in de nazomer of in april-mei (lukt ook) op kale, losgeharkte plekken in het gras of mee in een bloemrijk gazonmengsel. Strooi het zaad breed uit, druk het aan en houd het een paar weken vochtig."
+    },
+    {
+      "id": "maaien", "type": "onderhoud", "window": { "kind": "recurring", "from": "05-01", "to": "10-15", "every": "2weeks" },
+      "description": "Maai het gazon niet te kort, op 5 tot 8 cm, dan blijft deze plant bloeien. Maai in het voorjaar wat minder vaak, dan kan hij volop bloeien."
+    }
+  ]
+}

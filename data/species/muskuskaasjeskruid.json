@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "id": "muskuskaasjeskruid",
+  "name": "Muskuskaasjeskruid",
+  "latin": "Malva moschata",
+  "category": "vaste-plant",
+  "tags": ["meerjarig", "zelfzaaiend"],
+  "nativeStatus": "inheems",
+  "appearance": { "shape": "bloem", "count": 5, "flowerColor": "#F0BCD0", "flowerColorName": "lichtroze" },
+  "bloom": { "from": "06-15", "to": "09-15" },
+  "growing": { "sun": ["zon", "halfschaduw"], "soil": ["klei", "leem", "zand"], "moisture": ["normaal", "droog"], "spacingCm": 40 },
+  "info": {
+    "intro": "Een elegante inheemse vaste plant met fijn ingesneden blad en zachtroze of witte, schaalvormige bloemen. Hij bloeit lang en past goed in een natuurlijke border.",
+    "water": "Kan goed tegen droogte. Alleen water geven na het planten.",
+    "tips": [
+      "Zaait zich uit; trek te veel zaailingen gewoon weg.",
+      "De witte vorm ('Alba') is net zo sterk.",
+      "Leeft niet heel lang, maar vervangt zichzelf via zaad."
+    ]
+  },
+  "tasks": [
+    {
+      "id": "planten", "type": "planten", "window": { "kind": "dates", "from": "03-15", "to": "05-15" },
+      "description": "Plant op zo'n 40 cm afstand op een zonnige plek. Zaaien in april kan ook."
+    },
+    {
+      "id": "terugknippen-na-bloei", "type": "snoeien", "importance": "licht", "window": { "kind": "dates", "from": "08-01", "to": "08-31" },
+      "description": "Knip na de eerste bloei een derde terug voor een frisse nabloei."
+    },
+    {
+      "id": "terugknippen", "type": "snoeien", "window": { "kind": "dates", "from": "03-01", "to": "03-31" },
+      "description": "Knip de oude stengels in het voorjaar af."
+    }
+  ]
+}

@@ -1,0 +1,31 @@
+{
+  "schemaVersion": 1,
+  "id": "smalle-weegbree",
+  "name": "Smalle weegbree",
+  "latin": "Plantago lanceolata",
+  "category": "vaste-plant",
+  "tags": ["meerjarig", "gazon"],
+  "nativeStatus": "inheems",
+  "appearance": { "shape": "aar", "count": 4, "flowerColor": "#8C7A55", "flowerColorName": "bruin met witte meeldraden" },
+  "bloom": { "from": "05-01", "to": "09-30" },
+  "growing": { "sun": ["zon", "halfschaduw"], "soil": ["klei", "leem", "zand"], "moisture": ["droog", "normaal"], "spacingCm": 20 },
+  "info": {
+    "intro": "Een sterke vaste plant met smalle, geribde bladeren en korte bruine aartjes op lange stelen. Hij kan tegen betreden en maaien. Het blad wordt al eeuwen gebruikt op insectenbeten.",
+    "water": "Kan goed tegen droogte door zijn diepe wortels.",
+    "tips": [
+      "Wrijf een fijngekneusd blad op een muggen- of brandnetelbult: dat verzacht de jeuk.",
+      "Waardplant van onder meer de veldparelmoervlinder.",
+      "Groeit ook op plekken waar veel over het gras wordt gelopen."
+    ]
+  },
+  "tasks": [
+    {
+      "id": "zaaien", "type": "zaaien", "window": { "kind": "dates", "from": "08-15", "to": "09-30" },
+      "description": "Zaai in de nazomer of in april-mei (lukt ook) op kale, losgeharkte plekken in het gras of mee in een bloemrijk gazonmengsel. Strooi het zaad breed uit, druk het aan en houd het een paar weken vochtig."
+    },
+    {
+      "id": "maaien", "type": "onderhoud", "window": { "kind": "recurring", "from": "05-01", "to": "10-15", "every": "2weeks" },
+      "description": "Maai het gazon niet te kort, op 5 tot 8 cm, dan blijft deze plant bloeien. Hij is sterk genoeg voor een speel- of looppad."
+    }
+  ]
+}

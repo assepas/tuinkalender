@@ -1,0 +1,31 @@
+{
+  "schemaVersion": 1,
+  "id": "kogeldistel",
+  "name": "Distel (kogeldistel)",
+  "latin": "Echinops bannaticus",
+  "category": "vaste-plant",
+  "tags": ["meerjarig", "vlinderplant", "droogtebestendig"],
+  "nativeStatus": "exoot",
+  "appearance": { "shape": "losse-wolk", "count": 3, "flowerColor": "#6C83C4", "flowerColorName": "staalblauw" },
+  "bloom": { "from": "07-01", "to": "09-15" },
+  "growing": { "sun": ["zon"], "soil": ["zand", "leem", "klei"], "moisture": ["droog", "normaal"], "spacingCm": 60 },
+  "info": {
+    "intro": "Een stoere vaste plant met stekelig blad en perfect ronde, staalblauwe bollen. De bloemen zitten altijd vol bijen en hommels. Na de bloei blijven de bollen mooi staan.",
+    "water": "Door de diepe penwortel kan hij goed tegen droogte. Alleen water geven na het planten.",
+    "tips": [
+      "De bollen zijn mooi als droogbloem: pluk ze net voordat ze opengaan.",
+      "Verplant hem liever niet: de penwortel breekt makkelijk.",
+      "Draag handschoenen, het blad prikt."
+    ]
+  },
+  "tasks": [
+    {
+      "id": "planten", "type": "planten", "window": { "kind": "dates", "from": "03-15", "to": "05-01" },
+      "description": "Plant op een zonnige plek in doorlatende grond, op zo'n 60 cm afstand. Hij kan jaren op dezelfde plek blijven staan."
+    },
+    {
+      "id": "terugknippen", "type": "snoeien", "window": { "kind": "dates", "from": "02-15", "to": "03-31" },
+      "description": "Laat de uitgebloeide bollen de winter over staan voor vogels en insecten. Knip de oude stengels in het late voorjaar af tot net boven de grond."
+    }
+  ]
+}

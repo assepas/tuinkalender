@@ -1,0 +1,34 @@
+{
+  "schemaVersion": 1,
+  "id": "rode-biet",
+  "name": "Rode biet",
+  "latin": "Beta vulgaris",
+  "category": "groente",
+  "tags": ["eenjarig"],
+  "nativeStatus": "exoot",
+  "appearance": { "shape": "vrucht", "count": 1, "flowerColor": "#8BA05A", "flowerColorName": "groen", "fruitColor": "#7A1E3A" },
+  "growing": { "sun": ["zon", "halfschaduw"], "soil": ["klei", "leem", "zand"], "moisture": ["normaal"], "spacingCm": 10 },
+  "info": {
+    "intro": "Een makkelijke wortelgroente die je van het vroege voorjaar tot de zomer kunt zaaien. De bieten zijn goed te bewaren, en het jonge blad is eetbaar als spinazie.",
+    "water": "Geef gelijkmatig water; bij droogte worden de bieten houtig en krijgen ze ringen.",
+    "tips": [
+      "Elk 'zaadje' is een kluwen van meerdere zaden: dun daarom altijd uit.",
+      "Oogst ze op tennisbalformaat, dan zijn ze het malst.",
+      "Draai het blad eraf in plaats van het af te snijden, anders 'bloeden' de bieten."
+    ]
+  },
+  "tasks": [
+    {
+      "id": "zaaien", "type": "zaaien", "window": { "kind": "dates", "from": "04-15", "to": "07-15" },
+      "description": "Zaai in rijen op 25 cm afstand, 2 cm diep. Zaai om de vier weken opnieuw voor jonge bietjes de hele zomer."
+    },
+    {
+      "id": "uitdunnen", "type": "onderhoud", "window": { "kind": "dates", "from": "05-15", "to": "08-15" },
+      "description": "Dun de plantjes uit tot 10 cm afstand als ze een paar blaadjes hebben. De uitgedunde plantjes kun je in een salade eten."
+    },
+    {
+      "id": "oogsten", "type": "oogsten", "window": { "kind": "dates", "from": "07-01", "to": "10-31" },
+      "description": "Trek bieten uit als ze tennisbalgroot zijn. Voor de winter oogst je alles vóór de strenge vorst en bewaar je ze koel in een kist met zand."
+    }
+  ]
+}

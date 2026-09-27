@@ -1,0 +1,39 @@
+{
+  "schemaVersion": 1,
+  "id": "citroengras",
+  "name": "Citroengras",
+  "latin": "Cymbopogon citratus",
+  "category": "kruid",
+  "tags": ["niet-winterhard", "kuipplant", "eetbaar"],
+  "nativeStatus": "exoot",
+  "appearance": { "shape": "aar", "count": 3, "flowerColor": "#B8C77A", "flowerColorName": "groen" },
+  "growing": { "sun": ["zon"], "soil": ["leem", "zand"], "moisture": ["normaal", "vochtig"], "spacingCm": 50 },
+  "info": {
+    "intro": "Een tropisch gras met stengels die fris naar citroen ruiken. Je gebruikt het in Aziatische gerechten en thee. Het groeit bij ons in een pot die 's zomers buiten staat.",
+    "water": "Houd de potgrond vochtig; in de zomer vaak water geven. In de winter binnen veel minder.",
+    "tips": [
+      "Een bosje citroengras uit de toko met nog een wortelbasis gaat in een glas water vaak wortelen.",
+      "Niet winterhard: binnenhalen voordat het onder de 5 °C komt.",
+      "Het blad is scherp; pas op je handen."
+    ]
+  },
+  "tasks": [
+    {
+      "id": "planten", "type": "planten", "window": { "kind": "relative", "anchor": "lastFrost", "fromWeeks": 0, "toWeeks": 3 },
+      "note": "In pot, na de nachtvorst",
+      "description": "Zet de plant in een grote pot met voedzame potgrond, op een warme, zonnige plek. Zet hem pas buiten als het ook 's nachts niet meer koud wordt."
+    },
+    {
+      "id": "bemesten", "type": "bemesten", "window": { "kind": "recurring", "from": "06-01", "to": "08-31", "every": "2weeks" },
+      "description": "Geef in de zomer om de twee weken wat vloeibare mest door het gietwater."
+    },
+    {
+      "id": "oogsten", "type": "oogsten", "window": { "kind": "dates", "from": "07-01", "to": "10-01" },
+      "description": "Snijd of trek de dikste stengels aan de voet af. Gebruik het witte onderste deel in gerechten en het blad voor thee."
+    },
+    {
+      "id": "binnenhalen", "type": "winterhard", "window": { "kind": "relative", "anchor": "firstFrost", "fromWeeks": -4, "toWeeks": -2 },
+      "description": "Haal de pot binnen voordat het koud wordt. Zet hem op een lichte plek bij 10-15 °C en geef weinig water. Knip het blad desnoods kort."
+    }
+  ]
+}

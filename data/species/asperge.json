@@ -1,0 +1,36 @@
+{
+  "schemaVersion": 1,
+  "id": "asperge",
+  "name": "Asperge",
+  "latin": "Asparagus officinalis",
+  "category": "groente",
+  "tags": ["meerjarig", "veel-ruimte"],
+  "nativeStatus": "exoot",
+  "appearance": { "shape": "losse-wolk", "count": 6, "flowerColor": "#E6E7C8", "flowerColorName": "geelgroen" },
+  "bloom": { "from": "06-01", "to": "07-15" },
+  "growing": { "sun": ["zon"], "soil": ["zand"], "moisture": ["normaal"], "spacingCm": 40 },
+  "info": {
+    "intro": "Een vaste groente die twintig jaar kan blijven staan. Groene asperges zijn in de moestuin het makkelijkst; witte moet je onder een aarden rug laten groeien.",
+    "water": "Geef na het planten en in droge zomers water; op zandgrond extra.",
+    "tips": [
+      "Oogst pas vanaf het derde jaar, en dan nog kort.",
+      "Stop met oogsten rond 24 juni (Sint-Jan): de plant moet dan aansterken.",
+      "Laat het loof staan tot het geel is."
+    ]
+  },
+  "tasks": [
+    {
+      "id": "planten", "type": "planten", "window": { "kind": "dates", "from": "03-15", "to": "04-30" },
+      "description": "Plant de wortelklauwen in een geul van 20 cm diep op 40 cm afstand en dek ze eerst af met 5 cm grond. Vul de geul in de loop van de zomer bij."
+    },
+    {
+      "id": "oogsten", "type": "oogsten", "window": { "kind": "dates", "from": "04-15", "to": "06-24" },
+      "note": "Stoppen rond 24 juni",
+      "description": "Snijd groene asperges af als ze 15-20 cm hoog zijn. Oogst niet in de eerste twee jaar."
+    },
+    {
+      "id": "terugknippen", "type": "snoeien", "window": { "kind": "dates", "from": "11-01", "to": "11-30" },
+      "description": "Knip het gele loof in de herfst af tot vlak boven de grond en geef compost."
+    }
+  ]
+}

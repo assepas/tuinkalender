@@ -1,0 +1,40 @@
+{
+  "schemaVersion": 1,
+  "id": "pruimenboom",
+  "name": "Pruimenboom",
+  "latin": "Prunus domestica",
+  "category": "boom",
+  "tags": ["meerjarig", "fruitboom"],
+  "nativeStatus": "archeofyt",
+  "appearance": { "shape": "vrucht", "count": 2, "flowerColor": "#F6F2EE", "flowerColorName": "wit", "fruitColor": "#5A2A6E" },
+  "bloom": { "from": "04-01", "to": "04-30" },
+  "growing": { "sun": ["zon"], "soil": ["klei", "leem"], "moisture": ["normaal"], "spacingCm": 400 },
+  "info": {
+    "intro": "Een fruitboom met witte bloesem en in de nazomer sappige pruimen. Rassen als de Opal en Victoria zijn zelfbestuivend en geven al snel een flinke oogst.",
+    "water": "Geef een jonge boom in droge periodes water.",
+    "tips": [
+      "Te veel vruchten? Dun ze uit, anders breken takken af.",
+      "Snoei in de zomer, niet in de winter: dat voorkomt loodglans (een schimmelziekte).",
+      "Wespen komen op rijpe pruimen af; pluk op tijd."
+    ]
+  },
+  "tasks": [
+    {
+      "id": "planten", "type": "planten", "window": { "kind": "dates", "from": "11-01", "to": "03-15" },
+      "description": "Plant in de winterrust, als de grond niet bevroren is. Zet de boom even diep als hij in de kwekerij stond (de entplek boven de grond), op zo'n 4 meter afstand, met een paal ernaast. Geef na het planten flink water."
+    },
+    {
+      "id": "snoeien", "type": "snoeien", "window": { "kind": "dates", "from": "07-15", "to": "08-31" },
+      "note": "In de zomer snoeien",
+      "description": "Snoei pruimen na de oogst in de zomer. Haal dode, kruisende en te dichte takken weg."
+    },
+    {
+      "id": "vruchten-dunnen", "type": "onderhoud", "window": { "kind": "dates", "from": "06-01", "to": "06-30" },
+      "description": "Dun te volle takken uit tot een pruim per 5-8 cm, zodat takken niet breken."
+    },
+    {
+      "id": "oogsten", "type": "oogsten", "window": { "kind": "dates", "from": "08-01", "to": "09-30" },
+      "description": "Pluk de pruimen als ze zacht aanvoelen en makkelijk loslaten."
+    }
+  ]
+}

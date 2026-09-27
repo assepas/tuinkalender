@@ -1,0 +1,31 @@
+{
+  "schemaVersion": 1,
+  "id": "juffertje-in-het-groen",
+  "name": "Juffertje-in-het-groen",
+  "latin": "Nigella damascena",
+  "category": "vaste-plant",
+  "tags": ["eenjarig", "zelfzaaiend", "snijbloem"],
+  "nativeStatus": "exoot",
+  "appearance": { "shape": "bloem", "count": 5, "flowerColor": "#8FB3E0", "flowerColorName": "lichtblauw" },
+  "bloom": { "from": "06-01", "to": "08-15" },
+  "growing": { "sun": ["zon", "halfschaduw"], "soil": ["zand", "leem", "klei"], "moisture": ["normaal"], "spacingCm": 20 },
+  "info": {
+    "intro": "Een fijne eenjarige met lichtblauwe bloemen in een wolkje van draadvormig blad. Na de bloei komen er ballonvormige zaaddozen die mooi zijn in droogboeketten.",
+    "water": "Weinig veeleisend. Water geven na het zaaien en bij lange droogte.",
+    "tips": [
+      "Zaait zich uit: na één keer zaaien heb je hem jaren.",
+      "Hij houdt niet van verplanten; zaai direct op de plek.",
+      "Pluk de zaaddozen als ze gekleurd zijn om te drogen."
+    ]
+  },
+  "tasks": [
+    {
+      "id": "zaaien", "type": "zaaien", "window": { "kind": "dates", "from": "03-15", "to": "05-15" },
+      "description": "Strooi het zaad uit op de plek waar hij moet bloeien en hark het licht in. Dun de plantjes uit tot 20 cm. Zaaien in september kan ook, voor een vroege bloei volgend jaar."
+    },
+    {
+      "id": "zaaddozen-oogsten", "type": "oogsten", "window": { "kind": "dates", "from": "08-01", "to": "09-15" },
+      "description": "Knip de opgeblazen zaaddozen af als ze gekleurd zijn en hang ze ondersteboven te drogen. Schud het zaad eruit voor volgend jaar."
+    }
+  ]
+}

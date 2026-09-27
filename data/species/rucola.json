@@ -1,0 +1,30 @@
+{
+  "schemaVersion": 1,
+  "id": "rucola",
+  "name": "Rucola",
+  "latin": "Eruca vesicaria",
+  "category": "groente",
+  "tags": ["eenjarig", "eetbaar"],
+  "nativeStatus": "exoot",
+  "appearance": { "shape": "bloem", "count": 4, "flowerColor": "#F1EBD6", "flowerColorName": "crèmewit" },
+  "growing": { "sun": ["zon", "halfschaduw"], "soil": ["klei", "leem", "zand"], "moisture": ["normaal"], "spacingCm": 10 },
+  "info": {
+    "intro": "Een snelle, pittige bladgroente. Na drie à vier weken kun je al plukken. In het voorjaar en najaar is hij het lekkerst; in de zomer wordt hij scherp.",
+    "water": "Houd de grond vochtig; droogte maakt het blad heel scherp.",
+    "tips": [
+      "Zaai om de drie weken een klein rijtje.",
+      "Aardvlooien maken gaatjes in het blad; insectengaas helpt.",
+      "De bloemetjes zijn ook eetbaar."
+    ]
+  },
+  "tasks": [
+    {
+      "id": "zaaien", "type": "zaaien", "window": { "kind": "dates", "from": "03-15", "to": "09-15" },
+      "description": "Zaai om de drie weken een rijtje, 1 cm diep. In de zomer liever op een wat schaduwrijke plek."
+    },
+    {
+      "id": "oogsten", "type": "oogsten", "window": { "kind": "dates", "from": "04-15", "to": "10-31" },
+      "description": "Pluk de bladeren als ze 10 cm lang zijn; knip de plant af boven het hart, dan loopt hij opnieuw uit."
+    }
+  ]
+}

@@ -1,0 +1,34 @@
+{
+  "schemaVersion": 1,
+  "id": "knolselderij",
+  "name": "Knolselderij",
+  "latin": "Apium graveolens var. rapaceum",
+  "category": "groente",
+  "tags": ["tweejarig"],
+  "nativeStatus": "exoot",
+  "appearance": { "shape": "vrucht", "count": 1, "flowerColor": "#F0EEE4", "flowerColorName": "wit", "fruitColor": "#DCCFA8" },
+  "growing": { "sun": ["zon", "halfschaduw"], "soil": ["klei", "leem"], "moisture": ["vochtig", "normaal"], "spacingCm": 40 },
+  "info": {
+    "intro": "Een knolgewas met een sterke selderijsmaak, lekker in soep en stamppot. Hij heeft een lang seizoen nodig en veel water.",
+    "water": "Geef regelmatig flink water: een knolselderij bestaat voor het grootste deel uit water.",
+    "tips": [
+      "Plant niet te diep: de knol groeit boven de grond.",
+      "Haal in de zomer de zijwortels en onderste bladeren weg voor een gladde knol.",
+      "Kan een paar graden vorst hebben; bij strenge vorst oogsten."
+    ]
+  },
+  "tasks": [
+    {
+      "id": "zaaien-binnen", "type": "zaaien", "location": "kas", "window": { "kind": "dates", "from": "02-15", "to": "03-31" },
+      "description": "Zaai binnen op een warme plek, zaad alleen aandrukken: het kiemt in het licht. Verspeen de plantjes naar potjes."
+    },
+    {
+      "id": "uitplanten", "type": "planten", "window": { "kind": "relative", "anchor": "lastFrost", "fromWeeks": 0, "toWeeks": 3 },
+      "description": "Plant uit na de laatste nachtvorst op 40 cm afstand. Plant ondiep, met het hart boven de grond."
+    },
+    {
+      "id": "oogsten", "type": "oogsten", "window": { "kind": "dates", "from": "09-15", "to": "11-30" },
+      "description": "Graaf de knollen uit als ze groot genoeg zijn. Snijd het blad eraf en bewaar ze koel."
+    }
+  ]
+}

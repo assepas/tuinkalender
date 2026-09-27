@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "id": "kweepeer",
+  "name": "Kweepeer",
+  "latin": "Cydonia oblonga",
+  "category": "boom",
+  "tags": ["meerjarig", "fruitboom", "geurend"],
+  "nativeStatus": "exoot",
+  "appearance": { "shape": "vrucht", "count": 1, "flowerColor": "#F3DDE3", "flowerColorName": "lichtroze", "fruitColor": "#E6C43A" },
+  "bloom": { "from": "05-01", "to": "05-31" },
+  "growing": { "sun": ["zon"], "soil": ["klei", "leem"], "moisture": ["normaal", "vochtig"], "spacingCm": 400 },
+  "info": {
+    "intro": "Een kleine boom met grote, roze-witte bloemen en geurende, gele vruchten in de herfst. Kweeperen zijn rauw hard en zuur, maar gekookt geven ze heerlijke jam, gelei en compote.",
+    "water": "Geef een jonge boom in droge periodes water.",
+    "tips": [
+      "Eén kweepeer in huis geurt de hele kamer.",
+      "De boom is zelfbestuivend.",
+      "Weinig snoei nodig; alleen vorm geven en dood hout verwijderen."
+    ]
+  },
+  "tasks": [
+    {
+      "id": "planten", "type": "planten", "window": { "kind": "dates", "from": "11-01", "to": "03-15" },
+      "description": "Plant in de winterrust, als de grond niet bevroren is. Zet de boom even diep als hij in de kwekerij stond (de entplek boven de grond), op zo'n 4 meter afstand, met een paal ernaast. Geef na het planten flink water."
+    },
+    {
+      "id": "snoeien", "type": "snoeien", "window": { "kind": "dates", "from": "12-01", "to": "02-28" },
+      "description": "Snoei alleen dode, zieke en kruisende takken weg. Kweepeer bloeit aan de toppen van de takken: niet te veel inkorten."
+    },
+    {
+      "id": "oogsten", "type": "oogsten", "window": { "kind": "dates", "from": "10-01", "to": "11-15" },
+      "description": "Pluk de kweeperen als ze geel zijn en het dons makkelijk afwrijft. Laat ze nog een paar weken op een koele plek rijpen."
+    }
+  ]
+}

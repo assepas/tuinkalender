@@ -1,0 +1,39 @@
+{
+  "schemaVersion": 1,
+  "id": "dropplant",
+  "name": "Dropplant (anijsnetel)",
+  "latin": "Agastache foeniculum",
+  "category": "kruid",
+  "tags": ["meerjarig", "vlinderplant", "eetbaar", "geurend"],
+  "nativeStatus": "exoot",
+  "appearance": { "shape": "aar", "count": 7, "flowerColor": "#7E68B8", "flowerColorName": "paars" },
+  "bloom": { "from": "07-01", "to": "09-30" },
+  "growing": { "sun": ["zon"], "soil": ["zand", "leem"], "moisture": ["droog", "normaal"], "spacingCm": 40 },
+  "info": {
+    "intro": "Een vaste plant met paarse bloemaren en blad dat naar drop en anijs ruikt. Het is een van de beste bijenplanten; er zit bijna altijd iets op. Van het blad zet je thee.",
+    "water": "Geef het eerste jaar water in droge periodes. Daarna kan hij goed tegen droogte.",
+    "tips": [
+      "Leeft maar een paar jaar, maar zaait zich uit.",
+      "Natte grond in de winter vindt hij niet fijn.",
+      "Blad en bloemen zijn eetbaar: lekker in thee, salade of in een fruitsalade."
+    ]
+  },
+  "tasks": [
+    {
+      "id": "zaaien-binnen", "type": "zaaien", "location": "kas", "window": { "kind": "dates", "from": "03-01", "to": "04-15" },
+      "description": "Zaai binnen in een tray, alleen aandrukken: het zaad kiemt in het licht. Verspeen de plantjes naar eigen potjes."
+    },
+    {
+      "id": "planten", "type": "planten", "window": { "kind": "dates", "from": "04-15", "to": "05-31" },
+      "description": "Plant op een zonnige plek in goed doorlatende grond, op zo'n 40 cm afstand."
+    },
+    {
+      "id": "oogsten", "type": "oogsten", "window": { "kind": "dates", "from": "06-01", "to": "09-15" },
+      "description": "Pluk blad en bloemen voor thee, vers of gedroogd."
+    },
+    {
+      "id": "terugknippen", "type": "snoeien", "window": { "kind": "dates", "from": "03-01", "to": "03-31" },
+      "description": "Laat de uitgebloeide aren in de winter staan voor vogels. Knip de oude stengels in maart af tot net boven de grond."
+    }
+  ]
+}

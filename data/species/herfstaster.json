@@ -1,0 +1,39 @@
+{
+  "schemaVersion": 1,
+  "id": "herfstaster",
+  "name": "Herfstaster",
+  "latin": "Symphyotrichum novae-angliae",
+  "category": "vaste-plant",
+  "tags": ["meerjarig", "vlinderplant"],
+  "nativeStatus": "exoot",
+  "appearance": { "shape": "bloem", "count": 10, "flowerColor": "#8E5CC4", "flowerColorName": "paars" },
+  "bloom": { "from": "09-01", "to": "10-31" },
+  "growing": { "sun": ["zon"], "soil": ["klei", "leem"], "moisture": ["normaal", "vochtig"], "spacingCm": 50 },
+  "info": {
+    "intro": "Een hoge vaste plant die in september en oktober vol paarse, roze of blauwe sterretjes staat. Voor vlinders en bijen een van de laatste grote maaltijden van het jaar.",
+    "water": "Houd de grond vochtig in de zomer; bij droogte krijgt hij meeldauw en kale stengels.",
+    "tips": [
+      "Knip hem eind mei een derde in: dan blijft hij compacter en valt hij minder snel om.",
+      "Kies een luchtige plek tegen meeldauw.",
+      "Verdeel hem om de drie jaar."
+    ]
+  },
+  "tasks": [
+    {
+      "id": "planten", "type": "planten", "window": { "kind": "dates", "from": "03-15", "to": "05-01" },
+      "description": "Plant op zo'n 50 cm afstand in voedzame, vochthoudende grond."
+    },
+    {
+      "id": "innijpen", "type": "snoeien", "importance": "licht", "window": { "kind": "dates", "from": "05-15", "to": "06-15" },
+      "description": "Knip de stengels eind mei een derde terug. De plant blijft dan steviger en bloeit met meer, iets kleinere bloemen."
+    },
+    {
+      "id": "terugknippen", "type": "snoeien", "window": { "kind": "dates", "from": "11-15", "to": "03-15" },
+      "description": "Knip de uitgebloeide stengels in de winter of het vroege voorjaar af."
+    },
+    {
+      "id": "delen", "type": "delen", "window": { "kind": "dates", "from": "03-15", "to": "04-15" },
+      "description": "Verdeel de pol om de drie jaar in het voorjaar."
+    }
+  ]
+}

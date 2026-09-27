@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "id": "grote-pimpernel",
+  "name": "Grote pimpernel",
+  "latin": "Sanguisorba officinalis",
+  "category": "vaste-plant",
+  "tags": ["meerjarig", "vlinderplant"],
+  "nativeStatus": "inheems",
+  "appearance": { "shape": "losse-wolk", "count": 6, "flowerColor": "#7A1F2E", "flowerColorName": "donkerrood" },
+  "bloom": { "from": "06-15", "to": "09-15" },
+  "growing": { "sun": ["zon", "halfschaduw"], "soil": ["klei", "leem", "veen"], "moisture": ["normaal", "vochtig"], "spacingCm": 50 },
+  "info": {
+    "intro": "Een inheemse plant van natte hooilanden met kleine, donkerrode bolletjes op lange stelen die boven het blad uitdansen. Hij is de waardplant van het pimpernelblauwtje, een zeldzame vlinder.",
+    "water": "Houdt van vochtige grond. Geef water in droge zomers, anders wordt het blad bruin.",
+    "tips": [
+      "Mooi tussen siergrassen en andere laat bloeiende vaste planten.",
+      "Laat de zaadhoofdjes in de winter staan; ze zien er mooi uit met rijp.",
+      "Wordt na een paar jaar een flinke pol; zet hem niet te dicht bij andere planten."
+    ]
+  },
+  "tasks": [
+    {
+      "id": "planten", "type": "planten", "window": { "kind": "dates", "from": "03-15", "to": "05-01" },
+      "description": "Plant in het voorjaar op een zonnige of licht beschaduwde plek met vochtige grond, op zo'n 50 cm afstand."
+    },
+    {
+      "id": "terugknippen", "type": "snoeien", "window": { "kind": "dates", "from": "02-15", "to": "03-31" },
+      "description": "Knip de oude stengels in het late voorjaar af tot net boven de grond, voordat het nieuwe blad komt."
+    },
+    {
+      "id": "delen", "type": "delen", "window": { "kind": "dates", "from": "03-15", "to": "04-15" },
+      "description": "Steek een grote pol om de paar jaar in het voorjaar uit en verdeel hem in stukken met wortels."
+    }
+  ]
+}

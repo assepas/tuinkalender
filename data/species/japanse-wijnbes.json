@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "id": "japanse-wijnbes",
+  "name": "Japanse wijnbes",
+  "latin": "Rubus phoenicolasius",
+  "category": "fruit",
+  "tags": ["meerjarig", "klimmer"],
+  "nativeStatus": "exoot",
+  "appearance": { "shape": "vrucht", "count": 5, "flowerColor": "#F0D8E0", "flowerColorName": "lichtroze", "fruitColor": "#C82A2A" },
+  "bloom": { "from": "06-01", "to": "06-30" },
+  "growing": { "sun": ["zon", "halfschaduw"], "soil": ["klei", "leem", "zand"], "moisture": ["normaal"], "spacingCm": 200 },
+  "info": {
+    "intro": "Een verwant van de framboos met rode, plakkerig behaarde takken en glanzend rode, zoete besjes. Hij is sterk, weinig vatbaar voor ziekten en ook mooi in de winter.",
+    "water": "Geef in droge periodes water, vooral als de bessen rijpen.",
+    "tips": [
+      "Bind de lange scheuten aan draden, net als bij braam.",
+      "Takken die de grond raken, wortelen; zo krijg je makkelijk nieuwe planten.",
+      "De bessen zijn lekker vers en in jam."
+    ]
+  },
+  "tasks": [
+    {
+      "id": "planten", "type": "planten", "window": { "kind": "dates", "from": "11-01", "to": "03-15" },
+      "description": "Plant in de winterrust langs een hek of draden, op zo'n 2 meter afstand."
+    },
+    {
+      "id": "snoeien", "type": "snoeien", "window": { "kind": "dates", "from": "08-15", "to": "09-30" },
+      "description": "Knip na de oogst de takken die vrucht droegen bij de grond weg en bind de nieuwe scheuten van dit jaar op. Die dragen volgend jaar."
+    },
+    {
+      "id": "oogsten", "type": "oogsten", "window": { "kind": "dates", "from": "07-15", "to": "08-31" },
+      "description": "Pluk de bessen als ze glanzend rood zijn en makkelijk loslaten."
+    }
+  ]
+}

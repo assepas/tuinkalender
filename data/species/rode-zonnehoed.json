@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "id": "rode-zonnehoed",
+  "name": "Rode zonnehoed",
+  "latin": "Echinacea purpurea",
+  "category": "vaste-plant",
+  "tags": ["meerjarig", "vlinderplant"],
+  "nativeStatus": "exoot",
+  "appearance": { "shape": "bloem", "count": 10, "flowerColor": "#C66A9A", "flowerColorName": "paars-roze" },
+  "bloom": { "from": "07-01", "to": "09-30" },
+  "growing": { "sun": ["zon"], "soil": ["zand", "leem", "klei"], "moisture": ["normaal", "droog"], "spacingCm": 45 },
+  "info": {
+    "intro": "Een Noord-Amerikaanse vaste plant met roze bloemen rond een oranje, stekelig hart. Vlinders en bijen komen er massaal op af, en in de winter eten vogels het zaad.",
+    "water": "Geef het eerste jaar water in droge periodes. Daarna kan hij behoorlijk tegen droogte.",
+    "tips": [
+      "Slakken lusten de jonge scheuten; bescherm ze in het voorjaar.",
+      "Leeft langer op goed doorlatende grond dan op natte klei.",
+      "Laat de zaadkoppen in de winter staan: puttertjes eten ze graag."
+    ]
+  },
+  "tasks": [
+    {
+      "id": "planten", "type": "planten", "window": { "kind": "dates", "from": "04-01", "to": "05-31" },
+      "description": "Plant op een zonnige plek op zo'n 45 cm afstand. Niet te diep planten: het hart moet gelijk liggen met de grond."
+    },
+    {
+      "id": "dode-bloemen-verwijderen", "type": "snoeien", "importance": "licht", "window": { "kind": "recurring", "from": "07-15", "to": "09-15", "every": "2weeks" },
+      "description": "Knip uitgebloeide bloemen af tot boven een blad, dan komen er nieuwe knoppen. Laat vanaf september de bloemen staan voor de vogels."
+    },
+    {
+      "id": "terugknippen", "type": "snoeien", "window": { "kind": "dates", "from": "02-15", "to": "03-31" },
+      "description": "Knip de oude stengels in het late voorjaar af tot net boven de grond."
+    }
+  ]
+}

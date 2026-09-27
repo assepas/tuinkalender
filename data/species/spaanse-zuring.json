@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "id": "spaanse-zuring",
+  "name": "Spaanse zuring",
+  "latin": "Rumex scutatus",
+  "category": "kruid",
+  "tags": ["meerjarig", "eetbaar"],
+  "nativeStatus": "exoot",
+  "appearance": { "shape": "aar", "count": 5, "flowerColor": "#A8B06A", "flowerColorName": "groen-rood" },
+  "bloom": { "from": "06-01", "to": "08-15" },
+  "growing": { "sun": ["zon", "halfschaduw"], "soil": ["zand", "leem"], "moisture": ["droog", "normaal"], "spacingCm": 30 },
+  "info": {
+    "intro": "Een lage, vaste zuring met kleine, schildvormige blaadjes en een frisse, citroenachtige smaak. Hij is milder dan gewone zuring en lekker in salades, soep en bij vis.",
+    "water": "Geef water in droge periodes; zo blijft het blad mals en minder zuur.",
+    "tips": [
+      "Knip de bloemstengels weg: dan blijft de plant blad maken.",
+      "Staat mooi als lage rand langs een kruidenbed.",
+      "Eet met mate: zuring bevat oxaalzuur."
+    ]
+  },
+  "tasks": [
+    {
+      "id": "planten", "type": "planten", "window": { "kind": "dates", "from": "04-01", "to": "05-31" },
+      "description": "Plant op een zonnige of licht beschaduwde plek, op zo'n 30 cm afstand. Zaaien kan ook in april-mei, direct op de plek."
+    },
+    {
+      "id": "oogsten", "type": "oogsten", "window": { "kind": "dates", "from": "04-15", "to": "10-15" },
+      "description": "Pluk de jonge blaadjes steeds van buiten naar binnen. Jonge blaadjes zijn het malst."
+    },
+    {
+      "id": "bloemstengels-verwijderen", "type": "snoeien", "importance": "licht", "window": { "kind": "recurring", "from": "06-01", "to": "08-15", "every": "2weeks" },
+      "description": "Knip bloemstengels weg zodra ze verschijnen. Dan blijft de plant nieuw blad maken."
+    }
+  ]
+}

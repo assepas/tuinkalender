@@ -4,7 +4,7 @@
   "name": "Gewone brunel",
   "latin": "Prunella vulgaris",
   "category": "vaste-plant",
-  "tags": ["bodembedekker", "bloemenweide"],
+  "tags": ["bodembedekker", "bloemenweide", "gazon"],
   "nativeStatus": "inheems",
   "appearance": { "shape": "bloem", "count": 3, "flowerColor": "#6E5A9E", "flowerColorName": "paars" },
   "bloom": { "from": "06-01", "to": "09-01" },

@@ -1,0 +1,32 @@
+{
+  "schemaVersion": 1,
+  "id": "pronkboon",
+  "name": "Pronkboon",
+  "latin": "Phaseolus coccineus",
+  "category": "groente",
+  "tags": ["eenjarig", "klimmer", "vorstgevoelig"],
+  "nativeStatus": "exoot",
+  "appearance": { "shape": "bloem", "count": 5, "flowerColor": "#D8322A", "flowerColorName": "scharlakenrood" },
+  "bloom": { "from": "07-01", "to": "09-30" },
+  "growing": { "sun": ["zon"], "soil": ["klei", "leem"], "moisture": ["normaal", "vochtig"], "spacingCm": 20 },
+  "info": {
+    "intro": "Een klimmende boon met prachtige rode bloemen en lange, platte peulen. Hij groeit in een paar weken tot boven de 2 meter en is ook mooi in de siertuin.",
+    "water": "Geef regelmatig flink water, zeker tijdens de bloei; anders vallen de bloemen af.",
+    "tips": [
+      "Zet stevige stokken of een tipi van 2,5 meter neer.",
+      "Pluk de peulen jong, voor de bonen dik worden.",
+      "Hommels komen graag op de rode bloemen af; zo krijg je meer peulen."
+    ]
+  },
+  "tasks": [
+    {
+      "id": "zaaien", "type": "zaaien", "window": { "kind": "relative", "anchor": "lastFrost", "fromWeeks": 0, "toWeeks": 4 },
+      "note": "Na de laatste nachtvorst",
+      "description": "Zaai na de laatste nachtvorst 4 cm diep bij elke stok, twee bonen per stok."
+    },
+    {
+      "id": "oogsten", "type": "oogsten", "window": { "kind": "recurring", "from": "07-15", "to": "10-01", "every": "week" },
+      "description": "Pluk de peulen twee keer per week als ze 15-20 cm lang zijn."
+    }
+  ]
+}

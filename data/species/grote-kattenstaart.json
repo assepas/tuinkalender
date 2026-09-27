@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "id": "grote-kattenstaart",
+  "name": "Grote kattenstaart",
+  "latin": "Lythrum salicaria",
+  "category": "vaste-plant",
+  "tags": ["meerjarig", "vlinderplant", "vijverrand", "moerasplant"],
+  "nativeStatus": "inheems",
+  "appearance": { "shape": "aar", "count": 9, "flowerColor": "#C0408C", "flowerColorName": "paarsroze" },
+  "bloom": { "from": "07-01", "to": "09-15" },
+  "growing": { "sun": ["zon", "halfschaduw"], "soil": ["klei", "veen", "leem"], "moisture": ["vochtig", "nat"], "spacingCm": 50 },
+  "info": {
+    "intro": "Een inheemse oeverplant met lange, paarsroze bloemaren in de zomer. Hij groeit van nature langs sloten en is een van de beste planten voor bijen en vlinders.",
+    "water": "Houdt van natte voeten. Op een drogere plek in de zomer regelmatig water geven.",
+    "tips": [
+      "Ideaal voor de vijverrand of een nat stuk van de tuin.",
+      "Zaait zich uit op vochtige plekken.",
+      "Wordt tot 1,5 meter hoog."
+    ]
+  },
+  "tasks": [
+    {
+      "id": "planten", "type": "planten", "window": { "kind": "dates", "from": "03-15", "to": "05-15" },
+      "description": "Plant op een vochtige plek of aan de vijverrand, op zo'n 50 cm afstand."
+    },
+    {
+      "id": "uitgebloeid-afknippen", "type": "snoeien", "importance": "licht", "window": { "kind": "dates", "from": "09-01", "to": "09-30" },
+      "description": "Knip de uitgebloeide aren af als je uitzaaien wilt voorkomen."
+    },
+    {
+      "id": "terugknippen", "type": "snoeien", "window": { "kind": "dates", "from": "02-15", "to": "03-31" },
+      "description": "Knip de oude stengels eind van de winter af tot net boven de grond."
+    }
+  ]
+}

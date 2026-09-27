@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "id": "kluwenklokje",
+  "name": "Kluwenklokje",
+  "latin": "Campanula glomerata",
+  "category": "vaste-plant",
+  "tags": ["meerjarig"],
+  "nativeStatus": "inheems",
+  "appearance": { "shape": "losse-wolk", "count": 6, "flowerColor": "#5B3FA0", "flowerColorName": "donkerpaars" },
+  "bloom": { "from": "06-01", "to": "08-15" },
+  "growing": { "sun": ["zon", "halfschaduw"], "soil": ["klei", "leem", "zand"], "moisture": ["normaal"], "spacingCm": 30 },
+  "info": {
+    "intro": "Een inheemse klokjesbloem met dichte kluwens van diepviolette klokjes bovenaan de stengel. Hij breidt zich rustig uit en is een goede bijenplant.",
+    "water": "Kan redelijk tegen droogte; geef alleen water bij lange droge periodes.",
+    "tips": [
+      "Na terugknippen in juli bloeit hij vaak een tweede keer.",
+      "Doet het goed op kalkrijke grond.",
+      "Breidt zich uit met wortelstokken; houd buren in de gaten."
+    ]
+  },
+  "tasks": [
+    {
+      "id": "planten", "type": "planten", "window": { "kind": "dates", "from": "03-15", "to": "05-01" },
+      "description": "Plant op zo'n 30 cm afstand, op een zonnige plek."
+    },
+    {
+      "id": "terugknippen-na-bloei", "type": "snoeien", "importance": "licht", "window": { "kind": "dates", "from": "07-15", "to": "08-15" },
+      "description": "Knip de bloeistengels na de eerste bloei af tot boven het blad. Vaak volgt een nabloei in de nazomer."
+    },
+    {
+      "id": "delen", "type": "delen", "window": { "kind": "dates", "from": "03-15", "to": "04-15" },
+      "description": "Verdeel de pol om de paar jaar in het voorjaar."
+    }
+  ]
+}

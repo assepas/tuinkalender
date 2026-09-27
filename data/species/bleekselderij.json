@@ -1,0 +1,34 @@
+{
+  "schemaVersion": 1,
+  "id": "bleekselderij",
+  "name": "Bleekselderij",
+  "latin": "Apium graveolens var. dulce",
+  "category": "groente",
+  "tags": ["tweejarig"],
+  "nativeStatus": "exoot",
+  "appearance": { "shape": "losse-wolk", "count": 4, "flowerColor": "#F0EEE4", "flowerColorName": "wit" },
+  "growing": { "sun": ["zon", "halfschaduw"], "soil": ["klei", "leem"], "moisture": ["vochtig"], "spacingCm": 30 },
+  "info": {
+    "intro": "Een selderij met lange, knapperige stelen. Hij heeft veel water en voedsel nodig, maar een zelfgeteelde struik is veel geuriger dan uit de winkel.",
+    "water": "Geef vaak en veel water; bij droogte worden de stelen draderig.",
+    "tips": [
+      "Zelfblekende rassen hoef je niet aan te aarden.",
+      "Plant ze in blokken in plaats van rijen: dan beschaduwen ze elkaar.",
+      "Veel compost in de grond maakt het verschil."
+    ]
+  },
+  "tasks": [
+    {
+      "id": "zaaien-binnen", "type": "zaaien", "location": "kas", "window": { "kind": "dates", "from": "03-01", "to": "04-15" },
+      "description": "Zaai binnen, zaad alleen aandrukken, op een warme plek."
+    },
+    {
+      "id": "uitplanten", "type": "planten", "window": { "kind": "relative", "anchor": "lastFrost", "fromWeeks": 0, "toWeeks": 3 },
+      "description": "Plant uit na de laatste nachtvorst op 30 cm afstand in rijke, vochtige grond."
+    },
+    {
+      "id": "oogsten", "type": "oogsten", "window": { "kind": "dates", "from": "08-15", "to": "10-31" },
+      "description": "Snijd de hele struik net onder de grond af, of pluk losse stelen van buiten."
+    }
+  ]
+}

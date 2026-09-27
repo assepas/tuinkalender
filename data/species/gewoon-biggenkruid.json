@@ -1,0 +1,31 @@
+{
+  "schemaVersion": 1,
+  "id": "gewoon-biggenkruid",
+  "name": "Gewoon biggenkruid",
+  "latin": "Hypochaeris radicata",
+  "category": "vaste-plant",
+  "tags": ["meerjarig", "gazon", "vlinderplant"],
+  "nativeStatus": "inheems",
+  "appearance": { "shape": "bloem", "count": 10, "flowerColor": "#F4C928", "flowerColorName": "geel" },
+  "bloom": { "from": "06-01", "to": "09-30" },
+  "growing": { "sun": ["zon"], "soil": ["zand", "leem"], "moisture": ["droog", "normaal"], "spacingCm": 20 },
+  "info": {
+    "intro": "Een vaste plant met een platte rozet van ruwe, gelobde blaadjes en gele bloemen op lange, kale stelen. Hij lijkt op een paardenbloem en is populair bij bijen en zweefvliegen.",
+    "water": "Kan goed tegen droogte dankzij zijn diepe penwortel.",
+    "tips": [
+      "De bladrozet ligt plat en overleeft maaien zonder moeite.",
+      "Groeit het best op schrale, zandige grond.",
+      "Bloeistelen die na het maaien terugkomen, bloeien vaak binnen een week."
+    ]
+  },
+  "tasks": [
+    {
+      "id": "zaaien", "type": "zaaien", "window": { "kind": "dates", "from": "08-15", "to": "09-30" },
+      "description": "Zaai in de nazomer of in april-mei (lukt ook) op kale, losgeharkte plekken in het gras of mee in een bloemrijk gazonmengsel. Strooi het zaad breed uit, druk het aan en houd het een paar weken vochtig."
+    },
+    {
+      "id": "maaien", "type": "onderhoud", "window": { "kind": "recurring", "from": "05-01", "to": "10-15", "every": "2weeks" },
+      "description": "Maai het gazon niet te kort, op 5 tot 8 cm, dan blijft deze plant bloeien. De bloemstelen komen na het maaien snel terug."
+    }
+  ]
+}

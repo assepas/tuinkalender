@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "id": "blauwe-bes",
+  "name": "Blauwe bes",
+  "latin": "Vaccinium corymbosum",
+  "category": "fruit",
+  "tags": ["struik"],
+  "nativeStatus": "exoot",
+  "appearance": { "shape": "vrucht", "count": 5, "flowerColor": "#F4F0EA", "flowerColorName": "wit", "fruitColor": "#3D4E8C" },
+  "bloom": { "from": "04-15", "to": "05-15" },
+  "growing": { "sun": ["zon", "halfschaduw"], "soil": ["zand", "veen"], "moisture": ["vochtig", "normaal"], "spacingCm": 150 },
+  "info": {
+    "intro": "Een struik met zoete blauwe bessen en prachtige rode herfstkleuren. Blauwe bessen hebben zure grond nodig; op klei lukt het alleen in een pot met speciale grond.",
+    "water": "Houd de grond altijd vochtig, liefst met regenwater: kraanwater bevat kalk.",
+    "tips": [
+      "Gebruik zure grond (rhododendrongrond) of turfvrije heidegrond.",
+      "Twee rassen naast elkaar geven meer bessen door kruisbestuiving.",
+      "Een net houdt de vogels weg."
+    ]
+  },
+  "tasks": [
+    {
+      "id": "planten", "type": "planten", "window": { "kind": "dates", "from": "10-15", "to": "03-31" },
+      "description": "Plant in zure grond of een grote pot met rhododendrongrond, op 1,5 meter afstand. Mulch met houtsnippers of dennennaalden."
+    },
+    {
+      "id": "snoeien", "type": "snoeien", "window": { "kind": "dates", "from": "02-01", "to": "03-15" },
+      "description": "Knip vanaf het vierde jaar elk jaar een paar van de oudste takken bij de grond weg, en haal dunne, zwakke twijgjes weg."
+    },
+    {
+      "id": "oogsten", "type": "oogsten", "window": { "kind": "recurring", "from": "07-01", "to": "09-15", "every": "week" },
+      "description": "Pluk wekelijks de bessen die helemaal blauw zijn en makkelijk loslaten. Wacht een paar dagen na het blauw worden: dan zijn ze het zoetst."
+    }
+  ]
+}

@@ -1,0 +1,31 @@
+{
+  "schemaVersion": 1,
+  "id": "groot-kaasjeskruid",
+  "name": "Groot kaasjeskruid",
+  "latin": "Malva sylvestris",
+  "category": "vaste-plant",
+  "tags": ["tweejarig", "zelfzaaiend", "eetbaar"],
+  "nativeStatus": "archeofyt",
+  "appearance": { "shape": "bloem", "count": 5, "flowerColor": "#B25FA8", "flowerColorName": "paars-roze" },
+  "bloom": { "from": "06-01", "to": "09-30" },
+  "growing": { "sun": ["zon"], "soil": ["klei", "leem", "zand"], "moisture": ["normaal", "droog"], "spacingCm": 50 },
+  "info": {
+    "intro": "Een stevige plant met paarsroze bloemen met donkere strepen. Hij bloeit maanden achter elkaar en is erg geliefd bij bijen. Bloemen en jong blad zijn eetbaar.",
+    "water": "Weinig veeleisend; alleen water in lange droge periodes.",
+    "tips": [
+      "Leeft een paar jaar maar zaait zich uit.",
+      "Roest (oranje stipjes) komt voor; haal aangetast blad weg.",
+      "De bloemen zijn mooi op salades."
+    ]
+  },
+  "tasks": [
+    {
+      "id": "zaaien", "type": "zaaien", "window": { "kind": "dates", "from": "04-01", "to": "06-15" },
+      "description": "Zaai direct op de plek, 1 cm diep, en dun uit tot 50 cm. Bloeit vaak al in het eerste jaar."
+    },
+    {
+      "id": "terugknippen", "type": "snoeien", "window": { "kind": "dates", "from": "10-01", "to": "11-15" },
+      "description": "Knip de stengels in het najaar af. Laat er een paar staan als je nieuwe zaailingen wilt."
+    }
+  ]
+}

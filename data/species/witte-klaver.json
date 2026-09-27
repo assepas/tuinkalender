@@ -1,0 +1,31 @@
+{
+  "schemaVersion": 1,
+  "id": "witte-klaver",
+  "name": "Witte klaver",
+  "latin": "Trifolium repens",
+  "category": "vaste-plant",
+  "tags": ["meerjarig", "bodembedekker", "groenbemester", "gazon"],
+  "nativeStatus": "inheems",
+  "appearance": { "shape": "losse-wolk", "count": 5, "flowerColor": "#F2EFE6", "flowerColorName": "wit" },
+  "bloom": { "from": "05-15", "to": "09-30" },
+  "growing": { "sun": ["zon", "halfschaduw"], "soil": ["klei", "leem", "zand"], "moisture": ["normaal", "vochtig"], "spacingCm": 15 },
+  "info": {
+    "intro": "Een lage, kruipende klaver met witte bolletjes waar bijen de hele zomer op af komen. Via zijn wortels haalt hij stikstof uit de lucht en maakt zo de grond rijker.",
+    "water": "Na het kiemen redt witte klaver zich. Bij lange droogte wordt hij bruin, maar hij komt terug na regen.",
+    "tips": [
+      "Mooi als groene bodembedekker onder fruitstruiken of in paden.",
+      "Door het gras gezaaid geeft hij een bijvriendelijk gazon dat groen blijft in droge zomers.",
+      "Kan zich over de groentebedden verspreiden; steek randen af waar dat niet mag."
+    ]
+  },
+  "tasks": [
+    {
+      "id": "zaaien", "type": "zaaien", "window": { "kind": "dates", "from": "04-01", "to": "09-15" },
+      "description": "Strooi het zaad breedwerpig uit op losgeharkte grond, zo'n 1 gram per m², en rol of druk het aan. Houd de grond vochtig tot het zaad opkomt."
+    },
+    {
+      "id": "maaien", "type": "onderhoud", "window": { "kind": "recurring", "from": "06-01", "to": "09-15", "every": "month" },
+      "description": "Maai of knip hem af en toe kort, bijvoorbeeld als bodembedekker in paden. Hij loopt snel weer uit en bloeit opnieuw. Laat het maaisel liggen als voeding."
+    }
+  ]
+}

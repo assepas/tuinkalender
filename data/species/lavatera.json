@@ -1,0 +1,39 @@
+{
+  "schemaVersion": 1,
+  "id": "lavatera",
+  "name": "Lavatera (bekermalva)",
+  "latin": "Malva trimestris",
+  "category": "vaste-plant",
+  "tags": ["eenjarig", "snijbloem"],
+  "nativeStatus": "exoot",
+  "appearance": { "shape": "bloem", "count": 5, "flowerColor": "#E68BB4", "flowerColorName": "roze" },
+  "bloom": { "from": "07-01", "to": "09-30" },
+  "growing": { "sun": ["zon"], "soil": ["zand", "leem", "klei"], "moisture": ["normaal"], "spacingCm": 45 },
+  "info": {
+    "intro": "Een snelgroeiende eenjarige met grote, glanzende bekerbloemen in roze of wit. Hij vormt in een paar weken een flinke struik vol bloemen.",
+    "water": "Geef water na het zaaien en in droge periodes; verder weinig veeleisend.",
+    "tips": [
+      "Houdt niet van verplanten; zaai in grote potjes of direct op de plek.",
+      "Te rijke grond geeft veel blad en weinig bloemen.",
+      "Er bestaat ook een struikvormige, meerjarige lavatera; die snoei je in het voorjaar flink terug."
+    ]
+  },
+  "tasks": [
+    {
+      "id": "zaaien-binnen", "type": "zaaien", "location": "kas", "window": { "kind": "dates", "from": "03-15", "to": "04-15" },
+      "description": "Zaai in grote potjes, 1 cm diep, voor een vroegere bloei."
+    },
+    {
+      "id": "zaaien", "type": "zaaien", "window": { "kind": "dates", "from": "04-15", "to": "05-31" },
+      "description": "Zaai direct buiten op de plek, 1 cm diep, en dun uit tot 45 cm afstand."
+    },
+    {
+      "id": "uitplanten", "type": "planten", "window": { "kind": "relative", "anchor": "lastFrost", "fromWeeks": 0, "toWeeks": 2 },
+      "description": "Plant voorgezaaide plantjes uit na de laatste nachtvorst. Laat de kluit heel."
+    },
+    {
+      "id": "dode-bloemen-verwijderen", "type": "onderhoud", "window": { "kind": "recurring", "from": "07-15", "to": "09-30", "every": "2weeks" },
+      "description": "Knip uitgebloeide bloemen af, dan blijft hij tot de herfst bloeien."
+    }
+  ]
+}

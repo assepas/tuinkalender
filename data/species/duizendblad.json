@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "id": "duizendblad",
+  "name": "Duizendblad",
+  "latin": "Achillea millefolium",
+  "category": "vaste-plant",
+  "tags": ["meerjarig", "droogtebestendig", "bloemenweide"],
+  "nativeStatus": "inheems",
+  "appearance": { "shape": "losse-wolk", "count": 8, "flowerColor": "#F1E6E1", "flowerColorName": "wit" },
+  "bloom": { "from": "06-01", "to": "09-30" },
+  "growing": { "sun": ["zon"], "soil": ["klei", "leem", "zand"], "moisture": ["droog", "normaal"], "spacingCm": 40 },
+  "info": {
+    "intro": "Een inheemse vaste plant met fijn, veerachtig blad en platte schermen van witte bloempjes. Er zijn ook tuinvormen in roze, rood en geel. Zweefvliegen en sluipwespen komen er graag op.",
+    "water": "Kan uitstekend tegen droogte. Alleen water geven na het planten.",
+    "tips": [
+      "Verspreidt zich met uitlopers; niet naast teerdere planten zetten.",
+      "Mooi als snij- en droogbloem.",
+      "Bemest niet: op rijke grond valt hij om."
+    ]
+  },
+  "tasks": [
+    {
+      "id": "planten", "type": "planten", "window": { "kind": "dates", "from": "03-15", "to": "05-15" },
+      "description": "Plant op een zonnige plek op zo'n 40 cm afstand. Zaaien in april-mei kan ook."
+    },
+    {
+      "id": "uitgebloeid-afknippen", "type": "snoeien", "importance": "licht", "window": { "kind": "dates", "from": "07-15", "to": "08-15" },
+      "description": "Knip uitgebloeide schermen af tot boven een blad, dan volgt vaak een tweede bloei."
+    },
+    {
+      "id": "delen", "type": "delen", "window": { "kind": "dates", "from": "03-15", "to": "04-15" },
+      "description": "Verdeel de pol om de drie jaar in het voorjaar, dan blijft hij vitaal."
+    }
+  ]
+}

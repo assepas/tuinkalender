@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "id": "hazelaar",
+  "name": "Hazelaar",
+  "latin": "Corylus avellana",
+  "category": "struik",
+  "tags": ["struik", "eetbaar"],
+  "nativeStatus": "inheems",
+  "appearance": { "shape": "aar", "count": 6, "flowerColor": "#DAC565", "flowerColorName": "geel" },
+  "bloom": { "from": "01-15", "to": "03-15" },
+  "growing": { "sun": ["zon", "halfschaduw"], "soil": ["klei", "leem", "zand"], "moisture": ["normaal"], "spacingCm": 300 },
+  "info": {
+    "intro": "Een inheemse struik met gele katjes al in de winter en hazelnoten in de herfst. Een waardevolle plant voor bijen vroeg in het jaar, en voor eekhoorns en vogels.",
+    "water": "Geef een jonge struik in droge periodes water.",
+    "tips": [
+      "Twee verschillende hazelaars naast elkaar geven meer noten.",
+      "Eekhoorns zijn je vaak voor; pluk op tijd.",
+      "De lange, rechte takken zijn mooi als bonenstaken."
+    ]
+  },
+  "tasks": [
+    {
+      "id": "planten", "type": "planten", "window": { "kind": "dates", "from": "11-01", "to": "03-15" },
+      "description": "Plant in de winterrust op zo'n 3 meter afstand."
+    },
+    {
+      "id": "snoeien", "type": "snoeien", "window": { "kind": "dates", "from": "12-01", "to": "02-28" },
+      "description": "Haal om de paar jaar de oudste takken bij de grond weg. De struik loopt vanzelf weer uit met nieuwe takken."
+    },
+    {
+      "id": "oogsten", "type": "oogsten", "window": { "kind": "dates", "from": "09-01", "to": "10-15" },
+      "description": "Pluk de noten als de bolster bruin wordt, of raap ze op. Laat ze een paar weken drogen."
+    }
+  ]
+}

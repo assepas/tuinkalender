@@ -1,0 +1,30 @@
+{
+  "schemaVersion": 1,
+  "id": "winterpostelein",
+  "name": "Winterpostelein",
+  "latin": "Claytonia perfoliata",
+  "category": "groente",
+  "tags": ["eenjarig", "zelfzaaiend"],
+  "nativeStatus": "exoot",
+  "appearance": { "shape": "bloem", "count": 5, "flowerColor": "#F4F3EE", "flowerColorName": "wit" },
+  "growing": { "sun": ["halfschaduw", "zon"], "soil": ["klei", "leem", "zand"], "moisture": ["normaal", "vochtig"], "spacingCm": 10 },
+  "info": {
+    "intro": "Een frisse bladgroente die je in de nazomer zaait en in de herfst, winter en het voorjaar oogst. Hij kan goed tegen vorst.",
+    "water": "Houd de grond licht vochtig.",
+    "tips": [
+      "Mooi voor een bed dat na de zomergroenten vrijkomt.",
+      "De bloemetjes en stengels zijn ook eetbaar.",
+      "Zaait zich uit als je hem laat bloeien."
+    ]
+  },
+  "tasks": [
+    {
+      "id": "zaaien", "type": "zaaien", "window": { "kind": "dates", "from": "08-15", "to": "10-15" },
+      "description": "Zaai breedwerpig of in rijen, dun bedekt."
+    },
+    {
+      "id": "oogsten", "type": "oogsten", "window": { "kind": "dates", "from": "10-15", "to": "04-30" },
+      "description": "Knip de bladeren af op een paar centimeter boven de grond; hij groeit opnieuw aan."
+    }
+  ]
+}

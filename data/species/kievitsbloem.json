@@ -1,0 +1,31 @@
+{
+  "schemaVersion": 1,
+  "id": "kievitsbloem",
+  "name": "Kievitsbloem",
+  "latin": "Fritillaria meleagris",
+  "category": "bolgewas",
+  "tags": ["meerjarig", "voorjaarsbloeier", "moerasplant"],
+  "nativeStatus": "inheems",
+  "appearance": { "shape": "bloem", "count": 6, "flowerColor": "#8E3E6E", "flowerColorName": "paars geblokt" },
+  "bloom": { "from": "04-01", "to": "05-15" },
+  "growing": { "sun": ["zon", "halfschaduw"], "soil": ["klei", "veen", "leem"], "moisture": ["vochtig", "nat"], "spacingCm": 10 },
+  "info": {
+    "intro": "Een zeldzame inheemse bolplant met hangende, geblokte klokjes in paars of wit. Hij groeit in vochtige hooilanden en past mooi in een nat stuk gazon of bij een vijver.",
+    "water": "Houdt van vochtige grond; in droge voorjaren water geven.",
+    "tips": [
+      "De bolletjes drogen snel uit: plant ze meteen na aankoop.",
+      "Maai pas in juli, als het zaad rijp is.",
+      "Zaait zich op een goede plek uit."
+    ]
+  },
+  "tasks": [
+    {
+      "id": "planten", "type": "planten", "window": { "kind": "dates", "from": "09-15", "to": "10-31" },
+      "description": "Plant de bollen in de herfst 8-10 cm diep, met de punt omhoog, in groepjes op zo'n 10 cm afstand. Plant liever in groepen dan in rijtjes: dat ziet er natuurlijker uit."
+    },
+    {
+      "id": "blad-laten-staan", "type": "onderhoud", "window": { "kind": "dates", "from": "05-15", "to": "07-01" },
+      "description": "Laat het blad na de bloei staan tot het geel is en vanzelf afsterft. De bol haalt er energie uit voor volgend jaar. Maai er dus nog niet overheen."
+    }
+  ]
+}

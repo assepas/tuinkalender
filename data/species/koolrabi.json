@@ -1,0 +1,34 @@
+{
+  "schemaVersion": 1,
+  "id": "koolrabi",
+  "name": "Koolrabi",
+  "latin": "Brassica oleracea var. gongylodes",
+  "category": "groente",
+  "tags": ["eenjarig"],
+  "nativeStatus": "exoot",
+  "appearance": { "shape": "vrucht", "count": 1, "flowerColor": "#F1D54A", "flowerColorName": "geel", "fruitColor": "#A8C586" },
+  "growing": { "sun": ["zon"], "soil": ["klei", "leem", "zand"], "moisture": ["normaal", "vochtig"], "spacingCm": 25 },
+  "info": {
+    "intro": "Een snelle kool met een verdikte, ronde stengel boven de grond. Mild van smaak en lekker rauw of gekookt. Hij is binnen acht weken klaar.",
+    "water": "Geef gelijkmatig water: bij droogte wordt de knol houtig.",
+    "tips": [
+      "Oogst ze op tennisbalformaat; grote knollen worden draderig.",
+      "Er zijn groene en paarse rassen.",
+      "Het jonge blad kun je als spinazie eten."
+    ]
+  },
+  "tasks": [
+    {
+      "id": "zaaien", "type": "zaaien", "window": { "kind": "dates", "from": "03-01", "to": "07-31" },
+      "description": "Zaai om de vier weken in potjes of direct in rijen, 1 cm diep."
+    },
+    {
+      "id": "uitplanten", "type": "planten", "window": { "kind": "dates", "from": "04-15", "to": "08-15" },
+      "description": "Plant op 25 cm afstand, niet te diep: de knol vormt zich boven de grond."
+    },
+    {
+      "id": "oogsten", "type": "oogsten", "window": { "kind": "dates", "from": "05-15", "to": "10-31" },
+      "description": "Snijd de knol af als hij 6-8 cm doorsnee is."
+    }
+  ]
+}

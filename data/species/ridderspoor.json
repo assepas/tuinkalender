@@ -1,0 +1,44 @@
+{
+  "schemaVersion": 1,
+  "id": "ridderspoor",
+  "name": "Ridderspoor",
+  "latin": "Delphinium elatum",
+  "category": "vaste-plant",
+  "tags": ["meerjarig", "giftig", "snijbloem"],
+  "nativeStatus": "exoot",
+  "appearance": { "shape": "aar", "count": 9, "flowerColor": "#3E5FB0", "flowerColorName": "blauw" },
+  "bloom": { "from": "06-01", "to": "07-31" },
+  "growing": { "sun": ["zon"], "soil": ["klei", "leem"], "moisture": ["normaal", "vochtig"], "spacingCm": 60 },
+  "info": {
+    "intro": "Een statige vaste plant met hoge, dichte aren in diep blauw, paars of wit. Na een snoeibeurt bloeit hij in september vaak nog een tweede keer.",
+    "water": "Geef in droge periodes royaal water; ridderspoor mag niet uitdrogen, maar natte voeten in de winter vindt hij ook niet fijn.",
+    "tips": [
+      "Slakken zijn dol op de jonge scheuten in het voorjaar; bescherm ze goed.",
+      "Alle delen zijn giftig.",
+      "Rijke grond en regelmatig bemesten geven de mooiste aren."
+    ]
+  },
+  "tasks": [
+    {
+      "id": "planten", "type": "planten", "window": { "kind": "dates", "from": "03-15", "to": "05-01" },
+      "description": "Plant op een zonnige, beschutte plek in voedzame grond, op zo'n 60 cm afstand. Meng wat compost door het plantgat."
+    },
+    {
+      "id": "steunen", "type": "onderhoud", "window": { "kind": "dates", "from": "04-15", "to": "05-31" },
+      "note": "Steun geven voor de bloei",
+      "description": "Zet stokken of een plantensteun bij de plant voordat de aren hoog worden. Bind de stengels losjes vast; hoge aren breken anders af bij wind of regen."
+    },
+    {
+      "id": "bemesten", "type": "bemesten", "window": { "kind": "dates", "from": "04-01", "to": "04-30" },
+      "description": "Geef in het voorjaar een schep compost of wat organische mest rond de plant."
+    },
+    {
+      "id": "terugsnoeien-na-bloei", "type": "snoeien", "window": { "kind": "dates", "from": "07-15", "to": "08-15" },
+      "description": "Knip de uitgebloeide aren na de eerste bloei af tot vlak boven de grond en geef wat mest. Vaak volgt dan in september een tweede bloei."
+    },
+    {
+      "id": "terugknippen", "type": "snoeien", "importance": "licht", "window": { "kind": "dates", "from": "10-15", "to": "11-30" },
+      "description": "Knip in het najaar het afgestorven blad en de stengels weg."
+    }
+  ]
+}

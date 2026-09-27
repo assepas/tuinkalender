@@ -1,0 +1,40 @@
+{
+  "schemaVersion": 1,
+  "id": "paprika",
+  "name": "Paprika",
+  "latin": "Capsicum annuum",
+  "category": "groente",
+  "tags": ["eenjarig", "vorstgevoelig"],
+  "nativeStatus": "exoot",
+  "appearance": { "shape": "vrucht", "count": 1, "flowerColor": "#F4F2EC", "flowerColorName": "wit", "fruitColor": "#D63A2A" },
+  "bloom": { "from": "06-15", "to": "08-31" },
+  "growing": { "sun": ["zon"], "soil": ["klei", "leem"], "moisture": ["normaal"], "spacingCm": 45 },
+  "info": {
+    "intro": "Paprika's hebben veel warmte nodig en lukken het best in een kas of in een pot tegen een zonnige muur. Groene paprika's kleuren bij genoeg warmte rood, geel of oranje.",
+    "water": "Geef regelmatig water, niet te veel tegelijk; in potten vaker.",
+    "tips": [
+      "Zaai vroeg: paprika heeft een lang seizoen nodig.",
+      "Kies voor buiten een vroeg, klein ras.",
+      "Laat een paar vruchten helemaal verkleuren: dan zijn ze het zoetst."
+    ]
+  },
+  "tasks": [
+    {
+      "id": "zaaien-binnen", "type": "zaaien", "location": "kas", "window": { "kind": "dates", "from": "02-01", "to": "03-15" },
+      "description": "Zaai binnen op 22-25 °C, 0,5 cm diep. Verspeen naar eigen potjes en zet ze heel licht."
+    },
+    {
+      "id": "uitplanten", "type": "planten", "window": { "kind": "relative", "anchor": "lastFrost", "fromWeeks": 1, "toWeeks": 4 },
+      "note": "Pas na de laatste nachtvorst",
+      "description": "Plant uit in de kas of op een warme, zonnige plek buiten na de laatste nachtvorst."
+    },
+    {
+      "id": "bemesten", "type": "bemesten", "window": { "kind": "recurring", "from": "06-15", "to": "08-31", "every": "2weeks" },
+      "description": "Geef om de twee weken tomatenmest vanaf de eerste bloemen."
+    },
+    {
+      "id": "oogsten", "type": "oogsten", "window": { "kind": "dates", "from": "08-01", "to": "10-15" },
+      "description": "Snijd de paprika's af met een stukje steel, groen of verkleurd."
+    }
+  ]
+}

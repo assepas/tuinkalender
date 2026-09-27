@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "id": "damastbloem",
+  "name": "Damastbloem",
+  "latin": "Hesperis matronalis",
+  "category": "vaste-plant",
+  "tags": ["tweejarig", "geurend", "zelfzaaiend"],
+  "nativeStatus": "exoot",
+  "appearance": { "shape": "losse-wolk", "count": 7, "flowerColor": "#B99AD6", "flowerColorName": "lila" },
+  "bloom": { "from": "05-01", "to": "06-30" },
+  "growing": { "sun": ["zon", "halfschaduw"], "soil": ["klei", "leem", "zand"], "moisture": ["normaal", "vochtig"], "spacingCm": 40 },
+  "info": {
+    "intro": "Een ouderwetse tuinplant met trossen lila of witte bloemen die vooral 's avonds heerlijk geuren. Hij bloeit in mei en juni, tussen de voorjaarsbollen en de zomerbloeiers in.",
+    "water": "Houd de grond licht vochtig.",
+    "tips": [
+      "Tweejarig of kortlevend, maar zaait zich goed uit.",
+      "Waardplant van het oranjetipje.",
+      "Staat mooi in de halfschaduw aan de rand van struiken."
+    ]
+  },
+  "tasks": [
+    {
+      "id": "zaaien", "type": "zaaien", "window": { "kind": "dates", "from": "05-01", "to": "07-15" },
+      "description": "Zaai in de zomer op de plek of in potjes. De plantjes bloeien volgend voorjaar."
+    },
+    {
+      "id": "planten", "type": "planten", "window": { "kind": "dates", "from": "09-01", "to": "10-15" },
+      "description": "Zet jonge planten in het najaar op zo'n 40 cm afstand."
+    },
+    {
+      "id": "terugknippen", "type": "snoeien", "importance": "licht", "window": { "kind": "dates", "from": "07-15", "to": "08-15" },
+      "description": "Knip de stengels na het zaad zetten af, of eerder als je geen zaailingen wilt."
+    }
+  ]
+}

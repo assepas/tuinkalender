@@ -1,0 +1,31 @@
+{
+  "schemaVersion": 1,
+  "id": "brede-lathyrus",
+  "name": "Brede lathyrus",
+  "latin": "Lathyrus latifolius",
+  "category": "vaste-plant",
+  "tags": ["meerjarig", "klimmer"],
+  "nativeStatus": "exoot",
+  "appearance": { "shape": "bloem", "count": 5, "flowerColor": "#D8578C", "flowerColorName": "roze" },
+  "bloom": { "from": "06-15", "to": "09-15" },
+  "growing": { "sun": ["zon"], "soil": ["klei", "leem", "zand"], "moisture": ["normaal"], "spacingCm": 60 },
+  "info": {
+    "intro": "Een vaste klimmer met roze, witte of paarse vlinderbloemen, als een siererwt die elk jaar terugkomt. Hij ruikt niet, maar bloeit wel de hele zomer.",
+    "water": "Geef in droge periodes water.",
+    "tips": [
+      "Laat hem door een hek, struik of over een muurtje groeien.",
+      "Pluk regelmatig bloemen, dan bloeit hij langer.",
+      "De zaden zijn giftig."
+    ]
+  },
+  "tasks": [
+    {
+      "id": "planten", "type": "planten", "window": { "kind": "dates", "from": "03-15", "to": "05-15" },
+      "description": "Plant bij een hek, rek of struik waar hij in kan klimmen."
+    },
+    {
+      "id": "terugknippen", "type": "snoeien", "window": { "kind": "dates", "from": "11-01", "to": "03-15" },
+      "description": "Knip de afgestorven ranken in de winter of het vroege voorjaar weg tot net boven de grond."
+    }
+  ]
+}

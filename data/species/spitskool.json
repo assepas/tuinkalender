@@ -1,0 +1,34 @@
+{
+  "schemaVersion": 1,
+  "id": "spitskool",
+  "name": "Spitskool",
+  "latin": "Brassica oleracea var. capitata f. conica",
+  "category": "groente",
+  "tags": ["eenjarig"],
+  "nativeStatus": "exoot",
+  "appearance": { "shape": "losse-wolk", "count": 4, "flowerColor": "#A6BF7A", "flowerColorName": "lichtgroen" },
+  "growing": { "sun": ["zon"], "soil": ["klei", "leem"], "moisture": ["normaal"], "spacingCm": 45 },
+  "info": {
+    "intro": "Een snelle, puntige kool met mals, zoet blad. Hij groeit sneller dan ronde koolen en past goed in een kleine moestuin.",
+    "water": "Geef regelmatig water.",
+    "tips": [
+      "Heerlijk rauw in coleslaw of kort roergebakken.",
+      "Kan met wat bescherming al vroeg in het jaar geplant worden.",
+      "Gebruik gaas tegen koolvlieg en rupsen."
+    ]
+  },
+  "tasks": [
+    {
+      "id": "zaaien", "type": "zaaien", "location": "kas", "window": { "kind": "dates", "from": "02-15", "to": "06-15" },
+      "description": "Zaai in potjes, 1 cm diep."
+    },
+    {
+      "id": "uitplanten", "type": "planten", "window": { "kind": "dates", "from": "04-01", "to": "07-15" },
+      "description": "Plant op 45 cm afstand. Zet direct na het planten insectengaas over de kool tegen koolvlieg, koolwitje en duiven."
+    },
+    {
+      "id": "oogsten", "type": "oogsten", "window": { "kind": "dates", "from": "06-01", "to": "10-31" },
+      "description": "Snijd de kool af als hij stevig en puntig is."
+    }
+  ]
+}

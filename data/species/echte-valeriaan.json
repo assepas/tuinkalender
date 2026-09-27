@@ -1,0 +1,39 @@
+{
+  "schemaVersion": 1,
+  "id": "echte-valeriaan",
+  "name": "Echte valeriaan",
+  "latin": "Valeriana officinalis",
+  "category": "vaste-plant",
+  "tags": ["meerjarig", "geurend", "zelfzaaiend"],
+  "nativeStatus": "inheems",
+  "appearance": { "shape": "losse-wolk", "count": 7, "flowerColor": "#EAD3DC", "flowerColorName": "lichtroze" },
+  "bloom": { "from": "06-01", "to": "08-15" },
+  "growing": { "sun": ["zon", "halfschaduw"], "soil": ["klei", "leem", "veen"], "moisture": ["vochtig", "nat"], "spacingCm": 50 },
+  "info": {
+    "intro": "Een hoge inheemse plant met schermen van lichtroze, zoet geurende bloempjes. Hij lokt veel zweefvliegen en vlinders. De wortel wordt al eeuwen gebruikt als rustgevend middel.",
+    "water": "Houdt van vochtige grond, bijvoorbeeld aan een slootkant of vijverrand. Geef in droge periodes extra water.",
+    "tips": [
+      "Katten zijn gek op de geur van de wortel en kunnen erin gaan liggen rollen.",
+      "Wordt tot 1,5 meter hoog; zet hem achter in de border.",
+      "Zaait zich flink uit; knip uitgebloeide schermen af als je dat niet wilt."
+    ]
+  },
+  "tasks": [
+    {
+      "id": "planten", "type": "planten", "window": { "kind": "dates", "from": "03-15", "to": "05-01" },
+      "description": "Plant in het voorjaar op een vochtige plek, op zo'n 50 cm afstand. Geef na het planten water."
+    },
+    {
+      "id": "uitgebloeid-afknippen", "type": "snoeien", "importance": "licht", "window": { "kind": "dates", "from": "08-01", "to": "09-01" },
+      "description": "Knip de uitgebloeide schermen af voordat ze zaad verspreiden. Laat er een paar staan als je graag nieuwe plantjes wilt."
+    },
+    {
+      "id": "terugknippen", "type": "snoeien", "window": { "kind": "dates", "from": "10-15", "to": "11-30" },
+      "description": "Knip in het najaar of vroege voorjaar de afgestorven stengels af tot net boven de grond."
+    },
+    {
+      "id": "delen", "type": "delen", "window": { "kind": "dates", "from": "09-15", "to": "10-31" },
+      "description": "Steek om de paar jaar een pol uit en verdeel hem in stukken met wortels. Plant ze meteen terug of geef ze weg."
+    }
+  ]
+}

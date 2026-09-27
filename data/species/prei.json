@@ -1,0 +1,39 @@
+{
+  "schemaVersion": 1,
+  "id": "prei",
+  "name": "Prei",
+  "latin": "Allium porrum",
+  "category": "groente",
+  "tags": ["eenjarig"],
+  "nativeStatus": "exoot",
+  "appearance": { "shape": "losse-wolk", "count": 4, "flowerColor": "#C9B6D6", "flowerColorName": "lila" },
+  "growing": { "sun": ["zon"], "soil": ["klei", "leem"], "moisture": ["normaal", "vochtig"], "spacingCm": 15 },
+  "info": {
+    "intro": "Een winterharde groente die je in het voorjaar zaait en van de late zomer tot in het voorjaar oogst. Juist in de winter, als er weinig anders is, staat de prei klaar.",
+    "water": "Geef na het uitplanten en in droge zomers regelmatig water. Prei houdt van vochtige, rijke grond.",
+    "tips": [
+      "Aanaarden (grond tegen de stengel scheppen) geeft een langere witte schacht.",
+      "Tegen de preimot en de uienvlieg helpt een insectengaas over het bed.",
+      "Winterrassen hebben blauwgroen blad; herfstrassen lichtgroen."
+    ]
+  },
+  "tasks": [
+    {
+      "id": "zaaien", "type": "zaaien", "location": "kas", "window": { "kind": "dates", "from": "03-01", "to": "04-30" },
+      "description": "Zaai in een bak of zaaibed, dun, zo'n 1 cm diep. De plantjes groeien tot potloodformaat voordat ze uitgeplant worden."
+    },
+    {
+      "id": "uitplanten", "type": "planten", "window": { "kind": "dates", "from": "05-15", "to": "07-15" },
+      "note": "Diep in een plantgat",
+      "description": "Maak met een plantstok gaten van 15 cm diep, om de 15 cm in rijen op 30 cm afstand. Laat in elk gat een plantje zakken en giet het vol water; niet aandrukken. Knip wortels en blad eerst iets in."
+    },
+    {
+      "id": "aanaarden", "type": "onderhoud", "window": { "kind": "recurring", "from": "08-01", "to": "10-01", "every": "month" },
+      "description": "Schep in de loop van de zomer een paar keer grond tegen de stengels. Zo blijft het onderste deel wit en mals."
+    },
+    {
+      "id": "oogsten", "type": "oogsten", "window": { "kind": "dates", "from": "09-01", "to": "03-31" },
+      "description": "Steek de prei met een riek los en trek hem uit. Winterprei kan gewoon blijven staan tot je hem nodig hebt."
+    }
+  ]
+}

@@ -1,0 +1,40 @@
+{
+  "schemaVersion": 1,
+  "id": "stokroos",
+  "name": "Stokroos",
+  "latin": "Alcea rosea",
+  "category": "vaste-plant",
+  "tags": ["tweejarig", "zelfzaaiend"],
+  "nativeStatus": "exoot",
+  "appearance": { "shape": "aar", "count": 6, "flowerColor": "#D46A8C", "flowerColorName": "roze" },
+  "bloom": { "from": "07-01", "to": "09-15" },
+  "growing": { "sun": ["zon"], "soil": ["klei", "leem", "zand"], "moisture": ["normaal", "droog"], "spacingCm": 50 },
+  "info": {
+    "intro": "Een ouderwetse plant met metershoge stengels vol grote bloemen in roze, wit, rood of bijna zwart. Hij bloeit pas in het tweede jaar en leeft daarna vaak nog een paar jaar.",
+    "water": "Geef jonge planten water tot ze goed geworteld zijn. Daarna kan hij goed tegen droogte dankzij zijn lange penwortel.",
+    "tips": [
+      "Roest (oranje puntjes onder het blad) komt veel voor; haal aangetast blad weg en geef de plant een luchtige plek.",
+      "Tegen een muur of hek staat hij beschut en waait hij minder snel om.",
+      "Verplant jonge plantjes vroeg: door de lange penwortel groeien oudere planten slecht aan."
+    ]
+  },
+  "tasks": [
+    {
+      "id": "zaaien", "type": "zaaien", "window": { "kind": "dates", "from": "05-15", "to": "07-15" },
+      "note": "Bloeit pas volgend jaar",
+      "description": "Zaai in de zomer direct op de plek of in potjes, zo'n 1 cm diep. Dit jaar maakt de plant een bladrozet; volgend jaar bloeit hij."
+    },
+    {
+      "id": "planten", "type": "planten", "window": { "kind": "dates", "from": "09-01", "to": "10-15" },
+      "description": "Zet de jonge planten in het najaar op hun vaste plek, op zo'n 50 cm afstand. Kies een zonnige, beschutte plek."
+    },
+    {
+      "id": "opbinden", "type": "onderhoud", "window": { "kind": "dates", "from": "06-01", "to": "07-15" },
+      "description": "Zet op een winderige plek een stok bij de bloemstengel en bind hem losjes vast voordat de bloemen opengaan."
+    },
+    {
+      "id": "terugknippen", "type": "snoeien", "window": { "kind": "dates", "from": "09-15", "to": "10-31" },
+      "description": "Knip na de bloei de stengels af tot vlak boven de grond. Wil je dat hij zich uitzaait, laat dan eerst een stengel staan tot de zaaddozen bruin zijn."
+    }
+  ]
+}

@@ -1,0 +1,36 @@
+{
+  "schemaVersion": 1,
+  "id": "koningslelie",
+  "name": "Koningslelie",
+  "latin": "Lilium regale",
+  "category": "bolgewas",
+  "tags": ["meerjarig", "geurend", "snijbloem"],
+  "nativeStatus": "exoot",
+  "appearance": { "shape": "bloem", "count": 6, "flowerColor": "#F6F0E4", "flowerColorName": "wit" },
+  "bloom": { "from": "07-01", "to": "07-31" },
+  "growing": { "sun": ["zon"], "soil": ["leem", "zand", "klei"], "moisture": ["normaal"], "spacingCm": 30 },
+  "info": {
+    "intro": "Een lelie met grote, trompetvormige witte bloemen met een gele keel en een roze buitenkant. De geur is zo sterk dat je hem door de hele tuin ruikt.",
+    "water": "Geef in droge periodes water, maar zorg dat de grond goed doorlaat: de bol rot in natte grond.",
+    "tips": [
+      "Houd het leliehaantje (felrood kevertje) in de gaten en raap het weg.",
+      "Voeten in de schaduw, kop in de zon: zet er lage planten voor.",
+      "Stuifmeel geeft vlekken; knip de meeldraden weg als je ze in de vaas zet."
+    ]
+  },
+  "tasks": [
+    {
+      "id": "planten", "type": "planten", "window": { "kind": "dates", "from": "10-01", "to": "11-30" },
+      "note": "Of in maart",
+      "description": "Plant de bollen in de herfst of vroege voorjaar 15-20 cm diep, op zo'n 30 cm afstand, in goed doorlatende grond. Zet er meteen een stok bij."
+    },
+    {
+      "id": "leliehaantjes-rapen", "type": "onderhoud", "window": { "kind": "recurring", "from": "04-15", "to": "07-31", "every": "week" },
+      "description": "Controleer wekelijks op rode leliehaantjes en hun larven onder het blad en haal ze weg. Ze kunnen een plant in korte tijd kaalvreten."
+    },
+    {
+      "id": "uitgebloeid-afknippen", "type": "snoeien", "importance": "licht", "window": { "kind": "dates", "from": "08-01", "to": "08-31" },
+      "description": "Knip uitgebloeide bloemen af, maar laat de stengel en het blad staan tot ze geel zijn: die voeden de bol."
+    }
+  ]
+}

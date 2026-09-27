@@ -1,0 +1,38 @@
+{
+  "schemaVersion": 1,
+  "id": "spinazie",
+  "name": "Spinazie",
+  "latin": "Spinacia oleracea",
+  "category": "groente",
+  "tags": ["eenjarig"],
+  "nativeStatus": "exoot",
+  "appearance": { "shape": "losse-wolk", "count": 3, "flowerColor": "#A7B77A", "flowerColorName": "groen" },
+  "growing": { "sun": ["zon", "halfschaduw"], "soil": ["klei", "leem", "zand"], "moisture": ["normaal", "vochtig"], "spacingCm": 10 },
+  "info": {
+    "intro": "Een snelle bladgroente voor voorjaar en najaar. Spinazie houdt van koel weer; in de zomer schiet hij snel door (gaat bloeien).",
+    "water": "Houd de grond vochtig; droogte en warmte laten spinazie doorschieten.",
+    "tips": [
+      "Kies voor de zomer een doorschietbestendig ras.",
+      "Jong blad is lekker rauw in een salade.",
+      "Zaai in het najaar opnieuw voor oogst tot in de winter."
+    ]
+  },
+  "tasks": [
+    {
+      "id": "zaaien-voorjaar", "type": "zaaien", "window": { "kind": "dates", "from": "03-01", "to": "04-30" },
+      "description": "Zaai in rijen op 20 cm afstand, 2 cm diep. Dun uit tot 8-10 cm."
+    },
+    {
+      "id": "zaaien-najaar", "type": "zaaien", "window": { "kind": "dates", "from": "08-15", "to": "09-30" },
+      "description": "Zaai opnieuw in de nazomer voor een oogst in de herfst en het vroege voorjaar."
+    },
+    {
+      "id": "oogsten", "type": "oogsten", "window": { "kind": "dates", "from": "04-15", "to": "06-15" },
+      "description": "Snijd de hele plant af of pluk steeds de buitenste bladeren. Oogst voor hij gaat bloeien."
+    },
+    {
+      "id": "oogsten-najaar", "type": "oogsten", "window": { "kind": "dates", "from": "10-01", "to": "11-30" },
+      "description": "Pluk de buitenste bladeren van het najaarsgewas."
+    }
+  ]
+}

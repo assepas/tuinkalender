@@ -1,0 +1,39 @@
+{
+  "schemaVersion": 1,
+  "id": "prikneus",
+  "name": "Prikneus",
+  "latin": "Silene coronaria",
+  "category": "vaste-plant",
+  "tags": ["meerjarig", "zelfzaaiend", "droogtebestendig"],
+  "nativeStatus": "exoot",
+  "appearance": { "shape": "bloem", "count": 5, "flowerColor": "#C2185B", "flowerColorName": "magenta" },
+  "bloom": { "from": "06-15", "to": "08-31" },
+  "growing": { "sun": ["zon"], "soil": ["zand", "leem", "klei"], "moisture": ["droog", "normaal"], "spacingCm": 40 },
+  "info": {
+    "intro": "Een opvallende plant met zilvergrijs, viltig blad en felle magenta bloemen (ook wel Lychnis coronaria). Hij leeft maar een paar jaar, maar zaait zich makkelijk uit, dus je houdt hem.",
+    "water": "Houdt van droog. Alleen water geven na het planten; op natte grond rot hij in de winter weg.",
+    "tips": [
+      "Er bestaan ook witte en lichtroze vormen.",
+      "Het grijze blad staat mooi naast lavendel en salie.",
+      "Knip uitgebloeide bloemen af voor een langere bloei, maar laat er een paar zaad maken."
+    ]
+  },
+  "tasks": [
+    {
+      "id": "zaaien", "type": "zaaien", "window": { "kind": "dates", "from": "04-15", "to": "06-15" },
+      "description": "Zaai in het voorjaar of de vroege zomer direct buiten, dun bedekt. De plantjes bloeien meestal pas het jaar erna."
+    },
+    {
+      "id": "planten", "type": "planten", "window": { "kind": "dates", "from": "04-01", "to": "05-15" },
+      "description": "Plant op een zonnige plek in doorlatende grond, op zo'n 40 cm afstand."
+    },
+    {
+      "id": "dode-bloemen-verwijderen", "type": "snoeien", "importance": "licht", "window": { "kind": "recurring", "from": "07-01", "to": "08-31", "every": "2weeks" },
+      "description": "Knijp uitgebloeide bloemen af. Laat eind augustus een paar stengels staan tot het zaad rijp is, zodat er nieuwe plantjes komen."
+    },
+    {
+      "id": "terugknippen", "type": "snoeien", "window": { "kind": "dates", "from": "09-15", "to": "10-15" },
+      "description": "Knip de bloemstengels na de bloei af. Laat het grijze blad staan: dat blijft 's winters mooi en beschermt de plant."
+    }
+  ]
+}

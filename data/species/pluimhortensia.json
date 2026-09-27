@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "id": "pluimhortensia",
+  "name": "Pluimhortensia",
+  "latin": "Hydrangea paniculata",
+  "category": "struik",
+  "tags": ["struik"],
+  "nativeStatus": "exoot",
+  "appearance": { "shape": "losse-wolk", "count": 10, "flowerColor": "#F2EEDF", "flowerColorName": "crèmewit" },
+  "bloom": { "from": "07-15", "to": "10-15" },
+  "growing": { "sun": ["zon", "halfschaduw"], "soil": ["klei", "leem", "zand"], "moisture": ["normaal", "vochtig"], "spacingCm": 150 },
+  "info": {
+    "intro": "Een sterke heester met grote, kegelvormige bloempluimen die wit openen en in de herfst vaak roze verkleuren. Veel makkelijker dan de boerenhortensia: hij bloeit op nieuw hout.",
+    "water": "Geef in droge zomers flink water; hortensia's drinken veel.",
+    "tips": [
+      "Kan ook in de volle zon staan, mits de grond vochtig blijft.",
+      "De uitgebloeide pluimen blijven in de winter mooi staan.",
+      "Stevig snoeien geeft grotere pluimen, licht snoeien meer kleine."
+    ]
+  },
+  "tasks": [
+    {
+      "id": "planten", "type": "planten", "window": { "kind": "dates", "from": "10-15", "to": "04-15" },
+      "description": "Plant in de rustperiode op zo'n 1,5 meter afstand, in voedzame grond."
+    },
+    {
+      "id": "snoeien", "type": "snoeien", "window": { "kind": "dates", "from": "03-01", "to": "03-31" },
+      "description": "Snoei in maart alle takken van vorig jaar terug tot 2-3 knoppenparen. De bloemen komen aan het nieuwe hout."
+    },
+    {
+      "id": "bemesten", "type": "bemesten", "window": { "kind": "dates", "from": "04-01", "to": "04-30" },
+      "description": "Geef in het voorjaar een laag compost of wat organische mest rond de struik."
+    }
+  ]
+}

@@ -1,0 +1,31 @@
+{
+  "schemaVersion": 1,
+  "id": "grasanjer",
+  "name": "Grasanjer",
+  "latin": "Dianthus plumarius",
+  "category": "vaste-plant",
+  "tags": ["meerjarig", "geurend", "groenblijvend", "droogtebestendig"],
+  "nativeStatus": "exoot",
+  "appearance": { "shape": "bloem", "count": 5, "flowerColor": "#F0A6C0", "flowerColorName": "roze" },
+  "bloom": { "from": "05-15", "to": "07-15" },
+  "growing": { "sun": ["zon"], "soil": ["zand", "leem"], "moisture": ["droog", "normaal"], "spacingCm": 25 },
+  "info": {
+    "intro": "Een lage vaste plant met grijsblauw, grasachtig blad en gerafelde, sterk geurende bloempjes. Ideaal voor de rand van een border of een rotstuin.",
+    "water": "Houdt van droog; natte voeten zijn funest.",
+    "tips": [
+      "Kalkrijke, doorlatende grond is ideaal.",
+      "Het blad blijft in de winter grijs en mooi.",
+      "Stekken van scheuten zonder bloem wortelen makkelijk."
+    ]
+  },
+  "tasks": [
+    {
+      "id": "planten", "type": "planten", "window": { "kind": "dates", "from": "04-01", "to": "05-15" },
+      "description": "Plant op een zonnige plek in goed doorlatende grond, op zo'n 25 cm afstand. Niet te diep planten."
+    },
+    {
+      "id": "uitgebloeid-afknippen", "type": "snoeien", "importance": "licht", "window": { "kind": "dates", "from": "07-01", "to": "07-31" },
+      "description": "Knip de uitgebloeide stelen af tot op het blad. Dan blijft het kussen mooi compact."
+    }
+  ]
+}

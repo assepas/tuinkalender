@@ -1,0 +1,32 @@
+{
+  "schemaVersion": 1,
+  "id": "dille",
+  "name": "Dille",
+  "latin": "Anethum graveolens",
+  "category": "kruid",
+  "tags": ["eenjarig", "eetbaar"],
+  "nativeStatus": "exoot",
+  "appearance": { "shape": "losse-wolk", "count": 6, "flowerColor": "#E6D24A", "flowerColorName": "geel" },
+  "bloom": { "from": "07-01", "to": "09-15" },
+  "growing": { "sun": ["zon"], "soil": ["zand", "leem", "klei"], "moisture": ["normaal"], "spacingCm": 25 },
+  "info": {
+    "intro": "Een eenjarig kruid met fijn, veerachtig blad en gele schermbloemen. Het blad past bij vis, eieren en komkommer; het zaad gebruik je bij het inmaken.",
+    "water": "Houd de grond licht vochtig. Bij droogte gaat dille snel doorschieten (bloeien) en wordt het blad minder.",
+    "tips": [
+      "Zaai om de drie à vier weken opnieuw voor steeds vers blad.",
+      "Niet verplanten: dille heeft een penwortel. Zaai direct op de plek.",
+      "De schermbloemen trekken zweefvliegen en sluipwespen aan, die helpen tegen luis."
+    ]
+  },
+  "tasks": [
+    {
+      "id": "zaaien", "type": "zaaien", "window": { "kind": "dates", "from": "04-15", "to": "07-31" },
+      "note": "Om de 3-4 weken opnieuw",
+      "description": "Zaai in rijen direct buiten, dun bedekt. Dun uit tot 25 cm. Zaai elke drie à vier weken een nieuw rijtje voor de hele zomer vers blad."
+    },
+    {
+      "id": "oogsten", "type": "oogsten", "window": { "kind": "dates", "from": "06-01", "to": "10-01" },
+      "description": "Knip het blad als de plant zo'n 20 cm hoog is. Voor zaad laat je de schermen staan tot ze bruin zijn en knip je ze af boven een papieren zak."
+    }
+  ]
+}

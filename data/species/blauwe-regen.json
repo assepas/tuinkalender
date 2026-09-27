@@ -1,0 +1,36 @@
+{
+  "schemaVersion": 1,
+  "id": "blauwe-regen",
+  "name": "Blauwe regen",
+  "latin": "Wisteria sinensis",
+  "category": "struik",
+  "tags": ["klimmer", "geurend", "giftig"],
+  "nativeStatus": "exoot",
+  "appearance": { "shape": "aar", "count": 10, "flowerColor": "#9A8AD6", "flowerColorName": "lila" },
+  "bloom": { "from": "05-01", "to": "05-31" },
+  "growing": { "sun": ["zon"], "soil": ["klei", "leem"], "moisture": ["normaal"], "spacingCm": 400 },
+  "info": {
+    "intro": "Een krachtige klimmer met lange, hangende trossen lila bloemen in mei. De geur is zoet en bedwelmend. Hij heeft een stevige pergola of muur nodig: hij wordt zwaar.",
+    "water": "Geef jonge planten water tot ze goed geworteld zijn.",
+    "tips": [
+      "Twee keer per jaar snoeien is het geheim van veel bloei.",
+      "De zaden en peulen zijn giftig.",
+      "Een jonge plant bloeit soms pas na een paar jaar; kies een geënte plant."
+    ]
+  },
+  "tasks": [
+    {
+      "id": "planten", "type": "planten", "window": { "kind": "dates", "from": "10-15", "to": "04-15" },
+      "description": "Plant in de rustperiode tegen een stevige pergola of muur met draden, op een zonnige plek."
+    },
+    {
+      "id": "zomersnoei", "type": "snoeien", "window": { "kind": "dates", "from": "07-15", "to": "08-31" },
+      "note": "Scheuten tot 5-6 blad",
+      "description": "Knip de lange, groene scheuten van dit jaar terug tot 5-6 bladeren. Zo krijg je meer bloemknoppen."
+    },
+    {
+      "id": "wintersnoei", "type": "snoeien", "window": { "kind": "dates", "from": "01-15", "to": "02-28" },
+      "description": "Knip in de winter dezelfde scheuten verder in tot 2-3 knoppen. De dikke, ronde knoppen zijn bloemknoppen: die laat je staan."
+    }
+  ]
+}

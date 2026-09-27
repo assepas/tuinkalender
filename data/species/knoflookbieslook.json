@@ -1,0 +1,43 @@
+{
+  "schemaVersion": 1,
+  "id": "knoflookbieslook",
+  "name": "Knoflookbieslook",
+  "latin": "Allium tuberosum",
+  "category": "kruid",
+  "tags": ["meerjarig", "eetbaar", "vlinderplant"],
+  "nativeStatus": "exoot",
+  "appearance": { "shape": "losse-wolk", "count": 6, "flowerColor": "#F4F2EC", "flowerColorName": "wit" },
+  "bloom": { "from": "08-01", "to": "09-30" },
+  "growing": { "sun": ["zon", "halfschaduw"], "soil": ["zand", "leem", "klei"], "moisture": ["normaal"], "spacingCm": 25 },
+  "info": {
+    "intro": "Een vaste plant met platte, grasachtige blaadjes die mild naar knoflook smaken. Eind van de zomer komen er witte stervormige bloemschermen, druk bezocht door bijen.",
+    "water": "Houd de grond licht vochtig, vooral in de zomer; dan blijft het blad zacht.",
+    "tips": [
+      "Knip de bloemen weg voordat ze zaad zetten, anders zaait hij zich overal uit.",
+      "De bloemknoppen zijn ook eetbaar, lekker in een roerbakgerecht.",
+      "Wordt elk jaar een grotere pol."
+    ]
+  },
+  "tasks": [
+    {
+      "id": "zaaien-binnen", "type": "zaaien", "location": "kas", "window": { "kind": "dates", "from": "03-01", "to": "04-15" },
+      "description": "Zaai in een pot of tray, dun bedekt. Plant de plantjes in groepjes van vijf uit als ze zo dik als een draad zijn."
+    },
+    {
+      "id": "planten", "type": "planten", "window": { "kind": "dates", "from": "04-15", "to": "05-31" },
+      "description": "Plant in groepjes op zo'n 25 cm afstand, op een zonnige of licht beschaduwde plek."
+    },
+    {
+      "id": "oogsten", "type": "oogsten", "window": { "kind": "dates", "from": "05-01", "to": "10-15" },
+      "description": "Knip het blad af tot 3-4 cm boven de grond. Het groeit snel weer aan; je kunt meerdere keren per seizoen oogsten."
+    },
+    {
+      "id": "uitgebloeid-afknippen", "type": "snoeien", "importance": "licht", "window": { "kind": "dates", "from": "09-15", "to": "10-15" },
+      "description": "Knip de uitgebloeide schermen af voordat het zwarte zaad eruit valt."
+    },
+    {
+      "id": "delen", "type": "delen", "window": { "kind": "dates", "from": "03-15", "to": "04-30" },
+      "description": "Verdeel een grote pol om de drie jaar in het voorjaar in kleinere stukken."
+    }
+  ]
+}

@@ -1,0 +1,36 @@
+{
+  "schemaVersion": 1,
+  "id": "nachtschone",
+  "name": "Nachtschone",
+  "latin": "Mirabilis jalapa",
+  "category": "vaste-plant",
+  "tags": ["knol", "vorstgevoelig", "geurend", "giftig"],
+  "nativeStatus": "exoot",
+  "appearance": { "shape": "bloem", "count": 5, "flowerColor": "#D6297A", "flowerColorName": "fuchsia" },
+  "bloom": { "from": "07-01", "to": "10-15" },
+  "growing": { "sun": ["zon"], "soil": ["zand", "leem", "klei"], "moisture": ["normaal"], "spacingCm": 50 },
+  "info": {
+    "intro": "Een struikvormige plant waarvan de trompetvormige bloemen pas laat in de middag opengaan en 's avonds heerlijk geuren. Op één plant zitten vaak bloemen in verschillende kleuren.",
+    "water": "Geef in droge periodes water. In potten regelmatig gieten.",
+    "tips": [
+      "Niet winterhard: kweek hem als eenjarige uit zaad of haal de knol binnen, net als een dahlia.",
+      "De zaden en wortels zijn giftig.",
+      "Nachtvlinders bezoeken de bloemen 's avonds."
+    ]
+  },
+  "tasks": [
+    {
+      "id": "zaaien-binnen", "type": "zaaien", "location": "kas", "window": { "kind": "dates", "from": "03-15", "to": "04-30" },
+      "description": "Zaai binnen in potjes, zo'n 1 cm diep, op een warme plek. Het zaad is groot en kiemt makkelijk."
+    },
+    {
+      "id": "uitplanten", "type": "planten", "window": { "kind": "relative", "anchor": "lastFrost", "fromWeeks": 0, "toWeeks": 3 },
+      "note": "Pas na de laatste nachtvorst",
+      "description": "Plant uit als het niet meer vriest, op een zonnige plek op zo'n 50 cm afstand. Een overwinterde knol kun je ook dan pas buiten zetten."
+    },
+    {
+      "id": "knollen-binnenhalen", "type": "winterhard", "window": { "kind": "relative", "anchor": "firstFrost", "fromWeeks": -1, "toWeeks": 2 },
+      "description": "Graaf na de eerste lichte nachtvorst de knol op, laat hem drogen en bewaar hem vorstvrij in droge potgrond of zand. In het voorjaar weer oppotten."
+    }
+  ]
+}

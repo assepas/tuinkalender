@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "id": "tuinboon",
+  "name": "Tuinboon",
+  "latin": "Vicia faba",
+  "category": "groente",
+  "tags": ["eenjarig"],
+  "nativeStatus": "archeofyt",
+  "appearance": { "shape": "bloem", "count": 4, "flowerColor": "#F2EFEA", "flowerColorName": "wit-zwart" },
+  "bloom": { "from": "05-01", "to": "06-30" },
+  "growing": { "sun": ["zon"], "soil": ["klei", "leem"], "moisture": ["normaal"], "spacingCm": 15 },
+  "info": {
+    "intro": "Een oude, winterharde boon die je al vroeg in het voorjaar zaait. De geurende bloemen trekken hommels aan en de jonge bonen zijn heerlijk.",
+    "water": "Geef water in droge periodes, vooral bij de bloei.",
+    "tips": [
+      "Knip de toppen eruit zodra de onderste peulen groeien: dat helpt tegen zwarte luis.",
+      "Zet een touw langs de rij om omvallen te voorkomen.",
+      "Laat de wortels in de grond: die maken de grond rijker."
+    ]
+  },
+  "tasks": [
+    {
+      "id": "zaaien", "type": "zaaien", "window": { "kind": "dates", "from": "02-15", "to": "04-15" },
+      "description": "Zaai 5 cm diep, 15 cm uit elkaar, in een dubbele rij."
+    },
+    {
+      "id": "toppen", "type": "onderhoud", "window": { "kind": "dates", "from": "05-15", "to": "06-15" },
+      "description": "Knip de toppen eruit als de onderste peulen zich vormen. Zwarte luis heeft dan minder kans en de peulen vullen beter."
+    },
+    {
+      "id": "oogsten", "type": "oogsten", "window": { "kind": "dates", "from": "06-15", "to": "07-31" },
+      "description": "Pluk de peulen als de bonen erin voelbaar zijn maar nog jong en groen."
+    }
+  ]
+}

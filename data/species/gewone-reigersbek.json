@@ -1,0 +1,31 @@
+{
+  "schemaVersion": 1,
+  "id": "gewone-reigersbek",
+  "name": "Gewone reigersbek",
+  "latin": "Erodium cicutarium",
+  "category": "vaste-plant",
+  "tags": ["eenjarig", "gazon", "droogtebestendig"],
+  "nativeStatus": "inheems",
+  "appearance": { "shape": "bloem", "count": 5, "flowerColor": "#D27FB0", "flowerColorName": "roze" },
+  "bloom": { "from": "04-01", "to": "10-15" },
+  "growing": { "sun": ["zon"], "soil": ["zand"], "moisture": ["droog"], "spacingCm": 15 },
+  "info": {
+    "intro": "Een laag plantje van droge, zandige grond met varenachtig blad en kleine roze bloemen. De zaden hebben een lange 'snavel' die zich bij droogte opkrult en het zaad de grond in schroeft.",
+    "water": "Houdt van droog. Geen extra water nodig.",
+    "tips": [
+      "Doet het vooral goed in een dun, schraal gazon op zandgrond.",
+      "Is een- of tweejarig, maar zaait zich makkelijk opnieuw uit.",
+      "Bemest het gazon niet: op rijke grond verdwijnt hij onder het gras."
+    ]
+  },
+  "tasks": [
+    {
+      "id": "zaaien", "type": "zaaien", "window": { "kind": "dates", "from": "08-15", "to": "09-30" },
+      "description": "Zaai in de nazomer of in april-mei (lukt ook) op kale, losgeharkte plekken in het gras of mee in een bloemrijk gazonmengsel. Strooi het zaad breed uit, druk het aan en houd het een paar weken vochtig. Kies een droge, zonnige plek met schrale grond."
+    },
+    {
+      "id": "maaien", "type": "onderhoud", "window": { "kind": "recurring", "from": "05-01", "to": "10-15", "every": "2weeks" },
+      "description": "Maai het gazon niet te kort, op 5 tot 8 cm, dan blijft deze plant bloeien. Laat af en toe een plekje langer staan zodat hij zaad kan zetten."
+    }
+  ]
+}

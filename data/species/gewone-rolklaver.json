@@ -1,0 +1,31 @@
+{
+  "schemaVersion": 1,
+  "id": "gewone-rolklaver",
+  "name": "Gewone rolklaver",
+  "latin": "Lotus corniculatus var. corniculatus",
+  "category": "vaste-plant",
+  "tags": ["meerjarig", "gazon", "vlinderplant"],
+  "nativeStatus": "inheems",
+  "appearance": { "shape": "bloem", "count": 5, "flowerColor": "#F2B81E", "flowerColorName": "geel-oranje" },
+  "bloom": { "from": "05-15", "to": "09-15" },
+  "growing": { "sun": ["zon"], "soil": ["zand", "leem", "klei"], "moisture": ["droog", "normaal"], "spacingCm": 20 },
+  "info": {
+    "intro": "Een lage vaste plant met gele, soms oranjerode vlinderbloemen. Hij is een van de belangrijkste waardplanten voor vlinders zoals het icarusblauwtje, en maakt net als klaver de grond rijker.",
+    "water": "Heeft door zijn diepe wortels weinig water nodig.",
+    "tips": [
+      "Laat hem af en toe uitbloeien voordat je maait; hommels en bijen zijn er dol op.",
+      "Blijft groen als het gras in droge zomers al bruin is.",
+      "Zaad kiemt beter als je het vooraf kort schuurt met wat zand."
+    ]
+  },
+  "tasks": [
+    {
+      "id": "zaaien", "type": "zaaien", "window": { "kind": "dates", "from": "08-15", "to": "09-30" },
+      "description": "Zaai in de nazomer of in april-mei (lukt ook) op kale, losgeharkte plekken in het gras of mee in een bloemrijk gazonmengsel. Strooi het zaad breed uit, druk het aan en houd het een paar weken vochtig."
+    },
+    {
+      "id": "maaien", "type": "onderhoud", "window": { "kind": "recurring", "from": "05-01", "to": "10-15", "every": "2weeks" },
+      "description": "Maai het gazon niet te kort, op 5 tot 8 cm, dan blijft deze plant bloeien. Maai het liefst in stukken, zodat er altijd ergens rolklaver bloeit."
+    }
+  ]
+}

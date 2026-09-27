@@ -1,0 +1,31 @@
+{
+  "schemaVersion": 1,
+  "id": "gewone-margriet",
+  "name": "Gewone margriet",
+  "latin": "Leucanthemum vulgare",
+  "category": "vaste-plant",
+  "tags": ["meerjarig", "bloemenweide", "zelfzaaiend"],
+  "nativeStatus": "inheems",
+  "appearance": { "shape": "bloem", "count": 10, "flowerColor": "#F6F4EE", "flowerColorName": "wit met geel hart" },
+  "bloom": { "from": "05-15", "to": "07-31" },
+  "growing": { "sun": ["zon"], "soil": ["klei", "leem", "zand"], "moisture": ["droog", "normaal"], "spacingCm": 30 },
+  "info": {
+    "intro": "De wilde margriet uit bloemrijke hooilanden en bermen. Kleiner en losser dan de grote margriet, en een echte trekpleister voor insecten.",
+    "water": "Heeft weinig water nodig; alleen gieten na het zaaien of planten.",
+    "tips": [
+      "Doet het best op arme grond; op rijke grond wint het gras.",
+      "Zaait zich makkelijk uit in open plekken.",
+      "Maai of knip na de bloei, dan bloeit hij in de nazomer vaak nog een keer."
+    ]
+  },
+  "tasks": [
+    {
+      "id": "zaaien", "type": "zaaien", "window": { "kind": "dates", "from": "04-01", "to": "05-31" },
+      "description": "Strooi het zaad uit op kale, losgeharkte grond en druk het aan. Zaaien in september kan ook."
+    },
+    {
+      "id": "terugknippen-na-bloei", "type": "snoeien", "window": { "kind": "dates", "from": "07-15", "to": "08-15" },
+      "description": "Knip of maai de uitgebloeide stengels af nadat een deel zaad heeft gezet. Vaak volgt een nabloei."
+    }
+  ]
+}

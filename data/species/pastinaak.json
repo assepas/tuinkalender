@@ -1,0 +1,30 @@
+{
+  "schemaVersion": 1,
+  "id": "pastinaak",
+  "name": "Pastinaak",
+  "latin": "Pastinaca sativa",
+  "category": "groente",
+  "tags": ["tweejarig"],
+  "nativeStatus": "inheems",
+  "appearance": { "shape": "vrucht", "count": 1, "flowerColor": "#E6D36A", "flowerColorName": "geel", "fruitColor": "#EDE3C4" },
+  "growing": { "sun": ["zon", "halfschaduw"], "soil": ["zand", "leem", "klei"], "moisture": ["normaal"], "spacingCm": 15 },
+  "info": {
+    "intro": "Een vergeten groente met een lange, crèmekleurige wortel en een zoete, nootachtige smaak. Hij staat lang op het bed maar is winterhard: je oogst van oktober tot maart.",
+    "water": "Houd de grond vochtig tot het zaad opkomt; daarna redt hij zich meestal.",
+    "tips": [
+      "Gebruik altijd vers zaad: pastinaakzaad kiemt na een jaar slecht.",
+      "Na vorst wordt de wortel zoeter.",
+      "Het blad kan bij zon op de huid blaren geven; draag handschoenen."
+    ]
+  },
+  "tasks": [
+    {
+      "id": "zaaien", "type": "zaaien", "window": { "kind": "dates", "from": "03-15", "to": "05-15" },
+      "description": "Zaai in rijen op 30 cm afstand, 1-2 cm diep. Het kiemt traag, soms pas na vier weken. Dun uit tot 15 cm."
+    },
+    {
+      "id": "oogsten", "type": "oogsten", "window": { "kind": "dates", "from": "10-01", "to": "03-15" },
+      "description": "Steek de wortels voorzichtig uit met een riek. Laat ze in de grond staan tot je ze nodig hebt."
+    }
+  ]
+}

@@ -1,0 +1,39 @@
+{
+  "schemaVersion": 1,
+  "id": "grote-margriet",
+  "name": "Grote margriet",
+  "latin": "Leucanthemum × superbum",
+  "category": "vaste-plant",
+  "tags": ["meerjarig", "snijbloem"],
+  "nativeStatus": "exoot",
+  "appearance": { "shape": "bloem", "count": 10, "flowerColor": "#F6F4EE", "flowerColorName": "wit met geel hart" },
+  "bloom": { "from": "06-15", "to": "08-31" },
+  "growing": { "sun": ["zon"], "soil": ["klei", "leem", "zand"], "moisture": ["normaal"], "spacingCm": 45 },
+  "info": {
+    "intro": "Een vaste plant met grote, witte margrieten op stevige stelen. Een van de vrolijkste zomerbloeiers en een goede snijbloem.",
+    "water": "Geef in droge periodes water; hij houdt niet van uitdrogen, maar ook niet van natte voeten in de winter.",
+    "tips": [
+      "Knip uitgebloeide bloemen af, dan bloeit hij tot eind augustus.",
+      "Verdeel hem om de drie jaar: oude planten gaan minder bloeien.",
+      "Bij hoge rassen helpt een steuntje tegen omvallen."
+    ]
+  },
+  "tasks": [
+    {
+      "id": "planten", "type": "planten", "window": { "kind": "dates", "from": "03-15", "to": "05-15" },
+      "description": "Plant op een zonnige plek op zo'n 45 cm afstand in goed doorlatende grond."
+    },
+    {
+      "id": "dode-bloemen-verwijderen", "type": "snoeien", "importance": "licht", "window": { "kind": "recurring", "from": "07-01", "to": "08-31", "every": "2weeks" },
+      "description": "Knip uitgebloeide bloemen met steel af. Zo blijft hij doorbloeien."
+    },
+    {
+      "id": "terugknippen", "type": "snoeien", "window": { "kind": "dates", "from": "10-15", "to": "11-30" },
+      "description": "Knip de stengels na de bloei af; laat de bladrozet staan."
+    },
+    {
+      "id": "delen", "type": "delen", "window": { "kind": "dates", "from": "03-15", "to": "04-15" },
+      "description": "Verdeel de pol om de drie jaar in het voorjaar."
+    }
+  ]
+}

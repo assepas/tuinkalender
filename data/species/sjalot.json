@@ -1,0 +1,30 @@
+{
+  "schemaVersion": 1,
+  "id": "sjalot",
+  "name": "Sjalot",
+  "latin": "Allium cepa var. aggregatum",
+  "category": "groente",
+  "tags": ["eenjarig"],
+  "nativeStatus": "exoot",
+  "appearance": { "shape": "losse-wolk", "count": 5, "flowerColor": "#EFE7E6", "flowerColorName": "wit" },
+  "growing": { "sun": ["zon"], "soil": ["klei", "leem", "zand"], "moisture": ["normaal"], "spacingCm": 15 },
+  "info": {
+    "intro": "Een fijne, milde ui die uit één pootsjalot een hele trosje nieuwe sjalotten maakt. Ze zijn lekker in sauzen en goed te bewaren.",
+    "water": "Geef water in droge periodes in het voorjaar; vanaf juli droog laten afrijpen.",
+    "tips": [
+      "Poot vroeg: sjalotten hebben een lang seizoen nodig.",
+      "Bewaar een paar mooie sjalotten als pootgoed voor volgend jaar.",
+      "Vogels trekken ze graag uit de grond; leg er de eerste weken gaas over."
+    ]
+  },
+  "tasks": [
+    {
+      "id": "poten", "type": "planten", "window": { "kind": "dates", "from": "02-15", "to": "04-15" },
+      "description": "Poot de sjalotten zo diep dat het puntje er net bovenuit steekt, op 15 cm afstand in rijen van 25 cm."
+    },
+    {
+      "id": "oogsten", "type": "oogsten", "window": { "kind": "dates", "from": "07-01", "to": "08-15" },
+      "description": "Oogst als het loof geel is. Laat de trossen drogen op een luchtige plek en haal ze daarna uit elkaar."
+    }
+  ]
+}

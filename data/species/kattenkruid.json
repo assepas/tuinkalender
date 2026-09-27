@@ -1,0 +1,36 @@
+{
+  "schemaVersion": 1,
+  "id": "kattenkruid",
+  "name": "Kattenkruid",
+  "latin": "Nepeta × faassenii",
+  "category": "vaste-plant",
+  "tags": ["meerjarig", "vlinderplant", "droogtebestendig", "geurend"],
+  "nativeStatus": "exoot",
+  "appearance": { "shape": "aar", "count": 6, "flowerColor": "#8C8FD6", "flowerColorName": "lavendelblauw" },
+  "bloom": { "from": "05-15", "to": "09-15" },
+  "growing": { "sun": ["zon"], "soil": ["zand", "leem", "klei"], "moisture": ["droog", "normaal"], "spacingCm": 45 },
+  "info": {
+    "intro": "Een losse, grijsgroene plant met lavendelblauwe bloemaren die van mei tot september bloeit. Een klassieker langs paden en onder rozen, en altijd vol bijen.",
+    "water": "Heeft weinig water nodig; alleen geven na het planten.",
+    "tips": [
+      "Katten rollen er soms in; zet er bij jonge planten wat takjes omheen.",
+      "Na terugknippen in juli bloeit hij opnieuw tot de herfst.",
+      "Staat mooi als lage rand langs een pad of voor rozen."
+    ]
+  },
+  "tasks": [
+    {
+      "id": "planten", "type": "planten", "window": { "kind": "dates", "from": "03-15", "to": "05-15" },
+      "description": "Plant op een zonnige plek in doorlatende grond, op zo'n 45 cm afstand."
+    },
+    {
+      "id": "terugknippen-zomer", "type": "snoeien", "window": { "kind": "dates", "from": "07-01", "to": "07-31" },
+      "note": "Terugknippen voor tweede bloei",
+      "description": "Knip de plant na de eerste bloei met de heggenschaar een derde tot de helft terug. Binnen een paar weken bloeit hij opnieuw."
+    },
+    {
+      "id": "terugknippen", "type": "snoeien", "window": { "kind": "dates", "from": "03-01", "to": "03-31" },
+      "description": "Knip de oude stengels in het voorjaar af tot net boven het nieuwe blad."
+    }
+  ]
+}

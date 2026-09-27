@@ -1,0 +1,39 @@
+{
+  "schemaVersion": 1,
+  "id": "herfstanemoon",
+  "name": "Japanse herfstanemoon",
+  "latin": "Anemone × hybrida",
+  "category": "vaste-plant",
+  "tags": ["meerjarig", "woekert"],
+  "nativeStatus": "exoot",
+  "appearance": { "shape": "bloem", "count": 6, "flowerColor": "#E7B7C8", "flowerColorName": "roze" },
+  "bloom": { "from": "08-15", "to": "10-15" },
+  "growing": { "sun": ["halfschaduw", "zon"], "soil": ["klei", "leem"], "moisture": ["normaal", "vochtig"], "spacingCm": 50 },
+  "info": {
+    "intro": "Een sierlijke vaste plant met roze of witte bloemen op lange stelen, precies als de rest van de tuin uitbloeit. Hij is sterk en wordt elk jaar mooier.",
+    "water": "Houd de grond licht vochtig, vooral het eerste jaar. Uitgedroogde planten krijgen bruin blad.",
+    "tips": [
+      "Het eerste jaar lijkt hij weinig te doen; daarna breidt hij zich flink uit met wortelstokken.",
+      "Houdt niet van verplanten; kies meteen een goede plek.",
+      "Bloeit ook goed in de halfschaduw."
+    ]
+  },
+  "tasks": [
+    {
+      "id": "planten", "type": "planten", "window": { "kind": "dates", "from": "04-01", "to": "05-15" },
+      "description": "Plant in het voorjaar, zodat hij goed kan wortelen voor de winter. Zet hem op zo'n 50 cm afstand in voedzame grond."
+    },
+    {
+      "id": "terugknippen", "type": "snoeien", "window": { "kind": "dates", "from": "11-15", "to": "03-15" },
+      "description": "Knip de stengels na de bloei of in het vroege voorjaar af tot net boven de grond."
+    },
+    {
+      "id": "winterhard", "type": "winterhard", "window": { "kind": "dates", "from": "11-01", "to": "11-30" },
+      "description": "Jonge planten zijn de eerste winter wat gevoelig. Leg een laagje blad of compost over de wortels. Oudere planten hebben dat niet nodig."
+    },
+    {
+      "id": "uitlopers-verwijderen", "type": "delen", "window": { "kind": "dates", "from": "03-15", "to": "04-30" },
+      "description": "Steek uitlopers die te ver gaan in het voorjaar uit en plant ze elders of geef ze weg."
+    }
+  ]
+}

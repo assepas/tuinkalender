@@ -1,0 +1,30 @@
+{
+  "schemaVersion": 1,
+  "id": "veldsla",
+  "name": "Veldsla",
+  "latin": "Valerianella locusta",
+  "category": "groente",
+  "tags": ["eenjarig"],
+  "nativeStatus": "archeofyt",
+  "appearance": { "shape": "losse-wolk", "count": 4, "flowerColor": "#C9D8EE", "flowerColorName": "lichtblauw" },
+  "growing": { "sun": ["zon", "halfschaduw"], "soil": ["klei", "leem", "zand"], "moisture": ["normaal"], "spacingCm": 10 },
+  "info": {
+    "intro": "Een kleine bladgroente die je in de nazomer zaait en in de herfst en winter oogst. Veldsla kan tegen vorst en groeit door als er verder weinig in de tuin staat.",
+    "water": "Houd de grond vochtig tot het zaad opkomt; daarna redt veldsla zich in de herfst meestal zelf.",
+    "tips": [
+      "Zaai na de oogst van vroege groenten: zo gebruik je een bed twee keer.",
+      "Veldsla houdt van stevige grond; hark de grond alleen oppervlakkig los.",
+      "Een laagje vliesdoek in strenge vorst houdt de rozetjes mooi."
+    ]
+  },
+  "tasks": [
+    {
+      "id": "zaaien", "type": "zaaien", "window": { "kind": "dates", "from": "08-01", "to": "09-30" },
+      "description": "Zaai in rijen op 10 cm afstand, 1 cm diep, en druk de grond goed aan. Zaai in twee of drie keer voor een langere oogst."
+    },
+    {
+      "id": "oogsten", "type": "oogsten", "window": { "kind": "dates", "from": "10-15", "to": "03-15" },
+      "description": "Snijd hele rozetjes net boven de wortel af. Was ze goed: tussen de blaadjes zit vaak zand."
+    }
+  ]
+}

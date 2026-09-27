@@ -1,0 +1,32 @@
+{
+  "schemaVersion": 1,
+  "id": "boerenjasmijn",
+  "name": "Boerenjasmijn",
+  "latin": "Philadelphus coronarius",
+  "category": "struik",
+  "tags": ["struik", "geurend"],
+  "nativeStatus": "exoot",
+  "appearance": { "shape": "bloem", "count": 4, "flowerColor": "#F7F4EA", "flowerColorName": "wit" },
+  "bloom": { "from": "06-01", "to": "06-30" },
+  "growing": { "sun": ["zon", "halfschaduw"], "soil": ["klei", "leem", "zand"], "moisture": ["normaal"], "spacingCm": 200 },
+  "info": {
+    "intro": "Een sterke heester die in juni vol witte, sterk geurende bloemen staat. De geur doet denken aan jasmijn. Een klassieker in de boerentuin.",
+    "water": "Geef jonge struiken water in droge periodes; oudere planten redden zich.",
+    "tips": [
+      "Bloeit op het hout van vorig jaar: snoei direct na de bloei.",
+      "Haal elk jaar een paar oude takken bij de grond weg om de struik jong te houden.",
+      "Takken met knop zijn mooi in de vaas."
+    ]
+  },
+  "tasks": [
+    {
+      "id": "planten", "type": "planten", "window": { "kind": "dates", "from": "10-15", "to": "03-31" },
+      "description": "Plant in de rustperiode, als het niet vriest, op zo'n 2 meter van andere struiken."
+    },
+    {
+      "id": "snoeien", "type": "snoeien", "window": { "kind": "dates", "from": "07-01", "to": "07-31" },
+      "note": "Direct na de bloei",
+      "description": "Snoei direct na de bloei: knip uitgebloeide takken terug tot een jonge zijscheut en haal een paar oude takken bij de grond weg. Niet in het voorjaar snoeien, dan knip je de bloemknoppen weg."
+    }
+  ]
+}

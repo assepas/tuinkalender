@@ -1,0 +1,31 @@
+{
+  "schemaVersion": 1,
+  "id": "slaapmutsje",
+  "name": "Slaapmutsje",
+  "latin": "Eschscholzia californica",
+  "category": "vaste-plant",
+  "tags": ["eenjarig", "zelfzaaiend", "droogtebestendig"],
+  "nativeStatus": "exoot",
+  "appearance": { "shape": "bloem", "count": 4, "flowerColor": "#F29A2E", "flowerColorName": "oranje" },
+  "bloom": { "from": "06-01", "to": "09-30" },
+  "growing": { "sun": ["zon"], "soil": ["zand", "leem"], "moisture": ["droog", "normaal"], "spacingCm": 20 },
+  "info": {
+    "intro": "Een eenjarige met zijdeachtige oranje bloemen en fijn, blauwgroen blad. De bloemen gaan 's avonds en bij bewolkt weer dicht, als een slaapmutsje.",
+    "water": "Houdt van droog en arm. Alleen water geven tot het zaad is opgekomen.",
+    "tips": [
+      "Zaai altijd direct op de plek: hij houdt niet van verplanten.",
+      "Zaait zich elk jaar vanzelf uit, ook tussen tegels en grind.",
+      "Er zijn ook rassen in geel, roze en crème."
+    ]
+  },
+  "tasks": [
+    {
+      "id": "zaaien", "type": "zaaien", "window": { "kind": "dates", "from": "03-15", "to": "05-31" },
+      "description": "Strooi het zaad dun uit op de plek waar hij moet bloeien en hark het licht in. Dun de plantjes uit tot 20 cm afstand. Zaaien in september kan ook; die planten bloeien volgend jaar eerder."
+    },
+    {
+      "id": "dode-bloemen-verwijderen", "type": "onderhoud", "window": { "kind": "recurring", "from": "07-01", "to": "09-15", "every": "2weeks" },
+      "description": "Knip uitgebloeide bloemen en lange zaaddozen weg voor een langere bloei. Laat er een paar staan als je hem volgend jaar weer wilt."
+    }
+  ]
+}

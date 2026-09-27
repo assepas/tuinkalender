@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "id": "lupine",
+  "name": "Lupine",
+  "latin": "Lupinus polyphyllus",
+  "category": "vaste-plant",
+  "tags": ["meerjarig", "giftig"],
+  "nativeStatus": "exoot",
+  "appearance": { "shape": "aar", "count": 10, "flowerColor": "#6F63C4", "flowerColorName": "blauwpaars" },
+  "bloom": { "from": "05-15", "to": "07-15" },
+  "growing": { "sun": ["zon"], "soil": ["zand", "leem"], "moisture": ["normaal"], "spacingCm": 50 },
+  "info": {
+    "intro": "Een statige vaste plant met dichte bloemaren in bijna elke kleur. Echte cottage-sfeer in juni. Hij bindt stikstof en doet het daardoor ook op arme grond.",
+    "water": "Geef jonge planten water tot ze geworteld zijn. Daarna redt hij zich dankzij zijn lange penwortel.",
+    "tips": [
+      "Houdt niet van kalk en natte klei; op zure zandgrond doet hij het het best.",
+      "De zaden zijn giftig; pas op met kinderen.",
+      "Lupinen leven een paar jaar; laat af en toe zaad zetten of zaai opnieuw."
+    ]
+  },
+  "tasks": [
+    {
+      "id": "zaaien", "type": "zaaien", "window": { "kind": "dates", "from": "04-01", "to": "06-15" },
+      "description": "Laat het zaad een nacht weken en zaai het 1 cm diep in potjes of direct op de plek. Plant jonge planten vroeg uit: ze hebben een penwortel en verplanten slecht."
+    },
+    {
+      "id": "planten", "type": "planten", "window": { "kind": "dates", "from": "04-01", "to": "05-15" },
+      "description": "Plant op een zonnige plek op zo'n 50 cm afstand, in niet te zware grond."
+    },
+    {
+      "id": "uitgebloeid-afknippen", "type": "snoeien", "window": { "kind": "dates", "from": "07-01", "to": "07-31" },
+      "description": "Knip de uitgebloeide aren af voor de zaden rijp zijn. Vaak volgt dan in augustus een tweede, kleinere bloei."
+    }
+  ]
+}

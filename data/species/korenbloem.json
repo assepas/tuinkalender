@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "id": "korenbloem",
+  "name": "Korenbloem",
+  "latin": "Centaurea cyanus",
+  "category": "vaste-plant",
+  "tags": ["eenjarig", "bloemenweide", "snijbloem", "eetbaar"],
+  "nativeStatus": "archeofyt",
+  "appearance": { "shape": "bloem", "count": 8, "flowerColor": "#3F6DD4", "flowerColorName": "blauw" },
+  "bloom": { "from": "06-01", "to": "08-31" },
+  "growing": { "sun": ["zon"], "soil": ["zand", "leem", "klei"], "moisture": ["droog", "normaal"], "spacingCm": 25 },
+  "info": {
+    "intro": "De klassieke blauwe akkerbloem die vroeger tussen het graan groeide. Bijen en hommels zijn er dol op, en de blaadjes zijn eetbaar in salades.",
+    "water": "Heeft weinig water nodig. Alleen gieten na het zaaien als het droog is.",
+    "tips": [
+      "Gedijt het best op arme grond; op rijke grond valt hij om.",
+      "Zaai in stappen (om de drie weken) voor een langere bloei.",
+      "Mooi samen met klaproos en kamille als mini-bloemenakker."
+    ]
+  },
+  "tasks": [
+    {
+      "id": "zaaien", "type": "zaaien", "window": { "kind": "dates", "from": "03-15", "to": "05-31" },
+      "description": "Zaai direct op de plek, zo'n 1 cm diep, en dun later uit tot 25 cm. In september zaaien kan ook: dan bloeit hij volgend jaar al in mei."
+    },
+    {
+      "id": "oogsten", "type": "oogsten", "window": { "kind": "dates", "from": "06-15", "to": "08-31" },
+      "description": "Pluk bloemen voor de vaas als ze net open zijn, of trek de blauwe blaadjes los voor salades en thee."
+    },
+    {
+      "id": "dode-bloemen-verwijderen", "type": "onderhoud", "window": { "kind": "recurring", "from": "06-15", "to": "08-31", "every": "week" },
+      "description": "Knip uitgebloeide bloemen af, dan blijft hij langer bloeien. Laat aan het eind een paar bloemen zaad maken."
+    }
+  ]
+}

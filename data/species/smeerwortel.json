@@ -1,0 +1,36 @@
+{
+  "schemaVersion": 1,
+  "id": "smeerwortel",
+  "name": "Smeerwortel",
+  "latin": "Symphytum officinale",
+  "category": "vaste-plant",
+  "tags": ["meerjarig", "woekert"],
+  "nativeStatus": "inheems",
+  "appearance": { "shape": "aar", "count": 6, "flowerColor": "#9B5B8E", "flowerColorName": "paars-roze" },
+  "bloom": { "from": "05-01", "to": "08-01" },
+  "growing": { "sun": ["zon", "halfschaduw"], "soil": ["klei", "leem", "veen"], "moisture": ["vochtig", "nat"], "spacingCm": 60 },
+  "info": {
+    "intro": "Een grote, stoere plant met hangende klokjes waar hommels dol op zijn. Het blad zit vol voedingsstoffen: tuiniers gebruiken het als mulch, in de compost of voor gier (vloeibare plantenmest).",
+    "water": "Smeerwortel heeft diepe wortels en redt zich meestal zelf. Alleen jonge planten in droge periodes water geven.",
+    "tips": [
+      "Kies de plek goed: elk stukje wortel dat achterblijft groeit weer uit, je krijgt hem bijna niet meer weg.",
+      "Maak gier: laat een emmer vol blad twee à drie weken in water staan en verdun het 1 op 10 als mest voor tomaten en courgettes.",
+      "Niet innemen: de plant bevat stoffen die schadelijk zijn voor de lever."
+    ]
+  },
+  "tasks": [
+    {
+      "id": "planten", "type": "planten", "window": { "kind": "dates", "from": "03-15", "to": "05-01" },
+      "description": "Plant een stuk wortel of een pot op een vaste plek met ruimte, zo'n 60 cm van andere planten. Hij wordt groot en blijft jaren staan."
+    },
+    {
+      "id": "blad-oogsten", "type": "oogsten", "window": { "kind": "dates", "from": "05-15", "to": "09-15" },
+      "note": "Blad voor mulch of gier",
+      "description": "Snijd de hele plant tot zo'n 5 cm boven de grond af als hij groot is. Leg het blad als mulch onder groenten, doe het in de compost of maak er gier van. Hij loopt snel weer uit; je kunt drie à vier keer per jaar oogsten."
+    },
+    {
+      "id": "terugknippen", "type": "snoeien", "window": { "kind": "dates", "from": "10-15", "to": "11-15" },
+      "description": "Knip in het najaar de laatste bladeren en stengels af en leg ze op de composthoop. De wortels overwinteren in de grond en lopen in maart weer uit."
+    }
+  ]
+}
