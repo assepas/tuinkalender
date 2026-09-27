@@ -1,8 +1,8 @@
 {
   "schemaVersion": 1,
   "id": "moerbei",
-  "name": "Moerbei",
-  "latin": "Morus nigra",
+  "name": "Moerbei 'Milanowek'",
+  "latin": "Morus alba × rubra 'Milanowek'",
   "category": "boom",
   "tags": ["meerjarig", "fruitboom"],
   "nativeStatus": "exoot",
@@ -10,10 +10,11 @@
   "bloom": { "from": "05-01", "to": "05-31" },
   "growing": { "sun": ["zon"], "soil": ["klei", "leem", "zand"], "moisture": ["normaal"], "spacingCm": 500 },
   "info": {
-    "intro": "Een langzaam groeiende boom met grote, hartvormige bladeren en zwarte, sappige bessen die op een langwerpige braam lijken. Hij kan heel oud worden en wordt een prachtige, knoestige boom.",
+    "intro": "Een Pools moerbeiras met grote, hartvormige bladeren en langwerpige, diep roodzwarte bessen van zo'n 3 cm, stevig en heel sappig. Hij wordt 4 tot 6 meter hoog en rijpt niet in één keer, maar geleidelijk van half juni tot begin september.",
     "water": "Geef een jonge boom de eerste jaren in droge periodes veel water. Oudere bomen redden zich meestal zelf.",
     "tips": [
-      "Draagt pas na een paar jaar; geduld loont.",
+      "Zelfbestuivend: ook als enige moerbei in de buurt geeft hij vruchten.",
+      "Zeer winterhard (tot ongeveer -30 °C); alleen een heel jonge boom kan in een strenge winter wat bescherming gebruiken.",
       "De rijpe bessen geven vlekken die moeilijk uitgaan; zet hem niet boven een terras.",
       "Leg een laken onder de boom en schud de takken: rijpe bessen vallen er vanzelf af."
     ]
@@ -29,8 +30,8 @@
       "description": "Snoei alleen als het nodig is: dode, kruisende of te laag hangende takken. Doe dat in de winter, als de boom in rust is; in het voorjaar 'bloedt' hij sterk. Grote snoeiwonden herstellen slecht."
     },
     {
-      "id": "oogsten", "type": "oogsten", "window": { "kind": "dates", "from": "07-15", "to": "09-15" },
-      "description": "Pluk de bessen als ze zwart en zacht zijn; ze rijpen niet tegelijk. Eet ze meteen of maak er jam van: ze bederven snel."
+      "id": "oogsten", "type": "oogsten", "window": { "kind": "dates", "from": "06-15", "to": "09-10" },
+      "description": "Pluk de bessen als ze diep roodzwart en zacht zijn. Bij 'Milanowek' rijpen ze steeds een beetje, van half juni tot begin september; loop de boom dus elke paar dagen na. Eet ze meteen of maak er jam van: ze bederven snel."
     }
   ]
 }
