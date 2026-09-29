@@ -396,12 +396,13 @@ function createGardenState() {
     },
 
     /**
-     * Nieuwe tuin in je account: leeg, of de lokale tuin uit deze browser.
+     * Nieuwe tuin in je account: leeg, uit een back-up (`data`), of de lokale
+     * tuin uit deze browser.
      * Die lokale kopie wordt daarna gewist — hij staat dan in je account, en
      * zo kan hij niet per ongeluk twee keer geüpload worden.
      */
-    async createCloudGarden(name, { fromLocal = false } = {}) {
-      const data = fromLocal ? loadGarden() : createEmptyGarden(DEFAULT_REGION);
+    async createCloudGarden(name, { fromLocal = false, data: imported = null } = {}) {
+      const data = imported ?? (fromLocal ? loadGarden() : createEmptyGarden(DEFAULT_REGION));
       const id = await createGarden(name, data);
       if (fromLocal) {
         clearLocalGarden();

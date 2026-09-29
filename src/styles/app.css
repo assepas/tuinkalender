@@ -65,13 +65,64 @@ button {
 
 /* Tabs staan op de donkere header: inactief lichtgroene tekst zonder rand,
    actief een licht "blad" (omgekeerde kleuren) zodat hij er duidelijk uitspringt. */
+.app-header-brand {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--space-4);
+}
+
 nav.tabs {
   display: flex;
   flex-wrap: wrap;
+  align-items: center;
   gap: var(--space-1);
 }
 
-nav.tabs button {
+.tabs-separator {
+  width: 1px;
+  align-self: stretch;
+  margin: var(--space-1) var(--space-2);
+  background: rgba(255, 255, 255, 0.2);
+}
+
+nav.tabs .tab-menu {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-1);
+}
+
+.app-header-account {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+}
+
+.admin-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.3rem;
+  height: 2.3rem;
+  padding: 0;
+  background: transparent;
+  border: 1px solid var(--color-primary-muted);
+  border-radius: var(--radius);
+  color: var(--color-primary-ink);
+  cursor: pointer;
+}
+
+.admin-button:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.admin-button[aria-current="page"] {
+  background: var(--color-surface);
+  border-color: var(--color-surface);
+  color: var(--color-primary);
+}
+
+nav.tabs .tab {
   background: transparent;
   border: none;
   border-radius: var(--radius);
@@ -82,12 +133,12 @@ nav.tabs button {
   cursor: pointer;
 }
 
-nav.tabs button:hover {
+nav.tabs .tab:hover {
   background: rgba(255, 255, 255, 0.1);
   color: var(--color-primary-ink);
 }
 
-nav.tabs button[aria-current="page"] {
+nav.tabs .tab[aria-current="page"] {
   background: var(--color-surface);
   color: var(--color-primary);
 }
@@ -101,10 +152,107 @@ nav.tabs button[aria-current="page"] {
     gap: 0;
   }
 
-  nav.tabs button {
+  nav.tabs .tab {
     padding: var(--space-2) var(--space-3);
     white-space: nowrap;
   }
+}
+
+/* ---------- Uitklapmenu's (Dropdown.svelte) ---------- */
+
+.dropdown {
+  position: relative;
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: calc(100% + var(--space-2));
+  left: 0;
+  z-index: 20; /* onder .modal-overlay (100) */
+  background: var(--color-surface-raised);
+  border: var(--border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-popover);
+  padding: var(--space-2);
+}
+
+.dropdown-menu.align-right {
+  left: auto;
+  right: 0;
+}
+
+.menu-item {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-3);
+  width: 100%;
+  text-align: left;
+  background: transparent;
+  border: none;
+  border-radius: var(--radius);
+  padding: var(--space-2) var(--space-3);
+  font-size: var(--step0);
+  line-height: var(--line-height-body);
+  color: var(--color-ink);
+  cursor: pointer;
+}
+
+.menu-item:hover,
+.menu-item[aria-current] {
+  background: var(--color-surface);
+}
+
+.menu-item[aria-current] .menu-item-label {
+  font-weight: 500;
+}
+
+.menu-item-icon {
+  flex: none;
+  display: flex;
+  padding-top: 0.15em;
+  color: var(--color-primary);
+}
+
+.menu-item-label {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.menu-item-sub {
+  font-size: var(--step-1);
+  font-weight: 400;
+  color: var(--color-ink-muted);
+}
+
+.menu-divider {
+  height: 1px;
+  background: var(--color-line);
+  margin: var(--space-2) var(--space-1);
+}
+
+/* Chevron naast een menuknop; draait om als het menu open is. */
+.menu-chevron {
+  display: inline-flex;
+  transition: transform 0.15s;
+}
+
+.menu-chevron.open {
+  transform: rotate(180deg);
+}
+
+/* Eenmalige melding (bv. na een uitnodiging), boven de weergave. */
+.app-notice {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-2);
+  padding: var(--space-2) var(--space-3);
+  border: var(--border);
+  border-radius: var(--radius);
+  background: var(--color-surface-raised);
+  margin: 0 0 var(--space-4);
 }
 
 /* ---------- Legenda ---------- */
@@ -163,7 +311,7 @@ nav.tabs button[aria-current="page"] {
 .month-card h2 {
   font-family: var(--font-display);
   font-size: var(--step2);
-  font-weight: 500;
+  font-weight: var(--weight-display);
   margin: 0 0 var(--space-3);
 }
 
@@ -182,11 +330,20 @@ nav.tabs button[aria-current="page"] {
   gap: var(--space-2);
 }
 
+/* flex: none + expliciete regelhoogte: anders krimpen lange regels in de
+   kolom-flex van .task-list en lopen ze over de volgende heen. */
 .task-row {
   display: flex;
+  flex: none;
   align-items: flex-start;
   gap: var(--space-2);
   font-size: var(--step-1);
+  line-height: var(--line-height-body);
+}
+
+.task-row-text {
+  min-width: 0;
+  overflow-wrap: anywhere;
 }
 
 .task-row .dot {
@@ -234,7 +391,36 @@ nav.tabs button[aria-current="page"] {
   margin: 0 0 0;
 }
 
-/* Inklapbare paneelkop: de knop zit ín de <h2> (niet andersom), zodat de
+/* Paneelkop met een knop rechts (bv. instellingen op Mijn tuin). */
+.panel-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: var(--space-3);
+  margin: 0 0 var(--space-3);
+}
+
+.settings-button {
+  flex: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.3rem;
+  height: 2.3rem;
+  padding: 0;
+  background: var(--color-surface-raised);
+  border: var(--border);
+  border-radius: var(--radius);
+  color: var(--color-ink-muted);
+  cursor: pointer;
+}
+
+.settings-button:hover {
+  border-color: var(--color-line-strong);
+  color: var(--color-primary);
+}
+
+/* Inklapbare paneelkop:de knop zit ín de <h2> (niet andersom), zodat de
    kopniveau-structuur voor schermlezers intact blijft — standaard
    "disclosure"-patroon. */
 .panel-toggle {
@@ -344,6 +530,19 @@ select::-ms-expand {
   background: var(--color-primary);
   border-color: var(--color-primary);
   color: var(--color-primary-ink);
+}
+
+.btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.btn:disabled:hover {
+  border-color: var(--color-line);
+}
+
+.btn-primary:disabled:hover {
+  border-color: var(--color-primary);
 }
 
 .btn-danger {
@@ -629,7 +828,7 @@ select::-ms-expand {
 .location-row .location-kind { grid-area: kind; }
 .location-row .location-soil { grid-area: soil; }
 .location-row .location-count { grid-area: count; }
-.location-row .default-radio { grid-area: default; }
+.location-row .radio-pill { grid-area: default; }
 .location-row > .btn { grid-area: action; }
 
 .location-count {
@@ -680,7 +879,7 @@ select::-ms-expand {
     --location-areas: "name name" "kind soil" ". action";
   }
 
-  .location-row .default-radio {
+  .location-row .radio-pill {
     justify-self: start;
   }
 
@@ -716,8 +915,8 @@ input[type="radio"]:checked {
   background: radial-gradient(var(--color-primary) 0 45%, var(--color-surface-raised) 50%);
 }
 
-/* "standaard"-keuze per standplaats: zelfde pilvorm als .filter-chip. */
-.default-radio {
+/* Keuze als pil (bv. "standaard" per standplaats): zelfde vorm als .filter-chip. */
+.radio-pill {
   display: inline-flex;
   align-items: center;
   gap: var(--space-2);
@@ -731,7 +930,7 @@ input[type="radio"]:checked {
   cursor: pointer;
 }
 
-.default-radio:has(:checked) {
+.radio-pill:has(:checked) {
   border-color: var(--color-primary);
   color: var(--color-primary);
   font-weight: 500;
@@ -864,9 +1063,32 @@ input[type="radio"]:checked {
   background: var(--timeline-bg);
 }
 
-.timeline {
+.timeline-scroll-wrap {
   --timeline-icon-col: 2.75rem;
   --timeline-name-col: calc(13rem - 2.75rem);
+  /* Rechterkant van de vaste icoon- + naamkolom (incl. de gap ertussen). */
+  --timeline-sticky-width: calc(var(--timeline-icon-col) + var(--space-2) + var(--timeline-name-col));
+  position: relative;
+}
+
+.timeline-sticky-edge {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: var(--timeline-sticky-width);
+  width: 10px;
+  z-index: 3;
+  pointer-events: none;
+  background: var(--shadow-sticky-edge);
+  opacity: 0;
+  transition: opacity 0.15s;
+}
+
+.timeline-scroll-wrap.scrolled .timeline-sticky-edge {
+  opacity: 1;
+}
+
+.timeline {
   display: flex;
   flex-direction: column;
   min-width: 70rem;
@@ -948,7 +1170,6 @@ input[type="radio"]:checked {
 
 .timeline-plant-name {
   left: var(--timeline-icon-col);
-  box-shadow: 6px 0 8px -6px rgba(0, 0, 0, 0.3); /* zachte rand: kolom "zweeft" boven scrollende balken/iconen */
 }
 
 .timeline-plant-icon,
@@ -993,13 +1214,16 @@ input[type="radio"]:checked {
     position: relative; /* niet meer sticky, maar wel z-index zodat het onder het icoon door schuift i.p.v. eroverheen */
     left: auto;
     z-index: 1;
-    box-shadow: none;
     background: none;
   }
 
   .timeline-plant-icon {
     z-index: 3;
-    box-shadow: 6px 0 8px -6px rgba(0, 0, 0, 0.3);
+  }
+
+  /* Alleen het icoon blijft staan, dus de rand zit direct daarnaast. */
+  .timeline-scroll-wrap {
+    --timeline-sticky-width: var(--timeline-icon-col);
   }
 }
 

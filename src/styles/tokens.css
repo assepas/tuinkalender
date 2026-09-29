@@ -40,6 +40,10 @@
   --step3: 1.875rem;
   --step4: 2.5rem;
 
+  --line-height-body: 1.5;
+  /* Ubuntu Mono bestaat alleen in 400 en 700; 500 rendert als 400. */
+  --weight-display: 400;
+
   /* Ruimte */
   --space-1: 0.25rem;
   --space-2: 0.5rem;
@@ -51,6 +55,11 @@
 
   --radius: 6px;
   --border: 1px solid var(--color-line);
+
+  /* Schaduw */
+  --shadow-popover: 0 4px 16px rgba(35, 42, 30, 0.15);
+  /* Eén verticale rand over de hele tijdlijn, alleen zichtbaar tijdens horizontaal scrollen. */
+  --shadow-sticky-edge: linear-gradient(90deg, rgba(35, 42, 30, 0.14), rgba(35, 42, 30, 0));
 }
 
 /* Dark mode staat voorlopig uit. Aanzetten: haal de commentaarmarkeringen om dit blok weg

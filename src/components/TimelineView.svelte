@@ -91,6 +91,7 @@
   }
 
   let selected = $state(null);
+  let scrolled = $state(false);
 
   function showSpecies(row) {
     selected = {
@@ -262,7 +263,10 @@
 {:else if visibleRows.length === 0}
   <p class="empty-state">Geen planten gevonden met deze filters.</p>
 {:else}
-  <div class="timeline-scroll">
+  <div class="timeline-scroll-wrap" class:scrolled>
+  <!-- Eén schaduwrand langs de vaste naamkolom, alleen tijdens horizontaal scrollen. -->
+  <div class="timeline-sticky-edge" aria-hidden="true"></div>
+  <div class="timeline-scroll" onscroll={(e) => (scrolled = e.currentTarget.scrollLeft > 0)}>
   <div class="timeline">
     <div class="timeline-header-row">
       <div class="timeline-head-spacer"></div>
@@ -358,6 +362,7 @@
         </div>
       </div>
     {/each}
+  </div>
   </div>
   </div>
 {/if}

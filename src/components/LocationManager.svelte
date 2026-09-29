@@ -145,7 +145,7 @@
         onchange={(e) => gardenState.updateLocation(location.id, { soil: e.target.value })}
       />
       <span class="location-count">{plantCountLabel(plantCounts[location.id])}</span>
-      <label class="default-radio">
+      <label class="radio-pill">
         <input
           type="radio"
           name={`${idPrefix}-default-location`}

@@ -92,5 +92,31 @@
     <circle cx="12" cy="12" r="4.2" fill={color} stroke="none" />
   {:else if name === "dot-outline"}
     <circle cx="12" cy="12" r="4.2" />
+  {:else if name === "flower"}
+    <!-- Bloem-tandwiel: voor beheer en (tuin)instellingen. -->
+    <g fill={color} fill-opacity="0.35">
+      {#each [0, 45, 90, 135, 180, 225, 270, 315] as angle}
+        <path d="M10.1 6.4C10 4.6 10.8 3.2 12 3.2s2 1.4 1.9 3.2" transform={`rotate(${angle} 12 12)`} />
+      {/each}
+    </g>
+    <circle cx="12" cy="12" r="5.6" fill={color} fill-opacity="0.2" />
+    <circle cx="12" cy="12" r="2.2" />
+  {:else if name === "pot"}
+    <path d="M5 10h14l-1.6 9.2a1.5 1.5 0 0 1-1.5 1.3H8.1a1.5 1.5 0 0 1-1.5-1.3Z" fill={color} fill-opacity="0.35" />
+    <path d="M4 10h16" />
+    <path d="M12 10V6" />
+    <path d="M12 7c0-2 1.5-3.5 3.5-3.5-0.2 2.1-1.6 3.5-3.5 3.5Z" fill={color} fill-opacity="0.5" />
+    <path d="M12 7.5c0-2-1.5-3.5-3.5-3.5 0.2 2.1 1.6 3.5 3.5 3.5Z" fill={color} fill-opacity="0.5" />
+  {:else if name === "location"}
+    <path d="M4 7.5 12 4l8 3.5v9L12 20l-8-3.5Z" />
+    <path d="M12 16.5s-3.2-2.9-3.2-5.3a3.2 3.2 0 0 1 6.4 0c0 2.4-3.2 5.3-3.2 5.3Z" fill={color} fill-opacity="0.35" />
+    <circle cx="12" cy="11.2" r="1" fill={color} stroke="none" />
+  {:else if name === "chevron-down"}
+    <path d="m6 9 6 6 6-6" />
+  {:else if name === "check"}
+    <path d="m5 12.5 4.5 4.5L19 7.5" />
+  {:else if name === "plus-circle"}
+    <circle cx="12" cy="12" r="8.5" />
+    <path d="M12 8v8M8 12h8" />
   {/if}
 </svg>

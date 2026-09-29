@@ -74,7 +74,15 @@
       {#if auth.isAdmin}
         <p class="hint">Je bent beheerder: je kunt de plantendata bewerken.</p>
       {/if}
+      {#if gardenState.syncStatus === "offline"}
+        <p class="error-text">Offline — je tuin wordt gesynchroniseerd zodra je weer verbinding hebt.</p>
+      {:else if gardenState.syncStatus === "error"}
+        <p class="error-text">Synchroniseren mislukt{gardenState.syncError ? `: ${gardenState.syncError}` : "."}</p>
+      {/if}
       <div class="btn-row">
+        {#if gardenState.syncStatus === "error"}
+          <button type="button" class="btn" onclick={() => gardenState.retrySync()}>Opnieuw proberen</button>
+        {/if}
         <button type="button" class="btn" onclick={signOut}>Uitloggen</button>
       </div>
     {:else if sentTo}

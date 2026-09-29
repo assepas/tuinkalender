@@ -10,14 +10,11 @@
   } from "../lib/domain/plantings.js";
   import { ui, closeLocationManager } from "../lib/state/ui.svelte.js";
   import CloudGardenPanel from "./CloudGardenPanel.svelte";
+  import Icon from "./Icon.svelte";
   import LocationManager from "./LocationManager.svelte";
   import Modal from "./Modal.svelte";
   import NewPlantingRow from "./NewPlantingRow.svelte";
   import PlantingRow from "./PlantingRow.svelte";
-
-  let importText = $state("");
-  let importError = $state("");
-  let fileInput;
 
   // Sorteren/filteren van het overzicht — puur client-side, geen paginering
   // nodig bij de tientallen (niet honderden) plantingen die een tuin heeft.
@@ -72,70 +69,23 @@
     const richting = sortDir === "asc" ? "oplopend" : "aflopend";
     return `Sorteer op ${columnLabel} (nu ${richting} — klik om om te draaien)`;
   }
-
-  function exportFilename() {
-    return `tuintaak-${new Date().toISOString().slice(0, 10)}.json`;
-  }
-
-  function downloadExport(json, filename) {
-    const blob = new Blob([json], { type: "application/json" });
-    const url = URL.createObjectURL(blob);
-    const a = document.createElement("a");
-    a.href = url;
-    a.download = filename;
-    a.click();
-    URL.revokeObjectURL(url);
-    gardenState.recordExport();
-  }
-
-  // Op mobiel liever het native deelvenster (Bewaar in Bestanden, AirDrop,
-  // appen naar iemand) dan alleen een download — val terug op de downloadlink
-  // als de browser geen bestanden kan delen.
-  async function shareOrDownloadExport() {
-    const json = gardenState.exportAsJson();
-    const filename = exportFilename();
-
-    if (navigator.share && navigator.canShare) {
-      const file = new File([json], filename, { type: "application/json" });
-      if (navigator.canShare({ files: [file] })) {
-        try {
-          await navigator.share({ files: [file], title: "TuinTaak" });
-          gardenState.recordExport();
-          return;
-        } catch (err) {
-          if (err?.name === "AbortError") return; // gebruiker annuleerde het deelvenster
-          console.error("[export] delen mislukt, val terug op download:", err);
-        }
-      }
-    }
-
-    downloadExport(json, filename);
-  }
-
-  function handleFile(event) {
-    const file = event.target.files?.[0];
-    if (!file) return;
-    file.text().then((text) => {
-      importText = text;
-      applyImport();
-    });
-  }
-
-  function applyImport() {
-    importError = "";
-    try {
-      gardenState.importFromJson(importText);
-      importText = "";
-    } catch (err) {
-      importError = err.message;
-    }
-  }
 </script>
 
 <CloudGardenPanel />
 
 <div class="panel">
-  <h2>Planten in je tuin ({gardenState.plantings.length})</h2>
+  <div class="panel-head">
+    <h2>Planten in je tuin ({gardenState.plantings.length})</h2>
+    <button
+      type="button"
+      class="settings-button"
+      aria-label="Instellingen"
+      title="Instellingen"
+      onclick={() => (ui.gardenSettingsOpen = true)}
+    >
+      <Icon name="flower" size={20} />
+    </button>
+  </div>
   {#if gardenState.plantings.length > 0}
     {#if gardenState.locations.length > 1}
       <div class="filter-bar">
@@ -214,48 +164,3 @@
     />
   </Modal>
 {/if}
-
-<div class="panel">
-  <h2>Back-up</h2>
-  {#if gardenState.mode === "cloud"}
-    <p class="hint">
-      Je tuin staat online in je account. Een export (.json) is een extra kopie voor je eigen archief;
-      importeren vervangt de inhoud van deze tuin voor alle leden.
-    </p>
-  {:else}
-    <p class="hint">
-      Je tuin staat lokaal in deze browser. Exporteer regelmatig een back-up, en gebruik dezelfde
-      export om je tuin op een ander apparaat te openen of met iemand anders te delen.
-    </p>
-  {/if}
-  {#if gardenState.needsBackupWarning}
-    <p class="error-text">
-      {#if gardenState.lastExportedAt == null}
-        Je hebt nog nooit een back-up geëxporteerd. Doe dat nu, dan ben je niet afhankelijk van
-        de data die deze browser onthoudt.
-      {:else}
-        Je laatste back-up is van {new Date(gardenState.lastExportedAt).toLocaleDateString("nl-NL", {
-          day: "numeric",
-          month: "long",
-          year: "numeric",
-        })} — tijd voor een nieuwe export.
-      {/if}
-    </p>
-  {/if}
-  <div class="btn-row">
-    <button type="button" class="btn btn-primary" onclick={shareOrDownloadExport}>
-      Tuin exporteren (.json)
-    </button>
-    <button type="button" class="btn" onclick={() => fileInput.click()}> Tuin importeren… </button>
-    <input
-      type="file"
-      accept="application/json"
-      bind:this={fileInput}
-      onchange={handleFile}
-      style="display:none"
-    />
-  </div>
-  {#if importError}
-    <p class="error-text">{importError}</p>
-  {/if}
-</div>

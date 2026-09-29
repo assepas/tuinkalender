@@ -7,6 +7,9 @@ export const ui = $state({
   // Het account-/inlogvenster (AccountMenu.svelte) staat één keer in de
   // header, maar is ook vanuit "Mijn tuin" te openen.
   accountOpen: false,
+  // Tuininstellingen (GardenSettingsModal.svelte): te openen vanuit de
+  // tuinkiezer in de header en vanaf "Mijn tuin".
+  gardenSettingsOpen: false,
 });
 
 /** @param {((location: {id: string}) => void) | null} [onadded]  aangeroepen met een nieuw toegevoegde standplaats */

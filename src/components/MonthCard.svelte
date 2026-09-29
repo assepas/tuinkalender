@@ -13,7 +13,7 @@
       {#each month.entries as entry (entry.plantingUid + entry.taskId)}
         <li class="task-row">
           <span class="dot" style:background={catalog.taskTypeIndex[entry.taskType]?.color ?? "#999"}></span>
-          <span>
+          <span class="task-row-text">
             <span class="plant">{entry.label}</span>
             <span class="task-type">— {catalog.taskTypeIndex[entry.taskType]?.label ?? entry.taskType}</span>
             {#if entry.frequency}
