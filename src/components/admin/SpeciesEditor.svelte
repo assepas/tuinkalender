@@ -21,16 +21,17 @@
   import MonthDayInput from "./MonthDayInput.svelte";
   import TaskEditor from "./TaskEditor.svelte";
 
-  /** species: bestaande soort, of null voor een nieuwe. */
-  let { species = null, onclose } = $props();
+  /** species: bestaande soort, of null voor een nieuwe (dan met initialName
+   *  als naam, bv. vanuit de soortenzoeker). onsaved krijgt de opgeslagen soort. */
+  let { species = null, initialName = "", onsaved, onclose } = $props();
 
   const isNew = species === null;
 
   function blankSpecies() {
     return {
       schemaVersion: 1,
-      id: "",
-      name: "",
+      id: slugify(initialName),
+      name: initialName,
       latin: "",
       category: "vaste-plant",
       nativeStatus: "onbekend",
@@ -169,8 +170,10 @@
     saving = true;
     saveError = "";
     try {
-      await saveSpecies(cleaned(draft));
+      const saved = cleaned(draft);
+      await saveSpecies(saved);
       await catalog.refresh();
+      onsaved?.(saved);
       onclose();
     } catch (err) {
       saveError = err.message ?? String(err);

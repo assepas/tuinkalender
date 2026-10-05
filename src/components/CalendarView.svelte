@@ -175,6 +175,9 @@
     </button>
   </div>
   <div class="calendar-strip-wrap no-print">
+    <!-- Focusbaar zodat je de rij ook met de pijltjestoetsen kunt scrollen
+         (aanbevolen voor scrollbare regio's). -->
+    <!-- svelte-ignore a11y_no_noninteractive_tabindex -->
     <div
       class="calendar-strip"
       role="region"

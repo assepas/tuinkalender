@@ -39,13 +39,12 @@
   // Tijdlijn is de landingspagina; de titel in de header leidt daar ook naartoe.
   const homeTab = "tijdlijn";
 
-  let activeTab = $state(homeTab);
-  const gardenTabActive = $derived(gardenTabs.some((t) => t.id === activeTab));
-  const activeTitle = $derived(mobileTabs.find((t) => t.id === activeTab)?.label);
+  const gardenTabActive = $derived(gardenTabs.some((t) => t.id === ui.activeTab));
+  const activeTitle = $derived(mobileTabs.find((t) => t.id === ui.activeTab)?.label);
 </script>
 
 {#if ui.isMobile}
-  <MobileHeader title={activeTitle} onhome={() => (activeTab = homeTab)} />
+  <MobileHeader title={activeTitle} onhome={() => (ui.activeTab = homeTab)} />
 {/if}
 
 <div class="app-shell">
@@ -57,7 +56,7 @@
             href="./"
             onclick={(e) => {
               e.preventDefault();
-              activeTab = homeTab;
+              ui.activeTab = homeTab;
             }}>TuinTaak</a
           >
         </h1>
@@ -70,8 +69,8 @@
           <button
             type="button"
             class="tab"
-            aria-current={activeTab === tab.id ? "page" : undefined}
-            onclick={() => (activeTab = tab.id)}
+            aria-current={ui.activeTab === tab.id ? "page" : undefined}
+            onclick={() => (ui.activeTab = tab.id)}
           >
             {tab.label}
           </button>
@@ -97,10 +96,10 @@
                 type="button"
                 role="menuitem"
                 class="menu-item"
-                aria-current={activeTab === tab.id ? "page" : undefined}
+                aria-current={ui.activeTab === tab.id ? "page" : undefined}
                 onclick={() => {
                   close();
-                  activeTab = tab.id;
+                  ui.activeTab = tab.id;
                 }}
               >
                 <span class="menu-item-icon"><Icon name={tab.icon} size={18} /></span>
@@ -119,8 +118,8 @@
             class="admin-button"
             aria-label="Plantendata beheren"
             title={adminTab.label}
-            aria-current={activeTab === "beheer" ? "page" : undefined}
-            onclick={() => (activeTab = "beheer")}
+            aria-current={ui.activeTab === "beheer" ? "page" : undefined}
+            onclick={() => (ui.activeTab = "beheer")}
           >
             <Icon name="flower" size={20} />
           </button>
@@ -137,15 +136,15 @@
     </p>
   {/if}
 
-  {#if activeTab === "tijdlijn"}
+  {#if ui.activeTab === "tijdlijn"}
     <TimelineView />
-  {:else if activeTab === "kalender"}
+  {:else if ui.activeTab === "kalender"}
     <CalendarView />
-  {:else if activeTab === "tuin"}
+  {:else if ui.activeTab === "tuin"}
     <GardenEditor />
-  {:else if activeTab === "standplaatsen"}
+  {:else if ui.activeTab === "standplaatsen"}
     <LocationsPage />
-  {:else if activeTab === "beheer" && auth.isAdmin}
+  {:else if ui.activeTab === "beheer" && auth.isAdmin}
     {#await loadAdminPage()}
       <p class="hint">Laden…</p>
     {:then { default: AdminPage }}
@@ -157,7 +156,7 @@
 </div>
 
 {#if ui.isMobile}
-  <MobileTabBar tabs={mobileTabs} active={activeTab} onselect={(id) => (activeTab = id)} />
+  <MobileTabBar tabs={mobileTabs} active={ui.activeTab} onselect={(id) => (ui.activeTab = id)} />
 {/if}
 
 {#if ui.gardenSettingsOpen}

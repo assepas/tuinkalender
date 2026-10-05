@@ -5,13 +5,16 @@
   // `onadded`) uitgeklapt bovenaan, om eigen naam, notities en taken in te vullen.
   import { catalog } from "../lib/state/catalog.svelte.js";
   import { gardenState } from "../lib/state/garden.svelte.js";
+  import { ui } from "../lib/state/ui.svelte.js";
   import SpeciesCombobox from "./SpeciesCombobox.svelte";
   import LocationSelect from "./LocationSelect.svelte";
   import PlantIcon from "./PlantIcon.svelte";
 
   let { onadded = null } = $props();
 
-  let speciesId = $state(null);
+  // Net aangemaakt via "+ Nieuwe plant" (zie requestNewSpecies): staat klaar.
+  let speciesId = $state(ui.pendingSpeciesId);
+  ui.pendingSpeciesId = null;
   let locationId = $state(null);
   let submitError = $state("");
 

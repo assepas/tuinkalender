@@ -2,6 +2,7 @@
   // Beheer van de plantendata (alleen voor admins). Los geladen vanuit
   // App.svelte, zodat gewone bezoekers deze code (en ajv) niet downloaden.
   import { catalog } from "../../lib/state/catalog.svelte.js";
+  import { ui, returnToGarden } from "../../lib/state/ui.svelte.js";
   import { CATEGORY_LABELS } from "../../lib/domain/plantings.js";
   import PlantIcon from "../PlantIcon.svelte";
   import SpeciesEditor from "./SpeciesEditor.svelte";
@@ -11,6 +12,14 @@
   let query = $state("");
   // undefined = lijst tonen; null = nieuwe soort; object = die soort bewerken
   let editing = $state(undefined);
+
+  // Geopend via "+ Nieuwe plant" in de soortenzoeker op Planten: meteen het
+  // formulier met die naam, en na opslaan of annuleren terug naar Planten.
+  const request = ui.newSpeciesRequest;
+  ui.newSpeciesRequest = null;
+  const fromGarden = request !== null;
+  const initialName = request?.name ?? "";
+  if (fromGarden) editing = null;
 
   const filtered = $derived.by(() => {
     const q = query.trim().toLowerCase();
@@ -23,7 +32,15 @@
 
 {#if editing !== undefined}
   {#key editing?.id ?? "nieuw"}
-    <SpeciesEditor species={editing} onclose={() => (editing = undefined)} />
+    <SpeciesEditor
+      species={editing}
+      initialName={editing === null ? initialName : ""}
+      onsaved={(saved) => fromGarden && editing === null && returnToGarden(saved.id)}
+      onclose={() => {
+        if (fromGarden && editing === null && ui.activeTab === "beheer") returnToGarden();
+        editing = undefined;
+      }}
+    />
   {/key}
 {:else}
   <div class="filter-bar admin-sections">

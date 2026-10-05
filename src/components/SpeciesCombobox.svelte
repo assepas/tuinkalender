@@ -4,6 +4,8 @@
   // geen nieuwe dependency. Resultaten gegroepeerd per categorie, zodat de
   // lijst ook zonder te typen scanbaar blijft.
   import { CATEGORY_ORDER, CATEGORY_LABELS } from "../lib/domain/plantings.js";
+  import { auth } from "../lib/state/auth.svelte.js";
+  import { requestNewSpecies } from "../lib/state/ui.svelte.js";
   import PlantIcon from "./PlantIcon.svelte";
 
   let { speciesList, value = $bindable(null), id = undefined } = $props();
@@ -48,6 +50,19 @@
   const flatOptions = $derived(groups.flatMap((g) => g.items));
   const activeOption = $derived(activeIndex >= 0 ? flatOptions[activeIndex] : null);
 
+  // Admins: onderaan "+ Nieuwe plant … toevoegen" zodra de getypte naam niet
+  // precies een bestaande soort is. Telt in de pijltjesnavigatie mee als
+  // laatste optie (index flatOptions.length).
+  const newName = $derived(query.trim());
+  const showAddOption = $derived(
+    auth.isAdmin &&
+      newName.length > 0 &&
+      !speciesList.some((s) => s.name.toLowerCase() === newName.toLowerCase())
+  );
+  const addIndex = $derived(flatOptions.length);
+  const optionCount = $derived(flatOptions.length + (showAddOption ? 1 : 0));
+  const addActive = $derived(showAddOption && activeIndex === addIndex);
+
   function openList() {
     query = ""; // volledige lijst tonen; typen filtert vanaf hier
     open = true;
@@ -81,7 +96,7 @@
     if (event.key === "ArrowDown") {
       event.preventDefault();
       if (!open) return openList();
-      activeIndex = Math.min(activeIndex + 1, flatOptions.length - 1);
+      activeIndex = Math.min(activeIndex + 1, optionCount - 1);
       scrollActiveIntoView();
     } else if (event.key === "ArrowUp") {
       event.preventDefault();
@@ -89,7 +104,10 @@
       activeIndex = Math.max(activeIndex - 1, 0);
       scrollActiveIntoView();
     } else if (event.key === "Enter") {
-      if (open && activeOption) {
+      if (open && addActive) {
+        event.preventDefault();
+        requestNewSpecies(newName);
+      } else if (open && activeOption) {
         event.preventDefault();
         select(activeOption);
       }
@@ -107,7 +125,11 @@
     role="combobox"
     aria-expanded={open}
     aria-controls="species-listbox"
-    aria-activedescendant={activeOption ? `species-option-${activeOption.id}` : undefined}
+    aria-activedescendant={addActive
+      ? "species-option-new"
+      : activeOption
+        ? `species-option-${activeOption.id}`
+        : undefined}
     autocomplete="off"
     placeholder="Typ om een soort te zoeken…"
     value={query}
@@ -152,6 +174,21 @@
           </li>
         {/each}
       {/each}
+      {#if showAddOption}
+        <!-- svelte-ignore a11y_click_events_have_key_events -->
+        <!-- svelte-ignore a11y_no_static_element_interactions -->
+        <li
+          id="species-option-new"
+          role="option"
+          aria-selected={addActive}
+          class="combobox-option combobox-add"
+          class:active={addActive}
+          onclick={() => requestNewSpecies(newName)}
+          onmouseenter={() => (activeIndex = addIndex)}
+        >
+          + Nieuwe plant "{newName}" toevoegen
+        </li>
+      {/if}
     </ul>
   {/if}
 </div>
@@ -204,6 +241,17 @@
 
   .combobox-option.active {
     background: var(--color-plant-bg);
+  }
+
+  /* Zelfde taal als de "toevoegen"-optie in Select.svelte. */
+  .combobox-add {
+    color: var(--color-primary);
+    padding: var(--space-2);
+  }
+
+  .combobox-add:not(:first-child) {
+    margin-top: var(--space-1);
+    border-top: var(--border);
   }
 
   .combobox-option-text {
