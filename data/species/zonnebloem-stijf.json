@@ -1,0 +1,95 @@
+{
+  "schemaVersion": 1,
+  "id": "zonnebloem-stijf",
+  "name": "Stijve zonnebloem",
+  "latin": "Helianthus pauciflorus",
+  "category": "vaste-plant",
+  "tags": [
+    "meerjarig",
+    "vlinderplant",
+    "woekert",
+    "snijbloem"
+  ],
+  "nativeStatus": "exoot",
+  "appearance": {
+    "shape": "bloem",
+    "count": 10,
+    "flowerColor": "#F2B705",
+    "flowerColorName": "geel"
+  },
+  "bloom": {
+    "from": "08-15",
+    "to": "10-15"
+  },
+  "growing": {
+    "sun": [
+      "zon"
+    ],
+    "soil": [
+      "klei",
+      "leem",
+      "zand"
+    ],
+    "moisture": [
+      "droog",
+      "normaal"
+    ],
+    "spacingCm": 60
+  },
+  "info": {
+    "intro": "De stijve zonnebloem is een stevige vaste plant van 1,5 tot 2 meter hoog met ruwe, stugge bladeren en gele bloemen met een donkere kern. Hij bloeit laat, van augustus tot in oktober, als veel andere planten al uitgebloeid zijn. Bijen en vlinders zijn er dol op, en je kunt de bloemen ook in een vaas zetten.",
+    "water": "Geef alleen water in de eerste weken na het planten en bij langdurige droogte. Een gevestigde plant redt zich meestal zelf.",
+    "tips": [
+      "De plant woekert via ondergrondse uitlopers en vormt in een paar jaar een flinke pol. Zet hem niet tussen kleine, tere planten en haal uitlopers die te ver gaan gewoon weg.",
+      "Slakken eten de jonge scheuten in het voorjaar graag. Let hier op tot de plant ruim 30 cm hoog is.",
+      "Op een beschutte plek heb je geen steun nodig, op een winderige plek kan de plant omvallen.",
+      "Laat de zaadhoofden in de winter staan: vogels eten de zaden."
+    ]
+  },
+  "tasks": [
+    {
+      "id": "planten",
+      "type": "planten",
+      "window": {
+        "kind": "dates",
+        "from": "03-15",
+        "to": "05-01"
+      },
+      "description": "Plant op zo'n 60 cm afstand van andere planten, op een zonnige plek, even diep als in de pot. Geef na het planten goed water en houd de grond de eerste weken vochtig. Geef de plant genoeg ruimte, want hij wordt groot."
+    },
+    {
+      "id": "steunen",
+      "type": "onderhoud",
+      "window": {
+        "kind": "dates",
+        "from": "05-15",
+        "to": "06-30"
+      },
+      "note": "Steun geven voor de bloei",
+      "description": "Zet op een winderige plek in het late voorjaar een paar stokken of een ring om de pol en bind de stengels losjes vast. Zo vallen ze niet om als ze met bloemen hoog en zwaar zijn."
+    },
+    {
+      "id": "terugknippen",
+      "type": "snoeien",
+      "importance": "hoofd",
+      "window": {
+        "kind": "dates",
+        "from": "11-01",
+        "to": "03-15"
+      },
+      "note": "Dode stengels afknippen",
+      "description": "Knip de uitgebloeide stengels in de late herfst of winter af tot zo'n 10 cm boven de grond. Wil je vogels helpen, wacht dan tot het late voorjaar, maar knip altijd voordat de nieuwe scheuten opkomen."
+    },
+    {
+      "id": "delen",
+      "type": "delen",
+      "window": {
+        "kind": "dates",
+        "from": "03-15",
+        "to": "04-30"
+      },
+      "note": "Om de 3 jaar delen",
+      "description": "Steek de pol in het voorjaar uit de grond als er nieuwe scheuten verschijnen en deel hem met een scherpe spade in stukken met genoeg wortels. Plant de buitenste, jonge delen terug en gooi het oude, kale midden weg. Dat houdt de plant krachtig en beperkt het woekeren."
+    }
+  ]
+}
