@@ -1233,10 +1233,13 @@ input[type="radio"]:checked {
   opacity: 1;
 }
 
+/* Minimumbreedte voor leesbare maandkolommen; daaronder scrolt de tijdlijn.
+   Moet kleiner blijven dan de breedste paneel-inhoud (~70rem − 2px bij een
+   .app-shell van 74rem), anders scrolt hij altijd een paar pixels. */
 .timeline {
   display: flex;
   flex-direction: column;
-  min-width: 70rem;
+  min-width: 64rem;
 }
 
 .timeline-header-row {
