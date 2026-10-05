@@ -116,7 +116,8 @@
               checked={!isMuted(task.id)}
               onchange={() => gardenState.toggleMutedTask(planting.uid, task.id)}
             />
-            {task.type}: {task.id}
+            <!-- Niet "planten: planten": het id alleen tonen als het iets toevoegt. -->
+            {task.id === task.type ? task.type : `${task.type}: ${task.id}`}
           </label>
         {/each}
       </div>
