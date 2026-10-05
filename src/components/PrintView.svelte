@@ -1,6 +1,7 @@
 <script>
   // Inhoud van de printmodal op het maandoverzicht: uitleg, afdrukknop en het
   // A4-voorbeeld. Bij afdrukken blijft alleen .print-page over (zie print.css).
+  import { groupEntriesByType } from "../lib/domain/calendar.js";
   import { catalog } from "../lib/state/catalog.svelte.js";
 
   let { months } = $props();
@@ -24,15 +25,20 @@
       {#if month.entries.length === 0}
         <p class="empty">Geen taken deze maand.</p>
       {:else}
-        {#each month.entries as entry (entry.plantingUid + entry.taskId)}
-          <div class="print-task-row">
-            <span class="dot" style:background={catalog.taskTypeIndex[entry.taskType]?.color ?? "#999"}></span>
-            <span>
-              <strong>{entry.label}</strong>
-              — {catalog.taskTypeIndex[entry.taskType]?.label ?? entry.taskType}
-              {#if entry.frequency}({entry.frequency}){/if}
-              {#if entry.note}<br /><em>{entry.note}</em>{/if}
-            </span>
+        {#each groupEntriesByType(month.entries, catalog.taskTypes) as group (group.taskType)}
+          {@const type = catalog.taskTypeIndex[group.taskType]}
+          <div class="print-task-group">
+            <h3>{type?.label ?? group.taskType}</h3>
+            {#each group.entries as entry (entry.plantingUid + entry.taskId)}
+              <div class="print-task-row">
+                <span class="dot" style:background={type?.color ?? "#999"}></span>
+                <span>
+                  <strong>{entry.label}</strong>
+                  {#if entry.frequency}({entry.frequency}){/if}
+                  {#if entry.note}<br /><em>{entry.note}</em>{/if}
+                </span>
+              </div>
+            {/each}
           </div>
         {/each}
       {/if}

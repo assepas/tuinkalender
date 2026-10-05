@@ -37,6 +37,20 @@
     padding-bottom: 1mm;
   }
 
+  /* Subkopje per taaktype; de stip staat voor elke plant. */
+  .print-task-group + .print-task-group {
+    margin-top: 1.5mm;
+  }
+
+  .print-task-group h3 {
+    margin: 0;
+    font-size: 7.5pt;
+    font-weight: 500;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: #777;
+  }
+
   .print-task-row {
     font-size: 9.5pt;
     padding: 0.5mm 0;
@@ -45,10 +59,10 @@
   }
 
   .print-task-row .dot {
+    margin-top: 1.3mm;
     width: 2mm;
     height: 2mm;
     border-radius: 999px;
-    margin-top: 1.3mm;
     flex: none;
     /* print-color-adjust zorgt dat achtergrondkleuren echt afdrukken */
     print-color-adjust: exact;
@@ -88,6 +102,20 @@
     padding-bottom: 1mm;
   }
 
+  /* Subkopje per taaktype; de stip staat voor elke plant. */
+  .print-task-group + .print-task-group {
+    margin-top: 1.5mm;
+  }
+
+  .print-task-group h3 {
+    margin: 0;
+    font-size: 7.5pt;
+    font-weight: 500;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: #777;
+  }
+
   .print-task-row {
     font-size: 10pt;
     padding: 0.5mm 0;
@@ -96,10 +124,10 @@
   }
 
   .print-task-row .dot {
+    margin-top: 1.3mm;
     width: 2mm;
     height: 2mm;
     border-radius: 999px;
-    margin-top: 1.3mm;
     flex: none;
   }
 }

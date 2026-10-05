@@ -5,7 +5,14 @@
   import { auth } from "../lib/state/auth.svelte.js";
   import { gardenState } from "../lib/state/garden.svelte.js";
   import { ui } from "../lib/state/ui.svelte.js";
+  import Icon from "./Icon.svelte";
   import Modal from "./Modal.svelte";
+
+  // compact: knop voor de mobiele kopbalk — een icoon (44×44) met statusstip
+  // i.p.v. het e-mailadres.
+  let { compact = false } = $props();
+
+  const syncWarn = $derived(gardenState.syncStatus === "offline" || gardenState.syncStatus === "error");
 
   let email = $state("");
   let sending = $state(false);
@@ -56,10 +63,24 @@
   }
 </script>
 
-{#if auth.enabled}
+{#if auth.enabled && compact}
+  {#if auth.user}
+    <button
+      type="button"
+      class="account-button compact account-icon-button"
+      aria-label={`Account: ${auth.user.email}`}
+      onclick={() => (ui.accountOpen = true)}
+    >
+      <Icon name="user" size={22} />
+      <span class="account-icon-dot" class:warn={syncWarn}></span>
+    </button>
+  {:else}
+    <button type="button" class="account-button compact" onclick={() => (ui.accountOpen = true)}>Inloggen</button>
+  {/if}
+{:else if auth.enabled}
   <button type="button" class="account-button" onclick={() => (ui.accountOpen = true)}>
     {#if auth.user}
-      <span class="account-dot" class:warn={gardenState.syncStatus === "offline" || gardenState.syncStatus === "error"}></span>
+      <span class="account-dot" class:warn={syncWarn}></span>
       <span class="account-email">{auth.user.email}</span>
     {:else}
       Inloggen
@@ -132,6 +153,35 @@
 
   .account-button:hover {
     background: rgba(255, 255, 255, 0.1);
+  }
+
+  .account-button.compact {
+    flex: none;
+    height: 44px;
+    padding: 0 var(--space-3);
+    line-height: 1;
+  }
+
+  .account-icon-button {
+    position: relative;
+    justify-content: center;
+    width: 44px;
+    padding: 0;
+  }
+
+  .account-icon-dot {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    width: 9px;
+    height: 9px;
+    border-radius: 999px;
+    background: var(--color-primary-muted);
+    border: 2px solid var(--color-primary);
+  }
+
+  .account-icon-dot.warn {
+    background: #e8c547;
   }
 
   .account-email {

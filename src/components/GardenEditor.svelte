@@ -22,6 +22,9 @@
   let sortDir = $state("asc"); // "asc" | "desc"
   let filterLocationIds = $state(new Set());
   let filterCategories = $state(new Set());
+  // Op mobiel staan de filters onder een inklapbare "Filteren" (standaard dicht).
+  let filtersExpanded = $state(false);
+  const showFilters = $derived(!ui.isMobile || filtersExpanded);
 
   // In deze sessie toegevoegde plantingen (nieuwste eerst): die staan
   // bovenaan, los van sortering en filters, zodat je ze direct verder kunt
@@ -87,34 +90,52 @@
     </button>
   </div>
   {#if gardenState.plantings.length > 0}
-    {#if gardenState.locations.length > 1}
-      <div class="filter-bar">
-        <span class="filter-bar-label">Standplaats</span>
-        {#each gardenState.locations as location (location.id)}
-          <button
-            type="button"
-            class="filter-chip"
-            aria-pressed={filterLocationIds.has(location.id)}
-            onclick={() => (filterLocationIds = toggleInSet(filterLocationIds, location.id))}
-          >
-            {location.name}
-          </button>
-        {/each}
-      </div>
-    {/if}
-    <div class="filter-bar">
-      <span class="filter-bar-label">Type</span>
-      {#each CATEGORY_ORDER as category (category)}
+    {#if ui.isMobile}
+      <h3 class="garden-filters-toggle">
         <button
           type="button"
-          class="filter-chip"
-          aria-pressed={filterCategories.has(category)}
-          onclick={() => (filterCategories = toggleInSet(filterCategories, category))}
+          class="panel-toggle"
+          aria-expanded={filtersExpanded}
+          aria-controls="garden-filters-body"
+          onclick={() => (filtersExpanded = !filtersExpanded)}
         >
-          {CATEGORY_LABELS[category]}
+          <span class="chevron">{filtersExpanded ? "▾" : "▸"}</span>
+          Filteren
         </button>
-      {/each}
-    </div>
+      </h3>
+    {/if}
+    {#if showFilters}
+      <div id="garden-filters-body">
+        {#if gardenState.locations.length > 1}
+          <div class="filter-bar">
+            <span class="filter-bar-label">Standplaats</span>
+            {#each gardenState.locations as location (location.id)}
+              <button
+                type="button"
+                class="filter-chip"
+                aria-pressed={filterLocationIds.has(location.id)}
+                onclick={() => (filterLocationIds = toggleInSet(filterLocationIds, location.id))}
+              >
+                {location.name}
+              </button>
+            {/each}
+          </div>
+        {/if}
+        <div class="filter-bar">
+          <span class="filter-bar-label">Type</span>
+          {#each CATEGORY_ORDER as category (category)}
+            <button
+              type="button"
+              class="filter-chip"
+              aria-pressed={filterCategories.has(category)}
+              onclick={() => (filterCategories = toggleInSet(filterCategories, category))}
+            >
+              {CATEGORY_LABELS[category]}
+            </button>
+          {/each}
+        </div>
+      </div>
+    {/if}
 
     <div class="planting-table-head">
       <button

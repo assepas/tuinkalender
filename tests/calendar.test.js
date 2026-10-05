@@ -1,5 +1,5 @@
 import { describe, it, expect } from "vitest";
-import { buildCalendar } from "../src/lib/domain/calendar.js";
+import { buildCalendar, groupEntriesByType } from "../src/lib/domain/calendar.js";
 
 const region = { id: "nl-utrecht", anchors: { lastFrost: "05-12", firstFrost: "10-20", soilWarm: "04-20" } };
 
@@ -109,5 +109,32 @@ describe("buildCalendar", () => {
     const months = buildCalendar(garden, twoSpecies, region);
     const juniLabels = months[5].entries.map((e) => e.speciesName);
     expect(juniLabels).toEqual(["Appel", "Tomaat"]);
+  });
+
+  it("geeft per entry het taakobject en de actieve maanden mee (voor het detailvenster)", () => {
+    const garden = baseGarden([{ uid: "p1", speciesId: "tomaat", locationId: "loc-buiten" }]);
+    const entry = buildCalendar(garden, speciesIndex, region)[5].entries.find((e) => e.taskId === "water");
+    expect(entry.task).toBe(speciesIndex.tomaat.tasks[0]);
+    expect(entry.months).toEqual([6, 7, 8]);
+  });
+});
+
+describe("groupEntriesByType", () => {
+  const taskTypes = [{ id: "zaaien" }, { id: "water" }, { id: "snoeien" }];
+
+  it("groepeert in de volgorde van de taaktypes, onbekende types achteraan", () => {
+    const entries = [
+      { taskType: "onbekend", label: "X" },
+      { taskType: "snoeien", label: "A" },
+      { taskType: "water", label: "B" },
+      { taskType: "snoeien", label: "C" },
+    ];
+    const groups = groupEntriesByType(entries, taskTypes);
+    expect(groups.map((g) => g.taskType)).toEqual(["water", "snoeien", "onbekend"]);
+    expect(groups[1].entries.map((e) => e.label)).toEqual(["A", "C"]);
+  });
+
+  it("geeft een lege lijst voor een maand zonder taken", () => {
+    expect(groupEntriesByType([], taskTypes)).toEqual([]);
   });
 });

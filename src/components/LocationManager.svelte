@@ -6,6 +6,7 @@
   // `idPrefix` houdt de id's uniek als beide ooit tegelijk in de DOM staan.
   import { gardenState } from "../lib/state/garden.svelte.js";
   import { LOCATION_KIND_LABELS } from "../lib/domain/plantings.js";
+  import Select from "./Select.svelte";
 
   let { idPrefix = "loc", onadded = null } = $props();
 
@@ -18,6 +19,11 @@
   // In deze sessie toegevoegde standplaatsen (nieuwste eerst) staan bovenaan,
   // net als nieuwe planten op "Mijn tuin". Niet opgeslagen.
   let addedIds = $state([]);
+
+  const kindOptions = [
+    { value: "", label: "— geen —" },
+    ...Object.entries(LOCATION_KIND_LABELS).map(([value, label]) => ({ value, label })),
+  ];
 
   const plantCounts = $derived.by(() => {
     const counts = {};
@@ -90,17 +96,13 @@
         placeholder="Nieuwe standplaats, bv. Kas"
         bind:value={name}
       />
-      <select
+      <Select
         class="location-kind"
         id={`${idPrefix}-location-kind`}
         aria-label="Soort plek"
+        options={kindOptions}
         bind:value={kind}
-      >
-        <option value="">— geen —</option>
-        {#each Object.entries(LOCATION_KIND_LABELS) as [value, label] (value)}
-          <option {value}>{label}</option>
-        {/each}
-      </select>
+      />
       <input
         class="location-soil"
         id={`${idPrefix}-location-soil`}
@@ -125,17 +127,13 @@
         aria-label="Naam"
         onchange={(e) => gardenState.updateLocation(location.id, { name: e.target.value })}
       />
-      <select
+      <Select
         class="location-kind"
-        value={location.kind ?? ""}
         aria-label="Soort plek"
-        onchange={(e) => gardenState.updateLocation(location.id, { kind: e.target.value || null })}
-      >
-        <option value="">— geen —</option>
-        {#each Object.entries(LOCATION_KIND_LABELS) as [value, label] (value)}
-          <option {value}>{label}</option>
-        {/each}
-      </select>
+        options={kindOptions}
+        value={location.kind ?? ""}
+        onchange={(value) => gardenState.updateLocation(location.id, { kind: value || null })}
+      />
       <input
         class="location-soil"
         type="text"

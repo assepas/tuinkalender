@@ -75,6 +75,9 @@ export function buildCalendar(garden, speciesIndex, regionProfile) {
           taskType: task.type,
           note: task.note ?? null,
           frequency: evaluated.frequency ?? null,
+          // Voor het detailvenster (zelfde vorm als een tijdlijn-entry).
+          task,
+          months: evaluated.months,
           isCustom: !species.tasks.includes(task),
         });
       }
@@ -94,6 +97,27 @@ export function buildCalendar(garden, speciesIndex, regionProfile) {
 }
 
 /**
+ * Groepeert de (al gesorteerde) entries van één maand per taaktype, in de
+ * volgorde van `taskTypes` (zoals de legenda). Onbekende types komen
+ * achteraan; binnen een groep blijft de volgorde van `entries`.
+ * @param {Array<{ taskType: string }>} entries
+ * @param {Array<{ id: string }>} taskTypes
+ * @returns {Array<{ taskType: string, entries: Array }>}
+ */
+export function groupEntriesByType(entries, taskTypes) {
+  const order = new Map(taskTypes.map((t, i) => [t.id, i]));
+  const groups = new Map();
+  for (const entry of entries) {
+    if (!groups.has(entry.taskType)) groups.set(entry.taskType, []);
+    groups.get(entry.taskType).push(entry);
+  }
+  const rank = (type) => order.get(type) ?? Infinity;
+  return [...groups.entries()]
+    .sort(([a], [b]) => rank(a) - rank(b) || a.localeCompare(b, "nl"))
+    .map(([taskType, groupEntries]) => ({ taskType, entries: groupEntries }));
+}
+
+/**
  * Bloei is puur informatief (geen taak) en staat daarom los van tasks/window-
  * evaluatie. Geeft null als de soort geen bloom-data heeft.
  */
@@ -108,7 +132,7 @@ export function getBloomMonths(species) {
  * kleur blijft die van het taaktype. Zonder variantBy is er één "variant"
  * (het taaktype zelf).
  */
-function resolveMarkerMeta(task, typeMeta) {
+export function resolveMarkerMeta(task, typeMeta) {
   const key = typeMeta.variantBy ? (task[typeMeta.variantBy] ?? typeMeta.defaultVariant) : null;
   const variant = key ? typeMeta.variants?.[key] : null;
   const variantOrder = key ? Object.keys(typeMeta.variants ?? {}).indexOf(key) : 0;

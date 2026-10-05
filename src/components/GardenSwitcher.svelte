@@ -8,9 +8,12 @@
   import Dropdown from "./Dropdown.svelte";
   import Icon from "./Icon.svelte";
 
+  // compact: smalle variant voor de mobiele kopbalk; krimpt mee met de
+  // beschikbare ruimte (naam met ellipsis).
+  let { compact = false } = $props();
+
   const current = $derived(gardenState.cloudGarden);
   let addOpen = $state(false);
-  const iconFor = (garden) => (garden?.kind === "balkon" || garden?.kind === "pot" ? "pot" : "sprout");
 
   async function run(action) {
     try {
@@ -25,10 +28,16 @@
   }
 </script>
 
-<Dropdown minWidth="17rem">
+<Dropdown minWidth={compact ? "min(17rem, calc(100vw - 2rem))" : "17rem"}>
   {#snippet trigger({ open, toggle })}
-    <button type="button" class="garden-switcher" aria-haspopup="menu" aria-expanded={open} onclick={toggle}>
-      <Icon name={iconFor(current)} size={18} />
+    <button
+      type="button"
+      class="garden-switcher"
+      class:compact
+      aria-haspopup="menu"
+      aria-expanded={open}
+      onclick={toggle}
+    >
       <span class="garden-switcher-name">{current?.name ?? "Kies een tuin"}</span>
       <span class="menu-chevron" class:open><Icon name="chevron-down" size={16} /></span>
     </button>
@@ -46,7 +55,6 @@
           select(garden.id);
         }}
       >
-        <span class="menu-item-icon"><Icon name={iconFor(garden)} size={18} /></span>
         <span class="menu-item-label">
           <span>{garden.name}</span>
           {#if garden.role !== "owner"}<span class="menu-item-sub">Gedeeld met jou</span>{/if}
@@ -107,12 +115,19 @@
     cursor: pointer;
   }
 
+  .garden-switcher.compact {
+    max-width: 100%;
+    height: 44px;
+    font-size: var(--step-1);
+  }
+
   .garden-switcher:hover,
   .garden-switcher[aria-expanded="true"] {
     background: rgba(255, 255, 255, 0.16);
   }
 
   .garden-switcher-name {
+    min-width: 0;
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;

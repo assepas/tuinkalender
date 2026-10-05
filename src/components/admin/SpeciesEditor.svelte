@@ -17,6 +17,7 @@
   import { saveSpecies, deleteSpecies } from "../../lib/storage/catalogAdmin.js";
   import { gardenState } from "../../lib/state/garden.svelte.js";
   import PlantIcon from "../PlantIcon.svelte";
+  import Select from "../Select.svelte";
   import MonthDayInput from "./MonthDayInput.svelte";
   import TaskEditor from "./TaskEditor.svelte";
 
@@ -57,6 +58,7 @@
 
   const NATIVE_LABELS = { inheems: "Inheems", archeofyt: "Archeofyt", exoot: "Exoot", onbekend: "Onbekend" };
   const SHAPE_LABELS = { bloem: "Bloem", aar: "Aar", vrucht: "Vrucht", "losse-wolk": "Losse wolk" };
+  const toOptions = (labels) => Object.entries(labels).map(([value, label]) => ({ value, label }));
 
   const errors = $derived(
     validateSpecies(cleaned(draft), {
@@ -238,19 +240,15 @@
       </div>
       <div>
         <label for="sp-category">Categorie</label>
-        <select id="sp-category" bind:value={draft.category}>
-          {#each CATEGORY_ORDER as c (c)}
-            <option value={c}>{CATEGORY_LABELS[c]}</option>
-          {/each}
-        </select>
+        <Select
+          id="sp-category"
+          options={CATEGORY_ORDER.map((c) => ({ value: c, label: CATEGORY_LABELS[c] }))}
+          bind:value={draft.category}
+        />
       </div>
       <div>
         <label for="sp-native">Herkomst</label>
-        <select id="sp-native" bind:value={draft.nativeStatus}>
-          {#each Object.entries(NATIVE_LABELS) as [key, label] (key)}
-            <option value={key}>{label}</option>
-          {/each}
-        </select>
+        <Select id="sp-native" options={toOptions(NATIVE_LABELS)} bind:value={draft.nativeStatus} />
       </div>
       <div>
         <label for="sp-tags">Tags <span class="hint">(komma's ertussen)</span></label>
@@ -291,11 +289,7 @@
     <div class="field-grid">
       <div>
         <label for="sp-shape">Vorm</label>
-        <select id="sp-shape" value={draft.appearance.shape} onchange={(e) => setShape(e.currentTarget.value)}>
-          {#each Object.entries(SHAPE_LABELS) as [key, label] (key)}
-            <option value={key}>{label}</option>
-          {/each}
-        </select>
+        <Select id="sp-shape" options={toOptions(SHAPE_LABELS)} value={draft.appearance.shape} onchange={setShape} />
       </div>
       <div>
         <label for="sp-count">Aantal (1–10)</label>

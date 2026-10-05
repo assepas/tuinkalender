@@ -4,8 +4,10 @@
   import { catalog } from "../../lib/state/catalog.svelte.js";
   import { saveTaskType } from "../../lib/storage/catalogAdmin.js";
   import Icon from "../Icon.svelte";
+  import Select from "../Select.svelte";
 
   const ICONS = ["seed", "seed-kas", "sprout", "droplet", "leaf", "scissors", "split", "snowflake", "basket", "poop", "ellipsis", "dot", "dot-outline"];
+  const ICON_OPTIONS = ICONS.map((icon) => ({ value: icon, label: icon }));
   const HEX = /^#[0-9a-fA-F]{6}$/;
 
   let drafts = $state(structuredClone($state.snapshot(catalog.taskTypes)));
@@ -53,9 +55,7 @@
           <input type="color" aria-label="Kleur" bind:value={t.color} />
           <input type="text" aria-label="Kleur (hex)" bind:value={t.color} />
         </span>
-        <select aria-label="Icoon" bind:value={t.icon}>
-          {#each ICONS as icon (icon)}<option value={icon}>{icon}</option>{/each}
-        </select>
+        <Select aria-label="Icoon" options={ICON_OPTIONS} bind:value={t.icon} />
         <label class="checkbox-label">
           <input type="checkbox" bind:checked={t.timeline} /> In tijdlijn
         </label>

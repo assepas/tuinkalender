@@ -34,57 +34,86 @@
   }
 </script>
 
-<Modal label="Details" {onclose}>
-  {#if detail.kind === "species"}
-    <div class="modal-head">
-      <PlantIcon species={detail.species} size={44} />
-      <div>
-        <h2>{detail.planting.label || detail.species.name}</h2>
-        {#if detail.species.latin}<p class="latin">{detail.species.latin}</p>{/if}
-      </div>
+<!-- Taak: kop met taakicoon, korte note, uitleg, maanden en frequentie. -->
+{#snippet taskSection()}
+  <div class="modal-head">
+    <span class="task-icon-badge" style:background={`${detail.meta?.color ?? "#999"}26`}>
+      <Icon name={detail.meta?.icon ?? "dot"} color={detail.meta?.color ?? "#999"} size={22} />
+    </span>
+    <div>
+      <h2>{detail.meta?.label ?? detail.taskType}</h2>
+      <p class="latin">{detail.planting.label || detail.species.name}</p>
     </div>
-    <div class="modal-badges">
-      <NativeBadge status={detail.species.nativeStatus} />
-      {#if detail.species.appearance?.flowerColorName}
-        <span class="swatch-chip">
-          <span class="swatch" style:background={detail.species.appearance.flowerColor}></span>
-          bloemkleur: {detail.species.appearance.flowerColorName}
-        </span>
-      {/if}
+  </div>
+  {#if detail.entry.task.note}
+    <p class="modal-meta">{detail.entry.task.note}</p>
+  {/if}
+  {#if detail.entry.task.description}
+    <p class="task-description">{detail.entry.task.description}</p>
+  {/if}
+  <p class="modal-meta">Actief: {monthRangeLabel(detail.entry.months)}</p>
+  {#if detail.entry.frequency}
+    <p class="modal-meta">Frequentie: {detail.entry.frequency}</p>
+  {/if}
+  {#if detail.entry.task.importance}
+    <p class="modal-meta">
+      Belang: {detail.entry.task.importance === "hoofd" ? "hoofdsnoei (nodig)" : "lichte/optionele snoei"}
+    </p>
+  {/if}
+{/snippet}
+
+<!-- Plant: kop, kenmerken, standplaats, plantinformatie en (optioneel) de taken. -->
+{#snippet speciesSection(showTasks)}
+  <div class="modal-head">
+    <PlantIcon species={detail.species} size={44} />
+    <div>
+      <h2>{detail.planting.label || detail.species.name}</h2>
+      {#if detail.species.latin}<p class="latin">{detail.species.latin}</p>{/if}
     </div>
-
-    {#if detail.location}
-      <p class="modal-meta">
-        Standplaats: {detail.location.name}.
-        {#if detail.location.soil}Grondsoort: {detail.location.soil}.{/if}
-      </p>
-    {:else if detail.planting.locationId}
-      <p class="error-text">Onbekende standplaats — mogelijk verwijderd.</p>
+  </div>
+  <div class="modal-badges">
+    <NativeBadge status={detail.species.nativeStatus} />
+    {#if detail.species.appearance?.flowerColorName}
+      <span class="swatch-chip">
+        <span class="swatch" style:background={detail.species.appearance.flowerColor}></span>
+        bloemkleur: {detail.species.appearance.flowerColorName}
+      </span>
     {/if}
-    {#if detail.planting.notes}
-      <p class="modal-meta">{detail.planting.notes}</p>
-    {/if}
+  </div>
 
-    {#if info || traits.length > 0}
-      <h3>Plantinformatie</h3>
-      {#if info?.intro}<p class="info-text">{info.intro}</p>{/if}
-      {#if traits.length > 0}
-        <dl class="traits">
-          {#each traits as [label, value] (label)}
-            <div><dt>{label}</dt><dd>{value}</dd></div>
-          {/each}
-        </dl>
-      {/if}
-      {#if info?.water}
-        <p class="info-text"><strong>Water:</strong> {info.water}</p>
-      {/if}
-      {#if info?.tips?.length}
-        <ul class="info-tips">
-          {#each info.tips as tip (tip)}<li>{tip}</li>{/each}
-        </ul>
-      {/if}
-    {/if}
+  {#if detail.location}
+    <p class="modal-meta">
+      Standplaats: {detail.location.name}.
+      {#if detail.location.soil}Grondsoort: {detail.location.soil}.{/if}
+    </p>
+  {:else if detail.planting.locationId}
+    <p class="error-text">Onbekende standplaats — mogelijk verwijderd.</p>
+  {/if}
+  {#if detail.planting.notes}
+    <p class="modal-meta">{detail.planting.notes}</p>
+  {/if}
 
+  {#if info || traits.length > 0}
+    <h3>Plantinformatie</h3>
+    {#if info?.intro}<p class="info-text">{info.intro}</p>{/if}
+    {#if traits.length > 0}
+      <dl class="traits">
+        {#each traits as [label, value] (label)}
+          <div><dt>{label}</dt><dd>{value}</dd></div>
+        {/each}
+      </dl>
+    {/if}
+    {#if info?.water}
+      <p class="info-text"><strong>Water:</strong> {info.water}</p>
+    {/if}
+    {#if info?.tips?.length}
+      <ul class="info-tips">
+        {#each info.tips as tip (tip)}<li>{tip}</li>{/each}
+      </ul>
+    {/if}
+  {/if}
+
+  {#if showTasks}
     <h3>Taken</h3>
     <ul class="modal-task-list">
       {#each detail.species.tasks as task (task.id)}
@@ -97,31 +126,20 @@
         </li>
       {/each}
     </ul>
+  {/if}
+{/snippet}
+
+<Modal label="Details" {onclose}>
+  {#if detail.kind === "species"}
+    {@render speciesSection(true)}
   {:else if detail.kind === "task"}
-    <div class="modal-head">
-      <span class="task-icon-badge" style:background={`${detail.meta?.color ?? "#999"}26`}>
-        <Icon name={detail.meta?.icon ?? "dot"} color={detail.meta?.color ?? "#999"} size={22} />
-      </span>
-      <div>
-        <h2>{detail.meta?.label ?? detail.taskType}</h2>
-        <p class="latin">{detail.planting.label || detail.species.name}</p>
-      </div>
-    </div>
-    {#if detail.entry.task.note}
-      <p class="modal-meta">{detail.entry.task.note}</p>
-    {/if}
-    {#if detail.entry.task.description}
-      <p class="task-description">{detail.entry.task.description}</p>
-    {/if}
-    <p class="modal-meta">Actief: {monthRangeLabel(detail.entry.months)}</p>
-    {#if detail.entry.frequency}
-      <p class="modal-meta">Frequentie: {detail.entry.frequency}</p>
-    {/if}
-    {#if detail.entry.task.importance}
-      <p class="modal-meta">
-        Belang: {detail.entry.task.importance === "hoofd" ? "hoofdsnoei (nodig)" : "lichte/optionele snoei"}
-      </p>
-    {/if}
+    {@render taskSection()}
+  {:else if detail.kind === "species-task"}
+    <!-- Vanuit het Maandoverzicht: eerst de taak, dan de plant. De takenlijst
+         van de plant laten we hier weg — de taak staat er al boven. -->
+    {@render taskSection()}
+    <hr class="modal-divider" />
+    {@render speciesSection(false)}
   {/if}
 </Modal>
 
@@ -221,6 +239,12 @@
 
   .info-tips li + li {
     margin-top: var(--space-1);
+  }
+
+  .modal-divider {
+    border: none;
+    border-top: var(--border);
+    margin: var(--space-4) 0;
   }
 
   .modal-meta {

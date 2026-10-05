@@ -1,9 +1,11 @@
 <script>
   // Invoer voor een "MM-DD"-datum (zoals in de soortdata): maand + dag.
   import { MONTH_NAMES } from "../../lib/domain/calendar.js";
+  import Select from "../Select.svelte";
 
   let { value = $bindable("01-01"), id = undefined } = $props();
 
+  const options = MONTH_NAMES.map((name, i) => ({ value: i + 1, label: name }));
   const month = $derived(Number(value?.slice(0, 2)) || 1);
   const day = $derived(Number(value?.slice(3, 5)) || 1);
 
@@ -13,11 +15,7 @@
 </script>
 
 <span class="month-day">
-  <select {id} value={month} onchange={(e) => set(Number(e.currentTarget.value), day)}>
-    {#each MONTH_NAMES as name, i}
-      <option value={i + 1}>{name}</option>
-    {/each}
-  </select>
+  <Select {id} class="month-day-month" {options} value={month} onchange={(m) => set(m, day)} />
   <input
     type="number"
     min="1"
@@ -34,8 +32,8 @@
     gap: var(--space-1);
   }
 
-  .month-day select {
-    width: auto;
+  .month-day :global(.month-day-month) {
+    min-width: 8.5rem;
   }
 
   .month-day input {

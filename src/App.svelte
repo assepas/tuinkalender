@@ -8,6 +8,8 @@
   import GardenSettingsModal from "./components/GardenSettingsModal.svelte";
   import GardenSwitcher from "./components/GardenSwitcher.svelte";
   import Icon from "./components/Icon.svelte";
+  import MobileHeader from "./components/MobileHeader.svelte";
+  import MobileTabBar from "./components/MobileTabBar.svelte";
   import { auth } from "./lib/state/auth.svelte.js";
   import { gardenState } from "./lib/state/garden.svelte.js";
   import { ui } from "./lib/state/ui.svelte.js";
@@ -19,8 +21,17 @@
   // "Mijn tuin ▾" in de header: een menu met deze twee weergaven.
   const gardenTabs = [
     { id: "tuin", label: "Planten", icon: "sprout" },
-    { id: "standplaatsen", label: "Standplaatsen", icon: "location" },
+    { id: "standplaatsen", label: "Standplaatsen", short: "Plaatsen", icon: "location" },
   ];
+  const adminTab = { id: "beheer", label: "Plantendata", icon: "flower" };
+
+  // Mobiel staan alle weergaven naast elkaar in de onderbalk.
+  const mobileTabs = $derived([
+    { id: "tijdlijn", label: "Tijdlijn", icon: "timeline" },
+    { id: "kalender", label: "Maandoverzicht", short: "Maanden", icon: "calendar" },
+    ...gardenTabs,
+    ...(auth.isAdmin ? [adminTab] : []),
+  ]);
 
   // Beheerpagina los laden: gewone bezoekers downloaden die code (en ajv) niet.
   const loadAdminPage = () => import("./components/admin/AdminPage.svelte");
@@ -30,87 +41,94 @@
 
   let activeTab = $state(homeTab);
   const gardenTabActive = $derived(gardenTabs.some((t) => t.id === activeTab));
+  const activeTitle = $derived(mobileTabs.find((t) => t.id === activeTab)?.label);
 </script>
 
+{#if ui.isMobile}
+  <MobileHeader title={activeTitle} onhome={() => (activeTab = homeTab)} />
+{/if}
+
 <div class="app-shell">
-  <header class="app-header no-print">
-    <div class="app-header-brand">
-      <h1>
-        <a
-          href="./"
-          onclick={(e) => {
-            e.preventDefault();
-            activeTab = homeTab;
-          }}>TuinTaak</a
-        >
-      </h1>
-      {#if auth.user && gardenState.gardens.length > 0}
-        <GardenSwitcher />
-      {/if}
-    </div>
-    <nav class="tabs" aria-label="Weergave">
-      {#each tabs as tab (tab.id)}
-        <button
-          type="button"
-          class="tab"
-          aria-current={activeTab === tab.id ? "page" : undefined}
-          onclick={() => (activeTab = tab.id)}
-        >
-          {tab.label}
-        </button>
-      {/each}
-      <span class="tabs-separator" aria-hidden="true"></span>
-      <Dropdown align="right" minWidth="13rem">
-        {#snippet trigger({ open, toggle })}
+  {#if !ui.isMobile}
+    <header class="app-header no-print">
+      <div class="app-header-brand">
+        <h1>
+          <a
+            href="./"
+            onclick={(e) => {
+              e.preventDefault();
+              activeTab = homeTab;
+            }}>TuinTaak</a
+          >
+        </h1>
+        {#if auth.user && gardenState.gardens.length > 0}
+          <GardenSwitcher />
+        {/if}
+      </div>
+      <nav class="tabs" aria-label="Weergave">
+        {#each tabs as tab (tab.id)}
           <button
             type="button"
-            class="tab tab-menu"
-            aria-current={gardenTabActive ? "page" : undefined}
-            aria-haspopup="menu"
-            aria-expanded={open}
-            onclick={toggle}
+            class="tab"
+            aria-current={activeTab === tab.id ? "page" : undefined}
+            onclick={() => (activeTab = tab.id)}
           >
-            Mijn tuin
-            <span class="menu-chevron" class:open><Icon name="chevron-down" size={14} /></span>
+            {tab.label}
           </button>
-        {/snippet}
-        {#snippet menu(close)}
-          {#each gardenTabs as tab (tab.id)}
+        {/each}
+        <span class="tabs-separator" aria-hidden="true"></span>
+        <Dropdown align="right" minWidth="13rem">
+          {#snippet trigger({ open, toggle })}
             <button
               type="button"
-              role="menuitem"
-              class="menu-item"
-              aria-current={activeTab === tab.id ? "page" : undefined}
-              onclick={() => {
-                close();
-                activeTab = tab.id;
-              }}
+              class="tab tab-menu"
+              aria-current={gardenTabActive ? "page" : undefined}
+              aria-haspopup="menu"
+              aria-expanded={open}
+              onclick={toggle}
             >
-              <span class="menu-item-icon"><Icon name={tab.icon} size={18} /></span>
-              <span class="menu-item-label">{tab.label}</span>
+              Mijn tuin
+              <span class="menu-chevron" class:open><Icon name="chevron-down" size={14} /></span>
             </button>
-          {/each}
-        {/snippet}
-      </Dropdown>
-    </nav>
-    <div class="app-header-account">
-      <!-- Alleen voor beheerders. Of je echt mag schrijven, bepaalt de
-           database (RLS) — dit verbergt alleen de knop. -->
-      {#if auth.isAdmin}
-        <button
-          type="button"
-          class="admin-button"
-          aria-label="Plantendata beheren"
-          title="Plantendata"
-          aria-current={activeTab === "beheer" ? "page" : undefined}
-          onclick={() => (activeTab = "beheer")}
-        >
-          <Icon name="flower" size={20} />
-        </button>
-      {/if}
-      <AccountMenu />
-    </div>
-  </header>
+          {/snippet}
+          {#snippet menu(close)}
+            {#each gardenTabs as tab (tab.id)}
+              <button
+                type="button"
+                role="menuitem"
+                class="menu-item"
+                aria-current={activeTab === tab.id ? "page" : undefined}
+                onclick={() => {
+                  close();
+                  activeTab = tab.id;
+                }}
+              >
+                <span class="menu-item-icon"><Icon name={tab.icon} size={18} /></span>
+                <span class="menu-item-label">{tab.label}</span>
+              </button>
+            {/each}
+          {/snippet}
+        </Dropdown>
+      </nav>
+      <div class="app-header-account">
+        <!-- Alleen voor beheerders. Of je echt mag schrijven, bepaalt de
+             database (RLS) — dit verbergt alleen de knop. -->
+        {#if auth.isAdmin}
+          <button
+            type="button"
+            class="admin-button"
+            aria-label="Plantendata beheren"
+            title={adminTab.label}
+            aria-current={activeTab === "beheer" ? "page" : undefined}
+            onclick={() => (activeTab = "beheer")}
+          >
+            <Icon name="flower" size={20} />
+          </button>
+        {/if}
+        <AccountMenu />
+      </div>
+    </header>
+  {/if}
 
   {#if gardenState.notice}
     <p class="app-notice no-print">
@@ -137,6 +155,10 @@
     {/await}
   {/if}
 </div>
+
+{#if ui.isMobile}
+  <MobileTabBar tabs={mobileTabs} active={activeTab} onselect={(id) => (activeTab = id)} />
+{/if}
 
 {#if ui.gardenSettingsOpen}
   <GardenSettingsModal onclose={() => (ui.gardenSettingsOpen = false)} />

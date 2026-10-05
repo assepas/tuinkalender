@@ -35,6 +35,14 @@ button {
   padding: var(--space-5) var(--space-4) var(--space-7);
 }
 
+/* Mobiel: de kopbalk staat buiten .app-shell over de volle breedte en de
+   vaste onderbalk (MobileTabBar.svelte, ~72px) mag niets afdekken. */
+@media (max-width: 34rem) {
+  .app-shell {
+    padding: var(--space-4) var(--space-3) calc(72px + var(--space-5));
+  }
+}
+
 /* ---------- Header ---------- */
 
 .app-header {
@@ -45,14 +53,15 @@ button {
   justify-content: space-between;
   gap: var(--space-4);
   margin-bottom: var(--space-5);
-  padding: var(--space-4) var(--space-5);
+  padding: var(--space-3) var(--space-4);
   border-radius: var(--radius);
 }
 
 .app-header h1 {
   font-family: var(--font-display);
   font-weight: 500;
-  font-size: var(--step4);
+  font-size: var(--step3);
+  line-height: 1.2;
   color: var(--color-primary-ink);
   margin: 0;
   letter-spacing: -0.01em;
@@ -143,9 +152,11 @@ nav.tabs .tab[aria-current="page"] {
   color: var(--color-primary);
 }
 
+/* Valt alleen nog terug op deze header als de mobiele kopbalk er niet is
+   (zie ui.isMobile); normaal neemt MobileHeader.svelte het hier over. */
 @media (max-width: 34rem) {
   .app-header {
-    padding: var(--space-4);
+    padding: var(--space-3);
   }
 
   nav.tabs {
@@ -282,22 +293,100 @@ nav.tabs .tab[aria-current="page"] {
 
 /* ---------- Kalender ---------- */
 
-.calendar-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: var(--space-4);
+/* Doorlopende carousel met maanden (CalendarView.svelte). De kaarten zijn
+   smaller dan de rij, zodat de buurmaanden in beeld steken. */
+.calendar-strip-wrap {
+  /* cqi = breedte van deze wrapper; een %-breedte zou op de flex-rij de
+     zij-padding meetellen en de kaarten veel te smal maken. */
+  container-type: inline-size;
+  --month-width: clamp(16rem, 30cqi, 22rem);
+  position: relative;
 }
 
-@media (max-width: 56rem) {
-  .calendar-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
+.calendar-strip {
+  position: relative; /* referentie voor offsetLeft van de kaarten */
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-4);
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  padding: var(--space-1) 0 var(--space-2);
+  scrollbar-width: none;
+}
+
+.calendar-strip::-webkit-scrollbar {
+  display: none;
+}
+
+.calendar-strip > .month-card {
+  flex: 0 0 var(--month-width);
+  scroll-snap-align: center;
 }
 
 @media (max-width: 34rem) {
-  .calendar-grid {
-    grid-template-columns: 1fr;
+  .calendar-strip-wrap {
+    --month-width: 78cqi;
   }
+
+  .calendar-strip {
+    gap: var(--space-3);
+  }
+}
+
+/* Kale pijlen links en rechts van de stipjes. */
+.calendar-arrow {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 1.75rem;
+  height: 1.75rem;
+  padding: 0;
+  border: none;
+  border-radius: var(--radius);
+  background: transparent;
+  color: var(--color-ink-muted);
+  cursor: pointer;
+}
+
+.calendar-arrow:hover {
+  color: var(--color-primary);
+  background: var(--color-surface);
+}
+
+/* Stipjes boven de rij: waar je bent (gevuld) en waar "nu" is (rand). */
+.calendar-dots {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-1);
+  margin-bottom: var(--space-2);
+}
+
+.calendar-dot {
+  width: 1.25rem;
+  height: 1.25rem;
+  padding: 0;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  position: relative;
+}
+
+.calendar-dot::after {
+  content: "";
+  position: absolute;
+  inset: 0.375rem;
+  border-radius: 999px;
+  background: var(--color-line-strong);
+}
+
+.calendar-dot.now::after {
+  background: transparent;
+  box-shadow: inset 0 0 0 1.5px var(--color-primary);
+}
+
+.calendar-dot[aria-current="true"]::after {
+  background: var(--color-primary);
 }
 
 .month-card {
@@ -313,6 +402,34 @@ nav.tabs .tab[aria-current="page"] {
   font-size: var(--step2);
   font-weight: var(--weight-display);
   margin: 0 0 var(--space-3);
+}
+
+/* Huidige maand: dikkere primaire rand (1px minder padding, zodat de inhoud
+   niet verspringt), lichter vlak en een "Nu"-pil naast de naam. */
+.month-card.current {
+  background: var(--color-surface-raised);
+  border: 2px solid var(--color-primary);
+  padding: calc(var(--space-4) - 1px);
+  box-shadow: 0 2px 10px rgb(0 0 0 / 0.08);
+}
+
+.month-card.current h2 {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: var(--space-2);
+  font-weight: 500;
+  color: var(--color-primary);
+}
+
+.month-card-now {
+  font-family: var(--font-ui);
+  font-size: var(--step-1);
+  font-weight: 600;
+  color: var(--color-primary-ink);
+  background: var(--color-primary);
+  border-radius: 999px;
+  padding: 0.1em 0.6em;
 }
 
 .month-card .empty {
@@ -346,16 +463,40 @@ nav.tabs .tab[aria-current="page"] {
   overflow-wrap: anywhere;
 }
 
+/* Subkopje per taaktype binnen een maand; de planten eronder zijn
+   klikbaar (detailvenster met taak- en plantuitleg). */
+.task-group + .task-group {
+  margin-top: var(--space-4);
+}
+
+/* Zelfde onopvallende stijl als .timeline-group-heading. */
+.task-group-heading {
+  margin: 0 0 var(--space-2);
+  font-family: var(--font-ui);
+  font-size: 0.75em;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--color-ink-faint);
+}
+
 .task-row .dot {
   margin-top: 0.4em;
 }
 
 .task-row .plant {
+  font: inherit;
   font-weight: 500;
+  color: var(--color-ink);
+  background: none;
+  border: none;
+  padding: 0;
+  text-align: left;
+  cursor: pointer;
 }
 
-.task-row .task-type {
-  color: var(--color-ink-muted);
+.task-row .plant:hover {
+  text-decoration: underline;
 }
 
 .task-row .meta {
@@ -464,7 +605,6 @@ label {
 }
 
 input,
-select,
 textarea {
   width: 100%;
   font-family: inherit;
@@ -479,34 +619,6 @@ textarea {
 textarea {
   resize: vertical;
   min-height: 4rem;
-}
-
-/* Native <select> heeft per besturingssysteem/browser een eigen uiterlijk
-   (pijltje, padding) dat niet bij de rest van de UI past — hier zelf een
-   chevron tekenen die dezelfde taal spreekt als .chevron elders. */
-select {
-  appearance: none;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  padding-right: calc(var(--space-3) * 2 + 0.9em);
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath d='M4 6l4 4 4-4' fill='none' stroke='%237a8a6e' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
-  background-repeat: no-repeat;
-  background-position: right var(--space-3) center;
-  background-size: 0.9em;
-  cursor: pointer;
-}
-
-select:hover {
-  border-color: var(--color-line-strong);
-}
-
-select:disabled {
-  cursor: not-allowed;
-  opacity: 0.6;
-}
-
-select::-ms-expand {
-  display: none;
 }
 
 .btn {
@@ -611,10 +723,6 @@ select::-ms-expand {
 
 .planting-row-location {
   grid-area: location;
-}
-
-.planting-row-location select {
-  width: 100%;
 }
 
 .planting-row-summary > .btn {
@@ -725,6 +833,11 @@ select::-ms-expand {
 .filter-clear:hover {
   color: var(--color-ink);
   background: var(--color-surface-raised);
+}
+
+/* Mobiel: "Filteren" klapt de filterbalken op Planten in en uit. */
+.garden-filters-toggle {
+  margin: 0 0 var(--space-3);
 }
 
 /* Zelfde kolommen en zijmarge (padding + 1px rand) als .planting-row, zodat
@@ -838,7 +951,6 @@ select::-ms-expand {
 }
 
 .location-row input:not([type="radio"]),
-.location-row select,
 .location-row > .btn {
   width: 100%;
 }
@@ -982,6 +1094,39 @@ input[type="radio"]:checked {
   align-items: flex-start;
   justify-content: space-between;
   gap: var(--space-3);
+}
+
+/* Mobiel: inklapbare legenda over de volle breedte, Printen rechtsboven
+   naast de "Legenda"-knop. */
+.calendar-toolbar.mobile {
+  position: relative;
+  margin-bottom: var(--space-5);
+}
+
+.calendar-toolbar.mobile .calendar-legend-panel {
+  flex: 1 1 100%;
+  background: transparent;
+  border: none;
+  padding: 0;
+}
+
+.calendar-toolbar.mobile .calendar-legend-panel h3 {
+  /* ruimte voor de Printen-knop ernaast */
+  padding-right: 6rem;
+}
+
+.calendar-legend-body {
+  margin-top: var(--space-2);
+}
+
+.calendar-legend-body .legend {
+  margin-bottom: 0;
+}
+
+.calendar-toolbar.mobile .calendar-print {
+  position: absolute;
+  top: 0;
+  right: 0;
 }
 
 .print-hint {

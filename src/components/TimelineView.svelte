@@ -12,6 +12,7 @@
   } from "../lib/domain/plantings.js";
   import { catalog } from "../lib/state/catalog.svelte.js";
   import { gardenState } from "../lib/state/garden.svelte.js";
+  import { ui } from "../lib/state/ui.svelte.js";
   import DetailModal from "./DetailModal.svelte";
   import Icon from "./Icon.svelte";
   import PlantIcon from "./PlantIcon.svelte";
@@ -36,11 +37,12 @@
   );
   let locationIndex = $derived(buildLocationIndex(gardenState.garden.locations));
 
-  // Legenda en filters zijn los uitklapbaar en starten allebei uitgeklapt.
+  // Legenda en filters zijn los uitklapbaar en starten allebei uitgeklapt
+  // (op mobiel ingeklapt, daar is de ruimte boven de tijdlijn schaars).
   // Dezelfde filteropties als in Mijn Tuin (zie GardenEditor.svelte). Het
   // sorteren staat vast boven de tijdlijn zelf en klapt niet in.
-  let legendExpanded = $state(true);
-  let filtersExpanded = $state(true);
+  let legendExpanded = $state(!ui.isMobile);
+  let filtersExpanded = $state(!ui.isMobile);
   let sortKey = $state("naam"); // "naam" | "standplaats" | "bloei"
   let sortDir = $state("asc"); // "asc" | "desc"
   let filterLocationIds = $state(new Set());

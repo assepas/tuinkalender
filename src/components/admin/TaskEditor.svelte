@@ -3,6 +3,7 @@
   // hier niet staan (bv. conditions) blijven gewoon behouden en zijn via het
   // JSON-tabblad te bewerken.
   import { catalog } from "../../lib/state/catalog.svelte.js";
+  import Select from "../Select.svelte";
   import MonthDayInput from "./MonthDayInput.svelte";
 
   let { task = $bindable(), index, onremove } = $props();
@@ -12,6 +13,12 @@
 
   const ANCHORS = { lastFrost: "laatste nachtvorst", firstFrost: "eerste nachtvorst", soilWarm: "bodem warm" };
   const EVERY = { week: "elke week", "2weeks": "om de 2 weken", month: "elke maand" };
+  const KINDS = [
+    { value: "dates", label: "Tussen twee data" },
+    { value: "recurring", label: "Terugkerend" },
+    { value: "relative", label: "Rond vorst/bodemtemperatuur" },
+  ];
+  const toOptions = (labels) => Object.entries(labels).map(([value, label]) => ({ value, label }));
 
   function setKind(kind) {
     const w = task.window ?? {};
@@ -51,24 +58,22 @@
   <div class="field-grid">
     <div>
       <label for="{prefix}-type">Type</label>
-      <select id="{prefix}-type" value={task.type} onchange={(e) => setType(e.currentTarget.value)}>
-        {#each catalog.taskTypes as t (t.id)}
-          <option value={t.id}>{t.label}</option>
-        {/each}
-      </select>
+      <Select
+        id="{prefix}-type"
+        options={catalog.taskTypes.map((t) => ({ value: t.id, label: t.label }))}
+        value={task.type}
+        onchange={setType}
+      />
     </div>
     {#if taskType?.variants}
       <div>
         <label for="{prefix}-variant">Variant</label>
-        <select
+        <Select
           id="{prefix}-variant"
+          options={Object.entries(taskType.variants).map(([key, v]) => ({ value: key, label: v.label }))}
           value={task[taskType.variantBy] ?? taskType.defaultVariant}
-          onchange={(e) => setVariant(e.currentTarget.value)}
-        >
-          {#each Object.entries(taskType.variants) as [key, v] (key)}
-            <option value={key}>{v.label}</option>
-          {/each}
-        </select>
+          onchange={setVariant}
+        />
       </div>
     {/if}
     <div>
@@ -77,11 +82,7 @@
     </div>
     <div>
       <label for="{prefix}-kind">Wanneer</label>
-      <select id="{prefix}-kind" value={task.window?.kind} onchange={(e) => setKind(e.currentTarget.value)}>
-        <option value="dates">Tussen twee data</option>
-        <option value="recurring">Terugkerend</option>
-        <option value="relative">Rond vorst/bodemtemperatuur</option>
-      </select>
+      <Select id="{prefix}-kind" options={KINDS} value={task.window?.kind} onchange={setKind} />
     </div>
   </div>
 
@@ -98,21 +99,13 @@
       {#if task.window.kind === "recurring"}
         <div>
           <label for="{prefix}-every">Hoe vaak</label>
-          <select id="{prefix}-every" bind:value={task.window.every}>
-            {#each Object.entries(EVERY) as [key, label] (key)}
-              <option value={key}>{label}</option>
-            {/each}
-          </select>
+          <Select id="{prefix}-every" options={toOptions(EVERY)} bind:value={task.window.every} />
         </div>
       {/if}
     {:else if task.window?.kind === "relative"}
       <div>
         <label for="{prefix}-anchor">Ten opzichte van</label>
-        <select id="{prefix}-anchor" bind:value={task.window.anchor}>
-          {#each Object.entries(ANCHORS) as [key, label] (key)}
-            <option value={key}>{label}</option>
-          {/each}
-        </select>
+        <Select id="{prefix}-anchor" options={toOptions(ANCHORS)} bind:value={task.window.anchor} />
       </div>
       <div>
         <label for="{prefix}-fromw">Van (weken)</label>

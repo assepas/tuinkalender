@@ -113,10 +113,30 @@
     <circle cx="12" cy="11.2" r="1" fill={color} stroke="none" />
   {:else if name === "chevron-down"}
     <path d="m6 9 6 6 6-6" />
+  {:else if name === "chevron-left"}
+    <path d="m15 6-6 6 6 6" />
+  {:else if name === "chevron-right"}
+    <path d="m9 6 6 6-6 6" />
   {:else if name === "check"}
     <path d="m5 12.5 4.5 4.5L19 7.5" />
   {:else if name === "plus-circle"}
     <circle cx="12" cy="12" r="8.5" />
     <path d="M12 8v8M8 12h8" />
+  {:else if name === "timeline"}
+    <path d="M4 6.5h16M4 12h16M4 17.5h16" stroke-opacity="0.3" />
+    <rect x="6" y="5" width="9" height="3" rx="1.5" fill={color} fill-opacity="0.45" />
+    <rect x="10" y="10.5" width="8" height="3" rx="1.5" fill={color} fill-opacity="0.45" />
+    <rect x="4" y="16" width="6" height="3" rx="1.5" fill={color} fill-opacity="0.45" />
+  {:else if name === "calendar"}
+    <rect x="4" y="5.5" width="16" height="14.5" rx="2" />
+    <path d="M4 10h16" />
+    <path d="M8.5 3.5v4M15.5 3.5v4" />
+    <path d="M4 10h16v-2.5a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2Z" fill={color} fill-opacity="0.35" stroke="none" />
+    <circle cx="9" cy="14" r="1" fill={color} stroke="none" />
+    <circle cx="15" cy="14" r="1" fill={color} stroke="none" />
+    <circle cx="9" cy="17" r="1" fill={color} stroke="none" />
+  {:else if name === "user"}
+    <circle cx="12" cy="8.5" r="3.5" fill={color} fill-opacity="0.35" />
+    <path d="M5 20c.8-3.6 3.6-5.5 7-5.5s6.2 1.9 7 5.5" />
   {/if}
 </svg>

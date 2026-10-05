@@ -10,7 +10,16 @@ export const ui = $state({
   // Tuininstellingen (GardenSettingsModal.svelte): te openen vanuit de
   // tuinkiezer in de header en vanaf "Mijn tuin".
   gardenSettingsOpen: false,
+  // Mobiele weergave (kopbalk + onderbalk i.p.v. de desktop-header). Zelfde
+  // grens als de @media (max-width: 34rem) in app.css.
+  isMobile: false,
 });
+
+if (typeof window !== "undefined" && window.matchMedia) {
+  const mobileQuery = window.matchMedia("(max-width: 34rem)");
+  ui.isMobile = mobileQuery.matches;
+  mobileQuery.addEventListener("change", (e) => (ui.isMobile = e.matches));
+}
 
 /** @param {((location: {id: string}) => void) | null} [onadded]  aangeroepen met een nieuw toegevoegde standplaats */
 export function openLocationManager(onadded = null) {
