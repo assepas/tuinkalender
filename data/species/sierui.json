@@ -4,11 +4,36 @@
   "name": "Sierui",
   "latin": "Allium hollandicum",
   "category": "bolgewas",
-  "tags": ["meerjarig", "vlinderplant"],
+  "tags": [
+    "meerjarig",
+    "vlinderplant"
+  ],
   "nativeStatus": "exoot",
-  "appearance": { "shape": "losse-wolk", "count": 8, "flowerColor": "#8C4FB0", "flowerColorName": "purper" },
-  "bloom": { "from": "05-01", "to": "06-15" },
-  "growing": { "sun": ["zon"], "soil": ["klei", "leem", "zand"], "moisture": ["normaal", "droog"], "spacingCm": 20 },
+  "appearance": {
+    "shape": "losse-wolk",
+    "count": 8,
+    "flowerColor": "#8C4FB0",
+    "flowerColorName": "purper"
+  },
+  "bloom": {
+    "from": "05-01",
+    "to": "06-15"
+  },
+  "growing": {
+    "sun": [
+      "zon"
+    ],
+    "soil": [
+      "klei",
+      "leem",
+      "zand"
+    ],
+    "moisture": [
+      "normaal",
+      "droog"
+    ],
+    "spacingCm": 20
+  },
   "info": {
     "intro": "Een bolgewas met perfecte, purperen bollen van sterretjes op lange stelen. Hij bloeit tussen de tulpen en de zomerbloeiers in en is geliefd bij bijen.",
     "water": "Weinig water nodig; natte grond in de winter vindt hij niet fijn.",
@@ -20,11 +45,24 @@
   },
   "tasks": [
     {
-      "id": "planten", "type": "planten", "window": { "kind": "dates", "from": "09-15", "to": "11-30" },
+      "id": "planten",
+      "type": "planten",
+      "window": {
+        "kind": "dates",
+        "from": "09-15",
+        "to": "11-30"
+      },
       "description": "Plant de bollen in de herfst 15 cm diep, met de punt omhoog, in groepjes op zo'n 20 cm afstand. Plant liever in groepen dan in rijtjes: dat ziet er natuurlijker uit."
     },
     {
-      "id": "blad-laten-staan", "type": "onderhoud", "window": { "kind": "dates", "from": "06-01", "to": "07-15" },
+      "id": "blad-laten-staan",
+      "type": "onderhoud",
+      "window": {
+        "kind": "dates",
+        "from": "06-01",
+        "to": "07-15"
+      },
+      "note": "Blad laten afsterven",
       "description": "Laat het blad na de bloei staan tot het geel is en vanzelf afsterft. De bol haalt er energie uit voor volgend jaar. Maai er dus nog niet overheen."
     }
   ]

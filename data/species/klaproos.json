@@ -4,11 +4,37 @@
   "name": "Klaproos",
   "latin": "Papaver rhoeas",
   "category": "vaste-plant",
-  "tags": ["eenjarig", "bloemenweide", "zelfzaaiend"],
+  "tags": [
+    "eenjarig",
+    "bloemenweide",
+    "zelfzaaiend"
+  ],
   "nativeStatus": "archeofyt",
-  "appearance": { "shape": "bloem", "count": 4, "flowerColor": "#D62F26", "flowerColorName": "rood" },
-  "bloom": { "from": "05-15", "to": "07-31" },
-  "growing": { "sun": ["zon"], "soil": ["zand", "leem", "klei"], "moisture": ["droog", "normaal"], "spacingCm": 20 },
+  "appearance": {
+    "shape": "bloem",
+    "count": 4,
+    "flowerColor": "#D62F26",
+    "flowerColorName": "rood"
+  },
+  "bloom": {
+    "from": "05-15",
+    "to": "07-31"
+  },
+  "growing": {
+    "sun": [
+      "zon"
+    ],
+    "soil": [
+      "zand",
+      "leem",
+      "klei"
+    ],
+    "moisture": [
+      "droog",
+      "normaal"
+    ],
+    "spacingCm": 20
+  },
   "info": {
     "intro": "De bekende rode akkerbloem met papierdunne bloemblaadjes. Elke bloem bloeit maar een dag, maar er komen er steeds nieuwe. Bijen halen er veel stuifmeel.",
     "water": "Heeft weinig water nodig. Alleen de zaaibedden vochtig houden tot de plantjes op zijn.",
@@ -20,16 +46,35 @@
   },
   "tasks": [
     {
-      "id": "zaaien", "type": "zaaien", "window": { "kind": "dates", "from": "09-01", "to": "10-15" },
+      "id": "zaaien",
+      "type": "zaaien",
+      "window": {
+        "kind": "dates",
+        "from": "09-01",
+        "to": "10-15"
+      },
       "note": "Of in maart-april",
       "description": "Meng het zeer fijne zaad met wat zand en strooi het uit op kale grond. Niet bedekken, alleen aandrukken. Zaaien in het najaar of heel vroeg in het voorjaar geeft de beste bloei."
     },
     {
-      "id": "zaaien-voorjaar", "type": "zaaien", "window": { "kind": "dates", "from": "03-01", "to": "04-15" },
+      "id": "zaaien-voorjaar",
+      "type": "zaaien",
+      "window": {
+        "kind": "dates",
+        "from": "03-01",
+        "to": "04-15"
+      },
       "description": "Zaaien in het voorjaar kan ook, liefst zo vroeg mogelijk. De planten bloeien dan wat later."
     },
     {
-      "id": "zaad-laten-rijpen", "type": "onderhoud", "window": { "kind": "dates", "from": "07-15", "to": "08-31" },
+      "id": "zaad-laten-rijpen",
+      "type": "onderhoud",
+      "window": {
+        "kind": "dates",
+        "from": "07-15",
+        "to": "08-31"
+      },
+      "note": "Zaad laten rijpen en uitstrooien",
       "description": "Laat een paar zaaddozen staan tot ze droog zijn en schud het zaad uit waar je volgend jaar klaprozen wilt. Werk daarna de grond los zodat het zaad kan kiemen."
     }
   ]

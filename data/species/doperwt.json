@@ -4,11 +4,36 @@
   "name": "Doperwt",
   "latin": "Pisum sativum",
   "category": "groente",
-  "tags": ["eenjarig", "klimmer"],
+  "tags": [
+    "eenjarig",
+    "klimmer"
+  ],
   "nativeStatus": "exoot",
-  "appearance": { "shape": "vrucht", "count": 5, "flowerColor": "#F4F3EA", "flowerColorName": "wit", "fruitColor": "#6FA046" },
-  "bloom": { "from": "05-15", "to": "07-15" },
-  "growing": { "sun": ["zon"], "soil": ["klei", "leem", "zand"], "moisture": ["normaal"], "spacingCm": 5 },
+  "appearance": {
+    "shape": "vrucht",
+    "count": 5,
+    "flowerColor": "#F4F3EA",
+    "flowerColorName": "wit",
+    "fruitColor": "#6FA046"
+  },
+  "bloom": {
+    "from": "05-15",
+    "to": "07-15"
+  },
+  "growing": {
+    "sun": [
+      "zon"
+    ],
+    "soil": [
+      "klei",
+      "leem",
+      "zand"
+    ],
+    "moisture": [
+      "normaal"
+    ],
+    "spacingCm": 5
+  },
   "info": {
     "intro": "Verse doperwtjes zijn zoet en heel anders dan uit een pot. Erwten houden van koel weer; zaai ze vroeg in het voorjaar.",
     "water": "Geef water in droge periodes, vooral tijdens de bloei.",
@@ -20,11 +45,23 @@
   },
   "tasks": [
     {
-      "id": "zaaien", "type": "zaaien", "window": { "kind": "dates", "from": "03-01", "to": "05-31" },
+      "id": "zaaien",
+      "type": "zaaien",
+      "window": {
+        "kind": "dates",
+        "from": "03-01",
+        "to": "05-31"
+      },
       "description": "Zaai in een dubbele rij, 4 cm diep, 5 cm uit elkaar, langs een rek of gaas."
     },
     {
-      "id": "oogsten", "type": "oogsten", "window": { "kind": "dates", "from": "06-01", "to": "07-31" },
+      "id": "oogsten",
+      "type": "oogsten",
+      "window": {
+        "kind": "dates",
+        "from": "06-01",
+        "to": "07-31"
+      },
       "description": "Pluk de peulen als ze vol zijn maar nog groen en glanzend. Pluk regelmatig: dan komen er meer."
     }
   ]

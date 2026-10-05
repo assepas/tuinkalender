@@ -4,11 +4,36 @@
   "name": "Driekleurig viooltje",
   "latin": "Viola tricolor",
   "category": "vaste-plant",
-  "tags": ["eenjarig", "zelfzaaiend", "eetbaar"],
+  "tags": [
+    "eenjarig",
+    "zelfzaaiend",
+    "eetbaar"
+  ],
   "nativeStatus": "inheems",
-  "appearance": { "shape": "bloem", "count": 5, "flowerColor": "#7B5BA6", "flowerColorName": "paars-geel-wit" },
-  "bloom": { "from": "04-01", "to": "09-30" },
-  "growing": { "sun": ["zon", "halfschaduw"], "soil": ["zand", "leem"], "moisture": ["normaal"], "spacingCm": 15 },
+  "appearance": {
+    "shape": "bloem",
+    "count": 5,
+    "flowerColor": "#7B5BA6",
+    "flowerColorName": "paars-geel-wit"
+  },
+  "bloom": {
+    "from": "04-01",
+    "to": "09-30"
+  },
+  "growing": {
+    "sun": [
+      "zon",
+      "halfschaduw"
+    ],
+    "soil": [
+      "zand",
+      "leem"
+    ],
+    "moisture": [
+      "normaal"
+    ],
+    "spacingCm": 15
+  },
   "info": {
     "intro": "Het wilde viooltje van Nederland, met kleine bloemen in paars, geel en wit. Het is de voorouder van de grote tuinviolen en bloeit maanden achter elkaar.",
     "water": "Houd de grond licht vochtig; in hete zomers wat extra water geven.",
@@ -20,11 +45,24 @@
   },
   "tasks": [
     {
-      "id": "zaaien", "type": "zaaien", "window": { "kind": "dates", "from": "03-15", "to": "05-31" },
+      "id": "zaaien",
+      "type": "zaaien",
+      "window": {
+        "kind": "dates",
+        "from": "03-15",
+        "to": "05-31"
+      },
       "description": "Strooi het zaad dun uit op de plek en bedek het nauwelijks. Zaaien in augustus-september kan ook, voor bloei vroeg in het voorjaar."
     },
     {
-      "id": "terugknippen", "type": "snoeien", "importance": "licht", "window": { "kind": "dates", "from": "07-15", "to": "08-15" },
+      "id": "terugknippen",
+      "type": "snoeien",
+      "importance": "licht",
+      "window": {
+        "kind": "dates",
+        "from": "07-15",
+        "to": "08-15"
+      },
       "description": "Knip slappe, lange planten halverwege de zomer terug tot een paar centimeter. Dan bloeien ze in de nazomer opnieuw."
     }
   ]

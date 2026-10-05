@@ -4,11 +4,37 @@
   "name": "Druif",
   "latin": "Vitis vinifera",
   "category": "fruit",
-  "tags": ["meerjarig", "klimmer"],
+  "tags": [
+    "meerjarig",
+    "klimmer"
+  ],
   "nativeStatus": "exoot",
-  "appearance": { "shape": "vrucht", "count": 10, "flowerColor": "#D3D9A0", "flowerColorName": "groen", "fruitColor": "#5B2A5E" },
-  "bloom": { "from": "06-01", "to": "06-30" },
-  "growing": { "sun": ["zon"], "soil": ["zand", "leem", "klei"], "moisture": ["normaal", "droog"], "spacingCm": 150 },
+  "appearance": {
+    "shape": "vrucht",
+    "count": 10,
+    "flowerColor": "#D3D9A0",
+    "flowerColorName": "groen",
+    "fruitColor": "#5B2A5E"
+  },
+  "bloom": {
+    "from": "06-01",
+    "to": "06-30"
+  },
+  "growing": {
+    "sun": [
+      "zon"
+    ],
+    "soil": [
+      "zand",
+      "leem",
+      "klei"
+    ],
+    "moisture": [
+      "normaal",
+      "droog"
+    ],
+    "spacingCm": 150
+  },
   "info": {
     "intro": "Een klimplant die op een zonnige muur of pergola zoete trossen druiven geeft. Kies een ras dat voor buiten in Nederland geschikt is en schimmelresistent is, zoals 'Boskoop Glory' of 'Phoenix'.",
     "water": "Geef een jonge plant water; oudere planten wortelen diep en redden zich.",
@@ -20,20 +46,45 @@
   },
   "tasks": [
     {
-      "id": "planten", "type": "planten", "window": { "kind": "dates", "from": "11-01", "to": "04-15" },
+      "id": "planten",
+      "type": "planten",
+      "window": {
+        "kind": "dates",
+        "from": "11-01",
+        "to": "04-15"
+      },
       "description": "Plant in de winterrust tegen een zonnige muur of pergola met draden."
     },
     {
-      "id": "wintersnoei", "type": "snoeien", "window": { "kind": "dates", "from": "12-01", "to": "02-15" },
+      "id": "wintersnoei",
+      "type": "snoeien",
+      "window": {
+        "kind": "dates",
+        "from": "12-01",
+        "to": "02-15"
+      },
       "note": "Voor half februari",
       "description": "Snoei in de winter de scheuten van vorig jaar terug tot 1-2 knoppen op de hoofdtakken. Na half februari 'bloedt' de druif te veel."
     },
     {
-      "id": "zomersnoei", "type": "snoeien", "importance": "licht", "window": { "kind": "dates", "from": "06-15", "to": "07-31" },
+      "id": "zomersnoei",
+      "type": "snoeien",
+      "importance": "licht",
+      "window": {
+        "kind": "dates",
+        "from": "06-15",
+        "to": "07-31"
+      },
       "description": "Knip de scheuten met trossen in tot twee bladeren voorbij de laatste tros, en haal scheuten zonder trossen weg. Zo krijgen de druiven meer zon."
     },
     {
-      "id": "oogsten", "type": "oogsten", "window": { "kind": "dates", "from": "09-01", "to": "10-15" },
+      "id": "oogsten",
+      "type": "oogsten",
+      "window": {
+        "kind": "dates",
+        "from": "09-01",
+        "to": "10-15"
+      },
       "description": "Knip hele trossen af als de druiven zoet zijn."
     }
   ]

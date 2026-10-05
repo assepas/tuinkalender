@@ -4,10 +4,29 @@
   "name": "Spruitkool",
   "latin": "Brassica oleracea var. gemmifera",
   "category": "groente",
-  "tags": ["tweejarig"],
+  "tags": [
+    "tweejarig"
+  ],
   "nativeStatus": "exoot",
-  "appearance": { "shape": "losse-wolk", "count": 3, "flowerColor": "#6F955D", "flowerColorName": "groen" },
-  "growing": { "sun": ["zon"], "soil": ["klei", "leem"], "moisture": ["normaal"], "spacingCm": 60 },
+  "appearance": {
+    "shape": "losse-wolk",
+    "count": 3,
+    "flowerColor": "#6F955D",
+    "flowerColorName": "groen"
+  },
+  "growing": {
+    "sun": [
+      "zon"
+    ],
+    "soil": [
+      "klei",
+      "leem"
+    ],
+    "moisture": [
+      "normaal"
+    ],
+    "spacingCm": 60
+  },
   "info": {
     "intro": "Een hoge kool met kleine spruitjes langs de stam. Spruitkool staat lang op het bed, maar je oogst dan ook van oktober tot in februari.",
     "water": "Geef water in droge zomers; zorg voor vaste, stevige grond.",
@@ -19,19 +38,45 @@
   },
   "tasks": [
     {
-      "id": "zaaien", "type": "zaaien", "location": "kas", "window": { "kind": "dates", "from": "03-15", "to": "04-30" },
+      "id": "zaaien",
+      "type": "zaaien",
+      "location": "kas",
+      "window": {
+        "kind": "dates",
+        "from": "03-15",
+        "to": "04-30"
+      },
       "description": "Zaai in een zaaibed of potjes, 1 cm diep."
     },
     {
-      "id": "uitplanten", "type": "planten", "window": { "kind": "dates", "from": "05-15", "to": "06-30" },
+      "id": "uitplanten",
+      "type": "planten",
+      "window": {
+        "kind": "dates",
+        "from": "05-15",
+        "to": "06-30"
+      },
       "description": "Plant op 60 cm afstand, diep en stevig aangedrukt. Zet direct na het planten insectengaas over de kool tegen koolvlieg, koolwitje en duiven."
     },
     {
-      "id": "toppen", "type": "onderhoud", "window": { "kind": "dates", "from": "09-15", "to": "10-15" },
+      "id": "toppen",
+      "type": "onderhoud",
+      "window": {
+        "kind": "dates",
+        "from": "09-15",
+        "to": "10-15"
+      },
+      "note": "Top uitknippen",
       "description": "Knip de top uit de plant; de spruiten worden dan gelijkmatiger groot."
     },
     {
-      "id": "oogsten", "type": "oogsten", "window": { "kind": "dates", "from": "10-01", "to": "02-28" },
+      "id": "oogsten",
+      "type": "oogsten",
+      "window": {
+        "kind": "dates",
+        "from": "10-01",
+        "to": "02-28"
+      },
       "description": "Breek de spruitjes van onder naar boven van de stam als ze stevig zijn."
     }
   ]

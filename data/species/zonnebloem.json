@@ -4,11 +4,36 @@
   "name": "Zonnebloem",
   "latin": "Helianthus annuus",
   "category": "vaste-plant",
-  "tags": ["eenjarig", "snijbloem", "eetbaar"],
+  "tags": [
+    "eenjarig",
+    "snijbloem",
+    "eetbaar"
+  ],
   "nativeStatus": "exoot",
-  "appearance": { "shape": "bloem", "count": 10, "flowerColor": "#F5C518", "flowerColorName": "geel" },
-  "bloom": { "from": "07-15", "to": "09-30" },
-  "growing": { "sun": ["zon"], "soil": ["zand", "leem", "klei"], "moisture": ["normaal"], "spacingCm": 50 },
+  "appearance": {
+    "shape": "bloem",
+    "count": 10,
+    "flowerColor": "#F5C518",
+    "flowerColorName": "geel"
+  },
+  "bloom": {
+    "from": "07-15",
+    "to": "09-30"
+  },
+  "growing": {
+    "sun": [
+      "zon"
+    ],
+    "soil": [
+      "zand",
+      "leem",
+      "klei"
+    ],
+    "moisture": [
+      "normaal"
+    ],
+    "spacingCm": 50
+  },
   "info": {
     "intro": "De bekende eenjarige met enorme gele bloemen die met de zon meedraaien. Makkelijk te kweken, ook voor kinderen. De zaden zijn voedsel voor vogels, of voor jezelf.",
     "water": "Geef regelmatig flink water, vooral als de bloemknoppen komen. Grote planten drinken veel.",
@@ -20,19 +45,45 @@
   },
   "tasks": [
     {
-      "id": "zaaien-binnen", "type": "zaaien", "location": "kas", "window": { "kind": "dates", "from": "04-01", "to": "04-30" },
+      "id": "zaaien-binnen",
+      "type": "zaaien",
+      "location": "kas",
+      "window": {
+        "kind": "dates",
+        "from": "04-01",
+        "to": "04-30"
+      },
       "description": "Zaai in potjes, 2 cm diep, één of twee zaden per pot. Zo zijn de plantjes groot genoeg als ze naar buiten gaan, en minder kwetsbaar voor slakken."
     },
     {
-      "id": "zaaien", "type": "zaaien", "window": { "kind": "dates", "from": "05-01", "to": "06-15" },
+      "id": "zaaien",
+      "type": "zaaien",
+      "window": {
+        "kind": "dates",
+        "from": "05-01",
+        "to": "06-15"
+      },
       "description": "Zaai direct buiten, 2 cm diep, met 50 cm tussen de plantjes. Bescherm de kiemplantjes tegen slakken."
     },
     {
-      "id": "uitplanten", "type": "planten", "window": { "kind": "relative", "anchor": "lastFrost", "fromWeeks": 0, "toWeeks": 3 },
+      "id": "uitplanten",
+      "type": "planten",
+      "window": {
+        "kind": "relative",
+        "anchor": "lastFrost",
+        "fromWeeks": 0,
+        "toWeeks": 3
+      },
       "description": "Plant voorgezaaide plantjes uit na de laatste nachtvorst, op een zonnige plek. Zet bij hoge rassen meteen een stok."
     },
     {
-      "id": "zaad-oogsten", "type": "oogsten", "window": { "kind": "dates", "from": "09-01", "to": "10-15" },
+      "id": "zaad-oogsten",
+      "type": "oogsten",
+      "window": {
+        "kind": "dates",
+        "from": "09-01",
+        "to": "10-15"
+      },
       "description": "Snijd de bloemhoofden af als de achterkant geel-bruin is en de zaden los zitten. Laat ze binnen verder drogen. Of laat ze staan voor de vogels."
     }
   ]

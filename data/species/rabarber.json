@@ -4,11 +4,36 @@
   "name": "Rabarber",
   "latin": "Rheum × hybridum",
   "category": "groente",
-  "tags": ["meerjarig", "veel-ruimte"],
+  "tags": [
+    "meerjarig",
+    "veel-ruimte"
+  ],
   "nativeStatus": "exoot",
-  "appearance": { "shape": "losse-wolk", "count": 8, "flowerColor": "#EDE3C4", "flowerColorName": "crème" },
-  "bloom": { "from": "05-15", "to": "06-30" },
-  "growing": { "sun": ["zon", "halfschaduw"], "soil": ["klei", "leem"], "moisture": ["normaal", "vochtig"], "spacingCm": 100 },
+  "appearance": {
+    "shape": "losse-wolk",
+    "count": 8,
+    "flowerColor": "#EDE3C4",
+    "flowerColorName": "crème"
+  },
+  "bloom": {
+    "from": "05-15",
+    "to": "06-30"
+  },
+  "growing": {
+    "sun": [
+      "zon",
+      "halfschaduw"
+    ],
+    "soil": [
+      "klei",
+      "leem"
+    ],
+    "moisture": [
+      "normaal",
+      "vochtig"
+    ],
+    "spacingCm": 100
+  },
   "info": {
     "intro": "Een vaste plant met grote bladeren en dikke, rode of groene stelen voor compote en taart. Eén plant geeft tien jaar of langer oogst.",
     "water": "Geef in droge zomers flink water.",
@@ -20,20 +45,45 @@
   },
   "tasks": [
     {
-      "id": "planten", "type": "planten", "window": { "kind": "dates", "from": "10-01", "to": "03-31" },
+      "id": "planten",
+      "type": "planten",
+      "window": {
+        "kind": "dates",
+        "from": "10-01",
+        "to": "03-31"
+      },
       "description": "Plant een wortelstuk met knoppen in voedzame grond, met de knoppen net onder de oppervlakte. Geef een plant 1 m² ruimte."
     },
     {
-      "id": "bemesten", "type": "bemesten", "window": { "kind": "dates", "from": "02-15", "to": "03-31" },
+      "id": "bemesten",
+      "type": "bemesten",
+      "window": {
+        "kind": "dates",
+        "from": "02-15",
+        "to": "03-31"
+      },
       "description": "Geef in het voorjaar een flinke laag compost of goed verteerde mest rond de plant."
     },
     {
-      "id": "oogsten", "type": "oogsten", "window": { "kind": "dates", "from": "04-15", "to": "06-30" },
+      "id": "oogsten",
+      "type": "oogsten",
+      "window": {
+        "kind": "dates",
+        "from": "04-15",
+        "to": "06-30"
+      },
       "note": "Tot eind juni",
       "description": "Trek de dikste stelen met een draaiende beweging los bij de voet. Neem nooit meer dan een derde van de stelen tegelijk."
     },
     {
-      "id": "bloemstengels-verwijderen", "type": "onderhoud", "window": { "kind": "dates", "from": "05-01", "to": "06-30" },
+      "id": "bloemstengels-verwijderen",
+      "type": "onderhoud",
+      "window": {
+        "kind": "dates",
+        "from": "05-01",
+        "to": "06-30"
+      },
+      "note": "Bloemstengels uitbreken",
       "description": "Breek bloemstengels direct uit zodra ze verschijnen."
     }
   ]

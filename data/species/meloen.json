@@ -4,11 +4,35 @@
   "name": "Meloen",
   "latin": "Cucumis melo",
   "category": "fruit",
-  "tags": ["eenjarig", "vorstgevoelig"],
+  "tags": [
+    "eenjarig",
+    "vorstgevoelig"
+  ],
   "nativeStatus": "exoot",
-  "appearance": { "shape": "vrucht", "count": 1, "flowerColor": "#EFD13A", "flowerColorName": "geel", "fruitColor": "#D7C07A" },
-  "bloom": { "from": "06-15", "to": "08-15" },
-  "growing": { "sun": ["zon"], "soil": ["klei", "leem"], "moisture": ["normaal"], "spacingCm": 80 },
+  "appearance": {
+    "shape": "vrucht",
+    "count": 1,
+    "flowerColor": "#EFD13A",
+    "flowerColorName": "geel",
+    "fruitColor": "#D7C07A"
+  },
+  "bloom": {
+    "from": "06-15",
+    "to": "08-15"
+  },
+  "growing": {
+    "sun": [
+      "zon"
+    ],
+    "soil": [
+      "klei",
+      "leem"
+    ],
+    "moisture": [
+      "normaal"
+    ],
+    "spacingCm": 80
+  },
   "info": {
     "intro": "Een eigen meloen lukt in Nederland in een kas of koude bak, of buiten tegen een hete muur in een zonnige zomer. Kies een snel rijpend ras zoals een cantaloupe.",
     "water": "Geef regelmatig water tot de vruchten groot zijn; daarna minder, dan worden ze zoeter.",
@@ -20,20 +44,47 @@
   },
   "tasks": [
     {
-      "id": "zaaien-binnen", "type": "zaaien", "location": "kas", "window": { "kind": "dates", "from": "04-01", "to": "05-01" },
+      "id": "zaaien-binnen",
+      "type": "zaaien",
+      "location": "kas",
+      "window": {
+        "kind": "dates",
+        "from": "04-01",
+        "to": "05-01"
+      },
       "description": "Zaai binnen in potjes op 25 °C, 1 zaad per pot."
     },
     {
-      "id": "uitplanten", "type": "planten", "window": { "kind": "relative", "anchor": "lastFrost", "fromWeeks": 2, "toWeeks": 5 },
+      "id": "uitplanten",
+      "type": "planten",
+      "window": {
+        "kind": "relative",
+        "anchor": "lastFrost",
+        "fromWeeks": 2,
+        "toWeeks": 5
+      },
       "note": "Pas bij warm weer",
       "description": "Plant in de kas of in een koude bak als het warm blijft."
     },
     {
-      "id": "toppen", "type": "snoeien", "importance": "licht", "window": { "kind": "dates", "from": "06-15", "to": "07-31" },
+      "id": "toppen",
+      "type": "snoeien",
+      "importance": "licht",
+      "window": {
+        "kind": "dates",
+        "from": "06-15",
+        "to": "07-31"
+      },
       "description": "Knip de hoofdscheut na vijf bladeren in. Laat vier zijscheuten groeien en knip die in twee bladeren voorbij een vrucht."
     },
     {
-      "id": "oogsten", "type": "oogsten", "window": { "kind": "dates", "from": "08-01", "to": "09-30" },
+      "id": "oogsten",
+      "type": "oogsten",
+      "window": {
+        "kind": "dates",
+        "from": "08-01",
+        "to": "09-30"
+      },
       "description": "Oogst als de meloen zoet ruikt en het steeltje een scheurtje krijgt bij de vrucht."
     }
   ]

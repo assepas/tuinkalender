@@ -4,11 +4,36 @@
   "name": "Snijboon",
   "latin": "Phaseolus vulgaris",
   "category": "groente",
-  "tags": ["eenjarig", "klimmer", "vorstgevoelig"],
+  "tags": [
+    "eenjarig",
+    "klimmer",
+    "vorstgevoelig"
+  ],
   "nativeStatus": "exoot",
-  "appearance": { "shape": "bloem", "count": 5, "flowerColor": "#F3EFE6", "flowerColorName": "wit" },
-  "bloom": { "from": "07-01", "to": "09-15" },
-  "growing": { "sun": ["zon"], "soil": ["klei", "leem", "zand"], "moisture": ["normaal"], "spacingCm": 20 },
+  "appearance": {
+    "shape": "bloem",
+    "count": 5,
+    "flowerColor": "#F3EFE6",
+    "flowerColorName": "wit"
+  },
+  "bloom": {
+    "from": "07-01",
+    "to": "09-15"
+  },
+  "growing": {
+    "sun": [
+      "zon"
+    ],
+    "soil": [
+      "klei",
+      "leem",
+      "zand"
+    ],
+    "moisture": [
+      "normaal"
+    ],
+    "spacingCm": 20
+  },
   "info": {
     "intro": "Een klimboon met lange, platte peulen die je in stukken snijdt. Een klassieker uit de Nederlandse moestuin, lekker vers en goed in te maken.",
     "water": "Geef in droge periodes water, vooral tijdens de bloei.",
@@ -20,12 +45,26 @@
   },
   "tasks": [
     {
-      "id": "zaaien", "type": "zaaien", "window": { "kind": "relative", "anchor": "lastFrost", "fromWeeks": 0, "toWeeks": 4 },
+      "id": "zaaien",
+      "type": "zaaien",
+      "window": {
+        "kind": "relative",
+        "anchor": "lastFrost",
+        "fromWeeks": 0,
+        "toWeeks": 4
+      },
       "note": "Na de laatste nachtvorst",
       "description": "Zaai na de laatste nachtvorst 3-4 cm diep bij elke stok, vier à zes bonen per stok."
     },
     {
-      "id": "oogsten", "type": "oogsten", "window": { "kind": "recurring", "from": "07-15", "to": "09-30", "every": "week" },
+      "id": "oogsten",
+      "type": "oogsten",
+      "window": {
+        "kind": "recurring",
+        "from": "07-15",
+        "to": "09-30",
+        "every": "week"
+      },
       "description": "Pluk de peulen om de paar dagen als ze 15-20 cm lang en nog glad zijn."
     }
   ]

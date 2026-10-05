@@ -4,10 +4,33 @@
   "name": "Vijg",
   "latin": "Ficus carica",
   "category": "fruit",
-  "tags": ["meerjarig", "mediterraan"],
+  "tags": [
+    "meerjarig",
+    "mediterraan"
+  ],
   "nativeStatus": "exoot",
-  "appearance": { "shape": "vrucht", "count": 3, "flowerColor": "#8FA56A", "flowerColorName": "groen", "fruitColor": "#6B3A5E" },
-  "growing": { "sun": ["zon"], "soil": ["zand", "leem", "klei"], "moisture": ["normaal", "droog"], "spacingCm": 300 },
+  "appearance": {
+    "shape": "vrucht",
+    "count": 3,
+    "flowerColor": "#8FA56A",
+    "flowerColorName": "groen",
+    "fruitColor": "#6B3A5E"
+  },
+  "growing": {
+    "sun": [
+      "zon"
+    ],
+    "soil": [
+      "zand",
+      "leem",
+      "klei"
+    ],
+    "moisture": [
+      "normaal",
+      "droog"
+    ],
+    "spacingCm": 300
+  },
   "info": {
     "intro": "Een mediterrane struik met grote, gelobde bladeren en zoete vijgen. Tegen een zonnige muur is hij in Nederland winterhard genoeg en geeft hij in de nazomer vruchten.",
     "water": "Geef water in droge zomers; in een pot vaker.",
@@ -19,19 +42,43 @@
   },
   "tasks": [
     {
-      "id": "planten", "type": "planten", "window": { "kind": "dates", "from": "04-15", "to": "05-31" },
+      "id": "planten",
+      "type": "planten",
+      "window": {
+        "kind": "dates",
+        "from": "04-15",
+        "to": "05-31"
+      },
       "description": "Plant in het voorjaar tegen een zonnige, beschutte muur."
     },
     {
-      "id": "snoeien", "type": "snoeien", "window": { "kind": "dates", "from": "03-15", "to": "04-30" },
+      "id": "snoeien",
+      "type": "snoeien",
+      "window": {
+        "kind": "dates",
+        "from": "03-15",
+        "to": "04-30"
+      },
       "description": "Snoei in het voorjaar bevroren, dode en kruisende takken weg. Laat de kleine vijgjes aan de toppen zitten: die rijpen deze zomer."
     },
     {
-      "id": "winterhard", "type": "winterhard", "window": { "kind": "dates", "from": "11-15", "to": "12-15" },
+      "id": "winterhard",
+      "type": "winterhard",
+      "window": {
+        "kind": "dates",
+        "from": "11-15",
+        "to": "12-15"
+      },
       "description": "Bescherm jonge planten in strenge winters met vliesdoek of een dikke laag blad rond de voet. Zet een pot in een koele schuur."
     },
     {
-      "id": "oogsten", "type": "oogsten", "window": { "kind": "dates", "from": "08-15", "to": "10-15" },
+      "id": "oogsten",
+      "type": "oogsten",
+      "window": {
+        "kind": "dates",
+        "from": "08-15",
+        "to": "10-15"
+      },
       "description": "Pluk de vijgen als ze zacht zijn en aan het steeltje hangen. Ze rijpen niet na."
     }
   ]

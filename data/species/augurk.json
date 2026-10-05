@@ -4,11 +4,37 @@
   "name": "Augurk",
   "latin": "Cucumis sativus",
   "category": "groente",
-  "tags": ["eenjarig", "vorstgevoelig"],
+  "tags": [
+    "eenjarig",
+    "vorstgevoelig"
+  ],
   "nativeStatus": "exoot",
-  "appearance": { "shape": "vrucht", "count": 3, "flowerColor": "#EFD13A", "flowerColorName": "geel", "fruitColor": "#4B7D3A" },
-  "bloom": { "from": "06-15", "to": "09-15" },
-  "growing": { "sun": ["zon"], "soil": ["klei", "leem", "zand"], "moisture": ["normaal", "vochtig"], "spacingCm": 50 },
+  "appearance": {
+    "shape": "vrucht",
+    "count": 3,
+    "flowerColor": "#EFD13A",
+    "flowerColorName": "geel",
+    "fruitColor": "#4B7D3A"
+  },
+  "bloom": {
+    "from": "06-15",
+    "to": "09-15"
+  },
+  "growing": {
+    "sun": [
+      "zon"
+    ],
+    "soil": [
+      "klei",
+      "leem",
+      "zand"
+    ],
+    "moisture": [
+      "normaal",
+      "vochtig"
+    ],
+    "spacingCm": 50
+  },
   "info": {
     "intro": "Kleine, stevige komkommertjes om in te maken. Augurken doen het goed buiten en geven in de zomer een grote oogst in korte tijd.",
     "water": "Geef in warme periodes regelmatig water op de grond.",
@@ -20,15 +46,36 @@
   },
   "tasks": [
     {
-      "id": "zaaien-binnen", "type": "zaaien", "location": "kas", "window": { "kind": "dates", "from": "04-15", "to": "05-15" },
+      "id": "zaaien-binnen",
+      "type": "zaaien",
+      "location": "kas",
+      "window": {
+        "kind": "dates",
+        "from": "04-15",
+        "to": "05-15"
+      },
       "description": "Zaai binnen in potjes, 1 cm diep, op een warme plek."
     },
     {
-      "id": "uitplanten", "type": "planten", "window": { "kind": "relative", "anchor": "lastFrost", "fromWeeks": 1, "toWeeks": 4 },
+      "id": "uitplanten",
+      "type": "planten",
+      "window": {
+        "kind": "relative",
+        "anchor": "lastFrost",
+        "fromWeeks": 1,
+        "toWeeks": 4
+      },
       "description": "Plant uit na de laatste nachtvorst op een zonnige, beschutte plek."
     },
     {
-      "id": "oogsten", "type": "oogsten", "window": { "kind": "recurring", "from": "07-15", "to": "09-15", "every": "week" },
+      "id": "oogsten",
+      "type": "oogsten",
+      "window": {
+        "kind": "recurring",
+        "from": "07-15",
+        "to": "09-15",
+        "every": "week"
+      },
       "description": "Pluk de augurken om de paar dagen als ze 5-8 cm lang zijn."
     }
   ]

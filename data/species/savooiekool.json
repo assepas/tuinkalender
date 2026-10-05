@@ -4,10 +4,29 @@
   "name": "Savooiekool",
   "latin": "Brassica oleracea var. sabauda",
   "category": "groente",
-  "tags": ["eenjarig"],
+  "tags": [
+    "eenjarig"
+  ],
   "nativeStatus": "exoot",
-  "appearance": { "shape": "losse-wolk", "count": 4, "flowerColor": "#8BA66A", "flowerColorName": "groen" },
-  "growing": { "sun": ["zon"], "soil": ["klei", "leem"], "moisture": ["normaal"], "spacingCm": 60 },
+  "appearance": {
+    "shape": "losse-wolk",
+    "count": 4,
+    "flowerColor": "#8BA66A",
+    "flowerColorName": "groen"
+  },
+  "growing": {
+    "sun": [
+      "zon"
+    ],
+    "soil": [
+      "klei",
+      "leem"
+    ],
+    "moisture": [
+      "normaal"
+    ],
+    "spacingCm": 60
+  },
   "info": {
     "intro": "Een kool met gekruld, gebobbeld blad. Hij is malser dan witte kool en goed winterhard: late rassen kun je tot in de winter oogsten.",
     "water": "Geef in droge zomers water.",
@@ -19,15 +38,34 @@
   },
   "tasks": [
     {
-      "id": "zaaien", "type": "zaaien", "location": "kas", "window": { "kind": "dates", "from": "04-01", "to": "05-31" },
+      "id": "zaaien",
+      "type": "zaaien",
+      "location": "kas",
+      "window": {
+        "kind": "dates",
+        "from": "04-01",
+        "to": "05-31"
+      },
       "description": "Zaai in potjes of een zaaibed, 1 cm diep."
     },
     {
-      "id": "uitplanten", "type": "planten", "window": { "kind": "dates", "from": "05-15", "to": "07-15" },
+      "id": "uitplanten",
+      "type": "planten",
+      "window": {
+        "kind": "dates",
+        "from": "05-15",
+        "to": "07-15"
+      },
       "description": "Plant op 60 cm afstand. Zet direct na het planten insectengaas over de kool tegen koolvlieg, koolwitje en duiven."
     },
     {
-      "id": "oogsten", "type": "oogsten", "window": { "kind": "dates", "from": "09-01", "to": "01-31" },
+      "id": "oogsten",
+      "type": "oogsten",
+      "window": {
+        "kind": "dates",
+        "from": "09-01",
+        "to": "01-31"
+      },
       "description": "Snijd de kool af als hij vol is."
     }
   ]

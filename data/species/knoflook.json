@@ -4,10 +4,32 @@
   "name": "Knoflook",
   "latin": "Allium sativum",
   "category": "groente",
-  "tags": ["eenjarig", "eetbaar"],
+  "tags": [
+    "eenjarig",
+    "eetbaar"
+  ],
   "nativeStatus": "exoot",
-  "appearance": { "shape": "losse-wolk", "count": 5, "flowerColor": "#EDE3EE", "flowerColorName": "wit-lila" },
-  "growing": { "sun": ["zon"], "soil": ["zand", "leem", "klei"], "moisture": ["normaal", "droog"], "spacingCm": 15 },
+  "appearance": {
+    "shape": "losse-wolk",
+    "count": 5,
+    "flowerColor": "#EDE3EE",
+    "flowerColorName": "wit-lila"
+  },
+  "growing": {
+    "sun": [
+      "zon"
+    ],
+    "soil": [
+      "zand",
+      "leem",
+      "klei"
+    ],
+    "moisture": [
+      "normaal",
+      "droog"
+    ],
+    "spacingCm": 15
+  },
   "info": {
     "intro": "Knoflook poot je in de herfst en oogst je de volgende zomer. Het is weinig werk en een eigen oogst is veel sterker van smaak dan winkelknoflook.",
     "water": "Weinig water nodig; alleen in een droog voorjaar. Natte grond laat de tenen rotten.",
@@ -19,12 +41,24 @@
   },
   "tasks": [
     {
-      "id": "poten", "type": "planten", "window": { "kind": "dates", "from": "10-01", "to": "11-30" },
+      "id": "poten",
+      "type": "planten",
+      "window": {
+        "kind": "dates",
+        "from": "10-01",
+        "to": "11-30"
+      },
       "note": "In de herfst poten",
       "description": "Haal de bol uit elkaar en poot de grootste tenen 5 cm diep, met de punt omhoog, op 15 cm afstand."
     },
     {
-      "id": "oogsten", "type": "oogsten", "window": { "kind": "dates", "from": "06-15", "to": "07-31" },
+      "id": "oogsten",
+      "type": "oogsten",
+      "window": {
+        "kind": "dates",
+        "from": "06-15",
+        "to": "07-31"
+      },
       "description": "Oogst als de onderste helft van het blad geel is. Graaf de bollen uit en laat ze twee weken drogen op een luchtige, schaduwrijke plek."
     }
   ]

@@ -4,10 +4,30 @@
   "name": "Ui",
   "latin": "Allium cepa",
   "category": "groente",
-  "tags": ["eenjarig"],
+  "tags": [
+    "eenjarig"
+  ],
   "nativeStatus": "exoot",
-  "appearance": { "shape": "losse-wolk", "count": 5, "flowerColor": "#F0EDE4", "flowerColorName": "wit" },
-  "growing": { "sun": ["zon"], "soil": ["klei", "leem", "zand"], "moisture": ["normaal"], "spacingCm": 10 },
+  "appearance": {
+    "shape": "losse-wolk",
+    "count": 5,
+    "flowerColor": "#F0EDE4",
+    "flowerColorName": "wit"
+  },
+  "growing": {
+    "sun": [
+      "zon"
+    ],
+    "soil": [
+      "klei",
+      "leem",
+      "zand"
+    ],
+    "moisture": [
+      "normaal"
+    ],
+    "spacingCm": 10
+  },
   "info": {
     "intro": "Uien zijn makkelijk te telen uit plantuitjes (kleine bolletjes). In het voorjaar gepoot, oogst je ze in de zomer, en goed gedroogd bewaar je ze maanden.",
     "water": "Geef water in droge periodes tot eind juni. Daarna juist droog houden, zodat de uien rijpen.",
@@ -19,11 +39,23 @@
   },
   "tasks": [
     {
-      "id": "poten", "type": "planten", "window": { "kind": "dates", "from": "03-15", "to": "04-30" },
+      "id": "poten",
+      "type": "planten",
+      "window": {
+        "kind": "dates",
+        "from": "03-15",
+        "to": "04-30"
+      },
       "description": "Druk de plantuitjes met de punt omhoog in de grond, zo dat het puntje er net bovenuit steekt. Houd 10 cm tussen de uitjes en 25 cm tussen de rijen."
     },
     {
-      "id": "oogsten", "type": "oogsten", "window": { "kind": "dates", "from": "07-15", "to": "08-31" },
+      "id": "oogsten",
+      "type": "oogsten",
+      "window": {
+        "kind": "dates",
+        "from": "07-15",
+        "to": "08-31"
+      },
       "description": "Oogst als het loof omvalt en geel wordt. Trek de uien uit en laat ze op een droge dag een paar dagen op het bed of onder een afdak drogen."
     }
   ]

@@ -4,10 +4,30 @@
   "name": "Witlof",
   "latin": "Cichorium intybus var. foliosum",
   "category": "groente",
-  "tags": ["tweejarig"],
+  "tags": [
+    "tweejarig"
+  ],
   "nativeStatus": "exoot",
-  "appearance": { "shape": "bloem", "count": 10, "flowerColor": "#7FA3E0", "flowerColorName": "lichtblauw" },
-  "growing": { "sun": ["zon"], "soil": ["zand", "leem", "klei"], "moisture": ["normaal"], "spacingCm": 10 },
+  "appearance": {
+    "shape": "bloem",
+    "count": 10,
+    "flowerColor": "#7FA3E0",
+    "flowerColorName": "lichtblauw"
+  },
+  "growing": {
+    "sun": [
+      "zon"
+    ],
+    "soil": [
+      "zand",
+      "leem",
+      "klei"
+    ],
+    "moisture": [
+      "normaal"
+    ],
+    "spacingCm": 10
+  },
   "info": {
     "intro": "Een Belgisch-Nederlandse specialiteit in twee stappen: in de zomer kweek je de wortels op het bed, in de winter laat je ze in het donker trekken tot de bekende witte stronkjes.",
     "water": "Houd de grond vochtig tot de plantjes op zijn.",
@@ -19,16 +39,35 @@
   },
   "tasks": [
     {
-      "id": "zaaien", "type": "zaaien", "window": { "kind": "dates", "from": "05-15", "to": "06-15" },
+      "id": "zaaien",
+      "type": "zaaien",
+      "window": {
+        "kind": "dates",
+        "from": "05-15",
+        "to": "06-15"
+      },
       "description": "Zaai in rijen op 30 cm afstand, 1 cm diep, en dun uit tot 10 cm."
     },
     {
-      "id": "wortels-rooien", "type": "oogsten", "window": { "kind": "dates", "from": "10-15", "to": "11-30" },
+      "id": "wortels-rooien",
+      "type": "oogsten",
+      "window": {
+        "kind": "dates",
+        "from": "10-15",
+        "to": "11-30"
+      },
       "note": "Wortels opslaan om te trekken",
       "description": "Steek de wortels uit, snijd het blad af tot 2-3 cm boven de wortel en bewaar ze koel in zand."
     },
     {
-      "id": "trekken", "type": "onderhoud", "window": { "kind": "dates", "from": "11-15", "to": "03-15" },
+      "id": "trekken",
+      "type": "onderhoud",
+      "window": {
+        "kind": "dates",
+        "from": "11-15",
+        "to": "03-15"
+      },
+      "note": "Lof trekken in het donker",
       "description": "Zet de wortels rechtop in een emmer met vochtige aarde, dek af zodat het helemaal donker is en zet op 10-15 °C. Na drie à vier weken oogst je de witlofstronkjes."
     }
   ]

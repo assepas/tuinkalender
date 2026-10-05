@@ -4,11 +4,38 @@
   "name": "Courgette",
   "latin": "Cucurbita pepo",
   "category": "groente",
-  "tags": ["eenjarig", "vorstgevoelig", "veel-ruimte"],
+  "tags": [
+    "eenjarig",
+    "vorstgevoelig",
+    "veel-ruimte"
+  ],
   "nativeStatus": "exoot",
-  "appearance": { "shape": "vrucht", "count": 1, "flowerColor": "#E8A93A", "flowerColorName": "geel", "fruitColor": "#3F6B2E" },
-  "bloom": { "from": "06-15", "to": "09-15" },
-  "growing": { "sun": ["zon"], "soil": ["klei", "leem", "zand"], "moisture": ["normaal", "vochtig"], "spacingCm": 100 },
+  "appearance": {
+    "shape": "vrucht",
+    "count": 1,
+    "flowerColor": "#E8A93A",
+    "flowerColorName": "geel",
+    "fruitColor": "#3F6B2E"
+  },
+  "bloom": {
+    "from": "06-15",
+    "to": "09-15"
+  },
+  "growing": {
+    "sun": [
+      "zon"
+    ],
+    "soil": [
+      "klei",
+      "leem",
+      "zand"
+    ],
+    "moisture": [
+      "normaal",
+      "vochtig"
+    ],
+    "spacingCm": 100
+  },
   "info": {
     "intro": "Een van de makkelijkste en productiefste groenten: één of twee planten zijn genoeg voor een gezin. Hij wil wel warmte, veel ruimte en rijke grond.",
     "water": "Geef regelmatig flink water op de grond, niet over het blad. Vooral als er vruchten groeien drinkt hij veel.",
@@ -20,20 +47,48 @@
   },
   "tasks": [
     {
-      "id": "zaaien-binnen", "type": "zaaien", "location": "kas", "window": { "kind": "dates", "from": "04-15", "to": "05-15" },
+      "id": "zaaien-binnen",
+      "type": "zaaien",
+      "location": "kas",
+      "window": {
+        "kind": "dates",
+        "from": "04-15",
+        "to": "05-15"
+      },
       "description": "Zaai binnen in potjes van 8-10 cm, één zaad per pot, 2 cm diep, op kant. Zet ze op een warme, lichte plek."
     },
     {
-      "id": "uitplanten", "type": "planten", "window": { "kind": "relative", "anchor": "lastFrost", "fromWeeks": 0, "toWeeks": 3 },
+      "id": "uitplanten",
+      "type": "planten",
+      "window": {
+        "kind": "relative",
+        "anchor": "lastFrost",
+        "fromWeeks": 0,
+        "toWeeks": 3
+      },
       "note": "Pas na de laatste nachtvorst",
       "description": "Plant uit na de laatste nachtvorst, op minstens 1 meter afstand in grond met veel compost. Bescherm jonge planten tegen slakken."
     },
     {
-      "id": "bemesten", "type": "bemesten", "window": { "kind": "recurring", "from": "06-15", "to": "08-31", "every": "2weeks" },
+      "id": "bemesten",
+      "type": "bemesten",
+      "window": {
+        "kind": "recurring",
+        "from": "06-15",
+        "to": "08-31",
+        "every": "2weeks"
+      },
       "description": "Geef om de twee weken vloeibare organische mest of gier van smeerwortel of brandnetel."
     },
     {
-      "id": "oogsten", "type": "oogsten", "window": { "kind": "recurring", "from": "07-01", "to": "10-01", "every": "week" },
+      "id": "oogsten",
+      "type": "oogsten",
+      "window": {
+        "kind": "recurring",
+        "from": "07-01",
+        "to": "10-01",
+        "every": "week"
+      },
       "note": "Vaak en klein plukken",
       "description": "Kijk minstens twee keer per week en snijd courgettes af als ze 15-20 cm zijn. Een vergeten courgette wordt snel een grote, waterige vrucht en remt de plant."
     }

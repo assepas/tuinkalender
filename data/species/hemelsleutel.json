@@ -4,11 +4,37 @@
   "name": "Hemelsleutel",
   "latin": "Hylotelephium spectabile",
   "category": "vaste-plant",
-  "tags": ["meerjarig", "vlinderplant", "droogtebestendig"],
+  "tags": [
+    "meerjarig",
+    "vlinderplant",
+    "droogtebestendig"
+  ],
   "nativeStatus": "exoot",
-  "appearance": { "shape": "losse-wolk", "count": 8, "flowerColor": "#D6729A", "flowerColorName": "roze" },
-  "bloom": { "from": "08-15", "to": "10-15" },
-  "growing": { "sun": ["zon"], "soil": ["klei", "leem", "zand"], "moisture": ["droog", "normaal"], "spacingCm": 40 },
+  "appearance": {
+    "shape": "losse-wolk",
+    "count": 8,
+    "flowerColor": "#D6729A",
+    "flowerColorName": "roze"
+  },
+  "bloom": {
+    "from": "08-15",
+    "to": "10-15"
+  },
+  "growing": {
+    "sun": [
+      "zon"
+    ],
+    "soil": [
+      "klei",
+      "leem",
+      "zand"
+    ],
+    "moisture": [
+      "droog",
+      "normaal"
+    ],
+    "spacingCm": 40
+  },
   "info": {
     "intro": "Een vetplant met dikke, grijsgroene blaadjes en brede, roze bloemschermen in de nazomer. Vlinders zoals de dagpauwoog en de atalanta zitten er vaak op.",
     "water": "Heeft nauwelijks water nodig.",
@@ -20,15 +46,34 @@
   },
   "tasks": [
     {
-      "id": "planten", "type": "planten", "window": { "kind": "dates", "from": "03-15", "to": "05-15" },
+      "id": "planten",
+      "type": "planten",
+      "window": {
+        "kind": "dates",
+        "from": "03-15",
+        "to": "05-15"
+      },
       "description": "Plant op een zonnige plek in doorlatende grond, op zo'n 40 cm afstand."
     },
     {
-      "id": "innijpen", "type": "snoeien", "importance": "licht", "window": { "kind": "dates", "from": "06-01", "to": "06-30" },
+      "id": "innijpen",
+      "type": "snoeien",
+      "importance": "licht",
+      "window": {
+        "kind": "dates",
+        "from": "06-01",
+        "to": "06-30"
+      },
       "description": "Knip in juni de stengels een derde in als de plant op rijke grond staat. Hij blijft dan compact en valt niet open."
     },
     {
-      "id": "terugknippen", "type": "snoeien", "window": { "kind": "dates", "from": "03-01", "to": "03-31" },
+      "id": "terugknippen",
+      "type": "snoeien",
+      "window": {
+        "kind": "dates",
+        "from": "03-01",
+        "to": "03-31"
+      },
       "description": "Knip de oude stengels in maart af, net boven de nieuwe scheuten."
     }
   ]

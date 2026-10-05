@@ -4,11 +4,36 @@
   "name": "Gulden sleutelbloem",
   "latin": "Primula veris",
   "category": "vaste-plant",
-  "tags": ["meerjarig", "voorjaarsbloeier", "bloemenweide"],
+  "tags": [
+    "meerjarig",
+    "voorjaarsbloeier",
+    "bloemenweide"
+  ],
   "nativeStatus": "inheems",
-  "appearance": { "shape": "losse-wolk", "count": 6, "flowerColor": "#F2C230", "flowerColorName": "dottergeel" },
-  "bloom": { "from": "04-01", "to": "05-15" },
-  "growing": { "sun": ["zon", "halfschaduw"], "soil": ["klei", "leem"], "moisture": ["normaal"], "spacingCm": 20 },
+  "appearance": {
+    "shape": "losse-wolk",
+    "count": 6,
+    "flowerColor": "#F2C230",
+    "flowerColorName": "dottergeel"
+  },
+  "bloom": {
+    "from": "04-01",
+    "to": "05-15"
+  },
+  "growing": {
+    "sun": [
+      "zon",
+      "halfschaduw"
+    ],
+    "soil": [
+      "klei",
+      "leem"
+    ],
+    "moisture": [
+      "normaal"
+    ],
+    "spacingCm": 20
+  },
   "info": {
     "intro": "Een inheems voorjaarsbloempje met knikkende, geurende gele bloemen aan een stevige steel. Het groeit in schrale hooilanden en op dijken, en past mooi in een bloemrijk gazon.",
     "water": "Houd de grond licht vochtig in het voorjaar; in de zomer rust de plant.",
@@ -20,11 +45,24 @@
   },
   "tasks": [
     {
-      "id": "planten", "type": "planten", "window": { "kind": "dates", "from": "09-15", "to": "10-31" },
+      "id": "planten",
+      "type": "planten",
+      "window": {
+        "kind": "dates",
+        "from": "09-15",
+        "to": "10-31"
+      },
       "description": "Plant in het najaar op zo'n 20 cm afstand. Vers zaad kun je ook direct na het rijpen in de zomer uitzaaien."
     },
     {
-      "id": "niet-maaien", "type": "onderhoud", "window": { "kind": "dates", "from": "04-01", "to": "06-15" },
+      "id": "niet-maaien",
+      "type": "onderhoud",
+      "window": {
+        "kind": "dates",
+        "from": "04-01",
+        "to": "06-15"
+      },
+      "note": "Pas maaien na half juni",
       "description": "Maai de plekken met sleutelbloemen pas na half juni, zodat ze zaad kunnen zetten."
     }
   ]

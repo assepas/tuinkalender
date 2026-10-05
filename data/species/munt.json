@@ -4,11 +4,38 @@
   "name": "Munt",
   "latin": "Mentha spp.",
   "category": "kruid",
-  "tags": ["meerjarig", "woekert"],
+  "tags": [
+    "meerjarig",
+    "woekert"
+  ],
   "nativeStatus": "onbekend",
-  "appearance": { "shape": "aar", "count": 6, "flowerColor": "#C598B8", "flowerColorName": "lila" },
-  "bloom": { "from": "07-01", "to": "09-01" },
-  "growing": { "sun": ["zon", "halfschaduw"], "soil": ["klei", "leem", "zand", "veen"], "moisture": ["vochtig", "normaal"], "spacingCm": 40 },
+  "appearance": {
+    "shape": "aar",
+    "count": 6,
+    "flowerColor": "#C598B8",
+    "flowerColorName": "lila"
+  },
+  "bloom": {
+    "from": "07-01",
+    "to": "09-01"
+  },
+  "growing": {
+    "sun": [
+      "zon",
+      "halfschaduw"
+    ],
+    "soil": [
+      "klei",
+      "leem",
+      "zand",
+      "veen"
+    ],
+    "moisture": [
+      "vochtig",
+      "normaal"
+    ],
+    "spacingCm": 40
+  },
   "info": {
     "intro": "Een onverwoestbaar, fris keukenkruid voor thee, mojito en salades. Er zijn veel smaken, zoals pepermunt, marokkaanse munt en appelmunt.",
     "water": "Munt houdt van vochtige grond. Geef in de zomer regelmatig water, zeker in een pot, want die droogt snel uit.",
@@ -20,16 +47,34 @@
   },
   "tasks": [
     {
-      "id": "planten", "type": "planten", "window": { "kind": "dates", "from": "04-01", "to": "05-15" },
+      "id": "planten",
+      "type": "planten",
+      "window": {
+        "kind": "dates",
+        "from": "04-01",
+        "to": "05-15"
+      },
       "note": "In een pot of met wortelbegrenzing",
       "description": "Plant munt in een grote pot, of graaf in de volle grond een emmer of bak zonder bodem in en plant hem daarin. Zo houd je de uitlopers binnen de perken. Geef na het planten flink water."
     },
     {
-      "id": "oogsten", "type": "oogsten", "window": { "kind": "dates", "from": "05-01", "to": "09-30" },
+      "id": "oogsten",
+      "type": "oogsten",
+      "window": {
+        "kind": "dates",
+        "from": "05-01",
+        "to": "09-30"
+      },
       "description": "Knip hele stengels af tot net boven een paar blaadjes; de plant loopt daar weer uit. Voor de voorraad kun je vlak voor de bloei bosjes knippen en die ondersteboven laten drogen."
     },
     {
-      "id": "delen", "type": "delen", "window": { "kind": "dates", "from": "03-15", "to": "04-15" },
+      "id": "delen",
+      "type": "delen",
+      "window": {
+        "kind": "dates",
+        "from": "03-15",
+        "to": "04-15"
+      },
       "description": "Munt wordt na een paar jaar kaal in het midden. Haal de plant in het voorjaar uit de pot, snijd een stuk van de buitenkant af met frisse wortels en plant dat terug in verse grond."
     }
   ]

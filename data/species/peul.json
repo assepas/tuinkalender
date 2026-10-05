@@ -4,11 +4,36 @@
   "name": "Peul en sugarsnap",
   "latin": "Pisum sativum var. saccharatum",
   "category": "groente",
-  "tags": ["eenjarig", "klimmer"],
+  "tags": [
+    "eenjarig",
+    "klimmer"
+  ],
   "nativeStatus": "exoot",
-  "appearance": { "shape": "vrucht", "count": 3, "flowerColor": "#F4F3EA", "flowerColorName": "wit", "fruitColor": "#6FA046" },
-  "bloom": { "from": "05-15", "to": "07-15" },
-  "growing": { "sun": ["zon"], "soil": ["klei", "leem", "zand"], "moisture": ["normaal"], "spacingCm": 5 },
+  "appearance": {
+    "shape": "vrucht",
+    "count": 3,
+    "flowerColor": "#F4F3EA",
+    "flowerColorName": "wit",
+    "fruitColor": "#6FA046"
+  },
+  "bloom": {
+    "from": "05-15",
+    "to": "07-15"
+  },
+  "growing": {
+    "sun": [
+      "zon"
+    ],
+    "soil": [
+      "klei",
+      "leem",
+      "zand"
+    ],
+    "moisture": [
+      "normaal"
+    ],
+    "spacingCm": 5
+  },
   "info": {
     "intro": "Erwten waarvan je de hele peul eet: platte peultjes of dikke, knapperige sugarsnaps. Heerlijk rauw uit het vuistje of kort geroerbakt.",
     "water": "Geef water in droge periodes, vooral tijdens de bloei.",
@@ -20,11 +45,24 @@
   },
   "tasks": [
     {
-      "id": "zaaien", "type": "zaaien", "window": { "kind": "dates", "from": "03-01", "to": "05-31" },
+      "id": "zaaien",
+      "type": "zaaien",
+      "window": {
+        "kind": "dates",
+        "from": "03-01",
+        "to": "05-31"
+      },
       "description": "Zaai in een dubbele rij, 4 cm diep, 5 cm uit elkaar, langs een rek of gaas."
     },
     {
-      "id": "oogsten", "type": "oogsten", "window": { "kind": "recurring", "from": "06-01", "to": "07-31", "every": "week" },
+      "id": "oogsten",
+      "type": "oogsten",
+      "window": {
+        "kind": "recurring",
+        "from": "06-01",
+        "to": "07-31",
+        "every": "week"
+      },
       "description": "Pluk de peulen om de paar dagen, jong en mals. Oude peulen worden taai."
     }
   ]

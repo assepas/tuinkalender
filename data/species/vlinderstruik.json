@@ -4,11 +4,37 @@
   "name": "Vlinderstruik",
   "latin": "Buddleja davidii",
   "category": "struik",
-  "tags": ["struik", "vlinderplant", "geurend"],
+  "tags": [
+    "struik",
+    "vlinderplant",
+    "geurend"
+  ],
   "nativeStatus": "exoot",
-  "appearance": { "shape": "aar", "count": 9, "flowerColor": "#8D5CB8", "flowerColorName": "paars" },
-  "bloom": { "from": "07-15", "to": "09-30" },
-  "growing": { "sun": ["zon"], "soil": ["klei", "leem", "zand"], "moisture": ["normaal", "droog"], "spacingCm": 200 },
+  "appearance": {
+    "shape": "aar",
+    "count": 9,
+    "flowerColor": "#8D5CB8",
+    "flowerColorName": "paars"
+  },
+  "bloom": {
+    "from": "07-15",
+    "to": "09-30"
+  },
+  "growing": {
+    "sun": [
+      "zon"
+    ],
+    "soil": [
+      "klei",
+      "leem",
+      "zand"
+    ],
+    "moisture": [
+      "normaal",
+      "droog"
+    ],
+    "spacingCm": 200
+  },
   "info": {
     "intro": "Een snelgroeiende struik met lange, geurende bloemtrossen in paars, roze of wit. De naam zegt het al: vlinders komen er massaal op af.",
     "water": "Weinig veeleisend; alleen jonge planten water geven.",
@@ -20,16 +46,36 @@
   },
   "tasks": [
     {
-      "id": "planten", "type": "planten", "window": { "kind": "dates", "from": "04-01", "to": "05-15" },
+      "id": "planten",
+      "type": "planten",
+      "window": {
+        "kind": "dates",
+        "from": "04-01",
+        "to": "05-15"
+      },
       "description": "Plant in het voorjaar op een zonnige plek met ruimte."
     },
     {
-      "id": "snoeien", "type": "snoeien", "window": { "kind": "dates", "from": "03-15", "to": "04-15" },
+      "id": "snoeien",
+      "type": "snoeien",
+      "window": {
+        "kind": "dates",
+        "from": "03-15",
+        "to": "04-15"
+      },
       "note": "Flink terug",
       "description": "Snoei in het voorjaar alle takken terug tot 30-50 cm boven de grond. De bloemen komen aan het nieuwe hout."
     },
     {
-      "id": "dode-bloemen-verwijderen", "type": "snoeien", "importance": "licht", "window": { "kind": "recurring", "from": "08-01", "to": "09-30", "every": "2weeks" },
+      "id": "dode-bloemen-verwijderen",
+      "type": "snoeien",
+      "importance": "licht",
+      "window": {
+        "kind": "recurring",
+        "from": "08-01",
+        "to": "09-30",
+        "every": "2weeks"
+      },
       "description": "Knip uitgebloeide trossen af tot het volgende blad. Dat geeft nieuwe bloemen en voorkomt uitzaaien."
     }
   ]

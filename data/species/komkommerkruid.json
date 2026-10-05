@@ -4,11 +4,37 @@
   "name": "Komkommerkruid (bernagie)",
   "latin": "Borago officinalis",
   "category": "kruid",
-  "tags": ["eenjarig", "zelfzaaiend", "eetbaar"],
+  "tags": [
+    "eenjarig",
+    "zelfzaaiend",
+    "eetbaar"
+  ],
   "nativeStatus": "exoot",
-  "appearance": { "shape": "bloem", "count": 5, "flowerColor": "#4A7FD1", "flowerColorName": "blauw" },
-  "bloom": { "from": "06-01", "to": "09-30" },
-  "growing": { "sun": ["zon", "halfschaduw"], "soil": ["zand", "leem", "klei"], "moisture": ["normaal"], "spacingCm": 40 },
+  "appearance": {
+    "shape": "bloem",
+    "count": 5,
+    "flowerColor": "#4A7FD1",
+    "flowerColorName": "blauw"
+  },
+  "bloom": {
+    "from": "06-01",
+    "to": "09-30"
+  },
+  "growing": {
+    "sun": [
+      "zon",
+      "halfschaduw"
+    ],
+    "soil": [
+      "zand",
+      "leem",
+      "klei"
+    ],
+    "moisture": [
+      "normaal"
+    ],
+    "spacingCm": 40
+  },
   "info": {
     "intro": "Een eenjarig kruid met behaarde stengels en knikkende, stervormige blauwe bloemen. Het blad smaakt naar komkommer. Het is een van de beste bijenplanten die er is.",
     "water": "Geef water na het zaaien en in lange droge periodes. Verder redt hij zich.",
@@ -20,11 +46,23 @@
   },
   "tasks": [
     {
-      "id": "zaaien", "type": "zaaien", "window": { "kind": "dates", "from": "04-01", "to": "06-15" },
+      "id": "zaaien",
+      "type": "zaaien",
+      "window": {
+        "kind": "dates",
+        "from": "04-01",
+        "to": "06-15"
+      },
       "description": "Zaai direct op de plek, 1-2 cm diep. Dun uit tot 40 cm: de planten worden breed. Niet verplanten, hij heeft een penwortel."
     },
     {
-      "id": "oogsten", "type": "oogsten", "window": { "kind": "dates", "from": "06-01", "to": "09-30" },
+      "id": "oogsten",
+      "type": "oogsten",
+      "window": {
+        "kind": "dates",
+        "from": "06-01",
+        "to": "09-30"
+      },
       "description": "Pluk jonge blaadjes voor salade of soep en de bloempjes als decoratie. Oude blaadjes zijn te harig om rauw te eten."
     }
   ]

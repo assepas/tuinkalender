@@ -4,11 +4,37 @@
   "name": "Rode klaver",
   "latin": "Trifolium pratense",
   "category": "vaste-plant",
-  "tags": ["meerjarig", "gazon", "vlinderplant", "groenbemester"],
+  "tags": [
+    "meerjarig",
+    "gazon",
+    "vlinderplant",
+    "groenbemester"
+  ],
   "nativeStatus": "inheems",
-  "appearance": { "shape": "losse-wolk", "count": 5, "flowerColor": "#C9557E", "flowerColorName": "roze-paars" },
-  "bloom": { "from": "05-15", "to": "09-30" },
-  "growing": { "sun": ["zon"], "soil": ["klei", "leem", "zand"], "moisture": ["normaal"], "spacingCm": 20 },
+  "appearance": {
+    "shape": "losse-wolk",
+    "count": 5,
+    "flowerColor": "#C9557E",
+    "flowerColorName": "roze-paars"
+  },
+  "bloom": {
+    "from": "05-15",
+    "to": "09-30"
+  },
+  "growing": {
+    "sun": [
+      "zon"
+    ],
+    "soil": [
+      "klei",
+      "leem",
+      "zand"
+    ],
+    "moisture": [
+      "normaal"
+    ],
+    "spacingCm": 20
+  },
   "info": {
     "intro": "Een klaver met grote roze-paarse bloemhoofden, druk bezocht door hommels. Hij maakt de grond rijker met stikstof en wordt ook als groenbemester gezaaid.",
     "water": "Heeft door zijn diepe wortels weinig water nodig.",
@@ -20,11 +46,25 @@
   },
   "tasks": [
     {
-      "id": "zaaien", "type": "zaaien", "window": { "kind": "dates", "from": "08-15", "to": "09-30" },
+      "id": "zaaien",
+      "type": "zaaien",
+      "window": {
+        "kind": "dates",
+        "from": "08-15",
+        "to": "09-30"
+      },
       "description": "Zaai in de nazomer of in april-mei (lukt ook) op kale, losgeharkte plekken in het gras of mee in een bloemrijk gazonmengsel. Strooi het zaad breed uit, druk het aan en houd het een paar weken vochtig."
     },
     {
-      "id": "maaien", "type": "onderhoud", "window": { "kind": "recurring", "from": "05-15", "to": "10-15", "every": "2weeks" },
+      "id": "maaien",
+      "type": "onderhoud",
+      "window": {
+        "kind": "recurring",
+        "from": "05-15",
+        "to": "10-15",
+        "every": "2weeks"
+      },
+      "note": "Gazon niet te kort maaien",
       "description": "Maai het gazon niet te kort, op 5 tot 8 cm, dan blijft deze plant bloeien. Maai om de drie à vier weken en wat hoger (8-10 cm) als je hem wilt laten bloeien."
     }
   ]

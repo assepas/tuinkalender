@@ -4,11 +4,37 @@
   "name": "Kiwibes",
   "latin": "Actinidia arguta",
   "category": "fruit",
-  "tags": ["meerjarig", "klimmer"],
+  "tags": [
+    "meerjarig",
+    "klimmer"
+  ],
   "nativeStatus": "exoot",
-  "appearance": { "shape": "vrucht", "count": 5, "flowerColor": "#F2EEDC", "flowerColorName": "wit", "fruitColor": "#7FA340" },
-  "bloom": { "from": "06-01", "to": "06-30" },
-  "growing": { "sun": ["zon", "halfschaduw"], "soil": ["klei", "leem"], "moisture": ["normaal", "vochtig"], "spacingCm": 300 },
+  "appearance": {
+    "shape": "vrucht",
+    "count": 5,
+    "flowerColor": "#F2EEDC",
+    "flowerColorName": "wit",
+    "fruitColor": "#7FA340"
+  },
+  "bloom": {
+    "from": "06-01",
+    "to": "06-30"
+  },
+  "growing": {
+    "sun": [
+      "zon",
+      "halfschaduw"
+    ],
+    "soil": [
+      "klei",
+      "leem"
+    ],
+    "moisture": [
+      "normaal",
+      "vochtig"
+    ],
+    "spacingCm": 300
+  },
   "info": {
     "intro": "Een winterharde klimmer met kleine, gladde kiwi's die je met schil en al eet. Ze zijn zoeter dan gewone kiwi's en de plant is in Nederland volledig winterhard.",
     "water": "Geef regelmatig water; hij houdt niet van uitdrogen.",
@@ -20,15 +46,33 @@
   },
   "tasks": [
     {
-      "id": "planten", "type": "planten", "window": { "kind": "dates", "from": "04-01", "to": "05-15" },
+      "id": "planten",
+      "type": "planten",
+      "window": {
+        "kind": "dates",
+        "from": "04-01",
+        "to": "05-15"
+      },
       "description": "Plant in het voorjaar bij een stevige pergola of draad, op een beschutte plek."
     },
     {
-      "id": "snoeien", "type": "snoeien", "window": { "kind": "dates", "from": "12-01", "to": "02-15" },
+      "id": "snoeien",
+      "type": "snoeien",
+      "window": {
+        "kind": "dates",
+        "from": "12-01",
+        "to": "02-15"
+      },
       "description": "Knip in de winter de zijscheuten die vorig jaar vrucht droegen in tot 3-4 knoppen. Haal te dichte en dode ranken weg."
     },
     {
-      "id": "oogsten", "type": "oogsten", "window": { "kind": "dates", "from": "09-01", "to": "10-15" },
+      "id": "oogsten",
+      "type": "oogsten",
+      "window": {
+        "kind": "dates",
+        "from": "09-01",
+        "to": "10-15"
+      },
       "description": "Pluk de besjes als ze zacht zijn, of pluk ze hard en laat ze binnen narijpen."
     }
   ]

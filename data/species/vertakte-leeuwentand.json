@@ -4,11 +4,37 @@
   "name": "Vertakte leeuwentand",
   "latin": "Scorzoneroides autumnalis",
   "category": "vaste-plant",
-  "tags": ["meerjarig", "gazon", "vlinderplant"],
+  "tags": [
+    "meerjarig",
+    "gazon",
+    "vlinderplant"
+  ],
   "nativeStatus": "inheems",
-  "appearance": { "shape": "bloem", "count": 10, "flowerColor": "#F3C21F", "flowerColorName": "geel" },
-  "bloom": { "from": "07-01", "to": "10-31" },
-  "growing": { "sun": ["zon"], "soil": ["zand", "leem", "klei"], "moisture": ["normaal", "vochtig"], "spacingCm": 20 },
+  "appearance": {
+    "shape": "bloem",
+    "count": 10,
+    "flowerColor": "#F3C21F",
+    "flowerColorName": "geel"
+  },
+  "bloom": {
+    "from": "07-01",
+    "to": "10-31"
+  },
+  "growing": {
+    "sun": [
+      "zon"
+    ],
+    "soil": [
+      "zand",
+      "leem",
+      "klei"
+    ],
+    "moisture": [
+      "normaal",
+      "vochtig"
+    ],
+    "spacingCm": 20
+  },
   "info": {
     "intro": "Een vaste plant met een rozet van smalle, diep ingesneden blaadjes en gele bloemen op vertakte stelen. Hij bloeit juist laat in het jaar, als er weinig anders bloeit in het gazon.",
     "water": "Heeft geen extra water nodig.",
@@ -20,11 +46,25 @@
   },
   "tasks": [
     {
-      "id": "zaaien", "type": "zaaien", "window": { "kind": "dates", "from": "08-15", "to": "09-30" },
+      "id": "zaaien",
+      "type": "zaaien",
+      "window": {
+        "kind": "dates",
+        "from": "08-15",
+        "to": "09-30"
+      },
       "description": "Zaai in de nazomer of in april-mei (lukt ook) op kale, losgeharkte plekken in het gras of mee in een bloemrijk gazonmengsel. Strooi het zaad breed uit, druk het aan en houd het een paar weken vochtig."
     },
     {
-      "id": "maaien", "type": "onderhoud", "window": { "kind": "recurring", "from": "05-01", "to": "10-31", "every": "2weeks" },
+      "id": "maaien",
+      "type": "onderhoud",
+      "window": {
+        "kind": "recurring",
+        "from": "05-01",
+        "to": "10-31",
+        "every": "2weeks"
+      },
+      "note": "Gazon niet te kort maaien",
       "description": "Maai het gazon niet te kort, op 5 tot 8 cm, dan blijft deze plant bloeien. Maai in augustus-september wat minder vaak, dan bloeit hij volop."
     }
   ]

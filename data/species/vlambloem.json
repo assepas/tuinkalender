@@ -4,11 +4,37 @@
   "name": "Vlambloem",
   "latin": "Phlox paniculata",
   "category": "vaste-plant",
-  "tags": ["meerjarig", "geurend", "vlinderplant"],
+  "tags": [
+    "meerjarig",
+    "geurend",
+    "vlinderplant"
+  ],
   "nativeStatus": "exoot",
-  "appearance": { "shape": "losse-wolk", "count": 8, "flowerColor": "#D96BAE", "flowerColorName": "roze" },
-  "bloom": { "from": "07-01", "to": "09-15" },
-  "growing": { "sun": ["zon", "halfschaduw"], "soil": ["klei", "leem"], "moisture": ["normaal", "vochtig"], "spacingCm": 50 },
+  "appearance": {
+    "shape": "losse-wolk",
+    "count": 8,
+    "flowerColor": "#D96BAE",
+    "flowerColorName": "roze"
+  },
+  "bloom": {
+    "from": "07-01",
+    "to": "09-15"
+  },
+  "growing": {
+    "sun": [
+      "zon",
+      "halfschaduw"
+    ],
+    "soil": [
+      "klei",
+      "leem"
+    ],
+    "moisture": [
+      "normaal",
+      "vochtig"
+    ],
+    "spacingCm": 50
+  },
   "info": {
     "intro": "Een hoge vaste plant met grote, geurende bloemschermen in roze, paars of wit. In de avond ruikt hij het sterkst en komen er nachtvlinders op af.",
     "water": "Houd de grond vochtig; bij droogte krijgt hij snel meeldauw. Geef water op de grond, niet over het blad.",
@@ -20,23 +46,54 @@
   },
   "tasks": [
     {
-      "id": "planten", "type": "planten", "window": { "kind": "dates", "from": "03-15", "to": "05-01" },
+      "id": "planten",
+      "type": "planten",
+      "window": {
+        "kind": "dates",
+        "from": "03-15",
+        "to": "05-01"
+      },
       "description": "Plant in voedzame, vochthoudende grond op zo'n 50 cm afstand. Meng compost door het plantgat."
     },
     {
-      "id": "bemesten", "type": "bemesten", "window": { "kind": "dates", "from": "04-01", "to": "04-30" },
+      "id": "bemesten",
+      "type": "bemesten",
+      "window": {
+        "kind": "dates",
+        "from": "04-01",
+        "to": "04-30"
+      },
       "description": "Geef in het voorjaar een laag compost of wat organische mest rond de plant."
     },
     {
-      "id": "dode-bloemen-verwijderen", "type": "snoeien", "importance": "licht", "window": { "kind": "dates", "from": "08-15", "to": "09-15" },
+      "id": "dode-bloemen-verwijderen",
+      "type": "snoeien",
+      "importance": "licht",
+      "window": {
+        "kind": "dates",
+        "from": "08-15",
+        "to": "09-15"
+      },
       "description": "Knip uitgebloeide schermen af; er komen dan vaak nog kleinere zijschermen."
     },
     {
-      "id": "terugknippen", "type": "snoeien", "window": { "kind": "dates", "from": "10-15", "to": "11-30" },
+      "id": "terugknippen",
+      "type": "snoeien",
+      "window": {
+        "kind": "dates",
+        "from": "10-15",
+        "to": "11-30"
+      },
       "description": "Knip de stengels na de bloei af tot net boven de grond."
     },
     {
-      "id": "delen", "type": "delen", "window": { "kind": "dates", "from": "03-15", "to": "04-15" },
+      "id": "delen",
+      "type": "delen",
+      "window": {
+        "kind": "dates",
+        "from": "03-15",
+        "to": "04-15"
+      },
       "description": "Verdeel oude planten om de drie à vier jaar in het voorjaar. Plant de jonge buitenste stukken terug."
     }
   ]

@@ -4,10 +4,29 @@
   "name": "Schorseneer",
   "latin": "Scorzonera hispanica",
   "category": "groente",
-  "tags": ["meerjarig"],
+  "tags": [
+    "meerjarig"
+  ],
   "nativeStatus": "exoot",
-  "appearance": { "shape": "bloem", "count": 10, "flowerColor": "#F1CB2F", "flowerColorName": "geel" },
-  "growing": { "sun": ["zon"], "soil": ["zand", "leem"], "moisture": ["normaal"], "spacingCm": 10 },
+  "appearance": {
+    "shape": "bloem",
+    "count": 10,
+    "flowerColor": "#F1CB2F",
+    "flowerColorName": "geel"
+  },
+  "growing": {
+    "sun": [
+      "zon"
+    ],
+    "soil": [
+      "zand",
+      "leem"
+    ],
+    "moisture": [
+      "normaal"
+    ],
+    "spacingCm": 10
+  },
   "info": {
     "intro": "De 'keukenmeidenverdriet': een lange, zwarte wortel met wit, zacht vlees en een fijne smaak. Hij houdt van diepe, losse grond.",
     "water": "Houd de grond vochtig tot de plantjes op zijn.",
@@ -19,11 +38,23 @@
   },
   "tasks": [
     {
-      "id": "zaaien", "type": "zaaien", "window": { "kind": "dates", "from": "03-15", "to": "05-15" },
+      "id": "zaaien",
+      "type": "zaaien",
+      "window": {
+        "kind": "dates",
+        "from": "03-15",
+        "to": "05-15"
+      },
       "description": "Zaai in rijen op 30 cm afstand, 2 cm diep, en dun uit tot 10 cm."
     },
     {
-      "id": "oogsten", "type": "oogsten", "window": { "kind": "dates", "from": "10-15", "to": "03-15" },
+      "id": "oogsten",
+      "type": "oogsten",
+      "window": {
+        "kind": "dates",
+        "from": "10-15",
+        "to": "03-15"
+      },
       "description": "Graaf een diepe geul naast de rij en haal de wortels er heel uit."
     }
   ]

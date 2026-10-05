@@ -4,11 +4,36 @@
   "name": "Engels gras",
   "latin": "Armeria maritima",
   "category": "vaste-plant",
-  "tags": ["meerjarig", "groenblijvend", "droogtebestendig"],
+  "tags": [
+    "meerjarig",
+    "groenblijvend",
+    "droogtebestendig"
+  ],
   "nativeStatus": "inheems",
-  "appearance": { "shape": "losse-wolk", "count": 6, "flowerColor": "#E58BB1", "flowerColorName": "roze" },
-  "bloom": { "from": "05-01", "to": "07-15" },
-  "growing": { "sun": ["zon"], "soil": ["zand", "leem"], "moisture": ["droog", "normaal"], "spacingCm": 25 },
+  "appearance": {
+    "shape": "losse-wolk",
+    "count": 6,
+    "flowerColor": "#E58BB1",
+    "flowerColorName": "roze"
+  },
+  "bloom": {
+    "from": "05-01",
+    "to": "07-15"
+  },
+  "growing": {
+    "sun": [
+      "zon"
+    ],
+    "soil": [
+      "zand",
+      "leem"
+    ],
+    "moisture": [
+      "droog",
+      "normaal"
+    ],
+    "spacingCm": 25
+  },
   "info": {
     "intro": "Een laag, groenblijvend kussen van grasachtig blad met roze bolletjes op dunne stelen. Van nature groeit hij in duinen en kwelders; in de tuin is hij mooi langs randen en in grind.",
     "water": "Heeft weinig water nodig; natte voeten vindt hij niet fijn.",
@@ -20,15 +45,34 @@
   },
   "tasks": [
     {
-      "id": "planten", "type": "planten", "window": { "kind": "dates", "from": "03-15", "to": "05-15" },
+      "id": "planten",
+      "type": "planten",
+      "window": {
+        "kind": "dates",
+        "from": "03-15",
+        "to": "05-15"
+      },
       "description": "Plant op een zonnige plek in doorlatende grond, op zo'n 25 cm afstand."
     },
     {
-      "id": "uitgebloeid-afknippen", "type": "snoeien", "importance": "licht", "window": { "kind": "dates", "from": "06-15", "to": "07-31" },
+      "id": "uitgebloeid-afknippen",
+      "type": "snoeien",
+      "importance": "licht",
+      "window": {
+        "kind": "dates",
+        "from": "06-15",
+        "to": "07-31"
+      },
       "description": "Knip uitgebloeide bloemstelen af tot op het kussen."
     },
     {
-      "id": "delen", "type": "delen", "window": { "kind": "dates", "from": "03-15", "to": "04-30" },
+      "id": "delen",
+      "type": "delen",
+      "window": {
+        "kind": "dates",
+        "from": "03-15",
+        "to": "04-30"
+      },
       "description": "Verdeel het kussen als het in het midden kaal wordt."
     }
   ]

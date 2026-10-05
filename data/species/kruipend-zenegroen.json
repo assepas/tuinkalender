@@ -4,11 +4,38 @@
   "name": "Kruipend zenegroen",
   "latin": "Ajuga reptans",
   "category": "vaste-plant",
-  "tags": ["meerjarig", "bodembedekker", "schaduwplant"],
+  "tags": [
+    "meerjarig",
+    "bodembedekker",
+    "schaduwplant"
+  ],
   "nativeStatus": "inheems",
-  "appearance": { "shape": "aar", "count": 6, "flowerColor": "#4F5FC0", "flowerColorName": "blauw" },
-  "bloom": { "from": "04-15", "to": "06-15" },
-  "growing": { "sun": ["halfschaduw", "schaduw", "zon"], "soil": ["klei", "leem"], "moisture": ["normaal", "vochtig"], "spacingCm": 25 },
+  "appearance": {
+    "shape": "aar",
+    "count": 6,
+    "flowerColor": "#4F5FC0",
+    "flowerColorName": "blauw"
+  },
+  "bloom": {
+    "from": "04-15",
+    "to": "06-15"
+  },
+  "growing": {
+    "sun": [
+      "halfschaduw",
+      "schaduw",
+      "zon"
+    ],
+    "soil": [
+      "klei",
+      "leem"
+    ],
+    "moisture": [
+      "normaal",
+      "vochtig"
+    ],
+    "spacingCm": 25
+  },
   "info": {
     "intro": "Een lage, kruipende bodembedekker met glanzend blad en korte, blauwe bloemaren in het voorjaar. Hij vormt snel een dicht tapijt onder struiken en in de schaduw.",
     "water": "Houd de grond vochtig; in droge zon verdort hij.",
@@ -20,11 +47,23 @@
   },
   "tasks": [
     {
-      "id": "planten", "type": "planten", "window": { "kind": "dates", "from": "03-15", "to": "05-15" },
+      "id": "planten",
+      "type": "planten",
+      "window": {
+        "kind": "dates",
+        "from": "03-15",
+        "to": "05-15"
+      },
       "description": "Plant op zo'n 25 cm afstand; de uitlopers vullen het gat snel op."
     },
     {
-      "id": "delen", "type": "delen", "window": { "kind": "dates", "from": "09-01", "to": "10-15" },
+      "id": "delen",
+      "type": "delen",
+      "window": {
+        "kind": "dates",
+        "from": "09-01",
+        "to": "10-15"
+      },
       "description": "Steek bewortelde uitlopers af en plant ze elders."
     }
   ]

@@ -4,11 +4,37 @@
   "name": "Beemdkroon",
   "latin": "Knautia arvensis",
   "category": "vaste-plant",
-  "tags": ["meerjarig", "vlinderplant", "bloemenweide"],
+  "tags": [
+    "meerjarig",
+    "vlinderplant",
+    "bloemenweide"
+  ],
   "nativeStatus": "inheems",
-  "appearance": { "shape": "bloem", "count": 10, "flowerColor": "#A882C3", "flowerColorName": "lila" },
-  "bloom": { "from": "06-01", "to": "09-15" },
-  "growing": { "sun": ["zon"], "soil": ["klei", "leem", "zand"], "moisture": ["droog", "normaal"], "spacingCm": 40 },
+  "appearance": {
+    "shape": "bloem",
+    "count": 10,
+    "flowerColor": "#A882C3",
+    "flowerColorName": "lila"
+  },
+  "bloom": {
+    "from": "06-01",
+    "to": "09-15"
+  },
+  "growing": {
+    "sun": [
+      "zon"
+    ],
+    "soil": [
+      "klei",
+      "leem",
+      "zand"
+    ],
+    "moisture": [
+      "droog",
+      "normaal"
+    ],
+    "spacingCm": 40
+  },
   "info": {
     "intro": "Een inheemse bloem van bermen en hooilanden met lila, bolle bloemhoofdjes op lange stelen. Er komen veel bijen, hommels en vlinders op af.",
     "water": "Kan goed tegen droogte; alleen water na het zaaien of planten.",
@@ -20,15 +46,33 @@
   },
   "tasks": [
     {
-      "id": "zaaien", "type": "zaaien", "window": { "kind": "dates", "from": "04-01", "to": "05-31" },
+      "id": "zaaien",
+      "type": "zaaien",
+      "window": {
+        "kind": "dates",
+        "from": "04-01",
+        "to": "05-31"
+      },
       "description": "Zaai in het voorjaar op de plek, dun bedekt. Zaaien in september kan ook."
     },
     {
-      "id": "planten", "type": "planten", "window": { "kind": "dates", "from": "03-15", "to": "05-01" },
+      "id": "planten",
+      "type": "planten",
+      "window": {
+        "kind": "dates",
+        "from": "03-15",
+        "to": "05-01"
+      },
       "description": "Plant op een zonnige plek op zo'n 40 cm afstand."
     },
     {
-      "id": "terugknippen", "type": "snoeien", "window": { "kind": "dates", "from": "03-01", "to": "03-31" },
+      "id": "terugknippen",
+      "type": "snoeien",
+      "window": {
+        "kind": "dates",
+        "from": "03-01",
+        "to": "03-31"
+      },
       "description": "Knip de oude stengels in het voorjaar af."
     }
   ]

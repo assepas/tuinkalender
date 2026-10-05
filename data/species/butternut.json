@@ -4,11 +4,36 @@
   "name": "Butternutpompoen",
   "latin": "Cucurbita moschata",
   "category": "groente",
-  "tags": ["eenjarig", "vorstgevoelig", "veel-ruimte"],
+  "tags": [
+    "eenjarig",
+    "vorstgevoelig",
+    "veel-ruimte"
+  ],
   "nativeStatus": "exoot",
-  "appearance": { "shape": "vrucht", "count": 1, "flowerColor": "#EFB43A", "flowerColorName": "geel", "fruitColor": "#E8A860" },
-  "bloom": { "from": "07-01", "to": "08-31" },
-  "growing": { "sun": ["zon"], "soil": ["klei", "leem"], "moisture": ["normaal"], "spacingCm": 150 },
+  "appearance": {
+    "shape": "vrucht",
+    "count": 1,
+    "flowerColor": "#EFB43A",
+    "flowerColorName": "geel",
+    "fruitColor": "#E8A860"
+  },
+  "bloom": {
+    "from": "07-01",
+    "to": "08-31"
+  },
+  "growing": {
+    "sun": [
+      "zon"
+    ],
+    "soil": [
+      "klei",
+      "leem"
+    ],
+    "moisture": [
+      "normaal"
+    ],
+    "spacingCm": 150
+  },
   "info": {
     "intro": "Een pompoen in peervorm met zoet, oranje vruchtvlees. Hij heeft warmte en ruimte nodig, en goed uitgerijpte vruchten bewaar je maandenlang.",
     "water": "Geef regelmatig flink water op de grond, niet over het blad.",
@@ -20,16 +45,36 @@
   },
   "tasks": [
     {
-      "id": "zaaien-binnen", "type": "zaaien", "location": "kas", "window": { "kind": "dates", "from": "04-15", "to": "05-15" },
+      "id": "zaaien-binnen",
+      "type": "zaaien",
+      "location": "kas",
+      "window": {
+        "kind": "dates",
+        "from": "04-15",
+        "to": "05-15"
+      },
       "description": "Zaai binnen in potjes, 1 zaad per pot, 2 cm diep, op een warme plek."
     },
     {
-      "id": "uitplanten", "type": "planten", "window": { "kind": "relative", "anchor": "lastFrost", "fromWeeks": 1, "toWeeks": 4 },
+      "id": "uitplanten",
+      "type": "planten",
+      "window": {
+        "kind": "relative",
+        "anchor": "lastFrost",
+        "fromWeeks": 1,
+        "toWeeks": 4
+      },
       "note": "Pas na de laatste nachtvorst",
       "description": "Plant uit na de laatste nachtvorst, 1,5 meter uit elkaar, in grond met veel compost."
     },
     {
-      "id": "oogsten", "type": "oogsten", "window": { "kind": "dates", "from": "09-15", "to": "10-31" },
+      "id": "oogsten",
+      "type": "oogsten",
+      "window": {
+        "kind": "dates",
+        "from": "09-15",
+        "to": "10-31"
+      },
       "description": "Oogst voor de eerste nachtvorst als de schil hard en beige is en de steel verhout. Snijd af met een stuk steel."
     }
   ]

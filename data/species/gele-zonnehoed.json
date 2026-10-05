@@ -4,11 +4,36 @@
   "name": "Gele zonnehoed",
   "latin": "Rudbeckia fulgida",
   "category": "vaste-plant",
-  "tags": ["meerjarig", "vlinderplant", "snijbloem"],
+  "tags": [
+    "meerjarig",
+    "vlinderplant",
+    "snijbloem"
+  ],
   "nativeStatus": "exoot",
-  "appearance": { "shape": "bloem", "count": 10, "flowerColor": "#F2B01E", "flowerColorName": "goudgeel" },
-  "bloom": { "from": "08-01", "to": "10-15" },
-  "growing": { "sun": ["zon"], "soil": ["klei", "leem"], "moisture": ["normaal", "vochtig"], "spacingCm": 45 },
+  "appearance": {
+    "shape": "bloem",
+    "count": 10,
+    "flowerColor": "#F2B01E",
+    "flowerColorName": "goudgeel"
+  },
+  "bloom": {
+    "from": "08-01",
+    "to": "10-15"
+  },
+  "growing": {
+    "sun": [
+      "zon"
+    ],
+    "soil": [
+      "klei",
+      "leem"
+    ],
+    "moisture": [
+      "normaal",
+      "vochtig"
+    ],
+    "spacingCm": 45
+  },
   "info": {
     "intro": "Een sterke vaste plant met goudgele bloemen met een zwart hart. Hij bloeit van augustus tot in oktober en brengt kleur als veel andere planten al klaar zijn.",
     "water": "Houdt van grond die niet uitdroogt; geef water in droge zomers.",
@@ -20,15 +45,33 @@
   },
   "tasks": [
     {
-      "id": "planten", "type": "planten", "window": { "kind": "dates", "from": "03-15", "to": "05-15" },
+      "id": "planten",
+      "type": "planten",
+      "window": {
+        "kind": "dates",
+        "from": "03-15",
+        "to": "05-15"
+      },
       "description": "Plant op zo'n 45 cm afstand in voedzame grond, op een zonnige plek."
     },
     {
-      "id": "terugknippen", "type": "snoeien", "window": { "kind": "dates", "from": "02-15", "to": "03-31" },
+      "id": "terugknippen",
+      "type": "snoeien",
+      "window": {
+        "kind": "dates",
+        "from": "02-15",
+        "to": "03-31"
+      },
       "description": "Knip de oude stengels eind van de winter af tot net boven de grond."
     },
     {
-      "id": "delen", "type": "delen", "window": { "kind": "dates", "from": "03-15", "to": "04-15" },
+      "id": "delen",
+      "type": "delen",
+      "window": {
+        "kind": "dates",
+        "from": "03-15",
+        "to": "04-15"
+      },
       "description": "Verdeel de pol om de drie à vier jaar in het voorjaar."
     }
   ]

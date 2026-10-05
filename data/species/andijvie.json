@@ -4,10 +4,32 @@
   "name": "Andijvie",
   "latin": "Cichorium endivia",
   "category": "groente",
-  "tags": ["eenjarig"],
+  "tags": [
+    "eenjarig"
+  ],
   "nativeStatus": "exoot",
-  "appearance": { "shape": "losse-wolk", "count": 3, "flowerColor": "#B6C48A", "flowerColorName": "groen" },
-  "growing": { "sun": ["zon", "halfschaduw"], "soil": ["klei", "leem", "zand"], "moisture": ["normaal", "vochtig"], "spacingCm": 30 },
+  "appearance": {
+    "shape": "losse-wolk",
+    "count": 3,
+    "flowerColor": "#B6C48A",
+    "flowerColorName": "groen"
+  },
+  "growing": {
+    "sun": [
+      "zon",
+      "halfschaduw"
+    ],
+    "soil": [
+      "klei",
+      "leem",
+      "zand"
+    ],
+    "moisture": [
+      "normaal",
+      "vochtig"
+    ],
+    "spacingCm": 30
+  },
   "info": {
     "intro": "Een Hollandse klassieker: stevige kroppen voor stamppot of rauw. Zomer-andijvie is gladbladig; krulandijvie kan ook tot in de herfst.",
     "water": "Houd de grond gelijkmatig vochtig; droogte maakt andijvie bitter en laat hem doorschieten.",
@@ -19,15 +41,34 @@
   },
   "tasks": [
     {
-      "id": "zaaien-binnen", "type": "zaaien", "location": "kas", "window": { "kind": "dates", "from": "04-15", "to": "07-15" },
+      "id": "zaaien-binnen",
+      "type": "zaaien",
+      "location": "kas",
+      "window": {
+        "kind": "dates",
+        "from": "04-15",
+        "to": "07-15"
+      },
       "description": "Zaai in potjes of een tray, dun bedekt. Plant na vier à vijf weken uit."
     },
     {
-      "id": "uitplanten", "type": "planten", "window": { "kind": "dates", "from": "05-15", "to": "08-15" },
+      "id": "uitplanten",
+      "type": "planten",
+      "window": {
+        "kind": "dates",
+        "from": "05-15",
+        "to": "08-15"
+      },
       "description": "Plant op 30 cm afstand, niet te diep: het hart moet boven de grond blijven."
     },
     {
-      "id": "oogsten", "type": "oogsten", "window": { "kind": "dates", "from": "07-01", "to": "10-31" },
+      "id": "oogsten",
+      "type": "oogsten",
+      "window": {
+        "kind": "dates",
+        "from": "07-01",
+        "to": "10-31"
+      },
       "description": "Snijd de hele krop af net boven de grond als hij vol is."
     }
   ]

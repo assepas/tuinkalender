@@ -4,10 +4,31 @@
   "name": "Knolvenkel",
   "latin": "Foeniculum vulgare var. azoricum",
   "category": "groente",
-  "tags": ["eenjarig"],
+  "tags": [
+    "eenjarig"
+  ],
   "nativeStatus": "exoot",
-  "appearance": { "shape": "losse-wolk", "count": 6, "flowerColor": "#E6D24A", "flowerColorName": "geel" },
-  "growing": { "sun": ["zon"], "soil": ["klei", "leem", "zand"], "moisture": ["normaal", "vochtig"], "spacingCm": 25 },
+  "appearance": {
+    "shape": "losse-wolk",
+    "count": 6,
+    "flowerColor": "#E6D24A",
+    "flowerColorName": "geel"
+  },
+  "growing": {
+    "sun": [
+      "zon"
+    ],
+    "soil": [
+      "klei",
+      "leem",
+      "zand"
+    ],
+    "moisture": [
+      "normaal",
+      "vochtig"
+    ],
+    "spacingCm": 25
+  },
   "info": {
     "intro": "Een groente met een dikke, witte knol die fris naar anijs smaakt. Lekker rauw in salade of gegrild. Zaai hem in de zomer: in het voorjaar schiet hij snel door.",
     "water": "Houd de grond gelijkmatig vochtig; droogte laat hem doorschieten.",
@@ -19,12 +40,24 @@
   },
   "tasks": [
     {
-      "id": "zaaien", "type": "zaaien", "window": { "kind": "dates", "from": "06-15", "to": "07-31" },
+      "id": "zaaien",
+      "type": "zaaien",
+      "window": {
+        "kind": "dates",
+        "from": "06-15",
+        "to": "07-31"
+      },
       "note": "Na de langste dag",
       "description": "Zaai direct in rijen op 30 cm afstand, of in potjes. Dun uit tot 25 cm."
     },
     {
-      "id": "oogsten", "type": "oogsten", "window": { "kind": "dates", "from": "09-01", "to": "10-31" },
+      "id": "oogsten",
+      "type": "oogsten",
+      "window": {
+        "kind": "dates",
+        "from": "09-01",
+        "to": "10-31"
+      },
       "description": "Snijd de knol af net boven de grond als hij zo groot als een vuist is."
     }
   ]

@@ -4,11 +4,36 @@
   "name": "Kersenboom",
   "latin": "Prunus avium",
   "category": "boom",
-  "tags": ["meerjarig", "fruitboom"],
+  "tags": [
+    "meerjarig",
+    "fruitboom"
+  ],
   "nativeStatus": "inheems",
-  "appearance": { "shape": "vrucht", "count": 2, "flowerColor": "#F6F2EE", "flowerColorName": "wit", "fruitColor": "#9E1B2B" },
-  "bloom": { "from": "04-01", "to": "04-30" },
-  "growing": { "sun": ["zon"], "soil": ["leem", "zand", "klei"], "moisture": ["normaal"], "spacingCm": 500 },
+  "appearance": {
+    "shape": "vrucht",
+    "count": 2,
+    "flowerColor": "#F6F2EE",
+    "flowerColorName": "wit",
+    "fruitColor": "#9E1B2B"
+  },
+  "bloom": {
+    "from": "04-01",
+    "to": "04-30"
+  },
+  "growing": {
+    "sun": [
+      "zon"
+    ],
+    "soil": [
+      "leem",
+      "zand",
+      "klei"
+    ],
+    "moisture": [
+      "normaal"
+    ],
+    "spacingCm": 500
+  },
   "info": {
     "intro": "Een zoete kers geeft in het voorjaar een wolk van witte bloesem en in juni en juli sappige kersen. Kies een boom op een zwakke onderstam voor een kleine tuin.",
     "water": "Geef een jonge boom in droge periodes flink water. Bij veel regen vlak voor de oogst kunnen kersen barsten.",
@@ -20,20 +45,45 @@
   },
   "tasks": [
     {
-      "id": "planten", "type": "planten", "window": { "kind": "dates", "from": "11-01", "to": "03-15" },
+      "id": "planten",
+      "type": "planten",
+      "window": {
+        "kind": "dates",
+        "from": "11-01",
+        "to": "03-15"
+      },
       "description": "Plant in de winterrust, als de grond niet bevroren is. Zet de boom even diep als hij in de kwekerij stond (de entplek boven de grond), op zo'n 5 meter afstand, met een paal ernaast. Geef na het planten flink water."
     },
     {
-      "id": "snoeien", "type": "snoeien", "window": { "kind": "dates", "from": "08-01", "to": "08-31" },
+      "id": "snoeien",
+      "type": "snoeien",
+      "window": {
+        "kind": "dates",
+        "from": "08-01",
+        "to": "08-31"
+      },
       "note": "Na de oogst, niet in de winter",
       "description": "Snoei kersen na de oogst, in augustus. Dan genezen de wonden snel en is er minder kans op ziekten. Haal kruisende en naar binnen groeiende takken weg."
     },
     {
-      "id": "net-plaatsen", "type": "onderhoud", "window": { "kind": "dates", "from": "05-15", "to": "06-15" },
+      "id": "net-plaatsen",
+      "type": "onderhoud",
+      "window": {
+        "kind": "dates",
+        "from": "05-15",
+        "to": "06-15"
+      },
+      "note": "Net tegen vogels ophangen",
       "description": "Hang een net over de boom als de kersen beginnen te kleuren."
     },
     {
-      "id": "oogsten", "type": "oogsten", "window": { "kind": "dates", "from": "06-15", "to": "07-31" },
+      "id": "oogsten",
+      "type": "oogsten",
+      "window": {
+        "kind": "dates",
+        "from": "06-15",
+        "to": "07-31"
+      },
       "description": "Pluk de kersen met steeltje als ze helemaal op kleur en zoet zijn."
     }
   ]

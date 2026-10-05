@@ -4,11 +4,37 @@
   "name": "Sneeuwklokje",
   "latin": "Galanthus nivalis",
   "category": "bolgewas",
-  "tags": ["meerjarig", "voorjaarsbloeier", "schaduwplant"],
+  "tags": [
+    "meerjarig",
+    "voorjaarsbloeier",
+    "schaduwplant"
+  ],
   "nativeStatus": "archeofyt",
-  "appearance": { "shape": "bloem", "count": 3, "flowerColor": "#F5F6F2", "flowerColorName": "wit" },
-  "bloom": { "from": "01-15", "to": "03-15" },
-  "growing": { "sun": ["halfschaduw", "schaduw"], "soil": ["klei", "leem"], "moisture": ["normaal", "vochtig"], "spacingCm": 10 },
+  "appearance": {
+    "shape": "bloem",
+    "count": 3,
+    "flowerColor": "#F5F6F2",
+    "flowerColorName": "wit"
+  },
+  "bloom": {
+    "from": "01-15",
+    "to": "03-15"
+  },
+  "growing": {
+    "sun": [
+      "halfschaduw",
+      "schaduw"
+    ],
+    "soil": [
+      "klei",
+      "leem"
+    ],
+    "moisture": [
+      "normaal",
+      "vochtig"
+    ],
+    "spacingCm": 10
+  },
   "info": {
     "intro": "Het eerste bloempje van het jaar: witte, hangende klokjes in januari en februari. Sneeuwklokjes verwilderen onder struiken en bomen tot hele tapijten.",
     "water": "Houd de grond niet te droog; onder struiken is dat meestal vanzelf goed.",
@@ -20,16 +46,35 @@
   },
   "tasks": [
     {
-      "id": "planten-in-het-groen", "type": "planten", "window": { "kind": "dates", "from": "03-01", "to": "04-15" },
+      "id": "planten-in-het-groen",
+      "type": "planten",
+      "window": {
+        "kind": "dates",
+        "from": "03-01",
+        "to": "04-15"
+      },
       "note": "Na de bloei, met blad",
       "description": "Plant sneeuwklokjes bij voorkeur direct na de bloei, met blad en al ('in het groen'), 5-8 cm diep. Dat slaat veel beter aan dan droge bolletjes in de herfst."
     },
     {
-      "id": "delen", "type": "delen", "window": { "kind": "dates", "from": "03-01", "to": "04-15" },
+      "id": "delen",
+      "type": "delen",
+      "window": {
+        "kind": "dates",
+        "from": "03-01",
+        "to": "04-15"
+      },
       "description": "Steek volle pollen direct na de bloei uit, trek ze uit elkaar en plant de plukjes terug."
     },
     {
-      "id": "blad-laten-staan", "type": "onderhoud", "window": { "kind": "dates", "from": "03-15", "to": "05-15" },
+      "id": "blad-laten-staan",
+      "type": "onderhoud",
+      "window": {
+        "kind": "dates",
+        "from": "03-15",
+        "to": "05-15"
+      },
+      "note": "Blad laten afsterven",
       "description": "Laat het blad na de bloei staan tot het geel is en vanzelf afsterft. De bol haalt er energie uit voor volgend jaar. Maai er dus nog niet overheen."
     }
   ]

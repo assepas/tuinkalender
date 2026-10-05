@@ -4,11 +4,36 @@
   "name": "Moerbei 'Milanowek'",
   "latin": "Morus alba × rubra 'Milanowek'",
   "category": "boom",
-  "tags": ["meerjarig", "fruitboom"],
+  "tags": [
+    "meerjarig",
+    "fruitboom"
+  ],
   "nativeStatus": "exoot",
-  "appearance": { "shape": "vrucht", "count": 5, "flowerColor": "#C8D29A", "flowerColorName": "groen", "fruitColor": "#3B1030" },
-  "bloom": { "from": "05-01", "to": "05-31" },
-  "growing": { "sun": ["zon"], "soil": ["klei", "leem", "zand"], "moisture": ["normaal"], "spacingCm": 500 },
+  "appearance": {
+    "shape": "vrucht",
+    "count": 5,
+    "flowerColor": "#C8D29A",
+    "flowerColorName": "groen",
+    "fruitColor": "#3B1030"
+  },
+  "bloom": {
+    "from": "05-01",
+    "to": "05-31"
+  },
+  "growing": {
+    "sun": [
+      "zon"
+    ],
+    "soil": [
+      "klei",
+      "leem",
+      "zand"
+    ],
+    "moisture": [
+      "normaal"
+    ],
+    "spacingCm": 500
+  },
   "info": {
     "intro": "Een Pools moerbeiras met grote, hartvormige bladeren en langwerpige, diep roodzwarte bessen van zo'n 3 cm, stevig en heel sappig. Hij wordt 4 tot 6 meter hoog en rijpt niet in één keer, maar geleidelijk van half juni tot begin september.",
     "water": "Geef een jonge boom de eerste jaren in droge periodes veel water. Oudere bomen redden zich meestal zelf.",
@@ -21,16 +46,35 @@
   },
   "tasks": [
     {
-      "id": "planten", "type": "planten", "window": { "kind": "dates", "from": "11-01", "to": "03-31" },
+      "id": "planten",
+      "type": "planten",
+      "window": {
+        "kind": "dates",
+        "from": "11-01",
+        "to": "03-31"
+      },
       "description": "Plant in de winter of vroege voorjaar, als de grond niet bevroren is. Kies een zonnige, beschutte plek met veel ruimte. Wees voorzichtig met de wortels: die zijn kwetsbaar en breken snel."
     },
     {
-      "id": "snoeien", "type": "snoeien", "importance": "licht", "window": { "kind": "dates", "from": "12-01", "to": "02-15" },
+      "id": "snoeien",
+      "type": "snoeien",
+      "importance": "licht",
+      "window": {
+        "kind": "dates",
+        "from": "12-01",
+        "to": "02-15"
+      },
       "note": "Alleen in winterrust",
       "description": "Snoei alleen als het nodig is: dode, kruisende of te laag hangende takken. Doe dat in de winter, als de boom in rust is; in het voorjaar 'bloedt' hij sterk. Grote snoeiwonden herstellen slecht."
     },
     {
-      "id": "oogsten", "type": "oogsten", "window": { "kind": "dates", "from": "06-15", "to": "09-10" },
+      "id": "oogsten",
+      "type": "oogsten",
+      "window": {
+        "kind": "dates",
+        "from": "06-15",
+        "to": "09-10"
+      },
       "description": "Pluk de bessen als ze diep roodzwart en zacht zijn. Bij 'Milanowek' rijpen ze steeds een beetje, van half juni tot begin september; loop de boom dus elke paar dagen na. Eet ze meteen of maak er jam van: ze bederven snel."
     }
   ]

@@ -4,11 +4,37 @@
   "name": "Narcis",
   "latin": "Narcissus spp.",
   "category": "bolgewas",
-  "tags": ["meerjarig", "voorjaarsbloeier", "giftig"],
+  "tags": [
+    "meerjarig",
+    "voorjaarsbloeier",
+    "giftig"
+  ],
   "nativeStatus": "onbekend",
-  "appearance": { "shape": "bloem", "count": 6, "flowerColor": "#F4D03F", "flowerColorName": "geel" },
-  "bloom": { "from": "03-01", "to": "04-30" },
-  "growing": { "sun": ["zon", "halfschaduw"], "soil": ["klei", "leem", "zand"], "moisture": ["normaal"], "spacingCm": 15 },
+  "appearance": {
+    "shape": "bloem",
+    "count": 6,
+    "flowerColor": "#F4D03F",
+    "flowerColorName": "geel"
+  },
+  "bloom": {
+    "from": "03-01",
+    "to": "04-30"
+  },
+  "growing": {
+    "sun": [
+      "zon",
+      "halfschaduw"
+    ],
+    "soil": [
+      "klei",
+      "leem",
+      "zand"
+    ],
+    "moisture": [
+      "normaal"
+    ],
+    "spacingCm": 15
+  },
   "info": {
     "intro": "Hét voorjaarsbolgewas: gele of witte bloemen met een trompet of kroontje. Narcissen verwilderen goed en komen elk jaar terug, ook in gras.",
     "water": "Heeft meestal geen extra water nodig.",
@@ -20,11 +46,24 @@
   },
   "tasks": [
     {
-      "id": "planten", "type": "planten", "window": { "kind": "dates", "from": "09-15", "to": "11-15" },
+      "id": "planten",
+      "type": "planten",
+      "window": {
+        "kind": "dates",
+        "from": "09-15",
+        "to": "11-15"
+      },
       "description": "Plant de bollen in de herfst 10-15 cm diep, met de punt omhoog, in groepjes op zo'n 15 cm afstand. Plant liever in groepen dan in rijtjes: dat ziet er natuurlijker uit."
     },
     {
-      "id": "blad-laten-staan", "type": "onderhoud", "window": { "kind": "dates", "from": "04-15", "to": "06-15" },
+      "id": "blad-laten-staan",
+      "type": "onderhoud",
+      "window": {
+        "kind": "dates",
+        "from": "04-15",
+        "to": "06-15"
+      },
+      "note": "Blad laten afsterven",
       "description": "Laat het blad na de bloei staan tot het geel is en vanzelf afsterft. De bol haalt er energie uit voor volgend jaar. Maai er dus nog niet overheen."
     }
   ]

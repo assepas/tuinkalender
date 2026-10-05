@@ -4,11 +4,36 @@
   "name": "Aardpeer",
   "latin": "Helianthus tuberosus",
   "category": "groente",
-  "tags": ["meerjarig", "woekert"],
+  "tags": [
+    "meerjarig",
+    "woekert"
+  ],
   "nativeStatus": "exoot",
-  "appearance": { "shape": "bloem", "count": 10, "flowerColor": "#F2C02A", "flowerColorName": "geel" },
-  "bloom": { "from": "09-01", "to": "10-15" },
-  "growing": { "sun": ["zon", "halfschaduw"], "soil": ["klei", "leem", "zand"], "moisture": ["normaal"], "spacingCm": 50 },
+  "appearance": {
+    "shape": "bloem",
+    "count": 10,
+    "flowerColor": "#F2C02A",
+    "flowerColorName": "geel"
+  },
+  "bloom": {
+    "from": "09-01",
+    "to": "10-15"
+  },
+  "growing": {
+    "sun": [
+      "zon",
+      "halfschaduw"
+    ],
+    "soil": [
+      "klei",
+      "leem",
+      "zand"
+    ],
+    "moisture": [
+      "normaal"
+    ],
+    "spacingCm": 50
+  },
   "info": {
     "intro": "Een verwant van de zonnebloem met eetbare, knobbelige knollen met een nootachtige smaak. Hij groeit bijna overal en wordt tot 2,5 meter hoog.",
     "water": "Weinig water nodig; alleen bij lange droogte.",
@@ -20,11 +45,23 @@
   },
   "tasks": [
     {
-      "id": "poten", "type": "planten", "window": { "kind": "dates", "from": "03-01", "to": "04-30" },
+      "id": "poten",
+      "type": "planten",
+      "window": {
+        "kind": "dates",
+        "from": "03-01",
+        "to": "04-30"
+      },
       "description": "Poot de knollen 10 cm diep, 50 cm uit elkaar."
     },
     {
-      "id": "oogsten", "type": "oogsten", "window": { "kind": "dates", "from": "10-15", "to": "03-15" },
+      "id": "oogsten",
+      "type": "oogsten",
+      "window": {
+        "kind": "dates",
+        "from": "10-15",
+        "to": "03-15"
+      },
       "description": "Steek de knollen uit wanneer je ze nodig hebt; ze bewaren het best in de grond."
     }
   ]

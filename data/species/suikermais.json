@@ -4,11 +4,35 @@
   "name": "Suikermaïs",
   "latin": "Zea mays var. saccharata",
   "category": "groente",
-  "tags": ["eenjarig", "vorstgevoelig"],
+  "tags": [
+    "eenjarig",
+    "vorstgevoelig"
+  ],
   "nativeStatus": "exoot",
-  "appearance": { "shape": "aar", "count": 6, "flowerColor": "#E6D48A", "flowerColorName": "geelbruin" },
-  "bloom": { "from": "07-15", "to": "08-31" },
-  "growing": { "sun": ["zon"], "soil": ["klei", "leem", "zand"], "moisture": ["normaal"], "spacingCm": 40 },
+  "appearance": {
+    "shape": "aar",
+    "count": 6,
+    "flowerColor": "#E6D48A",
+    "flowerColorName": "geelbruin"
+  },
+  "bloom": {
+    "from": "07-15",
+    "to": "08-31"
+  },
+  "growing": {
+    "sun": [
+      "zon"
+    ],
+    "soil": [
+      "klei",
+      "leem",
+      "zand"
+    ],
+    "moisture": [
+      "normaal"
+    ],
+    "spacingCm": 40
+  },
   "info": {
     "intro": "Zoete maïskolven, rechtstreeks van het veld in de pan, zijn onvergelijkbaar zoet. Maïs is een windbestuiver: plant hem in blokken in plaats van rijen.",
     "water": "Geef in droge perioden water, vooral wanneer de pluimen en draden verschijnen.",
@@ -20,16 +44,36 @@
   },
   "tasks": [
     {
-      "id": "zaaien-binnen", "type": "zaaien", "location": "kas", "window": { "kind": "dates", "from": "04-15", "to": "05-15" },
+      "id": "zaaien-binnen",
+      "type": "zaaien",
+      "location": "kas",
+      "window": {
+        "kind": "dates",
+        "from": "04-15",
+        "to": "05-15"
+      },
       "description": "Zaai binnen in potjes, 2 zaden per pot, 3 cm diep."
     },
     {
-      "id": "uitplanten", "type": "planten", "window": { "kind": "relative", "anchor": "lastFrost", "fromWeeks": 0, "toWeeks": 3 },
+      "id": "uitplanten",
+      "type": "planten",
+      "window": {
+        "kind": "relative",
+        "anchor": "lastFrost",
+        "fromWeeks": 0,
+        "toWeeks": 3
+      },
       "note": "In een blok planten",
       "description": "Plant uit in een blok, 40 cm uit elkaar, na de laatste nachtvorst."
     },
     {
-      "id": "oogsten", "type": "oogsten", "window": { "kind": "dates", "from": "08-15", "to": "09-30" },
+      "id": "oogsten",
+      "type": "oogsten",
+      "window": {
+        "kind": "dates",
+        "from": "08-15",
+        "to": "09-30"
+      },
       "description": "Breek de kolven af als de draden bruin zijn en de korrels bij indrukken melkachtig sap geven."
     }
   ]

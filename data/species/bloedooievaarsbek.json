@@ -4,11 +4,38 @@
   "name": "Bloedooievaarsbek",
   "latin": "Geranium sanguineum",
   "category": "vaste-plant",
-  "tags": ["meerjarig", "bodembedekker", "droogtebestendig"],
+  "tags": [
+    "meerjarig",
+    "bodembedekker",
+    "droogtebestendig"
+  ],
   "nativeStatus": "inheems",
-  "appearance": { "shape": "bloem", "count": 5, "flowerColor": "#C23A8C", "flowerColorName": "magenta" },
-  "bloom": { "from": "05-15", "to": "08-31" },
-  "growing": { "sun": ["zon", "halfschaduw"], "soil": ["zand", "leem", "klei"], "moisture": ["droog", "normaal"], "spacingCm": 35 },
+  "appearance": {
+    "shape": "bloem",
+    "count": 5,
+    "flowerColor": "#C23A8C",
+    "flowerColorName": "magenta"
+  },
+  "bloom": {
+    "from": "05-15",
+    "to": "08-31"
+  },
+  "growing": {
+    "sun": [
+      "zon",
+      "halfschaduw"
+    ],
+    "soil": [
+      "zand",
+      "leem",
+      "klei"
+    ],
+    "moisture": [
+      "droog",
+      "normaal"
+    ],
+    "spacingCm": 35
+  },
   "info": {
     "intro": "Een lage, stevige vaste plant met fijn ingesneden blad en magenta bloemen van mei tot de nazomer. In de herfst kleurt het blad rood. Taai en makkelijk.",
     "water": "Kan goed tegen droogte; alleen water na het planten.",
@@ -20,15 +47,34 @@
   },
   "tasks": [
     {
-      "id": "planten", "type": "planten", "window": { "kind": "dates", "from": "03-15", "to": "05-15" },
+      "id": "planten",
+      "type": "planten",
+      "window": {
+        "kind": "dates",
+        "from": "03-15",
+        "to": "05-15"
+      },
       "description": "Plant op zo'n 35 cm afstand op een zonnige of licht beschaduwde plek."
     },
     {
-      "id": "terugknippen-na-bloei", "type": "snoeien", "importance": "licht", "window": { "kind": "dates", "from": "07-15", "to": "08-15" },
+      "id": "terugknippen-na-bloei",
+      "type": "snoeien",
+      "importance": "licht",
+      "window": {
+        "kind": "dates",
+        "from": "07-15",
+        "to": "08-15"
+      },
       "description": "Knip de plant na de eerste bloei een stuk terug. Er komt fris blad en vaak nog bloei."
     },
     {
-      "id": "delen", "type": "delen", "window": { "kind": "dates", "from": "03-15", "to": "04-15" },
+      "id": "delen",
+      "type": "delen",
+      "window": {
+        "kind": "dates",
+        "from": "03-15",
+        "to": "04-15"
+      },
       "description": "Verdeel grote pollen om de paar jaar in het voorjaar."
     }
   ]

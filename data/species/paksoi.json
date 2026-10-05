@@ -4,10 +4,32 @@
   "name": "Paksoi",
   "latin": "Brassica rapa subsp. chinensis",
   "category": "groente",
-  "tags": ["eenjarig"],
+  "tags": [
+    "eenjarig"
+  ],
   "nativeStatus": "exoot",
-  "appearance": { "shape": "losse-wolk", "count": 3, "flowerColor": "#B7CC8C", "flowerColorName": "groen" },
-  "growing": { "sun": ["zon", "halfschaduw"], "soil": ["klei", "leem", "zand"], "moisture": ["normaal", "vochtig"], "spacingCm": 25 },
+  "appearance": {
+    "shape": "losse-wolk",
+    "count": 3,
+    "flowerColor": "#B7CC8C",
+    "flowerColorName": "groen"
+  },
+  "growing": {
+    "sun": [
+      "zon",
+      "halfschaduw"
+    ],
+    "soil": [
+      "klei",
+      "leem",
+      "zand"
+    ],
+    "moisture": [
+      "normaal",
+      "vochtig"
+    ],
+    "spacingCm": 25
+  },
   "info": {
     "intro": "Een snelle Aziatische kool met dikke witte of groene stelen en mals blad. Lekker in roerbakgerechten. Hij houdt van koel weer.",
     "water": "Houd de grond vochtig: droogte laat hem doorschieten.",
@@ -19,11 +41,23 @@
   },
   "tasks": [
     {
-      "id": "zaaien", "type": "zaaien", "window": { "kind": "dates", "from": "07-15", "to": "09-15" },
+      "id": "zaaien",
+      "type": "zaaien",
+      "window": {
+        "kind": "dates",
+        "from": "07-15",
+        "to": "09-15"
+      },
       "description": "Zaai in rijen op 30 cm afstand of in potjes, en dun uit tot 25 cm."
     },
     {
-      "id": "oogsten", "type": "oogsten", "window": { "kind": "dates", "from": "08-15", "to": "11-15" },
+      "id": "oogsten",
+      "type": "oogsten",
+      "window": {
+        "kind": "dates",
+        "from": "08-15",
+        "to": "11-15"
+      },
       "description": "Snijd de hele plant af of pluk de buitenste bladeren."
     }
   ]

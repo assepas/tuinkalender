@@ -4,11 +4,39 @@
   "name": "Vergeet-mij-nietje",
   "latin": "Myosotis sylvatica",
   "category": "vaste-plant",
-  "tags": ["tweejarig", "zelfzaaiend", "voorjaarsbloeier"],
+  "tags": [
+    "tweejarig",
+    "zelfzaaiend",
+    "voorjaarsbloeier"
+  ],
   "nativeStatus": "inheems",
-  "appearance": { "shape": "bloem", "count": 5, "flowerColor": "#6FA2E0", "flowerColorName": "hemelsblauw" },
-  "bloom": { "from": "04-01", "to": "06-15" },
-  "growing": { "sun": ["halfschaduw", "zon", "schaduw"], "soil": ["klei", "leem", "zand"], "moisture": ["normaal", "vochtig"], "spacingCm": 20 },
+  "appearance": {
+    "shape": "bloem",
+    "count": 5,
+    "flowerColor": "#6FA2E0",
+    "flowerColorName": "hemelsblauw"
+  },
+  "bloom": {
+    "from": "04-01",
+    "to": "06-15"
+  },
+  "growing": {
+    "sun": [
+      "halfschaduw",
+      "zon",
+      "schaduw"
+    ],
+    "soil": [
+      "klei",
+      "leem",
+      "zand"
+    ],
+    "moisture": [
+      "normaal",
+      "vochtig"
+    ],
+    "spacingCm": 20
+  },
   "info": {
     "intro": "Een wolk van kleine hemelsblauwe bloempjes met een geel oog in het voorjaar. Mooi onder tulpen en tussen struiken. Hij zaait zich jaarlijks uit.",
     "water": "Houd de grond licht vochtig, vooral in het voorjaar.",
@@ -20,15 +48,34 @@
   },
   "tasks": [
     {
-      "id": "zaaien", "type": "zaaien", "window": { "kind": "dates", "from": "06-01", "to": "07-31" },
+      "id": "zaaien",
+      "type": "zaaien",
+      "window": {
+        "kind": "dates",
+        "from": "06-01",
+        "to": "07-31"
+      },
       "description": "Zaai in de zomer in een zaaibed of direct op de plek. De plantjes bloeien volgend voorjaar."
     },
     {
-      "id": "planten", "type": "planten", "window": { "kind": "dates", "from": "09-15", "to": "10-31" },
+      "id": "planten",
+      "type": "planten",
+      "window": {
+        "kind": "dates",
+        "from": "09-15",
+        "to": "10-31"
+      },
       "description": "Zet de plantjes in het najaar op hun plek, tussen voorjaarsbollen, op zo'n 20 cm afstand."
     },
     {
-      "id": "opruimen", "type": "onderhoud", "window": { "kind": "dates", "from": "06-15", "to": "07-15" },
+      "id": "opruimen",
+      "type": "onderhoud",
+      "window": {
+        "kind": "dates",
+        "from": "06-15",
+        "to": "07-15"
+      },
+      "note": "Uitgebloeide planten uittrekken",
       "description": "Trek de uitgebloeide planten uit als ze zaad hebben gezet en grijs worden. Schud ze eerst uit waar je volgend jaar vergeet-mij-nietjes wilt."
     }
   ]

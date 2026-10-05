@@ -4,10 +4,30 @@
   "name": "Bloemkool",
   "latin": "Brassica oleracea var. botrytis",
   "category": "groente",
-  "tags": ["eenjarig"],
+  "tags": [
+    "eenjarig"
+  ],
   "nativeStatus": "exoot",
-  "appearance": { "shape": "losse-wolk", "count": 4, "flowerColor": "#F2EEDC", "flowerColorName": "wit" },
-  "growing": { "sun": ["zon"], "soil": ["klei", "leem"], "moisture": ["normaal", "vochtig"], "spacingCm": 50 },
+  "appearance": {
+    "shape": "losse-wolk",
+    "count": 4,
+    "flowerColor": "#F2EEDC",
+    "flowerColorName": "wit"
+  },
+  "growing": {
+    "sun": [
+      "zon"
+    ],
+    "soil": [
+      "klei",
+      "leem"
+    ],
+    "moisture": [
+      "normaal",
+      "vochtig"
+    ],
+    "spacingCm": 50
+  },
   "info": {
     "intro": "Een wat lastigere kool die rijke grond en gelijkmatig water wil. Een mooie, witte bloemkool uit eigen tuin is dan ook een prestatie.",
     "water": "Geef gelijkmatig water; droogte geeft kleine, losse koolen.",
@@ -19,19 +39,45 @@
   },
   "tasks": [
     {
-      "id": "zaaien", "type": "zaaien", "location": "kas", "window": { "kind": "dates", "from": "03-15", "to": "05-31" },
+      "id": "zaaien",
+      "type": "zaaien",
+      "location": "kas",
+      "window": {
+        "kind": "dates",
+        "from": "03-15",
+        "to": "05-31"
+      },
       "description": "Zaai in potjes, 1 cm diep."
     },
     {
-      "id": "uitplanten", "type": "planten", "window": { "kind": "dates", "from": "05-01", "to": "07-15" },
+      "id": "uitplanten",
+      "type": "planten",
+      "window": {
+        "kind": "dates",
+        "from": "05-01",
+        "to": "07-15"
+      },
       "description": "Plant op 50 cm afstand in grond met veel compost. Zet direct na het planten insectengaas over de kool tegen koolvlieg, koolwitje en duiven."
     },
     {
-      "id": "afdekken", "type": "onderhoud", "window": { "kind": "dates", "from": "07-01", "to": "10-15" },
+      "id": "afdekken",
+      "type": "onderhoud",
+      "window": {
+        "kind": "dates",
+        "from": "07-01",
+        "to": "10-15"
+      },
+      "note": "Kool afdekken met eigen blad",
       "description": "Knik of bind een paar bladeren over de kool als hij zichtbaar wordt, zodat hij wit blijft."
     },
     {
-      "id": "oogsten", "type": "oogsten", "window": { "kind": "dates", "from": "07-01", "to": "10-31" },
+      "id": "oogsten",
+      "type": "oogsten",
+      "window": {
+        "kind": "dates",
+        "from": "07-01",
+        "to": "10-31"
+      },
       "description": "Snijd de kool af als hij vast en gesloten is, voordat hij uit elkaar valt."
     }
   ]

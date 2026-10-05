@@ -4,11 +4,38 @@
   "name": "Bergamotplant",
   "latin": "Monarda didyma",
   "category": "vaste-plant",
-  "tags": ["meerjarig", "geurend", "vlinderplant", "eetbaar"],
+  "tags": [
+    "meerjarig",
+    "geurend",
+    "vlinderplant",
+    "eetbaar"
+  ],
   "nativeStatus": "exoot",
-  "appearance": { "shape": "bloem", "count": 8, "flowerColor": "#C8324B", "flowerColorName": "rood" },
-  "bloom": { "from": "07-01", "to": "09-15" },
-  "growing": { "sun": ["zon", "halfschaduw"], "soil": ["klei", "leem"], "moisture": ["normaal", "vochtig"], "spacingCm": 45 },
+  "appearance": {
+    "shape": "bloem",
+    "count": 8,
+    "flowerColor": "#C8324B",
+    "flowerColorName": "rood"
+  },
+  "bloom": {
+    "from": "07-01",
+    "to": "09-15"
+  },
+  "growing": {
+    "sun": [
+      "zon",
+      "halfschaduw"
+    ],
+    "soil": [
+      "klei",
+      "leem"
+    ],
+    "moisture": [
+      "normaal",
+      "vochtig"
+    ],
+    "spacingCm": 45
+  },
   "info": {
     "intro": "Een geurige vaste plant met opvallende bloemen in rood, roze of paars in kransjes boven elkaar. Het blad ruikt naar bergamot en je kunt er thee van zetten.",
     "water": "Houd de grond vochtig; bij droogte krijgt hij meeldauw.",
@@ -20,19 +47,43 @@
   },
   "tasks": [
     {
-      "id": "planten", "type": "planten", "window": { "kind": "dates", "from": "03-15", "to": "05-01" },
+      "id": "planten",
+      "type": "planten",
+      "window": {
+        "kind": "dates",
+        "from": "03-15",
+        "to": "05-01"
+      },
       "description": "Plant op zo'n 45 cm afstand in voedzame, vochthoudende grond."
     },
     {
-      "id": "oogsten", "type": "oogsten", "window": { "kind": "dates", "from": "06-15", "to": "08-31" },
+      "id": "oogsten",
+      "type": "oogsten",
+      "window": {
+        "kind": "dates",
+        "from": "06-15",
+        "to": "08-31"
+      },
       "description": "Pluk blad en bloemen voor thee, vers of gedroogd."
     },
     {
-      "id": "terugknippen", "type": "snoeien", "window": { "kind": "dates", "from": "10-15", "to": "11-30" },
+      "id": "terugknippen",
+      "type": "snoeien",
+      "window": {
+        "kind": "dates",
+        "from": "10-15",
+        "to": "11-30"
+      },
       "description": "Knip de stengels na de bloei af tot net boven de grond."
     },
     {
-      "id": "delen", "type": "delen", "window": { "kind": "dates", "from": "03-15", "to": "04-15" },
+      "id": "delen",
+      "type": "delen",
+      "window": {
+        "kind": "dates",
+        "from": "03-15",
+        "to": "04-15"
+      },
       "description": "Verdeel de pol om de drie jaar en gooi het oude midden weg."
     }
   ]

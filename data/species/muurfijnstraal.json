@@ -4,11 +4,36 @@
   "name": "Muurfijnstraal",
   "latin": "Erigeron karvinskianus",
   "category": "vaste-plant",
-  "tags": ["meerjarig", "zelfzaaiend", "droogtebestendig"],
+  "tags": [
+    "meerjarig",
+    "zelfzaaiend",
+    "droogtebestendig"
+  ],
   "nativeStatus": "exoot",
-  "appearance": { "shape": "bloem", "count": 10, "flowerColor": "#F4DDE4", "flowerColorName": "wit-roze" },
-  "bloom": { "from": "05-15", "to": "10-31" },
-  "growing": { "sun": ["zon"], "soil": ["zand", "leem"], "moisture": ["droog", "normaal"], "spacingCm": 30 },
+  "appearance": {
+    "shape": "bloem",
+    "count": 10,
+    "flowerColor": "#F4DDE4",
+    "flowerColorName": "wit-roze"
+  },
+  "bloom": {
+    "from": "05-15",
+    "to": "10-31"
+  },
+  "growing": {
+    "sun": [
+      "zon"
+    ],
+    "soil": [
+      "zand",
+      "leem"
+    ],
+    "moisture": [
+      "droog",
+      "normaal"
+    ],
+    "spacingCm": 30
+  },
   "info": {
     "intro": "Een laag, losjes groeiend plantje met madeliefachtige bloempjes die van wit naar roze verkleuren. Hij bloeit van mei tot de vorst en groeit graag in muurtjes, tussen tegels en op trappen.",
     "water": "Heeft weinig water nodig.",
@@ -20,11 +45,23 @@
   },
   "tasks": [
     {
-      "id": "planten", "type": "planten", "window": { "kind": "dates", "from": "04-15", "to": "05-31" },
+      "id": "planten",
+      "type": "planten",
+      "window": {
+        "kind": "dates",
+        "from": "04-15",
+        "to": "05-31"
+      },
       "description": "Plant op een zonnige plek, in een pot, muur of tussen tegels, op zo'n 30 cm afstand."
     },
     {
-      "id": "terugknippen", "type": "snoeien", "window": { "kind": "dates", "from": "03-15", "to": "04-15" },
+      "id": "terugknippen",
+      "type": "snoeien",
+      "window": {
+        "kind": "dates",
+        "from": "03-15",
+        "to": "04-15"
+      },
       "description": "Knip de plant in het voorjaar terug tot een paar centimeter boven de grond."
     }
   ]

@@ -4,11 +4,36 @@
   "name": "Klein streepzaad",
   "latin": "Crepis capillaris",
   "category": "vaste-plant",
-  "tags": ["eenjarig", "gazon"],
+  "tags": [
+    "eenjarig",
+    "gazon"
+  ],
   "nativeStatus": "inheems",
-  "appearance": { "shape": "bloem", "count": 10, "flowerColor": "#F2CD30", "flowerColorName": "geel" },
-  "bloom": { "from": "06-01", "to": "10-31" },
-  "growing": { "sun": ["zon"], "soil": ["zand", "leem", "klei"], "moisture": ["droog", "normaal"], "spacingCm": 15 },
+  "appearance": {
+    "shape": "bloem",
+    "count": 10,
+    "flowerColor": "#F2CD30",
+    "flowerColorName": "geel"
+  },
+  "bloom": {
+    "from": "06-01",
+    "to": "10-31"
+  },
+  "growing": {
+    "sun": [
+      "zon"
+    ],
+    "soil": [
+      "zand",
+      "leem",
+      "klei"
+    ],
+    "moisture": [
+      "droog",
+      "normaal"
+    ],
+    "spacingCm": 15
+  },
   "info": {
     "intro": "Een een- of tweejarige plant met kleine gele bloemhoofdjes, die lijken op kleine paardenbloemen. Hij groeit in gazons, bermen en op open plekken, en bloeit lang door tot in de herfst.",
     "water": "Heeft geen extra water nodig.",
@@ -20,11 +45,25 @@
   },
   "tasks": [
     {
-      "id": "zaaien", "type": "zaaien", "window": { "kind": "dates", "from": "08-15", "to": "09-30" },
+      "id": "zaaien",
+      "type": "zaaien",
+      "window": {
+        "kind": "dates",
+        "from": "08-15",
+        "to": "09-30"
+      },
       "description": "Zaai in de nazomer of in april-mei (lukt ook) op kale, losgeharkte plekken in het gras of mee in een bloemrijk gazonmengsel. Strooi het zaad breed uit, druk het aan en houd het een paar weken vochtig."
     },
     {
-      "id": "maaien", "type": "onderhoud", "window": { "kind": "recurring", "from": "05-01", "to": "10-15", "every": "2weeks" },
+      "id": "maaien",
+      "type": "onderhoud",
+      "window": {
+        "kind": "recurring",
+        "from": "05-01",
+        "to": "10-15",
+        "every": "2weeks"
+      },
+      "note": "Gazon niet te kort maaien",
       "description": "Maai het gazon niet te kort, op 5 tot 8 cm, dan blijft deze plant bloeien. Hij bloeit na het maaien snel weer."
     }
   ]

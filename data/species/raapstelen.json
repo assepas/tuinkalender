@@ -4,10 +4,32 @@
   "name": "Raapstelen",
   "latin": "Brassica rapa subsp. rapa",
   "category": "groente",
-  "tags": ["eenjarig"],
+  "tags": [
+    "eenjarig"
+  ],
   "nativeStatus": "exoot",
-  "appearance": { "shape": "bloem", "count": 4, "flowerColor": "#F2D548", "flowerColorName": "geel" },
-  "growing": { "sun": ["zon", "halfschaduw"], "soil": ["klei", "leem", "zand"], "moisture": ["normaal", "vochtig"], "spacingCm": 3 },
+  "appearance": {
+    "shape": "bloem",
+    "count": 4,
+    "flowerColor": "#F2D548",
+    "flowerColorName": "geel"
+  },
+  "growing": {
+    "sun": [
+      "zon",
+      "halfschaduw"
+    ],
+    "soil": [
+      "klei",
+      "leem",
+      "zand"
+    ],
+    "moisture": [
+      "normaal",
+      "vochtig"
+    ],
+    "spacingCm": 3
+  },
   "info": {
     "intro": "Een van de snelste groenten: na vier à vijf weken maai je al een bosje malse stelen voor stamppot. Ideaal als eerste groente in het voorjaar.",
     "water": "Houd de grond vochtig; dan blijven de stelen mals.",
@@ -19,11 +41,23 @@
   },
   "tasks": [
     {
-      "id": "zaaien", "type": "zaaien", "window": { "kind": "dates", "from": "03-01", "to": "09-15" },
+      "id": "zaaien",
+      "type": "zaaien",
+      "window": {
+        "kind": "dates",
+        "from": "03-01",
+        "to": "09-15"
+      },
       "description": "Zaai breedwerpig of in dichte rijen, 1 cm diep. Zaai om de drie à vier weken opnieuw."
     },
     {
-      "id": "oogsten", "type": "oogsten", "window": { "kind": "dates", "from": "04-01", "to": "10-31" },
+      "id": "oogsten",
+      "type": "oogsten",
+      "window": {
+        "kind": "dates",
+        "from": "04-01",
+        "to": "10-31"
+      },
       "description": "Snijd de raapstelen af als ze 15-20 cm hoog zijn, een paar centimeter boven de grond."
     }
   ]

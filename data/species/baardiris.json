@@ -4,11 +4,36 @@
   "name": "Baardiris",
   "latin": "Iris germanica",
   "category": "bolgewas",
-  "tags": ["meerjarig", "droogtebestendig"],
+  "tags": [
+    "meerjarig",
+    "droogtebestendig"
+  ],
   "nativeStatus": "exoot",
-  "appearance": { "shape": "bloem", "count": 6, "flowerColor": "#6A4FB0", "flowerColorName": "paars" },
-  "bloom": { "from": "05-15", "to": "06-15" },
-  "growing": { "sun": ["zon"], "soil": ["zand", "leem", "klei"], "moisture": ["droog", "normaal"], "spacingCm": 40 },
+  "appearance": {
+    "shape": "bloem",
+    "count": 6,
+    "flowerColor": "#6A4FB0",
+    "flowerColorName": "paars"
+  },
+  "bloom": {
+    "from": "05-15",
+    "to": "06-15"
+  },
+  "growing": {
+    "sun": [
+      "zon"
+    ],
+    "soil": [
+      "zand",
+      "leem",
+      "klei"
+    ],
+    "moisture": [
+      "droog",
+      "normaal"
+    ],
+    "spacingCm": 40
+  },
   "info": {
     "intro": "Een klassieker met zwaardvormig blad en grote bloemen met een 'baardje' op de onderste blaadjes. Er zijn honderden kleuren. Hij groeit uit een dikke wortelstok die boven de grond ligt.",
     "water": "Houdt van droog en zon. Alleen water geven na het planten.",
@@ -20,15 +45,34 @@
   },
   "tasks": [
     {
-      "id": "planten", "type": "planten", "window": { "kind": "dates", "from": "07-15", "to": "09-15" },
+      "id": "planten",
+      "type": "planten",
+      "window": {
+        "kind": "dates",
+        "from": "07-15",
+        "to": "09-15"
+      },
       "description": "Plant de wortelstok zo, dat de bovenkant net boven de grond uitsteekt, met het blad naar het zuiden. Houd zo'n 40 cm afstand."
     },
     {
-      "id": "uitgebloeid-afknippen", "type": "snoeien", "importance": "licht", "window": { "kind": "dates", "from": "06-15", "to": "07-15" },
+      "id": "uitgebloeid-afknippen",
+      "type": "snoeien",
+      "importance": "licht",
+      "window": {
+        "kind": "dates",
+        "from": "06-15",
+        "to": "07-15"
+      },
       "description": "Knip de bloemstengels na de bloei af tot vlak boven de wortelstok. Laat het blad staan."
     },
     {
-      "id": "delen", "type": "delen", "window": { "kind": "dates", "from": "07-15", "to": "08-31" },
+      "id": "delen",
+      "type": "delen",
+      "window": {
+        "kind": "dates",
+        "from": "07-15",
+        "to": "08-31"
+      },
       "description": "Verdeel de pollen om de drie à vier jaar na de bloei. Snijd jonge stukken wortelstok met een waaier blad los, knip het blad in tot 15 cm en plant ze terug. Gooi het oude midden weg."
     }
   ]

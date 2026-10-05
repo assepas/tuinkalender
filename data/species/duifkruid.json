@@ -4,11 +4,36 @@
   "name": "Duifkruid",
   "latin": "Scabiosa columbaria",
   "category": "vaste-plant",
-  "tags": ["meerjarig", "vlinderplant", "droogtebestendig"],
+  "tags": [
+    "meerjarig",
+    "vlinderplant",
+    "droogtebestendig"
+  ],
   "nativeStatus": "inheems",
-  "appearance": { "shape": "bloem", "count": 10, "flowerColor": "#A7A2D8", "flowerColorName": "lila-blauw" },
-  "bloom": { "from": "06-15", "to": "09-30" },
-  "growing": { "sun": ["zon"], "soil": ["zand", "leem"], "moisture": ["droog", "normaal"], "spacingCm": 30 },
+  "appearance": {
+    "shape": "bloem",
+    "count": 10,
+    "flowerColor": "#A7A2D8",
+    "flowerColorName": "lila-blauw"
+  },
+  "bloom": {
+    "from": "06-15",
+    "to": "09-30"
+  },
+  "growing": {
+    "sun": [
+      "zon"
+    ],
+    "soil": [
+      "zand",
+      "leem"
+    ],
+    "moisture": [
+      "droog",
+      "normaal"
+    ],
+    "spacingCm": 30
+  },
   "info": {
     "intro": "Een inheemse vaste plant met lila-blauwe, speldenkussenachtige bloemen op lange stelen. Hij bloeit maanden achter elkaar en is een topper voor vlinders.",
     "water": "Houdt van droog en kalk. Alleen water geven na het planten.",
@@ -20,15 +45,35 @@
   },
   "tasks": [
     {
-      "id": "planten", "type": "planten", "window": { "kind": "dates", "from": "03-15", "to": "05-15" },
+      "id": "planten",
+      "type": "planten",
+      "window": {
+        "kind": "dates",
+        "from": "03-15",
+        "to": "05-15"
+      },
       "description": "Plant op een zonnige plek in goed doorlatende grond, op zo'n 30 cm afstand."
     },
     {
-      "id": "dode-bloemen-verwijderen", "type": "snoeien", "importance": "licht", "window": { "kind": "recurring", "from": "07-01", "to": "09-15", "every": "2weeks" },
+      "id": "dode-bloemen-verwijderen",
+      "type": "snoeien",
+      "importance": "licht",
+      "window": {
+        "kind": "recurring",
+        "from": "07-01",
+        "to": "09-15",
+        "every": "2weeks"
+      },
       "description": "Knip uitgebloeide bloemen met steel af tot boven een blad."
     },
     {
-      "id": "terugknippen", "type": "snoeien", "window": { "kind": "dates", "from": "03-01", "to": "03-31" },
+      "id": "terugknippen",
+      "type": "snoeien",
+      "window": {
+        "kind": "dates",
+        "from": "03-01",
+        "to": "03-31"
+      },
       "description": "Knip in het voorjaar de oude stengels af tot op de bladrozet."
     }
   ]

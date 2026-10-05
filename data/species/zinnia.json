@@ -4,11 +4,37 @@
   "name": "Zinnia",
   "latin": "Zinnia elegans",
   "category": "vaste-plant",
-  "tags": ["eenjarig", "snijbloem", "vlinderplant", "vorstgevoelig"],
+  "tags": [
+    "eenjarig",
+    "snijbloem",
+    "vlinderplant",
+    "vorstgevoelig"
+  ],
   "nativeStatus": "exoot",
-  "appearance": { "shape": "bloem", "count": 10, "flowerColor": "#F05A5A", "flowerColorName": "rood-oranje" },
-  "bloom": { "from": "07-15", "to": "10-15" },
-  "growing": { "sun": ["zon"], "soil": ["klei", "leem", "zand"], "moisture": ["normaal"], "spacingCm": 30 },
+  "appearance": {
+    "shape": "bloem",
+    "count": 10,
+    "flowerColor": "#F05A5A",
+    "flowerColorName": "rood-oranje"
+  },
+  "bloom": {
+    "from": "07-15",
+    "to": "10-15"
+  },
+  "growing": {
+    "sun": [
+      "zon"
+    ],
+    "soil": [
+      "klei",
+      "leem",
+      "zand"
+    ],
+    "moisture": [
+      "normaal"
+    ],
+    "spacingCm": 30
+  },
   "info": {
     "intro": "Een zomerbloem met stevige, kleurrijke bloemen in felle kleuren. Hij houdt van warmte en is een van de beste snijbloemen: hoe meer je plukt, hoe meer hij bloeit.",
     "water": "Geef water op de grond, niet over het blad; dat voorkomt meeldauw.",
@@ -20,20 +46,47 @@
   },
   "tasks": [
     {
-      "id": "zaaien-binnen", "type": "zaaien", "location": "kas", "window": { "kind": "dates", "from": "04-15", "to": "05-15" },
+      "id": "zaaien-binnen",
+      "type": "zaaien",
+      "location": "kas",
+      "window": {
+        "kind": "dates",
+        "from": "04-15",
+        "to": "05-15"
+      },
       "description": "Zaai binnen in potjes, 0,5 cm diep, op een warme plek."
     },
     {
-      "id": "zaaien", "type": "zaaien", "window": { "kind": "dates", "from": "05-15", "to": "06-15" },
+      "id": "zaaien",
+      "type": "zaaien",
+      "window": {
+        "kind": "dates",
+        "from": "05-15",
+        "to": "06-15"
+      },
       "description": "Zaai direct buiten als de grond warm is, en dun uit tot 30 cm."
     },
     {
-      "id": "uitplanten", "type": "planten", "window": { "kind": "relative", "anchor": "lastFrost", "fromWeeks": 1, "toWeeks": 4 },
+      "id": "uitplanten",
+      "type": "planten",
+      "window": {
+        "kind": "relative",
+        "anchor": "lastFrost",
+        "fromWeeks": 1,
+        "toWeeks": 4
+      },
       "note": "Pas na de laatste nachtvorst",
       "description": "Plant uit als het ook 's nachts warm blijft, op een zonnige plek."
     },
     {
-      "id": "plukken", "type": "oogsten", "window": { "kind": "recurring", "from": "07-15", "to": "10-01", "every": "week" },
+      "id": "plukken",
+      "type": "oogsten",
+      "window": {
+        "kind": "recurring",
+        "from": "07-15",
+        "to": "10-01",
+        "every": "week"
+      },
       "description": "Pluk de bloemen als ze helemaal open zijn en de steel stevig is. Knip diep, net boven een bladpaar."
     }
   ]

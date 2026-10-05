@@ -4,11 +4,36 @@
   "name": "Lente-ui",
   "latin": "Allium fistulosum",
   "category": "groente",
-  "tags": ["meerjarig", "eetbaar"],
+  "tags": [
+    "meerjarig",
+    "eetbaar"
+  ],
   "nativeStatus": "exoot",
-  "appearance": { "shape": "losse-wolk", "count": 5, "flowerColor": "#F0EEE4", "flowerColorName": "wit" },
-  "bloom": { "from": "06-01", "to": "07-15" },
-  "growing": { "sun": ["zon", "halfschaduw"], "soil": ["klei", "leem", "zand"], "moisture": ["normaal"], "spacingCm": 5 },
+  "appearance": {
+    "shape": "losse-wolk",
+    "count": 5,
+    "flowerColor": "#F0EEE4",
+    "flowerColorName": "wit"
+  },
+  "bloom": {
+    "from": "06-01",
+    "to": "07-15"
+  },
+  "growing": {
+    "sun": [
+      "zon",
+      "halfschaduw"
+    ],
+    "soil": [
+      "klei",
+      "leem",
+      "zand"
+    ],
+    "moisture": [
+      "normaal"
+    ],
+    "spacingCm": 5
+  },
   "info": {
     "intro": "Een snelle, milde ui waarvan je het groene blad en het witte onderste deel eet. De stengelui (Allium fistulosum) is meerjarig en blijft je het hele jaar voorzien.",
     "water": "Houd de grond vochtig; bij droogte wordt het blad taai.",
@@ -20,11 +45,23 @@
   },
   "tasks": [
     {
-      "id": "zaaien", "type": "zaaien", "window": { "kind": "dates", "from": "03-15", "to": "08-15" },
+      "id": "zaaien",
+      "type": "zaaien",
+      "window": {
+        "kind": "dates",
+        "from": "03-15",
+        "to": "08-15"
+      },
       "description": "Zaai om de drie à vier weken een rijtje, 1 cm diep. Uitdunnen is niet nodig."
     },
     {
-      "id": "oogsten", "type": "oogsten", "window": { "kind": "dates", "from": "05-15", "to": "11-15" },
+      "id": "oogsten",
+      "type": "oogsten",
+      "window": {
+        "kind": "dates",
+        "from": "05-15",
+        "to": "11-15"
+      },
       "description": "Trek de uien uit als ze potlooddik zijn, of knip alleen het blad af en laat de plant staan."
     }
   ]

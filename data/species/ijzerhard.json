@@ -4,11 +4,36 @@
   "name": "IJzerhard",
   "latin": "Verbena officinalis",
   "category": "vaste-plant",
-  "tags": ["meerjarig", "vlinderplant"],
+  "tags": [
+    "meerjarig",
+    "vlinderplant"
+  ],
   "nativeStatus": "archeofyt",
-  "appearance": { "shape": "aar", "count": 5, "flowerColor": "#B9A2CF", "flowerColorName": "lila" },
-  "bloom": { "from": "07-01", "to": "09-30" },
-  "growing": { "sun": ["zon"], "soil": ["klei", "leem", "zand"], "moisture": ["droog", "normaal"], "spacingCm": 30 },
+  "appearance": {
+    "shape": "aar",
+    "count": 5,
+    "flowerColor": "#B9A2CF",
+    "flowerColorName": "lila"
+  },
+  "bloom": {
+    "from": "07-01",
+    "to": "09-30"
+  },
+  "growing": {
+    "sun": [
+      "zon"
+    ],
+    "soil": [
+      "klei",
+      "leem",
+      "zand"
+    ],
+    "moisture": [
+      "droog",
+      "normaal"
+    ],
+    "spacingCm": 30
+  },
   "info": {
     "intro": "Een sobere, taaie plant met dunne vertakte stengels en kleine lila bloempjes. Hij bloeit lang en is geliefd bij bijen. Vroeger was het een belangrijk geneeskruid.",
     "water": "Heeft weinig water nodig. Alleen bij het planten en in lange droge periodes gieten.",
@@ -20,15 +45,33 @@
   },
   "tasks": [
     {
-      "id": "zaaien", "type": "zaaien", "window": { "kind": "dates", "from": "04-01", "to": "05-15" },
+      "id": "zaaien",
+      "type": "zaaien",
+      "window": {
+        "kind": "dates",
+        "from": "04-01",
+        "to": "05-15"
+      },
       "description": "Zaai in het voorjaar direct op de plek en bedek het zaad maar heel dun. Het kiemt beter als het eerst een paar weken koud heeft gestaan; zaaien in de herfst kan ook."
     },
     {
-      "id": "planten", "type": "planten", "window": { "kind": "dates", "from": "04-15", "to": "05-31" },
+      "id": "planten",
+      "type": "planten",
+      "window": {
+        "kind": "dates",
+        "from": "04-15",
+        "to": "05-31"
+      },
       "description": "Plant op een zonnige plek op zo'n 30 cm afstand. Goed doorlatende grond is belangrijk."
     },
     {
-      "id": "terugknippen", "type": "snoeien", "window": { "kind": "dates", "from": "03-01", "to": "03-31" },
+      "id": "terugknippen",
+      "type": "snoeien",
+      "window": {
+        "kind": "dates",
+        "from": "03-01",
+        "to": "03-31"
+      },
       "description": "Knip de oude stengels in maart af tot net boven de grond. Laat ze de winter staan voor de vogels en overwinterende insecten."
     }
   ]

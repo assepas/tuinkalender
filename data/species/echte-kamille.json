@@ -4,11 +4,37 @@
   "name": "Echte kamille",
   "latin": "Matricaria chamomilla",
   "category": "kruid",
-  "tags": ["eenjarig", "bloemenweide", "zelfzaaiend", "eetbaar"],
+  "tags": [
+    "eenjarig",
+    "bloemenweide",
+    "zelfzaaiend",
+    "eetbaar"
+  ],
   "nativeStatus": "archeofyt",
-  "appearance": { "shape": "bloem", "count": 10, "flowerColor": "#F4F1E4", "flowerColorName": "wit met geel hart" },
-  "bloom": { "from": "05-15", "to": "08-31" },
-  "growing": { "sun": ["zon"], "soil": ["zand", "leem", "klei"], "moisture": ["normaal"], "spacingCm": 20 },
+  "appearance": {
+    "shape": "bloem",
+    "count": 10,
+    "flowerColor": "#F4F1E4",
+    "flowerColorName": "wit met geel hart"
+  },
+  "bloom": {
+    "from": "05-15",
+    "to": "08-31"
+  },
+  "growing": {
+    "sun": [
+      "zon"
+    ],
+    "soil": [
+      "zand",
+      "leem",
+      "klei"
+    ],
+    "moisture": [
+      "normaal"
+    ],
+    "spacingCm": 20
+  },
   "info": {
     "intro": "Een eenjarige akkerbloem met kleine witte madeliefjesbloemen en een geel, hol hartje. De bloemen geven de bekende rustgevende thee en ruiken naar appel.",
     "water": "Weinig veeleisend. Alleen het zaaibed vochtig houden tot het zaad is opgekomen.",
@@ -20,11 +46,24 @@
   },
   "tasks": [
     {
-      "id": "zaaien", "type": "zaaien", "window": { "kind": "dates", "from": "03-15", "to": "05-15" },
+      "id": "zaaien",
+      "type": "zaaien",
+      "window": {
+        "kind": "dates",
+        "from": "03-15",
+        "to": "05-15"
+      },
       "description": "Strooi het zeer fijne zaad uit en druk het alleen aan: het kiemt in het licht. Zaaien in september kan ook, voor bloei vroeg in het volgende jaar."
     },
     {
-      "id": "oogsten", "type": "oogsten", "window": { "kind": "recurring", "from": "06-01", "to": "08-31", "every": "week" },
+      "id": "oogsten",
+      "type": "oogsten",
+      "window": {
+        "kind": "recurring",
+        "from": "06-01",
+        "to": "08-31",
+        "every": "week"
+      },
       "description": "Pluk de bloemhoofdjes op een droge dag, als ze helemaal open zijn. Laat ze drogen op een luchtige, schaduwrijke plek en bewaar ze in een pot voor thee."
     }
   ]

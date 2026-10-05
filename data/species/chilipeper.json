@@ -4,11 +4,37 @@
   "name": "Chilipeper",
   "latin": "Capsicum annuum",
   "category": "groente",
-  "tags": ["eenjarig", "vorstgevoelig", "kuipplant"],
+  "tags": [
+    "eenjarig",
+    "vorstgevoelig",
+    "kuipplant"
+  ],
   "nativeStatus": "exoot",
-  "appearance": { "shape": "vrucht", "count": 3, "flowerColor": "#F4F2EC", "flowerColorName": "wit", "fruitColor": "#D1231F" },
-  "bloom": { "from": "06-15", "to": "09-15" },
-  "growing": { "sun": ["zon"], "soil": ["klei", "leem", "zand"], "moisture": ["normaal"], "spacingCm": 40 },
+  "appearance": {
+    "shape": "vrucht",
+    "count": 3,
+    "flowerColor": "#F4F2EC",
+    "flowerColorName": "wit",
+    "fruitColor": "#D1231F"
+  },
+  "bloom": {
+    "from": "06-15",
+    "to": "09-15"
+  },
+  "growing": {
+    "sun": [
+      "zon"
+    ],
+    "soil": [
+      "klei",
+      "leem",
+      "zand"
+    ],
+    "moisture": [
+      "normaal"
+    ],
+    "spacingCm": 40
+  },
   "info": {
     "intro": "Pepers zijn compacter dan paprika's en doen het goed in een pot op een warm, zonnig plekje. Eén plant geeft al snel tientallen pepers.",
     "water": "Geef regelmatig water, maar laat de grond tussendoor iets opdrogen; dat maakt ze pittiger.",
@@ -20,15 +46,35 @@
   },
   "tasks": [
     {
-      "id": "zaaien-binnen", "type": "zaaien", "location": "kas", "window": { "kind": "dates", "from": "02-01", "to": "03-15" },
+      "id": "zaaien-binnen",
+      "type": "zaaien",
+      "location": "kas",
+      "window": {
+        "kind": "dates",
+        "from": "02-01",
+        "to": "03-15"
+      },
       "description": "Zaai binnen op 25 °C; pepers kiemen traag. Verspeen naar potjes."
     },
     {
-      "id": "uitplanten", "type": "planten", "window": { "kind": "relative", "anchor": "lastFrost", "fromWeeks": 1, "toWeeks": 4 },
+      "id": "uitplanten",
+      "type": "planten",
+      "window": {
+        "kind": "relative",
+        "anchor": "lastFrost",
+        "fromWeeks": 1,
+        "toWeeks": 4
+      },
       "description": "Zet de plant na de laatste nachtvorst in de kas, een grote pot of op een warme plek buiten."
     },
     {
-      "id": "oogsten", "type": "oogsten", "window": { "kind": "dates", "from": "08-01", "to": "10-15" },
+      "id": "oogsten",
+      "type": "oogsten",
+      "window": {
+        "kind": "dates",
+        "from": "08-01",
+        "to": "10-15"
+      },
       "description": "Pluk de pepers groen of rijp; hoe vaker je plukt, hoe meer er komen."
     }
   ]

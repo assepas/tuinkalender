@@ -4,11 +4,36 @@
   "name": "Krokus",
   "latin": "Crocus spp.",
   "category": "bolgewas",
-  "tags": ["meerjarig", "voorjaarsbloeier"],
+  "tags": [
+    "meerjarig",
+    "voorjaarsbloeier"
+  ],
   "nativeStatus": "onbekend",
-  "appearance": { "shape": "bloem", "count": 6, "flowerColor": "#9B7BD0", "flowerColorName": "lila" },
-  "bloom": { "from": "02-15", "to": "03-31" },
-  "growing": { "sun": ["zon", "halfschaduw"], "soil": ["klei", "leem", "zand"], "moisture": ["normaal"], "spacingCm": 8 },
+  "appearance": {
+    "shape": "bloem",
+    "count": 6,
+    "flowerColor": "#9B7BD0",
+    "flowerColorName": "lila"
+  },
+  "bloom": {
+    "from": "02-15",
+    "to": "03-31"
+  },
+  "growing": {
+    "sun": [
+      "zon",
+      "halfschaduw"
+    ],
+    "soil": [
+      "klei",
+      "leem",
+      "zand"
+    ],
+    "moisture": [
+      "normaal"
+    ],
+    "spacingCm": 8
+  },
   "info": {
     "intro": "Een van de eerste bloeiers van het jaar, in paars, wit of geel. De open bloemen zijn in februari en maart een belangrijke voedselbron voor hommels en bijen.",
     "water": "Geen extra water nodig.",
@@ -20,11 +45,24 @@
   },
   "tasks": [
     {
-      "id": "planten", "type": "planten", "window": { "kind": "dates", "from": "09-15", "to": "11-15" },
+      "id": "planten",
+      "type": "planten",
+      "window": {
+        "kind": "dates",
+        "from": "09-15",
+        "to": "11-15"
+      },
       "description": "Plant de bollen in de herfst 5-8 cm diep, met de punt omhoog, in groepjes op zo'n 8 cm afstand. Plant liever in groepen dan in rijtjes: dat ziet er natuurlijker uit."
     },
     {
-      "id": "blad-laten-staan", "type": "onderhoud", "window": { "kind": "dates", "from": "04-01", "to": "05-15" },
+      "id": "blad-laten-staan",
+      "type": "onderhoud",
+      "window": {
+        "kind": "dates",
+        "from": "04-01",
+        "to": "05-15"
+      },
+      "note": "Blad laten afsterven",
       "description": "Laat het blad na de bloei staan tot het geel is en vanzelf afsterft. De bol haalt er energie uit voor volgend jaar. Maai er dus nog niet overheen."
     }
   ]

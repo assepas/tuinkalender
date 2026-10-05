@@ -4,10 +4,29 @@
   "name": "Witte en rode kool",
   "latin": "Brassica oleracea var. capitata",
   "category": "groente",
-  "tags": ["eenjarig"],
+  "tags": [
+    "eenjarig"
+  ],
   "nativeStatus": "exoot",
-  "appearance": { "shape": "losse-wolk", "count": 4, "flowerColor": "#7C5B8E", "flowerColorName": "rood-groen" },
-  "growing": { "sun": ["zon"], "soil": ["klei", "leem"], "moisture": ["normaal"], "spacingCm": 60 },
+  "appearance": {
+    "shape": "losse-wolk",
+    "count": 4,
+    "flowerColor": "#7C5B8E",
+    "flowerColorName": "rood-groen"
+  },
+  "growing": {
+    "sun": [
+      "zon"
+    ],
+    "soil": [
+      "klei",
+      "leem"
+    ],
+    "moisture": [
+      "normaal"
+    ],
+    "spacingCm": 60
+  },
   "info": {
     "intro": "Stevige, vaste koolen die lang goed blijven. Vroege rassen oogst je in de zomer, late (bewaar)koolen in de herfst om maandenlang te bewaren.",
     "water": "Geef regelmatig water; na droogte kan een kool barsten als het ineens veel regent.",
@@ -19,15 +38,34 @@
   },
   "tasks": [
     {
-      "id": "zaaien", "type": "zaaien", "location": "kas", "window": { "kind": "dates", "from": "03-01", "to": "05-15" },
+      "id": "zaaien",
+      "type": "zaaien",
+      "location": "kas",
+      "window": {
+        "kind": "dates",
+        "from": "03-01",
+        "to": "05-15"
+      },
       "description": "Zaai in potjes of een zaaibed, 1 cm diep."
     },
     {
-      "id": "uitplanten", "type": "planten", "window": { "kind": "dates", "from": "04-15", "to": "06-30" },
+      "id": "uitplanten",
+      "type": "planten",
+      "window": {
+        "kind": "dates",
+        "from": "04-15",
+        "to": "06-30"
+      },
       "description": "Plant op 60 cm afstand, stevig aangedrukt. Zet direct na het planten insectengaas over de kool tegen koolvlieg, koolwitje en duiven."
     },
     {
-      "id": "oogsten", "type": "oogsten", "window": { "kind": "dates", "from": "07-15", "to": "11-15" },
+      "id": "oogsten",
+      "type": "oogsten",
+      "window": {
+        "kind": "dates",
+        "from": "07-15",
+        "to": "11-15"
+      },
       "description": "Snijd de kool af als hij hard en vol aanvoelt."
     }
   ]

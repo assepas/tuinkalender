@@ -4,11 +4,36 @@
   "name": "Zwarte bes",
   "latin": "Ribes nigrum",
   "category": "fruit",
-  "tags": ["struik"],
+  "tags": [
+    "struik"
+  ],
   "nativeStatus": "inheems",
-  "appearance": { "shape": "vrucht", "count": 5, "flowerColor": "#C8B8A0", "flowerColorName": "groenbruin", "fruitColor": "#2A1E2E" },
-  "bloom": { "from": "04-15", "to": "05-15" },
-  "growing": { "sun": ["zon", "halfschaduw"], "soil": ["klei", "leem"], "moisture": ["normaal", "vochtig"], "spacingCm": 150 },
+  "appearance": {
+    "shape": "vrucht",
+    "count": 5,
+    "flowerColor": "#C8B8A0",
+    "flowerColorName": "groenbruin",
+    "fruitColor": "#2A1E2E"
+  },
+  "bloom": {
+    "from": "04-15",
+    "to": "05-15"
+  },
+  "growing": {
+    "sun": [
+      "zon",
+      "halfschaduw"
+    ],
+    "soil": [
+      "klei",
+      "leem"
+    ],
+    "moisture": [
+      "normaal",
+      "vochtig"
+    ],
+    "spacingCm": 150
+  },
   "info": {
     "intro": "Een bessenstruik met aromatische, vitaminerijke zwarte bessen voor jam, siroop en cassis. Het blad ruikt kruidig en is ook lekker in thee.",
     "water": "Geef in droge periodes water; zwarte bes houdt van vochtige grond.",
@@ -20,15 +45,33 @@
   },
   "tasks": [
     {
-      "id": "planten", "type": "planten", "window": { "kind": "dates", "from": "11-01", "to": "03-15" },
+      "id": "planten",
+      "type": "planten",
+      "window": {
+        "kind": "dates",
+        "from": "11-01",
+        "to": "03-15"
+      },
       "description": "Plant in de winterrust op 1,5 meter afstand, 5 cm dieper dan hij in de pot stond."
     },
     {
-      "id": "snoeien", "type": "snoeien", "window": { "kind": "dates", "from": "08-01", "to": "02-28" },
+      "id": "snoeien",
+      "type": "snoeien",
+      "window": {
+        "kind": "dates",
+        "from": "08-01",
+        "to": "02-28"
+      },
       "description": "Knip na de oogst of in de winter elk jaar een derde van de oudste takken bij de grond weg. Zo komen er steeds jonge, vruchtbare takken bij."
     },
     {
-      "id": "oogsten", "type": "oogsten", "window": { "kind": "dates", "from": "07-01", "to": "07-31" },
+      "id": "oogsten",
+      "type": "oogsten",
+      "window": {
+        "kind": "dates",
+        "from": "07-01",
+        "to": "07-31"
+      },
       "description": "Pluk hele trosjes als alle bessen zwart en glanzend zijn."
     }
   ]
