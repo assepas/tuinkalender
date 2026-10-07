@@ -40,12 +40,10 @@
     }
   },
   "info": {
-    "intro": "Een bekend keukenkruid met holle, fijne sprietjes die mild naar ui smaken. In mei en juni komen er lila bolletjes die bijen aantrekken en ook eetbaar zijn.",
-    "water": "Houd de grond licht vochtig. Bij droogte wordt het blad taai en geel aan de toppen.",
+    "intro": "Keukenkruid met holle sprietjes die mild naar ui smaken. De lila bloemen in mei en juni zijn eetbaar en trekken bijen.",
+    "water": "Houd de grond licht vochtig; bij droogte wordt het blad taai en geel aan de toppen.",
     "tips": [
-      "Knip regelmatig; hoe vaker je knipt, hoe meer jonge sprietjes er komen.",
-      "Knip na de bloei alles terug tot 5 cm voor een nieuwe lading vers blad.",
-      "Een pol in een pot op de vensterbank geeft ook in de winter wat blad."
+      "Een pol in een pot op de vensterbank geeft ook 's winters wat blad."
     ]
   },
   "tasks": [
@@ -58,7 +56,7 @@
         "from": "03-01",
         "to": "04-15"
       },
-      "description": "Zaai in potjes, een snufje zaad per pot, dun bedekt. Plant het hele pluk plantjes later samen uit."
+      "description": "Zaai een snufje zaad per pot, dun bedekt. Plant het hele plukje later samen uit."
     },
     {
       "id": "planten",
@@ -68,7 +66,7 @@
         "from": "04-01",
         "to": "05-31"
       },
-      "description": "Plant in plukjes op zo'n 25 cm afstand. Bieslook doet het goed aan de rand van een groentebed."
+      "description": "Plant in plukjes op 25 cm afstand, bijvoorbeeld aan de rand van een groentebed."
     },
     {
       "id": "oogsten",
@@ -78,7 +76,7 @@
         "from": "04-01",
         "to": "10-15"
       },
-      "description": "Knip de sprietjes af tot een paar centimeter boven de grond, liever niet alleen de toppen. Ze groeien snel weer aan."
+      "description": "Knip de sprietjes af tot een paar centimeter boven de grond, niet alleen de toppen. Hoe vaker je knipt, hoe meer jonge sprietjes er komen."
     },
     {
       "id": "terugknippen-na-bloei",
@@ -88,7 +86,7 @@
         "from": "06-15",
         "to": "07-15"
       },
-      "description": "Knip de hele plant na de bloei terug tot 5 cm. Er komt dan snel nieuw, mals blad."
+      "description": "Knip de hele plant terug tot 5 cm; er komt snel nieuw, mals blad."
     },
     {
       "id": "delen",
@@ -98,7 +96,7 @@
         "from": "03-15",
         "to": "04-15"
       },
-      "description": "Verdeel oude pollen om de drie à vier jaar in het voorjaar. Dan blijft de plant sterk."
+      "description": "Verdeel oude pollen om de drie à vier jaar, dan blijft de plant sterk."
     }
   ]
 }

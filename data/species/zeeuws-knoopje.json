@@ -40,11 +40,10 @@
     }
   },
   "info": {
-    "intro": "Een vaste plant met bijzondere, speldenkussenachtige bloemetjes omringd door een kraag van papierachtige blaadjes. Hij bloeit lang en doet het goed in de halfschaduw.",
+    "intro": "Vaste plant met speldenkussenachtige bloemetjes in een kraag van papierachtige blaadjes. Bloeit lang, doet het goed in halfschaduw en is mooi als snij- en droogbloem.",
     "water": "Houd de grond vochtig; in de volle zon heeft hij meer water nodig.",
     "tips": [
-      "Mooi als snij- en droogbloem.",
-      "Knip na de eerste bloei terug voor een tweede bloei.",
+      "Slakken eten graag de jonge scheuten.",
       "Zaait zich rustig uit."
     ]
   },
@@ -57,7 +56,7 @@
         "from": "03-15",
         "to": "05-01"
       },
-      "description": "Plant op een licht beschaduwde plek in vochthoudende grond, op zo'n 40 cm afstand."
+      "description": "Plant op 40 cm afstand in vochthoudende, humusrijke grond."
     },
     {
       "id": "terugknippen-na-bloei",
@@ -68,7 +67,7 @@
         "from": "07-15",
         "to": "08-15"
       },
-      "description": "Knip de uitgebloeide stengels af tot op het blad; er volgt vaak een tweede bloei."
+      "description": "Knip uitgebloeide stengels af tot op het blad; vaak volgt een tweede bloei."
     },
     {
       "id": "delen",
@@ -78,7 +77,7 @@
         "from": "03-15",
         "to": "04-15"
       },
-      "description": "Verdeel grote pollen om de paar jaar in het voorjaar."
+      "description": "Verdeel grote pollen om de paar jaar."
     }
   ]
 }

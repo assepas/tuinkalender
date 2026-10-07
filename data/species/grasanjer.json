@@ -40,11 +40,10 @@
     }
   },
   "info": {
-    "intro": "Een lage vaste plant met grijsblauw, grasachtig blad en gerafelde, sterk geurende bloempjes. Ideaal voor de rand van een border of een rotstuin.",
-    "water": "Houdt van droog; natte voeten zijn funest.",
+    "intro": "Lage vaste plant met grijsblauw, grasachtig blad en gerafelde, sterk geurende bloempjes. Geschikt voor de rand van een border of een rotstuin.",
+    "water": "Weinig water nodig; natte voeten laten hem wegrotten.",
     "tips": [
       "Kalkrijke, doorlatende grond is ideaal.",
-      "Het blad blijft in de winter grijs en mooi.",
       "Stekken van scheuten zonder bloem wortelen makkelijk."
     ]
   },
@@ -57,7 +56,7 @@
         "from": "04-01",
         "to": "05-15"
       },
-      "description": "Plant op een zonnige plek in goed doorlatende grond, op zo'n 25 cm afstand. Niet te diep planten."
+      "description": "Plant op een zonnige plek in doorlatende grond, op zo'n 25 cm afstand, en niet dieper dan hij in de pot stond."
     },
     {
       "id": "uitgebloeid-afknippen",
@@ -68,7 +67,7 @@
         "from": "07-01",
         "to": "07-31"
       },
-      "description": "Knip de uitgebloeide stelen af tot op het blad. Dan blijft het kussen mooi compact."
+      "description": "Knip de uitgebloeide stelen af tot op het blad, dan blijft het kussen compact."
     }
   ]
 }

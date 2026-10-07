@@ -40,12 +40,11 @@
     }
   },
   "info": {
-    "intro": "Hét voorjaarsbolgewas: gele of witte bloemen met een trompet of kroontje. Narcissen verwilderen goed en komen elk jaar terug, ook in gras.",
-    "water": "Heeft meestal geen extra water nodig.",
+    "intro": "Bekend voorjaarsbolgewas met gele of witte bloemen met een trompet of kroontje. Ze komen elk jaar terug en verwilderen goed, ook in gras.",
+    "water": "Meestal geen extra water nodig.",
     "tips": [
-      "Muizen en woelmuizen laten narcissen staan: de bollen zijn giftig.",
-      "Knoop het blad na de bloei niet samen; laat het gewoon afsterven.",
-      "Minder bloei na een paar jaar? Graaf ze in de zomer op en verdeel ze."
+      "Alle delen zijn giftig en het sap kan de huid irriteren; muizen laten de bollen daarom staan.",
+      "Minder bloei na een paar jaar? Graaf de bollen in de zomer op en verdeel ze."
     ]
   },
   "tasks": [
@@ -57,7 +56,7 @@
         "from": "09-15",
         "to": "11-15"
       },
-      "description": "Plant de bollen in de herfst 10-15 cm diep, met de punt omhoog, in groepjes op zo'n 15 cm afstand. Plant liever in groepen dan in rijtjes: dat ziet er natuurlijker uit."
+      "description": "Plant 10–15 cm diep met de punt omhoog, in groepjes op 15 cm afstand. Groepen ogen natuurlijker dan rijtjes."
     },
     {
       "id": "blad-laten-staan",
@@ -68,7 +67,7 @@
         "to": "06-15"
       },
       "note": "Blad laten afsterven",
-      "description": "Laat het blad na de bloei staan tot het geel is en vanzelf afsterft. De bol haalt er energie uit voor volgend jaar. Maai er dus nog niet overheen."
+      "description": "Laat het blad staan tot het geel is: de bol haalt er energie uit voor volgend jaar. Maai er niet overheen en knoop het niet samen."
     }
   ]
 }

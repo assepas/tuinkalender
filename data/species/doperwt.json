@@ -39,11 +39,11 @@
     }
   },
   "info": {
-    "intro": "Verse doperwtjes zijn zoet en heel anders dan uit een pot. Erwten houden van koel weer; zaai ze vroeg in het voorjaar.",
-    "water": "Geef water in droge periodes, vooral tijdens de bloei.",
+    "intro": "Eenjarige klimmende groente; verse doperwten zijn zoeter dan uit pot of blik. Erwten groeien het best bij koel weer, dus zaai vroeg in het voorjaar.",
+    "water": "Water geven bij droogte, vooral tijdens de bloei.",
     "tips": [
       "Zet erwtenrijs of gaas neer om in te klimmen.",
-      "Bescherm het zaad tegen muizen en vogels.",
+      "Muizen en vogels eten het zaad: dek het af met gaas.",
       "Laat de wortels na de oogst in de grond: ze bevatten stikstof voor de volgende teelt."
     ]
   },
@@ -56,7 +56,7 @@
         "from": "03-01",
         "to": "05-31"
       },
-      "description": "Zaai in een dubbele rij, 4 cm diep, 5 cm uit elkaar, langs een rek of gaas."
+      "description": "Zaai in een dubbele rij, 4 cm diep en 5 cm uit elkaar, langs een rek of gaas."
     },
     {
       "id": "oogsten",
@@ -66,7 +66,7 @@
         "from": "06-01",
         "to": "07-31"
       },
-      "description": "Pluk de peulen als ze vol zijn maar nog groen en glanzend. Pluk regelmatig: dan komen er meer."
+      "description": "Pluk de peulen als ze vol maar nog groen en glanzend zijn. Regelmatig plukken geeft meer peulen."
     }
   ]
 }

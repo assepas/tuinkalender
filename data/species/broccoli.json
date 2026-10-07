@@ -33,12 +33,10 @@
     }
   },
   "info": {
-    "intro": "Een snelle kool met een groene hoofdroos en daarna nog veel zijscheuten. Oogst hem voordat de knopjes geel gaan bloeien.",
-    "water": "Geef regelmatig water; droogte geeft kleine, losse roosjes.",
+    "intro": "Snelle kool met een groene hoofdroos; daarna komen er nog weken kleine zijroosjes.",
+    "water": "Geef regelmatig water; bij droogte blijven de roosjes klein en los.",
     "tips": [
-      "Na de hoofdroos komen er nog weken lang kleine zijroosjes.",
-      "Oogst snel: bij warm weer gaat hij binnen dagen bloeien.",
-      "Insectengaas houdt koolwitje en koolvlieg weg."
+      "Oogst op tijd: bij warm weer gaan de knopjes binnen dagen geel bloeien."
     ]
   },
   "tasks": [
@@ -51,7 +49,7 @@
         "from": "03-15",
         "to": "06-15"
       },
-      "description": "Zaai in potjes, 1 cm diep, en zaai om de vier weken opnieuw voor een lange oogst."
+      "description": "Zaai in potjes, 1 cm diep. Zaai om de vier weken opnieuw voor een lange oogst."
     },
     {
       "id": "uitplanten",
@@ -61,7 +59,7 @@
         "from": "04-15",
         "to": "07-15"
       },
-      "description": "Plant op 45 cm afstand. Zet direct na het planten insectengaas over de kool tegen koolvlieg, koolwitje en duiven."
+      "description": "Plant op 45 cm afstand. Zet er meteen insectengaas over tegen koolvlieg, koolwitje en duiven."
     },
     {
       "id": "oogsten",
@@ -71,7 +69,7 @@
         "from": "06-15",
         "to": "10-31"
       },
-      "description": "Snijd de hoofdroos af met een stukje stengel als de knopjes nog dicht en blauwgroen zijn. Laat de plant staan voor zijscheuten."
+      "description": "Snijd de hoofdroos met een stukje stengel af zolang de knopjes dicht en blauwgroen zijn. Laat de plant staan voor de zijroosjes."
     }
   ]
 }

@@ -41,12 +41,10 @@
     }
   },
   "info": {
-    "intro": "Een inheemse, kleine aardbei met heel aromatische vruchtjes. Hij groeit ook in de halfschaduw onder struiken en vormt een mooie bodembedekker.",
-    "water": "Houd de grond licht vochtig; in de schaduw is dat meestal vanzelf zo. Geef in droge zomers extra water, anders stopt de vruchtzetting.",
+    "intro": "Inheemse, kleine aardbei met sterk smakende vruchtjes. Groeit ook in halfschaduw onder struiken en vormt met zijn uitlopers een bodembedekker.",
+    "water": "Houd de grond licht vochtig; geef in droge zomers extra water, anders komen er weinig vruchtjes.",
     "tips": [
-      "Bosaardbeien verspreiden zich met uitlopers en vullen zo zelf lege plekken op.",
-      "Pluk vaak: de vruchtjes zijn klein en rijpen de hele zomer door.",
-      "Er bestaan ook rassen zonder uitlopers (maandaardbei) voor een rand of pot."
+      "Wil je geen uitlopers, kies dan een maandaardbei: een ras zonder uitlopers, ook geschikt voor een pot."
     ]
   },
   "tasks": [
@@ -58,7 +56,7 @@
         "from": "03-15",
         "to": "05-01"
       },
-      "description": "Plant op zo'n 25 cm afstand met het hartje precies op de grondlijn. Een plek onder een struik of langs een schaduwrand is prima. Geef na het planten water."
+      "description": "Plant op zo'n 25 cm afstand met het hartje precies op de grondlijn, en geef daarna water."
     },
     {
       "id": "oogsten",
@@ -68,7 +66,7 @@
         "from": "06-01",
         "to": "08-15"
       },
-      "description": "Pluk de vruchtjes als ze helemaal rood en zacht zijn; ze vallen dan bijna vanzelf los. Eet ze snel op, want ze bewaren maar kort."
+      "description": "Pluk als de vruchtjes helemaal rood en zacht zijn; ze laten dan bijna vanzelf los. Ze bewaren kort, dus eet ze snel op."
     },
     {
       "id": "delen",
@@ -78,7 +76,7 @@
         "from": "08-01",
         "to": "09-15"
       },
-      "description": "Knip na de zomer de uitlopers met een geworteld plantje los van de moederplant en plant ze op een nieuwe plek. Wil je dat de plant zich niet verder verspreidt, knip overige uitlopers dan weg."
+      "description": "Knip uitlopers met een geworteld plantje los en plant ze op een nieuwe plek. Wil je niet dat hij zich verder verspreidt, knip de overige uitlopers dan weg."
     }
   ]
 }

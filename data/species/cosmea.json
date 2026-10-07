@@ -40,12 +40,11 @@
     }
   },
   "info": {
-    "intro": "Een luchtige eenjarige met grote roze, witte of karmijnrode bloemen boven fijn, veerachtig blad. Hij bloeit tot de eerste vorst en trekt veel bijen en vlinders.",
-    "water": "Geef na het uitplanten water tot hij groeit. Daarna kan hij prima tegen droogte.",
+    "intro": "Luchtige eenjarige met grote roze, witte of karmijnrode bloemen boven fijn, veerachtig blad. Bloeit tot de eerste vorst en trekt bijen en vlinders.",
+    "water": "Geef na het uitplanten water tot hij groeit; daarna kan hij goed tegen droogte.",
     "tips": [
       "Geef geen mest: op rijke grond krijg je veel blad en weinig bloemen.",
-      "Knip regelmatig bloemen voor de vaas, dan blijft hij bloeien.",
-      "Hoge planten kunnen omvallen; zet ze dicht bij elkaar of geef steun."
+      "Hoge planten kunnen omvallen; plant ze dicht bij elkaar of geef steun."
     ]
   },
   "tasks": [
@@ -58,7 +57,7 @@
         "from": "03-15",
         "to": "04-30"
       },
-      "description": "Zaai in potjes of een tray, zo'n 0,5 cm diep, op een lichte plek. Het zaad kiemt snel."
+      "description": "Zaai 0,5 cm diep in potjes of een tray, op een lichte plek. Het zaad kiemt snel."
     },
     {
       "id": "zaaien",
@@ -68,7 +67,7 @@
         "from": "05-15",
         "to": "06-15"
       },
-      "description": "Zaai direct buiten na de laatste nachtvorst. De planten bloeien dan iets later."
+      "description": "Zaai na de laatste nachtvorst direct buiten; ze bloeien dan iets later."
     },
     {
       "id": "uitplanten",
@@ -80,7 +79,7 @@
         "toWeeks": 3
       },
       "note": "Pas na de laatste nachtvorst",
-      "description": "Plant uit na de laatste nachtvorst, op zo'n 40 cm afstand. Knijp de top eruit als de plant 30 cm hoog is: dan vertakt hij en krijg je meer bloemen."
+      "description": "Plant op zo'n 40 cm afstand. Knijp de top eruit bij 30 cm hoogte, dan vertakt hij en krijg je meer bloemen."
     },
     {
       "id": "dode-bloemen-verwijderen",
@@ -92,7 +91,7 @@
         "every": "week"
       },
       "note": "Uitgebloeide bloemen weghalen",
-      "description": "Knip uitgebloeide bloemen af tot boven een blad, of pluk ze voor de vaas. Zo bloeit hij tot de vorst."
+      "description": "Knip uitgebloeide bloemen af tot boven een blad, of pluk ze voor de vaas."
     }
   ]
 }

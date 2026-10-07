@@ -40,13 +40,11 @@
     }
   },
   "info": {
-    "intro": "De mispel is een kleine, oud-Hollandse fruitboom met grote witte bloemen in het late voorjaar. De bruine, appelachtige vruchten zijn pas eetbaar als ze zacht en 'overrijp' zijn, met een smaak die lijkt op appelmoes met kaneel. Het is een stevige, makkelijke boom die weinig zorg nodig heeft.",
-    "water": "Geef alleen de eerste twee jaar na het planten water bij droogte. Daarna redt de boom zich meestal zelf.",
+    "intro": "Kleine, oude fruitboom van 3 tot 5 meter met grote witte bloemen eind mei. De bruine vruchten zijn pas eetbaar als ze na de pluk zacht en bruin zijn geworden (bletten); ze smaken dan als appelmoes met kaneel.",
+    "water": "Alleen de eerste twee jaar na het planten water geven bij droogte.",
     "tips": [
-      "Plet of pluk de vruchten niet te vroeg: ze zijn hard en zuur tot ze gebletterd zijn (zacht en bruin geworden). Leg ze na het plukken enkele weken op een koele plek, tot ze week aanvoelen.",
-      "De boom is zelfbestuivend, dus één boom is genoeg voor vruchten.",
-      "Je hoeft nauwelijks te snoeien. Haal alleen dood, kruisend of beschadigd hout weg.",
-      "Mispels worden meestal 3 tot 5 meter hoog en breed. Geef de boom dus voldoende ruimte."
+      "Zelfbestuivend: één boom is genoeg voor vruchten.",
+      "Geef hem ruimte: hij wordt ongeveer even breed als hoog."
     ]
   },
   "tasks": [
@@ -59,7 +57,7 @@
         "to": "03-15"
       },
       "note": "Niet bij vorst planten",
-      "description": "Plant de boom in de winterrust, op een dag dat de grond niet bevroren is. Maak het gat twee keer zo breed als de kluit en plant even diep als in de pot. Zet een paal erbij en bind de boom losjes vast. Geef na het planten flink water."
+      "description": "Maak het gat twee keer zo breed als de kluit en plant even diep als in de pot. Zet een paal erbij, bind de boom losjes vast en geef flink water."
     },
     {
       "id": "bemesten",
@@ -69,7 +67,7 @@
         "from": "03-01",
         "to": "04-15"
       },
-      "description": "Strooi in het voorjaar een laag compost of verteerde mest rond de boom, tot waar de takken reiken. Dat is genoeg voor het hele jaar. Meer is niet nodig en geeft vooral bladgroei."
+      "description": "Strooi een laag compost of verteerde mest rond de boom, tot waar de takken reiken. Meer is niet nodig; te veel mest geeft vooral blad."
     },
     {
       "id": "snoeien",
@@ -81,7 +79,7 @@
         "to": "03-15"
       },
       "note": "Alleen dood en kruisend hout",
-      "description": "Snoei in de late winter, op een vorstvrije dag. Knip dode, zieke en kruisende takken weg en dun alleen aan als het in het midden te dicht wordt. Een mispel hoeft niet strak in vorm gehouden te worden."
+      "description": "Snoei op een vorstvrije dag dode, zieke en kruisende takken weg. Dun het midden alleen uit als het te dicht wordt."
     },
     {
       "id": "oogsten",
@@ -92,7 +90,7 @@
         "to": "11-30"
       },
       "note": "Daarna laten bletten",
-      "description": "Pluk de vruchten laat in het seizoen, na de eerste nachtvorst of als ze bruin zijn en iets meegeven. Leg ze met de kelk naar beneden op een koele, droge plek en laat ze 2 tot 3 weken bletten, tot het vruchtvlees zacht en bruin is. Dan zijn ze zoet en klaar om te eten of tot jam te verwerken."
+      "description": "Pluk na de eerste nachtvorst of als de vruchten bruin worden. Leg ze met de kelk naar beneden op een koele, droge plek; na 2 tot 3 weken is het vruchtvlees zacht, bruin en zoet."
     }
   ]
 }

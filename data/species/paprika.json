@@ -38,12 +38,11 @@
     }
   },
   "info": {
-    "intro": "Paprika's hebben veel warmte nodig en lukken het best in een kas of in een pot tegen een zonnige muur. Groene paprika's kleuren bij genoeg warmte rood, geel of oranje.",
-    "water": "Geef regelmatig water, niet te veel tegelijk; in potten vaker.",
+    "intro": "Paprika heeft veel warmte nodig en lukt het best in een kas of in een pot tegen een zonnige muur. Groene vruchten kleuren bij genoeg warmte rood, geel of oranje.",
+    "water": "Regelmatig water geven, niet te veel tegelijk; in een pot vaker.",
     "tips": [
-      "Zaai vroeg: paprika heeft een lang seizoen nodig.",
       "Kies voor buiten een vroeg, klein ras.",
-      "Laat een paar vruchten helemaal verkleuren: dan zijn ze het zoetst."
+      "Laat een paar vruchten helemaal verkleuren: die zijn het zoetst."
     ]
   },
   "tasks": [
@@ -56,7 +55,7 @@
         "from": "02-01",
         "to": "03-15"
       },
-      "description": "Zaai binnen op 22-25 °C, 0,5 cm diep. Verspeen naar eigen potjes en zet ze heel licht."
+      "description": "Zaai 0,5 cm diep bij 20–25 °C. Verspeen naar eigen potjes zodra er twee echte blaadjes zijn en zet ze zo licht mogelijk."
     },
     {
       "id": "uitplanten",
@@ -68,7 +67,7 @@
         "toWeeks": 4
       },
       "note": "Pas na de laatste nachtvorst",
-      "description": "Plant uit in de kas of op een warme, zonnige plek buiten na de laatste nachtvorst."
+      "description": "Plant in de kas of op een warme, zonnige plek buiten, 45 cm uit elkaar."
     },
     {
       "id": "bemesten",
@@ -79,7 +78,7 @@
         "to": "08-31",
         "every": "2weeks"
       },
-      "description": "Geef om de twee weken tomatenmest vanaf de eerste bloemen."
+      "description": "Geef tomatenmest vanaf de eerste bloemen."
     },
     {
       "id": "oogsten",
@@ -89,7 +88,7 @@
         "from": "08-01",
         "to": "10-15"
       },
-      "description": "Snijd de paprika's af met een stukje steel, groen of verkleurd."
+      "description": "Snijd de vruchten af met een stukje steel, groen of verkleurd."
     }
   ]
 }

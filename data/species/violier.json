@@ -39,12 +39,12 @@
     }
   },
   "info": {
-    "intro": "Een ouderwetse zomerbloem met aren vol dichte, sterk geurende bloemen in lila, roze en wit. Een prachtige snijbloem die je huis vult met een kruidnagelgeur.",
+    "intro": "Ouderwetse zomerbloem met aren vol dichte, sterk naar kruidnagel geurende bloemen in lila, roze en wit; een goede snijbloem.",
     "water": "Houd de grond licht vochtig, maar niet nat.",
     "tips": [
       "Zaai in stappen voor een langere bloei.",
-      "Houdt van kalkrijke grond.",
-      "Vervang het vaaswater om de dag: de stengels gaan anders snel ruiken."
+      "Groeit het best in kalkrijke, goed doorlatende grond.",
+      "Ververs het vaaswater om de dag; anders gaan de stengels snel stinken."
     ]
   },
   "tasks": [
@@ -57,7 +57,7 @@
         "from": "03-01",
         "to": "04-15"
       },
-      "description": "Zaai binnen in een tray, dun bedekt, op een koele, lichte plek."
+      "description": "Zaai in een tray, het zaad dun bedekt, op een koele, lichte plek."
     },
     {
       "id": "uitplanten",
@@ -67,7 +67,7 @@
         "from": "04-15",
         "to": "05-31"
       },
-      "description": "Plant uit op zo'n 25 cm afstand; een beetje vorst kan hij hebben."
+      "description": "Plant op 25 cm afstand; een beetje vorst kan hij hebben."
     },
     {
       "id": "plukken",

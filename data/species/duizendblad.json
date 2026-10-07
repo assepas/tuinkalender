@@ -40,12 +40,11 @@
     }
   },
   "info": {
-    "intro": "Een inheemse vaste plant met fijn, veerachtig blad en platte schermen van witte bloempjes. Er zijn ook tuinvormen in roze, rood en geel. Zweefvliegen en sluipwespen komen er graag op.",
-    "water": "Kan uitstekend tegen droogte. Alleen water geven na het planten.",
+    "intro": "Inheemse vaste plant met fijn, veerachtig blad en platte schermen van witte bloempjes; tuinvormen zijn er ook in roze, rood en geel. Trekt zweefvliegen en sluipwespen, die luis opruimen.",
+    "water": "Kan goed tegen droogte; alleen water geven na het planten.",
     "tips": [
-      "Verspreidt zich met uitlopers; niet naast teerdere planten zetten.",
-      "Mooi als snij- en droogbloem.",
-      "Bemest niet: op rijke grond valt hij om."
+      "Verspreidt zich met uitlopers: zet hem niet naast teerdere planten.",
+      "Niet bemesten: op rijke grond valt hij om."
     ]
   },
   "tasks": [
@@ -57,7 +56,7 @@
         "from": "03-15",
         "to": "05-15"
       },
-      "description": "Plant op een zonnige plek op zo'n 40 cm afstand. Zaaien in april-mei kan ook."
+      "description": "Plant op een zonnige plek, 40 cm uit elkaar. Zaaien in april–mei kan ook."
     },
     {
       "id": "uitgebloeid-afknippen",
@@ -68,7 +67,7 @@
         "from": "07-15",
         "to": "08-15"
       },
-      "description": "Knip uitgebloeide schermen af tot boven een blad, dan volgt vaak een tweede bloei."
+      "description": "Knip uitgebloeide schermen af tot boven een blad; vaak volgt dan een tweede bloei."
     },
     {
       "id": "delen",
@@ -78,7 +77,7 @@
         "from": "03-15",
         "to": "04-15"
       },
-      "description": "Verdeel de pol om de drie jaar in het voorjaar, dan blijft hij vitaal."
+      "description": "Verdeel de pol om de drie jaar, dan blijft hij groeikrachtig."
     }
   ]
 }

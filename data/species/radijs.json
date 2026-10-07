@@ -36,12 +36,11 @@
     }
   },
   "info": {
-    "intro": "De snelste groente die er is: binnen vier weken van zaadje tot knapperige radijs. Ideaal om tussen langzamere groenten te zaaien.",
+    "intro": "Snelle groente: binnen vier weken van zaadje tot radijs. Handig om tussen langzamere groenten te zaaien.",
     "water": "Houd de grond vochtig: bij droogte worden radijsjes scherp en voos.",
     "tips": [
-      "Zaai weinig tegelijk, maar vaak.",
-      "In de zomerhitte lukt radijs slecht; zaai dan op een schaduwrijke plek.",
-      "Aardvlooien? Houd de grond nat en leg gaas over het bed."
+      "In zomerhitte schiet radijs snel door; zaai dan op een plek met wat schaduw.",
+      "Gaatjes in het blad komen van aardvlooien: houd de grond vochtig en leg gaas over het bed."
     ]
   },
   "tasks": [
@@ -53,7 +52,7 @@
         "from": "03-15",
         "to": "09-15"
       },
-      "description": "Zaai om de twee à drie weken een kort rijtje, 1 cm diep, zaadjes 2-3 cm uit elkaar."
+      "description": "Zaai om de twee à drie weken een kort rijtje, 1 cm diep, zaadjes 2–3 cm uit elkaar."
     },
     {
       "id": "oogsten",
@@ -63,7 +62,7 @@
         "from": "04-15",
         "to": "10-31"
       },
-      "description": "Trek de radijsjes na drie à vier weken, als ze zo groot als een knikker zijn. Wacht niet te lang: dan worden ze voos."
+      "description": "Trek ze na drie à vier weken, als ze ongeveer 2,5 cm doorsnee hebben. Wacht niet te lang, dan worden ze voos."
     }
   ]
 }

@@ -39,12 +39,11 @@
     }
   },
   "info": {
-    "intro": "Erwten waarvan je de hele peul eet: platte peultjes of dikke, knapperige sugarsnaps. Heerlijk rauw uit het vuistje of kort geroerbakt.",
+    "intro": "Erwten waarvan je de hele peul eet: platte peultjes of dikke sugarsnaps, rauw of kort gekookt.",
     "water": "Geef water in droge periodes, vooral tijdens de bloei.",
     "tips": [
-      "Pluk peultjes voordat de erwtjes dik worden.",
-      "Klimrassen hebben een rek van 1,5-2 meter nodig.",
-      "Zaai in twee rondes voor een langere oogst."
+      "Hoge rassen (tot 1,8 m) hebben een stevig rek nodig, lage rassen alleen takjes.",
+      "Zaai in twee of drie rondes voor een langere oogst."
     ]
   },
   "tasks": [
@@ -56,7 +55,7 @@
         "from": "03-01",
         "to": "05-31"
       },
-      "description": "Zaai in een dubbele rij, 4 cm diep, 5 cm uit elkaar, langs een rek of gaas."
+      "description": "Zaai in een dubbele rij langs een rek of gaas, 4–5 cm diep en 5 cm uit elkaar."
     },
     {
       "id": "oogsten",
@@ -67,7 +66,7 @@
         "to": "07-31",
         "every": "week"
       },
-      "description": "Pluk de peulen om de paar dagen, jong en mals. Oude peulen worden taai."
+      "description": "Pluk om de paar dagen, als de peulen ongeveer 7 cm lang zijn en de erwtjes nog klein. Oude peulen worden taai."
     }
   ]
 }

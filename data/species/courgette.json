@@ -41,12 +41,10 @@
     }
   },
   "info": {
-    "intro": "Een van de makkelijkste en productiefste groenten: één of twee planten zijn genoeg voor een gezin. Hij wil wel warmte, veel ruimte en rijke grond.",
-    "water": "Geef regelmatig flink water op de grond, niet over het blad. Vooral als er vruchten groeien drinkt hij veel.",
+    "intro": "Makkelijke, productieve groente: één of twee planten zijn genoeg voor een gezin. Hij wil warmte, veel ruimte en rijke grond.",
+    "water": "Geef regelmatig flink water op de grond, niet over het blad, vooral als er vruchten groeien.",
     "tips": [
-      "Oogst ze klein (15-20 cm): dan zijn ze het lekkerst en blijft de plant maken.",
-      "Witte schimmel op het blad (meeldauw) in de nazomer is normaal; haal het ergste blad weg.",
-      "Plant hem op een oude composthoop of meng veel compost door de grond."
+      "Witte schimmel op het blad (meeldauw) in de nazomer is normaal; haal het ergste blad weg."
     ]
   },
   "tasks": [
@@ -59,7 +57,7 @@
         "from": "04-15",
         "to": "05-15"
       },
-      "description": "Zaai binnen in potjes van 8-10 cm, één zaad per pot, 2 cm diep, op kant. Zet ze op een warme, lichte plek."
+      "description": "Zaai in potjes van 8-10 cm, één zaad per pot, 2 cm diep en op zijn kant. Zet ze warm en licht."
     },
     {
       "id": "uitplanten",
@@ -71,7 +69,7 @@
         "toWeeks": 3
       },
       "note": "Pas na de laatste nachtvorst",
-      "description": "Plant uit na de laatste nachtvorst, op minstens 1 meter afstand in grond met veel compost. Bescherm jonge planten tegen slakken."
+      "description": "Plant op minstens 1 meter afstand in grond met veel compost. Bescherm jonge planten tegen slakken."
     },
     {
       "id": "bemesten",
@@ -82,7 +80,7 @@
         "to": "08-31",
         "every": "2weeks"
       },
-      "description": "Geef om de twee weken vloeibare organische mest of gier van smeerwortel of brandnetel."
+      "description": "Geef vloeibare organische mest of gier van smeerwortel of brandnetel."
     },
     {
       "id": "oogsten",
@@ -94,7 +92,7 @@
         "every": "week"
       },
       "note": "Vaak en klein plukken",
-      "description": "Kijk minstens twee keer per week en snijd courgettes af als ze 15-20 cm zijn. Een vergeten courgette wordt snel een grote, waterige vrucht en remt de plant."
+      "description": "Kijk minstens twee keer per week en snijd ze af bij 15-20 cm. Een vergeten courgette wordt groot en waterig en remt de plant."
     }
   ]
 }

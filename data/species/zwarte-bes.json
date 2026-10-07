@@ -39,11 +39,10 @@
     }
   },
   "info": {
-    "intro": "Een bessenstruik met aromatische, vitaminerijke zwarte bessen voor jam, siroop en cassis. Het blad ruikt kruidig en is ook lekker in thee.",
-    "water": "Geef in droge periodes water; zwarte bes houdt van vochtige grond.",
+    "intro": "Bessenstruik met aromatische, vitaminerijke zwarte bessen voor jam, siroop en cassis.",
+    "water": "Geef water in droge periodes; zwarte bes houdt van vochtige grond.",
     "tips": [
-      "Anders dan bij rode bes draagt zwarte bes vooral op het jonge hout van vorig jaar.",
-      "Plant iets dieper dan hij stond: dan komen er meer nieuwe scheuten uit de grond.",
+      "Anders dan rode bes draagt zwarte bes vooral aan de jonge takken van vorig jaar: haal dus juist de oude takken weg.",
       "Een net houdt de vogels weg."
     ]
   },
@@ -56,7 +55,7 @@
         "from": "11-01",
         "to": "03-15"
       },
-      "description": "Plant in de winterrust op 1,5 meter afstand, 5 cm dieper dan hij in de pot stond."
+      "description": "Plant in de winterrust op 1,5 m afstand, 5 cm dieper dan hij stond; dan komen er meer nieuwe scheuten uit de grond."
     },
     {
       "id": "snoeien",
@@ -66,7 +65,7 @@
         "from": "08-01",
         "to": "02-28"
       },
-      "description": "Knip na de oogst of in de winter elk jaar een derde van de oudste takken bij de grond weg. Zo komen er steeds jonge, vruchtbare takken bij."
+      "description": "Zaag elk jaar een derde van de oudste takken bij de grond weg. Zo komen er steeds jonge, vruchtbare takken bij."
     },
     {
       "id": "oogsten",

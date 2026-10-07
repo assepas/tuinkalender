@@ -39,12 +39,11 @@
     }
   },
   "info": {
-    "intro": "Een van de eerste bloeiers van het jaar, in paars, wit of geel. De open bloemen zijn in februari en maart een belangrijke voedselbron voor hommels en bijen.",
+    "intro": "Een van de eerste bloeiers van het jaar, in paars, wit of geel. In februari en maart een belangrijke voedselbron voor hommels en bijen.",
     "water": "Geen extra water nodig.",
     "tips": [
-      "Mooi in grote groepen in het gazon: pas maaien als het blad geel is.",
-      "Soorten als Crocus tommasinianus verwilderen het best.",
-      "Bescherm tegen muizen met een laagje gaas als ze de knollen opeten."
+      "Boerenkrokus (Crocus tommasinianus) verwildert het best.",
+      "Eten muizen de knollen op, leg dan gaas over het plantgat."
     ]
   },
   "tasks": [
@@ -56,7 +55,7 @@
         "from": "09-15",
         "to": "11-15"
       },
-      "description": "Plant de bollen in de herfst 5-8 cm diep, met de punt omhoog, in groepjes op zo'n 8 cm afstand. Plant liever in groepen dan in rijtjes: dat ziet er natuurlijker uit."
+      "description": "Plant 5–8 cm diep met de punt omhoog, in groepjes op zo'n 8 cm afstand; groepen ogen natuurlijker dan rijtjes."
     },
     {
       "id": "blad-laten-staan",
@@ -67,7 +66,7 @@
         "to": "05-15"
       },
       "note": "Blad laten afsterven",
-      "description": "Laat het blad na de bloei staan tot het geel is en vanzelf afsterft. De bol haalt er energie uit voor volgend jaar. Maai er dus nog niet overheen."
+      "description": "Laat het blad staan tot het geel is: de knol haalt er energie uit voor volgend jaar. Maai er nog niet overheen."
     }
   ]
 }

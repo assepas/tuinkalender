@@ -39,10 +39,9 @@
     }
   },
   "info": {
-    "intro": "Een struik met zoete blauwe bessen en prachtige rode herfstkleuren. Blauwe bessen hebben zure grond nodig; op klei lukt het alleen in een pot met speciale grond.",
+    "intro": "Struik met zoete blauwe bessen en rode herfstkleuren. Hij heeft zure grond nodig; op klei lukt het alleen in een pot met speciale grond.",
     "water": "Houd de grond altijd vochtig, liefst met regenwater: kraanwater bevat kalk.",
     "tips": [
-      "Gebruik zure grond (rhododendrongrond) of turfvrije heidegrond.",
       "Twee rassen naast elkaar geven meer bessen door kruisbestuiving.",
       "Een net houdt de vogels weg."
     ]
@@ -56,7 +55,7 @@
         "from": "10-15",
         "to": "03-31"
       },
-      "description": "Plant in zure grond of een grote pot met rhododendrongrond, op 1,5 meter afstand. Mulch met houtsnippers of dennennaalden."
+      "description": "Plant in zure grond of een grote pot met rhododendrongrond (turfvrij), op 1,5 meter afstand. Mulch met houtsnippers of dennennaalden."
     },
     {
       "id": "snoeien",
@@ -77,7 +76,7 @@
         "to": "09-15",
         "every": "week"
       },
-      "description": "Pluk wekelijks de bessen die helemaal blauw zijn en makkelijk loslaten. Wacht een paar dagen na het blauw worden: dan zijn ze het zoetst."
+      "description": "Pluk wekelijks de bessen die helemaal blauw zijn en makkelijk loslaten. Een paar dagen na het blauw worden zijn ze het zoetst."
     }
   ]
 }

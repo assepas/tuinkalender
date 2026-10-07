@@ -39,12 +39,11 @@
     }
   },
   "info": {
-    "intro": "Kleine bolletjes met dichte trosjes blauwe klokjes in april. Ze verwilderen makkelijk tot blauwe linten langs paden en onder struiken.",
+    "intro": "Kleine bolletjes met trosjes blauwe klokjes in april. Ze verwilderen makkelijk langs paden en onder struiken.",
     "water": "Geen extra water nodig.",
     "tips": [
       "Het blad verschijnt al in de herfst; dat is normaal.",
-      "Mooi samen met tulpen en narcissen.",
-      "Breidt zich snel uit; steek teveel bolletjes na de bloei weg."
+      "Breidt zich snel uit; steek te veel bolletjes na de bloei weg."
     ]
   },
   "tasks": [
@@ -56,7 +55,7 @@
         "from": "09-15",
         "to": "11-15"
       },
-      "description": "Plant de bollen in de herfst 7-8 cm diep, met de punt omhoog, in groepjes op zo'n 8 cm afstand. Plant liever in groepen dan in rijtjes: dat ziet er natuurlijker uit."
+      "description": "Plant de bollen 7–8 cm diep met de punt omhoog, in groepjes op 8 cm afstand."
     },
     {
       "id": "blad-laten-staan",
@@ -67,7 +66,7 @@
         "to": "06-15"
       },
       "note": "Blad laten afsterven",
-      "description": "Laat het blad na de bloei staan tot het geel is en vanzelf afsterft. De bol haalt er energie uit voor volgend jaar. Maai er dus nog niet overheen."
+      "description": "Laat het blad staan tot het geel is en vanzelf afsterft; de bol haalt er energie uit voor volgend jaar. Maai er dus nog niet overheen."
     }
   ]
 }

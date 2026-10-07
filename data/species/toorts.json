@@ -39,12 +39,11 @@
     }
   },
   "info": {
-    "intro": "Een hoge, rechtopgaande plant met een grote bladrozet en aren vol gele bloemen. Hij geeft hoogte en structuur aan de border. Veel toortsen zijn tweejarig; ze zaaien zich uit.",
-    "water": "Kan goed tegen droogte; alleen water na het planten.",
+    "intro": "Hoge plant met een grote bladrozet en rechte aren vol (meestal gele) bloemen; geeft hoogte in de border. Veel toortsen zijn tweejarig en zaaien zich uit.",
+    "water": "Alleen water geven na het planten; daarna kan hij goed tegen droogte.",
     "tips": [
-      "Laat de uitgebloeide aren staan: vogels eten het zaad en het ziet er in de winter mooi uit.",
-      "De rupsen van de helmkruidvlinder kunnen het blad kaalvreten; laat ze, de plant herstelt.",
-      "Er zijn ook soorten met witte, roze of paarse bloemen."
+      "Rupsen van de helmkruidvlinder kunnen het blad kaalvreten; de plant herstelt meestal.",
+      "Laat uitgebloeide aren staan als je zaailingen wilt; vogels eten ook van het zaad."
     ]
   },
   "tasks": [
@@ -57,7 +56,7 @@
         "to": "07-15"
       },
       "note": "Bloeit pas volgend jaar",
-      "description": "Zaai in de zomer direct op de plek, zaad alleen aandrukken. De rozet bloeit volgend jaar."
+      "description": "Zaai direct op de plek en druk het zaad alleen aan (lichtkiemer). Het eerste jaar groeit er een rozet."
     },
     {
       "id": "planten",
@@ -67,7 +66,7 @@
         "from": "09-01",
         "to": "10-15"
       },
-      "description": "Zet jonge rozetten in het najaar op hun vaste plek, op zo'n 50 cm afstand."
+      "description": "Plant jonge rozetten op 50 cm afstand op een zonnige plek."
     },
     {
       "id": "terugknippen",
@@ -77,7 +76,7 @@
         "from": "02-15",
         "to": "03-31"
       },
-      "description": "Knip de oude aren eind van de winter af, nadat ze zaad hebben verspreid."
+      "description": "Knip de oude aren af nadat ze hun zaad hebben verspreid."
     }
   ]
 }

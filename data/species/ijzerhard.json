@@ -39,12 +39,12 @@
     }
   },
   "info": {
-    "intro": "Een sobere, taaie plant met dunne vertakte stengels en kleine lila bloempjes. Hij bloeit lang en is geliefd bij bijen. Vroeger was het een belangrijk geneeskruid.",
-    "water": "Heeft weinig water nodig. Alleen bij het planten en in lange droge periodes gieten.",
+    "intro": "Taaie, oude geneeskruid-plant met dunne vertakte stengels en kleine lila bloempjes. Hij bloeit lang en trekt bijen.",
+    "water": "Alleen water geven bij het planten en in lange droge periodes.",
     "tips": [
-      "Doet het goed op arme, open grond; mest is niet nodig.",
-      "Is niet zo lang als Argentijns ijzerhard (Verbena bonariensis), maar wel echt winterhard.",
-      "Zaait zich uit in kale plekjes en tussen tegels."
+      "Doet het best op arme, open grond; mest is niet nodig.",
+      "Anders dan Argentijns ijzerhard is hij echt winterhard.",
+      "Zaait zich uit op kale plekjes en tussen tegels."
     ]
   },
   "tasks": [
@@ -56,7 +56,7 @@
         "from": "04-01",
         "to": "05-15"
       },
-      "description": "Zaai in het voorjaar direct op de plek en bedek het zaad maar heel dun. Het kiemt beter als het eerst een paar weken koud heeft gestaan; zaaien in de herfst kan ook."
+      "description": "Zaai direct op de plek en bedek het zaad heel dun. Het kiemt beter na een paar weken kou; zaaien in de herfst kan ook."
     },
     {
       "id": "planten",
@@ -66,7 +66,7 @@
         "from": "04-15",
         "to": "05-31"
       },
-      "description": "Plant op een zonnige plek op zo'n 30 cm afstand. Goed doorlatende grond is belangrijk."
+      "description": "Plant op 30 cm afstand in goed doorlatende grond."
     },
     {
       "id": "terugknippen",
@@ -76,7 +76,7 @@
         "from": "03-01",
         "to": "03-31"
       },
-      "description": "Knip de oude stengels in maart af tot net boven de grond. Laat ze de winter staan voor de vogels en overwinterende insecten."
+      "description": "Knip de oude stengels af tot net boven de grond. Laat ze tot dan staan voor vogels en overwinterende insecten."
     }
   ]
 }

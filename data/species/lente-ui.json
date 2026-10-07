@@ -39,12 +39,10 @@
     }
   },
   "info": {
-    "intro": "Een snelle, milde ui waarvan je het groene blad en het witte onderste deel eet. De stengelui (Allium fistulosum) is meerjarig en blijft je het hele jaar voorzien.",
+    "intro": "Milde ui waarvan je het groene blad en het witte onderste deel eet. De stengelui (Allium fistulosum) is meerjarig en kun je bijna het hele jaar oogsten.",
     "water": "Houd de grond vochtig; bij droogte wordt het blad taai.",
     "tips": [
-      "Zaai in kleine hoeveelheden om de paar weken.",
-      "Laat een paar planten staan: ze komen volgend jaar terug.",
-      "Past goed tussen andere groenten."
+      "Laat een paar planten staan: ze komen volgend jaar terug."
     ]
   },
   "tasks": [
@@ -56,7 +54,7 @@
         "from": "03-15",
         "to": "08-15"
       },
-      "description": "Zaai om de drie à vier weken een rijtje, 1 cm diep. Uitdunnen is niet nodig."
+      "description": "Zaai elke 3–4 weken een rijtje, 1 cm diep. Uitdunnen is niet nodig."
     },
     {
       "id": "oogsten",

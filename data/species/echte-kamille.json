@@ -40,12 +40,11 @@
     }
   },
   "info": {
-    "intro": "Een eenjarige akkerbloem met kleine witte madeliefjesbloemen en een geel, hol hartje. De bloemen geven de bekende rustgevende thee en ruiken naar appel.",
-    "water": "Weinig veeleisend. Alleen het zaaibed vochtig houden tot het zaad is opgekomen.",
+    "intro": "Eenjarige akkerbloem met kleine witte bloemen rond een geel hartje. De naar appel ruikende bloemen gebruik je voor kamillethee.",
+    "water": "Alleen het zaaibed vochtig houden tot het zaad opkomt.",
     "tips": [
-      "Echte kamille herken je aan het holle, kegelvormige hartje (snijd het door).",
-      "Zaait zich makkelijk uit.",
-      "Pluk regelmatig: dan komen er steeds nieuwe bloemen."
+      "Echte kamille herken je aan het holle, kegelvormige hartje: snijd het door om te controleren.",
+      "Zaait zich makkelijk uit."
     ]
   },
   "tasks": [
@@ -57,7 +56,7 @@
         "from": "03-15",
         "to": "05-15"
       },
-      "description": "Strooi het zeer fijne zaad uit en druk het alleen aan: het kiemt in het licht. Zaaien in september kan ook, voor bloei vroeg in het volgende jaar."
+      "description": "Strooi het zeer fijne zaad uit en druk het alleen aan: het kiemt in het licht. Zaaien in september kan ook, voor vroege bloei het jaar erna."
     },
     {
       "id": "oogsten",
@@ -68,7 +67,7 @@
         "to": "08-31",
         "every": "week"
       },
-      "description": "Pluk de bloemhoofdjes op een droge dag, als ze helemaal open zijn. Laat ze drogen op een luchtige, schaduwrijke plek en bewaar ze in een pot voor thee."
+      "description": "Pluk de bloemhoofdjes op een droge dag als ze helemaal open zijn; regelmatig plukken geeft nieuwe bloemen. Droog ze op een luchtige plek uit de zon en bewaar ze in een pot."
     }
   ]
 }

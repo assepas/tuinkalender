@@ -39,12 +39,11 @@
     }
   },
   "info": {
-    "intro": "Het wilde viooltje van Nederland, met kleine bloemen in paars, geel en wit. Het is de voorouder van de grote tuinviolen en bloeit maanden achter elkaar.",
-    "water": "Houd de grond licht vochtig; in hete zomers wat extra water geven.",
+    "intro": "Inheems wild viooltje met kleine bloemen in paars, geel en wit, de voorouder van de grote tuinviolen. Het bloeit maanden achter elkaar.",
+    "water": "Houd de grond licht vochtig; geef in hete zomers wat extra water.",
     "tips": [
-      "Zaait zich overal uit, ook in paden en tussen de groenten; dat is meestal een cadeautje.",
-      "De bloemen zijn eetbaar, leuk op salades en taarten.",
-      "Wordt hij in de zomer lang en slap, knip hem dan terug."
+      "Zaait zich overal uit, ook in paden en tussen de groenten.",
+      "De bloemen zijn eetbaar, bijvoorbeeld op salades."
     ]
   },
   "tasks": [
@@ -56,7 +55,7 @@
         "from": "03-15",
         "to": "05-31"
       },
-      "description": "Strooi het zaad dun uit op de plek en bedek het nauwelijks. Zaaien in augustus-september kan ook, voor bloei vroeg in het voorjaar."
+      "description": "Strooi het zaad dun uit op de plek en bedek het nauwelijks. Zaaien in augustus–september kan ook, voor bloei vroeg in het voorjaar."
     },
     {
       "id": "terugknippen",
@@ -67,7 +66,7 @@
         "from": "07-15",
         "to": "08-15"
       },
-      "description": "Knip slappe, lange planten halverwege de zomer terug tot een paar centimeter. Dan bloeien ze in de nazomer opnieuw."
+      "description": "Knip lange, slappe planten terug tot een paar centimeter; dan bloeien ze in de nazomer opnieuw."
     }
   ]
 }

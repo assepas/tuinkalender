@@ -39,12 +39,12 @@
     }
   },
   "info": {
-    "intro": "Een inheemse struik met gele katjes al in de winter en hazelnoten in de herfst. Een waardevolle plant voor bijen vroeg in het jaar, en voor eekhoorns en vogels.",
-    "water": "Geef een jonge struik in droge periodes water.",
+    "intro": "Inheemse struik met gele katjes in de winter en hazelnoten in de herfst. Het stuifmeel is vroeg voedsel voor bijen.",
+    "water": "Een jonge struik in droge periodes water geven.",
     "tips": [
-      "Twee verschillende hazelaars naast elkaar geven meer noten.",
-      "Eekhoorns zijn je vaak voor; pluk op tijd.",
-      "De lange, rechte takken zijn mooi als bonenstaken."
+      "Twee verschillende hazelaars bij elkaar geven meer noten.",
+      "Eekhoorns en vogels halen vaak de noten weg; pluk op tijd.",
+      "Lange, rechte takken zijn bruikbaar als bonenstaken."
     ]
   },
   "tasks": [
@@ -66,7 +66,7 @@
         "from": "12-01",
         "to": "02-28"
       },
-      "description": "Haal om de paar jaar de oudste takken bij de grond weg. De struik loopt vanzelf weer uit met nieuwe takken."
+      "description": "Zaag om de paar jaar de oudste takken bij de grond weg; er komen vanzelf nieuwe."
     },
     {
       "id": "oogsten",

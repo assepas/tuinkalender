@@ -35,11 +35,10 @@
     }
   },
   "info": {
-    "intro": "Een snelle, pittige bladgroente. Na drie à vier weken kun je al plukken. In het voorjaar en najaar is hij het lekkerst; in de zomer wordt hij scherp.",
-    "water": "Houd de grond vochtig; droogte maakt het blad heel scherp.",
+    "intro": "Snelle, pittige bladgroente: drie à vier weken na het zaaien kun je al plukken. In voorjaar en najaar is hij het mildst; in de zomer wordt hij scherp en schiet hij snel door.",
+    "water": "Houd de grond gelijkmatig vochtig; droogte maakt het blad heel scherp.",
     "tips": [
-      "Zaai om de drie weken een klein rijtje.",
-      "Aardvlooien maken gaatjes in het blad; insectengaas helpt.",
+      "Aardvlooien maken gaatjes in het blad; insectengaas over het bed helpt.",
       "De bloemetjes zijn ook eetbaar."
     ]
   },
@@ -52,7 +51,7 @@
         "from": "03-15",
         "to": "09-15"
       },
-      "description": "Zaai om de drie weken een rijtje, 1 cm diep. In de zomer liever op een wat schaduwrijke plek."
+      "description": "Zaai om de drie weken een kort rijtje, 1 cm diep. In de zomer liever op een plek met wat schaduw."
     },
     {
       "id": "oogsten",
@@ -62,7 +61,7 @@
         "from": "04-15",
         "to": "10-31"
       },
-      "description": "Pluk de bladeren als ze 10 cm lang zijn; knip de plant af boven het hart, dan loopt hij opnieuw uit."
+      "description": "Pluk de bladeren als ze 10 cm lang zijn, of knip de plant af boven het hart; dan loopt hij opnieuw uit."
     }
   ]
 }

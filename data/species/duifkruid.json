@@ -39,12 +39,10 @@
     }
   },
   "info": {
-    "intro": "Een inheemse vaste plant met lila-blauwe, speldenkussenachtige bloemen op lange stelen. Hij bloeit maanden achter elkaar en is een topper voor vlinders.",
-    "water": "Houdt van droog en kalk. Alleen water geven na het planten.",
+    "intro": "Inheemse vaste plant met lila-blauwe, bolle bloemhoofdjes op lange stelen. Bloeit maanden achter elkaar en trekt veel vlinders en bijen.",
+    "water": "Alleen water geven na het planten; hij houdt van droge, kalkrijke grond.",
     "tips": [
-      "Knip uitgebloeide bloemen weg voor een lange bloei.",
-      "Doet het slecht op natte, zware grond.",
-      "De zaadbolletjes zijn mooi in droogboeketten."
+      "Doet het slecht op natte, zware grond."
     ]
   },
   "tasks": [
@@ -56,7 +54,7 @@
         "from": "03-15",
         "to": "05-15"
       },
-      "description": "Plant op een zonnige plek in goed doorlatende grond, op zo'n 30 cm afstand."
+      "description": "Plant op een zonnige plek in goed doorlatende grond, 30 cm uit elkaar."
     },
     {
       "id": "dode-bloemen-verwijderen",
@@ -68,7 +66,7 @@
         "to": "09-15",
         "every": "2weeks"
       },
-      "description": "Knip uitgebloeide bloemen met steel af tot boven een blad."
+      "description": "Knip uitgebloeide bloemen met steel af tot boven een blad; zo bloeit hij langer."
     },
     {
       "id": "terugknippen",
@@ -78,7 +76,7 @@
         "from": "03-01",
         "to": "03-31"
       },
-      "description": "Knip in het voorjaar de oude stengels af tot op de bladrozet."
+      "description": "Knip de oude stengels af tot op het bladrozet (de krans blad op de grond)."
     }
   ]
 }

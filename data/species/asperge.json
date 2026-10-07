@@ -8,7 +8,7 @@
     "meerjarig",
     "veel-ruimte"
   ],
-  "nativeStatus": "exoot",
+  "nativeStatus": "archeofyt",
   "appearance": {
     "shape": "losse-wolk",
     "count": 6,
@@ -36,12 +36,11 @@
     }
   },
   "info": {
-    "intro": "Een vaste groente die twintig jaar kan blijven staan. Groene asperges zijn in de moestuin het makkelijkst; witte moet je onder een aarden rug laten groeien.",
-    "water": "Geef na het planten en in droge zomers water; op zandgrond extra.",
+    "intro": "Vaste groente die twintig jaar kan blijven staan. Groene asperges zijn het makkelijkst; witte moeten onder een aarden rug groeien.",
+    "water": "Geef na het planten en in droge zomers water, op zandgrond vaker.",
     "tips": [
-      "Oogst pas vanaf het derde jaar, en dan nog kort.",
-      "Stop met oogsten rond 24 juni (Sint-Jan): de plant moet dan aansterken.",
-      "Laat het loof staan tot het geel is."
+      "De rode bessen zijn giftig.",
+      "Laat het loof na 24 juni doorgroeien tot het in de herfst geel is: zo sterkt de plant aan voor volgend jaar."
     ]
   },
   "tasks": [
@@ -64,7 +63,7 @@
         "to": "06-24"
       },
       "note": "Stoppen rond 24 juni",
-      "description": "Snijd groene asperges af als ze 15-20 cm hoog zijn. Oogst niet in de eerste twee jaar."
+      "description": "Snijd groene asperges af als ze 15–20 cm hoog zijn. Oogst pas vanaf het derde jaar, en dat eerste oogstjaar maar kort."
     },
     {
       "id": "terugknippen",

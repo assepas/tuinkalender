@@ -42,12 +42,11 @@
     }
   },
   "info": {
-    "intro": "Een lage, kruipende klaver met witte bolletjes waar bijen de hele zomer op af komen. Via zijn wortels haalt hij stikstof uit de lucht en maakt zo de grond rijker.",
-    "water": "Na het kiemen redt witte klaver zich. Bij lange droogte wordt hij bruin, maar hij komt terug na regen.",
+    "intro": "Lage, kruipende klaver met witte bloemhoofdjes voor bijen, van mei tot in de herfst. Hij haalt stikstof uit de lucht en maakt zo de grond rijker.",
+    "water": "Na het kiemen geen water nodig; bij droogte wordt hij bruin, maar na regen herstelt hij.",
     "tips": [
-      "Mooi als groene bodembedekker onder fruitstruiken of in paden.",
-      "Door het gras gezaaid geeft hij een bijvriendelijk gazon dat groen blijft in droge zomers.",
-      "Kan zich over de groentebedden verspreiden; steek randen af waar dat niet mag."
+      "Kruipt de groentebedden in: steek randen af waar hij niet mag komen.",
+      "Door het gras gezaaid blijft een gazon in droge zomers langer groen."
     ]
   },
   "tasks": [
@@ -59,7 +58,7 @@
         "from": "04-01",
         "to": "09-15"
       },
-      "description": "Strooi het zaad breedwerpig uit op losgeharkte grond, zo'n 1 gram per m², en rol of druk het aan. Houd de grond vochtig tot het zaad opkomt."
+      "description": "Strooi zo'n 1 gram zaad per m² op losgeharkte grond en druk of rol het aan. Houd vochtig tot het opkomt."
     },
     {
       "id": "maaien",
@@ -71,7 +70,7 @@
         "every": "month"
       },
       "note": "Af en toe kort maaien",
-      "description": "Maai of knip hem af en toe kort, bijvoorbeeld als bodembedekker in paden. Hij loopt snel weer uit en bloeit opnieuw. Laat het maaisel liggen als voeding."
+      "description": "Hij loopt snel weer uit en bloeit opnieuw. Laat het maaisel liggen als voeding."
     }
   ]
 }

@@ -40,12 +40,12 @@
     }
   },
   "info": {
-    "intro": "Een zomerbloem met stevige, kleurrijke bloemen in felle kleuren. Hij houdt van warmte en is een van de beste snijbloemen: hoe meer je plukt, hoe meer hij bloeit.",
-    "water": "Geef water op de grond, niet over het blad; dat voorkomt meeldauw.",
+    "intro": "Eenjarige zomerbloem met stevige bloemen in felle kleuren en een van de beste snijbloemen: hoe meer je plukt, hoe meer hij bloeit.",
+    "water": "Geef bij droogte water op de grond, niet over het blad; dat voorkomt meeldauw.",
     "tips": [
-      "Zaai niet te vroeg: zinnia's houden niet van kou.",
-      "Knijp de top eruit als de plant 20 cm is, voor meer bloemstelen.",
-      "Vlinders komen er in de nazomer graag op af."
+      "Kou verdraagt hij slecht: te vroeg zaaien of uitplanten geeft zwakke planten.",
+      "Knip de top eruit boven een bladpaar als de plant 20 cm is, voor meer bloemstelen.",
+      "Op zware, koude, natte grond groeit hij slecht."
     ]
   },
   "tasks": [
@@ -58,7 +58,7 @@
         "from": "04-15",
         "to": "05-15"
       },
-      "description": "Zaai binnen in potjes, 0,5 cm diep, op een warme plek."
+      "description": "Zaai in potjes, 0,5 cm diep, op een warme plek."
     },
     {
       "id": "zaaien",
@@ -68,7 +68,7 @@
         "from": "05-15",
         "to": "06-15"
       },
-      "description": "Zaai direct buiten als de grond warm is, en dun uit tot 30 cm."
+      "description": "Zaai als de grond warm is en dun uit tot 30 cm."
     },
     {
       "id": "uitplanten",
@@ -80,7 +80,7 @@
         "toWeeks": 4
       },
       "note": "Pas na de laatste nachtvorst",
-      "description": "Plant uit als het ook 's nachts warm blijft, op een zonnige plek."
+      "description": "Plant op een zonnige, beschutte plek, 30 cm uit elkaar."
     },
     {
       "id": "plukken",
@@ -91,7 +91,7 @@
         "to": "10-01",
         "every": "week"
       },
-      "description": "Pluk de bloemen als ze helemaal open zijn en de steel stevig is. Knip diep, net boven een bladpaar."
+      "description": "Pluk als de bloem helemaal open is en de steel stevig. Knip diep, net boven een bladpaar."
     }
   ]
 }

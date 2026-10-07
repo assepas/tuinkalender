@@ -40,10 +40,9 @@
     }
   },
   "info": {
-    "intro": "Een lage vaste plant met gele, soms oranjerode vlinderbloemen. Hij is een van de belangrijkste waardplanten voor vlinders zoals het icarusblauwtje, en maakt net als klaver de grond rijker.",
-    "water": "Heeft door zijn diepe wortels weinig water nodig.",
+    "intro": "Lage vaste plant met gele, soms oranjerode vlinderbloemen. Waardplant voor onder meer het icarusblauwtje; net als klaver maakt hij de grond rijker aan stikstof.",
+    "water": "Geen extra water nodig dankzij zijn diepe wortels.",
     "tips": [
-      "Laat hem af en toe uitbloeien voordat je maait; hommels en bijen zijn er dol op.",
       "Blijft groen als het gras in droge zomers al bruin is.",
       "Zaad kiemt beter als je het vooraf kort schuurt met wat zand."
     ]
@@ -57,7 +56,7 @@
         "from": "08-15",
         "to": "09-30"
       },
-      "description": "Zaai in de nazomer of in april-mei (lukt ook) op kale, losgeharkte plekken in het gras of mee in een bloemrijk gazonmengsel. Strooi het zaad breed uit, druk het aan en houd het een paar weken vochtig."
+      "description": "Strooi het zaad op kale, losgeharkte plekken in het gras of zaai het mee met een bloemrijk gazonmengsel. Druk aan en houd een paar weken vochtig; april-mei kan ook."
     },
     {
       "id": "maaien",
@@ -69,7 +68,7 @@
         "every": "2weeks"
       },
       "note": "Gazon niet te kort maaien",
-      "description": "Maai het gazon niet te kort, op 5 tot 8 cm, dan blijft deze plant bloeien. Maai het liefst in stukken, zodat er altijd ergens rolklaver bloeit."
+      "description": "Maai op 5 tot 8 cm hoogte, dan blijft hij bloeien. Maai liefst in stukken en laat hem af en toe uitbloeien, zodat er altijd ergens rolklaver bloeit."
     }
   ]
 }

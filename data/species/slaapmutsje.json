@@ -39,12 +39,10 @@
     }
   },
   "info": {
-    "intro": "Een eenjarige met zijdeachtige oranje bloemen en fijn, blauwgroen blad. De bloemen gaan 's avonds en bij bewolkt weer dicht, als een slaapmutsje.",
-    "water": "Houdt van droog en arm. Alleen water geven tot het zaad is opgekomen.",
+    "intro": "Eenjarige met zijdeachtige oranje bloemen en fijn, blauwgroen blad. De bloemen gaan 's avonds en bij bewolking dicht.",
+    "water": "Alleen water geven tot het zaad is opgekomen; daarna liefst droog en arm.",
     "tips": [
-      "Zaai altijd direct op de plek: hij houdt niet van verplanten.",
-      "Zaait zich elk jaar vanzelf uit, ook tussen tegels en grind.",
-      "Er zijn ook rassen in geel, roze en crème."
+      "Zaait zich elk jaar uit, ook tussen tegels en grind."
     ]
   },
   "tasks": [
@@ -56,7 +54,7 @@
         "from": "03-15",
         "to": "05-31"
       },
-      "description": "Strooi het zaad dun uit op de plek waar hij moet bloeien en hark het licht in. Dun de plantjes uit tot 20 cm afstand. Zaaien in september kan ook; die planten bloeien volgend jaar eerder."
+      "description": "Strooi het zaad dun op de plek waar hij moet bloeien (hij verplant slecht), hark het licht in en dun uit tot 20 cm. Zaaien in september kan ook; die planten bloeien volgend jaar eerder."
     },
     {
       "id": "dode-bloemen-verwijderen",
@@ -68,7 +66,7 @@
         "every": "2weeks"
       },
       "note": "Uitgebloeide bloemen weghalen",
-      "description": "Knip uitgebloeide bloemen en lange zaaddozen weg voor een langere bloei. Laat er een paar staan als je hem volgend jaar weer wilt."
+      "description": "Knip uitgebloeide bloemen en zaaddozen weg voor een langere bloei. Laat er een paar staan als je hem volgend jaar terug wilt."
     }
   ]
 }

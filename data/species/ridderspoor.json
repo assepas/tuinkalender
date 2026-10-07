@@ -39,12 +39,11 @@
     }
   },
   "info": {
-    "intro": "Een statige vaste plant met hoge, dichte aren in diep blauw, paars of wit. Na een snoeibeurt bloeit hij in september vaak nog een tweede keer.",
-    "water": "Geef in droge periodes royaal water; ridderspoor mag niet uitdrogen, maar natte voeten in de winter vindt hij ook niet fijn.",
+    "intro": "Vaste plant met hoge, dichte bloemaren in blauw, paars of wit. Na terugsnoeien bloeit hij in september vaak nog een keer.",
+    "water": "Geef in droge periodes royaal water; 's winters verdraagt hij geen natte voeten.",
     "tips": [
-      "Slakken zijn dol op de jonge scheuten in het voorjaar; bescherm ze goed.",
-      "Alle delen zijn giftig.",
-      "Rijke grond en regelmatig bemesten geven de mooiste aren."
+      "Alle delen zijn sterk giftig, ook voor huisdieren; draag handschoenen bij het snoeien.",
+      "Slakken eten in het voorjaar graag de jonge scheuten; bescherm ze."
     ]
   },
   "tasks": [
@@ -56,7 +55,7 @@
         "from": "03-15",
         "to": "05-01"
       },
-      "description": "Plant op een zonnige, beschutte plek in voedzame grond, op zo'n 60 cm afstand. Meng wat compost door het plantgat."
+      "description": "Plant op een zonnige, beschutte plek in voedzame, doorlatende grond op zo'n 60 cm afstand. Meng compost door het plantgat."
     },
     {
       "id": "steunen",
@@ -67,7 +66,7 @@
         "to": "05-31"
       },
       "note": "Steun geven voor de bloei",
-      "description": "Zet stokken of een plantensteun bij de plant voordat de aren hoog worden. Bind de stengels losjes vast; hoge aren breken anders af bij wind of regen."
+      "description": "Zet stokken of een plantensteun bij de plant voordat de aren hoog worden en bind de stengels losjes vast. Anders breken ze bij wind of regen."
     },
     {
       "id": "bemesten",
@@ -77,7 +76,7 @@
         "from": "04-01",
         "to": "04-30"
       },
-      "description": "Geef in het voorjaar een schep compost of wat organische mest rond de plant."
+      "description": "Geef een schep compost of wat organische mest rond de plant."
     },
     {
       "id": "terugsnoeien-na-bloei",
@@ -87,7 +86,7 @@
         "from": "07-15",
         "to": "08-15"
       },
-      "description": "Knip de uitgebloeide aren na de eerste bloei af tot vlak boven de grond en geef wat mest. Vaak volgt dan in september een tweede bloei."
+      "description": "Knip de uitgebloeide aren af tot vlak boven de grond en geef wat mest. Vaak volgt in september een tweede bloei."
     },
     {
       "id": "terugknippen",
@@ -98,7 +97,7 @@
         "from": "10-15",
         "to": "11-30"
       },
-      "description": "Knip in het najaar het afgestorven blad en de stengels weg."
+      "description": "Knip het afgestorven blad en de stengels weg."
     }
   ]
 }

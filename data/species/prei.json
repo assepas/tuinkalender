@@ -33,12 +33,11 @@
     }
   },
   "info": {
-    "intro": "Een winterharde groente die je in het voorjaar zaait en van de late zomer tot in het voorjaar oogst. Juist in de winter, als er weinig anders is, staat de prei klaar.",
-    "water": "Geef na het uitplanten en in droge zomers regelmatig water. Prei houdt van vochtige, rijke grond.",
+    "intro": "Winterharde groente die je in het voorjaar zaait en van de late zomer tot in het voorjaar oogst, juist als er weinig anders is.",
+    "water": "Geef na het uitplanten en in droge zomers regelmatig water.",
     "tips": [
-      "Aanaarden (grond tegen de stengel scheppen) geeft een langere witte schacht.",
-      "Tegen de preimot en de uienvlieg helpt een insectengaas over het bed.",
-      "Winterrassen hebben blauwgroen blad; herfstrassen lichtgroen."
+      "Tegen de preimot en de preimineervlieg helpt insectengaas over het bed.",
+      "Winterrassen hebben blauwgroen blad en kunnen buiten blijven staan; herfstrassen zijn lichtgroen."
     ]
   },
   "tasks": [
@@ -51,7 +50,7 @@
         "from": "03-01",
         "to": "04-30"
       },
-      "description": "Zaai in een bak of zaaibed, dun, zo'n 1 cm diep. De plantjes groeien tot potloodformaat voordat ze uitgeplant worden."
+      "description": "Zaai dun in een bak of zaaibed, 1 cm diep. Plant uit als de plantjes potloodformaat hebben (ongeveer 20 cm)."
     },
     {
       "id": "uitplanten",
@@ -62,7 +61,7 @@
         "to": "07-15"
       },
       "note": "Diep in een plantgat",
-      "description": "Maak met een plantstok gaten van 15 cm diep, om de 15 cm in rijen op 30 cm afstand. Laat in elk gat een plantje zakken en giet het vol water; niet aandrukken. Knip wortels en blad eerst iets in."
+      "description": "Maak met een plantstok gaten van 15 cm diep, om de 15 cm in rijen op 30 cm. Laat in elk gat een plantje zakken en giet het vol water; niet aandrukken."
     },
     {
       "id": "aanaarden",
@@ -74,7 +73,7 @@
         "every": "month"
       },
       "note": "Aanaarden",
-      "description": "Schep in de loop van de zomer een paar keer grond tegen de stengels. Zo blijft het onderste deel wit en mals."
+      "description": "Schep een paar keer grond tegen de stengels. Zo blijft het onderste deel wit en mals."
     },
     {
       "id": "oogsten",
@@ -84,7 +83,7 @@
         "from": "09-01",
         "to": "03-31"
       },
-      "description": "Steek de prei met een riek los en trek hem uit. Winterprei kan gewoon blijven staan tot je hem nodig hebt."
+      "description": "Steek de prei met een riek los en trek hem uit. Winterprei kan blijven staan tot je hem nodig hebt."
     }
   ]
 }

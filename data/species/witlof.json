@@ -33,12 +33,12 @@
     }
   },
   "info": {
-    "intro": "Een Belgisch-Nederlandse specialiteit in twee stappen: in de zomer kweek je de wortels op het bed, in de winter laat je ze in het donker trekken tot de bekende witte stronkjes.",
-    "water": "Houd de grond vochtig tot de plantjes op zijn.",
+    "intro": "Groente in twee stappen: in de zomer kweek je de wortels op het bed, in de winter laat je ze in het donker uitlopen tot witte stronkjes (lof).",
+    "water": "Houd de grond vochtig tot de plantjes op zijn; daarna alleen bij lange droogte.",
     "tips": [
-      "Trek de wortels in een emmer met aarde onder een omgekeerde emmer, op 10-15 °C.",
-      "Werk in stappen: haal om de twee weken wat wortels uit de opslag.",
-      "Na de oogst kan de wortel nog een tweede, kleiner kropje geven."
+      "Niet vóór half mei zaaien: dan schiet hij door (gaat bloeien) en krijg je slechte wortels.",
+      "Haal om de twee weken een paar wortels uit de opslag, dan heb je de hele winter lof.",
+      "Dek de wortel na de oogst weer af: vaak komt er nog een tweede, kleiner kropje."
     ]
   },
   "tasks": [
@@ -50,7 +50,7 @@
         "from": "05-15",
         "to": "06-15"
       },
-      "description": "Zaai in rijen op 30 cm afstand, 1 cm diep, en dun uit tot 10 cm."
+      "description": "Zaai 1 cm diep in rijen op 30 cm en dun uit tot 10 cm."
     },
     {
       "id": "wortels-rooien",
@@ -61,7 +61,7 @@
         "to": "11-30"
       },
       "note": "Wortels opslaan om te trekken",
-      "description": "Steek de wortels uit, snijd het blad af tot 2-3 cm boven de wortel en bewaar ze koel in zand."
+      "description": "Snijd het blad af tot 2–3 cm boven de wortel, gooi dunne wortels weg en bewaar de rest koel in zand."
     },
     {
       "id": "trekken",
@@ -72,7 +72,7 @@
         "to": "03-15"
       },
       "note": "Lof trekken in het donker",
-      "description": "Zet de wortels rechtop in een emmer met vochtige aarde, dek af zodat het helemaal donker is en zet op 10-15 °C. Na drie à vier weken oogst je de witlofstronkjes."
+      "description": "Zet de wortels rechtop in een emmer vochtige aarde en dek helemaal donker af, op 10–15 °C. Na drie à vier weken snijd je de stronkjes af."
     }
   ]
 }

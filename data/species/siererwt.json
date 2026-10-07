@@ -8,8 +8,7 @@
     "eenjarig",
     "klimmer",
     "geurend",
-    "snijbloem",
-    "giftig"
+    "snijbloem"
   ],
   "nativeStatus": "exoot",
   "appearance": {
@@ -41,12 +40,11 @@
     }
   },
   "info": {
-    "intro": "Een eenjarige klimmer met heerlijk geurende bloemen in roze, paars, wit en rood. Hoe meer je plukt, hoe meer hij bloeit. Een klassieker voor de snijbloementuin.",
-    "water": "Geef in droge periodes royaal water; siererwten mogen niet uitdrogen.",
+    "intro": "Eenjarige klimmer met geurende bloemen in roze, paars, wit en rood; hoe meer je plukt, hoe langer hij bloeit.",
+    "water": "Geef bij droogte royaal water; de plant mag niet uitdrogen.",
     "tips": [
-      "Zet een rek, gaas of takken neer waar hij in kan klimmen, tot zo'n 2 meter.",
-      "Pluk minstens twee keer per week: als de plant zaad maakt, stopt de bloei.",
-      "Niet eten: de erwten zijn giftig, anders dan gewone doperwten."
+      "Zet een rek, gaas of takken van zo'n 2 meter neer om in te klimmen.",
+      "Niet eten: zaad en peulen zijn giftig, anders dan gewone doperwten."
     ]
   },
   "tasks": [
@@ -59,7 +57,7 @@
         "from": "02-15",
         "to": "03-31"
       },
-      "description": "Laat de zaden een nacht weken en zaai ze in diepe potjes, 2 cm diep. Zet ze koel en licht. Knip de top eruit als de plant vier blaadjes heeft, dan vertakt hij."
+      "description": "Laat de zaden een nacht weken en zaai ze 2 cm diep in diepe potjes; zet ze koel en licht. Knip de top eruit bij vier blaadjes, dan vertakt hij."
     },
     {
       "id": "zaaien",
@@ -69,7 +67,7 @@
         "from": "04-01",
         "to": "05-15"
       },
-      "description": "Zaai direct buiten bij het klimrek, 2 cm diep en om de 10-15 cm. Bescherm de kiemplantjes tegen slakken en vogels."
+      "description": "Zaai 2 cm diep bij het klimrek, om de 10-15 cm. Bescherm de kiemplantjes tegen slakken en vogels."
     },
     {
       "id": "uitplanten",
@@ -79,7 +77,7 @@
         "from": "04-15",
         "to": "05-15"
       },
-      "description": "Plant voorgezaaide plantjes uit bij een klimrek. Ze kunnen een beetje vorst hebben. Leid ze de eerste keer naar het rek."
+      "description": "Plant bij een klimrek en leid de stengels de eerste keer naar het rek. Lichte vorst kunnen ze hebben."
     },
     {
       "id": "plukken",
@@ -91,7 +89,7 @@
         "every": "week"
       },
       "note": "Vaak plukken",
-      "description": "Pluk de bloemen minstens één à twee keer per week voor de vaas en knip uitgebloeide bloemen weg. Zo blijft de plant tot september bloeien."
+      "description": "Pluk één à twee keer per week en knip uitgebloeide bloemen weg; zodra hij zaad maakt, stopt de bloei."
     }
   ]
 }

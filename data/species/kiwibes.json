@@ -40,12 +40,12 @@
     }
   },
   "info": {
-    "intro": "Een winterharde klimmer met kleine, gladde kiwi's die je met schil en al eet. Ze zijn zoeter dan gewone kiwi's en de plant is in Nederland volledig winterhard.",
-    "water": "Geef regelmatig water; hij houdt niet van uitdrogen.",
+    "intro": "Klimplant met kleine, gladde kiwi's die je met schil en al eet. De plant is in Nederland winterhard.",
+    "water": "Geef regelmatig water; uitdrogen verdraagt hij slecht.",
     "tips": [
       "De meeste rassen hebben een mannelijke en een vrouwelijke plant nodig; 'Issai' is zelfbestuivend.",
-      "Jonge scheuten zijn gevoelig voor late nachtvorst.",
-      "Het duurt drie à vier jaar voor hij vrucht geeft."
+      "Jonge scheuten en bloemen bevriezen bij late nachtvorst: kies een beschutte plek.",
+      "Hij geeft pas na drie à vier jaar vrucht."
     ]
   },
   "tasks": [
@@ -57,7 +57,7 @@
         "from": "04-01",
         "to": "05-15"
       },
-      "description": "Plant in het voorjaar bij een stevige pergola of draad, op een beschutte plek."
+      "description": "Plant bij een stevige pergola of draden, op 3 meter afstand."
     },
     {
       "id": "snoeien",
@@ -67,7 +67,7 @@
         "from": "12-01",
         "to": "02-15"
       },
-      "description": "Knip in de winter de zijscheuten die vorig jaar vrucht droegen in tot 3-4 knoppen. Haal te dichte en dode ranken weg."
+      "description": "Knip de zijscheuten die vorig jaar vrucht droegen in tot 3-4 knoppen. Haal te dichte en dode ranken weg."
     },
     {
       "id": "oogsten",
@@ -77,7 +77,7 @@
         "from": "09-01",
         "to": "10-15"
       },
-      "description": "Pluk de besjes als ze zacht zijn, of pluk ze hard en laat ze binnen narijpen."
+      "description": "Pluk de besjes als ze zacht zijn, of hard en laat ze binnen narijpen."
     }
   ]
 }

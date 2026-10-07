@@ -39,13 +39,12 @@
     }
   },
   "info": {
-    "intro": "Een Pools moerbeiras met grote, hartvormige bladeren en langwerpige, diep roodzwarte bessen van zo'n 3 cm, stevig en heel sappig. Hij wordt 4 tot 6 meter hoog en rijpt niet in één keer, maar geleidelijk van half juni tot begin september.",
-    "water": "Geef een jonge boom de eerste jaren in droge periodes veel water. Oudere bomen redden zich meestal zelf.",
+    "intro": "Pools moerbeiras met grote, hartvormige bladeren en langwerpige, roodzwarte bessen van zo'n 3 cm. De boom wordt 3 tot 6 meter hoog.",
+    "water": "Een jonge boom de eerste jaren bij droogte veel water geven; oudere bomen redden zich zelf.",
     "tips": [
-      "Zelfbestuivend: ook als enige moerbei in de buurt geeft hij vruchten.",
-      "Zeer winterhard (tot ongeveer -30 °C); alleen een heel jonge boom kan in een strenge winter wat bescherming gebruiken.",
-      "De rijpe bessen geven vlekken die moeilijk uitgaan; zet hem niet boven een terras.",
-      "Leg een laken onder de boom en schud de takken: rijpe bessen vallen er vanzelf af."
+      "Zelfbestuivend en zeer winterhard (tot ongeveer −29 °C).",
+      "Rijpe bessen geven vlekken die moeilijk uitgaan: zet hem niet boven een terras.",
+      "Leg een laken onder de boom en schud aan de takken: rijpe bessen vallen dan vanzelf."
     ]
   },
   "tasks": [
@@ -57,7 +56,7 @@
         "from": "11-01",
         "to": "03-31"
       },
-      "description": "Plant in de winter of vroege voorjaar, als de grond niet bevroren is. Kies een zonnige, beschutte plek met veel ruimte. Wees voorzichtig met de wortels: die zijn kwetsbaar en breken snel."
+      "description": "Plant als de grond niet bevroren is, op een zonnige, beschutte plek met veel ruimte. Wees voorzichtig met de wortels: die breken snel."
     },
     {
       "id": "snoeien",
@@ -69,7 +68,7 @@
         "to": "02-15"
       },
       "note": "Alleen in winterrust",
-      "description": "Snoei alleen als het nodig is: dode, kruisende of te laag hangende takken. Doe dat in de winter, als de boom in rust is; in het voorjaar 'bloedt' hij sterk. Grote snoeiwonden herstellen slecht."
+      "description": "Knip alleen dode, kruisende of te laag hangende takken weg. In het voorjaar 'bloedt' de boom sterk, en grote wonden herstellen slecht."
     },
     {
       "id": "oogsten",
@@ -79,7 +78,7 @@
         "from": "06-15",
         "to": "09-10"
       },
-      "description": "Pluk de bessen als ze diep roodzwart en zacht zijn. Bij 'Milanowek' rijpen ze steeds een beetje, van half juni tot begin september; loop de boom dus elke paar dagen na. Eet ze meteen of maak er jam van: ze bederven snel."
+      "description": "De bessen rijpen geleidelijk van half juni tot begin september: pluk elke paar dagen de diep roodzwarte, zachte bessen. Eet ze snel of maak er jam van, want ze bederven snel."
     }
   ]
 }

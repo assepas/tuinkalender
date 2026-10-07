@@ -38,12 +38,10 @@
     }
   },
   "info": {
-    "intro": "Een hoge vaste plant die in september en oktober vol paarse, roze of blauwe sterretjes staat. Voor vlinders en bijen een van de laatste grote maaltijden van het jaar.",
-    "water": "Houd de grond vochtig in de zomer; bij droogte krijgt hij meeldauw en kale stengels.",
+    "intro": "Hoge vaste plant die in september en oktober vol paarse, roze of blauwe bloemen staat. Een van de laatste nectarbronnen van het jaar voor vlinders en bijen.",
+    "water": "Houd de grond 's zomers vochtig; bij droogte krijgt hij meeldauw en kale stengels.",
     "tips": [
-      "Knip hem eind mei een derde in: dan blijft hij compacter en valt hij minder snel om.",
-      "Kies een luchtige plek tegen meeldauw.",
-      "Verdeel hem om de drie jaar."
+      "Kies een luchtige plek tegen meeldauw (wit poeder op het blad)."
     ]
   },
   "tasks": [
@@ -66,7 +64,7 @@
         "from": "05-15",
         "to": "06-15"
       },
-      "description": "Knip de stengels eind mei een derde terug. De plant blijft dan steviger en bloeit met meer, iets kleinere bloemen."
+      "description": "Knip de stengels een derde terug. De plant blijft steviger, valt minder om en geeft meer, iets kleinere bloemen."
     },
     {
       "id": "terugknippen",
@@ -76,7 +74,7 @@
         "from": "11-15",
         "to": "03-15"
       },
-      "description": "Knip de uitgebloeide stengels in de winter of het vroege voorjaar af."
+      "description": "Knip de uitgebloeide stengels af tot net boven de grond."
     },
     {
       "id": "delen",
@@ -86,7 +84,7 @@
         "from": "03-15",
         "to": "04-15"
       },
-      "description": "Verdeel de pol om de drie jaar in het voorjaar."
+      "description": "Verdeel de pol om de drie jaar in stukken met wortels."
     }
   ]
 }

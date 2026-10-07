@@ -38,12 +38,11 @@
     }
   },
   "info": {
-    "intro": "Een eigen meloen lukt in Nederland in een kas of koude bak, of buiten tegen een hete muur in een zonnige zomer. Kies een snel rijpend ras zoals een cantaloupe.",
-    "water": "Geef regelmatig water tot de vruchten groot zijn; daarna minder, dan worden ze zoeter.",
+    "intro": "Meloen lukt in Nederland in een kas of koude bak, of buiten tegen een warme muur in een zonnige zomer. Kies een snel rijpend cantaloupe-ras.",
+    "water": "Regelmatig water tot de vruchten volgroeid zijn; daarna minder, dan worden ze zoeter.",
     "tips": [
-      "Laat maar drie à vier meloenen per plant groeien.",
-      "Leg een plankje onder de vruchten tegen rot.",
-      "Rijp als de meloen gaat geuren en het steeltje loslaat."
+      "Laat drie à vier meloenen per plant groeien.",
+      "Leg een plankje onder de vruchten tegen rot."
     ]
   },
   "tasks": [
@@ -56,7 +55,7 @@
         "from": "04-01",
         "to": "05-01"
       },
-      "description": "Zaai binnen in potjes op 25 °C, 1 zaad per pot."
+      "description": "Zaai 1 zaad per potje, 1,5 cm diep en op de zijkant, bij ongeveer 25 °C."
     },
     {
       "id": "uitplanten",
@@ -68,7 +67,7 @@
         "toWeeks": 5
       },
       "note": "Pas bij warm weer",
-      "description": "Plant in de kas of in een koude bak als het warm blijft."
+      "description": "Plant in de kas of koude bak, 80 cm uit elkaar, als de nachten niet meer koud zijn."
     },
     {
       "id": "toppen",
@@ -89,7 +88,7 @@
         "from": "08-01",
         "to": "09-30"
       },
-      "description": "Oogst als de meloen zoet ruikt en het steeltje een scheurtje krijgt bij de vrucht."
+      "description": "Oogst als de meloen zoet ruikt en het steeltje bij de vrucht inscheurt."
     }
   ]
 }

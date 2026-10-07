@@ -39,12 +39,11 @@
     }
   },
   "info": {
-    "intro": "Een wolk van honderden kleine witte bloempjes op fijn vertakte stengels. Hij vult gaten tussen andere planten en is bekend uit het boeket.",
-    "water": "Houdt van droog; natte grond in de winter vindt hij niet fijn.",
+    "intro": "Wolk van honderden kleine witte bloempjes op fijn vertakte stengels. Vult gaten tussen andere planten en is een bekende snijbloem.",
+    "water": "Weinig water nodig; natte grond in de winter verdraagt hij slecht.",
     "tips": [
       "Kalkrijke, doorlatende grond is ideaal.",
-      "Verplant hem niet: hij heeft een diepe penwortel.",
-      "Mooi om te drogen: hang takken ondersteboven."
+      "Verplant hem niet: hij heeft een diepe penwortel."
     ]
   },
   "tasks": [
@@ -56,7 +55,7 @@
         "from": "04-01",
         "to": "05-15"
       },
-      "description": "Plant op een zonnige plek in goed doorlatende grond, op zo'n 70 cm afstand. Meng bij zware grond zand door het plantgat."
+      "description": "Plant op een zonnige plek in doorlatende grond, op zo'n 70 cm afstand. Meng bij zware grond zand door het plantgat."
     },
     {
       "id": "oogsten",
@@ -66,7 +65,7 @@
         "from": "07-01",
         "to": "08-15"
       },
-      "description": "Knip takken voor de vaas of om te drogen als de helft van de bloempjes open is."
+      "description": "Knip takken als de helft van de bloempjes open is. Om te drogen hang je ze ondersteboven op een droge plek."
     },
     {
       "id": "terugknippen",
@@ -76,7 +75,7 @@
         "from": "10-15",
         "to": "11-30"
       },
-      "description": "Knip de stengels na de bloei af tot net boven de grond."
+      "description": "Knip de stengels af tot net boven de grond."
     }
   ]
 }

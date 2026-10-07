@@ -5,7 +5,8 @@
   "latin": "Tagetes patula",
   "category": "vaste-plant",
   "tags": [
-    "eenjarig"
+    "eenjarig",
+    "vorstgevoelig"
   ],
   "nativeStatus": "exoot",
   "appearance": {
@@ -38,12 +39,11 @@
     }
   },
   "info": {
-    "intro": "Vrolijke, makkelijke zomerbloeiers in oranje en geel die tot de eerste vorst doorbloeien. Ze worden vaak tussen groenten gezet omdat hun wortels schadelijke aaltjes in de grond tegengaan.",
-    "water": "Afrikaantjes kunnen tegen een stootje. Geef water als de grond droog aanvoelt, vooral kort na het uitplanten en in pot.",
+    "intro": "Eenjarige zomerbloeier in oranje en geel die tot de eerste vorst bloeit. De wortels remmen schadelijke aaltjes in de grond, daarom staan ze vaak tussen tomaten, kool of aardappels.",
+    "water": "Geef water als de grond droog aanvoelt, vooral kort na het uitplanten en in een pot.",
     "tips": [
-      "Zet ze tussen tomaten, kool of aardappels: ze helpen tegen aaltjes in de bodem.",
-      "Slakken lusten de jonge plantjes; bescherm ze de eerste weken.",
-      "Ze zijn eenjarig: na de vorst gaan ze dood en kun je ze op de composthoop gooien."
+      "Slakken eten de jonge plantjes; bescherm ze de eerste weken.",
+      "Ze sterven bij de eerste vorst; daarna kunnen ze op de composthoop."
     ]
   },
   "tasks": [
@@ -56,7 +56,7 @@
         "from": "03-15",
         "to": "04-15"
       },
-      "description": "Zaai in potjes of een zaaibak met zaaigrond op de vensterbank, de zaadjes net onder de grond. Houd de grond vochtig en warm (rond 18 °C). Zet de zaailingen als ze een paar blaadjes hebben apart in eigen potjes."
+      "description": "Zaai binnen in potjes of een zaaibak, de zaadjes net onder de grond, bij ongeveer 18 °C. Houd de grond vochtig en zet de zaailingen met een paar blaadjes apart in eigen potjes."
     },
     {
       "id": "planten",
@@ -68,7 +68,7 @@
         "toWeeks": 2
       },
       "note": "Pas na de laatste nachtvorst",
-      "description": "Laat de plantjes eerst een week wennen aan buiten door ze overdag buiten te zetten (afharden). Plant ze daarna op 20 cm afstand op een zonnige plek en geef water. Ze kunnen niet tegen vorst."
+      "description": "Laat ze eerst een week wennen door ze overdag buiten te zetten (afharden). Plant ze daarna op 20 cm afstand in de zon en geef water."
     },
     {
       "id": "dode-bloemen-verwijderen",
@@ -80,7 +80,7 @@
         "every": "week"
       },
       "note": "Uitgebloeide bloemen weghalen",
-      "description": "Knijp of knip uitgebloeide bloemen weg, net boven een blad. De plant steekt zijn energie dan in nieuwe knoppen in plaats van in zaad, en blijft zo de hele zomer bloeien."
+      "description": "Knip uitgebloeide bloemen net boven een blad weg. De plant maakt dan nieuwe knoppen in plaats van zaad en bloeit de hele zomer door."
     }
   ]
 }

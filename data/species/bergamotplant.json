@@ -41,12 +41,10 @@
     }
   },
   "info": {
-    "intro": "Een geurige vaste plant met opvallende bloemen in rood, roze of paars in kransjes boven elkaar. Het blad ruikt naar bergamot en je kunt er thee van zetten.",
-    "water": "Houd de grond vochtig; bij droogte krijgt hij meeldauw.",
+    "intro": "Vaste plant met kransen rode, roze of paarse bloemen boven elkaar. Het blad ruikt naar bergamot en is lekker in thee.",
+    "water": "Houd de grond vochtig; bij droogte krijgt hij snel meeldauw (witte schimmel op het blad).",
     "tips": [
-      "Kies een luchtige plek om meeldauw te voorkomen.",
-      "Verdeel de plant om de drie jaar: het midden gaat anders dood.",
-      "Blad en bloemen zijn lekker in thee."
+      "Kies een luchtige plek om meeldauw te voorkomen."
     ]
   },
   "tasks": [
@@ -78,7 +76,7 @@
         "from": "10-15",
         "to": "11-30"
       },
-      "description": "Knip de stengels na de bloei af tot net boven de grond."
+      "description": "Knip de stengels af tot net boven de grond."
     },
     {
       "id": "delen",
@@ -88,7 +86,7 @@
         "from": "03-15",
         "to": "04-15"
       },
-      "description": "Verdeel de pol om de drie jaar en gooi het oude midden weg."
+      "description": "Verdeel de pol om de drie jaar en gooi het oude midden weg; dat sterft anders af."
     }
   ]
 }

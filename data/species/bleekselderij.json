@@ -33,12 +33,12 @@
     }
   },
   "info": {
-    "intro": "Een selderij met lange, knapperige stelen. Hij heeft veel water en voedsel nodig, maar een zelfgeteelde struik is veel geuriger dan uit de winkel.",
+    "intro": "Selderij die je teelt om de lange, knapperige stelen. Hij heeft veel water en voedsel nodig.",
     "water": "Geef vaak en veel water; bij droogte worden de stelen draderig.",
     "tips": [
-      "Zelfblekende rassen hoef je niet aan te aarden.",
-      "Plant ze in blokken in plaats van rijen: dan beschaduwen ze elkaar.",
-      "Veel compost in de grond maakt het verschil."
+      "Werk veel compost door de grond: hij heeft een rijke bodem nodig.",
+      "Plant in een blok in plaats van rijen: dan beschaduwen de planten elkaar.",
+      "Zelfblekende rassen hoef je niet aan te aarden."
     ]
   },
   "tasks": [
@@ -51,7 +51,7 @@
         "from": "03-01",
         "to": "04-15"
       },
-      "description": "Zaai binnen, zaad alleen aandrukken, op een warme plek."
+      "description": "Zaai op een warme plek en druk het zaad alleen aan: het kiemt in het licht."
     },
     {
       "id": "uitplanten",

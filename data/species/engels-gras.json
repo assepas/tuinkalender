@@ -39,11 +39,9 @@
     }
   },
   "info": {
-    "intro": "Een laag, groenblijvend kussen van grasachtig blad met roze bolletjes op dunne stelen. Van nature groeit hij in duinen en kwelders; in de tuin is hij mooi langs randen en in grind.",
-    "water": "Heeft weinig water nodig; natte voeten vindt hij niet fijn.",
+    "intro": "Laag, groenblijvend kussen van grasachtig blad met roze bloembolletjes op dunne stelen. Groeit van nature in duinen en kwelders; in de tuin geschikt voor randen en grind.",
+    "water": "Weinig water nodig; natte grond verdraagt hij slecht.",
     "tips": [
-      "Knip uitgebloeide bolletjes af voor een lange bloei.",
-      "Verdeel het kussen als het in het midden kaal wordt.",
       "Kan tegen zout en wind."
     ]
   },
@@ -56,7 +54,7 @@
         "from": "03-15",
         "to": "05-15"
       },
-      "description": "Plant op een zonnige plek in doorlatende grond, op zo'n 25 cm afstand."
+      "description": "Plant op een zonnige plek in doorlatende grond, 25 cm uit elkaar."
     },
     {
       "id": "uitgebloeid-afknippen",
@@ -67,7 +65,7 @@
         "from": "06-15",
         "to": "07-31"
       },
-      "description": "Knip uitgebloeide bloemstelen af tot op het kussen."
+      "description": "Knip uitgebloeide bloemstelen af tot op het kussen; zo bloeit hij langer."
     },
     {
       "id": "delen",

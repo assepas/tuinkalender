@@ -32,12 +32,10 @@
     }
   },
   "info": {
-    "intro": "Dé Hollandse wintergroente voor stamppot. Boerenkool is winterhard en wordt na een paar nachten vorst zoeter. Je oogst van oktober tot in maart.",
-    "water": "Geef in de zomer water in droge periodes, vooral na het uitplanten.",
+    "intro": "Winterharde kool en dé Hollandse wintergroente voor stamppot. Je oogst van oktober tot in maart; na een paar nachten vorst smaakt hij zoeter.",
+    "water": "Geef in droge periodes water, vooral na het uitplanten.",
     "tips": [
-      "Pluk steeds de onderste bladeren en laat het hart doorgroeien.",
-      "Rupsen van het koolwitje: controleer de onderkant van het blad of gebruik gaas.",
-      "Hoe kouder, hoe zoeter; wachten op vorst is niet nodig maar geeft wel smaak."
+      "Rupsen van het koolwitje: controleer de onderkant van het blad."
     ]
   },
   "tasks": [
@@ -60,7 +58,7 @@
         "from": "06-01",
         "to": "07-15"
       },
-      "description": "Plant op 50 cm afstand, stevig aandrukken. Zet direct na het planten insectengaas over de kool tegen koolvlieg, koolwitje en duiven."
+      "description": "Plant op 50 cm afstand en druk stevig aan. Zet er meteen insectengaas over tegen koolvlieg, koolwitje en duiven."
     },
     {
       "id": "oogsten",
@@ -70,7 +68,7 @@
         "from": "10-15",
         "to": "03-15"
       },
-      "description": "Pluk steeds de onderste bladeren of snijd de hele plant af. Laat de top staan, dan groeit hij door."
+      "description": "Pluk steeds de onderste bladeren en laat de top staan, dan groeit hij door. Of snijd de hele plant in één keer af."
     }
   ]
 }

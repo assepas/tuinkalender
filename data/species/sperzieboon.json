@@ -38,12 +38,12 @@
     }
   },
   "info": {
-    "intro": "Makkelijke en productieve groente: een paar meter bonen geeft al weken lang een schaal per keer. Er zijn lage struikbonen en klimmende stokbonen.",
-    "water": "Geef tijdens de bloei en het groeien van de peulen regelmatig water, zeker bij droogte. Anders vallen de bloemen af en worden de peulen taai.",
+    "intro": "Makkelijke, productieve groente: een paar meter rij geeft wekenlang bonen. Er zijn lage struikbonen en klimmende stokbonen.",
+    "water": "Geef tijdens bloei en peulvorming bij droogte regelmatig water, anders vallen de bloemen af en worden de peulen taai.",
     "tips": [
+      "Rauwe bonen en peulen zijn giftig: altijd goed koken.",
       "Bonen maken zelf stikstof aan; extra mest is meestal niet nodig.",
-      "Pluk vaak en jong: hoe meer je plukt, hoe meer nieuwe peulen er komen.",
-      "Stokbonen hebben een rek van zo'n 2 meter hoog nodig."
+      "Stokbonen hebben een rek van zo'n 2 meter nodig."
     ]
   },
   "tasks": [
@@ -57,7 +57,7 @@
         "toWeeks": 4
       },
       "note": "Pas als de grond warm is",
-      "description": "Zaai de bonen 3 à 4 cm diep, pas als de grond is opgewarmd (meestal half mei). Struikbonen zaai je om de 5 à 10 cm in een rij, of in groepjes van 5 op 40 cm afstand. Stokbonen zet je 6 tot 8 per stok. In koude, natte grond rotten de bonen voordat ze kiemen."
+      "description": "Zaai 3-4 cm diep. Struikbonen om de 5-10 cm in een rij of met 5 bij elkaar op 40 cm; stokbonen 6 tot 8 per stok. In koude, natte grond rotten ze voor ze kiemen."
     },
     {
       "id": "oogsten",
@@ -67,7 +67,7 @@
         "from": "07-15",
         "to": "09-30"
       },
-      "description": "Pluk de peulen als ze zo dik zijn als een potlood en knappen als je ze breekt, voordat de boontjes erin gaan bollen. Houd de plant vast terwijl je plukt, zodat hij niet uit de grond trekt. Pluk om de twee à drie dagen."
+      "description": "Pluk om de twee à drie dagen, als de peulen potlooddik zijn en knappen bij het breken. Houd de plant vast, zodat je hem niet uittrekt."
     }
   ]
 }

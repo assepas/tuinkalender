@@ -39,12 +39,11 @@
     }
   },
   "info": {
-    "intro": "Een klein, eenjarig klavertje met kleine gele bloemhoofdjes. Het groeit laag tussen het gras en maakt de grond rijker met stikstof.",
-    "water": "Heeft geen extra water nodig.",
+    "intro": "Laag, eenjarig klavertje met kleine gele bloemhoofdjes tussen het gras. Maakt de grond rijker met stikstof.",
+    "water": "Geen extra water nodig.",
     "tips": [
-      "Zaait zich uit, maar heeft open plekjes nodig om te kiemen.",
-      "Op het oog lijkt hij op hopklaver; de verwelkte bloempjes worden bij kleine klaver bruin in plaats van zwart.",
-      "Draagt bij aan een groen gazon in droge zomers."
+      "Heeft open plekjes nodig om zich uit te zaaien.",
+      "Lijkt op hopklaver; de verwelkte bloempjes van kleine klaver worden bruin in plaats van zwart."
     ]
   },
   "tasks": [
@@ -56,7 +55,7 @@
         "from": "08-15",
         "to": "09-30"
       },
-      "description": "Zaai in de nazomer of in april-mei (lukt ook) op kale, losgeharkte plekken in het gras of mee in een bloemrijk gazonmengsel. Strooi het zaad breed uit, druk het aan en houd het een paar weken vochtig."
+      "description": "Zaai in de nazomer of in april-mei op kale, losgeharkte plekken in het gras, of mee in een bloemrijk gazonmengsel. Druk het zaad aan en houd het een paar weken vochtig."
     },
     {
       "id": "maaien",
@@ -68,7 +67,7 @@
         "every": "2weeks"
       },
       "note": "Gazon niet te kort maaien",
-      "description": "Maai het gazon niet te kort, op 5 tot 8 cm, dan blijft deze plant bloeien. Hij blijft laag en bloeit tussen het maaien door."
+      "description": "Maai op 5 tot 8 cm; hij blijft laag en bloeit tussen het maaien door."
     }
   ]
 }

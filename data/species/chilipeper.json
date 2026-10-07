@@ -40,12 +40,11 @@
     }
   },
   "info": {
-    "intro": "Pepers zijn compacter dan paprika's en doen het goed in een pot op een warm, zonnig plekje. Eén plant geeft al snel tientallen pepers.",
-    "water": "Geef regelmatig water, maar laat de grond tussendoor iets opdrogen; dat maakt ze pittiger.",
+    "intro": "Compacte pepers die het goed doen in een pot op een warme, zonnige plek of in de kas. Eén plant geeft tientallen pepers.",
+    "water": "Geef regelmatig water, maar laat de grond tussendoor iets opdrogen.",
     "tips": [
-      "Was je handen na het snijden van pepers, en raak je ogen niet aan.",
-      "Pepers kun je drogen of invriezen.",
-      "Sommige soorten overleven de winter binnen op een lichte plek."
+      "Was je handen na het snijden van pepers en raak je ogen niet aan.",
+      "Niet winterhard; sommige soorten kun je binnen op een lichte plek overwinteren."
     ]
   },
   "tasks": [
@@ -58,7 +57,7 @@
         "from": "02-01",
         "to": "03-15"
       },
-      "description": "Zaai binnen op 25 °C; pepers kiemen traag. Verspeen naar potjes."
+      "description": "Zaai op ongeveer 25 °C; pepers kiemen traag. Verspeen daarna naar losse potjes."
     },
     {
       "id": "uitplanten",
@@ -79,7 +78,7 @@
         "from": "08-01",
         "to": "10-15"
       },
-      "description": "Pluk de pepers groen of rijp; hoe vaker je plukt, hoe meer er komen."
+      "description": "Pluk groen of rijp; hoe vaker je plukt, hoe meer er komen."
     }
   ]
 }

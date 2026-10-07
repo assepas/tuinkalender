@@ -39,12 +39,11 @@
     }
   },
   "info": {
-    "intro": "Een vaste plant met grote bladeren en dikke, rode of groene stelen voor compote en taart. Eén plant geeft tien jaar of langer oogst.",
+    "intro": "Vaste plant met grote bladeren en dikke, rode of groene stelen voor compote en taart. Eén plant geeft tien jaar of langer oogst.",
     "water": "Geef in droge zomers flink water.",
     "tips": [
-      "Eet alleen de stelen: de bladeren zijn giftig (oxaalzuur).",
-      "Oogst het eerste jaar niet, het tweede jaar weinig.",
-      "Knip bloemstengels weg; dat kost de plant veel energie."
+      "Eet alleen de stelen: de bladeren zijn giftig (oxaalzuur). Op de composthoop mogen ze wel.",
+      "Oogst het eerste jaar niet en het tweede jaar maar een paar stelen."
     ]
   },
   "tasks": [
@@ -56,7 +55,7 @@
         "from": "10-01",
         "to": "03-31"
       },
-      "description": "Plant een wortelstuk met knoppen in voedzame grond, met de knoppen net onder de oppervlakte. Geef een plant 1 m² ruimte."
+      "description": "Plant een wortelstuk in voedzame grond, met de top van de knoppen net boven de grond. Geef een plant ongeveer 1 m² ruimte."
     },
     {
       "id": "bemesten",
@@ -66,7 +65,7 @@
         "from": "02-15",
         "to": "03-31"
       },
-      "description": "Geef in het voorjaar een flinke laag compost of goed verteerde mest rond de plant."
+      "description": "Geef een flinke laag compost of goed verteerde mest rond de plant, niet op de knoppen."
     },
     {
       "id": "oogsten",
@@ -88,7 +87,7 @@
         "to": "06-30"
       },
       "note": "Bloemstengels uitbreken",
-      "description": "Breek bloemstengels direct uit zodra ze verschijnen."
+      "description": "Breek bloemstengels uit zodra je ze ziet; ze kosten de plant veel energie."
     }
   ]
 }

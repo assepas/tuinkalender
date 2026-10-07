@@ -32,12 +32,10 @@
     }
   },
   "info": {
-    "intro": "Een kool met gekruld, gebobbeld blad. Hij is malser dan witte kool en goed winterhard: late rassen kun je tot in de winter oogsten.",
-    "water": "Geef in droge zomers water.",
+    "intro": "Kool met gekruld, gebobbeld blad, malser dan witte kool. Hij is goed winterhard: late rassen oogst je tot in de winter.",
+    "water": "Geef in droge perioden één à twee keer per week flink water.",
     "tips": [
-      "Winterrassen blijven gewoon op het bed staan tot je ze nodig hebt.",
-      "Lekker in stamppot of als koolrolletjes.",
-      "Gebruik gaas tegen rupsen."
+      "Winterrassen kunnen gewoon op het bed blijven staan tot je ze nodig hebt."
     ]
   },
   "tasks": [
@@ -60,7 +58,7 @@
         "from": "05-15",
         "to": "07-15"
       },
-      "description": "Plant op 60 cm afstand. Zet direct na het planten insectengaas over de kool tegen koolvlieg, koolwitje en duiven."
+      "description": "Plant op 60 cm afstand en druk de grond goed aan. Zet er direct insectengaas over tegen koolvlieg, koolwitje en duiven."
     },
     {
       "id": "oogsten",
@@ -70,7 +68,7 @@
         "from": "09-01",
         "to": "01-31"
       },
-      "description": "Snijd de kool af als hij vol is."
+      "description": "Snijd de kool af als hij vol is en stevig aanvoelt."
     }
   ]
 }

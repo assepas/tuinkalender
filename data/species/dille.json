@@ -38,12 +38,10 @@
     }
   },
   "info": {
-    "intro": "Een eenjarig kruid met fijn, veerachtig blad en gele schermbloemen. Het blad past bij vis, eieren en komkommer; het zaad gebruik je bij het inmaken.",
-    "water": "Houd de grond licht vochtig. Bij droogte gaat dille snel doorschieten (bloeien) en wordt het blad minder.",
+    "intro": "Eenjarig kruid met fijn, veerachtig blad en gele schermbloemen. Het blad gebruik je bij vis, eieren en komkommer, het zaad bij het inmaken.",
+    "water": "Licht vochtig houden; bij droogte gaat dille snel bloeien en krijg je minder blad.",
     "tips": [
-      "Zaai om de drie à vier weken opnieuw voor steeds vers blad.",
-      "Niet verplanten: dille heeft een penwortel. Zaai direct op de plek.",
-      "De schermbloemen trekken zweefvliegen en sluipwespen aan, die helpen tegen luis."
+      "Niet verplanten: dille heeft een penwortel (één lange hoofdwortel). Zaai direct op de plek."
     ]
   },
   "tasks": [
@@ -56,7 +54,7 @@
         "to": "07-31"
       },
       "note": "Om de 3-4 weken opnieuw",
-      "description": "Zaai in rijen direct buiten, dun bedekt. Dun uit tot 25 cm. Zaai elke drie à vier weken een nieuw rijtje voor de hele zomer vers blad."
+      "description": "Zaai in rijen, dun bedekt met grond. Dun uit tot 25 cm."
     },
     {
       "id": "oogsten",
@@ -66,7 +64,7 @@
         "from": "06-01",
         "to": "10-01"
       },
-      "description": "Knip het blad als de plant zo'n 20 cm hoog is. Voor zaad laat je de schermen staan tot ze bruin zijn en knip je ze af boven een papieren zak."
+      "description": "Knip blad zodra de plant 20 cm hoog is. Voor zaad laat je de schermen bruin worden en knip je ze af boven een papieren zak."
     }
   ]
 }

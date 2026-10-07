@@ -41,12 +41,12 @@
     }
   },
   "info": {
-    "intro": "Een zeldzame inheemse bolplant met hangende, geblokte klokjes in paars of wit. Hij groeit in vochtige hooilanden en past mooi in een nat stuk gazon of bij een vijver.",
-    "water": "Houdt van vochtige grond; in droge voorjaren water geven.",
+    "intro": "Zeldzame inheemse bolplant met hangende, geblokte klokjes in paars of wit. Past in een vochtig stuk gras of bij een vijver.",
+    "water": "In een droog voorjaar water geven; hij wil vochtige grond.",
     "tips": [
-      "De bolletjes drogen snel uit: plant ze meteen na aankoop.",
-      "Maai pas in juli, als het zaad rijp is.",
-      "Zaait zich op een goede plek uit."
+      "De bol is giftig: niet opeten.",
+      "Bolletjes drogen snel uit: plant ze meteen na aankoop.",
+      "Maai pas in juli, als het zaad rijp is; dan zaait hij zich uit."
     ]
   },
   "tasks": [
@@ -58,7 +58,7 @@
         "from": "09-15",
         "to": "10-31"
       },
-      "description": "Plant de bollen in de herfst 8-10 cm diep, met de punt omhoog, in groepjes op zo'n 10 cm afstand. Plant liever in groepen dan in rijtjes: dat ziet er natuurlijker uit."
+      "description": "Plant de bollen 8-10 cm diep met de punt omhoog, in groepjes op 10 cm afstand."
     },
     {
       "id": "blad-laten-staan",
@@ -69,7 +69,7 @@
         "to": "07-01"
       },
       "note": "Blad laten afsterven",
-      "description": "Laat het blad na de bloei staan tot het geel is en vanzelf afsterft. De bol haalt er energie uit voor volgend jaar. Maai er dus nog niet overheen."
+      "description": "Laat het blad staan tot het geel is: de bol haalt er energie uit voor volgend jaar. Maai er nog niet overheen."
     }
   ]
 }

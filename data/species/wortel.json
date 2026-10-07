@@ -33,10 +33,10 @@
     }
   },
   "info": {
-    "intro": "Zelfgekweekte wortels zijn zoet en knapperig. Er zijn vroege rassen voor de zomer en late rassen om te bewaren. Ze houden van losse grond zonder stenen.",
-    "water": "Houd de grond vochtig tot het zaad opkomt; dat kan twee à drie weken duren. Daarna gelijkmatig water: wisselend nat en droog geeft gebarsten wortels.",
+    "intro": "Wortels groeien het best in losse grond zonder stenen. Er zijn vroege rassen voor de zomer en late rassen om te bewaren.",
+    "water": "Houd de grond vochtig tot het zaad opkomt (twee à drie weken), daarna gelijkmatig: wisselend nat en droog geeft gebarsten wortels.",
     "tips": [
-      "Tegen de wortelvlieg helpt insectengaas over het bed.",
+      "Insectengaas over het bed is de beste bescherming tegen de wortelvlieg.",
       "Geen verse mest gebruiken: dan krijg je gevorkte wortels.",
       "Meng wat radijszaad door het wortelzaad: de radijs komt snel op en markeert de rij."
     ]
@@ -50,7 +50,7 @@
         "from": "03-15",
         "to": "07-15"
       },
-      "description": "Zaai dun in rijen op 20 cm afstand, 1 cm diep. Zaai vroege rassen vanaf maart, bewaarwortels in mei-juni. Houd de grond vochtig tot ze op zijn."
+      "description": "Zaai dun, 1 cm diep, in rijen op 20 cm. Vroege rassen vanaf maart, bewaarwortels in mei–juni."
     },
     {
       "id": "uitdunnen",
@@ -61,7 +61,7 @@
         "to": "08-15"
       },
       "note": "Uitdunnen tot 3-5 cm",
-      "description": "Dun de plantjes uit tot 3-5 cm afstand als ze een paar blaadjes hebben. Doe dat 's avonds en druk de grond weer aan, zodat de wortelvlieg de geur niet ruikt."
+      "description": "Dun uit als ze een paar blaadjes hebben. Doe dat 's avonds en druk de grond weer aan, zodat de wortelvlieg de geur niet ruikt."
     },
     {
       "id": "oogsten",
@@ -71,7 +71,7 @@
         "from": "06-15",
         "to": "11-15"
       },
-      "description": "Trek vroege wortels als ze vingerdik zijn. Bewaarwortels oogst je in oktober-november, voor de strenge vorst."
+      "description": "Trek vroege wortels als ze vingerdik zijn. Bewaarwortels oogst je in oktober–november, vóór strenge vorst."
     }
   ]
 }

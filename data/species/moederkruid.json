@@ -40,12 +40,11 @@
     }
   },
   "info": {
-    "intro": "Een oud geneeskruid met massa's kleine witte madeliefjesbloemen in de zomer. Het is makkelijk, bloeit lang en trekt zweefvliegen en andere nuttige insecten.",
-    "water": "Moederkruid kan goed tegen droogte. Geef alleen water na het zaaien of planten en tijdens lange droge periodes.",
+    "intro": "Oud geneeskruid met veel kleine, witte madeliefachtige bloemetjes in de zomer. Makkelijk, en trekt zweefvliegen en andere nuttige insecten.",
+    "water": "Kan goed tegen droogte; alleen water na zaaien of planten en bij lange droogte.",
     "tips": [
-      "Zaait zichzelf flink uit; knip op tijd uitgebloeide bloemen weg als je dat niet wilt.",
-      "Het blad heeft een sterke, bittere geur die sommige plagen op afstand houdt.",
-      "Leeft een paar jaar; laat een paar zaailingen staan om het te vernieuwen."
+      "Zaait zich flink uit; trek overtollige zaailingen weg.",
+      "Leeft maar een paar jaar: laat een paar zaailingen staan als opvolgers."
     ]
   },
   "tasks": [
@@ -57,7 +56,7 @@
         "from": "04-01",
         "to": "05-15"
       },
-      "description": "Zaai buiten op de plek waar je het wilt, of in een bak. Het zaad is fijn en heeft licht nodig: strooi het uit en druk het alleen aan. Dun later uit tot zo'n 30 cm afstand."
+      "description": "Strooi het fijne zaad op de plek of in een bak en druk het alleen aan: het kiemt op licht. Dun later uit tot 30 cm."
     },
     {
       "id": "oogsten",
@@ -67,7 +66,7 @@
         "from": "06-01",
         "to": "09-01"
       },
-      "description": "Pluk bloemen en blad als de plant in bloei staat, op een droge dag. Hang de stengels in bosjes ondersteboven te drogen op een luchtige, schaduwrijke plek."
+      "description": "Pluk bloemen en blad tijdens de bloei op een droge dag. Hang bosjes ondersteboven te drogen op een luchtige plek uit de zon."
     },
     {
       "id": "onderhoud",
@@ -78,7 +77,7 @@
         "to": "09-30"
       },
       "note": "Uitgebloeide stengels afknippen",
-      "description": "Knip na de bloei de uitgebloeide stengels af tot een handbreedte boven de grond. Dat voorkomt dat hij zich overal uitzaait en de plant komt voller terug."
+      "description": "Knip tot een handbreedte boven de grond. Zo zaait hij zich minder uit en komt de plant voller terug."
     }
   ]
 }

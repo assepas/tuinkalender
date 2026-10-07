@@ -39,12 +39,12 @@
     }
   },
   "info": {
-    "intro": "Hét voorjaarsbolgewas van Nederland, in bijna elke kleur. Je plant de bollen in de herfst en in april en mei staan ze in bloei.",
-    "water": "Na het planten hoef je bijna nooit water te geven. Tulpen houden niet van natte grond: dan rotten de bollen.",
+    "intro": "Het bekende voorjaarsbolgewas, in bijna elke kleur. Je plant de bollen in de herfst; ze bloeien in april en mei.",
+    "water": "Na het planten bijna nooit water geven; in natte grond rotten de bollen.",
     "tips": [
-      "Veel tulpen bloeien het tweede jaar minder; plant elk najaar wat nieuwe bollen bij.",
-      "Botanische tulpen (kleine wilde soorten) komen meestal wel elk jaar terug.",
-      "Knip uitgebloeide bloemen af, maar laat het blad staan tot het geel is."
+      "Giftig: de bol en in mindere mate de hele plant; aanraken van veel bollen kan huiduitslag geven, draag handschoenen.",
+      "Veel tulpen bloeien het tweede jaar minder; botanische tulpen (kleine wilde soorten) komen meestal wel terug.",
+      "Knip uitgebloeide bloemen af, maar laat het blad staan."
     ]
   },
   "tasks": [
@@ -56,7 +56,7 @@
         "from": "10-15",
         "to": "12-01"
       },
-      "description": "Plant de bollen met de punt naar boven, zo diep als drie keer hun eigen hoogte (ongeveer 15 cm), op zo'n 10 cm afstand. Plant ze in groepjes, dat staat mooier dan in een rij. Pas planten als de grond is afgekoeld, vanaf half oktober; dat voorkomt de schimmelziekte 'vuur'."
+      "description": "Plant met de punt omhoog, drie keer zo diep als de bol hoog is (ongeveer 15 cm), op 10 cm afstand, liefst in groepjes. Wacht tot half oktober: in afgekoelde grond is minder kans op de schimmelziekte 'vuur'."
     },
     {
       "id": "bemesten",
@@ -66,7 +66,7 @@
         "from": "02-15",
         "to": "03-15"
       },
-      "description": "Strooi aan het eind van de winter, als de punten boven komen, een handje organische bollenmest of wat compost over de plek. Dat helpt de bol om kracht op te bouwen voor volgend jaar."
+      "description": "Strooi als de punten boven komen een handje organische bollenmest of wat compost over de plek."
     },
     {
       "id": "onderhoud",
@@ -77,7 +77,7 @@
         "to": "06-15"
       },
       "note": "Blad laten afsterven",
-      "description": "Laat het blad na de bloei staan tot het geel en verdroogd is; daarmee maakt de bol voeding aan voor volgend jaar. Daarna kun je het blad weghalen. Wil je de plek voor iets anders gebruiken, rooi de bollen dan, laat ze drogen en bewaar ze luchtig tot oktober."
+      "description": "Laat het blad staan tot het geel en verdroogd is, zodat de bol voeding opslaat voor volgend jaar. Heb je de plek nodig, rooi de bollen dan, laat ze drogen en bewaar ze luchtig tot oktober."
     }
   ]
 }

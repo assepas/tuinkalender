@@ -39,11 +39,10 @@
     }
   },
   "info": {
-    "intro": "Een stekelige bessenstruik met grote, sappige bessen die groen, geel of rood rijpen. Vroeg geplukt zijn ze zuur voor jam en taart, laat geplukt zoet uit de hand.",
-    "water": "Geef in droge periodes water, vooral als de bessen groeien.",
+    "intro": "Stekelige bessenstruik met grote bessen die groen, geel of rood rijpen. Vroeg geplukt zuur voor jam en taart, rijp zoet uit de hand.",
+    "water": "In droge periodes water geven, vooral als de bessen groeien.",
     "tips": [
-      "Houd de struik open: meeldauw (wit viltje) heeft dan minder kans.",
-      "Let op de kruisbesbladwesp: groene rupsjes die het blad in een paar dagen kaalvreten.",
+      "Houd de struik open: dan krijgt meeldauw (wit viltje op blad en bessen) minder kans.",
       "Draag handschoenen bij snoeien en plukken."
     ]
   },
@@ -56,7 +55,7 @@
         "from": "11-01",
         "to": "03-15"
       },
-      "description": "Plant in de winterrust op zo'n 1,2 meter afstand, even diep als in de pot."
+      "description": "Plant op zo'n 1,2 m afstand, even diep als in de pot."
     },
     {
       "id": "snoeien",
@@ -66,7 +65,7 @@
         "from": "12-01",
         "to": "02-28"
       },
-      "description": "Snoei in de winter oude, donkere takken weg en houd het midden open. Kort de zijtakken van vorig jaar in tot 2-3 knoppen."
+      "description": "Snoei oude, donkere takken weg en houd het midden open. Kort de zijtakken van vorig jaar in tot 2–3 knoppen."
     },
     {
       "id": "bladwesp-controleren",
@@ -78,7 +77,7 @@
         "every": "week"
       },
       "note": "Controleren op bladwesprupsen",
-      "description": "Kijk wekelijks onder de bladeren in het midden van de struik naar groene rupsjes met zwarte stippen en haal ze weg."
+      "description": "Kijk onder de bladeren midden in de struik naar groene rupsjes met zwarte stippen en haal ze weg. Ze vreten de struik in een paar dagen kaal."
     },
     {
       "id": "oogsten",
@@ -88,7 +87,7 @@
         "from": "06-15",
         "to": "07-31"
       },
-      "description": "Pluk halfrijpe bessen in juni voor jam, en rijpe, zachte bessen in juli om zo te eten."
+      "description": "Pluk halfrijpe bessen in juni voor jam en rijpe, zachte bessen in juli om zo te eten."
     }
   ]
 }

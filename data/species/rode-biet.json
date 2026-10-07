@@ -35,11 +35,10 @@
     }
   },
   "info": {
-    "intro": "Een makkelijke wortelgroente die je van het vroege voorjaar tot de zomer kunt zaaien. De bieten zijn goed te bewaren, en het jonge blad is eetbaar als spinazie.",
-    "water": "Geef gelijkmatig water; bij droogte worden de bieten houtig en krijgen ze ringen.",
+    "intro": "Makkelijke wortelgroente die je van april tot juli kunt zaaien. De bieten zijn goed te bewaren en het jonge blad is eetbaar als spinazie.",
+    "water": "Geef gelijkmatig water; bij droogte worden de bieten houtig.",
     "tips": [
-      "Elk 'zaadje' is een kluwen van meerdere zaden: dun daarom altijd uit.",
-      "Oogst ze op tennisbalformaat, dan zijn ze het malst.",
+      "Elk 'zaadje' is een kluwen van meerdere zaden, dus uitdunnen is bijna altijd nodig.",
       "Draai het blad eraf in plaats van het af te snijden, anders 'bloeden' de bieten."
     ]
   },
@@ -52,7 +51,7 @@
         "from": "04-15",
         "to": "07-15"
       },
-      "description": "Zaai in rijen op 25 cm afstand, 2 cm diep. Zaai om de vier weken opnieuw voor jonge bietjes de hele zomer."
+      "description": "Zaai 2 cm diep in rijen op 25–30 cm afstand. Zaai om de vier weken opnieuw voor jonge bietjes de hele zomer."
     },
     {
       "id": "uitdunnen",
@@ -63,7 +62,7 @@
         "to": "08-15"
       },
       "note": "Uitdunnen tot 10 cm",
-      "description": "Dun de plantjes uit tot 10 cm afstand als ze een paar blaadjes hebben. De uitgedunde plantjes kun je in een salade eten."
+      "description": "Dun uit als de plantjes een paar blaadjes hebben. De uitgedunde plantjes kun je in een salade eten."
     },
     {
       "id": "oogsten",
@@ -73,7 +72,7 @@
         "from": "07-01",
         "to": "10-31"
       },
-      "description": "Trek bieten uit als ze tennisbalgroot zijn. Voor de winter oogst je alles vóór de strenge vorst en bewaar je ze koel in een kist met zand."
+      "description": "Het lekkerst zijn ze met 4–7 cm doorsnee. Oogst voor de winter alles vóór strenge vorst en bewaar ze koel in een kist met zand."
     }
   ]
 }

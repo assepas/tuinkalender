@@ -38,12 +38,11 @@
     }
   },
   "info": {
-    "intro": "Een vaste klimmer met roze, witte of paarse vlinderbloemen, als een siererwt die elk jaar terugkomt. Hij ruikt niet, maar bloeit wel de hele zomer.",
+    "intro": "Vaste klimmer met roze, witte of paarse vlinderbloemen, een soort siererwt die elk jaar terugkomt. Hij bloeit de hele zomer, maar ruikt niet.",
     "water": "Geef in droge periodes water.",
     "tips": [
-      "Laat hem door een hek, struik of over een muurtje groeien.",
-      "Pluk regelmatig bloemen, dan bloeit hij langer.",
-      "De zaden zijn giftig."
+      "Peulen en zaden zijn giftig: niet eten.",
+      "Pluk regelmatig bloemen, dan bloeit hij langer."
     ]
   },
   "tasks": [
@@ -55,7 +54,7 @@
         "from": "03-15",
         "to": "05-15"
       },
-      "description": "Plant bij een hek, rek of struik waar hij in kan klimmen."
+      "description": "Plant bij een hek, rek of struik waarin hij kan klimmen."
     },
     {
       "id": "terugknippen",
@@ -65,7 +64,7 @@
         "from": "11-01",
         "to": "03-15"
       },
-      "description": "Knip de afgestorven ranken in de winter of het vroege voorjaar weg tot net boven de grond."
+      "description": "Knip de afgestorven ranken weg tot net boven de grond."
     }
   ]
 }

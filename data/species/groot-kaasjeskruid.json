@@ -40,12 +40,11 @@
     }
   },
   "info": {
-    "intro": "Een stevige plant met paarsroze bloemen met donkere strepen. Hij bloeit maanden achter elkaar en is erg geliefd bij bijen. Bloemen en jong blad zijn eetbaar.",
-    "water": "Weinig veeleisend; alleen water in lange droge periodes.",
+    "intro": "Stevige plant met paarsroze, donker gestreepte bloemen die maanden achter elkaar bloeien en veel bijen trekken. Bloemen en jong blad zijn eetbaar.",
+    "water": "Alleen water in lange droge periodes.",
     "tips": [
-      "Leeft een paar jaar maar zaait zich uit.",
-      "Roest (oranje stipjes) komt voor; haal aangetast blad weg.",
-      "De bloemen zijn mooi op salades."
+      "Leeft maar een paar jaar, maar zaait zich uit.",
+      "Roest (oranje stipjes onder het blad) komt veel voor; haal aangetast blad weg."
     ]
   },
   "tasks": [
@@ -67,7 +66,7 @@
         "from": "10-01",
         "to": "11-15"
       },
-      "description": "Knip de stengels in het najaar af. Laat er een paar staan als je nieuwe zaailingen wilt."
+      "description": "Knip de stengels af. Laat er een paar staan als je nieuwe zaailingen wilt."
     }
   ]
 }

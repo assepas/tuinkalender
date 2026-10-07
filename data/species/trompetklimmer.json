@@ -38,12 +38,12 @@
     }
   },
   "info": {
-    "intro": "Een krachtige klimplant met oranje, trompetvormige bloemen in de nazomer. Hij hecht zich met luchtwortels aan muren en heeft een warme, zonnige plek nodig om goed te bloeien.",
-    "water": "Geef de eerste jaren in droge periodes wekelijks een emmer water. Tegen een zonnige muur droogt de grond snel uit.",
+    "intro": "Sterke klimplant met oranje trompetbloemen in de nazomer. Hij hecht zich met luchtwortels aan muren en bloeit alleen goed op een warme, zonnige plek.",
+    "water": "Geef de eerste jaren in droge periodes wekelijks een emmer water; tegen een zonnige muur droogt de grond snel uit.",
     "tips": [
-      "De eerste jaren bloeit hij soms weinig; geduld, hij moet eerst een stevig gestel opbouwen.",
-      "Hij groeit hard en wordt groot; houd hem uit de goot en weg van het dak.",
-      "Jonge planten hebben de eerste jaren wat hulp nodig om zich aan de muur vast te hechten."
+      "De eerste jaren bloeit hij vaak weinig; hij moet eerst een gestel opbouwen.",
+      "Hij wordt 8–10 m en maakt wortelopslag: houd hem uit de goot en van het dak en trek uitlopers weg.",
+      "Blad en bloemen kunnen de huid irriteren: draag handschoenen bij het snoeien."
     ]
   },
   "tasks": [
@@ -55,7 +55,7 @@
         "from": "03-15",
         "to": "05-01"
       },
-      "description": "Plant op de zonnigste plek, tegen een zuid- of westmuur, zo'n 30 cm van de muur af. Leid de scheuten met een stok naar de muur en bind ze vast tot ze zich zelf hechten."
+      "description": "Plant tegen een zuid- of westmuur, zo'n 30 cm van de muur af. Bind de scheuten met een stok naar de muur tot ze zich zelf hechten."
     },
     {
       "id": "snoeien",
@@ -67,7 +67,7 @@
         "to": "03-01"
       },
       "note": "Zijscheuten tot 2 à 3 knoppen",
-      "description": "Hij bloeit op de scheuten van dit jaar. Knip daarom in februari alle zijscheuten van vorig jaar terug tot 2 à 3 knoppen vanaf de hoofdtakken. Zo krijg je veel korte bloeitakken en houd je de plant binnen de perken."
+      "description": "Hij bloeit op nieuwe scheuten. Knip alle zijscheuten van vorig jaar terug tot 2 à 3 knoppen vanaf de hoofdtakken; zo krijg je veel korte bloeitakken."
     },
     {
       "id": "bemesten",
@@ -77,7 +77,7 @@
         "from": "03-15",
         "to": "04-15"
       },
-      "description": "Strooi in het voorjaar een laag compost en wat organische bloeimest rond de voet. Te veel stikstof geeft veel groei en weinig bloemen."
+      "description": "Strooi een laag compost en wat organische bloeimest rond de voet. Te veel stikstof geeft veel groei en weinig bloemen."
     }
   ]
 }

@@ -38,12 +38,11 @@
     }
   },
   "info": {
-    "intro": "Een laag, groenblijvend mediterraan kruid met een sterke geur en roze bloempjes in juni. Het is het hele jaar te plukken en populair bij bijen.",
-    "water": "Tijm heeft weinig water nodig. Geef alleen water bij lange droogte; natte grond, vooral in de winter, is fataal.",
+    "intro": "Laag, groenblijvend kruid uit het Middellandse Zeegebied met sterk geurend blad en roze bloempjes in de vroege zomer. Je kunt het hele jaar plukken en bijen komen op de bloemen af.",
+    "water": "Alleen water geven na het planten en bij lange droogte; natte grond, vooral in de winter, is fataal.",
     "tips": [
       "Geef geen mest: op arme grond is de smaak het sterkst.",
-      "Na een paar jaar wordt tijm houtig en kaal; zet dan een nieuwe plant of stek erbij.",
-      "Tussen stenen of in een rotstuintje voelt tijm zich thuis."
+      "Na een paar jaar wordt tijm houtig en kaal; zet dan een nieuwe plant of stek."
     ]
   },
   "tasks": [
@@ -55,7 +54,7 @@
         "from": "04-01",
         "to": "05-15"
       },
-      "description": "Plant op een zonnige plek in goed doorlatende grond, op zo'n 25 cm afstand. Meng bij zware grond zand of grind door het plantgat. Geef na het planten eenmalig water."
+      "description": "Plant op 25 cm afstand in goed doorlatende grond. Meng bij zware grond zand of grind door het plantgat, of plant in een pot."
     },
     {
       "id": "snoeien",
@@ -66,7 +65,7 @@
         "from": "07-01",
         "to": "07-15"
       },
-      "description": "Knip na de bloei de hele plant met een schaar een derde terug, alleen in het groene deel. Zo blijft de plant compact en bladrijk en wordt hij van onderen niet kaal."
+      "description": "Knip de plant na de bloei een derde terug, alleen in het groene deel. Zo blijft hij compact en wordt hij van onderen niet kaal."
     },
     {
       "id": "oogsten",
@@ -76,7 +75,7 @@
         "from": "01-01",
         "to": "12-31"
       },
-      "description": "Knip het hele jaar door takjes af, net boven een paar blaadjes. De smaak is het sterkst vlak voor de bloei. Voor de voorraad kun je bosjes op een droge, luchtige plek drogen en daarna het blad afristen."
+      "description": "Knip takjes af net boven een paar blaadjes; vlak voor de bloei is de smaak het sterkst. Drogen kan in bosjes op een droge, luchtige plek."
     }
   ]
 }

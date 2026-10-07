@@ -40,12 +40,10 @@
     }
   },
   "info": {
-    "intro": "Een inheemse vaste plant met slanke, blauwe bloemaren in de zomer. Hij groeit van nature langs rivieren en in vochtige graslanden, en is een echte trekpleister voor bijen en vlinders.",
-    "water": "Houdt van grond die niet uitdroogt. Geef in droge zomers regelmatig water, vooral op zandgrond.",
+    "intro": "Inheemse vaste plant met slanke blauwe bloemaren in de zomer, van nature langs rivieren en in vochtig grasland. Goede plant voor bijen en vlinders.",
+    "water": "Laat de grond niet uitdrogen; geef in droge zomers regelmatig water, vooral op zandgrond.",
     "tips": [
-      "Staat mooi in groepjes van drie of meer tussen grassen en andere wilde planten.",
-      "Hoge planten kunnen na regen omvallen; zet ze tussen stevige buren of geef een steuntje.",
-      "Knip je de eerste aren na de bloei af, dan volgen er vaak nog kleinere zijaren."
+      "Hoge planten vallen na regen soms om; zet ze tussen stevige buren of geef steun."
     ]
   },
   "tasks": [
@@ -57,7 +55,7 @@
         "from": "03-15",
         "to": "05-01"
       },
-      "description": "Plant in het voorjaar op zo'n 40 cm afstand, even diep als in de pot. Geef na het planten goed water en houd de grond de eerste weken vochtig."
+      "description": "Plant op zo'n 40 cm afstand, even diep als in de pot. Houd de grond de eerste weken vochtig."
     },
     {
       "id": "dode-bloemen-verwijderen",
@@ -68,7 +66,7 @@
         "from": "08-01",
         "to": "09-01"
       },
-      "description": "Knip uitgebloeide aren af tot boven een blad. Dan maakt de plant nog nieuwe zijaren. Laat aan het eind een paar aren staan als je wilt dat hij zich uitzaait."
+      "description": "Knip uitgebloeide aren af tot boven een blad; dan volgen nog zijaren. Laat aan het eind een paar aren staan als je wilt dat hij zich uitzaait."
     },
     {
       "id": "terugknippen",
@@ -78,7 +76,7 @@
         "from": "02-15",
         "to": "03-31"
       },
-      "description": "Knip de oude, droge stengels in het late voorjaar af tot net boven de grond. Laat ze de winter over staan: insecten overwinteren in de holle stengels."
+      "description": "Knip de oude stengels af tot net boven de grond. Laat ze tot dan staan: insecten overwinteren in de holle stengels."
     },
     {
       "id": "delen",
@@ -88,7 +86,7 @@
         "from": "03-15",
         "to": "04-15"
       },
-      "description": "Steek om de drie à vier jaar grote pollen in het voorjaar uit en verdeel ze met een spade in stukken met wortels. Plant de stukken meteen terug."
+      "description": "Steek om de 3–4 jaar grote pollen uit, verdeel ze met een spade in stukken met wortels en plant ze meteen terug."
     }
   ]
 }

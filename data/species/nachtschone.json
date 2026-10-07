@@ -7,8 +7,7 @@
   "tags": [
     "knol",
     "vorstgevoelig",
-    "geurend",
-    "giftig"
+    "geurend"
   ],
   "nativeStatus": "exoot",
   "appearance": {
@@ -40,12 +39,11 @@
     }
   },
   "info": {
-    "intro": "Een struikvormige plant waarvan de trompetvormige bloemen pas laat in de middag opengaan en 's avonds heerlijk geuren. Op één plant zitten vaak bloemen in verschillende kleuren.",
-    "water": "Geef in droge periodes water. In potten regelmatig gieten.",
+    "intro": "Struikvormige knolplant uit tropisch Amerika met trompetbloemen die laat in de middag opengaan en 's avonds geuren. Op één plant zitten vaak meerdere kleuren.",
+    "water": "Bij droogte water geven, in een pot regelmatig.",
     "tips": [
-      "Niet winterhard: kweek hem als eenjarige uit zaad of haal de knol binnen, net als een dahlia.",
-      "De zaden en wortels zijn giftig.",
-      "Nachtvlinders bezoeken de bloemen 's avonds."
+      "Zaden en wortels zijn giftig.",
+      "Niet winterhard: kweek hem als eenjarige of bewaar de knol vorstvrij, zoals een dahlia."
     ]
   },
   "tasks": [
@@ -58,7 +56,7 @@
         "from": "03-15",
         "to": "04-30"
       },
-      "description": "Zaai binnen in potjes, zo'n 1 cm diep, op een warme plek. Het zaad is groot en kiemt makkelijk."
+      "description": "Zaai 1 cm diep in potjes op een warme plek (15–18 °C). Het grote zaad kiemt makkelijk."
     },
     {
       "id": "uitplanten",
@@ -70,7 +68,7 @@
         "toWeeks": 3
       },
       "note": "Pas na de laatste nachtvorst",
-      "description": "Plant uit als het niet meer vriest, op een zonnige plek op zo'n 50 cm afstand. Een overwinterde knol kun je ook dan pas buiten zetten."
+      "description": "Plant 50 cm uit elkaar op een zonnige, beschutte plek. Een overwinterde knol gaat ook pas dan naar buiten."
     },
     {
       "id": "knollen-binnenhalen",
@@ -81,7 +79,7 @@
         "fromWeeks": -1,
         "toWeeks": 2
       },
-      "description": "Graaf na de eerste lichte nachtvorst de knol op, laat hem drogen en bewaar hem vorstvrij in droge potgrond of zand. In het voorjaar weer oppotten."
+      "description": "Graaf de knol na de eerste lichte nachtvorst op, laat hem drogen en bewaar hem vorstvrij in droog zand of potgrond. Pot hem in het voorjaar weer op."
     }
   ]
 }

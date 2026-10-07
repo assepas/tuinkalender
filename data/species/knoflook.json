@@ -35,12 +35,12 @@
     }
   },
   "info": {
-    "intro": "Knoflook poot je in de herfst en oogst je de volgende zomer. Het is weinig werk en een eigen oogst is veel sterker van smaak dan winkelknoflook.",
-    "water": "Weinig water nodig; alleen in een droog voorjaar. Natte grond laat de tenen rotten.",
+    "intro": "Knoflook poot je in de herfst en oogst je de volgende zomer. Weinig werk en sterker van smaak dan winkelknoflook.",
+    "water": "Alleen water geven in een droog voorjaar; in natte grond rotten de tenen.",
     "tips": [
-      "Gebruik pootknoflook van een tuincentrum; winkelknoflook is vaak niet geschikt.",
-      "Knip bij hardneck-knoflook de bloemstengel (lookstengel) af: die is lekker en de bol wordt groter.",
-      "Vlecht de gedroogde bollen en hang ze op een koele, droge plek."
+      "Gebruik pootknoflook; winkelknoflook is vaak niet geschikt.",
+      "Knip bij hardneck-knoflook de bloemstengel af: die is eetbaar en de bol wordt groter.",
+      "Bewaar de gedroogde bollen koel en droog, bijvoorbeeld gevlochten."
     ]
   },
   "tasks": [
@@ -53,7 +53,7 @@
         "to": "11-30"
       },
       "note": "In de herfst poten",
-      "description": "Haal de bol uit elkaar en poot de grootste tenen 5 cm diep, met de punt omhoog, op 15 cm afstand."
+      "description": "Haal de bol uit elkaar en poot de grootste tenen 5 cm diep met de punt omhoog, op 15 cm afstand."
     },
     {
       "id": "oogsten",
@@ -63,7 +63,7 @@
         "from": "06-15",
         "to": "07-31"
       },
-      "description": "Oogst als de onderste helft van het blad geel is. Graaf de bollen uit en laat ze twee weken drogen op een luchtige, schaduwrijke plek."
+      "description": "Oogst als de onderste helft van het blad geel is. Laat de bollen twee weken drogen op een luchtige plek uit de zon."
     }
   ]
 }

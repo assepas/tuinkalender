@@ -35,11 +35,11 @@
     }
   },
   "info": {
-    "intro": "Een snelle Aziatische kool met dikke witte of groene stelen en mals blad. Lekker in roerbakgerechten. Hij houdt van koel weer.",
-    "water": "Houd de grond vochtig: droogte laat hem doorschieten.",
+    "intro": "Snelle Aziatische kool met dikke witte of groene stelen en mals blad, voor roerbakgerechten. Groeit het best bij koel weer.",
+    "water": "Houd de grond vochtig: bij droogte schiet hij door (gaat hij bloeien).",
     "tips": [
-      "Zaai vooral na half juli: in het voorjaar schiet hij snel door.",
-      "Jonge babypaksoi kun je al na vier weken oogsten.",
+      "In het voorjaar gezaaid schiet hij snel door.",
+      "Babypaksoi kun je al na vier weken oogsten.",
       "Insectengaas helpt tegen aardvlooien."
     ]
   },
@@ -52,7 +52,7 @@
         "from": "07-15",
         "to": "09-15"
       },
-      "description": "Zaai in rijen op 30 cm afstand of in potjes, en dun uit tot 25 cm."
+      "description": "Zaai in rijen 30 cm uit elkaar, of in potjes om later uit te planten, en dun uit tot 25 cm."
     },
     {
       "id": "oogsten",
@@ -62,7 +62,7 @@
         "from": "08-15",
         "to": "11-15"
       },
-      "description": "Snijd de hele plant af of pluk de buitenste bladeren."
+      "description": "Snijd de hele plant af of pluk steeds de buitenste bladeren."
     }
   ]
 }

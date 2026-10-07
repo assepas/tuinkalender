@@ -41,12 +41,11 @@
     }
   },
   "info": {
-    "intro": "De klassieke blauwe akkerbloem die vroeger tussen het graan groeide. Bijen en hommels zijn er dol op, en de blaadjes zijn eetbaar in salades.",
-    "water": "Heeft weinig water nodig. Alleen gieten na het zaaien als het droog is.",
+    "intro": "Blauwe akkerbloem die vroeger tussen het graan groeide en veel bijen en hommels trekt. De bloemblaadjes zijn eetbaar.",
+    "water": "Weinig nodig; alleen gieten na het zaaien als het droog is.",
     "tips": [
-      "Gedijt het best op arme grond; op rijke grond valt hij om.",
-      "Zaai in stappen (om de drie weken) voor een langere bloei.",
-      "Mooi samen met klaproos en kamille als mini-bloemenakker."
+      "Op rijke grond valt hij om; arme grond is het best.",
+      "Zaai om de drie weken opnieuw voor een langere bloei."
     ]
   },
   "tasks": [
@@ -58,7 +57,7 @@
         "from": "03-15",
         "to": "05-31"
       },
-      "description": "Zaai direct op de plek, zo'n 1 cm diep, en dun later uit tot 25 cm. In september zaaien kan ook: dan bloeit hij volgend jaar al in mei."
+      "description": "Zaai direct op de plek, 1 cm diep, en dun uit tot 25 cm. Zaai je in september, dan bloeit hij volgend jaar al in mei."
     },
     {
       "id": "oogsten",
@@ -68,7 +67,7 @@
         "from": "06-15",
         "to": "08-31"
       },
-      "description": "Pluk bloemen voor de vaas als ze net open zijn, of trek de blauwe blaadjes los voor salades en thee."
+      "description": "Pluk voor de vaas als de bloemen net open zijn, of pluk de blauwe blaadjes voor salade en thee."
     },
     {
       "id": "dode-bloemen-verwijderen",
@@ -80,7 +79,7 @@
         "every": "week"
       },
       "note": "Uitgebloeide bloemen weghalen",
-      "description": "Knip uitgebloeide bloemen af, dan blijft hij langer bloeien. Laat aan het eind een paar bloemen zaad maken."
+      "description": "Knip ze af, dan bloeit hij langer. Laat aan het eind een paar bloemen zaad zetten."
     }
   ]
 }

@@ -35,12 +35,10 @@
     }
   },
   "info": {
-    "intro": "Een snelle kool met een verdikte, ronde stengel boven de grond. Mild van smaak en lekker rauw of gekookt. Hij is binnen acht weken klaar.",
-    "water": "Geef gelijkmatig water: bij droogte wordt de knol houtig.",
+    "intro": "Snelle kool met een verdikte, ronde stengel boven de grond, mild van smaak en rauw of gekookt te eten. Hij is in 8 tot 12 weken klaar.",
+    "water": "Gelijkmatig water geven; bij droogte wordt de knol houtig.",
     "tips": [
-      "Oogst ze op tennisbalformaat; grote knollen worden draderig.",
-      "Er zijn groene en paarse rassen.",
-      "Het jonge blad kun je als spinazie eten."
+      "Het jonge blad kun je eten als spinazie."
     ]
   },
   "tasks": [
@@ -52,7 +50,7 @@
         "from": "03-01",
         "to": "07-31"
       },
-      "description": "Zaai om de vier weken in potjes of direct in rijen, 1 cm diep."
+      "description": "Zaai elke vier weken een beetje, in potjes of direct in rijen, 1 cm diep."
     },
     {
       "id": "uitplanten",
@@ -62,7 +60,7 @@
         "from": "04-15",
         "to": "08-15"
       },
-      "description": "Plant op 25 cm afstand, niet te diep: de knol vormt zich boven de grond."
+      "description": "Plant op 25 cm afstand en niet dieper dan hij stond: de knol vormt zich boven de grond."
     },
     {
       "id": "oogsten",
@@ -72,7 +70,7 @@
         "from": "05-15",
         "to": "10-31"
       },
-      "description": "Snijd de knol af als hij 6-8 cm doorsnee is."
+      "description": "Snijd de knol af bij 6–8 cm doorsnee (tennisbal); grotere knollen worden draderig."
     }
   ]
 }

@@ -7,8 +7,7 @@
   "tags": [
     "meerjarig",
     "gazon",
-    "woekert",
-    "giftig"
+    "woekert"
   ],
   "nativeStatus": "inheems",
   "appearance": {
@@ -42,11 +41,10 @@
     }
   },
   "info": {
-    "intro": "Een vaste plant met glanzende gele bloemen die zich snel verspreidt met lange uitlopers. Hij doet het goed op natte, zware grond en bloeit volop in het voorjaar.",
-    "water": "Houdt van vochtige grond; geen extra water nodig.",
+    "intro": "Inheemse vaste plant met glanzende gele bloemen die zich snel verspreidt met lange uitlopers. Doet het goed op natte, zware grond.",
+    "water": "Geen extra water nodig; houdt van vochtige grond.",
     "tips": [
-      "Verspreidt zich snel en kan in borders en groentebedden lastig zijn; houd de randen van het gazon in de gaten.",
-      "Vers is hij licht giftig voor vee; gedroogd in hooi niet meer.",
+      "Giftig, ook voor vee; gedroogd in hooi is hij onschadelijk.",
       "Veel boterbloem wijst op natte, verdichte grond."
     ]
   },
@@ -59,7 +57,7 @@
         "from": "08-15",
         "to": "09-30"
       },
-      "description": "Zaai in de nazomer of in april-mei (lukt ook) op kale, losgeharkte plekken in het gras of mee in een bloemrijk gazonmengsel. Strooi het zaad breed uit, druk het aan en houd het een paar weken vochtig. Meestal komt hij vanzelf, zaaien is zelden nodig."
+      "description": "Zelden nodig: meestal komt hij vanzelf. Wil je toch zaaien, strooi dan in de nazomer of in april–mei op kale, losgeharkte plekken, druk aan en houd een paar weken vochtig."
     },
     {
       "id": "maaien",
@@ -71,7 +69,7 @@
         "every": "2weeks"
       },
       "note": "Gazon niet te kort maaien",
-      "description": "Maai het gazon niet te kort, op 5 tot 8 cm, dan blijft deze plant bloeien. Hij bloeit ook laag bij de grond door."
+      "description": "Maai op 5–8 cm, dan blijft hij bloeien; hij bloeit ook laag bij de grond door."
     },
     {
       "id": "uitlopers-verwijderen",
@@ -82,7 +80,7 @@
         "to": "09-30"
       },
       "note": "Uitlopers uit borders trekken",
-      "description": "Trek uitlopers die vanuit het gazon de borders of groentebedden in kruipen eruit, met wortel en al. Een scherpe graskant helpt."
+      "description": "Trek uitlopers die vanuit het gazon de bedden in kruipen eruit, met wortel en al. Een scherpe graskant helpt."
     }
   ]
 }

@@ -40,12 +40,11 @@
     }
   },
   "info": {
-    "intro": "Een sterke vaste plant met smalle, geribde bladeren en korte bruine aartjes op lange stelen. Hij kan tegen betreden en maaien. Het blad wordt al eeuwen gebruikt op insectenbeten.",
-    "water": "Kan goed tegen droogte door zijn diepe wortels.",
+    "intro": "Inheemse vaste plant met smalle, geribde bladeren en bruine aartjes op lange stelen. Hij kan goed tegen betreden en maaien.",
+    "water": "Geen extra water nodig; met zijn diepe wortels kan hij goed tegen droogte.",
     "tips": [
-      "Wrijf een fijngekneusd blad op een muggen- of brandnetelbult: dat verzacht de jeuk.",
-      "Waardplant van onder meer de veldparelmoervlinder.",
-      "Groeit ook op plekken waar veel over het gras wordt gelopen."
+      "Een fijngekneusd blad op een muggen- of brandnetelbult verzacht de jeuk.",
+      "Waardplant van onder meer de veldparelmoervlinder."
     ]
   },
   "tasks": [
@@ -57,7 +56,7 @@
         "from": "08-15",
         "to": "09-30"
       },
-      "description": "Zaai in de nazomer of in april-mei (lukt ook) op kale, losgeharkte plekken in het gras of mee in een bloemrijk gazonmengsel. Strooi het zaad breed uit, druk het aan en houd het een paar weken vochtig."
+      "description": "Zaai op kale, losgeharkte plekken in het gras of mee in een bloemrijk gazonmengsel; april-mei kan ook. Strooi breed uit, druk aan en houd het een paar weken vochtig."
     },
     {
       "id": "maaien",
@@ -69,7 +68,7 @@
         "every": "2weeks"
       },
       "note": "Gazon niet te kort maaien",
-      "description": "Maai het gazon niet te kort, op 5 tot 8 cm, dan blijft deze plant bloeien. Hij is sterk genoeg voor een speel- of looppad."
+      "description": "Maai op 5 tot 8 cm, dan blijft hij bloeien. Hij is sterk genoeg voor een speel- of looppad."
     }
   ]
 }

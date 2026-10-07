@@ -6,8 +6,7 @@
   "category": "vaste-plant",
   "tags": [
     "meerjarig",
-    "schaduwplant",
-    "giftig"
+    "schaduwplant"
   ],
   "nativeStatus": "exoot",
   "appearance": {
@@ -40,12 +39,12 @@
     }
   },
   "info": {
-    "intro": "Een sierlijke vaste plant met gebogen stengels vol hartvormige, roze en witte bloempjes. Hij bloeit in het voorjaar in de halfschaduw en trekt daarna in.",
-    "water": "Houd de grond vochtig; bij droogte trekt hij eerder in.",
+    "intro": "Vaste plant met gebogen stengels vol hartvormige roze-witte bloemen in het voorjaar. Na de bloei sterft het blad af.",
+    "water": "Grond vochtig houden; bij droogte sterft het blad eerder af.",
     "tips": [
-      "Na de bloei sterft het blad af; zet er hosta's of varens naast.",
       "Alle delen zijn giftig.",
-      "Bescherm de jonge scheuten tegen late nachtvorst."
+      "Zet er hosta's of varens naast om het gat na de bloei te vullen.",
+      "Jonge scheuten kunnen bevriezen bij late nachtvorst: dek ze dan af."
     ]
   },
   "tasks": [
@@ -57,7 +56,7 @@
         "from": "03-15",
         "to": "04-30"
       },
-      "description": "Plant op een beschutte plek in de halfschaduw, in humusrijke grond, op zo'n 60 cm afstand."
+      "description": "Plant op een beschutte plek in halfschaduw, in humusrijke grond, 60 cm uit elkaar."
     },
     {
       "id": "terugknippen",
@@ -67,7 +66,7 @@
         "from": "07-01",
         "to": "07-31"
       },
-      "description": "Knip het vergeelde blad na het intrekken af tot boven de grond. Markeer de plek, zodat je er later niet in spit."
+      "description": "Knip het vergeelde blad af tot boven de grond. Markeer de plek, zodat je er later niet in spit."
     }
   ]
 }

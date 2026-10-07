@@ -38,12 +38,11 @@
     }
   },
   "info": {
-    "intro": "Een vaste plant met grote, witte margrieten op stevige stelen. Een van de vrolijkste zomerbloeiers en een goede snijbloem.",
-    "water": "Geef in droge periodes water; hij houdt niet van uitdrogen, maar ook niet van natte voeten in de winter.",
+    "intro": "Vaste plant met grote witte margrieten op stevige stelen, bloeiend in de zomer. Een goede snijbloem.",
+    "water": "Geef water in droge periodes, maar zorg dat de grond in de winter niet nat blijft.",
     "tips": [
-      "Knip uitgebloeide bloemen af, dan bloeit hij tot eind augustus.",
-      "Verdeel hem om de drie jaar: oude planten gaan minder bloeien.",
-      "Bij hoge rassen helpt een steuntje tegen omvallen."
+      "Oude planten gaan minder bloeien; daarom om de drie jaar delen.",
+      "Hoge rassen hebben een steuntje nodig tegen omvallen."
     ]
   },
   "tasks": [
@@ -55,7 +54,7 @@
         "from": "03-15",
         "to": "05-15"
       },
-      "description": "Plant op een zonnige plek op zo'n 45 cm afstand in goed doorlatende grond."
+      "description": "Plant op een zonnige plek in doorlatende grond, op zo'n 45 cm afstand."
     },
     {
       "id": "dode-bloemen-verwijderen",
@@ -67,7 +66,7 @@
         "to": "08-31",
         "every": "2weeks"
       },
-      "description": "Knip uitgebloeide bloemen met steel af. Zo blijft hij doorbloeien."
+      "description": "Knip uitgebloeide bloemen met steel af, dan bloeit hij door tot eind augustus."
     },
     {
       "id": "terugknippen",
@@ -77,7 +76,7 @@
         "from": "10-15",
         "to": "11-30"
       },
-      "description": "Knip de stengels na de bloei af; laat de bladrozet staan."
+      "description": "Knip de stengels af; laat de bladrozet staan."
     },
     {
       "id": "delen",
@@ -87,7 +86,7 @@
         "from": "03-15",
         "to": "04-15"
       },
-      "description": "Verdeel de pol om de drie jaar in het voorjaar."
+      "description": "Steek de pol uit en verdeel hem in stukken met wortels."
     }
   ]
 }

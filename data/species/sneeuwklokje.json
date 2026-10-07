@@ -9,7 +9,7 @@
     "voorjaarsbloeier",
     "schaduwplant"
   ],
-  "nativeStatus": "archeofyt",
+  "nativeStatus": "exoot",
   "appearance": {
     "shape": "bloem",
     "count": 3,
@@ -40,12 +40,11 @@
     }
   },
   "info": {
-    "intro": "Het eerste bloempje van het jaar: witte, hangende klokjes in januari en februari. Sneeuwklokjes verwilderen onder struiken en bomen tot hele tapijten.",
-    "water": "Houd de grond niet te droog; onder struiken is dat meestal vanzelf goed.",
+    "intro": "Witte, hangende klokjes in januari-maart, als eerste bloeier van het jaar. Onder struiken en bomen verwilderen ze tot tapijten.",
+    "water": "Houd de grond niet te droog; onder struiken gaat dat meestal vanzelf.",
     "tips": [
-      "Droge bolletjes slaan slecht aan. Plant ze liefst 'in het groen', net na de bloei.",
-      "Verdeel grote pollen direct na de bloei.",
-      "Laat blad liggen onder struiken: daar houden ze van."
+      "Giftig: bol en blad niet eten, en was je handen na het planten.",
+      "Laat afgevallen blad onder struiken liggen: daarin groeien ze goed."
     ]
   },
   "tasks": [
@@ -58,7 +57,7 @@
         "to": "04-15"
       },
       "note": "Na de bloei, met blad",
-      "description": "Plant sneeuwklokjes bij voorkeur direct na de bloei, met blad en al ('in het groen'), 5-8 cm diep. Dat slaat veel beter aan dan droge bolletjes in de herfst."
+      "description": "Plant met blad en al, 5-8 cm diep. Dat slaat veel beter aan dan droge bolletjes in de herfst."
     },
     {
       "id": "delen",
@@ -79,7 +78,7 @@
         "to": "05-15"
       },
       "note": "Blad laten afsterven",
-      "description": "Laat het blad na de bloei staan tot het geel is en vanzelf afsterft. De bol haalt er energie uit voor volgend jaar. Maai er dus nog niet overheen."
+      "description": "Laat het blad staan tot het vanzelf afsterft; de bol haalt er energie uit voor volgend jaar. Maai er niet eerder overheen."
     }
   ]
 }

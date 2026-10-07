@@ -38,10 +38,10 @@
     }
   },
   "info": {
-    "intro": "Een klein zuringplantje met pijlvormige blaadjes en roodbruine bloeiaartjes. Hij groeit op arme, zure zandgrond en kleurt een droog gazon in de zomer rossig.",
+    "intro": "Klein, inheems zuringplantje met pijlvormige blaadjes en roodbruine bloeiaartjes. Hij groeit op arme, zure zandgrond en kleurt een droog gazon in de zomer rossig.",
     "water": "Heeft geen extra water nodig.",
     "tips": [
-      "Het blad smaakt fris zuur en is in kleine hoeveelheden eetbaar.",
+      "Het blad smaakt zuur en is in kleine hoeveelheden eetbaar; veel eten is ongezond door het oxaalzuur.",
       "Waardplant van de kleine vuurvlinder.",
       "Veel schapenzuring wijst op arme, zure grond."
     ]
@@ -55,7 +55,7 @@
         "from": "08-15",
         "to": "09-30"
       },
-      "description": "Zaai in de nazomer of in april-mei (lukt ook) op kale, losgeharkte plekken in het gras of mee in een bloemrijk gazonmengsel. Strooi het zaad breed uit, druk het aan en houd het een paar weken vochtig. Kies een droge, zandige plek."
+      "description": "Zaai op kale, losgeharkte plekken in een droog, zandig gazon of mee in een bloemrijk gazonmengsel; april-mei kan ook. Strooi breed uit, druk aan en houd het een paar weken vochtig."
     },
     {
       "id": "maaien",
@@ -67,7 +67,7 @@
         "every": "2weeks"
       },
       "note": "Gazon niet te kort maaien",
-      "description": "Maai het gazon niet te kort, op 5 tot 8 cm, dan blijft deze plant bloeien. Hij verspreidt zich met wortelstokken en blijft ook na het maaien."
+      "description": "Maai op 5 tot 8 cm, dan blijft hij bloeien. Hij verspreidt zich met wortelstokken."
     }
   ]
 }

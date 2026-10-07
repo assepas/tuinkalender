@@ -37,11 +37,11 @@
     }
   },
   "info": {
-    "intro": "Een laag plantje van droge, zandige grond met varenachtig blad en kleine roze bloemen. De zaden hebben een lange 'snavel' die zich bij droogte opkrult en het zaad de grond in schroeft.",
-    "water": "Houdt van droog. Geen extra water nodig.",
+    "intro": "Laag plantje van droge zandgrond met varenachtig blad en kleine roze bloemen. De zaden hebben een lange 'snavel' die zich bij droogte opkrult en het zaad de grond in schroeft.",
+    "water": "Geen extra water nodig; hij houdt van droog.",
     "tips": [
       "Doet het vooral goed in een dun, schraal gazon op zandgrond.",
-      "Is een- of tweejarig, maar zaait zich makkelijk opnieuw uit.",
+      "Een- of tweejarig, maar zaait zich makkelijk opnieuw uit.",
       "Bemest het gazon niet: op rijke grond verdwijnt hij onder het gras."
     ]
   },
@@ -54,7 +54,7 @@
         "from": "08-15",
         "to": "09-30"
       },
-      "description": "Zaai in de nazomer of in april-mei (lukt ook) op kale, losgeharkte plekken in het gras of mee in een bloemrijk gazonmengsel. Strooi het zaad breed uit, druk het aan en houd het een paar weken vochtig. Kies een droge, zonnige plek met schrale grond."
+      "description": "Strooi het zaad op kale, losgeharkte plekken in het gras of zaai het mee met een bloemrijk gazonmengsel. Druk aan en houd een paar weken vochtig; april-mei kan ook. Kies een droge, zonnige plek met schrale grond."
     },
     {
       "id": "maaien",
@@ -66,7 +66,7 @@
         "every": "2weeks"
       },
       "note": "Gazon niet te kort maaien",
-      "description": "Maai het gazon niet te kort, op 5 tot 8 cm, dan blijft deze plant bloeien. Laat af en toe een plekje langer staan zodat hij zaad kan zetten."
+      "description": "Maai op 5 tot 8 cm hoogte, dan blijft hij bloeien. Laat af en toe een plekje langer staan, zodat hij zaad zet."
     }
   ]
 }

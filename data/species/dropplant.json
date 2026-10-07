@@ -40,12 +40,11 @@
     }
   },
   "info": {
-    "intro": "Een vaste plant met paarse bloemaren en blad dat naar drop en anijs ruikt. Het is een van de beste bijenplanten; er zit bijna altijd iets op. Van het blad zet je thee.",
-    "water": "Geef het eerste jaar water in droge periodes. Daarna kan hij goed tegen droogte.",
+    "intro": "Vaste plant met paarse bloemaren en blad dat naar anijs en drop ruikt. Een sterke bijenplant; van blad en bloemen zet je thee.",
+    "water": "Het eerste jaar water geven bij droogte; daarna kan hij goed tegen droogte.",
     "tips": [
       "Leeft maar een paar jaar, maar zaait zich uit.",
-      "Natte grond in de winter vindt hij niet fijn.",
-      "Blad en bloemen zijn eetbaar: lekker in thee, salade of in een fruitsalade."
+      "Natte grond in de winter laat hem wegrotten: zet hem in goed doorlatende grond."
     ]
   },
   "tasks": [
@@ -58,7 +57,7 @@
         "from": "03-01",
         "to": "04-15"
       },
-      "description": "Zaai binnen in een tray, alleen aandrukken: het zaad kiemt in het licht. Verspeen de plantjes naar eigen potjes."
+      "description": "Zaai in een tray en druk het zaad alleen aan: het kiemt in het licht. Verspeen de plantjes daarna naar eigen potjes."
     },
     {
       "id": "planten",
@@ -68,7 +67,7 @@
         "from": "04-15",
         "to": "05-31"
       },
-      "description": "Plant op een zonnige plek in goed doorlatende grond, op zo'n 40 cm afstand."
+      "description": "Plant op een zonnige plek in goed doorlatende grond, 40 cm uit elkaar."
     },
     {
       "id": "oogsten",
@@ -78,7 +77,7 @@
         "from": "06-01",
         "to": "09-15"
       },
-      "description": "Pluk blad en bloemen voor thee, vers of gedroogd."
+      "description": "Pluk blad en bloemen om vers of gedroogd te gebruiken, in thee of salade."
     },
     {
       "id": "terugknippen",

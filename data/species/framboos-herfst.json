@@ -41,12 +41,11 @@
     }
   },
   "info": {
-    "intro": "Een framboos die vrucht draagt op de ranken van hetzelfde jaar, van eind augustus tot de vorst. Hij is makkelijker dan de zomerframboos, want je knipt in de winter gewoon alles af.",
-    "water": "Frambozen hebben ondiepe wortels en drogen snel uit. Geef tijdens het rijpen in droge periodes twee keer per week water en houd de grond bedekt met mulch.",
+    "intro": "Framboos die vrucht draagt op de ranken van hetzelfde jaar, van eind augustus tot de vorst. Makkelijker dan de zomerframboos: in de winter knip je alles af.",
+    "water": "Ondiepe wortels drogen snel uit: geef tijdens het rijpen bij droogte twee keer per week water en houd de grond bedekt.",
     "tips": [
-      "Houd de grond onder de planten bedekt met compost of houtsnippers; frambozen houden van humusrijke grond.",
       "Zet ze niet op natte, zware grond: de wortels rotten dan.",
-      "Een paar draden langs de rij voorkomt dat de ranken omvallen onder het gewicht van de vruchten."
+      "Span een paar draden langs de rij, zodat de ranken niet omvallen onder de vruchten."
     ]
   },
   "tasks": [
@@ -60,7 +59,7 @@
         "to": "02-28"
       },
       "note": "Alle ranken tot de grond",
-      "description": "Knip in februari alle ranken vlak bij de grond af. In het voorjaar komen er nieuwe ranken die in de herfst vrucht dragen. Zo heb je geen gedoe met oude en jonge ranken uit elkaar houden."
+      "description": "Knip alle ranken vlak bij de grond af. In het voorjaar komen nieuwe ranken die in de herfst vrucht dragen."
     },
     {
       "id": "bemesten",
@@ -70,7 +69,7 @@
         "from": "03-01",
         "to": "03-31"
       },
-      "description": "Strooi in maart een laag compost of gedroogde koemest over de rij. Frambozen houden van humusrijke grond, dus ook een laag blad of houtsnippers helpt."
+      "description": "Strooi een laag compost of gedroogde koemest over de rij, met blad of houtsnippers erop tegen uitdrogen."
     },
     {
       "id": "oogsten",
@@ -80,7 +79,7 @@
         "from": "08-15",
         "to": "10-15"
       },
-      "description": "Pluk de frambozen als ze helemaal rood zijn en zonder trekken van het kegeltje loslaten. Pluk om de twee dagen; overrijpe vruchten trekken fruitvliegjes aan."
+      "description": "Pluk als de frambozen helemaal rood zijn en zonder trekken loslaten. Pluk om de twee dagen; overrijpe vruchten trekken fruitvliegjes aan."
     },
     {
       "id": "delen",
@@ -90,7 +89,7 @@
         "from": "10-15",
         "to": "11-15"
       },
-      "description": "Frambozen maken wortelopslag, nieuwe scheuten buiten de rij. Steek die in het najaar met een stuk wortel uit en plant ze op een nieuwe plek, of haal ze weg als de rij te breed wordt."
+      "description": "Steek wortelopslag (nieuwe scheuten buiten de rij) met een stuk wortel uit en plant die elders, of haal ze weg als de rij te breed wordt."
     }
   ]
 }

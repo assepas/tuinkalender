@@ -35,12 +35,11 @@
     }
   },
   "info": {
-    "intro": "Een van de snelste groenten: na vier à vijf weken maai je al een bosje malse stelen voor stamppot. Ideaal als eerste groente in het voorjaar.",
-    "water": "Houd de grond vochtig; dan blijven de stelen mals.",
+    "intro": "Een van de snelste groenten: na vier à vijf weken snijd je een bosje malse stelen voor stamppot. Goed als eerste groente in het voorjaar.",
+    "water": "Houd de grond vochtig, maar niet nat; dan blijven de stelen mals.",
     "tips": [
-      "Zaai dicht op elkaar: je oogst als een 'gazonnetje'.",
-      "Na het maaien loopt hij vaak nog één keer uit.",
-      "Aardvlooien? Houd de grond vochtig en leg gaas over het bed."
+      "Na het snijden loopt hij vaak nog één keer uit.",
+      "Gaatjes in het blad komen van aardvlooien: houd de grond vochtig en leg gaas over het bed."
     ]
   },
   "tasks": [
@@ -52,7 +51,7 @@
         "from": "03-01",
         "to": "09-15"
       },
-      "description": "Zaai breedwerpig of in dichte rijen, 1 cm diep. Zaai om de drie à vier weken opnieuw."
+      "description": "Zaai dicht, breedwerpig of in rijen, 1 cm diep. Zaai om de drie à vier weken opnieuw."
     },
     {
       "id": "oogsten",
@@ -62,7 +61,7 @@
         "from": "04-01",
         "to": "10-31"
       },
-      "description": "Snijd de raapstelen af als ze 15-20 cm hoog zijn, een paar centimeter boven de grond."
+      "description": "Snijd ze af als ze 15–20 cm hoog zijn, een paar centimeter boven de grond."
     }
   ]
 }

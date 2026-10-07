@@ -39,12 +39,11 @@
     }
   },
   "info": {
-    "intro": "Een distelachtige eenjarige met geeloranje bloemkwasten. Vroeger werd hij gekweekt als verfplant en voor olie; de gedroogde bloemblaadjes heten ook wel 'valse saffraan'.",
-    "water": "Houdt van droog en warm. Alleen water geven na het zaaien.",
+    "intro": "Distelachtige eenjarige met oranje of gele bloemhoofdjes, vroeger geteeld voor verfstof en olie. De gedroogde bloemblaadjes heten 'valse saffraan'.",
+    "water": "Alleen water geven tot het zaad is opgekomen; daarna redt hij zich op droge grond.",
     "tips": [
-      "Mooi als snij- en droogbloem; pluk hem net als de bloemen opengaan.",
-      "Heeft stekelige blaadjes; draag handschoenen of kies een ras zonder stekels.",
-      "Natte zomers vindt hij niet fijn."
+      "Het blad is stekelig: draag handschoenen of kies een ras zonder stekels.",
+      "Op natte grond en in natte zomers groeit hij slecht."
     ]
   },
   "tasks": [
@@ -56,7 +55,7 @@
         "from": "04-15",
         "to": "05-31"
       },
-      "description": "Zaai direct buiten op een zonnige plek, zo'n 1 cm diep. Dun uit tot 30 cm. Voorzaaien in potjes kan ook, maar hij houdt niet van verplanten."
+      "description": "Zaai direct buiten, 1 cm diep, en dun uit tot 30 cm. Voorzaaien in potjes kan, maar hij verplant slecht."
     },
     {
       "id": "oogsten",
@@ -66,7 +65,7 @@
         "from": "08-01",
         "to": "09-15"
       },
-      "description": "Pluk de bloemen voor de vaas of droogboeketten. Voor 'valse saffraan' trek je de oranje blaadjes uit volgroeide bloemen en laat je ze drogen."
+      "description": "Pluk voor de vaas of om te drogen net als de bloemen opengaan. Voor 'valse saffraan' trek je de oranje blaadjes uit volgroeide bloemen en laat je ze drogen."
     }
   ]
 }

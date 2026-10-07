@@ -40,12 +40,11 @@
     }
   },
   "info": {
-    "intro": "Een elegante inheemse vaste plant met fijn ingesneden blad en zachtroze of witte, schaalvormige bloemen. Hij bloeit lang en past goed in een natuurlijke border.",
-    "water": "Kan goed tegen droogte. Alleen water geven na het planten.",
+    "intro": "Inheemse vaste plant met fijn ingesneden blad en zachtroze of witte, schaalvormige bloemen die lang bloeien. Past in een natuurlijke border.",
+    "water": "Kan goed tegen droogte; alleen water geven na het planten.",
     "tips": [
-      "Zaait zich uit; trek te veel zaailingen gewoon weg.",
-      "De witte vorm ('Alba') is net zo sterk.",
-      "Leeft niet heel lang, maar vervangt zichzelf via zaad."
+      "Leeft niet lang, maar zaait zich uit: laat een paar zaailingen staan en trek de rest weg.",
+      "De witte vorm ('Alba') is even sterk."
     ]
   },
   "tasks": [
@@ -57,7 +56,7 @@
         "from": "03-15",
         "to": "05-15"
       },
-      "description": "Plant op zo'n 40 cm afstand op een zonnige plek. Zaaien in april kan ook."
+      "description": "Plant 40 cm uit elkaar op een zonnige plek. Zaaien in april kan ook."
     },
     {
       "id": "terugknippen-na-bloei",
@@ -68,7 +67,7 @@
         "from": "08-01",
         "to": "08-31"
       },
-      "description": "Knip na de eerste bloei een derde terug voor een frisse nabloei."
+      "description": "Knip na de eerste bloei een derde terug; dan bloeit hij opnieuw."
     },
     {
       "id": "terugknippen",
@@ -78,7 +77,7 @@
         "from": "03-01",
         "to": "03-31"
       },
-      "description": "Knip de oude stengels in het voorjaar af."
+      "description": "Knip de oude, dode stengels af tot vlak boven de nieuwe scheuten."
     }
   ]
 }

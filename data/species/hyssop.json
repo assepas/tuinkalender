@@ -40,12 +40,11 @@
     }
   },
   "info": {
-    "intro": "Een kleine, geurige halfstruik met smalle blaadjes en blauwpaarse bloemaren. Het blad heeft een kruidige, licht bittere smaak. Bijen en vlinders zijn er gek op.",
-    "water": "Houdt van droog. Alleen water geven na het planten en bij extreme droogte.",
+    "intro": "Kleine, geurige halfstruik met smal blad en blauwpaarse bloemaren, een goede bijen- en vlinderplant. Het blad is kruidig en licht bitter.",
+    "water": "Alleen water geven na het planten en bij lange droogte; natte grond verdraagt hij slecht.",
     "tips": [
-      "Geschikt als laag haagje langs een kruidentuin, net als lavendel.",
-      "Gebruik het blad spaarzaam in soepen, stoofpot of bij vet vlees.",
-      "Niet snoeien in het kale, oude hout."
+      "Snoei niet in het kale, oude hout: daar loopt hij slecht uit.",
+      "Gebruik het blad spaarzaam; de smaak is sterk."
     ]
   },
   "tasks": [
@@ -57,7 +56,7 @@
         "from": "04-01",
         "to": "05-31"
       },
-      "description": "Plant op een zonnige plek in goed doorlatende grond, op zo'n 40 cm afstand. Meng bij zware grond wat zand of grind in het plantgat."
+      "description": "Plant in goed doorlatende grond, op 40 cm afstand. Meng bij zware grond wat zand of grind in het plantgat."
     },
     {
       "id": "snoeien",
@@ -67,7 +66,7 @@
         "from": "03-15",
         "to": "04-15"
       },
-      "description": "Knip de plant in het voorjaar terug tot net boven het oude hout, zodat hij compact blijft en van onderen vol groeit."
+      "description": "Knip terug tot net boven het oude hout, zodat hij compact blijft en van onderen vol groeit."
     },
     {
       "id": "oogsten",
@@ -77,7 +76,7 @@
         "from": "06-01",
         "to": "09-15"
       },
-      "description": "Pluk jonge scheuttoppen en blaadjes. Voor drogen oogst je vlak voor de bloei."
+      "description": "Pluk jonge scheuttoppen en blaadjes. Om te drogen oogst je vlak voor de bloei."
     }
   ]
 }

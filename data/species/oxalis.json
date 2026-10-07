@@ -37,11 +37,11 @@
     }
   },
   "info": {
-    "intro": "Klaverzuring is een laag plantje met klaverachtig blad in groen of paars, en kleine roze, witte of gele bloempjes. De bladeren vouwen 's avonds en bij regen dicht.",
-    "water": "Houd de grond licht vochtig tijdens de groei, maar niet nat, anders rotten de knolletjes.",
+    "intro": "Klaverzuring is een laag plantje met klaverachtig groen of paars blad en kleine roze, witte of gele bloempjes. Het blad vouwt 's avonds en bij regen dicht.",
+    "water": "Licht vochtig houden tijdens de groei, nooit nat: dan rotten de knolletjes.",
     "tips": [
-      "Sommige soorten verspreiden zich snel via knolletjes en zaad; houd hem in een pot als je dat niet wilt.",
-      "Paarsbladige soorten zijn vaak niet winterhard en overwinteren beter binnen.",
+      "Sommige soorten verspreiden zich snel via knolletjes en zaad; houd ze dan in een pot.",
+      "Paarsbladige soorten zijn niet winterhard: overwinter ze vorstvrij binnen.",
       "Na de bloei kan het blad afsterven; de knolletjes rusten dan en lopen later weer uit."
     ]
   },
@@ -54,7 +54,7 @@
         "from": "03-15",
         "to": "05-01"
       },
-      "description": "Plant de knolletjes 3 tot 5 cm diep op zo'n 10 tot 15 cm afstand, met de punt naar boven. In een pot kun je ze dichter bij elkaar zetten voor een vol effect."
+      "description": "Plant de knolletjes 3–5 cm diep, 10–15 cm uit elkaar, met de punt omhoog. In een pot mag het dichter."
     },
     {
       "id": "delen",
@@ -64,7 +64,7 @@
         "from": "09-15",
         "to": "10-15"
       },
-      "description": "Graaf de pol in het najaar op en haal de knolletjes uit elkaar. Plant ze meteen terug of bewaar ze droog en vorstvrij tot het voorjaar."
+      "description": "Graaf de pol op en haal de knolletjes uit elkaar. Plant ze meteen terug of bewaar ze droog en vorstvrij tot het voorjaar."
     },
     {
       "id": "onderhoud",
@@ -76,7 +76,7 @@
         "every": "month"
       },
       "note": "Uitlopers begrenzen",
-      "description": "Trek plantjes weg die buiten hun plek opkomen, liefst met knolletjes en al. Doe dat voordat ze zaad zetten, anders verspreiden ze zich nog verder."
+      "description": "Trek plantjes buiten hun plek eruit, met knolletjes en al, voordat ze zaad zetten."
     }
   ]
 }

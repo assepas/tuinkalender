@@ -32,12 +32,11 @@
     }
   },
   "info": {
-    "intro": "Stevige, vaste koolen die lang goed blijven. Vroege rassen oogst je in de zomer, late (bewaar)koolen in de herfst om maandenlang te bewaren.",
-    "water": "Geef regelmatig water; na droogte kan een kool barsten als het ineens veel regent.",
+    "intro": "Kool met een vaste, harde krop. Vroege rassen oogst je in de zomer, late bewaarkool in de herfst.",
+    "water": "Geef regelmatig water; na droogte gevolgd door veel regen kan de kool barsten.",
     "tips": [
       "Kies een vroeg én een laat ras voor een lange oogst.",
-      "Druk de grond goed aan rond de stengel.",
-      "Bewaarkool houdt het maanden in een koele schuur."
+      "Bewaarkool houdt het maanden in een koele, vorstvrije schuur."
     ]
   },
   "tasks": [
@@ -60,7 +59,7 @@
         "from": "04-15",
         "to": "06-30"
       },
-      "description": "Plant op 60 cm afstand, stevig aangedrukt. Zet direct na het planten insectengaas over de kool tegen koolvlieg, koolwitje en duiven."
+      "description": "Plant op 60 cm afstand en druk de grond goed aan. Zet er direct insectengaas over tegen koolvlieg, koolwitje en duiven."
     },
     {
       "id": "oogsten",

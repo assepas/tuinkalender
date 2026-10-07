@@ -39,11 +39,11 @@
     }
   },
   "info": {
-    "intro": "Een laag, kruipend plantje met klaverblaadjes en kleine gele bolletjes. De zaadjes worden zwart en lijken op kleine hopbelletjes. Hij bindt stikstof uit de lucht en maakt de grond rijker.",
-    "water": "Heeft geen extra water nodig.",
+    "intro": "Laag, kruipend plantje met klaverblaadjes en kleine gele bolletjes; de zaadjes worden zwart. Bindt stikstof uit de lucht en maakt de grond zo rijker.",
+    "water": "Geen extra water nodig.",
     "tips": [
-      "Hopklaver is een- of tweejarig en zaait zich zelf weer uit.",
-      "Wordt vaak verward met kleine klaver; hopklaver heeft een piepklein puntje aan het blaadje.",
+      "Een- of tweejarig, maar zaait zich zelf weer uit.",
+      "Lijkt op kleine klaver; hopklaver heeft een piepklein puntje aan het blaadje.",
       "Doet het goed op kalkrijke grond."
     ]
   },
@@ -56,7 +56,7 @@
         "from": "08-15",
         "to": "09-30"
       },
-      "description": "Zaai in de nazomer of in april-mei (lukt ook) op kale, losgeharkte plekken in het gras of mee in een bloemrijk gazonmengsel. Strooi het zaad breed uit, druk het aan en houd het een paar weken vochtig."
+      "description": "Strooi het zaad op kale, losgeharkte plekken in het gras of zaai het mee met een bloemrijk gazonmengsel. Druk aan en houd een paar weken vochtig; april-mei kan ook."
     },
     {
       "id": "maaien",
@@ -68,7 +68,7 @@
         "every": "2weeks"
       },
       "note": "Gazon niet te kort maaien",
-      "description": "Maai het gazon niet te kort, op 5 tot 8 cm, dan blijft deze plant bloeien. Hij blijft laag en bloeit tussen het maaien door."
+      "description": "Maai op 5 tot 8 cm hoogte, dan blijft hij bloeien. Hij blijft laag en bloeit tussen het maaien door."
     }
   ]
 }

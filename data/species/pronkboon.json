@@ -39,12 +39,12 @@
     }
   },
   "info": {
-    "intro": "Een klimmende boon met prachtige rode bloemen en lange, platte peulen. Hij groeit in een paar weken tot boven de 2 meter en is ook mooi in de siertuin.",
-    "water": "Geef regelmatig flink water, zeker tijdens de bloei; anders vallen de bloemen af.",
+    "intro": "Klimmende boon met rode bloemen en lange, platte peulen. Hij groeit in een paar weken tot boven de 2 meter.",
+    "water": "Geef regelmatig flink water, zeker vanaf de bloei; bij droogte vallen de bloemen af.",
     "tips": [
+      "Rauwe bonen en peulen zijn giftig (fasine): eet ze altijd goed gekookt.",
       "Zet stevige stokken of een tipi van 2,5 meter neer.",
-      "Pluk de peulen jong, voor de bonen dik worden.",
-      "Hommels komen graag op de rode bloemen af; zo krijg je meer peulen."
+      "Pluk de peulen jong, voordat de bonen erin dik worden; dan blijft de plant doorgaan."
     ]
   },
   "tasks": [
@@ -58,7 +58,7 @@
         "toWeeks": 4
       },
       "note": "Na de laatste nachtvorst",
-      "description": "Zaai na de laatste nachtvorst 4 cm diep bij elke stok, twee bonen per stok."
+      "description": "Zaai twee bonen bij elke stok, 4–5 cm diep, als de grond warm is (minstens 12 °C)."
     },
     {
       "id": "oogsten",
@@ -69,7 +69,7 @@
         "to": "10-01",
         "every": "week"
       },
-      "description": "Pluk de peulen twee keer per week als ze 15-20 cm lang zijn."
+      "description": "Pluk twee keer per week, als de peulen 20–25 cm lang zijn."
     }
   ]
 }

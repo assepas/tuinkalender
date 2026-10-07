@@ -36,12 +36,11 @@
     }
   },
   "info": {
-    "intro": "Een oude, winterharde boon die je al vroeg in het voorjaar zaait. De geurende bloemen trekken hommels aan en de jonge bonen zijn heerlijk.",
-    "water": "Geef water in droge periodes, vooral bij de bloei.",
+    "intro": "Winterharde boon die je al vroeg in het voorjaar zaait. De geurende bloemen trekken hommels, de jonge bonen eet je gekookt.",
+    "water": "Geef water in droge periodes, vooral tijdens de bloei.",
     "tips": [
-      "Knip de toppen eruit zodra de onderste peulen groeien: dat helpt tegen zwarte luis.",
-      "Zet een touw langs de rij om omvallen te voorkomen.",
-      "Laat de wortels in de grond: die maken de grond rijker."
+      "Zet palen met touw langs de rij, anders vallen de planten om.",
+      "Laat de wortels na de oogst in de grond: ze maken de grond rijker aan stikstof."
     ]
   },
   "tasks": [
@@ -53,7 +52,7 @@
         "from": "02-15",
         "to": "04-15"
       },
-      "description": "Zaai 5 cm diep, 15 cm uit elkaar, in een dubbele rij."
+      "description": "Zaai 5 cm diep, 15 cm uit elkaar, in een dubbele rij (rijen 25 cm uit elkaar)."
     },
     {
       "id": "toppen",
@@ -74,7 +73,7 @@
         "from": "06-15",
         "to": "07-31"
       },
-      "description": "Pluk de peulen als de bonen erin voelbaar zijn maar nog jong en groen."
+      "description": "Pluk de peulen als de bonen voelbaar zijn maar nog klein; kleine bonen zijn malser."
     }
   ]
 }

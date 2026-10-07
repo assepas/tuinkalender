@@ -40,12 +40,11 @@
     }
   },
   "info": {
-    "intro": "Een vaste plant met een rozet van smalle, diep ingesneden blaadjes en gele bloemen op vertakte stelen. Hij bloeit juist laat in het jaar, als er weinig anders bloeit in het gazon.",
-    "water": "Heeft geen extra water nodig.",
+    "intro": "Inheemse vaste plant met een rozet van smalle, getande blaadjes en gele bloemen op vertakte stelen. Hij bloeit laat in het jaar in het gazon en is dan een nectarbron voor bijen en vlinders.",
+    "water": "Extra water is niet nodig.",
     "tips": [
-      "Een belangrijke nectarbron voor bijen in de nazomer en herfst.",
-      "Herken hem aan de vertakte bloemstengel met kleine schubjes.",
-      "Kan goed tegen maaien en betreden."
+      "Kan goed tegen maaien en betreden.",
+      "Herken hem aan de vertakte, kale bloemstengel met kleine schubjes onder het bloemhoofdje."
     ]
   },
   "tasks": [
@@ -57,7 +56,7 @@
         "from": "08-15",
         "to": "09-30"
       },
-      "description": "Zaai in de nazomer of in april-mei (lukt ook) op kale, losgeharkte plekken in het gras of mee in een bloemrijk gazonmengsel. Strooi het zaad breed uit, druk het aan en houd het een paar weken vochtig."
+      "description": "Strooi het zaad op kale, losgeharkte plekken in het gras of mee in een bloemrijk gazonmengsel; zaaien in april–mei kan ook. Druk aan en houd een paar weken vochtig."
     },
     {
       "id": "maaien",
@@ -69,7 +68,7 @@
         "every": "2weeks"
       },
       "note": "Gazon niet te kort maaien",
-      "description": "Maai het gazon niet te kort, op 5 tot 8 cm, dan blijft deze plant bloeien. Maai in augustus-september wat minder vaak, dan bloeit hij volop."
+      "description": "Maai op 5–8 cm hoogte. Maai in augustus–september minder vaak, dan bloeit hij volop."
     }
   ]
 }

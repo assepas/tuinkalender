@@ -37,12 +37,12 @@
     }
   },
   "info": {
-    "intro": "Een struikje met blad dat heerlijk naar citroen ruikt; lekker als thee of in desserts. Hij is niet winterhard en staat daarom het best in een grote pot die je binnen kunt zetten.",
-    "water": "Geef in de zomer regelmatig water, zodat de potgrond licht vochtig blijft. In de winter binnen maar heel weinig: net genoeg om de kluit niet helemaal te laten uitdrogen.",
+    "intro": "Struikje met blad dat sterk naar citroen ruikt, voor thee of desserts. Niet winterhard, dus het best in een grote pot die je binnen kunt zetten.",
+    "water": "Geef 's zomers regelmatig water, zodat de potgrond licht vochtig blijft; 's winters net genoeg om de kluit niet te laten uitdrogen.",
     "tips": [
-      "Gebruik potgrond met wat zand of grit erdoor; hij houdt niet van natte voeten.",
-      "In het voorjaar lijkt de plant soms dood; wacht rustig af, hij loopt vaak pas in mei weer uit.",
-      "Knip in het voorjaar kale takken een derde terug, dan wordt hij voller."
+      "Gebruik potgrond met wat zand of grit erdoor; natte voeten verdraagt hij slecht.",
+      "In het voorjaar lijkt hij soms dood: wacht af, vaak loopt hij pas in mei weer uit.",
+      "Knip kale takken in het voorjaar een derde terug, dan wordt hij voller."
     ]
   },
   "tasks": [
@@ -56,7 +56,7 @@
         "toWeeks": 2
       },
       "note": "Pas na de laatste nachtvorst",
-      "description": "Zet de plant na de ijsheiligen buiten op een zonnige, beschutte plek. Verpot hem zo nodig in een grotere pot met goed doorlatende grond. Wen hem eerst een paar dagen aan de buitenlucht."
+      "description": "Laat hem eerst een paar dagen wennen aan de buitenlucht en zet hem dan op een zonnige, beschutte plek. Verpot zo nodig in een grotere pot met goed doorlatende grond."
     },
     {
       "id": "oogsten",
@@ -66,7 +66,7 @@
         "from": "06-01",
         "to": "09-30"
       },
-      "description": "Pluk steeds de jonge toppen en bladeren; zo blijft de plant compact. Blad dat je niet direct gebruikt kun je in een bosje laten drogen voor thee in de winter."
+      "description": "Pluk steeds de jonge toppen en bladeren; zo blijft de plant compact. Blad dat je over hebt, kun je in bosjes drogen voor thee."
     },
     {
       "id": "winterhard",
@@ -77,7 +77,7 @@
         "to": "10-31"
       },
       "note": "Vorstvrij binnenzetten",
-      "description": "Zet de pot binnen voordat het gaat vriezen, op een koele en lichte plek (5 tot 10 °C), zoals een onverwarmde serre of garage met raam. Het blad valt dan vaak af; dat is normaal. Geef in de winter heel weinig water."
+      "description": "Zet de pot vóór de eerste vorst op een koele, lichte plek (5-10 °C), zoals een onverwarmde serre of garage met raam. Bladval is normaal; geef heel weinig water."
     }
   ]
 }

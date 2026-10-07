@@ -40,12 +40,11 @@
     }
   },
   "info": {
-    "intro": "De bekende rode akkerbloem met papierdunne bloemblaadjes. Elke bloem bloeit maar een dag, maar er komen er steeds nieuwe. Bijen halen er veel stuifmeel.",
-    "water": "Heeft weinig water nodig. Alleen de zaaibedden vochtig houden tot de plantjes op zijn.",
+    "intro": "Rode akkerbloem met papierdunne bloemblaadjes. Elke bloem bloeit één dag, maar er komen steeds nieuwe; goede stuifmeelbron voor bijen.",
+    "water": "Houd alleen het zaaibed vochtig tot de plantjes op zijn.",
     "tips": [
-      "Het zaad kiemt alleen op open, omgewerkte grond; in een gesloten grasmat verdwijnt hij.",
-      "Niet verplanten: zaai direct op de plek.",
-      "Zaad blijft jaren kiemkrachtig in de grond."
+      "Kiemt alleen op open, omgewerkte grond; in een gesloten grasmat verdwijnt hij.",
+      "Verdraagt verplanten slecht: zaai direct op de plek."
     ]
   },
   "tasks": [
@@ -58,7 +57,7 @@
         "to": "10-15"
       },
       "note": "Of in maart-april",
-      "description": "Meng het zeer fijne zaad met wat zand en strooi het uit op kale grond. Niet bedekken, alleen aandrukken. Zaaien in het najaar of heel vroeg in het voorjaar geeft de beste bloei."
+      "description": "Meng het zeer fijne zaad met wat zand en strooi het op kale grond. Niet bedekken, alleen aandrukken. Najaarszaai geeft de beste bloei."
     },
     {
       "id": "zaaien-voorjaar",
@@ -68,7 +67,7 @@
         "from": "03-01",
         "to": "04-15"
       },
-      "description": "Zaaien in het voorjaar kan ook, liefst zo vroeg mogelijk. De planten bloeien dan wat later."
+      "description": "Zaai zo vroeg mogelijk; de planten bloeien dan wat later."
     },
     {
       "id": "zaad-laten-rijpen",
@@ -79,7 +78,7 @@
         "to": "08-31"
       },
       "note": "Zaad laten rijpen en uitstrooien",
-      "description": "Laat een paar zaaddozen staan tot ze droog zijn en schud het zaad uit waar je volgend jaar klaprozen wilt. Werk daarna de grond los zodat het zaad kan kiemen."
+      "description": "Laat een paar zaaddozen droog worden en schud het zaad uit waar je volgend jaar klaprozen wilt. Werk de grond daarna los. Zaad blijft jaren kiemkrachtig."
     }
   ]
 }

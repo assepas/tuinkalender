@@ -39,12 +39,11 @@
     }
   },
   "info": {
-    "intro": "Een vaste plant met een platte rozet van ruwe, gelobde blaadjes en gele bloemen op lange, kale stelen. Hij lijkt op een paardenbloem en is populair bij bijen en zweefvliegen.",
-    "water": "Kan goed tegen droogte dankzij zijn diepe penwortel.",
+    "intro": "Vaste plant met een platte rozet van ruwe, gelobde blaadjes en gele bloemen op lange, kale stelen. Lijkt op een paardenbloem en trekt bijen en zweefvliegen.",
+    "water": "Geen extra water nodig; de diepe penwortel kan tegen droogte.",
     "tips": [
-      "De bladrozet ligt plat en overleeft maaien zonder moeite.",
-      "Groeit het best op schrale, zandige grond.",
-      "Bloeistelen die na het maaien terugkomen, bloeien vaak binnen een week."
+      "De platte bladrozet overleeft maaien zonder moeite.",
+      "Groeit het best op schrale, zandige grond."
     ]
   },
   "tasks": [
@@ -56,7 +55,7 @@
         "from": "08-15",
         "to": "09-30"
       },
-      "description": "Zaai in de nazomer of in april-mei (lukt ook) op kale, losgeharkte plekken in het gras of mee in een bloemrijk gazonmengsel. Strooi het zaad breed uit, druk het aan en houd het een paar weken vochtig."
+      "description": "Strooi het zaad op kale, losgeharkte plekken in het gras of zaai het mee met een bloemrijk gazonmengsel. Druk aan en houd een paar weken vochtig; april-mei kan ook."
     },
     {
       "id": "maaien",
@@ -68,7 +67,7 @@
         "every": "2weeks"
       },
       "note": "Gazon niet te kort maaien",
-      "description": "Maai het gazon niet te kort, op 5 tot 8 cm, dan blijft deze plant bloeien. De bloemstelen komen na het maaien snel terug."
+      "description": "Maai op 5 tot 8 cm hoogte, dan blijft hij bloeien. De bloemstelen komen na het maaien binnen ongeveer een week terug."
     }
   ]
 }

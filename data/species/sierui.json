@@ -39,12 +39,11 @@
     }
   },
   "info": {
-    "intro": "Een bolgewas met perfecte, purperen bollen van sterretjes op lange stelen. Hij bloeit tussen de tulpen en de zomerbloeiers in en is geliefd bij bijen.",
-    "water": "Weinig water nodig; natte grond in de winter vindt hij niet fijn.",
+    "intro": "Bolgewas met bollen van purperen sterretjes op lange stelen, in mei-juni tussen tulpen en zomerbloeiers in. Bijen bezoeken hem graag.",
+    "water": "Weinig water nodig; natte grond in de winter laat de bollen rotten.",
     "tips": [
-      "Het blad wordt al bij de bloei geel; zet er planten voor die dat verbergen.",
-      "De uitgebloeide bollen blijven lang mooi staan.",
-      "Komt jaar na jaar terug."
+      "Het blad wordt al tijdens de bloei geel; zet er planten voor die dat verbergen.",
+      "Op zware klei die 's winters nat blijft, zet je hem beter in een pot."
     ]
   },
   "tasks": [
@@ -56,7 +55,7 @@
         "from": "09-15",
         "to": "11-30"
       },
-      "description": "Plant de bollen in de herfst 15 cm diep, met de punt omhoog, in groepjes op zo'n 20 cm afstand. Plant liever in groepen dan in rijtjes: dat ziet er natuurlijker uit."
+      "description": "Plant de bollen 15 cm diep met de punt omhoog, in groepjes op zo'n 20 cm afstand."
     },
     {
       "id": "blad-laten-staan",
@@ -67,7 +66,7 @@
         "to": "07-15"
       },
       "note": "Blad laten afsterven",
-      "description": "Laat het blad na de bloei staan tot het geel is en vanzelf afsterft. De bol haalt er energie uit voor volgend jaar. Maai er dus nog niet overheen."
+      "description": "Laat het blad staan tot het vanzelf afsterft; de bol haalt er energie uit voor volgend jaar. Maai er niet eerder overheen."
     }
   ]
 }

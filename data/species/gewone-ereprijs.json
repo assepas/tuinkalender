@@ -40,11 +40,10 @@
     }
   },
   "info": {
-    "intro": "Een laag, kruipend plantje met helderblauwe bloempjes met een wit oog in het voorjaar. Het groeit graag in de randen van het gazon, onder heggen en in halfschaduw.",
-    "water": "Heeft geen extra water nodig.",
+    "intro": "Laag, kruipend plantje met helderblauwe bloempjes met een wit oog in het voorjaar. Groeit graag in gazonranden, onder heggen en in halfschaduw.",
+    "water": "Geen extra water nodig.",
     "tips": [
       "Herken hem aan de twee rijen haartjes aan weerszijden van de stengel.",
-      "Voelt zich thuis in de halfschaduw, waar het gras dunner is.",
       "Verspreidt zich met kruipende stengels die wortelen."
     ]
   },
@@ -57,7 +56,7 @@
         "from": "08-15",
         "to": "09-30"
       },
-      "description": "Zaai in de nazomer of in april-mei (lukt ook) op kale, losgeharkte plekken in het gras of mee in een bloemrijk gazonmengsel. Strooi het zaad breed uit, druk het aan en houd het een paar weken vochtig."
+      "description": "Strooi het zaad op kale, losgeharkte plekken in het gras of zaai het mee met een bloemrijk gazonmengsel. Druk aan en houd een paar weken vochtig; april-mei kan ook."
     },
     {
       "id": "maaien",
@@ -69,7 +68,7 @@
         "every": "2weeks"
       },
       "note": "Gazon niet te kort maaien",
-      "description": "Maai het gazon niet te kort, op 5 tot 8 cm, dan blijft deze plant bloeien. Maai in het voorjaar wat minder vaak, dan kan hij volop bloeien."
+      "description": "Maai op 5 tot 8 cm hoogte, dan blijft hij bloeien. Maai in het voorjaar wat minder vaak, dan bloeit hij volop."
     }
   ]
 }

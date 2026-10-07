@@ -40,12 +40,10 @@
     }
   },
   "info": {
-    "intro": "Een opvallende plant met zilvergrijs, viltig blad en felle magenta bloemen (ook wel Lychnis coronaria). Hij leeft maar een paar jaar, maar zaait zich makkelijk uit, dus je houdt hem.",
-    "water": "Houdt van droog. Alleen water geven na het planten; op natte grond rot hij in de winter weg.",
+    "intro": "Plant met zilvergrijs, viltig blad en felle magenta bloemen (ook Lychnis coronaria). Hij leeft maar een paar jaar, maar zaait zich makkelijk uit.",
+    "water": "Alleen water geven na het planten; op natte grond rot hij in de winter weg.",
     "tips": [
-      "Er bestaan ook witte en lichtroze vormen.",
-      "Het grijze blad staat mooi naast lavendel en salie.",
-      "Knip uitgebloeide bloemen af voor een langere bloei, maar laat er een paar zaad maken."
+      "Slakken kunnen jonge planten aanvreten."
     ]
   },
   "tasks": [
@@ -57,7 +55,7 @@
         "from": "04-15",
         "to": "06-15"
       },
-      "description": "Zaai in het voorjaar of de vroege zomer direct buiten, dun bedekt. De plantjes bloeien meestal pas het jaar erna."
+      "description": "Zaai direct buiten en bedek het zaad maar dun. De plantjes bloeien meestal pas het jaar erna."
     },
     {
       "id": "planten",
@@ -79,7 +77,7 @@
         "to": "08-31",
         "every": "2weeks"
       },
-      "description": "Knijp uitgebloeide bloemen af. Laat eind augustus een paar stengels staan tot het zaad rijp is, zodat er nieuwe plantjes komen."
+      "description": "Knijp uitgebloeide bloemen af. Laat eind augustus een paar stengels staan tot het zaad rijp is, dan komen er nieuwe plantjes."
     },
     {
       "id": "terugknippen",
@@ -89,7 +87,7 @@
         "from": "09-15",
         "to": "10-15"
       },
-      "description": "Knip de bloemstengels na de bloei af. Laat het grijze blad staan: dat blijft 's winters mooi en beschermt de plant."
+      "description": "Knip de bloemstengels af. Laat het grijze blad staan: dat blijft 's winters groen en beschermt de plant."
     }
   ]
 }

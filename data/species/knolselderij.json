@@ -35,12 +35,11 @@
     }
   },
   "info": {
-    "intro": "Een knolgewas met een sterke selderijsmaak, lekker in soep en stamppot. Hij heeft een lang seizoen nodig en veel water.",
-    "water": "Geef regelmatig flink water: een knolselderij bestaat voor het grootste deel uit water.",
+    "intro": "Knolgewas met sterke selderijsmaak, voor soep en stamppot. Heeft een lang seizoen en veel water nodig.",
+    "water": "Geef regelmatig flink water, zeker in droge zomers.",
     "tips": [
-      "Plant niet te diep: de knol groeit boven de grond.",
       "Haal in de zomer de zijwortels en onderste bladeren weg voor een gladde knol.",
-      "Kan een paar graden vorst hebben; bij strenge vorst oogsten."
+      "Verdraagt een paar graden vorst; oogst vóór strenge vorst."
     ]
   },
   "tasks": [
@@ -53,7 +52,7 @@
         "from": "02-15",
         "to": "03-31"
       },
-      "description": "Zaai binnen op een warme plek, zaad alleen aandrukken: het kiemt in het licht. Verspeen de plantjes naar potjes."
+      "description": "Zaai op een warme plek en druk het zaad alleen aan: het kiemt in het licht. Verspeen naar potjes."
     },
     {
       "id": "uitplanten",
@@ -64,7 +63,7 @@
         "fromWeeks": 0,
         "toWeeks": 3
       },
-      "description": "Plant uit na de laatste nachtvorst op 40 cm afstand. Plant ondiep, met het hart boven de grond."
+      "description": "Plant op 40 cm afstand en ondiep, met het hart boven de grond: de knol groeit boven de grond."
     },
     {
       "id": "oogsten",

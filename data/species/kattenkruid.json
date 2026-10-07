@@ -41,12 +41,10 @@
     }
   },
   "info": {
-    "intro": "Een losse, grijsgroene plant met lavendelblauwe bloemaren die van mei tot september bloeit. Een klassieker langs paden en onder rozen, en altijd vol bijen.",
-    "water": "Heeft weinig water nodig; alleen geven na het planten.",
+    "intro": "Grijsgroene, losse plant met lavendelblauwe bloemaren van mei tot september. Veel gebruikt langs paden en onder rozen; goede bijenplant.",
+    "water": "Alleen water geven na het planten.",
     "tips": [
-      "Katten rollen er soms in; zet er bij jonge planten wat takjes omheen.",
-      "Na terugknippen in juli bloeit hij opnieuw tot de herfst.",
-      "Staat mooi als lage rand langs een pad of voor rozen."
+      "Katten rollen er soms in; zet bij jonge planten wat takjes eromheen."
     ]
   },
   "tasks": [
@@ -58,7 +56,7 @@
         "from": "03-15",
         "to": "05-15"
       },
-      "description": "Plant op een zonnige plek in doorlatende grond, op zo'n 45 cm afstand."
+      "description": "Plant in doorlatende grond, op 45 cm afstand."
     },
     {
       "id": "terugknippen-zomer",
@@ -69,7 +67,7 @@
         "to": "07-31"
       },
       "note": "Terugknippen voor tweede bloei",
-      "description": "Knip de plant na de eerste bloei met de heggenschaar een derde tot de helft terug. Binnen een paar weken bloeit hij opnieuw."
+      "description": "Knip na de eerste bloei een derde tot de helft terug, met de heggenschaar. Binnen een paar weken bloeit hij opnieuw."
     },
     {
       "id": "terugknippen",
@@ -79,7 +77,7 @@
         "from": "03-01",
         "to": "03-31"
       },
-      "description": "Knip de oude stengels in het voorjaar af tot net boven het nieuwe blad."
+      "description": "Knip de oude stengels af tot net boven het nieuwe blad."
     }
   ]
 }

@@ -40,12 +40,11 @@
     }
   },
   "info": {
-    "intro": "De wilde margriet uit bloemrijke hooilanden en bermen. Kleiner en losser dan de grote margriet, en een echte trekpleister voor insecten.",
-    "water": "Heeft weinig water nodig; alleen gieten na het zaaien of planten.",
+    "intro": "Wilde margriet uit hooilanden en bermen, kleiner en losser dan de grote margriet. Goede plant voor bijen en andere insecten.",
+    "water": "Alleen water geven na het zaaien of planten.",
     "tips": [
       "Doet het best op arme grond; op rijke grond wint het gras.",
-      "Zaait zich makkelijk uit in open plekken.",
-      "Maai of knip na de bloei, dan bloeit hij in de nazomer vaak nog een keer."
+      "Zaait zich makkelijk uit op open plekken."
     ]
   },
   "tasks": [
@@ -57,7 +56,7 @@
         "from": "04-01",
         "to": "05-31"
       },
-      "description": "Strooi het zaad uit op kale, losgeharkte grond en druk het aan. Zaaien in september kan ook."
+      "description": "Strooi het zaad op kale, losgeharkte grond en druk het aan. September kan ook."
     },
     {
       "id": "terugknippen-na-bloei",
@@ -67,7 +66,7 @@
         "from": "07-15",
         "to": "08-15"
       },
-      "description": "Knip of maai de uitgebloeide stengels af nadat een deel zaad heeft gezet. Vaak volgt een nabloei."
+      "description": "Knip of maai de uitgebloeide stengels af als een deel zaad heeft gezet. Vaak volgt in de nazomer een tweede bloei."
     }
   ]
 }

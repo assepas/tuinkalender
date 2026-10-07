@@ -39,12 +39,12 @@
     }
   },
   "info": {
-    "intro": "Zelfgeteelde aardbeien zijn veel lekkerder dan die uit de winkel. De planten gaan drie tot vier jaar mee en maken zelf uitlopers waarmee je nieuwe planten krijgt.",
-    "water": "Geef regelmatig water tijdens bloei en vruchtzetting, bij voorkeur 's ochtends op de grond en niet over de bladeren en vruchten; dat voorkomt rot.",
+    "intro": "Vaste plant die drie tot vier jaar vruchten geeft en via uitlopers zelf nieuwe plantjes maakt.",
+    "water": "Geef tijdens bloei en vruchtzetting regelmatig water, 's ochtends op de grond en niet over blad en vruchten; dat voorkomt rot.",
     "tips": [
-      "Leg stro of houtsnippers onder de planten zodra de vruchten verschijnen, zo blijven ze schoon en rotten ze minder.",
-      "Vervang planten na 3 tot 4 jaar door jonge planten uit uitlopers; oude planten dragen minder.",
-      "Een net houdt vogels en slakken op afstand."
+      "Leg stro of houtsnippers onder de planten als de vruchten verschijnen; ze blijven schoon en rotten minder.",
+      "Vervang planten na 3 tot 4 jaar door jonge uit uitlopers; oude planten dragen minder.",
+      "Een net houdt vogels weg."
     ]
   },
   "tasks": [
@@ -56,7 +56,7 @@
         "from": "08-01",
         "to": "09-30"
       },
-      "description": "Plant nieuwe aardbeiplanten in augustus of september, zodat ze voor de winter goed wortelen en volgend jaar al vrucht geven. Zet het hartje precies op de grond: niet eronder (rot) en niet erboven (uitdrogen). Geef daarna een paar weken regelmatig water."
+      "description": "Plant in augustus of september, dan wortelen ze voor de winter en dragen ze volgend jaar al. Zet het hartje precies op de grond: dieper gaat rotten, hoger droogt uit. Geef de eerste weken regelmatig water."
     },
     {
       "id": "bemesten",
@@ -66,7 +66,7 @@
         "from": "03-15",
         "to": "04-15"
       },
-      "description": "Geef in het voorjaar een dun laagje compost of een organische bessen- of fruitmest rond de planten. Te veel stikstof geeft veel blad en weinig vruchten, dus doseer zuinig."
+      "description": "Geef een dun laagje compost of organische fruitmest rond de planten. Doseer zuinig: te veel stikstof geeft veel blad en weinig vruchten."
     },
     {
       "id": "oogsten",
@@ -76,7 +76,7 @@
         "from": "06-01",
         "to": "07-15"
       },
-      "description": "Pluk de aardbeien als ze helemaal rood zijn, liefst op een droge ochtend. Pluk met het kroontje en een stukje steel eraan, dan blijven ze langer goed. Pluk om de dag, dan heb je ze voordat slakken of vogels ze vinden."
+      "description": "Pluk helemaal rode aardbeien met kroontje en een stukje steel, liefst op een droge ochtend. Pluk om de dag, vóór slakken en vogels ze vinden."
     },
     {
       "id": "delen",
@@ -86,7 +86,7 @@
         "from": "08-01",
         "to": "09-01"
       },
-      "description": "Na de oogst maakt de plant lange uitlopers met jonge plantjes eraan. Laat een paar sterke plantjes wortelen (eventueel in een potje dat je ingraaft) en knip ze dan los van de moederplant. Overige uitlopers knip je weg, die kosten de plant kracht."
+      "description": "Laat een paar sterke plantjes aan de uitlopers wortelen, eventueel in een ingegraven potje, en knip ze dan los. Knip de overige uitlopers weg; die kosten de plant kracht."
     },
     {
       "id": "winterhard",
@@ -96,7 +96,7 @@
         "from": "11-01",
         "to": "11-30"
       },
-      "description": "Aardbeien zijn winterhard, maar een losse laag stro of blad rond de planten beschermt tegen strenge vorst en uitdrogende wind. Haal het in maart weer weg zodat de grond kan opwarmen."
+      "description": "Een losse laag stro of blad rond de planten beschermt tegen strenge vorst en uitdrogende wind. Haal het in maart weg, zodat de grond kan opwarmen."
     }
   ]
 }

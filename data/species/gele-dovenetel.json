@@ -6,7 +6,8 @@
   "category": "vaste-plant",
   "tags": [
     "bodembedekker",
-    "schaduwplant"
+    "schaduwplant",
+    "woekert"
   ],
   "nativeStatus": "inheems",
   "appearance": {
@@ -40,12 +41,11 @@
     }
   },
   "info": {
-    "intro": "Een inheemse bodembedekker met gele lipbloemen in het voorjaar en vaak zilvergevlekt blad. Hij doet het goed op schaduwplekken waar weinig anders groeit.",
-    "water": "In de schaduw blijft de grond meestal vochtig genoeg. Geef alleen water na het planten en in lange droge periodes.",
+    "intro": "Inheemse bodembedekker met gele lipbloemen in het voorjaar, vroeg voedsel voor hommels. Groeit op schaduwplekken waar weinig anders wil groeien.",
+    "water": "Alleen water geven na het planten en bij lange droogte.",
     "tips": [
-      "Hij groeit snel met lange uitlopers; ideaal voor een schaduwhoek, minder voor een nette border.",
-      "Hommels en vroege bijen zijn dol op de bloemen.",
-      "Werkt goed onder struiken of bomen, waar gras het moeilijk heeft."
+      "Groeit snel met lange uitlopers: geschikt voor een schaduwhoek onder struiken, niet voor een nette border.",
+      "De vorm met zilvergevlekt blad woekert ook in de natuur: gooi stukken nooit in bos of berm."
     ]
   },
   "tasks": [
@@ -57,7 +57,7 @@
         "from": "03-15",
         "to": "05-01"
       },
-      "description": "Plant op 30 tot 40 cm afstand op een schaduwrijke plek, bijvoorbeeld onder struiken. Geef na het planten water; na een jaar vormen de planten samen een dichte mat."
+      "description": "Plant 30–40 cm uit elkaar, bijvoorbeeld onder struiken, en geef daarna water. Na een jaar vormen de planten een dichte mat."
     },
     {
       "id": "onderhoud",
@@ -69,7 +69,7 @@
         "every": "month"
       },
       "note": "Uitlopers begrenzen",
-      "description": "Knip of trek uitlopers weg die buiten de plek groeien waar je de plant wilt hebben. Doe dat regelmatig; een paar uitlopers per keer is veel makkelijker dan een hele mat eruit halen."
+      "description": "Knip of trek uitlopers weg die buiten de gewenste plek groeien. Een paar per keer is makkelijker dan later een hele mat."
     },
     {
       "id": "delen",
@@ -79,7 +79,7 @@
         "from": "09-15",
         "to": "10-15"
       },
-      "description": "Steek in het najaar een stuk met wortels uit en plant het ergens anders, of geef het weg. Zo houd je de plant in toom en vul je lege schaduwplekken."
+      "description": "Steek een stuk met wortels uit en plant het op een andere schaduwplek."
     }
   ]
 }

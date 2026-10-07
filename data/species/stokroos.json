@@ -39,12 +39,12 @@
     }
   },
   "info": {
-    "intro": "Een ouderwetse plant met metershoge stengels vol grote bloemen in roze, wit, rood of bijna zwart. Hij bloeit pas in het tweede jaar en leeft daarna vaak nog een paar jaar.",
-    "water": "Geef jonge planten water tot ze goed geworteld zijn. Daarna kan hij goed tegen droogte dankzij zijn lange penwortel.",
+    "intro": "Ouderwetse plant met stengels van 1,5–2,5 m vol grote bloemen in roze, wit, rood of bijna zwart. Hij bloeit vanaf het tweede jaar en leeft daarna vaak nog een paar jaar.",
+    "water": "Geef jonge planten water tot ze geworteld zijn; daarna kan hij door zijn lange penwortel goed tegen droogte.",
     "tips": [
-      "Roest (oranje puntjes onder het blad) komt veel voor; haal aangetast blad weg en geef de plant een luchtige plek.",
-      "Tegen een muur of hek staat hij beschut en waait hij minder snel om.",
-      "Verplant jonge plantjes vroeg: door de lange penwortel groeien oudere planten slecht aan."
+      "Roest (oranje puntjes onder het blad) komt veel voor: haal aangetast blad weg en kies een luchtige plek.",
+      "Verplant alleen jonge plantjes: door de lange penwortel slaan oudere planten slecht aan.",
+      "Slakken vreten graag aan jonge scheuten."
     ]
   },
   "tasks": [
@@ -57,7 +57,7 @@
         "to": "07-15"
       },
       "note": "Bloeit pas volgend jaar",
-      "description": "Zaai in de zomer direct op de plek of in potjes, zo'n 1 cm diep. Dit jaar maakt de plant een bladrozet; volgend jaar bloeit hij."
+      "description": "Zaai 1 cm diep op de plek of in potjes. Het eerste jaar maakt de plant alleen een bladrozet."
     },
     {
       "id": "planten",
@@ -67,7 +67,7 @@
         "from": "09-01",
         "to": "10-15"
       },
-      "description": "Zet de jonge planten in het najaar op hun vaste plek, op zo'n 50 cm afstand. Kies een zonnige, beschutte plek."
+      "description": "Plant op 50 cm afstand op een zonnige, beschutte plek, bijvoorbeeld tegen een muur of hek."
     },
     {
       "id": "opbinden",
@@ -88,7 +88,7 @@
         "from": "09-15",
         "to": "10-31"
       },
-      "description": "Knip na de bloei de stengels af tot vlak boven de grond. Wil je dat hij zich uitzaait, laat dan eerst een stengel staan tot de zaaddozen bruin zijn."
+      "description": "Knip de uitgebloeide stengels af tot vlak boven de grond. Wil je zaailingen, laat dan eerst een stengel staan tot de zaaddozen bruin zijn."
     }
   ]
 }

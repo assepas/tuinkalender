@@ -41,12 +41,11 @@
     }
   },
   "info": {
-    "intro": "Een hoge inheemse plant met schermen van lichtroze, zoet geurende bloempjes. Hij lokt veel zweefvliegen en vlinders. De wortel wordt al eeuwen gebruikt als rustgevend middel.",
-    "water": "Houdt van vochtige grond, bijvoorbeeld aan een slootkant of vijverrand. Geef in droge periodes extra water.",
+    "intro": "Hoge inheemse plant (tot 1,5 m) met schermen van lichtroze, zoet geurende bloempjes voor zweefvliegen en vlinders. De wortel is een bekend rustgevend middel.",
+    "water": "Hoort op vochtige grond, zoals aan een slootkant of vijverrand; extra water geven bij droogte.",
     "tips": [
-      "Katten zijn gek op de geur van de wortel en kunnen erin gaan liggen rollen.",
-      "Wordt tot 1,5 meter hoog; zet hem achter in de border.",
-      "Zaait zich flink uit; knip uitgebloeide schermen af als je dat niet wilt."
+      "Katten zijn gek op de geur van de wortel en gaan erin rollen.",
+      "Zaait zich flink uit als je de schermen laat staan."
     ]
   },
   "tasks": [
@@ -58,7 +57,7 @@
         "from": "03-15",
         "to": "05-01"
       },
-      "description": "Plant in het voorjaar op een vochtige plek, op zo'n 50 cm afstand. Geef na het planten water."
+      "description": "Plant op een vochtige plek, 50 cm uit elkaar, achter in de border. Geef na het planten water."
     },
     {
       "id": "uitgebloeid-afknippen",
@@ -69,7 +68,7 @@
         "from": "08-01",
         "to": "09-01"
       },
-      "description": "Knip de uitgebloeide schermen af voordat ze zaad verspreiden. Laat er een paar staan als je graag nieuwe plantjes wilt."
+      "description": "Knip de uitgebloeide schermen af voordat ze zaad verspreiden. Laat er een paar staan als je nieuwe plantjes wilt."
     },
     {
       "id": "terugknippen",
@@ -79,7 +78,7 @@
         "from": "10-15",
         "to": "11-30"
       },
-      "description": "Knip in het najaar of vroege voorjaar de afgestorven stengels af tot net boven de grond."
+      "description": "Knip de afgestorven stengels af tot net boven de grond; vroeg in het voorjaar kan ook."
     },
     {
       "id": "delen",
@@ -89,7 +88,7 @@
         "from": "09-15",
         "to": "10-31"
       },
-      "description": "Steek om de paar jaar een pol uit en verdeel hem in stukken met wortels. Plant ze meteen terug of geef ze weg."
+      "description": "Steek om de paar jaar een pol uit en verdeel hem in stukken met wortels. Plant ze meteen terug."
     }
   ]
 }

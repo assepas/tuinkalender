@@ -38,12 +38,11 @@
     }
   },
   "info": {
-    "intro": "Een inheemse klokjesbloem met dichte kluwens van diepviolette klokjes bovenaan de stengel. Hij breidt zich rustig uit en is een goede bijenplant.",
-    "water": "Kan redelijk tegen droogte; geef alleen water bij lange droge periodes.",
+    "intro": "Inheemse klokjesbloem met dichte kluwens diepviolette klokjes boven aan de stengel. Goede bijenplant.",
+    "water": "Alleen water geven bij lange droogte.",
     "tips": [
-      "Na terugknippen in juli bloeit hij vaak een tweede keer.",
-      "Doet het goed op kalkrijke grond.",
-      "Breidt zich uit met wortelstokken; houd buren in de gaten."
+      "Doet het best op kalkrijke grond.",
+      "Breidt zich uit met wortelstokken; houd zijn buren in de gaten."
     ]
   },
   "tasks": [
@@ -55,7 +54,7 @@
         "from": "03-15",
         "to": "05-01"
       },
-      "description": "Plant op zo'n 30 cm afstand, op een zonnige plek."
+      "description": "Plant op 30 cm afstand, in zon of halfschaduw."
     },
     {
       "id": "terugknippen-na-bloei",
@@ -66,7 +65,7 @@
         "from": "07-15",
         "to": "08-15"
       },
-      "description": "Knip de bloeistengels na de eerste bloei af tot boven het blad. Vaak volgt een nabloei in de nazomer."
+      "description": "Knip de bloeistengels af tot boven het blad. Vaak volgt een tweede bloei in de nazomer."
     },
     {
       "id": "delen",
@@ -76,7 +75,7 @@
         "from": "03-15",
         "to": "04-15"
       },
-      "description": "Verdeel de pol om de paar jaar in het voorjaar."
+      "description": "Verdeel de pol om de paar jaar met een schop."
     }
   ]
 }

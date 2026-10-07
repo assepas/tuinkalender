@@ -41,12 +41,11 @@
     }
   },
   "info": {
-    "intro": "Een stoere, inheemse vaste plant met geelgroene bloemschermen in het voorjaar en oranje herfstkleur. Hij doet het goed in natte grond en langs de vijver.",
+    "intro": "Inheemse vaste plant met geelgroene bloemschermen in mei en juni en oranjerode herfstkleur. Geschikt voor natte grond en de vijverrand.",
     "water": "Houdt van vochtig tot nat; op een drogere plek regelmatig water geven.",
     "tips": [
-      "Het melksap is giftig en irriteert de huid: draag handschoenen.",
-      "Wordt een grote pol van zo'n 1 meter.",
-      "Mooie combinatie met gele lis en kattenstaart."
+      "Het melksap is giftig en irriteert huid en ogen: draag handschoenen.",
+      "Wordt een pol van ongeveer 1 meter hoog en breed."
     ]
   },
   "tasks": [
@@ -58,7 +57,7 @@
         "from": "03-15",
         "to": "05-15"
       },
-      "description": "Plant op een vochtige plek of langs de vijver, op zo'n 70 cm afstand."
+      "description": "Plant op een vochtige plek of langs de vijver, 70 cm uit elkaar."
     },
     {
       "id": "terugknippen",
@@ -68,7 +67,7 @@
         "from": "11-01",
         "to": "03-15"
       },
-      "description": "Knip de stengels in de herfst of eind van de winter af. Draag handschoenen tegen het melksap."
+      "description": "Knip de stengels in de herfst of aan het eind van de winter af, met handschoenen aan."
     }
   ]
 }

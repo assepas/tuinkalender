@@ -40,12 +40,11 @@
     }
   },
   "info": {
-    "intro": "Een kleine boom met grote, roze-witte bloemen en geurende, gele vruchten in de herfst. Kweeperen zijn rauw hard en zuur, maar gekookt geven ze heerlijke jam, gelei en compote.",
-    "water": "Geef een jonge boom in droge periodes water.",
+    "intro": "Kleine boom met grote roze-witte bloemen in mei en gele, geurende vruchten in de herfst. Rauw zijn ze hard en zuur; gekookt geven ze jam, gelei en compote.",
+    "water": "Een jonge boom in droge periodes water geven.",
     "tips": [
-      "Eén kweepeer in huis geurt de hele kamer.",
-      "De boom is zelfbestuivend.",
-      "Weinig snoei nodig; alleen vorm geven en dood hout verwijderen."
+      "De boom is zelfbestuivend: één boom geeft al vruchten.",
+      "De pitten bevatten giftige stoffen; haal ze eruit voor je de vruchten kookt."
     ]
   },
   "tasks": [
@@ -57,7 +56,7 @@
         "from": "11-01",
         "to": "03-15"
       },
-      "description": "Plant in de winterrust, als de grond niet bevroren is. Zet de boom even diep als hij in de kwekerij stond (de entplek boven de grond), op zo'n 4 meter afstand, met een paal ernaast. Geef na het planten flink water."
+      "description": "Plant als de grond niet bevroren is, even diep als in de kwekerij (entplek boven de grond), op zo'n 4 m afstand met een paal erbij. Geef daarna flink water."
     },
     {
       "id": "snoeien",
@@ -67,7 +66,7 @@
         "from": "12-01",
         "to": "02-28"
       },
-      "description": "Snoei alleen dode, zieke en kruisende takken weg. Kweepeer bloeit aan de toppen van de takken: niet te veel inkorten."
+      "description": "Snoei alleen dode, zieke en kruisende takken weg. Kort niet te veel in: hij bloeit aan de toppen van de takken."
     },
     {
       "id": "oogsten",
@@ -77,7 +76,7 @@
         "from": "10-01",
         "to": "11-15"
       },
-      "description": "Pluk de kweeperen als ze geel zijn en het dons makkelijk afwrijft. Laat ze nog een paar weken op een koele plek rijpen."
+      "description": "Pluk als de vruchten geel zijn en het dons makkelijk afwrijft. Laat ze nog een paar weken op een koele plek narijpen."
     }
   ]
 }

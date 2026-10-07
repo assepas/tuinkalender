@@ -41,13 +41,12 @@
     }
   },
   "info": {
-    "intro": "De echte laurier is de plant waar de laurierblaadjes uit je keuken vandaan komen. Het is een groenblijvende struik of kleine boom met donkere, geurende bladeren en kleine geelgroene bloemetjes in het voorjaar. Hij komt uit het Middellandse Zeegebied en doet het in Nederland het best in een grote pot, die je bij strenge vorst binnen kunt zetten.",
-    "water": "Houd de grond licht vochtig, maar laat hem niet nat staan: laurier verdraagt geen natte voeten. Geef in een pot in de zomer ongeveer een keer per week water en in de winter nog maar heel weinig.",
+    "intro": "Groenblijvende struik uit het Middellandse Zeegebied; het blad is het bekende keukenkruid. Hij doet het in Nederland het best in een grote pot die je bij strenge vorst binnenzet.",
+    "water": "Licht vochtig houden, nooit nat. In een pot 's zomers ongeveer wekelijks, 's winters heel weinig.",
     "tips": [
-      "Een jonge laurier en een plant in een pot zijn niet goed winterhard. Zet hem bij strenge vorst op een lichte, vorstvrije plek, bijvoorbeeld in een koude kas of een onverwarmde schuur met een raam.",
-      "Bruine bladpunten of bruine bladeren na de winter komen meestal door vorst of een koude, droge wind. Knip ze weg, de plant loopt vaak weer uit.",
-      "Gebruik de bladeren alleen om mee te smaken en haal ze voor het eten uit de pan: ze zijn hard en scherp om door te slikken.",
-      "Plakkerige bladeren of witte pluisjes wijzen op schildluizen. Veeg ze af met een doek met zeepwater."
+      "Jonge planten en potplanten zijn niet winterhard: zet ze bij strenge vorst licht en vorstvrij weg, bijvoorbeeld in een koude kas.",
+      "Bruine bladeren na de winter komen meestal door vorst of koude wind. Knip ze weg; meestal loopt hij weer uit.",
+      "Plakkerige bladeren of witte pluisjes wijzen op schildluis: veeg ze af met een doek met zeepsop."
     ]
   },
   "tasks": [
@@ -60,8 +59,8 @@
         "fromWeeks": 0,
         "toWeeks": 3
       },
-      "note": "Pas na de laatste nachtvorst",
-      "description": "Plant of verpot in het voorjaar, als er geen nachtvorst meer wordt verwacht. Kies een zonnige, beschutte plek met goed doorlatende grond, of een grote pot met gaten en potgrond. Zet de plant even diep als in de pot en geef goed water."
+      "note": "Na de laatste nachtvorst",
+      "description": "Plant of verpot op een zonnige, beschutte plek in goed doorlatende grond, of in een grote pot met gaten in de bodem. Geef daarna goed water."
     },
     {
       "id": "bemesten",
@@ -72,7 +71,7 @@
         "to": "07-31",
         "every": "month"
       },
-      "description": "Geef een keer per maand een beetje organische of vloeibare plantenmest, vooral bij een plant in een pot. Stop vanaf augustus, zodat de nieuwe takken voor de winter kunnen verharden."
+      "description": "Geef maandelijks wat organische of vloeibare mest, vooral in een pot. Stop in augustus, zodat nieuwe takken voor de winter verhouten."
     },
     {
       "id": "snoeien",
@@ -84,7 +83,7 @@
         "to": "07-31"
       },
       "note": "Bijsnoeien na de groei",
-      "description": "Snoei in de zomer, na de eerste groeischeut, om de plant in vorm te houden of te laten uitgroeien tot bolletje of piramide. Knip takken één voor één met een snoeischaar, vlak boven een blad, zodat je geen blad doormidden knipt. Snoei niet in de herfst: nieuwe scheuten vriezen dan snel dood."
+      "description": "Knip in de zomer in vorm, per tak vlak boven een blad. Niet in de herfst: jonge scheuten vriezen dan dood."
     },
     {
       "id": "oogsten",
@@ -94,8 +93,8 @@
         "from": "01-01",
         "to": "12-31"
       },
-      "note": "Blad kun je het hele jaar plukken",
-      "description": "Pluk de bladeren wanneer je ze nodig hebt, bij voorkeur de grotere, oudere bladeren. Gedroogd hebben ze meer smaak dan vers: leg ze een paar weken op een droge, luchtige plek. Neem nooit meer dan een derde van de plant tegelijk."
+      "note": "Hele jaar plukken",
+      "description": "Pluk de oudere bladeren wanneer je ze nodig hebt. Drogen kan op een droge, luchtige plek."
     },
     {
       "id": "winterbescherming",
@@ -107,7 +106,7 @@
         "toWeeks": 0
       },
       "note": "Binnenzetten of afdekken",
-      "description": "Zet de plant in een pot voor de eerste strenge vorst binnen op een lichte, koele plek (5 tot 10 °C) en geef weinig water. Staat hij in de grond, bind dan de takken losjes bij elkaar en wikkel ze in tuinfleece, met een laag bladeren of stro op de wortels."
+      "description": "Zet een pot vóór de eerste strenge vorst op een lichte, koele plek (5–10 °C) en geef weinig water. In de grond: takken in vliesdoek, een laag blad of stro over de wortels."
     }
   ]
 }

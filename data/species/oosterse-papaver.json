@@ -38,12 +38,11 @@
     }
   },
   "info": {
-    "intro": "Een vaste plant met enorme, papierachtige bloemen in oranje, rood, roze of wit met een zwart hart. Na de bloei sterft het blad af en komt in de herfst opnieuw op.",
+    "intro": "Vaste plant met enorme, papierachtige bloemen in oranje, rood, roze of wit met een donker hart. Na de bloei sterft het blad af; in de herfst komt nieuw blad.",
     "water": "Kan goed tegen droogte dankzij een diepe penwortel.",
     "tips": [
-      "Zet laat bloeiende planten ernaast die de kale plek in juli opvullen.",
-      "Verplant hem niet: elk stukje wortel kan weer uitgroeien.",
-      "De zaaddozen zijn mooi in droogboeketten."
+      "Zet laatbloeiende planten ernaast die de kale plek in juli opvullen.",
+      "Verplant hem liever niet: de penwortel breekt makkelijk en achtergebleven wortelstukjes lopen weer uit."
     ]
   },
   "tasks": [
@@ -55,7 +54,7 @@
         "from": "03-15",
         "to": "05-01"
       },
-      "description": "Plant op een zonnige plek op zo'n 60 cm afstand. Zet er een steun bij als de bloemen zwaar worden."
+      "description": "Plant op een zonnige plek in goed doorlatende grond, 60 cm uit elkaar. Zet er een steun bij als de bloemen zwaar worden."
     },
     {
       "id": "terugknippen",
@@ -65,7 +64,7 @@
         "from": "07-01",
         "to": "07-31"
       },
-      "description": "Knip na de bloei de stengels en het afstervende blad af tot net boven de grond. In de herfst komt er nieuw blad."
+      "description": "Knip na de bloei stengels en afstervend blad af tot net boven de grond."
     }
   ]
 }

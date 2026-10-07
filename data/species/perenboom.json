@@ -38,12 +38,12 @@
     }
   },
   "info": {
-    "intro": "Een fruitboom die in april vol witte bloesem staat en in de nazomer peren geeft. Er zijn handperen om zo te eten en stoofperen zoals de Gieser Wildeman.",
+    "intro": "Fruitboom met witte bloesem in april en peren in de nazomer en herfst. Er zijn handperen om zo te eten en stoofperen zoals Gieser Wildeman.",
     "water": "Geef een jonge boom de eerste twee jaar in droge periodes wekelijks een emmer water.",
     "tips": [
-      "De meeste perenrassen hebben een ander ras in de buurt nodig voor bestuiving.",
-      "Oranje vlekken op het blad (perenroest) zijn lelijk maar meestal onschuldig.",
-      "Handperen pluk je iets onrijp en laat je binnen narijpen."
+      "De meeste perenrassen hebben een ander perenras in de buurt nodig voor bestuiving.",
+      "Peren bloeien vroeg, dus late nachtvorst kan de bloesem en daarmee de oogst kosten.",
+      "Oranje vlekken op het blad (perenroest) zien er lelijk uit, maar zijn meestal onschuldig."
     ]
   },
   "tasks": [
@@ -55,7 +55,7 @@
         "from": "11-01",
         "to": "03-15"
       },
-      "description": "Plant in de winterrust, als de grond niet bevroren is. Zet de boom even diep als hij in de kwekerij stond (de entplek boven de grond), op zo'n 4 meter afstand, met een paal ernaast. Geef na het planten flink water."
+      "description": "Plant als de grond niet bevroren is, op zo'n 4 meter afstand met een paal ernaast. Houd de entplek (de verdikking onderaan de stam) boven de grond en geef daarna flink water."
     },
     {
       "id": "snoeien",
@@ -65,7 +65,7 @@
         "from": "12-01",
         "to": "02-28"
       },
-      "description": "Snoei in de winter dode, zieke en kruisende takken weg en houd de kroon open, zodat er licht in komt."
+      "description": "Haal dode, zieke en kruisende takken weg en houd de kroon open, zodat er licht in komt."
     },
     {
       "id": "vruchten-dunnen",
@@ -76,7 +76,7 @@
         "to": "07-15"
       },
       "note": "Vruchten uitdunnen",
-      "description": "Dun in juni te volle trossen uit tot één of twee peren. Zo worden ze groter en draagt de boom elk jaar."
+      "description": "Dun te volle trossen uit tot één of twee peren. Zo worden ze groter en draagt de boom elk jaar."
     },
     {
       "id": "oogsten",
@@ -86,7 +86,7 @@
         "from": "08-15",
         "to": "10-31"
       },
-      "description": "Pluk handperen als ze bij optillen makkelijk loslaten en laat ze binnen narijpen. Stoofperen blijven hard en bewaar je koel."
+      "description": "Pluk handperen als ze bij optillen makkelijk loslaten en laat ze binnen narijpen. Stoofperen blijven hard; bewaar ze koel."
     }
   ]
 }

@@ -40,10 +40,9 @@
     }
   },
   "info": {
-    "intro": "Een vetplant met dikke, grijsgroene blaadjes en brede, roze bloemschermen in de nazomer. Vlinders zoals de dagpauwoog en de atalanta zitten er vaak op.",
-    "water": "Heeft nauwelijks water nodig.",
+    "intro": "Vetplant met dikke, grijsgroene blaadjes en brede, roze bloemschermen in de nazomer. Trekt vlinders zoals dagpauwoog en atalanta.",
+    "water": "Nauwelijks water nodig.",
     "tips": [
-      "Op te rijke grond valt hij open; knip in juni een derde in voor een stevige plant.",
       "Laat de uitgebloeide schermen in de winter staan.",
       "Stukjes stengel wortelen makkelijk: ideaal om te stekken."
     ]
@@ -68,7 +67,7 @@
         "from": "06-01",
         "to": "06-30"
       },
-      "description": "Knip in juni de stengels een derde in als de plant op rijke grond staat. Hij blijft dan compact en valt niet open."
+      "description": "Knip de stengels een derde in als de plant op rijke grond staat; anders valt hij open."
     },
     {
       "id": "terugknippen",
@@ -78,7 +77,7 @@
         "from": "03-01",
         "to": "03-31"
       },
-      "description": "Knip de oude stengels in maart af, net boven de nieuwe scheuten."
+      "description": "Knip de oude stengels af, net boven de nieuwe scheuten."
     }
   ]
 }

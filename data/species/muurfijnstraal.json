@@ -39,12 +39,11 @@
     }
   },
   "info": {
-    "intro": "Een laag, losjes groeiend plantje met madeliefachtige bloempjes die van wit naar roze verkleuren. Hij bloeit van mei tot de vorst en groeit graag in muurtjes, tussen tegels en op trappen.",
-    "water": "Heeft weinig water nodig.",
+    "intro": "Laag plantje met madeliefachtige bloempjes die van wit naar roze verkleuren, van mei tot de vorst. Groeit graag in muurtjes, tussen tegels en op trappen.",
+    "water": "Heeft weinig water nodig; alleen na het planten en in een pot bij droogte.",
     "tips": [
-      "Zaait zich uit in voegen en muren; dat is precies de bedoeling.",
-      "Kan in een strenge winter bevriezen, maar komt vaak via zaad terug.",
-      "Knip in het voorjaar het oude hout weg voor een frisse plant."
+      "Zaait zich uit in voegen en muren.",
+      "Kan in een strenge winter bevriezen, maar komt meestal terug via zaad."
     ]
   },
   "tasks": [
@@ -56,7 +55,7 @@
         "from": "04-15",
         "to": "05-31"
       },
-      "description": "Plant op een zonnige plek, in een pot, muur of tussen tegels, op zo'n 30 cm afstand."
+      "description": "Plant op een zonnige plek in een muur, pot of tussen tegels, 30 cm uit elkaar."
     },
     {
       "id": "terugknippen",
@@ -66,7 +65,7 @@
         "from": "03-15",
         "to": "04-15"
       },
-      "description": "Knip de plant in het voorjaar terug tot een paar centimeter boven de grond."
+      "description": "Knip de plant terug tot een paar centimeter boven de grond; hij loopt snel weer uit."
     }
   ]
 }

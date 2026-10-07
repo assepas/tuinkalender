@@ -40,12 +40,12 @@
     }
   },
   "info": {
-    "intro": "Een grote, stoere plant met hangende klokjes waar hommels dol op zijn. Het blad zit vol voedingsstoffen: tuiniers gebruiken het als mulch, in de compost of voor gier (vloeibare plantenmest).",
-    "water": "Smeerwortel heeft diepe wortels en redt zich meestal zelf. Alleen jonge planten in droge periodes water geven.",
+    "intro": "Grote, inheemse vaste plant met hangende klokjes die hommels graag bezoeken. Het voedingsrijke blad gebruik je als mulch, in de compost of voor gier (vloeibare plantenmest).",
+    "water": "Redt zich met zijn diepe wortels; alleen jonge planten bij droogte water geven.",
     "tips": [
-      "Kies de plek goed: elk stukje wortel dat achterblijft groeit weer uit, je krijgt hem bijna niet meer weg.",
-      "Maak gier: laat een emmer vol blad twee à drie weken in water staan en verdun het 1 op 10 als mest voor tomaten en courgettes.",
-      "Niet innemen: de plant bevat stoffen die schadelijk zijn voor de lever."
+      "Kies de plek goed: elk achtergebleven stukje wortel loopt weer uit, je krijgt hem bijna niet meer weg.",
+      "Gier: laat een emmer blad twee à drie weken in water staan en verdun 1 op 10 als mest voor tomaten en courgettes.",
+      "Giftig bij inname: de plant bevat stoffen die de lever beschadigen."
     ]
   },
   "tasks": [
@@ -57,7 +57,7 @@
         "from": "03-15",
         "to": "05-01"
       },
-      "description": "Plant een stuk wortel of een pot op een vaste plek met ruimte, zo'n 60 cm van andere planten. Hij wordt groot en blijft jaren staan."
+      "description": "Plant een stuk wortel of een pot op een vaste plek, zo'n 60 cm van andere planten. Hij blijft jaren staan."
     },
     {
       "id": "blad-oogsten",
@@ -68,7 +68,7 @@
         "to": "09-15"
       },
       "note": "Blad voor mulch of gier",
-      "description": "Snijd de hele plant tot zo'n 5 cm boven de grond af als hij groot is. Leg het blad als mulch onder groenten, doe het in de compost of maak er gier van. Hij loopt snel weer uit; je kunt drie à vier keer per jaar oogsten."
+      "description": "Snijd de plant op 5 cm boven de grond af als hij groot is en gebruik het blad als mulch, in de compost of voor gier. Hij loopt snel weer uit: drie à vier keer per jaar oogsten kan."
     },
     {
       "id": "terugknippen",
@@ -78,7 +78,7 @@
         "from": "10-15",
         "to": "11-15"
       },
-      "description": "Knip in het najaar de laatste bladeren en stengels af en leg ze op de composthoop. De wortels overwinteren in de grond en lopen in maart weer uit."
+      "description": "Knip de laatste bladeren en stengels af voor de composthoop. De wortels lopen in maart weer uit."
     }
   ]
 }

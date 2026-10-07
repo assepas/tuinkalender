@@ -39,10 +39,9 @@
     }
   },
   "info": {
-    "intro": "Een inheems voorjaarsbloempje met knikkende, geurende gele bloemen aan een stevige steel. Het groeit in schrale hooilanden en op dijken, en past mooi in een bloemrijk gazon.",
-    "water": "Houd de grond licht vochtig in het voorjaar; in de zomer rust de plant.",
+    "intro": "Inheems voorjaarsbloempje met knikkende, geurende gele bloemen. Groeit in schrale hooilanden en op dijken en past in een bloemrijk gazon.",
+    "water": "In het voorjaar licht vochtig houden; in de zomer rust de plant.",
     "tips": [
-      "Maai pas na half juni, als het zaad rijp is.",
       "Houdt van kalkrijke grond.",
       "Verdeel pollen na de bloei om ze te vermeerderen."
     ]
@@ -56,7 +55,7 @@
         "from": "09-15",
         "to": "10-31"
       },
-      "description": "Plant in het najaar op zo'n 20 cm afstand. Vers zaad kun je ook direct na het rijpen in de zomer uitzaaien."
+      "description": "Plant op zo'n 20 cm afstand. Vers zaad kun je direct na het rijpen in de zomer uitzaaien."
     },
     {
       "id": "niet-maaien",
@@ -67,7 +66,7 @@
         "to": "06-15"
       },
       "note": "Pas maaien na half juni",
-      "description": "Maai de plekken met sleutelbloemen pas na half juni, zodat ze zaad kunnen zetten."
+      "description": "Laat de plekken met sleutelbloemen staan tot half juni, zodat het zaad rijp wordt."
     }
   ]
 }

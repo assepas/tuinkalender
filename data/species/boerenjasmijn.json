@@ -39,13 +39,8 @@
     }
   },
   "info": {
-    "intro": "Een sterke heester die in juni vol witte, sterk geurende bloemen staat. De geur doet denken aan jasmijn. Een klassieker in de boerentuin.",
-    "water": "Geef jonge struiken water in droge periodes; oudere planten redden zich.",
-    "tips": [
-      "Bloeit op het hout van vorig jaar: snoei direct na de bloei.",
-      "Haal elk jaar een paar oude takken bij de grond weg om de struik jong te houden.",
-      "Takken met knop zijn mooi in de vaas."
-    ]
+    "intro": "Stevige heester die in juni vol witte bloemen staat met een sterke jasmijngeur. Een klassieker in de boerentuin.",
+    "water": "Geef jonge struiken water in droge periodes; oudere planten redden zich."
   },
   "tasks": [
     {
@@ -56,7 +51,7 @@
         "from": "10-15",
         "to": "03-31"
       },
-      "description": "Plant in de rustperiode, als het niet vriest, op zo'n 2 meter van andere struiken."
+      "description": "Plant in de rustperiode als het niet vriest, op zo'n 2 meter van andere struiken."
     },
     {
       "id": "snoeien",
@@ -67,7 +62,7 @@
         "to": "07-31"
       },
       "note": "Direct na de bloei",
-      "description": "Snoei direct na de bloei: knip uitgebloeide takken terug tot een jonge zijscheut en haal een paar oude takken bij de grond weg. Niet in het voorjaar snoeien, dan knip je de bloemknoppen weg."
+      "description": "Knip uitgebloeide takken terug tot een jonge zijscheut en haal elk jaar een paar oude takken bij de grond weg. Niet in het voorjaar snoeien: dan knip je de bloemknoppen weg."
     }
   ]
 }

@@ -40,12 +40,10 @@
     }
   },
   "info": {
-    "intro": "Een inheemse vaste plant met blauwpaarse schoteltjesbloemen in juni en juli. Hij hoort in bloemrijke graslanden en is een favoriet van bijen en hommels.",
-    "water": "Na het aanslaan heeft hij weinig extra water nodig. Geef alleen in de eerste zomer en bij langdurige droogte.",
+    "intro": "Inheemse vaste plant van bloemrijke graslanden, met blauwpaarse schoteltjesbloemen in juni en juli. Trekt bijen en hommels.",
+    "water": "Alleen water geven in de eerste zomer en bij lange droogte.",
     "tips": [
-      "De plant kan na de bloei wat uit elkaar vallen; terugknippen maakt hem weer compact.",
-      "Past goed in een border of wilde hoek, tussen grassen en andere wilde bloemen.",
-      "Zaait zich af en toe uit; zaailingen kun je gewoon verplanten."
+      "Zaait zich af en toe uit; zaailingen kun je verplanten."
     ]
   },
   "tasks": [
@@ -57,7 +55,7 @@
         "from": "03-15",
         "to": "05-01"
       },
-      "description": "Plant op 40 tot 50 cm afstand, even diep als in de pot, en druk de grond goed aan. Geef de eerste weken regelmatig water tot de plant aangeslagen is."
+      "description": "Plant op 40–50 cm afstand, even diep als in de pot, en druk de grond aan. Geef water tot hij is aangeslagen."
     },
     {
       "id": "delen",
@@ -67,7 +65,7 @@
         "from": "09-01",
         "to": "10-01"
       },
-      "description": "Steek de pol na een paar jaar in het najaar uit, verdeel hem met een schop of mes in stukken met elk wortels en knoppen, en plant die weer in. Delen houdt de plant vitaal en geeft je gratis nieuwe planten."
+      "description": "Steek de pol om de paar jaar uit en verdeel hem met een schop in stukken met wortels en knoppen. Plant die meteen weer in."
     },
     {
       "id": "onderhoud",
@@ -78,7 +76,7 @@
         "to": "08-31"
       },
       "note": "Na de bloei terugknippen",
-      "description": "Knip na de hoofdbloei de hele plant terug tot zo'n 10 cm boven de grond. Binnen een paar weken komt er vers blad en soms een tweede, kleinere bloei."
+      "description": "Knip na de hoofdbloei de hele plant terug tot 10 cm boven de grond. Er komt dan vers blad en soms een tweede bloei."
     }
   ]
 }

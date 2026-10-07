@@ -40,12 +40,11 @@
     }
   },
   "info": {
-    "intro": "Kleine, stevige komkommertjes om in te maken. Augurken doen het goed buiten en geven in de zomer een grote oogst in korte tijd.",
+    "intro": "Kleine, stevige komkommertjes om in te maken. Ze groeien goed buiten en geven in korte tijd veel oogst.",
     "water": "Geef in warme periodes regelmatig water op de grond.",
     "tips": [
-      "Pluk ze klein (5-8 cm) voor het lekkerste zuur.",
-      "Om de dag plukken houdt de plant productief.",
-      "Mooi om over de grond of langs gaas te laten groeien."
+      "Laat ze over de grond of langs gaas groeien.",
+      "Te grote vruchten remmen de aanmaak van nieuwe; pluk dus vaak."
     ]
   },
   "tasks": [
@@ -69,7 +68,7 @@
         "fromWeeks": 1,
         "toWeeks": 4
       },
-      "description": "Plant uit na de laatste nachtvorst op een zonnige, beschutte plek."
+      "description": "Plant op een zonnige, beschutte plek, 50 cm uit elkaar."
     },
     {
       "id": "oogsten",
@@ -80,7 +79,7 @@
         "to": "09-15",
         "every": "week"
       },
-      "description": "Pluk de augurken om de paar dagen als ze 5-8 cm lang zijn."
+      "description": "Pluk de augurken om de paar dagen als ze 5–8 cm lang zijn; dan zijn ze het lekkerst om in te maken."
     }
   ]
 }

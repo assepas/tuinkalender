@@ -39,12 +39,11 @@
     }
   },
   "info": {
-    "intro": "Een grote struik met pluimen van heerlijk geurende lila, paarse of witte bloemen in mei. Hij is sterk, makkelijk en kan tientallen jaren oud worden.",
-    "water": "Geef de eerste twee jaar in droge periodes een flinke emmer water per week. Oudere seringen redden zich zelf.",
+    "intro": "Grote struik met geurende pluimen in lila, paars of wit in mei. Sterk en makkelijk; hij kan tientallen jaren oud worden.",
+    "water": "De eerste twee jaar bij droogte wekelijks een emmer water; oudere struiken redden zich zelf.",
     "tips": [
-      "Seringen maken veel wortelopslag; trek die scheuten met wortel en al uit.",
-      "Een sering houdt van kalkrijke grond; wat kalk strooien kan op zure zandgrond helpen.",
-      "Pluk bloemen voor de vaas als ze net opengaan en klop de stelen plat, dan houden ze het langer."
+      "Hij maakt veel wortelopslag: trek die scheuten met wortel en al uit.",
+      "Pluk takken voor de vaas als de bloemen net opengaan; dan houden ze het langer."
     ]
   },
   "tasks": [
@@ -56,7 +55,7 @@
         "from": "10-01",
         "to": "11-30"
       },
-      "description": "Plant in de herfst in een ruim gat met compost, even diep als hij in de pot stond. Geef flink water en houd de grond de eerste zomer vochtig."
+      "description": "Plant in een ruim gat met compost, even diep als in de pot. Geef flink water en houd de grond de eerste zomer vochtig."
     },
     {
       "id": "bemesten",
@@ -66,7 +65,7 @@
         "from": "03-01",
         "to": "03-31"
       },
-      "description": "Strooi in maart een laag compost of gedroogde koemest onder de struik. Op zure zandgrond kun je er om de paar jaar wat tuinkalk bij strooien."
+      "description": "Strooi een laag compost of gedroogde koemest onder de struik. Op zure zandgrond om de paar jaar wat tuinkalk erbij."
     },
     {
       "id": "snoeien",
@@ -78,7 +77,7 @@
         "to": "06-15"
       },
       "note": "Direct na de bloei",
-      "description": "Knip direct na de bloei de uitgebloeide pluimen af, net boven een paar knoppen. Snoei je later in het jaar, dan knip je de bloemknoppen voor volgend jaar weg. Een oude, kale struik verjong je door elk jaar één of twee van de oudste takken bij de grond weg te zagen."
+      "description": "Knip de uitgebloeide pluimen af, net boven een paar knoppen; later snoeien kost de bloemknoppen voor volgend jaar. Verjong een oude, kale struik door elk jaar één of twee van de oudste takken bij de grond weg te zagen."
     }
   ]
 }

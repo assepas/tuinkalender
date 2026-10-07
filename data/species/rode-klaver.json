@@ -40,11 +40,10 @@
     }
   },
   "info": {
-    "intro": "Een klaver met grote roze-paarse bloemhoofden, druk bezocht door hommels. Hij maakt de grond rijker met stikstof en wordt ook als groenbemester gezaaid.",
+    "intro": "Inheemse klaver met roze-paarse bloemhoofdjes, veel bezocht door hommels. Hij legt stikstof vast en wordt ook als groenbemester gezaaid.",
     "water": "Heeft door zijn diepe wortels weinig water nodig.",
     "tips": [
-      "Hoger dan witte klaver; hij bloeit het best als je het gazon wat langer laat staan.",
-      "Hommels met een lange tong zijn de belangrijkste bestuivers.",
+      "Leeft maar een paar jaar, maar houdt zich in het gras in stand door zaad.",
       "Als groenbemester zaai je hem op een leeg groentebed en spit je hem later onder."
     ]
   },
@@ -57,7 +56,7 @@
         "from": "08-15",
         "to": "09-30"
       },
-      "description": "Zaai in de nazomer of in april-mei (lukt ook) op kale, losgeharkte plekken in het gras of mee in een bloemrijk gazonmengsel. Strooi het zaad breed uit, druk het aan en houd het een paar weken vochtig."
+      "description": "Zaai in de nazomer (of in april-mei) op kale, losgeharkte plekken in het gras, of mee in een bloemrijk gazonmengsel. Strooi breed uit, druk aan en houd een paar weken vochtig."
     },
     {
       "id": "maaien",
@@ -69,7 +68,7 @@
         "every": "2weeks"
       },
       "note": "Gazon niet te kort maaien",
-      "description": "Maai het gazon niet te kort, op 5 tot 8 cm, dan blijft deze plant bloeien. Maai om de drie à vier weken en wat hoger (8-10 cm) als je hem wilt laten bloeien."
+      "description": "Maai op 5–8 cm, niet korter. Wil je hem goed laten bloeien, maai dan om de drie à vier weken op 8–10 cm."
     }
   ]
 }

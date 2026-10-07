@@ -39,12 +39,12 @@
     }
   },
   "info": {
-    "intro": "Een sierlijke vaste plant met roze of witte bloemen op lange stelen, precies als de rest van de tuin uitbloeit. Hij is sterk en wordt elk jaar mooier.",
-    "water": "Houd de grond licht vochtig, vooral het eerste jaar. Uitgedroogde planten krijgen bruin blad.",
+    "intro": "Vaste plant met roze of witte bloemen op lange stelen, die bloeit als de rest van de tuin uitgebloeid is. Groeit ook goed in halfschaduw.",
+    "water": "Houd de grond licht vochtig, vooral het eerste jaar; bij droogte wordt het blad bruin.",
     "tips": [
-      "Het eerste jaar lijkt hij weinig te doen; daarna breidt hij zich flink uit met wortelstokken.",
-      "Houdt niet van verplanten; kies meteen een goede plek.",
-      "Bloeit ook goed in de halfschaduw."
+      "Het eerste jaar doet hij weinig, daarna breidt hij zich flink uit met wortelstokken.",
+      "Verplant slecht; kies meteen een goede plek.",
+      "Giftig: het sap kan de huid irriteren, draag handschoenen."
     ]
   },
   "tasks": [
@@ -56,7 +56,7 @@
         "from": "04-01",
         "to": "05-15"
       },
-      "description": "Plant in het voorjaar, zodat hij goed kan wortelen voor de winter. Zet hem op zo'n 50 cm afstand in voedzame grond."
+      "description": "Plant op zo'n 50 cm afstand in voedzame grond, zodat hij voor de winter goed wortelt."
     },
     {
       "id": "terugknippen",
@@ -66,7 +66,7 @@
         "from": "11-15",
         "to": "03-15"
       },
-      "description": "Knip de stengels na de bloei of in het vroege voorjaar af tot net boven de grond."
+      "description": "Knip de stengels af tot net boven de grond."
     },
     {
       "id": "winterhard",
@@ -76,7 +76,7 @@
         "from": "11-01",
         "to": "11-30"
       },
-      "description": "Jonge planten zijn de eerste winter wat gevoelig. Leg een laagje blad of compost over de wortels. Oudere planten hebben dat niet nodig."
+      "description": "Leg de eerste winter een laagje blad of compost over de wortels. Oudere planten hebben dat niet nodig."
     },
     {
       "id": "uitlopers-verwijderen",
@@ -86,7 +86,7 @@
         "from": "03-15",
         "to": "04-30"
       },
-      "description": "Steek uitlopers die te ver gaan in het voorjaar uit en plant ze elders of geef ze weg."
+      "description": "Steek uitlopers die te ver gaan uit en plant ze elders of geef ze weg."
     }
   ]
 }

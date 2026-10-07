@@ -39,12 +39,12 @@
     }
   },
   "info": {
-    "intro": "Een klimboon met lange, platte peulen die je in stukken snijdt. Een klassieker uit de Nederlandse moestuin, lekker vers en goed in te maken.",
-    "water": "Geef in droge periodes water, vooral tijdens de bloei.",
+    "intro": "Klimboon met lange, platte peulen die je in stukken snijdt. Vers te eten of in te maken.",
+    "water": "Geef bij droogte water, vooral tijdens de bloei.",
     "tips": [
+      "Rauwe bonen en peulen zijn giftig: altijd goed koken.",
       "Zet stevige stokken van 2 tot 2,5 meter neer.",
-      "Pluk de peulen voor ze draderig worden.",
-      "Zaai niet in koude grond; bonen rotten dan."
+      "In koude grond rotten de bonen; zaai pas als de grond warm is."
     ]
   },
   "tasks": [
@@ -58,7 +58,7 @@
         "toWeeks": 4
       },
       "note": "Na de laatste nachtvorst",
-      "description": "Zaai na de laatste nachtvorst 3-4 cm diep bij elke stok, vier à zes bonen per stok."
+      "description": "Zaai 3-4 cm diep, vier à zes bonen bij elke stok."
     },
     {
       "id": "oogsten",
@@ -69,7 +69,7 @@
         "to": "09-30",
         "every": "week"
       },
-      "description": "Pluk de peulen om de paar dagen als ze 15-20 cm lang en nog glad zijn."
+      "description": "Pluk om de paar dagen, als de peulen 15-20 cm lang en nog glad zijn, voor ze draderig worden."
     }
   ]
 }

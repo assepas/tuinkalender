@@ -39,12 +39,12 @@
     }
   },
   "info": {
-    "intro": "Een klassieke boerentuinplant met grote, dubbele bloemen in roze, wit of rood. Een pioen kan tientallen jaren op dezelfde plek staan en wordt elk jaar mooier.",
-    "water": "Geef het eerste jaar water in droge periodes. Daarna redt een pioen zich meestal, behalve in lange droogte tijdens de knopvorming.",
+    "intro": "Klassieke boerentuinplant met grote, vaak gevulde bloemen in roze, wit of rood. Een pioen kan tientallen jaren op dezelfde plek blijven staan.",
+    "water": "Geef het eerste jaar water in droge periodes; daarna alleen bij lange droogte tijdens de knopvorming.",
     "tips": [
-      "Plant niet te diep: de rode knoppen op de wortel mogen hooguit 3-5 cm onder de grond zitten, anders bloeit hij niet.",
-      "Verplant hem liever niet; na verplanten duurt het vaak jaren voor hij weer bloeit.",
-      "Mieren op de knoppen zijn onschuldig: ze komen af op het suikerige vocht."
+      "Plant niet te diep: de rode knoppen op de wortel mogen hooguit 3–5 cm onder de grond, anders bloeit hij niet.",
+      "Verplant hem liever niet; daarna duurt het vaak jaren voor hij weer bloeit.",
+      "Licht giftig bij opeten (wortel, zaad, bloem), ook voor huisdieren. Mieren op de knoppen zijn onschuldig."
     ]
   },
   "tasks": [
@@ -56,7 +56,7 @@
         "from": "09-15",
         "to": "10-31"
       },
-      "description": "Plant in het najaar in voedzame, goed doorlatende grond, op zo'n 90 cm afstand. Zet de knoppen niet dieper dan 3-5 cm onder de grond. Geef na het planten water."
+      "description": "Plant in voedzame, goed doorlatende grond op zo'n 90 cm afstand, met de knoppen 3–5 cm onder de grond. Geef daarna water."
     },
     {
       "id": "steunen",
@@ -67,7 +67,7 @@
         "to": "05-15"
       },
       "note": "Steun geven voor de bloei",
-      "description": "Zet een plantensteun of een ring van stokjes om de plant voordat de knoppen zwaar worden. Gevulde bloemen hangen anders na een regenbui op de grond."
+      "description": "Zet een plantensteun of ring van stokjes om de plant voordat de knoppen zwaar worden. Gevulde bloemen hangen anders na regen op de grond."
     },
     {
       "id": "uitgebloeid-afknippen",
@@ -88,7 +88,7 @@
         "from": "10-15",
         "to": "11-30"
       },
-      "description": "Knip het blad in de herfst af tot vlak boven de grond als het bruin is geworden. Gooi het weg bij ziek blad, niet op de composthoop."
+      "description": "Knip het bruine blad af tot vlak boven de grond. Ziek blad niet op de composthoop."
     },
     {
       "id": "bemesten",
@@ -98,7 +98,7 @@
         "from": "03-15",
         "to": "04-15"
       },
-      "description": "Geef in het voorjaar een schep compost of wat organische mest rond de plant, niet op de knoppen."
+      "description": "Geef een schep compost of wat organische mest rond de plant, niet op de knoppen."
     }
   ]
 }

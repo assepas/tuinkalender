@@ -40,12 +40,12 @@
     }
   },
   "info": {
-    "intro": "Een hoge vaste plant met grote, geurende bloemschermen in roze, paars of wit. In de avond ruikt hij het sterkst en komen er nachtvlinders op af.",
-    "water": "Houd de grond vochtig; bij droogte krijgt hij snel meeldauw. Geef water op de grond, niet over het blad.",
+    "intro": "Hoge vaste plant met grote, geurende bloemschermen in roze, paars of wit. 's Avonds geurt hij het sterkst en komen er nachtvlinders op af.",
+    "water": "Houd de grond vochtig en geef bij droogte water op de grond, niet over het blad.",
     "tips": [
-      "Meeldauw (wit poeder op het blad) voorkom je met een luchtige plek en genoeg water.",
-      "Knip in mei een paar stengels in: die bloeien later, zodat de bloei langer duurt.",
-      "Verdeel de plant om de drie à vier jaar, anders wordt het midden kaal."
+      "Meeldauw (wit poeder op het blad) komt vooral bij droogte en op een benauwde plek.",
+      "Knip in mei een paar stengels half terug: die bloeien later, zodat de bloei langer duurt.",
+      "Gedraaide, verschrompelde stengels wijzen op phlox-aaltjes: gooi zulke planten weg."
     ]
   },
   "tasks": [
@@ -57,7 +57,7 @@
         "from": "03-15",
         "to": "05-01"
       },
-      "description": "Plant in voedzame, vochthoudende grond op zo'n 50 cm afstand. Meng compost door het plantgat."
+      "description": "Plant op 50 cm afstand in voedzame grond die vocht vasthoudt. Meng compost door het plantgat."
     },
     {
       "id": "bemesten",
@@ -67,7 +67,7 @@
         "from": "04-01",
         "to": "04-30"
       },
-      "description": "Geef in het voorjaar een laag compost of wat organische mest rond de plant."
+      "description": "Strooi een laag compost of wat organische mest rond de plant."
     },
     {
       "id": "dode-bloemen-verwijderen",
@@ -78,7 +78,7 @@
         "from": "08-15",
         "to": "09-15"
       },
-      "description": "Knip uitgebloeide schermen af; er komen dan vaak nog kleinere zijschermen."
+      "description": "Knip uitgebloeide schermen af; daarna komen vaak nog kleinere zijschermen."
     },
     {
       "id": "terugknippen",
@@ -88,7 +88,7 @@
         "from": "10-15",
         "to": "11-30"
       },
-      "description": "Knip de stengels na de bloei af tot net boven de grond."
+      "description": "Knip de stengels af tot net boven de grond."
     },
     {
       "id": "delen",
@@ -98,7 +98,7 @@
         "from": "03-15",
         "to": "04-15"
       },
-      "description": "Verdeel oude planten om de drie à vier jaar in het voorjaar. Plant de jonge buitenste stukken terug."
+      "description": "Verdeel de pol om de drie à vier jaar en plant alleen de jonge buitenste stukken terug."
     }
   ]
 }

@@ -40,12 +40,11 @@
     }
   },
   "info": {
-    "intro": "Een snelgroeiende struik met lange, geurende bloemtrossen in paars, roze of wit. De naam zegt het al: vlinders komen er massaal op af.",
-    "water": "Weinig veeleisend; alleen jonge planten water geven.",
+    "intro": "Snelgroeiende struik met lange, geurende bloemtrossen in paars, roze of wit; een van de beste vlinderplanten.",
+    "water": "Alleen jonge planten water geven in droge periodes; daarna redt hij zich.",
     "tips": [
-      "Zaait zich flink uit; knip uitgebloeide trossen af om dat te voorkomen.",
-      "Er zijn compacte rassen die in een kleine tuin of pot passen.",
-      "Stevig terugsnoeien in het voorjaar geeft de meeste bloemen."
+      "Zaait zich sterk uit en verwildert ook in de natuur: knip uitgebloeide trossen af voordat ze zaad zetten.",
+      "Voor een kleine tuin of pot zijn er compacte rassen."
     ]
   },
   "tasks": [
@@ -57,7 +56,7 @@
         "from": "04-01",
         "to": "05-15"
       },
-      "description": "Plant in het voorjaar op een zonnige plek met ruimte."
+      "description": "Plant op een zonnige plek met zo'n 2 m ruimte. Geef de eerste zomer water bij droogte."
     },
     {
       "id": "snoeien",
@@ -68,7 +67,7 @@
         "to": "04-15"
       },
       "note": "Flink terug",
-      "description": "Snoei in het voorjaar alle takken terug tot 30-50 cm boven de grond. De bloemen komen aan het nieuwe hout."
+      "description": "Snoei alle takken terug tot 30–50 cm boven de grond. De bloemen komen aan het nieuwe hout."
     },
     {
       "id": "dode-bloemen-verwijderen",
@@ -80,7 +79,7 @@
         "to": "09-30",
         "every": "2weeks"
       },
-      "description": "Knip uitgebloeide trossen af tot het volgende blad. Dat geeft nieuwe bloemen en voorkomt uitzaaien."
+      "description": "Knip uitgebloeide trossen af tot het eerstvolgende blad; dat geeft nieuwe bloemen."
     }
   ]
 }

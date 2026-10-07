@@ -33,12 +33,12 @@
     }
   },
   "info": {
-    "intro": "Een fijne, milde ui die uit één pootsjalot een hele trosje nieuwe sjalotten maakt. Ze zijn lekker in sauzen en goed te bewaren.",
-    "water": "Geef water in droge periodes in het voorjaar; vanaf juli droog laten afrijpen.",
+    "intro": "Milde, fijne ui: uit één pootsjalot groeit een trosje nieuwe sjalotten. Ze zijn lang te bewaren.",
+    "water": "Geef in het voorjaar water bij droogte; vanaf juli niet meer, zodat ze droog afrijpen.",
     "tips": [
       "Poot vroeg: sjalotten hebben een lang seizoen nodig.",
       "Bewaar een paar mooie sjalotten als pootgoed voor volgend jaar.",
-      "Vogels trekken ze graag uit de grond; leg er de eerste weken gaas over."
+      "Vogels trekken ze uit de grond; leg er de eerste weken gaas over."
     ]
   },
   "tasks": [
@@ -50,7 +50,7 @@
         "from": "02-15",
         "to": "04-15"
       },
-      "description": "Poot de sjalotten zo diep dat het puntje er net bovenuit steekt, op 15 cm afstand in rijen van 25 cm."
+      "description": "Poot zo diep dat het puntje er net bovenuit steekt, op 15 cm afstand in rijen van 25 cm."
     },
     {
       "id": "oogsten",
@@ -60,7 +60,7 @@
         "from": "07-01",
         "to": "08-15"
       },
-      "description": "Oogst als het loof geel is. Laat de trossen drogen op een luchtige plek en haal ze daarna uit elkaar."
+      "description": "Oogst als het loof geel is en omvalt. Laat de trossen drogen op een luchtige plek en haal ze daarna uit elkaar."
     }
   ]
 }

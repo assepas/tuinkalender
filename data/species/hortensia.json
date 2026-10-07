@@ -15,8 +15,8 @@
     "flowerColorName": "roze"
   },
   "bloom": {
-    "from": "06-01",
-    "to": "09-01"
+    "from": "07-01",
+    "to": "09-30"
   },
   "growing": {
     "sun": [
@@ -38,12 +38,12 @@
     }
   },
   "info": {
-    "intro": "Een struik met grote bolle of platte bloemschermen van juli tot de herfst. De boerenhortensia bloeit op de knoppen die al in de zomer ervoor aangelegd worden.",
-    "water": "Hortensia's hebben veel water nodig; de naam Hydrangea betekent niet voor niets 'waterkan'. Geef in de zomer twee keer per week flink water, liefst regenwater.",
+    "intro": "Struik met grote bolle of platte bloemschermen in de zomer en nazomer. De boerenhortensia bloeit op knoppen die de zomer ervoor al gevormd zijn.",
+    "water": "Geef 's zomers twee keer per week flink water, liefst regenwater; slap blad 's avonds betekent dorst.",
     "tips": [
-      "Blauwe of roze bloem hangt af van de grond: zure grond geeft blauw, kalkrijke grond roze.",
+      "Zure grond geeft blauwe bloemen, kalkrijke grond roze.",
       "Laat de uitgebloeide schermen in de winter staan; ze beschermen de knoppen eronder.",
-      "Hangend blad op een warme middag is normaal; is het 's avonds nog slap, geef dan water."
+      "Licht giftig bij opeten, ook voor huisdieren."
     ]
   },
   "tasks": [
@@ -55,7 +55,7 @@
         "from": "03-15",
         "to": "05-01"
       },
-      "description": "Plant in een ruim gat met compost of turfvrije rhododendrongrond, even diep als in de pot. Kies een plek met ochtendzon en middagschaduw. Geef direct na het planten een flinke emmer water."
+      "description": "Plant in een ruim gat met compost of turfvrije rhododendrongrond, even diep als in de pot. Kies ochtendzon en middagschaduw en geef direct een emmer water."
     },
     {
       "id": "bemesten",
@@ -65,7 +65,7 @@
         "from": "03-01",
         "to": "04-15"
       },
-      "description": "Strooi in het voorjaar een organische mest voor hortensia's of rhododendrons rond de struik, en een laag compost. Gebruik geen kalk als je blauwe bloemen wilt houden."
+      "description": "Strooi organische mest voor hortensia's of rhododendrons rond de struik, plus een laag compost. Geen kalk als je blauwe bloemen wilt houden."
     },
     {
       "id": "snoeien",
@@ -77,7 +77,7 @@
         "to": "03-31"
       },
       "note": "Alleen uitgebloeide schermen",
-      "description": "Knip de oude bloemschermen af net boven het eerste paar dikke, gezonde knoppen. Knip nooit alle takken fors terug: daar zitten de bloemknoppen van dit jaar. Heel oude, kale takken mag je bij de grond weghalen."
+      "description": "Knip oude schermen af boven het eerste paar dikke knoppen. Knip niet alle takken fors terug: daar zitten de bloemknoppen van dit jaar. Heel oude, kale takken mogen bij de grond weg."
     },
     {
       "id": "winterhard",
@@ -87,7 +87,7 @@
         "from": "11-01",
         "to": "11-30"
       },
-      "description": "Bij strenge vorst (onder -10 °C) kunnen de bloemknoppen bevriezen. Leg dan een vlies over de struik of een laag blad rond de voet. Haal het vlies weg als het weer zachter wordt."
+      "description": "Onder -10 °C kunnen de bloemknoppen bevriezen: leg dan vliesdoek over de struik en blad rond de voet. Haal het vlies weg als het zachter wordt."
     }
   ]
 }

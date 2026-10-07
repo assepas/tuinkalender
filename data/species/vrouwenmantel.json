@@ -16,8 +16,8 @@
     "flowerColorName": "geelgroen"
   },
   "bloom": {
-    "from": "06-01",
-    "to": "08-01"
+    "from": "05-15",
+    "to": "09-30"
   },
   "growing": {
     "sun": [
@@ -40,12 +40,10 @@
     }
   },
   "info": {
-    "intro": "Een sterke vaste plant met zacht, rond blad waarop regendruppels als pareltjes blijven liggen. In juni bloeit hij met luchtige, geelgroene schermen.",
-    "water": "Na het aanslaan heeft vrouwenmantel weinig extra water nodig. Geef in de eerste zomer en bij langdurige droogte water.",
+    "intro": "Sterke, lage vaste plant met zacht, rond blad waarop regendruppels blijven liggen, en luchtige geelgroene bloemschermen in de zomer. Goed als randplant langs een pad.",
+    "water": "Alleen water geven in de eerste zomer en bij lange droogte.",
     "tips": [
-      "Een ideale randplant langs een pad of voor rozen.",
-      "Zaait zichzelf flink uit als je de bloemen laat staan.",
-      "De bloemen zijn ook mooi in een boeket."
+      "Zaait zich overal uit als je de bloemen laat staan."
     ]
   },
   "tasks": [
@@ -57,7 +55,7 @@
         "from": "03-15",
         "to": "05-01"
       },
-      "description": "Plant op zo'n 40 cm afstand, even diep als in de pot. Geef de eerste weken regelmatig water. Na een jaar vormt hij een volle pol."
+      "description": "Plant op 40 cm afstand, even diep als in de pot, en geef de eerste weken regelmatig water."
     },
     {
       "id": "onderhoud",
@@ -68,7 +66,7 @@
         "to": "08-31"
       },
       "note": "Na de bloei fors terugknippen",
-      "description": "Knip na de bloei alle bloemstelen en het oude blad terug tot vlak boven de grond. Binnen een paar weken komt er vers, fris blad, en je voorkomt dat hij zich overal uitzaait."
+      "description": "Knip bloemstelen en oud blad terug tot vlak boven de grond. Binnen een paar weken komt er vers blad, en hij zaait zich niet uit."
     },
     {
       "id": "delen",
@@ -78,7 +76,7 @@
         "from": "09-15",
         "to": "10-15"
       },
-      "description": "Steek de pol in het najaar uit en verdeel hem in stukken met elk wortels en knoppen. Plant de stukken terug en geef water. Zo krijg je gratis extra planten."
+      "description": "Steek de pol uit en verdeel hem in stukken met elk wortels en knoppen. Plant ze terug en geef water."
     }
   ]
 }

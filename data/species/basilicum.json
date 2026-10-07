@@ -38,12 +38,11 @@
     }
   },
   "info": {
-    "intro": "Het bekende geurige keukenkruid voor tomaat en pesto. Basilicum houdt van warmte en groeit in Nederland het best in een pot op een zonnige, beschutte plek of in de kas.",
-    "water": "Geef 's ochtends water op de grond, niet over het blad, en laat de grond tussendoor iets opdrogen. Te nat en koud is de grootste vijand.",
+    "intro": "Geurig keukenkruid voor tomaat en pesto. Groeit in Nederland het best in een pot op een zonnige, beschutte plek of in de kas.",
+    "water": "Geef 's ochtends water op de grond, niet over het blad, en laat de grond tussendoor iets opdrogen; nat en koud verdraagt hij slecht.",
     "tips": [
-      "Pluk altijd de toppen boven een bladpaar, niet losse onderste blaadjes; zo wordt de plant voller.",
       "Haal bloemknoppen weg: na de bloei wordt het blad minder lekker.",
-      "Een supermarktpot bestaat uit veel plantjes in één pot; verdeel ze over een paar potten, dan groeien ze beter."
+      "Een supermarktpot bevat veel plantjes; verdeel ze over een paar potten, dan groeien ze beter."
     ]
   },
   "tasks": [
@@ -56,7 +55,7 @@
         "from": "04-01",
         "to": "05-15"
       },
-      "description": "Zaai in een potje met zaaigrond op een warme vensterbank (20 °C of meer) en bedek de zaadjes nauwelijks. Houd de grond vochtig, maar niet nat. Na een week of twee komen ze op."
+      "description": "Zaai op een warme vensterbank (20 °C of meer) en bedek de zaadjes nauwelijks. Houd de grond vochtig maar niet nat; na een week of twee komen ze op."
     },
     {
       "id": "uitplanten",
@@ -68,7 +67,7 @@
         "toWeeks": 3
       },
       "note": "Pas als de nachten warm zijn",
-      "description": "Zet basilicum pas buiten als het ook 's nachts boven de 10 °C blijft, meestal eind mei. Kies de zonnigste, beschutte plek of een grote pot. Bij koude nachten gaat hij snel achteruit."
+      "description": "Zet hem pas buiten als het 's nachts boven de 10 °C blijft, meestal eind mei, op de zonnigste beschutte plek of in een grote pot."
     },
     {
       "id": "oogsten",
@@ -79,7 +78,7 @@
         "to": "09-30",
         "every": "week"
       },
-      "description": "Knip of knijp wekelijks de toppen eraf, net boven een paar blaadjes. Op die plek groeien twee nieuwe scheuten, zodat de plant voller wordt en je steeds meer oogst."
+      "description": "Knip wekelijks de toppen net boven een bladpaar; daar groeien twee nieuwe scheuten. Pluk geen losse onderste blaadjes."
     }
   ]
 }

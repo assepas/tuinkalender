@@ -40,12 +40,10 @@
     }
   },
   "info": {
-    "intro": "Een inheemse plant van natte hooilanden met kleine, donkerrode bolletjes op lange stelen die boven het blad uitdansen. Hij is de waardplant van het pimpernelblauwtje, een zeldzame vlinder.",
-    "water": "Houdt van vochtige grond. Geef water in droge zomers, anders wordt het blad bruin.",
+    "intro": "Inheemse plant van natte hooilanden met donkerrode bolletjes op lange stelen boven het blad. Waardplant van het zeldzame pimpernelblauwtje.",
+    "water": "Houd de grond vochtig; in droge zomers water geven, anders wordt het blad bruin.",
     "tips": [
-      "Mooi tussen siergrassen en andere laat bloeiende vaste planten.",
-      "Laat de zaadhoofdjes in de winter staan; ze zien er mooi uit met rijp.",
-      "Wordt na een paar jaar een flinke pol; zet hem niet te dicht bij andere planten."
+      "Wordt na een paar jaar een flinke pol; geef hem ruimte."
     ]
   },
   "tasks": [
@@ -57,7 +55,7 @@
         "from": "03-15",
         "to": "05-01"
       },
-      "description": "Plant in het voorjaar op een zonnige of licht beschaduwde plek met vochtige grond, op zo'n 50 cm afstand."
+      "description": "Plant op een zonnige of licht beschaduwde plek met vochtige grond, op zo'n 50 cm afstand."
     },
     {
       "id": "terugknippen",
@@ -67,7 +65,7 @@
         "from": "02-15",
         "to": "03-31"
       },
-      "description": "Knip de oude stengels in het late voorjaar af tot net boven de grond, voordat het nieuwe blad komt."
+      "description": "Knip de oude stengels af tot net boven de grond, voordat het nieuwe blad komt."
     },
     {
       "id": "delen",
@@ -77,7 +75,7 @@
         "from": "03-15",
         "to": "04-15"
       },
-      "description": "Steek een grote pol om de paar jaar in het voorjaar uit en verdeel hem in stukken met wortels."
+      "description": "Steek een grote pol om de paar jaar uit en verdeel hem in stukken met wortels."
     }
   ]
 }

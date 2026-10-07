@@ -39,12 +39,12 @@
     }
   },
   "info": {
-    "intro": "Een sterke heester met grote, kegelvormige bloempluimen die wit openen en in de herfst vaak roze verkleuren. Veel makkelijker dan de boerenhortensia: hij bloeit op nieuw hout.",
-    "water": "Geef in droge zomers flink water; hortensia's drinken veel.",
+    "intro": "Sterke heester met grote, kegelvormige bloempluimen die wit opengaan en in de herfst vaak roze kleuren. Makkelijker dan de boerenhortensia, omdat hij bloeit op hout van dit jaar.",
+    "water": "Geef in droge zomers flink water, vooral in de volle zon.",
     "tips": [
-      "Kan ook in de volle zon staan, mits de grond vochtig blijft.",
-      "De uitgebloeide pluimen blijven in de winter mooi staan.",
-      "Stevig snoeien geeft grotere pluimen, licht snoeien meer kleine."
+      "Licht giftig bij opeten, ook voor honden en katten, en het sap kan de huid irriteren: draag handschoenen.",
+      "Stevig snoeien geeft minder maar grotere pluimen, licht snoeien meer kleine.",
+      "Laat de uitgebloeide pluimen 's winters staan en knip ze pas in maart weg."
     ]
   },
   "tasks": [
@@ -56,7 +56,7 @@
         "from": "10-15",
         "to": "04-15"
       },
-      "description": "Plant in de rustperiode op zo'n 1,5 meter afstand, in voedzame grond."
+      "description": "Plant als de grond niet bevroren is, op zo'n 1,5 meter afstand in voedzame grond."
     },
     {
       "id": "snoeien",
@@ -66,7 +66,7 @@
         "from": "03-01",
         "to": "03-31"
       },
-      "description": "Snoei in maart alle takken van vorig jaar terug tot 2-3 knoppenparen. De bloemen komen aan het nieuwe hout."
+      "description": "Snoei de takken van vorig jaar terug tot 2–3 knoppenparen boven de basis."
     },
     {
       "id": "bemesten",
@@ -76,7 +76,7 @@
         "from": "04-01",
         "to": "04-30"
       },
-      "description": "Geef in het voorjaar een laag compost of wat organische mest rond de struik."
+      "description": "Geef een laag compost of wat organische mest rond de struik."
     }
   ]
 }

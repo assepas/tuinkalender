@@ -40,12 +40,11 @@
     }
   },
   "info": {
-    "intro": "Komkommers groeien het best in een kas, maar er zijn ook goede buitenrassen (vaak kleinere, stekelige vruchten). Een gezonde plant geeft wekenlang elke paar dagen een komkommer.",
-    "water": "Geef dagelijks water in warme periodes, liefst lauw en op de grond. Droogte maakt de vruchten bitter.",
+    "intro": "Vruchtgroente die het best groeit in een kas; voor buiten zijn er aparte buitenrassen, vaak met kleinere, stekelige vruchten. Een gezonde plant geeft wekenlang om de paar dagen een komkommer.",
+    "water": "Bij warm weer dagelijks, liefst lauw water op de grond; droogte maakt de vruchten bitter.",
     "tips": [
-      "Kies voor buiten een ras dat daarvoor geschikt is.",
-      "Leid de plant langs een touw of rek omhoog.",
-      "Pluk regelmatig: grote komkommers remmen nieuwe vruchten."
+      "Buiten lukt alleen met een ras dat daarvoor geschikt is (buitenkomkommer).",
+      "Pluk op tijd: grote komkommers aan de plant remmen de aanmaak van nieuwe."
     ]
   },
   "tasks": [
@@ -58,7 +57,7 @@
         "from": "04-15",
         "to": "05-15"
       },
-      "description": "Zaai binnen in potjes, 1 zaad per pot, 1 cm diep, op 20-25 °C."
+      "description": "Zaai in potjes, 1 zaad per pot, 1 cm diep, bij 20–25 °C."
     },
     {
       "id": "uitplanten",
@@ -70,7 +69,7 @@
         "toWeeks": 4
       },
       "note": "Pas na de laatste nachtvorst",
-      "description": "Plant uit in de kas of buiten na de laatste nachtvorst, op een warme plek, met een touw of rek om in te klimmen."
+      "description": "Plant in de kas of op een warme, beschutte plek buiten, 50 cm uit elkaar. Zet er een touw of rek bij om langs te klimmen."
     },
     {
       "id": "bemesten",
@@ -81,7 +80,7 @@
         "to": "08-31",
         "every": "2weeks"
       },
-      "description": "Geef om de twee weken vloeibare organische mest."
+      "description": "Geef vloeibare organische mest met het gietwater."
     },
     {
       "id": "oogsten",
@@ -92,7 +91,7 @@
         "to": "09-30",
         "every": "week"
       },
-      "description": "Snijd komkommers af als ze de juiste grootte hebben, liefst twee keer per week."
+      "description": "Snijd komkommers af zodra ze op maat zijn, liefst twee keer per week."
     }
   ]
 }

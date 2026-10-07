@@ -43,13 +43,12 @@
     }
   },
   "info": {
-    "intro": "Dit is de bekendste laurier voor een haag: een stevige, groenblijvende struik met grote, glanzende, ronde bladeren die het hele jaar privacy geeft. In het voorjaar draagt hij rechtopstaande trossen crèmewitte bloemen, later gevolgd door zwarte besjes. Hij groeit snel, houdt van zon én schaduw en verdraagt snoeien goed.",
-    "water": "Geef een nieuwe plant het eerste jaar bij droog weer een keer per week flink water. Gevestigde struiken redden zich meestal zelf, alleen bij langdurige droogte in de zomer is een extra gietbeurt welkom.",
+    "intro": "Snelgroeiende, groenblijvende struik met grote, glanzende bladeren; de bekendste laurier voor een haag. Verdraagt zon en schaduw en goed snoeien.",
+    "water": "Een nieuwe plant het eerste jaar bij droog weer wekelijks flink water geven; daarna alleen bij langdurige droogte.",
     "tips": [
-      "Alle delen van de plant zijn giftig, vooral de bladeren en de zaden in de besjes. Houd kinderen en huisdieren erbij in de gaten en eet de bessen niet.",
-      "Knip nooit met een heggenschaar: die snijdt de grote bladeren doormidden, die daarna bruin en lelijk worden. Gebruik een snoeischaar en knip elke tak apart.",
-      "Kleine gaatjes in de bladeren komen van schotjesziekte of insecten en zijn onschuldig; de plant herstelt zelf.",
-      "Zonder snoeien groeit hij uit tot een boom van 3 tot 4 meter hoog en breed. Snoei dus elk jaar als je een smalle haag wilt."
+      "Alle delen zijn giftig, vooral blad en de zaden in de besjes: houd kinderen en huisdieren erbij in de gaten.",
+      "Zonder jaarlijkse snoei wordt hij 4 meter of hoger en bijna even breed.",
+      "Kleine gaatjes in het blad komen van schotjesziekte of insecten; de plant herstelt zelf."
     ]
   },
   "tasks": [
@@ -62,7 +61,7 @@
         "to": "04-15"
       },
       "note": "Niet bij vorst planten",
-      "description": "Plant in de herfst of het vroege voorjaar op een dag dat de grond niet bevroren is. Voor een haag zet je de planten op ongeveer 50 cm van elkaar, even diep als in de pot. Geef na het planten flink water en leg een laag compost of bladgrond rond de planten tegen uitdrogen."
+      "description": "Plant als de grond niet bevroren is, voor een haag op 50 cm afstand, even diep als in de pot. Geef flink water en leg compost rond de voet tegen uitdrogen."
     },
     {
       "id": "bemesten",
@@ -72,7 +71,7 @@
         "from": "03-15",
         "to": "04-30"
       },
-      "description": "Strooi in het voorjaar een handvol organische mest of een laag compost rond de voet van de struik. Dat geeft genoeg voeding voor een mooi, donkergroen blad. Harken in de bovenste grondlaag is voldoende."
+      "description": "Strooi een handvol organische mest of een laag compost rond de voet en hark die licht in."
     },
     {
       "id": "snoeien",
@@ -84,7 +83,7 @@
         "to": "08-15"
       },
       "note": "Met snoeischaar, niet met heggenschaar",
-      "description": "Snoei na de bloei in de zomer, bij voorkeur op een bewolkte dag. Knip de takken één voor één met een snoeischaar, vlak boven een blad, en houd de haag onderaan iets breder dan bovenaan zodat het licht erbij kan. Verwijder ook dode of beschadigde takken helemaal."
+      "description": "Snoei na de bloei, liefst op een bewolkte dag. Knip per tak vlak boven een blad: doorgeknipte bladeren worden bruin. Houd de haag onderaan iets breder dan bovenaan."
     },
     {
       "id": "snoeien-licht",
@@ -96,7 +95,7 @@
         "to": "04-15"
       },
       "note": "Alleen bijwerken",
-      "description": "Knip in het vroege voorjaar takken met vorstschade (bruin en dor) terug tot op het gezonde, groene hout. Een stevige verjongingssnoei in een kale of te grote struik kan in dezelfde periode, de plant loopt daarna meestal goed weer uit."
+      "description": "Knip bruine takken met vorstschade terug tot op gezond hout. Een flinke verjongingssnoei kan ook nu; hij loopt meestal goed weer uit."
     }
   ]
 }

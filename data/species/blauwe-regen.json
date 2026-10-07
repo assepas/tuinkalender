@@ -38,12 +38,11 @@
     }
   },
   "info": {
-    "intro": "Een krachtige klimmer met lange, hangende trossen lila bloemen in mei. De geur is zoet en bedwelmend. Hij heeft een stevige pergola of muur nodig: hij wordt zwaar.",
-    "water": "Geef jonge planten water tot ze goed geworteld zijn.",
+    "intro": "Krachtige klimmer met lange, hangende trossen geurende lila bloemen in mei. Hij wordt zwaar en heeft een stevige pergola of muur nodig.",
+    "water": "Geef jonge planten in droge periodes water tot ze goed geworteld zijn; daarna redt hij zich.",
     "tips": [
-      "Twee keer per jaar snoeien is het geheim van veel bloei.",
       "De zaden en peulen zijn giftig.",
-      "Een jonge plant bloeit soms pas na een paar jaar; kies een geënte plant."
+      "Een jonge plant bloeit soms pas na een paar jaar; kies daarom een geënte plant."
     ]
   },
   "tasks": [
@@ -55,7 +54,7 @@
         "from": "10-15",
         "to": "04-15"
       },
-      "description": "Plant in de rustperiode tegen een stevige pergola of muur met draden, op een zonnige plek."
+      "description": "Plant in de rustperiode op een zonnige plek, tegen een stevige pergola of muur met draden."
     },
     {
       "id": "zomersnoei",
@@ -76,7 +75,7 @@
         "from": "01-15",
         "to": "02-28"
       },
-      "description": "Knip in de winter dezelfde scheuten verder in tot 2-3 knoppen. De dikke, ronde knoppen zijn bloemknoppen: die laat je staan."
+      "description": "Knip dezelfde scheuten verder in tot 2-3 knoppen. Laat de dikke, ronde knoppen staan: dat zijn bloemknoppen."
     }
   ]
 }

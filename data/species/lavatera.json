@@ -38,12 +38,11 @@
     }
   },
   "info": {
-    "intro": "Een snelgroeiende eenjarige met grote, glanzende bekerbloemen in roze of wit. Hij vormt in een paar weken een flinke struik vol bloemen.",
-    "water": "Geef water na het zaaien en in droge periodes; verder weinig veeleisend.",
+    "intro": "Snelgroeiende eenjarige met grote, glanzende bekerbloemen in roze of wit. Wordt in een paar weken een flinke bloeiende struik.",
+    "water": "Water na het zaaien en in droge periodes.",
     "tips": [
-      "Houdt niet van verplanten; zaai in grote potjes of direct op de plek.",
-      "Te rijke grond geeft veel blad en weinig bloemen.",
-      "Er bestaat ook een struikvormige, meerjarige lavatera; die snoei je in het voorjaar flink terug."
+      "Verplant slecht; zaai in grote potjes of direct op de plek.",
+      "Te rijke grond geeft veel blad en weinig bloemen."
     ]
   },
   "tasks": [
@@ -66,7 +65,7 @@
         "from": "04-15",
         "to": "05-31"
       },
-      "description": "Zaai direct buiten op de plek, 1 cm diep, en dun uit tot 45 cm afstand."
+      "description": "Zaai direct op de plek, 1 cm diep, en dun uit tot 45 cm."
     },
     {
       "id": "uitplanten",
@@ -77,7 +76,7 @@
         "fromWeeks": 0,
         "toWeeks": 2
       },
-      "description": "Plant voorgezaaide plantjes uit na de laatste nachtvorst. Laat de kluit heel."
+      "description": "Plant voorgezaaide plantjes uit zonder de kluit te breken."
     },
     {
       "id": "dode-bloemen-verwijderen",
@@ -89,7 +88,7 @@
         "every": "2weeks"
       },
       "note": "Uitgebloeide bloemen weghalen",
-      "description": "Knip uitgebloeide bloemen af, dan blijft hij tot de herfst bloeien."
+      "description": "Knip ze af, dan bloeit hij door tot de herfst."
     }
   ]
 }

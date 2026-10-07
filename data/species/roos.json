@@ -37,12 +37,11 @@
     }
   },
   "info": {
-    "intro": "De koningin van de tuin: rozen bloeien van juni tot in de herfst en veel rassen geuren heerlijk. Er zijn struikrozen, klimrozen en bodembedekkende rozen.",
-    "water": "Geef in droge periodes een paar keer per week flink water aan de voet, niet over het blad; nat blad geeft sneller schimmelziektes.",
+    "intro": "Struik die van juni tot in de herfst bloeit, vaak met geurende bloemen. Er zijn struikrozen, klimrozen en bodembedekkende rozen.",
+    "water": "Geef in droge periodes een paar keer per week flink water aan de voet, niet over het blad; nat blad geeft schimmelziektes.",
     "tips": [
-      "Kies bij voorkeur een ras met een ADR-keurmerk: die zijn gezond en minder vatbaar voor ziektes.",
-      "Zwarte vlekken op het blad (sterroetdauw): haal aangetast blad weg en gooi het niet op de compost.",
-      "Een roos wil een open plek met veel zon en luchtige grond."
+      "Kies een ras met ADR-keurmerk: die zijn minder vatbaar voor ziektes.",
+      "Zwarte vlekken op het blad (sterroetdauw): haal aangetast blad weg en gooi het niet op de compost."
     ]
   },
   "tasks": [
@@ -54,7 +53,7 @@
         "from": "03-01",
         "to": "04-30"
       },
-      "description": "Zet een roos met blote wortels eerst een paar uur in een emmer water. Plant hem zo diep dat de verdikking waar de takken beginnen (de entplek) 5 cm onder de grond zit. Meng compost door de grond en geef flink water."
+      "description": "Zet een roos met blote wortels eerst een paar uur in een emmer water. Plant zo diep dat de entplek (de verdikking waar de takken beginnen) 5 cm onder de grond zit, meng compost door de grond en geef flink water."
     },
     {
       "id": "snoeien",
@@ -66,7 +65,7 @@
         "to": "03-15"
       },
       "note": "Snoeien als de forsythia bloeit",
-      "description": "Knip dood, dun en naar binnen groeiend hout weg. Snoei de overige takken van struikrozen terug tot 3 à 5 ogen (knoppen) boven de grond, schuin net boven een naar buiten wijzende knop. Klimrozen snoei je alleen licht: de zijtakjes tot 2 à 3 knoppen."
+      "description": "Knip dood, dun en naar binnen groeiend hout weg. Snoei struikrozen terug tot 3–5 knoppen boven de grond, schuin net boven een naar buiten wijzende knop. Bij klimrozen alleen de zijtakjes tot 2–3 knoppen."
     },
     {
       "id": "bemesten",
@@ -76,7 +75,7 @@
         "from": "03-15",
         "to": "04-15"
       },
-      "description": "Strooi in het voorjaar na het snoeien een organische rozenmest of gedroogde koemest rond de struik en werk hem licht in. Een tweede, kleinere gift in juni helpt bij doorbloeiende rozen voor een tweede bloei."
+      "description": "Strooi na het snoeien organische rozenmest of gedroogde koemest rond de struik en werk het licht in. Doorbloeiende rozen krijgen in juni nog een kleine gift."
     },
     {
       "id": "dode-bloemen-verwijderen",
@@ -88,7 +87,7 @@
         "every": "week"
       },
       "note": "Uitgebloeide bloemen weghalen",
-      "description": "Knip uitgebloeide bloemen af tot net boven het eerste volledige blad met vijf blaadjes. Daar komt een nieuwe bloeitak uit. Zo blijven doorbloeiende rozen tot de herfst bloemen maken."
+      "description": "Knip uitgebloeide bloemen af tot net boven het eerste blad met vijf blaadjes. Daar komt een nieuwe bloeitak uit."
     }
   ]
 }

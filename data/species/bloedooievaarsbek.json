@@ -41,13 +41,8 @@
     }
   },
   "info": {
-    "intro": "Een lage, stevige vaste plant met fijn ingesneden blad en magenta bloemen van mei tot de nazomer. In de herfst kleurt het blad rood. Taai en makkelijk.",
-    "water": "Kan goed tegen droogte; alleen water na het planten.",
-    "tips": [
-      "Goede bodembedekker onder rozen en langs paden.",
-      "Knip hem na de eerste bloei terug voor fris blad en nieuwe bloemen.",
-      "De witte vorm ('Album') is net zo sterk."
-    ]
+    "intro": "Lage, taaie vaste plant met fijn ingesneden blad en magenta bloemen van mei tot de nazomer. Goede bodembedekker onder rozen en langs paden; in de herfst kleurt het blad rood.",
+    "water": "Kan goed tegen droogte; alleen water geven na het planten."
   },
   "tasks": [
     {
@@ -58,7 +53,7 @@
         "from": "03-15",
         "to": "05-15"
       },
-      "description": "Plant op zo'n 35 cm afstand op een zonnige of licht beschaduwde plek."
+      "description": "Plant op zo'n 35 cm afstand, in de zon of lichte schaduw."
     },
     {
       "id": "terugknippen-na-bloei",
@@ -79,7 +74,7 @@
         "from": "03-15",
         "to": "04-15"
       },
-      "description": "Verdeel grote pollen om de paar jaar in het voorjaar."
+      "description": "Steek grote pollen om de paar jaar uit en verdeel ze met een schop."
     }
   ]
 }

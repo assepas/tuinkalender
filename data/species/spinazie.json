@@ -35,12 +35,10 @@
     }
   },
   "info": {
-    "intro": "Een snelle bladgroente voor voorjaar en najaar. Spinazie houdt van koel weer; in de zomer schiet hij snel door (gaat bloeien).",
-    "water": "Houd de grond vochtig; droogte en warmte laten spinazie doorschieten.",
+    "intro": "Snelle bladgroente voor voorjaar en najaar. Spinazie groeit het best bij koel weer; bij warmte en droogte schiet hij door (gaat bloeien).",
+    "water": "Houd de grond steeds vochtig; geef bij droog weer een paar keer per week water.",
     "tips": [
-      "Kies voor de zomer een doorschietbestendig ras.",
-      "Jong blad is lekker rauw in een salade.",
-      "Zaai in het najaar opnieuw voor oogst tot in de winter."
+      "Kies voor late voorjaars- en zomerzaai een doorschietbestendig ras."
     ]
   },
   "tasks": [
@@ -52,7 +50,7 @@
         "from": "03-01",
         "to": "04-30"
       },
-      "description": "Zaai in rijen op 20 cm afstand, 2 cm diep. Dun uit tot 8-10 cm."
+      "description": "Zaai 2 cm diep in rijen op 20 cm afstand. Dun uit tot 8–10 cm."
     },
     {
       "id": "zaaien-najaar",
@@ -62,7 +60,7 @@
         "from": "08-15",
         "to": "09-30"
       },
-      "description": "Zaai opnieuw in de nazomer voor een oogst in de herfst en het vroege voorjaar."
+      "description": "Zaai net zo als in het voorjaar, voor oogst in de herfst en het vroege voorjaar."
     },
     {
       "id": "oogsten",
@@ -72,7 +70,7 @@
         "from": "04-15",
         "to": "06-15"
       },
-      "description": "Snijd de hele plant af of pluk steeds de buitenste bladeren. Oogst voor hij gaat bloeien."
+      "description": "Snijd de hele plant af of pluk steeds de buitenste bladeren, vóór hij gaat bloeien."
     },
     {
       "id": "oogsten-najaar",
@@ -82,7 +80,7 @@
         "from": "10-01",
         "to": "11-30"
       },
-      "description": "Pluk de buitenste bladeren van het najaarsgewas."
+      "description": "Pluk steeds de buitenste bladeren."
     }
   ]
 }

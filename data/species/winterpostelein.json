@@ -36,12 +36,11 @@
     }
   },
   "info": {
-    "intro": "Een frisse bladgroente die je in de nazomer zaait en in de herfst, winter en het voorjaar oogst. Hij kan goed tegen vorst.",
-    "water": "Houd de grond licht vochtig.",
+    "intro": "Winterharde bladgroente die je in de nazomer zaait en van de herfst tot in het voorjaar oogst. Handig voor een bed dat na de zomergroenten vrijkomt.",
+    "water": "Houd de grond licht vochtig, vooral tot het zaad opkomt.",
     "tips": [
-      "Mooi voor een bed dat na de zomergroenten vrijkomt.",
-      "De bloemetjes en stengels zijn ook eetbaar.",
-      "Zaait zich uit als je hem laat bloeien."
+      "Bloemetjes en stengels zijn ook eetbaar.",
+      "Laat je hem bloeien, dan zaait hij zich uit."
     ]
   },
   "tasks": [
@@ -53,7 +52,7 @@
         "from": "08-15",
         "to": "10-15"
       },
-      "description": "Zaai breedwerpig of in rijen, dun bedekt."
+      "description": "Zaai breedwerpig of in rijen en bedek het zaad maar heel dun."
     },
     {
       "id": "oogsten",
@@ -63,7 +62,7 @@
         "from": "10-15",
         "to": "04-30"
       },
-      "description": "Knip de bladeren af op een paar centimeter boven de grond; hij groeit opnieuw aan."
+      "description": "Knip het blad een paar centimeter boven de grond af; het groeit weer aan."
     }
   ]
 }

@@ -39,10 +39,9 @@
     }
   },
   "info": {
-    "intro": "Een ouderwetse tweejarige met dichte, geurende bloemschermen in rood, roze en wit, vaak met een oog. Een echte boerentuinplant en een lang houdbare snijbloem.",
-    "water": "Geef water in droge periodes, vooral in het eerste jaar.",
+    "intro": "Tweejarige boerentuinplant met dichte, geurende bloemschermen in rood, roze en wit. Lang houdbaar als snijbloem.",
+    "water": "Water geven bij droogte, vooral het eerste jaar.",
     "tips": [
-      "Tweejarig: dit jaar zaaien, volgend jaar bloei.",
       "Laat een paar schermen zaad zetten, dan zaait hij zich uit.",
       "Houdt niet van natte, zure grond."
     ]
@@ -57,7 +56,7 @@
         "to": "07-15"
       },
       "note": "Bloeit pas volgend jaar",
-      "description": "Zaai in de zomer in een zaaibed of potjes. De plantjes bloeien volgend jaar."
+      "description": "Zaai in een zaaibed of in potjes."
     },
     {
       "id": "planten",
@@ -67,7 +66,7 @@
         "from": "09-01",
         "to": "10-15"
       },
-      "description": "Zet de jonge planten in het najaar op hun vaste plek, op zo'n 25 cm afstand."
+      "description": "Zet de jonge planten op hun vaste plek, 25 cm uit elkaar."
     },
     {
       "id": "uitgebloeid-afknippen",
@@ -78,7 +77,7 @@
         "from": "07-15",
         "to": "08-15"
       },
-      "description": "Knip uitgebloeide schermen af. Laat er een paar staan als je nieuwe zaailingen wilt."
+      "description": "Knip uitgebloeide schermen af. Laat er een paar staan als je zaailingen wilt."
     }
   ]
 }

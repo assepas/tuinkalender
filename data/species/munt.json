@@ -41,12 +41,11 @@
     }
   },
   "info": {
-    "intro": "Een onverwoestbaar, fris keukenkruid voor thee, mojito en salades. Er zijn veel smaken, zoals pepermunt, marokkaanse munt en appelmunt.",
-    "water": "Munt houdt van vochtige grond. Geef in de zomer regelmatig water, zeker in een pot, want die droogt snel uit.",
+    "intro": "Sterk keukenkruid voor thee en salades, in veel smaken zoals pepermunt, Marokkaanse munt en appelmunt.",
+    "water": "Houd de grond vochtig; een pot droogt in de zomer snel uit en heeft dan vaak water nodig.",
     "tips": [
-      "Munt woekert met ondergrondse uitlopers: zet hem in een pot of graaf een emmer zonder bodem in.",
-      "Knip regelmatig; jong blad is het lekkerst.",
-      "Plant verschillende muntsoorten niet naast elkaar, ze groeien door elkaar heen."
+      "Oranjebruine vlekjes op het blad zijn muntroest: knip aangetaste stengels weg.",
+      "Plant verschillende muntsoorten niet naast elkaar: ze groeien door elkaar heen."
     ]
   },
   "tasks": [
@@ -59,7 +58,7 @@
         "to": "05-15"
       },
       "note": "In een pot of met wortelbegrenzing",
-      "description": "Plant munt in een grote pot, of graaf in de volle grond een emmer of bak zonder bodem in en plant hem daarin. Zo houd je de uitlopers binnen de perken. Geef na het planten flink water."
+      "description": "Plant in een grote pot, of graaf in de grond een emmer of bak zonder bodem in met de rand iets boven de grond. Zo blijven de uitlopers binnen de perken. Geef daarna flink water."
     },
     {
       "id": "oogsten",
@@ -69,7 +68,7 @@
         "from": "05-01",
         "to": "09-30"
       },
-      "description": "Knip hele stengels af tot net boven een paar blaadjes; de plant loopt daar weer uit. Voor de voorraad kun je vlak voor de bloei bosjes knippen en die ondersteboven laten drogen."
+      "description": "Knip hele stengels af net boven een paar blaadjes; daar loopt de plant weer uit. Om te drogen knip je bosjes vlak voor de bloei en hang je ze ondersteboven."
     },
     {
       "id": "delen",
@@ -79,7 +78,7 @@
         "from": "03-15",
         "to": "04-15"
       },
-      "description": "Munt wordt na een paar jaar kaal in het midden. Haal de plant in het voorjaar uit de pot, snijd een stuk van de buitenkant af met frisse wortels en plant dat terug in verse grond."
+      "description": "Na een paar jaar wordt munt kaal in het midden. Haal hem uit de pot, snijd een stuk met jonge wortels van de buitenkant en plant dat in verse grond."
     }
   ]
 }

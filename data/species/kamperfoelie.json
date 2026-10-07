@@ -41,12 +41,12 @@
     }
   },
   "info": {
-    "intro": "Een inheemse klimplant met heerlijk geurende bloemen, vooral 's avonds. Nachtvlinders en hommels komen erop af, en in de herfst eten vogels de rode bessen.",
-    "water": "Geef de eerste zomer regelmatig water. Een klimplant tegen een muur of schutting droogt snel uit, dus geef daar ook later in droge periodes extra.",
+    "intro": "Inheemse klimplant met geurende bloemen, vooral 's avonds. Trekt nachtvlinders en hommels; vogels eten de rode bessen.",
+    "water": "De eerste zomer regelmatig water geven; tegen een muur of schutting ook later bij droogte.",
     "tips": [
-      "Geef hem draden, gaas of een hek om in te klimmen; hij windt zich om steunen heen.",
-      "Voet in de schaduw, bloemen in de zon: net als bij clematis.",
-      "Last van bladluis? Spuit met een harde straal water of laat lieveheersbeestjes hun werk doen."
+      "De rode bessen zijn licht giftig: niet opeten, let op kleine kinderen.",
+      "Hij windt zich om steunen: geef draden, gaas of een hek.",
+      "Bladluis spuit je weg met een harde straal water."
     ]
   },
   "tasks": [
@@ -58,7 +58,7 @@
         "from": "10-01",
         "to": "11-15"
       },
-      "description": "Plant in de herfst in een ruim gat met compost, zo'n 30 cm van muur of hek. Leid de scheuten met een stok naar het rek. Mulch de voet zodat de wortels koel blijven."
+      "description": "Plant in een ruim gat met compost, 30 cm van muur of hek. Leid de scheuten met een stok naar het rek en mulch de voet, zodat de wortels koel blijven."
     },
     {
       "id": "snoeien",
@@ -69,7 +69,7 @@
         "from": "08-15",
         "to": "09-15"
       },
-      "description": "Knip na de bloei de oudste en kale takken weg en kort te lange scheuten in. Zo blijft de plant vol en voorkom je een kale, verwarde bos onderaan met alle bloemen bovenin."
+      "description": "Knip na de bloei de oudste, kale takken weg en kort te lange scheuten in. Zo voorkom je een kale wirwar onderaan met alle bloemen bovenin."
     },
     {
       "id": "bemesten",
@@ -79,7 +79,7 @@
         "from": "03-01",
         "to": "03-31"
       },
-      "description": "Strooi in maart een laag compost of gedroogde koemest rond de voet. Meer is niet nodig; te veel mest geeft vooral blad."
+      "description": "Strooi een laag compost of gedroogde koemest rond de voet. Meer niet: te veel mest geeft vooral blad."
     }
   ]
 }

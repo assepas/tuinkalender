@@ -40,11 +40,10 @@
     }
   },
   "info": {
-    "intro": "Een sterke, makkelijke bessenstruik die jaar na jaar trossen rode bessen geeft. Ideaal voor beginners: hij verdraagt wat schaduw en vraagt weinig verzorging.",
-    "water": "Geef vooral in droge periodes tijdens de bloei en het rijpen van de bessen water, ongeveer een gieter per struik per week. Een laag mulch houdt de grond koel en vochtig.",
+    "intro": "Sterke bessenstruik die elk jaar trossen rode bessen geeft. Makkelijk voor beginners: hij verdraagt wat schaduw en vraagt weinig verzorging.",
+    "water": "Geef in droge periodes tijdens bloei en rijping ongeveer een gieter per struik per week; een laag mulch houdt de grond vochtig.",
     "tips": [
-      "Houd 8 tot 10 sterke hoofdtakken aan; de meeste bessen groeien aan takken van 2 tot 3 jaar oud.",
-      "Leg bij het rijpen een net over de struik, merels zijn er dol op.",
+      "Leg bij het rijpen een net over de struik tegen merels.",
       "Plant niet te diep: de wortelhals hoort net onder de grond."
     ]
   },
@@ -57,7 +56,7 @@
         "from": "10-15",
         "to": "03-15"
       },
-      "description": "Graaf een ruim plantgat, meng de grond met wat compost en zet de struik er zo in dat hij even diep staat als in de pot. Druk de grond aan en geef flink water. Planten kan de hele winter zolang het niet vriest."
+      "description": "Zet de struik even diep als in de pot in een ruim plantgat met wat compost. Druk aan en geef flink water. Planten kan de hele winter zolang het niet vriest."
     },
     {
       "id": "snoeien",
@@ -69,7 +68,7 @@
         "to": "02-28"
       },
       "note": "Oudste takken bij de grond weg",
-      "description": "Knip de oudste, donkerste takken (4 jaar en ouder) vlak bij de grond weg, en ook takken die kruisen of over de grond hangen. Zo blijft de struik open en maakt hij jonge takken aan die veel bessen geven. Laat ongeveer 8 tot 10 gezonde hoofdtakken staan."
+      "description": "Knip de oudste, donkerste takken (4 jaar en ouder) en kruisende of hangende takken vlak bij de grond weg. Laat 8 tot 10 gezonde hoofdtakken staan; de bessen groeien vooral aan takken van 2 tot 3 jaar."
     },
     {
       "id": "bemesten",
@@ -79,7 +78,7 @@
         "from": "03-01",
         "to": "03-31"
       },
-      "description": "Strooi in het vroege voorjaar een laag compost of goed verteerde (gedroogde) koemest rond de struik, ongeveer een schep per struik. Werk het oppervlakkig in en houd het een paar centimeter van de takken af."
+      "description": "Strooi ongeveer een schep compost of gedroogde koemest rond de struik en werk die oppervlakkig in. Houd het een paar centimeter van de takken af."
     },
     {
       "id": "oogsten",
@@ -89,7 +88,7 @@
         "from": "07-01",
         "to": "08-15"
       },
-      "description": "Pluk de trosjes in hun geheel zodra alle bessen aan het tros rood en glanzend zijn; knip of knijp het steeltje af. Rijpe bessen blijven een week of twee goed aan de struik hangen, dus je kunt in een paar keer oogsten."
+      "description": "Pluk hele trosjes zodra alle bessen rood en glanzend zijn; knip of knijp het steeltje af. Rijpe bessen blijven een week of twee goed hangen, dus je kunt in een paar keer oogsten."
     }
   ]
 }

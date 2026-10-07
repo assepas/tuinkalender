@@ -41,11 +41,9 @@
     }
   },
   "info": {
-    "intro": "Een lage, kruipende bodembedekker met glanzend blad en korte, blauwe bloemaren in het voorjaar. Hij vormt snel een dicht tapijt onder struiken en in de schaduw.",
+    "intro": "Lage, kruipende bodembedekker met glanzend blad en korte blauwe bloemaren in het voorjaar. Vormt snel een dicht tapijt onder struiken en in de schaduw.",
     "water": "Houd de grond vochtig; in droge zon verdort hij.",
     "tips": [
-      "Er zijn vormen met donkerpaars of bont blad.",
-      "Verspreidt zich met uitlopers die je makkelijk kunt verplanten.",
       "Kan ook in een schaduwrijk gazon."
     ]
   },
@@ -58,7 +56,7 @@
         "from": "03-15",
         "to": "05-15"
       },
-      "description": "Plant op zo'n 25 cm afstand; de uitlopers vullen het gat snel op."
+      "description": "Plant op zo'n 25 cm afstand; de uitlopers vullen de tussenruimte snel op."
     },
     {
       "id": "delen",

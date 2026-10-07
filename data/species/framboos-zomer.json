@@ -41,12 +41,12 @@
     }
   },
   "info": {
-    "intro": "De zomerframboos geeft in juli en augustus een grote oogst op de ranken van vorig jaar. Frambozen groeien snel en geven al in het tweede jaar volop.",
-    "water": "Frambozen hebben ondiepe wortels en drogen snel uit. Geef tijdens bloei en oogst in droge periodes twee keer per week water, en mulch de grond.",
+    "intro": "Framboos die in juli en augustus vrucht draagt op de ranken van vorig jaar. Groeit snel en geeft vanaf het tweede jaar een volle oogst.",
+    "water": "Ondiepe wortels drogen snel uit: geef tijdens bloei en oogst bij droogte twee keer per week water en houd de grond bedekt.",
     "tips": [
       "Span twee of drie draden langs de rij en bind de ranken daaraan vast.",
       "Zet ze niet op natte, zware grond: de wortels rotten dan.",
-      "Houd jonge ranken (volgend jaar vrucht) en oude ranken (dit jaar vrucht) uit elkaar, dan weet je wat je moet knippen."
+      "Knip in februari de toppen van de jonge ranken af op 1,5 m."
     ]
   },
   "tasks": [
@@ -56,11 +56,11 @@
       "importance": "hoofd",
       "window": {
         "kind": "dates",
-        "from": "02-15",
-        "to": "03-15"
+        "from": "08-15",
+        "to": "09-30"
       },
-      "note": "Alleen afgedragen ranken weg",
-      "description": "Knip de ranken die vorig jaar vrucht droegen (bruin, met afgebladderde schors) vlak bij de grond weg. Laat per meter rij 8 tot 10 sterke jonge ranken staan, bind ze aan de draden en knip de toppen af op zo'n 1,5 meter."
+      "note": "Afgedragen ranken weg",
+      "description": "Knip direct na de oogst de ranken die vrucht droegen (bruin, met afbladderende schors) vlak bij de grond weg. Laat per meter rij 8–10 sterke jonge ranken staan en bind ze aan."
     },
     {
       "id": "bemesten",
@@ -70,7 +70,7 @@
         "from": "03-01",
         "to": "03-31"
       },
-      "description": "Strooi in maart een laag compost of gedroogde koemest over de rij. Een laag blad of houtsnippers erbovenop houdt de grond vochtig en humusrijk, precies zoals frambozen het graag hebben."
+      "description": "Strooi een laag compost of gedroogde koemest over de rij, met blad of houtsnippers erop tegen uitdrogen."
     },
     {
       "id": "oogsten",
@@ -80,7 +80,7 @@
         "from": "07-01",
         "to": "08-31"
       },
-      "description": "Pluk de frambozen als ze diep rood zijn en makkelijk van het kegeltje loslaten. Pluk om de twee dagen en liefst als ze droog zijn; natte frambozen beschimmelen snel."
+      "description": "Pluk als de frambozen diep rood zijn en makkelijk loslaten. Pluk om de twee dagen en liefst droog; natte frambozen beschimmelen snel."
     },
     {
       "id": "delen",
@@ -90,7 +90,7 @@
         "from": "10-15",
         "to": "11-15"
       },
-      "description": "Frambozen maken wortelopslag, nieuwe scheuten buiten de rij. Steek die in het najaar met een stuk wortel uit en plant ze op een nieuwe plek, of haal ze weg als de rij te breed wordt."
+      "description": "Steek wortelopslag (nieuwe scheuten buiten de rij) met een stuk wortel uit en plant die elders, of haal ze weg als de rij te breed wordt."
     }
   ]
 }

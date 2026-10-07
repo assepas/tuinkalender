@@ -32,12 +32,10 @@
     }
   },
   "info": {
-    "intro": "Een snelle, puntige kool met mals, zoet blad. Hij groeit sneller dan ronde koolen en past goed in een kleine moestuin.",
-    "water": "Geef regelmatig water.",
+    "intro": "Puntige kool met mals blad. Hij groeit sneller dan ronde kool en past goed in een kleine moestuin.",
+    "water": "Geef in droge periodes ruim water; wisselend water geven laat de kool barsten.",
     "tips": [
-      "Heerlijk rauw in coleslaw of kort roergebakken.",
-      "Kan met wat bescherming al vroeg in het jaar geplant worden.",
-      "Gebruik gaas tegen koolvlieg en rupsen."
+      "Vroeg geplante kool (april) beschermen tegen kou met vliesdoek."
     ]
   },
   "tasks": [
@@ -50,7 +48,7 @@
         "from": "02-15",
         "to": "06-15"
       },
-      "description": "Zaai in potjes, 1 cm diep."
+      "description": "Zaai 1 cm diep in potjes. Plant uit bij 5–6 echte blaadjes."
     },
     {
       "id": "uitplanten",
@@ -60,7 +58,7 @@
         "from": "04-01",
         "to": "07-15"
       },
-      "description": "Plant op 45 cm afstand. Zet direct na het planten insectengaas over de kool tegen koolvlieg, koolwitje en duiven."
+      "description": "Plant op 45 cm afstand en druk goed aan. Leg meteen insectengaas over de planten tegen koolvlieg, rupsen en duiven."
     },
     {
       "id": "oogsten",
@@ -70,7 +68,7 @@
         "from": "06-01",
         "to": "10-31"
       },
-      "description": "Snijd de kool af als hij stevig en puntig is."
+      "description": "Snijd de kool af als hij stevig aanvoelt."
     }
   ]
 }

@@ -36,12 +36,12 @@
     }
   },
   "info": {
-    "intro": "Een mediterrane struik met grote, gelobde bladeren en zoete vijgen. Tegen een zonnige muur is hij in Nederland winterhard genoeg en geeft hij in de nazomer vruchten.",
+    "intro": "Struik uit het Middellandse Zeegebied met groot, gelobd blad en zoete vijgen. Tegen een zonnige muur is hij in Nederland winterhard genoeg en geeft hij in de nazomer vruchten.",
     "water": "Geef water in droge zomers; in een pot vaker.",
     "tips": [
       "Kies een winterhard ras zoals 'Brown Turkey' of 'Brunswick'.",
-      "Een beperkte wortelruimte geeft meer vruchten en minder blad.",
-      "Het melksap kan in de zon de huid irriteren."
+      "Beperkte wortelruimte (pot, of plantgat bekleed met tegels) geeft meer vruchten en minder blad.",
+      "Het melksap irriteert de huid, vooral in de zon: snoei met handschoenen."
     ]
   },
   "tasks": [
@@ -53,7 +53,7 @@
         "from": "04-15",
         "to": "05-31"
       },
-      "description": "Plant in het voorjaar tegen een zonnige, beschutte muur."
+      "description": "Plant tegen een zonnige, beschutte zuid- of westmuur."
     },
     {
       "id": "snoeien",
@@ -63,7 +63,7 @@
         "from": "03-15",
         "to": "04-30"
       },
-      "description": "Snoei in het voorjaar bevroren, dode en kruisende takken weg. Laat de kleine vijgjes aan de toppen zitten: die rijpen deze zomer."
+      "description": "Snoei bevroren, dode en kruisende takken weg. Laat de kleine vijgjes aan de toppen zitten: die rijpen deze zomer."
     },
     {
       "id": "winterhard",
@@ -73,7 +73,7 @@
         "from": "11-15",
         "to": "12-15"
       },
-      "description": "Bescherm jonge planten in strenge winters met vliesdoek of een dikke laag blad rond de voet. Zet een pot in een koele schuur."
+      "description": "Bescherm jonge planten in strenge winters met vliesdoek om de takken en een dikke laag blad rond de voet. Zet een pot in een koele schuur."
     },
     {
       "id": "oogsten",
@@ -83,7 +83,7 @@
         "from": "08-15",
         "to": "10-15"
       },
-      "description": "Pluk de vijgen als ze zacht zijn en aan het steeltje hangen. Ze rijpen niet na."
+      "description": "Pluk de vijgen als ze zacht zijn en slap aan het steeltje hangen; ze rijpen niet na."
     }
   ]
 }

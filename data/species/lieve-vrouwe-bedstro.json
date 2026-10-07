@@ -41,12 +41,11 @@
     }
   },
   "info": {
-    "intro": "Een inheemse bodembedekker voor de schaduw, met kransen van blad en witte stervormige bloemetjes in mei. Gedroogd ruikt het naar vers hooi en vanille.",
-    "water": "Houd de grond licht vochtig. Onder bomen en struiken is dat meestal vanzelf zo; in droge zomers extra water geven.",
+    "intro": "Inheemse bodembedekker voor de schaduw, met kransen van blad en witte stervormige bloemetjes in mei. Verwelkt of gedroogd ruikt hij naar hooi en vanille.",
+    "water": "Onder bomen en struiken meestal vanzelf vochtig genoeg; geef in droge zomers extra water.",
     "tips": [
       "Groeit het best in bosachtige grond met veel bladaarde.",
-      "Verspreidt zich rustig met uitlopers tot een dicht tapijt.",
-      "De geur komt pas vrij als het blad verwelkt of droogt."
+      "Verspreidt zich met uitlopers tot een dicht tapijt."
     ]
   },
   "tasks": [
@@ -58,7 +57,7 @@
         "from": "03-15",
         "to": "05-01"
       },
-      "description": "Plant op zo'n 25 cm afstand in de schaduw, bijvoorbeeld onder struiken of bomen. Meng wat bladaarde of compost door de grond en houd de plantjes de eerste weken vochtig."
+      "description": "Plant op zo'n 25 cm afstand, bijvoorbeeld onder struiken of bomen. Meng bladaarde of compost door de grond en houd de plantjes de eerste weken vochtig."
     },
     {
       "id": "oogsten",
@@ -68,7 +67,7 @@
         "from": "04-15",
         "to": "05-15"
       },
-      "description": "Pluk de stengels vlak voor de bloei, als de smaak en geur het sterkst zijn. Laat ze een dag verwelken, dan komt de vanillegeur vrij, bijvoorbeeld voor meiwijn. Gebruik met mate: in grote hoeveelheden is het niet gezond."
+      "description": "Pluk de stengels vlak voor de bloei en laat ze een dag verwelken, dan komt de vanillegeur vrij (bijvoorbeeld voor meiwijn). Gebruik met mate: veel is niet gezond."
     },
     {
       "id": "delen",
@@ -78,7 +77,7 @@
         "from": "09-15",
         "to": "10-15"
       },
-      "description": "Steek in het najaar plakken met wortels uit en plant ze op een nieuwe schaduwplek. Zo vul je snel een lege plek onder struiken."
+      "description": "Steek plakken met wortels uit en plant ze op een nieuwe schaduwplek."
     }
   ]
 }

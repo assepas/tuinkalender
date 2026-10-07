@@ -41,12 +41,11 @@
     }
   },
   "info": {
-    "intro": "Een ouderwetse tuinplant met trossen lila of witte bloemen die vooral 's avonds heerlijk geuren. Hij bloeit in mei en juni, tussen de voorjaarsbollen en de zomerbloeiers in.",
-    "water": "Houd de grond licht vochtig.",
+    "intro": "Ouderwetse tuinplant met trossen lila of witte bloemen die 's avonds geuren. Bloeit in mei en juni, tussen de voorjaarsbollen en de zomerbloeiers in.",
+    "water": "Grond licht vochtig houden; alleen water geven bij droogte.",
     "tips": [
-      "Tweejarig of kortlevend, maar zaait zich goed uit.",
-      "Waardplant van het oranjetipje.",
-      "Staat mooi in de halfschaduw aan de rand van struiken."
+      "Tweejarig of kortlevend, maar zaait zich makkelijk uit.",
+      "Waardplant van het oranjetipje: de rupsen eten van de zaaddozen."
     ]
   },
   "tasks": [
@@ -58,7 +57,7 @@
         "from": "05-01",
         "to": "07-15"
       },
-      "description": "Zaai in de zomer op de plek of in potjes. De plantjes bloeien volgend voorjaar."
+      "description": "Zaai op de plek of in potjes; de plantjes bloeien het volgende voorjaar."
     },
     {
       "id": "planten",
@@ -68,7 +67,7 @@
         "from": "09-01",
         "to": "10-15"
       },
-      "description": "Zet jonge planten in het najaar op zo'n 40 cm afstand."
+      "description": "Zet jonge planten 40 cm uit elkaar, in zon of halfschaduw."
     },
     {
       "id": "terugknippen",
@@ -79,7 +78,7 @@
         "from": "07-15",
         "to": "08-15"
       },
-      "description": "Knip de stengels na het zaad zetten af, of eerder als je geen zaailingen wilt."
+      "description": "Knip de stengels af als het zaad rijp is, of eerder als je geen zaailingen wilt."
     }
   ]
 }

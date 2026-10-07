@@ -34,10 +34,9 @@
     }
   },
   "info": {
-    "intro": "Een groente met een dikke, witte knol die fris naar anijs smaakt. Lekker rauw in salade of gegrild. Zaai hem in de zomer: in het voorjaar schiet hij snel door.",
+    "intro": "Groente met een dikke, witte knol die fris naar anijs smaakt, rauw of gegrild. Zaai in de zomer: voorjaarszaai schiet snel door.",
     "water": "Houd de grond gelijkmatig vochtig; droogte laat hem doorschieten.",
     "tips": [
-      "Zaai na half juni voor de beste knollen.",
       "Aanaarden houdt de knol wit.",
       "Het fijne loof kun je als dille gebruiken."
     ]
@@ -52,7 +51,7 @@
         "to": "07-31"
       },
       "note": "Na de langste dag",
-      "description": "Zaai direct in rijen op 30 cm afstand, of in potjes. Dun uit tot 25 cm."
+      "description": "Zaai direct in rijen op 30 cm afstand, of één zaadje per potje: verplanten verdraagt hij slecht. Dun uit tot 25 cm."
     },
     {
       "id": "oogsten",
@@ -62,7 +61,7 @@
         "from": "09-01",
         "to": "10-31"
       },
-      "description": "Snijd de knol af net boven de grond als hij zo groot als een vuist is."
+      "description": "Snijd de knol net boven de grond af als hij zo groot als een vuist is."
     }
   ]
 }

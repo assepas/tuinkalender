@@ -39,12 +39,12 @@
     }
   },
   "info": {
-    "intro": "Een inheemse vaste plant en keukenkruid (oregano) met roze bloemtuiltjes in de zomer. Een van de beste vlinder- en bijenplanten die er is.",
-    "water": "Wilde marjolein kan goed tegen droogte. Geef alleen water na het planten en bij lange droge periodes.",
+    "intro": "Inheemse vaste plant en keukenkruid (oregano) met roze bloemtuiltjes van juli tot september; een topplant voor bijen en vlinders.",
+    "water": "Kan goed tegen droogte: alleen water na het planten en bij lange droogte.",
     "tips": [
-      "Op arme, droge grond is de smaak het sterkst.",
-      "Laat een deel van de plant bloeien voor de insecten, en oogst van de rest.",
-      "Knip de plant in het voorjaar terug tot net boven de nieuwe scheutjes aan de voet."
+      "Op arme, droge grond is de smaak het sterkst; mest hem dus niet.",
+      "Oogst niet alles: laat een deel bloeien voor de insecten.",
+      "Knip de oude stengels in het voorjaar terug tot net boven de nieuwe scheutjes aan de voet."
     ]
   },
   "tasks": [
@@ -56,7 +56,7 @@
         "from": "04-15",
         "to": "05-31"
       },
-      "description": "Plant op een zonnige plek op zo'n 30 cm afstand, even diep als in de pot. Geef na het planten water; daarna redt hij zich prima."
+      "description": "Plant op 30 cm afstand, even diep als in de pot, en geef na het planten goed water."
     },
     {
       "id": "oogsten",
@@ -66,7 +66,7 @@
         "from": "06-15",
         "to": "09-15"
       },
-      "description": "Knip takjes af net voor of tijdens de bloei, dan is de smaak het sterkst. Hang bosjes ondersteboven te drogen op een luchtige, schaduwrijke plek en rits daarna het blad af."
+      "description": "Knip takjes net voor of tijdens de bloei, dan is de smaak het sterkst. Droog bosjes ondersteboven op een luchtige, schaduwrijke plek en rits daarna het blad af."
     },
     {
       "id": "delen",
@@ -76,7 +76,7 @@
         "from": "09-15",
         "to": "10-15"
       },
-      "description": "Steek de pol na een paar jaar in het najaar uit en verdeel hem in stukken. Plant de stukken terug of op een nieuwe plek; de plant wordt daar weer voller van."
+      "description": "Steek de pol na een paar jaar uit, verdeel hem en plant de stukken terug."
     }
   ]
 }

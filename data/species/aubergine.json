@@ -38,10 +38,10 @@
     }
   },
   "info": {
-    "intro": "Een warmteminnende groente die in Nederland vooral in de kas lukt. De glanzende paarse vruchten zijn lekker gegrild of in stoofgerechten.",
-    "water": "Geef regelmatig water; nooit laten uitdrogen.",
+    "intro": "Warmteminnende groente die in Nederland vooral in de kas lukt. De paarse vruchten zijn lekker gegrild of gestoofd.",
+    "water": "Geef regelmatig water en laat de grond nooit uitdrogen.",
     "tips": [
-      "Beperk het aantal vruchten tot vijf à zes per plant voor grotere aubergines.",
+      "Laat vijf à zes vruchten per plant zitten, dan worden ze groter.",
       "Spint (kleine spinnetjes onder het blad) houdt van droge lucht; nevel de kas af en toe.",
       "Kies voor buiten een klein, vroeg ras."
     ]
@@ -56,7 +56,7 @@
         "from": "02-01",
         "to": "03-15"
       },
-      "description": "Zaai binnen op 25 °C, 0,5 cm diep. Verspeen naar potjes."
+      "description": "Zaai 0,5 cm diep bij 25 °C. Zet de zaailingen daarna apart in potjes."
     },
     {
       "id": "uitplanten",

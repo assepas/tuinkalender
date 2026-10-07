@@ -39,12 +39,11 @@
     }
   },
   "info": {
-    "intro": "Een pompoen in peervorm met zoet, oranje vruchtvlees. Hij heeft warmte en ruimte nodig, en goed uitgerijpte vruchten bewaar je maandenlang.",
+    "intro": "Peervormige pompoen met zoet, oranje vruchtvlees. Goed uitgerijpte vruchten kun je maandenlang bewaren.",
     "water": "Geef regelmatig flink water op de grond, niet over het blad.",
     "tips": [
-      "Butternut wil warmer dan gewone pompoen: kies een zonnige, beschutte plek.",
-      "Leg een plankje of stro onder de vruchten tegen rot.",
-      "Laat ze na de oogst twee weken op een warme plek naharden."
+      "Hij wil meer warmte dan gewone pompoen: kies een zonnige, beschutte plek.",
+      "Leg een plankje of stro onder de vruchten tegen rot."
     ]
   },
   "tasks": [
@@ -57,7 +56,7 @@
         "from": "04-15",
         "to": "05-15"
       },
-      "description": "Zaai binnen in potjes, 1 zaad per pot, 2 cm diep, op een warme plek."
+      "description": "Zaai in potjes, 1 zaad per pot, 2 cm diep, op een warme plek."
     },
     {
       "id": "uitplanten",
@@ -69,7 +68,7 @@
         "toWeeks": 4
       },
       "note": "Pas na de laatste nachtvorst",
-      "description": "Plant uit na de laatste nachtvorst, 1,5 meter uit elkaar, in grond met veel compost."
+      "description": "Plant 1,5 meter uit elkaar in grond met veel compost."
     },
     {
       "id": "oogsten",
@@ -79,7 +78,7 @@
         "from": "09-15",
         "to": "10-31"
       },
-      "description": "Oogst voor de eerste nachtvorst als de schil hard en beige is en de steel verhout. Snijd af met een stuk steel."
+      "description": "Oogst vóór de eerste nachtvorst, als de schil hard en beige is en de steel verhout. Snijd af met een stuk steel en laat ze twee weken op een warme plek naharden."
     }
   ]
 }

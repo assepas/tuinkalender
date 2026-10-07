@@ -39,12 +39,10 @@
     }
   },
   "info": {
-    "intro": "Een compacte vaste plant met fijn, naaldachtig blad en honderden gele sterretjes. Hij bloeit de hele zomer door en is makkelijk in onderhoud.",
-    "water": "Kan tegen droogte. Alleen water geven na het planten en tijdens lange hittegolven.",
+    "intro": "Compacte vaste plant met naaldachtig blad en veel kleine gele sterbloemen, de hele zomer lang.",
+    "water": "Kan tegen droogte; alleen water na het planten en bij lange hitte.",
     "tips": [
-      "Houdt niet van natte grond in de winter.",
-      "Knip halverwege de zomer alles een derde terug als de bloei minder wordt: hij bloeit dan opnieuw.",
-      "Verdeel de plant om de drie jaar, dan blijft hij vitaal."
+      "Natte grond in de winter verdraagt hij slecht; plant hem in doorlatende grond."
     ]
   },
   "tasks": [
@@ -56,7 +54,7 @@
         "from": "04-01",
         "to": "05-31"
       },
-      "description": "Plant op een zonnige plek in doorlatende grond, op zo'n 35 cm afstand."
+      "description": "Plant op een zonnige plek op zo'n 35 cm afstand."
     },
     {
       "id": "terugknippen-zomer",
@@ -67,7 +65,7 @@
         "from": "08-01",
         "to": "08-20"
       },
-      "description": "Wordt de bloei minder, knip dan de hele plant een derde terug. Na een paar weken bloeit hij weer."
+      "description": "Wordt de bloei minder, knip dan de hele plant een derde terug. Na een paar weken bloeit hij opnieuw."
     },
     {
       "id": "terugknippen",
@@ -77,7 +75,7 @@
         "from": "03-01",
         "to": "03-31"
       },
-      "description": "Knip de oude stengels in het voorjaar af tot een paar centimeter boven de grond."
+      "description": "Knip de oude stengels af tot een paar centimeter boven de grond."
     },
     {
       "id": "delen",
@@ -87,7 +85,7 @@
         "from": "03-15",
         "to": "04-30"
       },
-      "description": "Steek de pol om de drie jaar in het voorjaar uit en verdeel hem. Plant de jonge buitenste stukken terug."
+      "description": "Steek de pol om de drie jaar uit en verdeel hem; plant de jonge buitenste stukken terug."
     }
   ]
 }

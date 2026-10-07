@@ -39,12 +39,12 @@
     }
   },
   "info": {
-    "intro": "Een sterke vaste plant met goudgele bloemen met een zwart hart. Hij bloeit van augustus tot in oktober en brengt kleur als veel andere planten al klaar zijn.",
-    "water": "Houdt van grond die niet uitdroogt; geef water in droge zomers.",
+    "intro": "Sterke vaste plant met goudgele bloemen met een zwart hart. Bloeit van augustus tot in oktober, als veel andere planten al klaar zijn.",
+    "water": "Water geven in droge zomers; de grond mag niet uitdrogen.",
     "tips": [
-      "Breidt zich rustig uit tot een grote pol.",
-      "Laat de zwarte zaadkoppen in de winter staan voor de vogels.",
-      "Slakken lusten het jonge blad in het voorjaar."
+      "Breidt zich langzaam uit tot een grote pol.",
+      "Laat de zaadkoppen in de winter staan voor vogels.",
+      "Slakken eten het jonge blad in het voorjaar."
     ]
   },
   "tasks": [
@@ -56,7 +56,7 @@
         "from": "03-15",
         "to": "05-15"
       },
-      "description": "Plant op zo'n 45 cm afstand in voedzame grond, op een zonnige plek."
+      "description": "Plant op een zonnige plek in voedzame grond, 45 cm uit elkaar."
     },
     {
       "id": "terugknippen",
@@ -66,7 +66,7 @@
         "from": "02-15",
         "to": "03-31"
       },
-      "description": "Knip de oude stengels eind van de winter af tot net boven de grond."
+      "description": "Knip de oude stengels af tot net boven de grond."
     },
     {
       "id": "delen",
@@ -76,7 +76,7 @@
         "from": "03-15",
         "to": "04-15"
       },
-      "description": "Verdeel de pol om de drie à vier jaar in het voorjaar."
+      "description": "Verdeel de pol om de drie à vier jaar."
     }
   ]
 }

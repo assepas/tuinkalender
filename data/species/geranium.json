@@ -38,12 +38,11 @@
     }
   },
   "info": {
-    "intro": "De klassieke balkon- en terrasplant die de hele zomer bloeit in rood, roze of wit. Hij is niet winterhard, maar je kunt hem makkelijk binnen overwinteren en jaren houden.",
-    "water": "Geef water als de bovenste centimeters potgrond droog zijn. Geraniums kunnen beter iets te droog dan te nat staan.",
+    "intro": "Balkon- en terrasplant die de hele zomer bloeit in rood, roze of wit. Niet winterhard, maar binnen makkelijk te overwinteren.",
+    "water": "Water geven als de bovenste centimeters potgrond droog zijn; liever iets te droog dan te nat.",
     "tips": [
-      "Een zonnige plek geeft de meeste bloemen.",
-      "Van een geranium kun je makkelijk stekken: zet een topscheut van 10 cm in een potje met stekgrond.",
-      "Gele onderste blaadjes betekenen meestal te veel water."
+      "Gele onderste bladeren betekenen meestal te veel water.",
+      "Stekken is makkelijk: zet een topscheut van 10 cm in een potje met stekgrond."
     ]
   },
   "tasks": [
@@ -57,7 +56,7 @@
         "toWeeks": 2
       },
       "note": "Pas na de laatste nachtvorst",
-      "description": "Zet de planten na half mei in bakken of potten met potgrond, of in de volle grond op een zonnige plek. Wen overwinterde planten eerst een week aan buiten, overdag in de schaduw."
+      "description": "Zet de planten in potten of bakken met potgrond, of in de volle grond, op een zonnige plek. Laat overwinterde planten eerst een week wennen buiten, overdag in de schaduw."
     },
     {
       "id": "bemesten",
@@ -68,7 +67,7 @@
         "to": "08-31",
         "every": "2weeks"
       },
-      "description": "Geef om de twee weken vloeibare balkonplantenmest (met veel kalium) door het gietwater. Planten in potten hebben de voeding in de potgrond na een paar weken opgebruikt."
+      "description": "Geef om de twee weken vloeibare balkonplantenmest met veel kalium; in een pot is de voeding na een paar weken op."
     },
     {
       "id": "dode-bloemen-verwijderen",
@@ -80,7 +79,7 @@
         "every": "week"
       },
       "note": "Uitgebloeide bloemen weghalen",
-      "description": "Knip of breek uitgebloeide bloemschermen met steel en al af, vlak bij de stengel. Zo blijft de plant bloeien en voorkom je dat er schimmel op rottende bloemen komt."
+      "description": "Knip of breek uitgebloeide bloemschermen met steel af, vlak bij de stengel. Zo bloeit hij door en voorkom je schimmel."
     },
     {
       "id": "winterhard",
@@ -91,7 +90,7 @@
         "to": "10-31"
       },
       "note": "Vorstvrij binnenzetten",
-      "description": "Haal de planten binnen voor de eerste nachtvorst. Knip ze een derde terug en zet ze op een koele, lichte plek (5 tot 12 °C). Geef in de winter heel weinig water. In maart kun je ze verpotten en wat warmer zetten."
+      "description": "Haal de planten binnen vóór de eerste nachtvorst, knip ze een derde terug en zet ze koel en licht (5–12 °C) met heel weinig water. In maart verpotten en warmer zetten."
     }
   ]
 }

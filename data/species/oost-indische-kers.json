@@ -7,7 +7,8 @@
   "tags": [
     "eenjarig",
     "eetbaar",
-    "klimmer"
+    "klimmer",
+    "vorstgevoelig"
   ],
   "nativeStatus": "exoot",
   "appearance": {
@@ -41,11 +42,11 @@
     }
   },
   "info": {
-    "intro": "Een snelgroeiende eenjarige met oranje, gele of rode bloemen en ronde bladeren. Blad, bloemen en onrijpe zaden zijn eetbaar en smaken pittig, een beetje als tuinkers.",
-    "water": "Geef water als de grond droog is. Op arme, niet te natte grond bloeit hij het rijkst; te veel water en mest geven vooral blad.",
+    "intro": "Snelgroeiende eenjarige met oranje, gele of rode bloemen en ronde bladeren. Blad, bloemen en onrijpe zaden zijn eetbaar en smaken pittig, zoals tuinkers.",
+    "water": "Water geven als de grond droog is; te veel water en mest geven vooral blad en weinig bloemen.",
     "tips": [
-      "Klimmende rassen kunnen langs een hek of rek omhoog; kruipende rassen bedekken de grond.",
-      "Geef hem geen mest, anders krijg je veel blad en weinig bloemen.",
+      "Klimmende rassen groeien langs een hek omhoog, kruipende rassen bedekken de grond.",
+      "Kan niet tegen vorst: de eerste nachtvorst doodt de plant.",
       "Zaait zich soms zelf uit met de grote zaden die op de grond vallen."
     ]
   },
@@ -60,7 +61,7 @@
         "toWeeks": 1
       },
       "note": "Pas na de laatste nachtvorst",
-      "description": "Leg de grote zaden 2 cm diep direct op de plek waar ze moeten groeien, op zo'n 30 cm afstand. Een nacht weken in lauw water maakt het kiemen sneller. Na een week of twee komen ze op."
+      "description": "Leg de zaden 2 cm diep op de plek zelf, 30 cm uit elkaar. Een nacht weken in lauw water versnelt het kiemen; na een week of twee komen ze op."
     },
     {
       "id": "oogsten",
@@ -70,7 +71,7 @@
         "from": "06-15",
         "to": "09-30"
       },
-      "description": "Pluk jonge bladeren en open bloemen voor in een salade. De groene, onrijpe zaden kun je inleggen in azijn als 'kappertjes'. Oogst liefst 's ochtends, dan zijn ze het frisst."
+      "description": "Pluk jonge bladeren en open bloemen voor salades, liefst 's ochtends. Groene, onrijpe zaden kun je inleggen in azijn als 'kappertjes'."
     },
     {
       "id": "onderhoud",
@@ -82,7 +83,7 @@
         "every": "2weeks"
       },
       "note": "Controleren op zwarte luis",
-      "description": "Oost-Indische kers trekt zwarte bladluis aan en werkt zo als lokplant: de luizen gaan dan niet naar je bonen. Kijk regelmatig onder de bladeren en knip zwaar aangetaste stengels weg, of spuit ze schoon met water."
+      "description": "Hij trekt zwarte bonenluis aan en werkt zo als lokplant voor je bonen. Knip zwaar aangetaste stengels weg of spuit de luizen eraf met water."
     }
   ]
 }

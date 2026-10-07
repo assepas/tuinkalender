@@ -38,12 +38,11 @@
     }
   },
   "info": {
-    "intro": "Een vrolijke zomerbloeier met aren vol bloemen in bijna elke kleur. Als je de bloem opzij knijpt, gaat het 'bekje' open. Hommels kruipen erin.",
-    "water": "Geef in droge periodes water; verder weinig zorg.",
+    "intro": "Zomerbloeier met aren vol bloemen in bijna elke kleur. Knijp je een bloem opzij, dan gaat het 'bekje' open; hommels kruipen erin.",
+    "water": "Geef water in droge periodes.",
     "tips": [
-      "Knip de hoofdaar na de bloei af, dan maken de zijscheuten nieuwe aren.",
       "Overleeft soms een zachte winter en bloeit dan vroeger.",
-      "Hoge rassen zijn mooie snijbloemen."
+      "Hoge rassen zijn goede snijbloemen."
     ]
   },
   "tasks": [
@@ -56,7 +55,7 @@
         "from": "02-15",
         "to": "03-31"
       },
-      "description": "Zaai binnen in een tray, het zaad alleen aandrukken: het kiemt in het licht. Verspeen de plantjes naar potjes en knijp de top eruit voor meer vertakking."
+      "description": "Zaai in een tray en druk het zaad alleen aan: het kiemt in het licht. Verspeen naar potjes en knijp de top eruit voor meer vertakking."
     },
     {
       "id": "uitplanten",
@@ -67,7 +66,7 @@
         "fromWeeks": -2,
         "toWeeks": 2
       },
-      "description": "Plant uit rond de laatste nachtvorst, op zo'n 25 cm afstand. Licht vorst kan hij hebben."
+      "description": "Plant op zo'n 25 cm afstand; lichte vorst kan hij hebben."
     },
     {
       "id": "dode-bloemen-verwijderen",

@@ -9,7 +9,7 @@
     "zelfzaaiend",
     "vlinderplant"
   ],
-  "nativeStatus": "inheems",
+  "nativeStatus": "archeofyt",
   "appearance": {
     "shape": "aar",
     "count": 8,
@@ -40,12 +40,11 @@
     }
   },
   "info": {
-    "intro": "Een tot 2 meter hoge, stekelige tweejarige met eivormige bloemhoofden waarop ringen van lila bloempjes bloeien. In de winter eten puttertjes het zaad uit de droge koppen.",
+    "intro": "Tot 2 meter hoge, stekelige tweejarige met eivormige bloemhoofden vol lila bloempjes. In de winter eten putters het zaad uit de droge koppen.",
     "water": "Geen extra water nodig.",
     "tips": [
-      "Laat de droge koppen staan: vogels én een mooi winterbeeld.",
-      "Zaait zich flink uit; trek teveel rozetten tijdig weg.",
-      "In de bladoksels blijft regenwater staan, waar insecten in drinken."
+      "Laat de droge koppen in de winter staan voor de vogels.",
+      "Zaait zich flink uit; trek overtollige rozetten op tijd weg."
     ]
   },
   "tasks": [
@@ -58,7 +57,7 @@
         "to": "06-30"
       },
       "note": "Bloeit pas volgend jaar",
-      "description": "Zaai direct op de plek. Het eerste jaar maakt hij een rozet, het tweede jaar bloeit hij."
+      "description": "Zaai direct op de plek. Het eerste jaar maakt hij een bladrozet."
     },
     {
       "id": "opruimen",
@@ -69,7 +68,7 @@
         "to": "03-31"
       },
       "note": "Oude stengels weghalen",
-      "description": "Haal de oude, uitgedroogde stengels na de winter weg. Ze sterven na de bloei af."
+      "description": "Haal de afgestorven stengels na de winter weg; de plant sterft na de bloei af."
     }
   ]
 }

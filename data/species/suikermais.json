@@ -38,12 +38,11 @@
     }
   },
   "info": {
-    "intro": "Zoete maïskolven, rechtstreeks van het veld in de pan, zijn onvergelijkbaar zoet. Maïs is een windbestuiver: plant hem in blokken in plaats van rijen.",
-    "water": "Geef in droge perioden water, vooral wanneer de pluimen en draden verschijnen.",
+    "intro": "Maïs om de zoete kolven, die je vers kookt of grilt. Maïs wordt door de wind bestoven, daarom plant je hem in een blok in plaats van in een rij.",
+    "water": "Geef in droge periodes water, vooral als de pluimen en draden verschijnen.",
     "tips": [
-      "Plant minstens 4 bij 4 planten in een blok voor goede bestuiving.",
-      "De kolven zijn rijp als de draden bruin zijn en een korrel melkachtig sap geeft.",
-      "Kook ze zo snel mogelijk na het plukken: de suiker verandert snel in zetmeel."
+      "Kook de kolven zo snel mogelijk na het plukken: de suiker verandert snel in zetmeel.",
+      "Op een winderige plek kunnen de planten (tot 2,5 m) omwaaien: aard de stengels wat aan."
     ]
   },
   "tasks": [
@@ -56,7 +55,7 @@
         "from": "04-15",
         "to": "05-15"
       },
-      "description": "Zaai binnen in potjes, 2 zaden per pot, 3 cm diep."
+      "description": "Zaai 2–3 cm diep, 2 zaden per pot; laat de sterkste staan. Kiemt bij 18–21 °C."
     },
     {
       "id": "uitplanten",
@@ -68,7 +67,7 @@
         "toWeeks": 3
       },
       "note": "In een blok planten",
-      "description": "Plant uit in een blok, 40 cm uit elkaar, na de laatste nachtvorst."
+      "description": "Plant minstens 4 bij 4 planten, 40 cm uit elkaar, voor goede bestuiving."
     },
     {
       "id": "oogsten",
@@ -78,7 +77,7 @@
         "from": "08-15",
         "to": "09-30"
       },
-      "description": "Breek de kolven af als de draden bruin zijn en de korrels bij indrukken melkachtig sap geven."
+      "description": "Pluk de kolven als de draden bruin zijn en een ingedrukte korrel romig sap geeft. Waterig sap betekent nog niet rijp."
     }
   ]
 }

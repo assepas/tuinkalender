@@ -40,12 +40,11 @@
     }
   },
   "info": {
-    "intro": "Een fijne eenjarige met lichtblauwe bloemen in een wolkje van draadvormig blad. Na de bloei komen er ballonvormige zaaddozen die mooi zijn in droogboeketten.",
-    "water": "Weinig veeleisend. Water geven na het zaaien en bij lange droogte.",
+    "intro": "Eenjarige met lichtblauwe bloemen tussen draadvormig blad. De opgeblazen zaaddozen zijn mooi in droogboeketten.",
+    "water": "Water geven na het zaaien en bij lange droogte.",
     "tips": [
       "Zaait zich uit: na één keer zaaien heb je hem jaren.",
-      "Hij houdt niet van verplanten; zaai direct op de plek.",
-      "Pluk de zaaddozen als ze gekleurd zijn om te drogen."
+      "Verdraagt verplanten slecht; zaai direct op de plek."
     ]
   },
   "tasks": [
@@ -57,7 +56,7 @@
         "from": "03-15",
         "to": "05-15"
       },
-      "description": "Strooi het zaad uit op de plek waar hij moet bloeien en hark het licht in. Dun de plantjes uit tot 20 cm. Zaaien in september kan ook, voor een vroege bloei volgend jaar."
+      "description": "Strooi het zaad uit en hark het licht in. Dun uit tot 20 cm. Zaaien in september kan ook, voor een vroegere bloei volgend jaar."
     },
     {
       "id": "zaaddozen-oogsten",
@@ -67,7 +66,7 @@
         "from": "08-01",
         "to": "09-15"
       },
-      "description": "Knip de opgeblazen zaaddozen af als ze gekleurd zijn en hang ze ondersteboven te drogen. Schud het zaad eruit voor volgend jaar."
+      "description": "Knip de zaaddozen af als ze gekleurd zijn en hang ze ondersteboven te drogen. Schud het zaad eruit voor volgend jaar."
     }
   ]
 }

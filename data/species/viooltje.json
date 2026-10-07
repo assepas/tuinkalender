@@ -39,12 +39,10 @@
     }
   },
   "info": {
-    "intro": "Een klein, vrolijk plantje dat van het voorjaar tot de herfst bloeit. Hoornviooltjes zijn sterker dan de grote violen en komen elk jaar terug.",
-    "water": "Houd de grond licht vochtig; in de zomerhitte en in potten vaker water geven. Viooltjes houden niet van uitdrogen.",
+    "intro": "Klein, winterhard plantje (hoornviooltje) dat van het voorjaar tot de herfst bloeit. Sterker dan de grote violen en komt elk jaar terug.",
+    "water": "Houd de grond licht vochtig; in zomerhitte en in potten vaker water geven, want uitdrogen verdraagt hij slecht.",
     "tips": [
-      "Staat mooi aan de rand van een border, in potten of tussen bollen.",
-      "Werd de plant in de zomer slap en lang? Knip hem terug, dan komt hij opnieuw.",
-      "De bloemen zijn eetbaar en mooi op een salade of taart."
+      "De bloemen zijn eetbaar, bijvoorbeeld op een salade."
     ]
   },
   "tasks": [
@@ -56,7 +54,7 @@
         "from": "03-15",
         "to": "05-01"
       },
-      "description": "Plant op zo'n 20 cm afstand, even diep als in de pot, en geef water. Viooltjes zijn winterhard en kunnen al vroeg in het voorjaar de grond in."
+      "description": "Plant op 20 cm afstand, even diep als in de pot, en geef water. Hij kan al vroeg in het voorjaar de grond in."
     },
     {
       "id": "dode-bloemen-verwijderen",
@@ -68,7 +66,7 @@
         "every": "2weeks"
       },
       "note": "Uitgebloeide bloemen weghalen",
-      "description": "Knip of knijp uitgebloeide bloempjes met steeltje af. Zo maakt de plant geen zaad en blijft hij bloeien. Wordt hij halverwege de zomer lang, knip dan alles terug tot een paar centimeter; na een paar weken bloeit hij weer."
+      "description": "Knip of knijp uitgebloeide bloempjes met steeltje af, dan blijft hij bloeien. Wordt hij halverwege de zomer lang, knip alles terug tot een paar centimeter; na een paar weken bloeit hij weer."
     },
     {
       "id": "delen",
@@ -78,7 +76,7 @@
         "from": "09-01",
         "to": "10-01"
       },
-      "description": "Steek grote pollen in het najaar uit en verdeel ze in stukjes met wortels. Plant ze terug op dezelfde plek of op een nieuwe; zo houd je de planten jong en krijg je er meer."
+      "description": "Steek grote pollen uit en verdeel ze in stukjes met wortels. Plant ze meteen terug; zo blijven de planten jong."
     }
   ]
 }

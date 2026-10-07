@@ -35,12 +35,12 @@
     }
   },
   "info": {
-    "intro": "Een vergeten groente met een lange, crèmekleurige wortel en een zoete, nootachtige smaak. Hij staat lang op het bed maar is winterhard: je oogst van oktober tot maart.",
-    "water": "Houd de grond vochtig tot het zaad opkomt; daarna redt hij zich meestal.",
+    "intro": "Oude wintergroente met een lange, crèmekleurige wortel en een zoete, nootachtige smaak. Hij staat lang op het bed, maar is winterhard: je oogst van oktober tot maart.",
+    "water": "Houd de grond vochtig tot het zaad opkomt; daarna alleen bij lange droogte.",
     "tips": [
-      "Gebruik altijd vers zaad: pastinaakzaad kiemt na een jaar slecht.",
+      "Gebruik vers zaad: pastinaakzaad kiemt na een jaar slecht.",
       "Na vorst wordt de wortel zoeter.",
-      "Het blad kan bij zon op de huid blaren geven; draag handschoenen."
+      "Sap uit het blad geeft in de zon blaren op de huid: draag handschoenen."
     ]
   },
   "tasks": [
@@ -52,7 +52,7 @@
         "from": "03-15",
         "to": "05-15"
       },
-      "description": "Zaai in rijen op 30 cm afstand, 1-2 cm diep. Het kiemt traag, soms pas na vier weken. Dun uit tot 15 cm."
+      "description": "Zaai 1–2 cm diep in rijen 30 cm uit elkaar en dun uit tot 15 cm. Het kiemt traag, soms pas na vier weken."
     },
     {
       "id": "oogsten",
@@ -62,7 +62,7 @@
         "from": "10-01",
         "to": "03-15"
       },
-      "description": "Steek de wortels voorzichtig uit met een riek. Laat ze in de grond staan tot je ze nodig hebt."
+      "description": "Steek de wortels voorzichtig uit met een riek. Ze kunnen in de grond blijven tot je ze nodig hebt."
     }
   ]
 }

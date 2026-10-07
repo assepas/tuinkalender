@@ -40,12 +40,12 @@
     }
   },
   "info": {
-    "intro": "Een klimplant die op een zonnige muur of pergola zoete trossen druiven geeft. Kies een ras dat voor buiten in Nederland geschikt is en schimmelresistent is, zoals 'Boskoop Glory' of 'Phoenix'.",
-    "water": "Geef een jonge plant water; oudere planten wortelen diep en redden zich.",
+    "intro": "Klimplant die op een zonnige muur of pergola trossen druiven geeft. Kies een ras dat buiten in Nederland rijpt en schimmelresistent is, zoals 'Boskoop Glory' of 'Phoenix'.",
+    "water": "Een jonge plant water geven bij droogte; oudere planten wortelen diep en redden zich.",
     "tips": [
-      "Een warme, zonnige zuidmuur geeft de zoetste druiven.",
+      "Een zonnige zuidmuur geeft de zoetste druiven.",
       "Kies een schimmelresistent ras, dan hoef je niet te spuiten.",
-      "Druiven rijpen niet na: proef voor je plukt."
+      "Druiven rijpen na het plukken niet na: proef eerst."
     ]
   },
   "tasks": [
@@ -57,18 +57,18 @@
         "from": "11-01",
         "to": "04-15"
       },
-      "description": "Plant in de winterrust tegen een zonnige muur of pergola met draden."
+      "description": "Plant in de winterrust tegen een zonnige muur of pergola met gespannen draden."
     },
     {
       "id": "wintersnoei",
       "type": "snoeien",
       "window": {
         "kind": "dates",
-        "from": "12-01",
-        "to": "02-15"
+        "from": "11-15",
+        "to": "12-31"
       },
-      "note": "Voor half februari",
-      "description": "Snoei in de winter de scheuten van vorig jaar terug tot 1-2 knoppen op de hoofdtakken. Na half februari 'bloedt' de druif te veel."
+      "note": "Vóór januari",
+      "description": "Knip de scheuten van vorig jaar terug tot 1–2 knoppen op de hoofdtakken. Snoei niet later dan december: vanaf januari bloedt de druif, er loopt dan sap uit de wonden."
     },
     {
       "id": "zomersnoei",
@@ -79,7 +79,7 @@
         "from": "06-15",
         "to": "07-31"
       },
-      "description": "Knip de scheuten met trossen in tot twee bladeren voorbij de laatste tros, en haal scheuten zonder trossen weg. Zo krijgen de druiven meer zon."
+      "description": "Knip scheuten met trossen in tot twee bladeren voorbij de laatste tros en haal scheuten zonder trossen weg. Zo krijgen de druiven meer zon."
     },
     {
       "id": "oogsten",

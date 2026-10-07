@@ -32,11 +32,11 @@
     }
   },
   "info": {
-    "intro": "Een hoge kool met kleine spruitjes langs de stam. Spruitkool staat lang op het bed, maar je oogst dan ook van oktober tot in februari.",
-    "water": "Geef water in droge zomers; zorg voor vaste, stevige grond.",
+    "intro": "Hoge kool met kleine spruitjes langs de stam. Hij staat lang op het bed, maar je oogst van oktober tot in februari.",
+    "water": "Geef water in droge zomers, vooral kort na het uitplanten.",
     "tips": [
-      "Druk de grond rond de plant goed aan: losse spruitjes komen door losse grond.",
-      "Haal in september de top eruit voor gelijkmatige spruiten.",
+      "Druk de grond rond de plant goed aan: in losse grond worden de spruitjes los en open.",
+      "Zet op een winderige plek een stok bij de plant, en aard de stam in de nazomer wat aan.",
       "Na vorst smaken spruitjes zoeter."
     ]
   },
@@ -50,7 +50,7 @@
         "from": "03-15",
         "to": "04-30"
       },
-      "description": "Zaai in een zaaibed of potjes, 1 cm diep."
+      "description": "Zaai 1 cm diep in potjes of een zaaibed."
     },
     {
       "id": "uitplanten",
@@ -60,7 +60,7 @@
         "from": "05-15",
         "to": "06-30"
       },
-      "description": "Plant op 60 cm afstand, diep en stevig aangedrukt. Zet direct na het planten insectengaas over de kool tegen koolvlieg, koolwitje en duiven."
+      "description": "Plant op 60 cm afstand, diep en stevig aangedrukt. Leg meteen insectengaas over de planten tegen koolvlieg, rupsen en duiven."
     },
     {
       "id": "toppen",
@@ -81,7 +81,7 @@
         "from": "10-01",
         "to": "02-28"
       },
-      "description": "Breek de spruitjes van onder naar boven van de stam als ze stevig zijn."
+      "description": "Breek de stevige spruitjes van onder naar boven van de stam."
     }
   ]
 }

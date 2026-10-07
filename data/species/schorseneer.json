@@ -32,12 +32,12 @@
     }
   },
   "info": {
-    "intro": "De 'keukenmeidenverdriet': een lange, zwarte wortel met wit, zacht vlees en een fijne smaak. Hij houdt van diepe, losse grond.",
-    "water": "Houd de grond vochtig tot de plantjes op zijn.",
+    "intro": "Lange, zwarte wortel met wit vlees en een milde smaak, ook wel 'keukenmeidenverdriet' genoemd omdat schoonmaken veel werk is. Hij heeft diepe, losse grond nodig.",
+    "water": "Houd de grond vochtig tot de plantjes op zijn; daarna alleen bij lange droogte.",
     "tips": [
-      "Diepe, stenenvrije zandgrond is ideaal.",
-      "Graaf voorzichtig: gebroken wortels bloeden.",
-      "Wortels die te dun zijn kun je nog een jaar laten staan."
+      "Diepe, stenenvrije grond is nodig, anders worden de wortels krom of vertakt.",
+      "Graaf voorzichtig: gebroken wortels bloeden en blijven minder lang goed.",
+      "Te dunne wortels kun je nog een jaar laten staan."
     ]
   },
   "tasks": [
@@ -49,7 +49,7 @@
         "from": "03-15",
         "to": "05-15"
       },
-      "description": "Zaai in rijen op 30 cm afstand, 2 cm diep, en dun uit tot 10 cm."
+      "description": "Zaai 2 cm diep in rijen op 30 cm en dun uit tot 10 cm."
     },
     {
       "id": "oogsten",

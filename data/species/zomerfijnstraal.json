@@ -5,7 +5,7 @@
   "latin": "Erigeron annuus",
   "category": "vaste-plant",
   "tags": [
-    "eenjarig",
+    "tweejarig",
     "zelfzaaiend"
   ],
   "nativeStatus": "exoot",
@@ -16,8 +16,8 @@
     "flowerColorName": "wit"
   },
   "bloom": {
-    "from": "06-01",
-    "to": "10-15"
+    "from": "07-01",
+    "to": "08-31"
   },
   "growing": {
     "sun": [
@@ -33,17 +33,16 @@
     ],
     "spacingCm": 30,
     "height": {
-      "minCm": 50,
-      "maxCm": 120
+      "minCm": 30,
+      "maxCm": 75
     }
   },
   "info": {
-    "intro": "Een losse, hoge plant met honderden kleine, witte madeliefachtige bloemen. Hij bloeit lang en geeft een natuurlijke, wilde sfeer.",
+    "intro": "Losse plant met honderden kleine witte bloemetjes die op madeliefjes lijken. Tweejarig: het eerste jaar een rozet, het tweede jaar bloeit hij in juli en augustus.",
     "water": "Heeft geen extra water nodig.",
     "tips": [
-      "Zaait zich sterk uit; knip uitgebloeide stengels af als je dat wilt beperken.",
-      "Mooi als vuller tussen andere planten.",
-      "Kort af en toe in voor een compactere plant."
+      "Zaait zich sterk uit en verwildert makkelijk.",
+      "Kort de stengels af en toe in als je een compactere plant wilt."
     ]
   },
   "tasks": [
@@ -55,7 +54,8 @@
         "from": "04-01",
         "to": "05-31"
       },
-      "description": "Zaai direct op de plek; het zaad kiemt makkelijk."
+      "description": "Zaai direct op de plek; het zaad kiemt makkelijk.",
+      "note": "Bloeit pas volgend jaar"
     },
     {
       "id": "uitgebloeid-afknippen",
@@ -66,7 +66,7 @@
         "from": "08-01",
         "to": "09-30"
       },
-      "description": "Knip de uitgebloeide stengels af om te veel uitzaaien te voorkomen."
+      "description": "Knip uitgebloeide stengels af om uitzaaien te beperken."
     }
   ]
 }

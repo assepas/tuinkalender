@@ -33,13 +33,8 @@
     }
   },
   "info": {
-    "intro": "Een wat lastigere kool die rijke grond en gelijkmatig water wil. Een mooie, witte bloemkool uit eigen tuin is dan ook een prestatie.",
-    "water": "Geef gelijkmatig water; droogte geeft kleine, losse koolen.",
-    "tips": [
-      "Vouw een paar bladeren over de kool zodra hij zichtbaar is: dan blijft hij wit.",
-      "Gebruik veel compost; bloemkool heeft een rijke grond nodig.",
-      "Bescherm tegen koolvlieg met gaas."
-    ]
+    "intro": "Kool die je teelt om de witte bloem. Wat lastiger dan andere kolen: hij wil rijke grond en gelijkmatig water.",
+    "water": "Geef gelijkmatig water; bij droogte blijven de kolen klein en los."
   },
   "tasks": [
     {
@@ -61,7 +56,7 @@
         "from": "05-01",
         "to": "07-15"
       },
-      "description": "Plant op 50 cm afstand in grond met veel compost. Zet direct na het planten insectengaas over de kool tegen koolvlieg, koolwitje en duiven."
+      "description": "Plant op 50 cm afstand in grond met veel compost. Zet er meteen insectengaas over tegen koolvlieg, koolwitje en duiven."
     },
     {
       "id": "afdekken",
@@ -72,7 +67,7 @@
         "to": "10-15"
       },
       "note": "Kool afdekken met eigen blad",
-      "description": "Knik of bind een paar bladeren over de kool als hij zichtbaar wordt, zodat hij wit blijft."
+      "description": "Knik of bind een paar bladeren over de kool zodra hij zichtbaar wordt; zo blijft hij wit."
     },
     {
       "id": "oogsten",

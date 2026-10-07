@@ -33,12 +33,11 @@
     }
   },
   "info": {
-    "intro": "Uien zijn makkelijk te telen uit plantuitjes (kleine bolletjes). In het voorjaar gepoot, oogst je ze in de zomer, en goed gedroogd bewaar je ze maanden.",
-    "water": "Geef water in droge periodes tot eind juni. Daarna juist droog houden, zodat de uien rijpen.",
+    "intro": "Makkelijk te telen uit plantuitjes (kleine bolletjes): in het voorjaar poten, in de zomer oogsten. Goed gedroogd bewaar je ze maanden.",
+    "water": "Geef water in droge periodes tot eind juni; daarna droog houden, zodat de uien rijpen.",
     "tips": [
-      "Tegen de uienvlieg helpt insectengaas.",
-      "Vogels trekken plantuitjes graag uit de grond; leg er de eerste weken gaas over.",
-      "Laat uien na de oogst goed drogen op een luchtige plek voordat je ze opslaat."
+      "Vogels trekken plantuitjes uit de grond: leg de eerste weken gaas of vliesdoek over het bed.",
+      "Tegen de uienvlieg helpt insectengaas."
     ]
   },
   "tasks": [
@@ -50,7 +49,7 @@
         "from": "03-15",
         "to": "04-30"
       },
-      "description": "Druk de plantuitjes met de punt omhoog in de grond, zo dat het puntje er net bovenuit steekt. Houd 10 cm tussen de uitjes en 25 cm tussen de rijen."
+      "description": "Druk de uitjes zo diep in de grond dat het puntje er net bovenuit steekt. Houd 10 cm tussen de uitjes en 25 cm tussen de rijen."
     },
     {
       "id": "oogsten",
@@ -60,7 +59,7 @@
         "from": "07-15",
         "to": "08-31"
       },
-      "description": "Oogst als het loof omvalt en geel wordt. Trek de uien uit en laat ze op een droge dag een paar dagen op het bed of onder een afdak drogen."
+      "description": "Trek de uien uit als het loof omvalt en geel wordt. Laat ze een paar dagen drogen op het bed of onder een afdak voordat je ze opslaat."
     }
   ]
 }

@@ -39,12 +39,12 @@
     }
   },
   "info": {
-    "intro": "Een groenblijvende bodembedekker met blauwe bloemetjes in het voorjaar. Hij houdt onkruid onder de struiken weg en blijft ook in de winter groen.",
-    "water": "Na het aanslaan is maagdenpalm erg sterk. Geef alleen water na het planten en bij lange droogte.",
+    "intro": "Groenblijvende bodembedekker met blauwpaarse bloemetjes in het voorjaar. Hij vormt onder struiken en op schaduwplekken een dichte mat die onkruid onderdrukt.",
+    "water": "Alleen water geven na het planten en bij lange droogte.",
     "tips": [
-      "Een goede keuze voor een lastige schaduwplek of een talud.",
-      "Hij kan woekeren; plant hem niet naast kwetsbare, kleine planten.",
-      "Wieden in het eerste jaar helpt, daarna sluit hij zelf de bodem."
+      "Hij kan woekeren: plant hem niet naast kleine, kwetsbare planten.",
+      "Wied het eerste jaar; daarna sluit de mat zich vanzelf.",
+      "Alle delen zijn giftig bij opeten."
     ]
   },
   "tasks": [
@@ -56,7 +56,7 @@
         "from": "03-15",
         "to": "05-01"
       },
-      "description": "Plant op zo'n 30 cm afstand. De lange ranken kun je met een haakje of steen tegen de grond drukken; daar wortelen ze en wordt de mat sneller dicht."
+      "description": "Plant op 30 cm afstand. Druk lange ranken met een haakje of steen tegen de grond: daar wortelen ze en sluit de mat sneller."
     },
     {
       "id": "snoeien",
@@ -67,7 +67,7 @@
         "from": "03-01",
         "to": "03-31"
       },
-      "description": "Knip in maart de mat met een heggenschaar of grasschaar terug tot 10 à 15 cm. Dat houdt hem compact en dicht, en geeft meer bloemen."
+      "description": "Knip de mat met een heggen- of grasschaar terug tot 10–15 cm. Dan blijft hij dicht en bloeit hij beter."
     },
     {
       "id": "onderhoud",
@@ -79,7 +79,7 @@
         "every": "month"
       },
       "note": "Uitlopers begrenzen",
-      "description": "Knip ranken weg die buiten de gewenste plek groeien of andere planten overwoekeren. Doe dat regelmatig; eenmaal gewortelde ranken zijn lastiger te verwijderen."
+      "description": "Knip ranken weg die buiten de plek groeien of andere planten overwoekeren. Doe dit voordat ze wortelen; daarna zijn ze lastiger weg te halen."
     }
   ]
 }

@@ -40,12 +40,11 @@
     }
   },
   "info": {
-    "intro": "Een geurige halfstruik met grijsgroen, fluweelachtig blad en lila bloemaren. Het blad is lekker bij pasta, vlees en in thee, en de bloemen zijn geliefd bij hommels.",
-    "water": "Houdt van droog. Alleen water geven na het planten en bij lange droogte.",
+    "intro": "Groenblijvende halfstruik met grijsgroen, fluweelachtig blad en lila bloemaren. Het blad gebruik je bij pasta, vlees en in thee; hommels komen op de bloemen.",
+    "water": "Alleen water geven na het planten en bij lange droogte.",
     "tips": [
-      "Knip niet in het kale, oude hout; daar loopt hij niet meer uit.",
-      "Na vier à vijf jaar wordt hij houtig; vervang hem dan door een stek.",
-      "Natte grond in de winter is gevaarlijker dan kou."
+      "Natte grond in de winter is gevaarlijker dan kou.",
+      "Na vier à vijf jaar wordt hij kaal en houtig; vervang hem dan door een stek."
     ]
   },
   "tasks": [
@@ -57,7 +56,7 @@
         "from": "04-15",
         "to": "05-31"
       },
-      "description": "Plant op een zonnige plek in doorlatende grond, op zo'n 50 cm afstand."
+      "description": "Plant op een zonnige plek in doorlatende grond, 50 cm uit elkaar."
     },
     {
       "id": "oogsten",
@@ -77,7 +76,7 @@
         "from": "04-01",
         "to": "04-30"
       },
-      "description": "Knip de plant in april een derde terug, maar niet tot in het kale hout. Zo blijft hij compact."
+      "description": "Knip de plant een derde terug, maar niet in het kale, oude hout: daar loopt hij niet meer uit."
     }
   ]
 }

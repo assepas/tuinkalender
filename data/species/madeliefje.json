@@ -41,12 +41,11 @@
     }
   },
   "info": {
-    "intro": "Het bekendste gazonbloempje: een platte bladrozet met witte bloemetjes met een geel hart. Het bloeit bijna het hele jaar en is een van de eerste voedselbronnen voor bijen in het voorjaar.",
-    "water": "Heeft geen extra water nodig. In droge zomers verdwijnt het blad soms even, maar de plant komt terug.",
+    "intro": "Inheems gazonbloempje met een platte bladrozet en witte bloemen met een geel hart. Het bloeit bijna het hele jaar en is vroeg in het voorjaar voedsel voor bijen.",
+    "water": "Geen extra water nodig; bij droogte verdwijnt het blad soms even, maar de plant komt terug.",
     "tips": [
-      "Madeliefjes kunnen heel kort maaien aan, omdat de bladrozet plat op de grond ligt.",
-      "De bloemen en jonge blaadjes zijn eetbaar, leuk in een salade.",
-      "Uitbreiden gaat vanzelf via uitlopers en zaad."
+      "Jonge blaadjes en bloemen zijn eetbaar, bijvoorbeeld in een salade.",
+      "Het verspreidt zich vanzelf via uitlopers en zaad."
     ]
   },
   "tasks": [
@@ -58,7 +57,7 @@
         "from": "08-15",
         "to": "09-30"
       },
-      "description": "Zaai in de nazomer of in april-mei (lukt ook) op kale, losgeharkte plekken in het gras of mee in een bloemrijk gazonmengsel. Strooi het zaad breed uit, druk het aan en houd het een paar weken vochtig."
+      "description": "Zaai op kale, losgeharkte plekken in het gras of mee in een bloemrijk gazonmengsel; april–mei kan ook. Strooi breed uit, druk aan en houd een paar weken vochtig."
     },
     {
       "id": "maaien",
@@ -70,7 +69,7 @@
         "every": "2weeks"
       },
       "note": "Gazon niet te kort maaien",
-      "description": "Maai het gazon niet te kort, op 5 tot 8 cm, dan blijft deze plant bloeien. Madeliefjes kunnen ook korter maaien aan, maar dan bloeien de andere gazonplanten minder."
+      "description": "Maai op 5 tot 8 cm. Madeliefjes kunnen korter maaien aan, maar andere gazonbloemen bloeien dan minder."
     }
   ]
 }

@@ -42,12 +42,10 @@
     }
   },
   "info": {
-    "intro": "Een inheemse oeverplant met lange, paarsroze bloemaren in de zomer. Hij groeit van nature langs sloten en is een van de beste planten voor bijen en vlinders.",
-    "water": "Houdt van natte voeten. Op een drogere plek in de zomer regelmatig water geven.",
+    "intro": "Inheemse oeverplant met lange, paarsroze bloemaren in de zomer. Groeit van nature langs sloten en is een topplant voor bijen en vlinders.",
+    "water": "Houdt van natte grond; op een drogere plek 's zomers regelmatig water geven.",
     "tips": [
-      "Ideaal voor de vijverrand of een nat stuk van de tuin.",
-      "Zaait zich uit op vochtige plekken.",
-      "Wordt tot 1,5 meter hoog."
+      "Zaait zich uit op vochtige plekken."
     ]
   },
   "tasks": [
@@ -80,7 +78,7 @@
         "from": "02-15",
         "to": "03-31"
       },
-      "description": "Knip de oude stengels eind van de winter af tot net boven de grond."
+      "description": "Knip de oude stengels af tot net boven de grond."
     }
   ]
 }
