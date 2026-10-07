@@ -34,7 +34,11 @@
       "normaal",
       "vochtig"
     ],
-    "spacingCm": 25
+    "spacingCm": 25,
+    "height": {
+      "minCm": 10,
+      "maxCm": 30
+    }
   },
   "info": {
     "intro": "Een laag, inheems plantje met paarse bloemaartjes van juni tot september. Het groeit vanzelf in gazons en bloemrijk grasland en is een echte bijen- en vlinderplant.",

@@ -32,7 +32,11 @@
       "droog",
       "normaal"
     ],
-    "spacingCm": 15
+    "spacingCm": 15,
+    "height": {
+      "minCm": 15,
+      "maxCm": 60
+    }
   },
   "info": {
     "intro": "Een een- of tweejarige plant met kleine gele bloemhoofdjes, die lijken op kleine paardenbloemen. Hij groeit in gazons, bermen en op open plekken, en bloeit lang door tot in de herfst.",

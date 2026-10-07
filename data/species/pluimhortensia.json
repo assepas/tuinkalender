@@ -32,7 +32,11 @@
       "normaal",
       "vochtig"
     ],
-    "spacingCm": 150
+    "spacingCm": 150,
+    "height": {
+      "minCm": 150,
+      "maxCm": 250
+    }
   },
   "info": {
     "intro": "Een sterke heester met grote, kegelvormige bloempluimen die wit openen en in de herfst vaak roze verkleuren. Veel makkelijker dan de boerenhortensia: hij bloeit op nieuw hout.",

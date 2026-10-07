@@ -32,7 +32,11 @@
       "droog",
       "normaal"
     ],
-    "spacingCm": 30
+    "spacingCm": 30,
+    "height": {
+      "minCm": 30,
+      "maxCm": 70
+    }
   },
   "info": {
     "intro": "Een sobere, taaie plant met dunne vertakte stengels en kleine lila bloempjes. Hij bloeit lang en is geliefd bij bijen. Vroeger was het een belangrijk geneeskruid.",

@@ -32,7 +32,11 @@
     "moisture": [
       "normaal"
     ],
-    "spacingCm": 90
+    "spacingCm": 90,
+    "height": {
+      "minCm": 60,
+      "maxCm": 100
+    }
   },
   "info": {
     "intro": "Een klassieke boerentuinplant met grote, dubbele bloemen in roze, wit of rood. Een pioen kan tientallen jaren op dezelfde plek staan en wordt elk jaar mooier.",

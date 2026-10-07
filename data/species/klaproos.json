@@ -33,7 +33,11 @@
       "droog",
       "normaal"
     ],
-    "spacingCm": 20
+    "spacingCm": 20,
+    "height": {
+      "minCm": 30,
+      "maxCm": 80
+    }
   },
   "info": {
     "intro": "De bekende rode akkerbloem met papierdunne bloemblaadjes. Elke bloem bloeit maar een dag, maar er komen er steeds nieuwe. Bijen halen er veel stuifmeel.",

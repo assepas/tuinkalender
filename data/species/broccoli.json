@@ -26,7 +26,11 @@
       "normaal",
       "vochtig"
     ],
-    "spacingCm": 45
+    "spacingCm": 45,
+    "height": {
+      "minCm": 50,
+      "maxCm": 80
+    }
   },
   "info": {
     "intro": "Een snelle kool met een groene hoofdroos en daarna nog veel zijscheuten. Oogst hem voordat de knopjes geel gaan bloeien.",

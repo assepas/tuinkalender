@@ -32,7 +32,11 @@
     "moisture": [
       "normaal"
     ],
-    "spacingCm": 20
+    "spacingCm": 20,
+    "height": {
+      "minCm": 10,
+      "maxCm": 25
+    }
   },
   "info": {
     "intro": "Een inheems voorjaarsbloempje met knikkende, geurende gele bloemen aan een stevige steel. Het groeit in schrale hooilanden en op dijken, en past mooi in een bloemrijk gazon.",

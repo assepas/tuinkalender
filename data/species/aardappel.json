@@ -30,7 +30,11 @@
     "moisture": [
       "normaal"
     ],
-    "spacingCm": 35
+    "spacingCm": 35,
+    "height": {
+      "minCm": 40,
+      "maxCm": 80
+    }
   },
   "info": {
     "intro": "Aardappels zijn dankbaar om zelf te telen: je poot een knol en oogst er later tien of meer. Vroege rassen kun je al in de zomer eten, late rassen zijn goed te bewaren.",

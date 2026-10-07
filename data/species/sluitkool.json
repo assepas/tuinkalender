@@ -25,7 +25,11 @@
     "moisture": [
       "normaal"
     ],
-    "spacingCm": 60
+    "spacingCm": 60,
+    "height": {
+      "minCm": 40,
+      "maxCm": 60
+    }
   },
   "info": {
     "intro": "Stevige, vaste koolen die lang goed blijven. Vroege rassen oogst je in de zomer, late (bewaar)koolen in de herfst om maandenlang te bewaren.",

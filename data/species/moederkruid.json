@@ -33,7 +33,11 @@
       "normaal",
       "droog"
     ],
-    "spacingCm": 30
+    "spacingCm": 30,
+    "height": {
+      "minCm": 30,
+      "maxCm": 60
+    }
   },
   "info": {
     "intro": "Een oud geneeskruid met massa's kleine witte madeliefjesbloemen in de zomer. Het is makkelijk, bloeit lang en trekt zweefvliegen en andere nuttige insecten.",

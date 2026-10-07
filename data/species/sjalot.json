@@ -26,7 +26,11 @@
     "moisture": [
       "normaal"
     ],
-    "spacingCm": 15
+    "spacingCm": 15,
+    "height": {
+      "minCm": 30,
+      "maxCm": 50
+    }
   },
   "info": {
     "intro": "Een fijne, milde ui die uit één pootsjalot een hele trosje nieuwe sjalotten maakt. Ze zijn lekker in sauzen en goed te bewaren.",

@@ -31,7 +31,11 @@
       "droog",
       "normaal"
     ],
-    "spacingCm": 15
+    "spacingCm": 15,
+    "height": {
+      "minCm": 10,
+      "maxCm": 30
+    }
   },
   "info": {
     "intro": "Een klein zuringplantje met pijlvormige blaadjes en roodbruine bloeiaartjes. Hij groeit op arme, zure zandgrond en kleurt een droog gazon in de zomer rossig.",

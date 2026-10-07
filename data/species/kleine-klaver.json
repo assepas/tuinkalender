@@ -32,7 +32,11 @@
       "droog",
       "normaal"
     ],
-    "spacingCm": 15
+    "spacingCm": 15,
+    "height": {
+      "minCm": 5,
+      "maxCm": 20
+    }
   },
   "info": {
     "intro": "Een klein, eenjarig klavertje met kleine gele bloemhoofdjes. Het groeit laag tussen het gras en maakt de grond rijker met stikstof.",

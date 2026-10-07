@@ -34,7 +34,11 @@
       "vochtig",
       "nat"
     ],
-    "spacingCm": 50
+    "spacingCm": 50,
+    "height": {
+      "minCm": 100,
+      "maxCm": 150
+    }
   },
   "info": {
     "intro": "Een hoge inheemse plant met schermen van lichtroze, zoet geurende bloempjes. Hij lokt veel zweefvliegen en vlinders. De wortel wordt al eeuwen gebruikt als rustgevend middel.",

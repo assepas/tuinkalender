@@ -31,7 +31,11 @@
       "vochtig",
       "normaal"
     ],
-    "spacingCm": 120
+    "spacingCm": 120,
+    "height": {
+      "minCm": 100,
+      "maxCm": 150
+    }
   },
   "info": {
     "intro": "Een struik met grote bolle of platte bloemschermen van juli tot de herfst. De boerenhortensia bloeit op de knoppen die al in de zomer ervoor aangelegd worden.",

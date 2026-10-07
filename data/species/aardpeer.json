@@ -32,7 +32,11 @@
     "moisture": [
       "normaal"
     ],
-    "spacingCm": 50
+    "spacingCm": 50,
+    "height": {
+      "minCm": 150,
+      "maxCm": 300
+    }
   },
   "info": {
     "intro": "Een verwant van de zonnebloem met eetbare, knobbelige knollen met een nootachtige smaak. Hij groeit bijna overal en wordt tot 2,5 meter hoog.",

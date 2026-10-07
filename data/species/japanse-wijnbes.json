@@ -33,7 +33,11 @@
     "moisture": [
       "normaal"
     ],
-    "spacingCm": 200
+    "spacingCm": 200,
+    "height": {
+      "minCm": 150,
+      "maxCm": 300
+    }
   },
   "info": {
     "intro": "Een verwant van de framboos met rode, plakkerig behaarde takken en glanzend rode, zoete besjes. Hij is sterk, weinig vatbaar voor ziekten en ook mooi in de winter.",

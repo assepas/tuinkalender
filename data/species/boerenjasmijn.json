@@ -32,7 +32,11 @@
     "moisture": [
       "normaal"
     ],
-    "spacingCm": 200
+    "spacingCm": 200,
+    "height": {
+      "minCm": 200,
+      "maxCm": 300
+    }
   },
   "info": {
     "intro": "Een sterke heester die in juni vol witte, sterk geurende bloemen staat. De geur doet denken aan jasmijn. Een klassieker in de boerentuin.",

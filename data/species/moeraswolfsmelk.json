@@ -34,7 +34,11 @@
       "vochtig",
       "nat"
     ],
-    "spacingCm": 70
+    "spacingCm": 70,
+    "height": {
+      "minCm": 60,
+      "maxCm": 120
+    }
   },
   "info": {
     "intro": "Een stoere, inheemse vaste plant met geelgroene bloemschermen in het voorjaar en oranje herfstkleur. Hij doet het goed in natte grond en langs de vijver.",

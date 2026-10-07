@@ -33,7 +33,11 @@
       "normaal",
       "droog"
     ],
-    "spacingCm": 40
+    "spacingCm": 40,
+    "height": {
+      "minCm": 60,
+      "maxCm": 120
+    }
   },
   "info": {
     "intro": "Een luchtige eenjarige met grote roze, witte of karmijnrode bloemen boven fijn, veerachtig blad. Hij bloeit tot de eerste vorst en trekt veel bijen en vlinders.",

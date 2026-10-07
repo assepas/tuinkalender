@@ -33,7 +33,11 @@
       "droog",
       "normaal"
     ],
-    "spacingCm": 20
+    "spacingCm": 20,
+    "height": {
+      "minCm": 20,
+      "maxCm": 50
+    }
   },
   "info": {
     "intro": "Een sterke vaste plant met smalle, geribde bladeren en korte bruine aartjes op lange stelen. Hij kan tegen betreden en maaien. Het blad wordt al eeuwen gebruikt op insectenbeten.",

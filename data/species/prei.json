@@ -26,7 +26,11 @@
       "normaal",
       "vochtig"
     ],
-    "spacingCm": 15
+    "spacingCm": 15,
+    "height": {
+      "minCm": 40,
+      "maxCm": 70
+    }
   },
   "info": {
     "intro": "Een winterharde groente die je in het voorjaar zaait en van de late zomer tot in het voorjaar oogst. Juist in de winter, als er weinig anders is, staat de prei klaar.",

@@ -32,7 +32,11 @@
     "moisture": [
       "normaal"
     ],
-    "spacingCm": 150
+    "spacingCm": 150,
+    "height": {
+      "minCm": 30,
+      "maxCm": 60
+    }
   },
   "info": {
     "intro": "Een pompoen in peervorm met zoet, oranje vruchtvlees. Hij heeft warmte en ruimte nodig, en goed uitgerijpte vruchten bewaar je maandenlang.",

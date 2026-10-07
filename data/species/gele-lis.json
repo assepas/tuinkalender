@@ -33,7 +33,11 @@
       "nat",
       "vochtig"
     ],
-    "spacingCm": 50
+    "spacingCm": 50,
+    "height": {
+      "minCm": 80,
+      "maxCm": 150
+    }
   },
   "info": {
     "intro": "Een inheemse iris met stralend gele bloemen in mei en juni. Hij groeit in natte grond en ondiep water, dus ideaal voor de rand van een vijver of een natte hoek.",

@@ -33,7 +33,11 @@
     "moisture": [
       "normaal"
     ],
-    "spacingCm": 25
+    "spacingCm": 25,
+    "height": {
+      "minCm": 30,
+      "maxCm": 50
+    }
   },
   "info": {
     "intro": "Een vaste plant met platte, grasachtige blaadjes die mild naar knoflook smaken. Eind van de zomer komen er witte stervormige bloemschermen, druk bezocht door bijen.",

@@ -33,7 +33,11 @@
     "moisture": [
       "normaal"
     ],
-    "spacingCm": 15
+    "spacingCm": 15,
+    "height": {
+      "minCm": 20,
+      "maxCm": 45
+    }
   },
   "info": {
     "intro": "Hét voorjaarsbolgewas: gele of witte bloemen met een trompet of kroontje. Narcissen verwilderen goed en komen elk jaar terug, ook in gras.",

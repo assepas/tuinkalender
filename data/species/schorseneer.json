@@ -25,7 +25,11 @@
     "moisture": [
       "normaal"
     ],
-    "spacingCm": 10
+    "spacingCm": 10,
+    "height": {
+      "minCm": 50,
+      "maxCm": 100
+    }
   },
   "info": {
     "intro": "De 'keukenmeidenverdriet': een lange, zwarte wortel met wit, zacht vlees en een fijne smaak. Hij houdt van diepe, losse grond.",

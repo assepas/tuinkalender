@@ -32,7 +32,11 @@
       "normaal",
       "droog"
     ],
-    "spacingCm": 50
+    "spacingCm": 50,
+    "height": {
+      "minCm": 150,
+      "maxCm": 250
+    }
   },
   "info": {
     "intro": "Een ouderwetse plant met metershoge stengels vol grote bloemen in roze, wit, rood of bijna zwart. Hij bloeit pas in het tweede jaar en leeft daarna vaak nog een paar jaar.",

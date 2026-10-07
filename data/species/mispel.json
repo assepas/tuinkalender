@@ -33,7 +33,11 @@
     "moisture": [
       "normaal"
     ],
-    "spacingCm": 400
+    "spacingCm": 400,
+    "height": {
+      "minCm": 300,
+      "maxCm": 500
+    }
   },
   "info": {
     "intro": "De mispel is een kleine, oud-Hollandse fruitboom met grote witte bloemen in het late voorjaar. De bruine, appelachtige vruchten zijn pas eetbaar als ze zacht en 'overrijp' zijn, met een smaak die lijkt op appelmoes met kaneel. Het is een stevige, makkelijke boom die weinig zorg nodig heeft.",

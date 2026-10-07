@@ -32,7 +32,11 @@
       "normaal",
       "vochtig"
     ],
-    "spacingCm": 20
+    "spacingCm": 20,
+    "height": {
+      "minCm": 10,
+      "maxCm": 20
+    }
   },
   "info": {
     "intro": "Een klein, vrolijk plantje dat van het voorjaar tot de herfst bloeit. Hoornviooltjes zijn sterker dan de grote violen en komen elk jaar terug.",

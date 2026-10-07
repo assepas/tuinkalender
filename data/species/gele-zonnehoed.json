@@ -32,7 +32,11 @@
       "normaal",
       "vochtig"
     ],
-    "spacingCm": 45
+    "spacingCm": 45,
+    "height": {
+      "minCm": 50,
+      "maxCm": 80
+    }
   },
   "info": {
     "intro": "Een sterke vaste plant met goudgele bloemen met een zwart hart. Hij bloeit van augustus tot in oktober en brengt kleur als veel andere planten al klaar zijn.",

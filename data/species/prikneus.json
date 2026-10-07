@@ -33,7 +33,11 @@
       "droog",
       "normaal"
     ],
-    "spacingCm": 40
+    "spacingCm": 40,
+    "height": {
+      "minCm": 40,
+      "maxCm": 80
+    }
   },
   "info": {
     "intro": "Een opvallende plant met zilvergrijs, viltig blad en felle magenta bloemen (ook wel Lychnis coronaria). Hij leeft maar een paar jaar, maar zaait zich makkelijk uit, dus je houdt hem.",

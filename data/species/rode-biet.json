@@ -28,7 +28,11 @@
     "moisture": [
       "normaal"
     ],
-    "spacingCm": 10
+    "spacingCm": 10,
+    "height": {
+      "minCm": 25,
+      "maxCm": 40
+    }
   },
   "info": {
     "intro": "Een makkelijke wortelgroente die je van het vroege voorjaar tot de zomer kunt zaaien. De bieten zijn goed te bewaren, en het jonge blad is eetbaar als spinazie.",

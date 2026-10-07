@@ -33,7 +33,11 @@
       "droog",
       "normaal"
     ],
-    "spacingCm": 60
+    "spacingCm": 60,
+    "height": {
+      "minCm": 80,
+      "maxCm": 150
+    }
   },
   "info": {
     "intro": "Een stoere vaste plant met stekelig blad en perfect ronde, staalblauwe bollen. De bloemen zitten altijd vol bijen en hommels. Na de bloei blijven de bollen mooi staan.",

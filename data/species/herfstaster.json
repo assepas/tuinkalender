@@ -31,7 +31,11 @@
       "normaal",
       "vochtig"
     ],
-    "spacingCm": 50
+    "spacingCm": 50,
+    "height": {
+      "minCm": 100,
+      "maxCm": 150
+    }
   },
   "info": {
     "intro": "Een hoge vaste plant die in september en oktober vol paarse, roze of blauwe sterretjes staat. Voor vlinders en bijen een van de laatste grote maaltijden van het jaar.",

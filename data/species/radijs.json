@@ -29,7 +29,11 @@
       "normaal",
       "vochtig"
     ],
-    "spacingCm": 3
+    "spacingCm": 3,
+    "height": {
+      "minCm": 10,
+      "maxCm": 20
+    }
   },
   "info": {
     "intro": "De snelste groente die er is: binnen vier weken van zaadje tot knapperige radijs. Ideaal om tussen langzamere groenten te zaaien.",

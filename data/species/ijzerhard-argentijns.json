@@ -34,7 +34,11 @@
       "droog",
       "normaal"
     ],
-    "spacingCm": 40
+    "spacingCm": 40,
+    "height": {
+      "minCm": 100,
+      "maxCm": 180
+    }
   },
   "info": {
     "intro": "Een hoge, luchtige plant met dunne, stijve stengels en kleine paarse bloemtrosjes die tot ver in de herfst bloeien. Doordat hij zo ijl is, kun je hem overal tussen zetten, ook vooraan. Vlinders zijn er dol op.",

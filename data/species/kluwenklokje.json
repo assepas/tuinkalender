@@ -31,7 +31,11 @@
     "moisture": [
       "normaal"
     ],
-    "spacingCm": 30
+    "spacingCm": 30,
+    "height": {
+      "minCm": 30,
+      "maxCm": 60
+    }
   },
   "info": {
     "intro": "Een inheemse klokjesbloem met dichte kluwens van diepviolette klokjes bovenaan de stengel. Hij breidt zich rustig uit en is een goede bijenplant.",

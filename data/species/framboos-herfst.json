@@ -34,7 +34,11 @@
       "normaal",
       "vochtig"
     ],
-    "spacingCm": 50
+    "spacingCm": 50,
+    "height": {
+      "minCm": 120,
+      "maxCm": 180
+    }
   },
   "info": {
     "intro": "Een framboos die vrucht draagt op de ranken van hetzelfde jaar, van eind augustus tot de vorst. Hij is makkelijker dan de zomerframboos, want je knipt in de winter gewoon alles af.",

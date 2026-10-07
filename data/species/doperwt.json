@@ -32,7 +32,11 @@
     "moisture": [
       "normaal"
     ],
-    "spacingCm": 5
+    "spacingCm": 5,
+    "height": {
+      "minCm": 50,
+      "maxCm": 150
+    }
   },
   "info": {
     "intro": "Verse doperwtjes zijn zoet en heel anders dan uit een pot. Erwten houden van koel weer; zaai ze vroeg in het voorjaar.",

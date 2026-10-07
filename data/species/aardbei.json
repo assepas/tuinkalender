@@ -32,7 +32,11 @@
     "moisture": [
       "normaal"
     ],
-    "spacingCm": 35
+    "spacingCm": 35,
+    "height": {
+      "minCm": 15,
+      "maxCm": 30
+    }
   },
   "info": {
     "intro": "Zelfgeteelde aardbeien zijn veel lekkerder dan die uit de winkel. De planten gaan drie tot vier jaar mee en maken zelf uitlopers waarmee je nieuwe planten krijgt.",

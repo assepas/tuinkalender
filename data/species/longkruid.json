@@ -34,7 +34,11 @@
       "normaal",
       "vochtig"
     ],
-    "spacingCm": 30
+    "spacingCm": 30,
+    "height": {
+      "minCm": 20,
+      "maxCm": 30
+    }
   },
   "info": {
     "intro": "Een lage schaduwplant met wit gevlekt blad en bloemen die van roze naar blauw verkleuren. Hij bloeit vroeg in het voorjaar en is dan heel belangrijk voor hommelkoninginnen.",

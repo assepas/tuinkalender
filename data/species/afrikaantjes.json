@@ -31,7 +31,11 @@
       "normaal",
       "droog"
     ],
-    "spacingCm": 20
+    "spacingCm": 20,
+    "height": {
+      "minCm": 20,
+      "maxCm": 40
+    }
   },
   "info": {
     "intro": "Vrolijke, makkelijke zomerbloeiers in oranje en geel die tot de eerste vorst doorbloeien. Ze worden vaak tussen groenten gezet omdat hun wortels schadelijke aaltjes in de grond tegengaan.",

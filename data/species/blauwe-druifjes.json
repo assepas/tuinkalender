@@ -32,7 +32,11 @@
     "moisture": [
       "normaal"
     ],
-    "spacingCm": 8
+    "spacingCm": 8,
+    "height": {
+      "minCm": 10,
+      "maxCm": 20
+    }
   },
   "info": {
     "intro": "Kleine bolletjes met dichte trosjes blauwe klokjes in april. Ze verwilderen makkelijk tot blauwe linten langs paden en onder struiken.",

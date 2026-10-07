@@ -32,7 +32,11 @@
       "droog",
       "normaal"
     ],
-    "spacingCm": 50
+    "spacingCm": 50,
+    "height": {
+      "minCm": 100,
+      "maxCm": 200
+    }
   },
   "info": {
     "intro": "Een hoge, rechtopgaande plant met een grote bladrozet en aren vol gele bloemen. Hij geeft hoogte en structuur aan de border. Veel toortsen zijn tweejarig; ze zaaien zich uit.",

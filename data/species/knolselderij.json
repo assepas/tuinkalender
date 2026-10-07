@@ -28,7 +28,11 @@
       "vochtig",
       "normaal"
     ],
-    "spacingCm": 40
+    "spacingCm": 40,
+    "height": {
+      "minCm": 40,
+      "maxCm": 60
+    }
   },
   "info": {
     "intro": "Een knolgewas met een sterke selderijsmaak, lekker in soep en stamppot. Hij heeft een lang seizoen nodig en veel water.",

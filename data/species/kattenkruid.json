@@ -34,7 +34,11 @@
       "droog",
       "normaal"
     ],
-    "spacingCm": 45
+    "spacingCm": 45,
+    "height": {
+      "minCm": 30,
+      "maxCm": 50
+    }
   },
   "info": {
     "intro": "Een losse, grijsgroene plant met lavendelblauwe bloemaren die van mei tot september bloeit. Een klassieker langs paden en onder rozen, en altijd vol bijen.",

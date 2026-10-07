@@ -31,7 +31,11 @@
       "droog",
       "normaal"
     ],
-    "spacingCm": 60
+    "spacingCm": 60,
+    "height": {
+      "minCm": 50,
+      "maxCm": 120
+    }
   },
   "info": {
     "intro": "Een groenblijvend mediterraan kruid met naaldachtig, geurig blad en blauwe bloempjes in het voorjaar. Je kunt het hele jaar door plukken voor bij vlees, aardappels en brood.",

@@ -33,7 +33,11 @@
       "normaal",
       "vochtig"
     ],
-    "spacingCm": 150
+    "spacingCm": 150,
+    "height": {
+      "minCm": 100,
+      "maxCm": 150
+    }
   },
   "info": {
     "intro": "Een sterke, makkelijke bessenstruik die jaar na jaar trossen rode bessen geeft. Ideaal voor beginners: hij verdraagt wat schaduw en vraagt weinig verzorging.",

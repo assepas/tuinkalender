@@ -32,7 +32,11 @@
     "moisture": [
       "normaal"
     ],
-    "spacingCm": 500
+    "spacingCm": 500,
+    "height": {
+      "minCm": 300,
+      "maxCm": 600
+    }
   },
   "info": {
     "intro": "Een zoete kers geeft in het voorjaar een wolk van witte bloesem en in juni en juli sappige kersen. Kies een boom op een zwakke onderstam voor een kleine tuin.",

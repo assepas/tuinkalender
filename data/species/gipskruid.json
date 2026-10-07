@@ -32,7 +32,11 @@
       "droog",
       "normaal"
     ],
-    "spacingCm": 70
+    "spacingCm": 70,
+    "height": {
+      "minCm": 60,
+      "maxCm": 100
+    }
   },
   "info": {
     "intro": "Een wolk van honderden kleine witte bloempjes op fijn vertakte stengels. Hij vult gaten tussen andere planten en is bekend uit het boeket.",

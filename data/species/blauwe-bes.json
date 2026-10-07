@@ -32,7 +32,11 @@
       "vochtig",
       "normaal"
     ],
-    "spacingCm": 150
+    "spacingCm": 150,
+    "height": {
+      "minCm": 100,
+      "maxCm": 200
+    }
   },
   "info": {
     "intro": "Een struik met zoete blauwe bessen en prachtige rode herfstkleuren. Blauwe bessen hebben zure grond nodig; op klei lukt het alleen in een pot met speciale grond.",

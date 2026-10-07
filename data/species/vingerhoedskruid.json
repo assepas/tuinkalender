@@ -34,7 +34,11 @@
       "normaal",
       "vochtig"
     ],
-    "spacingCm": 40
+    "spacingCm": 40,
+    "height": {
+      "minCm": 100,
+      "maxCm": 150
+    }
   },
   "info": {
     "intro": "Een tweejarige met hoge aren vol klokvormige bloemen in juni. Het eerste jaar maakt hij alleen een bladrozet, het tweede jaar bloeit hij en daarna sterft hij af. Hommels kruipen graag in de bloemen.",

@@ -32,7 +32,11 @@
       "droog",
       "normaal"
     ],
-    "spacingCm": 30
+    "spacingCm": 30,
+    "height": {
+      "minCm": 20,
+      "maxCm": 40
+    }
   },
   "info": {
     "intro": "Een lage, vaste zuring met kleine, schildvormige blaadjes en een frisse, citroenachtige smaak. Hij is milder dan gewone zuring en lekker in salades, soep en bij vis.",

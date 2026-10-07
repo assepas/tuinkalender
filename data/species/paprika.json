@@ -31,7 +31,11 @@
     "moisture": [
       "normaal"
     ],
-    "spacingCm": 45
+    "spacingCm": 45,
+    "height": {
+      "minCm": 50,
+      "maxCm": 80
+    }
   },
   "info": {
     "intro": "Paprika's hebben veel warmte nodig en lukken het best in een kas of in een pot tegen een zonnige muur. Groene paprika's kleuren bij genoeg warmte rood, geel of oranje.",

@@ -31,7 +31,11 @@
       "droog",
       "normaal"
     ],
-    "spacingCm": 30
+    "spacingCm": 30,
+    "height": {
+      "minCm": 30,
+      "maxCm": 50
+    }
   },
   "info": {
     "intro": "De klassieke balkon- en terrasplant die de hele zomer bloeit in rood, roze of wit. Hij is niet winterhard, maar je kunt hem makkelijk binnen overwinteren en jaren houden.",

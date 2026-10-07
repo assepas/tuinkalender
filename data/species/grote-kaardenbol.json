@@ -33,7 +33,11 @@
       "normaal",
       "vochtig"
     ],
-    "spacingCm": 50
+    "spacingCm": 50,
+    "height": {
+      "minCm": 100,
+      "maxCm": 200
+    }
   },
   "info": {
     "intro": "Een tot 2 meter hoge, stekelige tweejarige met eivormige bloemhoofden waarop ringen van lila bloempjes bloeien. In de winter eten puttertjes het zaad uit de droge koppen.",

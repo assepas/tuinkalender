@@ -32,7 +32,11 @@
       "normaal",
       "vochtig"
     ],
-    "spacingCm": 20
+    "spacingCm": 20,
+    "height": {
+      "minCm": 200,
+      "maxCm": 350
+    }
   },
   "info": {
     "intro": "Een klimmende boon met prachtige rode bloemen en lange, platte peulen. Hij groeit in een paar weken tot boven de 2 meter en is ook mooi in de siertuin.",

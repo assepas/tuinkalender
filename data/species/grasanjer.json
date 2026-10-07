@@ -33,7 +33,11 @@
       "droog",
       "normaal"
     ],
-    "spacingCm": 25
+    "spacingCm": 25,
+    "height": {
+      "minCm": 15,
+      "maxCm": 30
+    }
   },
   "info": {
     "intro": "Een lage vaste plant met grijsblauw, grasachtig blad en gerafelde, sterk geurende bloempjes. Ideaal voor de rand van een border of een rotstuin.",

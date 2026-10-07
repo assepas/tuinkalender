@@ -28,7 +28,11 @@
     "moisture": [
       "normaal"
     ],
-    "spacingCm": 10
+    "spacingCm": 10,
+    "height": {
+      "minCm": 20,
+      "maxCm": 40
+    }
   },
   "info": {
     "intro": "Een snelle, pittige bladgroente. Na drie à vier weken kun je al plukken. In het voorjaar en najaar is hij het lekkerst; in de zomer wordt hij scherp.",

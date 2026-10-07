@@ -34,7 +34,11 @@
       "normaal",
       "vochtig"
     ],
-    "spacingCm": 100
+    "spacingCm": 100,
+    "height": {
+      "minCm": 50,
+      "maxCm": 80
+    }
   },
   "info": {
     "intro": "Een van de makkelijkste en productiefste groenten: één of twee planten zijn genoeg voor een gezin. Hij wil wel warmte, veel ruimte en rijke grond.",

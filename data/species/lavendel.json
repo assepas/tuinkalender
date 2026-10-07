@@ -31,7 +31,11 @@
       "droog",
       "normaal"
     ],
-    "spacingCm": 40
+    "spacingCm": 40,
+    "height": {
+      "minCm": 40,
+      "maxCm": 60
+    }
   },
   "info": {
     "intro": "Een geurige, grijsbladige halfstruik met paarse bloemaren in juli. Bijen en vlinders zijn er dol op, en de gedroogde bloemen geuren nog maanden.",

@@ -34,7 +34,11 @@
       "vochtig",
       "normaal"
     ],
-    "spacingCm": 40
+    "spacingCm": 40,
+    "height": {
+      "minCm": 30,
+      "maxCm": 80
+    }
   },
   "info": {
     "intro": "Een onverwoestbaar, fris keukenkruid voor thee, mojito en salades. Er zijn veel smaken, zoals pepermunt, marokkaanse munt en appelmunt.",

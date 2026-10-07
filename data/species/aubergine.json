@@ -31,7 +31,11 @@
     "moisture": [
       "normaal"
     ],
-    "spacingCm": 50
+    "spacingCm": 50,
+    "height": {
+      "minCm": 60,
+      "maxCm": 100
+    }
   },
   "info": {
     "intro": "Een warmteminnende groente die in Nederland vooral in de kas lukt. De glanzende paarse vruchten zijn lekker gegrild of in stoofgerechten.",

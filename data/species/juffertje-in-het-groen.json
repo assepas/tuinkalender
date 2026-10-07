@@ -33,7 +33,11 @@
     "moisture": [
       "normaal"
     ],
-    "spacingCm": 20
+    "spacingCm": 20,
+    "height": {
+      "minCm": 30,
+      "maxCm": 50
+    }
   },
   "info": {
     "intro": "Een fijne eenjarige met lichtblauwe bloemen in een wolkje van draadvormig blad. Na de bloei komen er ballonvormige zaaddozen die mooi zijn in droogboeketten.",

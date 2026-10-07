@@ -31,7 +31,11 @@
     "moisture": [
       "normaal"
     ],
-    "spacingCm": 10
+    "spacingCm": 10,
+    "height": {
+      "minCm": 30,
+      "maxCm": 60
+    }
   },
   "info": {
     "intro": "Makkelijke en productieve groente: een paar meter bonen geeft al weken lang een schaal per keer. Er zijn lage struikbonen en klimmende stokbonen.",

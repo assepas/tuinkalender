@@ -32,7 +32,11 @@
       "normaal",
       "vochtig"
     ],
-    "spacingCm": 25
+    "spacingCm": 25,
+    "height": {
+      "minCm": 15,
+      "maxCm": 30
+    }
   },
   "info": {
     "intro": "Snelle, makkelijke bladgroente: van zaaien tot oogst duurt het maar een paar weken. Er zijn krop-, pluk- en snijslarassen, zodat je de hele zomer vers blad hebt.",

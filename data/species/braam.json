@@ -32,7 +32,11 @@
     "moisture": [
       "normaal"
     ],
-    "spacingCm": 250
+    "spacingCm": 250,
+    "height": {
+      "minCm": 150,
+      "maxCm": 300
+    }
   },
   "info": {
     "intro": "Een sterke klimmende struik met zoete zwarte bramen in de nazomer. Kies voor de tuin een doornloos ras; die zijn net zo lekker en veel prettiger in het onderhoud.",

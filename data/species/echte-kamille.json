@@ -33,7 +33,11 @@
     "moisture": [
       "normaal"
     ],
-    "spacingCm": 20
+    "spacingCm": 20,
+    "height": {
+      "minCm": 20,
+      "maxCm": 50
+    }
   },
   "info": {
     "intro": "Een eenjarige akkerbloem met kleine witte madeliefjesbloemen en een geel, hol hartje. De bloemen geven de bekende rustgevende thee en ruiken naar appel.",

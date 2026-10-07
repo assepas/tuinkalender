@@ -31,7 +31,11 @@
     "moisture": [
       "normaal"
     ],
-    "spacingCm": 40
+    "spacingCm": 40,
+    "height": {
+      "minCm": 150,
+      "maxCm": 250
+    }
   },
   "info": {
     "intro": "Zoete maïskolven, rechtstreeks van het veld in de pan, zijn onvergelijkbaar zoet. Maïs is een windbestuiver: plant hem in blokken in plaats van rijen.",

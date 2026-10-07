@@ -25,7 +25,11 @@
     "moisture": [
       "normaal"
     ],
-    "spacingCm": 50
+    "spacingCm": 50,
+    "height": {
+      "minCm": 50,
+      "maxCm": 100
+    }
   },
   "info": {
     "intro": "Dé Hollandse wintergroente voor stamppot. Boerenkool is winterhard en wordt na een paar nachten vorst zoeter. Je oogst van oktober tot in maart.",

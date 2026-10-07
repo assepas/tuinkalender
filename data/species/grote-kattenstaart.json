@@ -35,7 +35,11 @@
       "vochtig",
       "nat"
     ],
-    "spacingCm": 50
+    "spacingCm": 50,
+    "height": {
+      "minCm": 60,
+      "maxCm": 120
+    }
   },
   "info": {
     "intro": "Een inheemse oeverplant met lange, paarsroze bloemaren in de zomer. Hij groeit van nature langs sloten en is een van de beste planten voor bijen en vlinders.",

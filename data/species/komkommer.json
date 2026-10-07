@@ -33,7 +33,11 @@
       "vochtig",
       "normaal"
     ],
-    "spacingCm": 50
+    "spacingCm": 50,
+    "height": {
+      "minCm": 150,
+      "maxCm": 250
+    }
   },
   "info": {
     "intro": "Komkommers groeien het best in een kas, maar er zijn ook goede buitenrassen (vaak kleinere, stekelige vruchten). Een gezonde plant geeft wekenlang elke paar dagen een komkommer.",

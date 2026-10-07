@@ -26,7 +26,11 @@
     "moisture": [
       "normaal"
     ],
-    "spacingCm": 5
+    "spacingCm": 5,
+    "height": {
+      "minCm": 20,
+      "maxCm": 40
+    }
   },
   "info": {
     "intro": "Zelfgekweekte wortels zijn zoet en knapperig. Er zijn vroege rassen voor de zomer en late rassen om te bewaren. Ze houden van losse grond zonder stenen.",

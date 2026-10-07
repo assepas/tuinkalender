@@ -33,7 +33,11 @@
       "normaal",
       "vochtig"
     ],
-    "spacingCm": 25
+    "spacingCm": 25,
+    "height": {
+      "minCm": 20,
+      "maxCm": 40
+    }
   },
   "info": {
     "intro": "Een bekend keukenkruid met holle, fijne sprietjes die mild naar ui smaken. In mei en juni komen er lila bolletjes die bijen aantrekken en ook eetbaar zijn.",

@@ -25,7 +25,11 @@
     "moisture": [
       "normaal"
     ],
-    "spacingCm": 60
+    "spacingCm": 60,
+    "height": {
+      "minCm": 40,
+      "maxCm": 60
+    }
   },
   "info": {
     "intro": "Een kool met gekruld, gebobbeld blad. Hij is malser dan witte kool en goed winterhard: late rassen kun je tot in de winter oogsten.",

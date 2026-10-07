@@ -34,7 +34,11 @@
       "normaal",
       "vochtig"
     ],
-    "spacingCm": 50
+    "spacingCm": 50,
+    "height": {
+      "minCm": 150,
+      "maxCm": 200
+    }
   },
   "info": {
     "intro": "De zomerframboos geeft in juli en augustus een grote oogst op de ranken van vorig jaar. Frambozen groeien snel en geven al in het tweede jaar volop.",

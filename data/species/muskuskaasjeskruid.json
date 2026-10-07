@@ -33,7 +33,11 @@
       "normaal",
       "droog"
     ],
-    "spacingCm": 40
+    "spacingCm": 40,
+    "height": {
+      "minCm": 40,
+      "maxCm": 80
+    }
   },
   "info": {
     "intro": "Een elegante inheemse vaste plant met fijn ingesneden blad en zachtroze of witte, schaalvormige bloemen. Hij bloeit lang en past goed in een natuurlijke border.",

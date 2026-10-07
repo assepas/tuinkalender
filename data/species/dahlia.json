@@ -32,7 +32,11 @@
     "moisture": [
       "normaal"
     ],
-    "spacingCm": 60
+    "spacingCm": 60,
+    "height": {
+      "minCm": 50,
+      "maxCm": 150
+    }
   },
   "info": {
     "intro": "Dahlia's bloeien van juli tot de eerste vorst in bijna elke kleur en vorm, en zijn geweldig als snijbloem. Ze groeien uit een knol die je elk jaar opnieuw kunt gebruiken.",

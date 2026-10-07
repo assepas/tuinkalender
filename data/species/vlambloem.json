@@ -33,7 +33,11 @@
       "normaal",
       "vochtig"
     ],
-    "spacingCm": 50
+    "spacingCm": 50,
+    "height": {
+      "minCm": 60,
+      "maxCm": 120
+    }
   },
   "info": {
     "intro": "Een hoge vaste plant met grote, geurende bloemschermen in roze, paars of wit. In de avond ruikt hij het sterkst en komen er nachtvlinders op af.",

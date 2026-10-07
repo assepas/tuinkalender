@@ -34,7 +34,11 @@
       "droog",
       "normaal"
     ],
-    "spacingCm": 35
+    "spacingCm": 35,
+    "height": {
+      "minCm": 15,
+      "maxCm": 30
+    }
   },
   "info": {
     "intro": "Een lage, stevige vaste plant met fijn ingesneden blad en magenta bloemen van mei tot de nazomer. In de herfst kleurt het blad rood. Taai en makkelijk.",

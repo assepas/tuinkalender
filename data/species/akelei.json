@@ -31,7 +31,11 @@
     "moisture": [
       "normaal"
     ],
-    "spacingCm": 30
+    "spacingCm": 30,
+    "height": {
+      "minCm": 40,
+      "maxCm": 80
+    }
   },
   "info": {
     "intro": "Een sierlijke vaste plant met klokjesachtige bloemen in mei en juni. Hij is inheems, trekt hommels en zaait zichzelf graag uit, zodat je er vanzelf meer van krijgt.",

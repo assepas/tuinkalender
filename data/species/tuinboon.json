@@ -29,7 +29,11 @@
     "moisture": [
       "normaal"
     ],
-    "spacingCm": 15
+    "spacingCm": 15,
+    "height": {
+      "minCm": 80,
+      "maxCm": 120
+    }
   },
   "info": {
     "intro": "Een oude, winterharde boon die je al vroeg in het voorjaar zaait. De geurende bloemen trekken hommels aan en de jonge bonen zijn heerlijk.",

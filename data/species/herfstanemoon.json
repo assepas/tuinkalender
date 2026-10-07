@@ -32,7 +32,11 @@
       "normaal",
       "vochtig"
     ],
-    "spacingCm": 50
+    "spacingCm": 50,
+    "height": {
+      "minCm": 60,
+      "maxCm": 120
+    }
   },
   "info": {
     "intro": "Een sierlijke vaste plant met roze of witte bloemen op lange stelen, precies als de rest van de tuin uitbloeit. Hij is sterk en wordt elk jaar mooier.",

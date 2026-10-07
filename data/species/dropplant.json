@@ -33,7 +33,11 @@
       "droog",
       "normaal"
     ],
-    "spacingCm": 40
+    "spacingCm": 40,
+    "height": {
+      "minCm": 60,
+      "maxCm": 120
+    }
   },
   "info": {
     "intro": "Een vaste plant met paarse bloemaren en blad dat naar drop en anijs ruikt. Het is een van de beste bijenplanten; er zit bijna altijd iets op. Van het blad zet je thee.",

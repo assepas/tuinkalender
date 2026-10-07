@@ -34,7 +34,11 @@
       "normaal",
       "vochtig"
     ],
-    "spacingCm": 10
+    "spacingCm": 10,
+    "height": {
+      "minCm": 5,
+      "maxCm": 15
+    }
   },
   "info": {
     "intro": "Het bekendste gazonbloempje: een platte bladrozet met witte bloemetjes met een geel hart. Het bloeit bijna het hele jaar en is een van de eerste voedselbronnen voor bijen in het voorjaar.",

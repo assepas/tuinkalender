@@ -82,7 +82,17 @@
           "items": { "type": "string", "enum": ["droog", "normaal", "vochtig", "nat"] },
           "description": "Hoe vochtig de grond mag/moet zijn."
         },
-        "spacingCm": { "type": "integer", "minimum": 1, "description": "Plantafstand in centimeters." }
+        "spacingCm": { "type": "integer", "minimum": 1, "description": "Plantafstand in centimeters." },
+        "height": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["minCm", "maxCm"],
+          "description": "Gebruikelijke eindhoogte van–tot in centimeters (bij klimplanten de klimhoogte). maxCm >= minCm.",
+          "properties": {
+            "minCm": { "type": "integer", "minimum": 1 },
+            "maxCm": { "type": "integer", "minimum": 1 }
+          }
+        }
       }
     },
     "info": {

@@ -32,7 +32,11 @@
       "droog",
       "normaal"
     ],
-    "spacingCm": 15
+    "spacingCm": 15,
+    "height": {
+      "minCm": 10,
+      "maxCm": 40
+    }
   },
   "info": {
     "intro": "Een laag, kruipend plantje met klaverblaadjes en kleine gele bolletjes. De zaadjes worden zwart en lijken op kleine hopbelletjes. Hij bindt stikstof uit de lucht en maakt de grond rijker.",

@@ -33,7 +33,11 @@
       "normaal",
       "vochtig"
     ],
-    "spacingCm": 40
+    "spacingCm": 40,
+    "height": {
+      "minCm": 50,
+      "maxCm": 80
+    }
   },
   "info": {
     "intro": "Een vaste plant met bijzondere, speldenkussenachtige bloemetjes omringd door een kraag van papierachtige blaadjes. Hij bloeit lang en doet het goed in de halfschaduw.",

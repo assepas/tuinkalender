@@ -32,7 +32,11 @@
       "droog",
       "normaal"
     ],
-    "spacingCm": 30
+    "spacingCm": 30,
+    "height": {
+      "minCm": 30,
+      "maxCm": 60
+    }
   },
   "info": {
     "intro": "Een inheemse vaste plant en keukenkruid (oregano) met roze bloemtuiltjes in de zomer. Een van de beste vlinder- en bijenplanten die er is.",

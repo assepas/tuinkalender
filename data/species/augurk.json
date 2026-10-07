@@ -33,7 +33,11 @@
       "normaal",
       "vochtig"
     ],
-    "spacingCm": 50
+    "spacingCm": 50,
+    "height": {
+      "minCm": 100,
+      "maxCm": 200
+    }
   },
   "info": {
     "intro": "Kleine, stevige komkommertjes om in te maken. Augurken doen het goed buiten en geven in de zomer een grote oogst in korte tijd.",

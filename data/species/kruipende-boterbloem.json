@@ -35,7 +35,11 @@
       "vochtig",
       "nat"
     ],
-    "spacingCm": 25
+    "spacingCm": 25,
+    "height": {
+      "minCm": 15,
+      "maxCm": 40
+    }
   },
   "info": {
     "intro": "Een vaste plant met glanzende gele bloemen die zich snel verspreidt met lange uitlopers. Hij doet het goed op natte, zware grond en bloeit volop in het voorjaar.",

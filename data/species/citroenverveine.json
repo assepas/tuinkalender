@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "id": "citroenverveine",
-  "name": "Citroenverveine",
+  "name": "Citroenverbena",
   "latin": "Aloysia citrodora",
   "category": "kruid",
   "tags": [
@@ -30,7 +30,11 @@
     "moisture": [
       "normaal"
     ],
-    "spacingCm": 60
+    "spacingCm": 60,
+    "height": {
+      "minCm": 60,
+      "maxCm": 150
+    }
   },
   "info": {
     "intro": "Een struikje met blad dat heerlijk naar citroen ruikt; lekker als thee of in desserts. Hij is niet winterhard en staat daarom het best in een grote pot die je binnen kunt zetten.",

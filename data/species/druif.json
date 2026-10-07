@@ -33,7 +33,11 @@
       "normaal",
       "droog"
     ],
-    "spacingCm": 150
+    "spacingCm": 150,
+    "height": {
+      "minCm": 200,
+      "maxCm": 400
+    }
   },
   "info": {
     "intro": "Een klimplant die op een zonnige muur of pergola zoete trossen druiven geeft. Kies een ras dat voor buiten in Nederland geschikt is en schimmelresistent is, zoals 'Boskoop Glory' of 'Phoenix'.",

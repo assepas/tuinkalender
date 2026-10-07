@@ -34,7 +34,11 @@
       "vochtig",
       "nat"
     ],
-    "spacingCm": 20
+    "spacingCm": 20,
+    "height": {
+      "minCm": 20,
+      "maxCm": 40
+    }
   },
   "info": {
     "intro": "Een voorjaarsbloeier van vochtige graslanden met tere, lila bloemen rond Pinksteren. Het is de waardplant van het oranjetipje: de rupsen eten van de bloemen en zaaddozen.",

@@ -31,7 +31,11 @@
       "droog",
       "normaal"
     ],
-    "spacingCm": 60
+    "spacingCm": 60,
+    "height": {
+      "minCm": 60,
+      "maxCm": 100
+    }
   },
   "info": {
     "intro": "Een vaste plant met enorme, papierachtige bloemen in oranje, rood, roze of wit met een zwart hart. Na de bloei sterft het blad af en komt in de herfst opnieuw op.",

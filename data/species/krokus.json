@@ -32,7 +32,11 @@
     "moisture": [
       "normaal"
     ],
-    "spacingCm": 8
+    "spacingCm": 8,
+    "height": {
+      "minCm": 5,
+      "maxCm": 15
+    }
   },
   "info": {
     "intro": "Een van de eerste bloeiers van het jaar, in paars, wit of geel. De open bloemen zijn in februari en maart een belangrijke voedselbron voor hommels en bijen.",

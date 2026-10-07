@@ -28,7 +28,11 @@
       "normaal",
       "vochtig"
     ],
-    "spacingCm": 3
+    "spacingCm": 3,
+    "height": {
+      "minCm": 20,
+      "maxCm": 30
+    }
   },
   "info": {
     "intro": "Een van de snelste groenten: na vier à vijf weken maai je al een bosje malse stelen voor stamppot. Ideaal als eerste groente in het voorjaar.",

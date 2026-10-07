@@ -32,7 +32,11 @@
       "normaal",
       "vochtig"
     ],
-    "spacingCm": 100
+    "spacingCm": 100,
+    "height": {
+      "minCm": 60,
+      "maxCm": 120
+    }
   },
   "info": {
     "intro": "Een vaste plant met grote bladeren en dikke, rode of groene stelen voor compote en taart. Eén plant geeft tien jaar of langer oogst.",

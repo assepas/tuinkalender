@@ -32,7 +32,11 @@
       "droog",
       "normaal"
     ],
-    "spacingCm": 30
+    "spacingCm": 30,
+    "height": {
+      "minCm": 30,
+      "maxCm": 60
+    }
   },
   "info": {
     "intro": "Een inheemse vaste plant met lila-blauwe, speldenkussenachtige bloemen op lange stelen. Hij bloeit maanden achter elkaar en is een topper voor vlinders.",

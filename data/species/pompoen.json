@@ -34,7 +34,11 @@
       "normaal",
       "vochtig"
     ],
-    "spacingCm": 150
+    "spacingCm": 150,
+    "height": {
+      "minCm": 30,
+      "maxCm": 60
+    }
   },
   "info": {
     "intro": "Een snelgroeiende groente met grote bladeren en ranken, en in de herfst prachtige vruchten die je maanden kunt bewaren. Eén plant heeft wel een paar vierkante meter nodig.",

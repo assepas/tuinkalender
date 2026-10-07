@@ -28,7 +28,11 @@
     "moisture": [
       "normaal"
     ],
-    "spacingCm": 15
+    "spacingCm": 15,
+    "height": {
+      "minCm": 30,
+      "maxCm": 60
+    }
   },
   "info": {
     "intro": "Een vergeten groente met een lange, crèmekleurige wortel en een zoete, nootachtige smaak. Hij staat lang op het bed maar is winterhard: je oogst van oktober tot maart.",

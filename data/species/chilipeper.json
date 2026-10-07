@@ -33,7 +33,11 @@
     "moisture": [
       "normaal"
     ],
-    "spacingCm": 40
+    "spacingCm": 40,
+    "height": {
+      "minCm": 40,
+      "maxCm": 80
+    }
   },
   "info": {
     "intro": "Pepers zijn compacter dan paprika's en doen het goed in een pot op een warm, zonnig plekje. Eén plant geeft al snel tientallen pepers.",

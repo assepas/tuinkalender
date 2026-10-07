@@ -35,7 +35,11 @@
       "normaal",
       "vochtig"
     ],
-    "spacingCm": 15
+    "spacingCm": 15,
+    "height": {
+      "minCm": 10,
+      "maxCm": 20
+    }
   },
   "info": {
     "intro": "Een lage, kruipende klaver met witte bolletjes waar bijen de hele zomer op af komen. Via zijn wortels haalt hij stikstof uit de lucht en maakt zo de grond rijker.",

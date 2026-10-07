@@ -32,7 +32,11 @@
     "moisture": [
       "normaal"
     ],
-    "spacingCm": 20
+    "spacingCm": 20,
+    "height": {
+      "minCm": 200,
+      "maxCm": 300
+    }
   },
   "info": {
     "intro": "Een klimboon met lange, platte peulen die je in stukken snijdt. Een klassieker uit de Nederlandse moestuin, lekker vers en goed in te maken.",

@@ -33,7 +33,11 @@
     "moisture": [
       "normaal"
     ],
-    "spacingCm": 40
+    "spacingCm": 40,
+    "height": {
+      "minCm": 40,
+      "maxCm": 70
+    }
   },
   "info": {
     "intro": "Een eenjarig kruid met behaarde stengels en knikkende, stervormige blauwe bloemen. Het blad smaakt naar komkommer. Het is een van de beste bijenplanten die er is.",

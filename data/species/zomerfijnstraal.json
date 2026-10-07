@@ -31,7 +31,11 @@
     "moisture": [
       "normaal"
     ],
-    "spacingCm": 30
+    "spacingCm": 30,
+    "height": {
+      "minCm": 50,
+      "maxCm": 120
+    }
   },
   "info": {
     "intro": "Een losse, hoge plant met honderden kleine, witte madeliefachtige bloemen. Hij bloeit lang en geeft een natuurlijke, wilde sfeer.",

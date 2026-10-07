@@ -33,7 +33,11 @@
       "droog",
       "normaal"
     ],
-    "spacingCm": 40
+    "spacingCm": 40,
+    "height": {
+      "minCm": 40,
+      "maxCm": 80
+    }
   },
   "info": {
     "intro": "Een inheemse vaste plant met fijn, veerachtig blad en platte schermen van witte bloempjes. Er zijn ook tuinvormen in roze, rood en geel. Zweefvliegen en sluipwespen komen er graag op.",

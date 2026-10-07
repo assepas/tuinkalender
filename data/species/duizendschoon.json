@@ -32,7 +32,11 @@
     "moisture": [
       "normaal"
     ],
-    "spacingCm": 25
+    "spacingCm": 25,
+    "height": {
+      "minCm": 30,
+      "maxCm": 60
+    }
   },
   "info": {
     "intro": "Een ouderwetse tweejarige met dichte, geurende bloemschermen in rood, roze en wit, vaak met een oog. Een echte boerentuinplant en een lang houdbare snijbloem.",

@@ -32,7 +32,11 @@
       "normaal",
       "droog"
     ],
-    "spacingCm": 45
+    "spacingCm": 45,
+    "height": {
+      "minCm": 60,
+      "maxCm": 100
+    }
   },
   "info": {
     "intro": "Een Noord-Amerikaanse vaste plant met roze bloemen rond een oranje, stekelig hart. Vlinders en bijen komen er massaal op af, en in de winter eten vogels het zaad.",

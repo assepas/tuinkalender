@@ -31,7 +31,11 @@
     "moisture": [
       "normaal"
     ],
-    "spacingCm": 400
+    "spacingCm": 400,
+    "height": {
+      "minCm": 500,
+      "maxCm": 1000
+    }
   },
   "info": {
     "intro": "Een krachtige klimmer met lange, hangende trossen lila bloemen in mei. De geur is zoet en bedwelmend. Hij heeft een stevige pergola of muur nodig: hij wordt zwaar.",

@@ -34,7 +34,11 @@
       "normaal",
       "vochtig"
     ],
-    "spacingCm": 150
+    "spacingCm": 150,
+    "height": {
+      "minCm": 300,
+      "maxCm": 600
+    }
   },
   "info": {
     "intro": "Een inheemse klimplant met heerlijk geurende bloemen, vooral 's avonds. Nachtvlinders en hommels komen erop af, en in de herfst eten vogels de rode bessen.",

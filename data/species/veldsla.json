@@ -27,7 +27,11 @@
     "moisture": [
       "normaal"
     ],
-    "spacingCm": 10
+    "spacingCm": 10,
+    "height": {
+      "minCm": 5,
+      "maxCm": 15
+    }
   },
   "info": {
     "intro": "Een kleine bladgroente die je in de nazomer zaait en in de herfst en winter oogst. Veldsla kan tegen vorst en groeit door als er verder weinig in de tuin staat.",

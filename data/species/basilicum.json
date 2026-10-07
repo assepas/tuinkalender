@@ -31,7 +31,11 @@
     "moisture": [
       "normaal"
     ],
-    "spacingCm": 25
+    "spacingCm": 25,
+    "height": {
+      "minCm": 20,
+      "maxCm": 50
+    }
   },
   "info": {
     "intro": "Het bekende geurige keukenkruid voor tomaat en pesto. Basilicum houdt van warmte en groeit in Nederland het best in een pot op een zonnige, beschutte plek of in de kas.",

@@ -34,7 +34,11 @@
       "normaal",
       "vochtig"
     ],
-    "spacingCm": 15
+    "spacingCm": 15,
+    "height": {
+      "minCm": 150,
+      "maxCm": 200
+    }
   },
   "info": {
     "intro": "Een eenjarige klimmer met heerlijk geurende bloemen in roze, paars, wit en rood. Hoe meer je plukt, hoe meer hij bloeit. Een klassieker voor de snijbloementuin.",

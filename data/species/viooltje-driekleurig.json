@@ -32,7 +32,11 @@
     "moisture": [
       "normaal"
     ],
-    "spacingCm": 15
+    "spacingCm": 15,
+    "height": {
+      "minCm": 10,
+      "maxCm": 25
+    }
   },
   "info": {
     "intro": "Het wilde viooltje van Nederland, met kleine bloemen in paars, geel en wit. Het is de voorouder van de grote tuinviolen en bloeit maanden achter elkaar.",

@@ -33,7 +33,11 @@
       "normaal",
       "vochtig"
     ],
-    "spacingCm": 60
+    "spacingCm": 60,
+    "height": {
+      "minCm": 60,
+      "maxCm": 90
+    }
   },
   "info": {
     "intro": "Een sierlijke vaste plant met gebogen stengels vol hartvormige, roze en witte bloempjes. Hij bloeit in het voorjaar in de halfschaduw en trekt daarna in.",

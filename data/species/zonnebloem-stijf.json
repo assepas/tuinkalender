@@ -34,7 +34,11 @@
       "droog",
       "normaal"
     ],
-    "spacingCm": 60
+    "spacingCm": 60,
+    "height": {
+      "minCm": 100,
+      "maxCm": 200
+    }
   },
   "info": {
     "intro": "De stijve zonnebloem is een stevige vaste plant van 1,5 tot 2 meter hoog met ruwe, stugge bladeren en gele bloemen met een donkere kern. Hij bloeit laat, van augustus tot in oktober, als veel andere planten al uitgebloeid zijn. Bijen en vlinders zijn er dol op, en je kunt de bloemen ook in een vaas zetten.",

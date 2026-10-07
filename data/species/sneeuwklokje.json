@@ -33,7 +33,11 @@
       "normaal",
       "vochtig"
     ],
-    "spacingCm": 10
+    "spacingCm": 10,
+    "height": {
+      "minCm": 10,
+      "maxCm": 20
+    }
   },
   "info": {
     "intro": "Het eerste bloempje van het jaar: witte, hangende klokjes in januari en februari. Sneeuwklokjes verwilderen onder struiken en bomen tot hele tapijten.",

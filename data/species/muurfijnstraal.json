@@ -32,7 +32,11 @@
       "droog",
       "normaal"
     ],
-    "spacingCm": 30
+    "spacingCm": 30,
+    "height": {
+      "minCm": 15,
+      "maxCm": 30
+    }
   },
   "info": {
     "intro": "Een laag, losjes groeiend plantje met madeliefachtige bloempjes die van wit naar roze verkleuren. Hij bloeit van mei tot de vorst en groeit graag in muurtjes, tussen tegels en op trappen.",

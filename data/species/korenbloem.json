@@ -34,7 +34,11 @@
       "droog",
       "normaal"
     ],
-    "spacingCm": 25
+    "spacingCm": 25,
+    "height": {
+      "minCm": 40,
+      "maxCm": 80
+    }
   },
   "info": {
     "intro": "De klassieke blauwe akkerbloem die vroeger tussen het graan groeide. Bijen en hommels zijn er dol op, en de blaadjes zijn eetbaar in salades.",

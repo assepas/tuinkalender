@@ -31,7 +31,11 @@
     "moisture": [
       "normaal"
     ],
-    "spacingCm": 60
+    "spacingCm": 60,
+    "height": {
+      "minCm": 150,
+      "maxCm": 250
+    }
   },
   "info": {
     "intro": "Een vaste klimmer met roze, witte of paarse vlinderbloemen, als een siererwt die elk jaar terugkomt. Hij ruikt niet, maar bloeit wel de hele zomer.",

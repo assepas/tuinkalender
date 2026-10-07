@@ -33,7 +33,11 @@
       "normaal",
       "vochtig"
     ],
-    "spacingCm": 400
+    "spacingCm": 400,
+    "height": {
+      "minCm": 300,
+      "maxCm": 500
+    }
   },
   "info": {
     "intro": "Een kleine boom met grote, roze-witte bloemen en geurende, gele vruchten in de herfst. Kweeperen zijn rauw hard en zuur, maar gekookt geven ze heerlijke jam, gelei en compote.",

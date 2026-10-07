@@ -32,7 +32,11 @@
       "normaal",
       "vochtig"
     ],
-    "spacingCm": 150
+    "spacingCm": 150,
+    "height": {
+      "minCm": 120,
+      "maxCm": 180
+    }
   },
   "info": {
     "intro": "Een bessenstruik met aromatische, vitaminerijke zwarte bessen voor jam, siroop en cassis. Het blad ruikt kruidig en is ook lekker in thee.",

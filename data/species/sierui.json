@@ -32,7 +32,11 @@
       "normaal",
       "droog"
     ],
-    "spacingCm": 20
+    "spacingCm": 20,
+    "height": {
+      "minCm": 80,
+      "maxCm": 100
+    }
   },
   "info": {
     "intro": "Een bolgewas met perfecte, purperen bollen van sterretjes op lange stelen. Hij bloeit tussen de tulpen en de zomerbloeiers in en is geliefd bij bijen.",

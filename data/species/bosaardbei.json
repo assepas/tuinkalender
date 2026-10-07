@@ -34,7 +34,11 @@
       "normaal",
       "vochtig"
     ],
-    "spacingCm": 25
+    "spacingCm": 25,
+    "height": {
+      "minCm": 10,
+      "maxCm": 25
+    }
   },
   "info": {
     "intro": "Een inheemse, kleine aardbei met heel aromatische vruchtjes. Hij groeit ook in de halfschaduw onder struiken en vormt een mooie bodembedekker.",

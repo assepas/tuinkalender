@@ -33,7 +33,11 @@
       "droog",
       "normaal"
     ],
-    "spacingCm": 20
+    "spacingCm": 20,
+    "height": {
+      "minCm": 10,
+      "maxCm": 30
+    }
   },
   "info": {
     "intro": "Een lage vaste plant met gele, soms oranjerode vlinderbloemen. Hij is een van de belangrijkste waardplanten voor vlinders zoals het icarusblauwtje, en maakt net als klaver de grond rijker.",

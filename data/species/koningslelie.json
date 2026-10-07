@@ -32,7 +32,11 @@
     "moisture": [
       "normaal"
     ],
-    "spacingCm": 30
+    "spacingCm": 30,
+    "height": {
+      "minCm": 100,
+      "maxCm": 150
+    }
   },
   "info": {
     "intro": "Een lelie met grote, trompetvormige witte bloemen met een gele keel en een roze buitenkant. De geur is zo sterk dat je hem door de hele tuin ruikt.",

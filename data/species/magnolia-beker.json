@@ -1,0 +1,100 @@
+{
+  "schemaVersion": 1,
+  "id": "magnolia-beker",
+  "name": "Bekermagnolia",
+  "latin": "Magnolia × soulangeana",
+  "category": "boom",
+  "tags": [
+    "meerjarig",
+    "voorjaarsbloeier",
+    "veel-ruimte",
+    "vlinderplant"
+  ],
+  "nativeStatus": "exoot",
+  "appearance": {
+    "shape": "bloem",
+    "count": 6,
+    "flowerColor": "#E8B4C4",
+    "flowerColorName": "roze-wit"
+  },
+  "bloom": {
+    "from": "04-01",
+    "to": "04-30"
+  },
+  "growing": {
+    "sun": [
+      "zon",
+      "halfschaduw"
+    ],
+    "soil": [
+      "leem",
+      "klei",
+      "zand"
+    ],
+    "moisture": [
+      "normaal",
+      "vochtig"
+    ],
+    "spacingCm": 500,
+    "height": {
+      "minCm": 400,
+      "maxCm": 800
+    }
+  },
+  "info": {
+    "intro": "De bekermagnolia is een brede, laag vertakte boom of grote struik van 5 tot 8 meter, met grote beker- of tulpvormige bloemen in roze en wit vóórdat het blad uitloopt. Hij is een blikvanger in het voorjaar en wordt een prachtige solitaire boom. Geef hem de ruimte, want hij wordt breder dan je denkt.",
+    "water": "Geef een nieuwe boom de eerste twee jaar bij droog weer elke week flink water. Een gevestigde boom redt zich meestal zelf, maar houd de grond wel luchtig vochtig, want magnolia's houden niet van uitdroging.",
+    "tips": [
+      "Magnolia heeft vlezige, ondiepe wortels die snel beschadigen. Spit of schoffel niet vlak rond de stam en gebruik liever een laag compost of schors om de grond te bedekken.",
+      "Late nachtvorst in april kan de open bloemen bruin maken. Plant de boom daarom op een beschutte plek, niet op de koude oostkant.",
+      "Kalkrijke of zeer natte grond geeft gele bladeren (chlorose). Kies een plek met losse, licht zure tot neutrale grond.",
+      "Snoei zo weinig mogelijk: de boom herstelt traag van grote wonden en bloeit het best met zijn natuurlijke vorm."
+    ]
+  },
+  "tasks": [
+    {
+      "id": "planten",
+      "type": "planten",
+      "window": {
+        "kind": "dates",
+        "from": "03-15",
+        "to": "05-15"
+      },
+      "note": "Beschutte plek kiezen",
+      "description": "Plant in het voorjaar op een zonnige of lichtbeschaduwde, beschutte plek, met minstens 5 meter ruimte rondom. Maak het gat twee keer zo breed als de kluit en plant even diep als in de pot: de wortelhals mag niet onder de grond. Geef na het planten flink water en leg een laag compost of schors rond de boom."
+    },
+    {
+      "id": "mulchen",
+      "type": "bemesten",
+      "window": {
+        "kind": "dates",
+        "from": "03-01",
+        "to": "04-15"
+      },
+      "description": "Leg in het voorjaar een laag compost of verteerde bladgrond van zo'n 5 cm rond de boom, tot waar de takken reiken. Dit voedt de boom en houdt de ondiepe wortels vochtig. Houd de laag een handbreed van de stam af."
+    },
+    {
+      "id": "snoeien",
+      "type": "snoeien",
+      "importance": "licht",
+      "window": {
+        "kind": "dates",
+        "from": "06-01",
+        "to": "08-31"
+      },
+      "note": "Alleen dood of kruisend hout",
+      "description": "Snoei na de bloei, in de zomer, als de boom in sap zit en wonden snel dichtgroeien. Knip alleen dode, zieke of kruisende takken weg en laat de natuurlijke vorm intact. Snoei niet in de winter of het vroege voorjaar: dan 'bloedt' de boom en kan hij ziek worden."
+    },
+    {
+      "id": "vorstbescherming",
+      "type": "onderhoud",
+      "window": {
+        "kind": "dates",
+        "from": "03-15",
+        "to": "04-30"
+      },
+      "note": "Bloemen beschermen bij nachtvorst",
+      "description": "Hang bij een jonge boom tijdens een aangekondigde nachtvorst in de bloeitijd een stuk tuinfleece over de takken en haal het overdag weer weg. Zo blijven de bloemen mooi. Bij een grote boom lukt dit niet; die herstelt zich het volgende jaar vanzelf."
+    }
+  ]
+}

@@ -29,7 +29,11 @@
     "moisture": [
       "normaal"
     ],
-    "spacingCm": 40
+    "spacingCm": 40,
+    "height": {
+      "minCm": 100,
+      "maxCm": 150
+    }
   },
   "info": {
     "intro": "Een vaste groente die twintig jaar kan blijven staan. Groene asperges zijn in de moestuin het makkelijkst; witte moet je onder een aarden rug laten groeien.",

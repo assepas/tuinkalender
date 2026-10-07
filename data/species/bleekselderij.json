@@ -26,7 +26,11 @@
     "moisture": [
       "vochtig"
     ],
-    "spacingCm": 30
+    "spacingCm": 30,
+    "height": {
+      "minCm": 40,
+      "maxCm": 60
+    }
   },
   "info": {
     "intro": "Een selderij met lange, knapperige stelen. Hij heeft veel water en voedsel nodig, maar een zelfgeteelde struik is veel geuriger dan uit de winkel.",

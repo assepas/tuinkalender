@@ -33,7 +33,11 @@
     "moisture": [
       "normaal"
     ],
-    "spacingCm": 50
+    "spacingCm": 50,
+    "height": {
+      "minCm": 60,
+      "maxCm": 100
+    }
   },
   "info": {
     "intro": "Een struikvormige plant waarvan de trompetvormige bloemen pas laat in de middag opengaan en 's avonds heerlijk geuren. Op één plant zitten vaak bloemen in verschillende kleuren.",

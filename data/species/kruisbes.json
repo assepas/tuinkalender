@@ -32,7 +32,11 @@
     "moisture": [
       "normaal"
     ],
-    "spacingCm": 120
+    "spacingCm": 120,
+    "height": {
+      "minCm": 80,
+      "maxCm": 150
+    }
   },
   "info": {
     "intro": "Een stekelige bessenstruik met grote, sappige bessen die groen, geel of rood rijpen. Vroeg geplukt zijn ze zuur voor jam en taart, laat geplukt zoet uit de hand.",

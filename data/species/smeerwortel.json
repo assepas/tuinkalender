@@ -33,7 +33,11 @@
       "vochtig",
       "nat"
     ],
-    "spacingCm": 60
+    "spacingCm": 60,
+    "height": {
+      "minCm": 60,
+      "maxCm": 120
+    }
   },
   "info": {
     "intro": "Een grote, stoere plant met hangende klokjes waar hommels dol op zijn. Het blad zit vol voedingsstoffen: tuiniers gebruiken het als mulch, in de compost of voor gier (vloeibare plantenmest).",

@@ -28,7 +28,11 @@
       "normaal",
       "vochtig"
     ],
-    "spacingCm": 50
+    "spacingCm": 50,
+    "height": {
+      "minCm": 60,
+      "maxCm": 120
+    }
   },
   "info": {
     "intro": "Een tropisch gras met stengels die fris naar citroen ruiken. Je gebruikt het in Aziatische gerechten en thee. Het groeit bij ons in een pot die 's zomers buiten staat.",

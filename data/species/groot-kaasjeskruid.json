@@ -33,7 +33,11 @@
       "normaal",
       "droog"
     ],
-    "spacingCm": 50
+    "spacingCm": 50,
+    "height": {
+      "minCm": 60,
+      "maxCm": 120
+    }
   },
   "info": {
     "intro": "Een stevige plant met paarsroze bloemen met donkere strepen. Hij bloeit maanden achter elkaar en is erg geliefd bij bijen. Bloemen en jong blad zijn eetbaar.",

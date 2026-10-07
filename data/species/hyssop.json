@@ -33,7 +33,11 @@
       "droog",
       "normaal"
     ],
-    "spacingCm": 40
+    "spacingCm": 40,
+    "height": {
+      "minCm": 30,
+      "maxCm": 60
+    }
   },
   "info": {
     "intro": "Een kleine, geurige halfstruik met smalle blaadjes en blauwpaarse bloemaren. Het blad heeft een kruidige, licht bittere smaak. Bijen en vlinders zijn er gek op.",

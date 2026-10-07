@@ -29,7 +29,11 @@
       "normaal",
       "vochtig"
     ],
-    "spacingCm": 10
+    "spacingCm": 10,
+    "height": {
+      "minCm": 15,
+      "maxCm": 25
+    }
   },
   "info": {
     "intro": "Een frisse bladgroente die je in de nazomer zaait en in de herfst, winter en het voorjaar oogst. Hij kan goed tegen vorst.",

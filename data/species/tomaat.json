@@ -32,7 +32,11 @@
     "moisture": [
       "normaal"
     ],
-    "spacingCm": 50
+    "spacingCm": 50,
+    "height": {
+      "minCm": 100,
+      "maxCm": 200
+    }
   },
   "info": {
     "intro": "Zelfgekweekte tomaten zijn zoeter en geuriger dan welke winkeltomaat ook. Ze hebben veel warmte en zon nodig; in de kas of tegen een zuidmuur lukt het het best.",

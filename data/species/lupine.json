@@ -30,7 +30,11 @@
     "moisture": [
       "normaal"
     ],
-    "spacingCm": 50
+    "spacingCm": 50,
+    "height": {
+      "minCm": 80,
+      "maxCm": 120
+    }
   },
   "info": {
     "intro": "Een statige vaste plant met dichte bloemaren in bijna elke kleur. Echte cottage-sfeer in juni. Hij bindt stikstof en doet het daardoor ook op arme grond.",

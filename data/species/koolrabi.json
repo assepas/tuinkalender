@@ -28,7 +28,11 @@
       "normaal",
       "vochtig"
     ],
-    "spacingCm": 25
+    "spacingCm": 25,
+    "height": {
+      "minCm": 25,
+      "maxCm": 40
+    }
   },
   "info": {
     "intro": "Een snelle kool met een verdikte, ronde stengel boven de grond. Mild van smaak en lekker rauw of gekookt. Hij is binnen acht weken klaar.",

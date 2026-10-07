@@ -29,7 +29,11 @@
       "normaal",
       "vochtig"
     ],
-    "spacingCm": 10
+    "spacingCm": 10,
+    "height": {
+      "minCm": 20,
+      "maxCm": 30
+    }
   },
   "info": {
     "intro": "Een snelle knolgroente met witte, soms paars gekleurde knolletjes. Hij groeit in zo'n acht weken en is lekker gestoofd of rauw geraspt.",

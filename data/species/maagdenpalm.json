@@ -32,7 +32,11 @@
     "moisture": [
       "normaal"
     ],
-    "spacingCm": 30
+    "spacingCm": 30,
+    "height": {
+      "minCm": 10,
+      "maxCm": 20
+    }
   },
   "info": {
     "intro": "Een groenblijvende bodembedekker met blauwe bloemetjes in het voorjaar. Hij houdt onkruid onder de struiken weg en blijft ook in de winter groen.",

@@ -31,7 +31,11 @@
     "moisture": [
       "normaal"
     ],
-    "spacingCm": 400
+    "spacingCm": 400,
+    "height": {
+      "minCm": 300,
+      "maxCm": 600
+    }
   },
   "info": {
     "intro": "Een fruitboom die in april vol witte bloesem staat en in de nazomer peren geeft. Er zijn handperen om zo te eten en stoofperen zoals de Gieser Wildeman.",

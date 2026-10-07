@@ -28,7 +28,11 @@
       "normaal",
       "vochtig"
     ],
-    "spacingCm": 35
+    "spacingCm": 35,
+    "height": {
+      "minCm": 30,
+      "maxCm": 50
+    }
   },
   "info": {
     "intro": "Een langwerpige, zachte kool voor rauwkost, roerbak of kimchi. Net als paksoi zaai je hem na de langste dag, anders gaat hij bloeien.",

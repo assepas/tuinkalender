@@ -31,7 +31,11 @@
     "moisture": [
       "normaal"
     ],
-    "spacingCm": 25
+    "spacingCm": 25,
+    "height": {
+      "minCm": 30,
+      "maxCm": 80
+    }
   },
   "info": {
     "intro": "Een vrolijke zomerbloeier met aren vol bloemen in bijna elke kleur. Als je de bloem opzij knijpt, gaat het 'bekje' open. Hommels kruipen erin.",

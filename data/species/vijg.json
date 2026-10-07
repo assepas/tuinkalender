@@ -29,7 +29,11 @@
       "normaal",
       "droog"
     ],
-    "spacingCm": 300
+    "spacingCm": 300,
+    "height": {
+      "minCm": 250,
+      "maxCm": 400
+    }
   },
   "info": {
     "intro": "Een mediterrane struik met grote, gelobde bladeren en zoete vijgen. Tegen een zonnige muur is hij in Nederland winterhard genoeg en geeft hij in de nazomer vruchten.",

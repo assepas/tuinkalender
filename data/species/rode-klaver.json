@@ -33,7 +33,11 @@
     "moisture": [
       "normaal"
     ],
-    "spacingCm": 20
+    "spacingCm": 20,
+    "height": {
+      "minCm": 20,
+      "maxCm": 60
+    }
   },
   "info": {
     "intro": "Een klaver met grote roze-paarse bloemhoofden, druk bezocht door hommels. Hij maakt de grond rijker met stikstof en wordt ook als groenbemester gezaaid.",

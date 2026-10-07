@@ -33,7 +33,11 @@
       "normaal",
       "vochtig"
     ],
-    "spacingCm": 20
+    "spacingCm": 20,
+    "height": {
+      "minCm": 10,
+      "maxCm": 40
+    }
   },
   "info": {
     "intro": "Een vaste plant met een rozet van smalle, diep ingesneden blaadjes en gele bloemen op vertakte stelen. Hij bloeit juist laat in het jaar, als er weinig anders bloeit in het gazon.",

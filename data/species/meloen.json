@@ -31,7 +31,11 @@
     "moisture": [
       "normaal"
     ],
-    "spacingCm": 80
+    "spacingCm": 80,
+    "height": {
+      "minCm": 30,
+      "maxCm": 50
+    }
   },
   "info": {
     "intro": "Een eigen meloen lukt in Nederland in een kas of koude bak, of buiten tegen een hete muur in een zonnige zomer. Kies een snel rijpend ras zoals een cantaloupe.",

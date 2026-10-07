@@ -28,7 +28,11 @@
       "normaal",
       "vochtig"
     ],
-    "spacingCm": 30
+    "spacingCm": 30,
+    "height": {
+      "minCm": 40,
+      "maxCm": 60
+    }
   },
   "info": {
     "intro": "Een makkelijke bladgroente met stevige, vaak gekleurde stelen. Je plukt maandenlang, van de zomer tot in de winter, en hij schiet veel minder snel door dan spinazie.",

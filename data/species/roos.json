@@ -30,7 +30,11 @@
     "moisture": [
       "normaal"
     ],
-    "spacingCm": 60
+    "spacingCm": 60,
+    "height": {
+      "minCm": 60,
+      "maxCm": 150
+    }
   },
   "info": {
     "intro": "De koningin van de tuin: rozen bloeien van juni tot in de herfst en veel rassen geuren heerlijk. Er zijn struikrozen, klimrozen en bodembedekkende rozen.",

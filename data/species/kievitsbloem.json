@@ -34,7 +34,11 @@
       "vochtig",
       "nat"
     ],
-    "spacingCm": 10
+    "spacingCm": 10,
+    "height": {
+      "minCm": 20,
+      "maxCm": 40
+    }
   },
   "info": {
     "intro": "Een zeldzame inheemse bolplant met hangende, geblokte klokjes in paars of wit. Hij groeit in vochtige hooilanden en past mooi in een nat stuk gazon of bij een vijver.",

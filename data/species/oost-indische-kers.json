@@ -34,7 +34,11 @@
       "normaal",
       "droog"
     ],
-    "spacingCm": 30
+    "spacingCm": 30,
+    "height": {
+      "minCm": 30,
+      "maxCm": 200
+    }
   },
   "info": {
     "intro": "Een snelgroeiende eenjarige met oranje, gele of rode bloemen en ronde bladeren. Blad, bloemen en onrijpe zaden zijn eetbaar en smaken pittig, een beetje als tuinkers.",

@@ -32,7 +32,11 @@
       "normaal",
       "vochtig"
     ],
-    "spacingCm": 60
+    "spacingCm": 60,
+    "height": {
+      "minCm": 100,
+      "maxCm": 180
+    }
   },
   "info": {
     "intro": "Een statige vaste plant met hoge, dichte aren in diep blauw, paars of wit. Na een snoeibeurt bloeit hij in september vaak nog een tweede keer.",

@@ -33,7 +33,11 @@
       "droog",
       "normaal"
     ],
-    "spacingCm": 50
+    "spacingCm": 50,
+    "height": {
+      "minCm": 40,
+      "maxCm": 70
+    }
   },
   "info": {
     "intro": "Een geurige halfstruik met grijsgroen, fluweelachtig blad en lila bloemaren. Het blad is lekker bij pasta, vlees en in thee, en de bloemen zijn geliefd bij hommels.",

@@ -26,7 +26,11 @@
     "moisture": [
       "normaal"
     ],
-    "spacingCm": 10
+    "spacingCm": 10,
+    "height": {
+      "minCm": 20,
+      "maxCm": 40
+    }
   },
   "info": {
     "intro": "Een Belgisch-Nederlandse specialiteit in twee stappen: in de zomer kweek je de wortels op het bed, in de winter laat je ze in het donker trekken tot de bekende witte stronkjes.",

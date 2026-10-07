@@ -32,7 +32,11 @@
       "droog",
       "normaal"
     ],
-    "spacingCm": 40
+    "spacingCm": 40,
+    "height": {
+      "minCm": 50,
+      "maxCm": 100
+    }
   },
   "info": {
     "intro": "Een klassieker met zwaardvormig blad en grote bloemen met een 'baardje' op de onderste blaadjes. Er zijn honderden kleuren. Hij groeit uit een dikke wortelstok die boven de grond ligt.",

@@ -32,7 +32,11 @@
       "droog",
       "normaal"
     ],
-    "spacingCm": 35
+    "spacingCm": 35,
+    "height": {
+      "minCm": 30,
+      "maxCm": 60
+    }
   },
   "info": {
     "intro": "Een compacte vaste plant met fijn, naaldachtig blad en honderden gele sterretjes. Hij bloeit de hele zomer door en is makkelijk in onderhoud.",

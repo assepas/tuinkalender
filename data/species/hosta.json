@@ -33,7 +33,11 @@
       "vochtig",
       "normaal"
     ],
-    "spacingCm": 50
+    "spacingCm": 50,
+    "height": {
+      "minCm": 30,
+      "maxCm": 60
+    }
   },
   "info": {
     "intro": "Een bladplant voor de schaduw met grote groene, blauwe of bonte bladeren en in de zomer lila of witte bloemtrossen. Een hosta kan tientallen jaren op dezelfde plek staan.",

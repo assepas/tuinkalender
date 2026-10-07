@@ -32,7 +32,11 @@
       "normaal",
       "droog"
     ],
-    "spacingCm": 40
+    "spacingCm": 40,
+    "height": {
+      "minCm": 40,
+      "maxCm": 60
+    }
   },
   "info": {
     "intro": "Een vaste plant met rechte, paarsblauwe bloemaren in juni en juli, en na terugknippen vaak nog een keer in de nazomer. Een topper voor bijen en vlinders.",

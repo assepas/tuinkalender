@@ -31,7 +31,11 @@
       "droog",
       "normaal"
     ],
-    "spacingCm": 25
+    "spacingCm": 25,
+    "height": {
+      "minCm": 15,
+      "maxCm": 30
+    }
   },
   "info": {
     "intro": "Een laag, groenblijvend mediterraan kruid met een sterke geur en roze bloempjes in juni. Het is het hele jaar te plukken en populair bij bijen.",

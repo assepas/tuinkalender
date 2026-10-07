@@ -28,7 +28,11 @@
       "normaal",
       "droog"
     ],
-    "spacingCm": 15
+    "spacingCm": 15,
+    "height": {
+      "minCm": 40,
+      "maxCm": 70
+    }
   },
   "info": {
     "intro": "Knoflook poot je in de herfst en oogst je de volgende zomer. Het is weinig werk en een eigen oogst is veel sterker van smaak dan winkelknoflook.",

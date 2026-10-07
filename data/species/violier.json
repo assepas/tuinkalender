@@ -32,7 +32,11 @@
     "moisture": [
       "normaal"
     ],
-    "spacingCm": 25
+    "spacingCm": 25,
+    "height": {
+      "minCm": 30,
+      "maxCm": 60
+    }
   },
   "info": {
     "intro": "Een ouderwetse zomerbloem met aren vol dichte, sterk geurende bloemen in lila, roze en wit. Een prachtige snijbloem die je huis vult met een kruidnagelgeur.",

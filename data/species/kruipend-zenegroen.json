@@ -34,7 +34,11 @@
       "normaal",
       "vochtig"
     ],
-    "spacingCm": 25
+    "spacingCm": 25,
+    "height": {
+      "minCm": 10,
+      "maxCm": 20
+    }
   },
   "info": {
     "intro": "Een lage, kruipende bodembedekker met glanzend blad en korte, blauwe bloemaren in het voorjaar. Hij vormt snel een dicht tapijt onder struiken en in de schaduw.",

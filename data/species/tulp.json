@@ -32,7 +32,11 @@
       "normaal",
       "droog"
     ],
-    "spacingCm": 10
+    "spacingCm": 10,
+    "height": {
+      "minCm": 20,
+      "maxCm": 60
+    }
   },
   "info": {
     "intro": "Hét voorjaarsbolgewas van Nederland, in bijna elke kleur. Je plant de bollen in de herfst en in april en mei staan ze in bloei.",

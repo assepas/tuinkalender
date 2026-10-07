@@ -34,7 +34,11 @@
       "normaal",
       "vochtig"
     ],
-    "spacingCm": 40
+    "spacingCm": 40,
+    "height": {
+      "minCm": 60,
+      "maxCm": 100
+    }
   },
   "info": {
     "intro": "Een ouderwetse tuinplant met trossen lila of witte bloemen die vooral 's avonds heerlijk geuren. Hij bloeit in mei en juni, tussen de voorjaarsbollen en de zomerbloeiers in.",

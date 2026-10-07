@@ -32,7 +32,11 @@
     "moisture": [
       "normaal"
     ],
-    "spacingCm": 400
+    "spacingCm": 400,
+    "height": {
+      "minCm": 250,
+      "maxCm": 500
+    }
   },
   "info": {
     "intro": "Een eigen appelboom geeft jaren fruit en is in het voorjaar een feest van bloesem voor bijen. Kies een ras op een zwakke onderstam (bv. M9) als je weinig ruimte hebt.",

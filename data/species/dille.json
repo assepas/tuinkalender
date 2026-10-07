@@ -31,7 +31,11 @@
     "moisture": [
       "normaal"
     ],
-    "spacingCm": 25
+    "spacingCm": 25,
+    "height": {
+      "minCm": 60,
+      "maxCm": 120
+    }
   },
   "info": {
     "intro": "Een eenjarig kruid met fijn, veerachtig blad en gele schermbloemen. Het blad past bij vis, eieren en komkommer; het zaad gebruik je bij het inmaken.",

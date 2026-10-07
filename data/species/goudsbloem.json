@@ -32,7 +32,11 @@
     "moisture": [
       "normaal"
     ],
-    "spacingCm": 25
+    "spacingCm": 25,
+    "height": {
+      "minCm": 30,
+      "maxCm": 60
+    }
   },
   "info": {
     "intro": "Een makkelijke eenjarige met oranje en gele bloemen van juni tot de vorst. De bloemblaadjes zijn eetbaar en de plant lokt zweefvliegen, die bladluis opeten.",

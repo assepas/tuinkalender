@@ -31,7 +31,11 @@
     "moisture": [
       "normaal"
     ],
-    "spacingCm": 400
+    "spacingCm": 400,
+    "height": {
+      "minCm": 300,
+      "maxCm": 500
+    }
   },
   "info": {
     "intro": "Een fruitboom met witte bloesem en in de nazomer sappige pruimen. Rassen als de Opal en Victoria zijn zelfbestuivend en geven al snel een flinke oogst.",

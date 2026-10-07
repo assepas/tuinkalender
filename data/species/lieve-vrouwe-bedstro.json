@@ -34,7 +34,11 @@
       "normaal",
       "vochtig"
     ],
-    "spacingCm": 25
+    "spacingCm": 25,
+    "height": {
+      "minCm": 15,
+      "maxCm": 30
+    }
   },
   "info": {
     "intro": "Een inheemse bodembedekker voor de schaduw, met kransen van blad en witte stervormige bloemetjes in mei. Gedroogd ruikt het naar vers hooi en vanille.",

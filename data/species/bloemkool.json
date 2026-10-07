@@ -26,7 +26,11 @@
       "normaal",
       "vochtig"
     ],
-    "spacingCm": 50
+    "spacingCm": 50,
+    "height": {
+      "minCm": 40,
+      "maxCm": 60
+    }
   },
   "info": {
     "intro": "Een wat lastigere kool die rijke grond en gelijkmatig water wil. Een mooie, witte bloemkool uit eigen tuin is dan ook een prestatie.",

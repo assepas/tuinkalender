@@ -33,7 +33,11 @@
     "moisture": [
       "normaal"
     ],
-    "spacingCm": 20
+    "spacingCm": 20,
+    "height": {
+      "minCm": 10,
+      "maxCm": 30
+    }
   },
   "info": {
     "intro": "Een laag, kruipend plantje met helderblauwe bloempjes met een wit oog in het voorjaar. Het groeit graag in de randen van het gazon, onder heggen en in halfschaduw.",

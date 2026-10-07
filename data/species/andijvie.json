@@ -28,7 +28,11 @@
       "normaal",
       "vochtig"
     ],
-    "spacingCm": 30
+    "spacingCm": 30,
+    "height": {
+      "minCm": 20,
+      "maxCm": 40
+    }
   },
   "info": {
     "intro": "Een Hollandse klassieker: stevige kroppen voor stamppot of rauw. Zomer-andijvie is gladbladig; krulandijvie kan ook tot in de herfst.",

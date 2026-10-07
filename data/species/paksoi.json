@@ -28,7 +28,11 @@
       "normaal",
       "vochtig"
     ],
-    "spacingCm": 25
+    "spacingCm": 25,
+    "height": {
+      "minCm": 20,
+      "maxCm": 40
+    }
   },
   "info": {
     "intro": "Een snelle Aziatische kool met dikke witte of groene stelen en mals blad. Lekker in roerbakgerechten. Hij houdt van koel weer.",

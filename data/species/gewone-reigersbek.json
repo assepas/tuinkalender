@@ -30,7 +30,11 @@
     "moisture": [
       "droog"
     ],
-    "spacingCm": 15
+    "spacingCm": 15,
+    "height": {
+      "minCm": 10,
+      "maxCm": 30
+    }
   },
   "info": {
     "intro": "Een laag plantje van droge, zandige grond met varenachtig blad en kleine roze bloemen. De zaden hebben een lange 'snavel' die zich bij droogte opkrult en het zaad de grond in schroeft.",

@@ -34,7 +34,11 @@
       "normaal",
       "vochtig"
     ],
-    "spacingCm": 45
+    "spacingCm": 45,
+    "height": {
+      "minCm": 60,
+      "maxCm": 120
+    }
   },
   "info": {
     "intro": "Een geurige vaste plant met opvallende bloemen in rood, roze of paars in kransjes boven elkaar. Het blad ruikt naar bergamot en je kunt er thee van zetten.",

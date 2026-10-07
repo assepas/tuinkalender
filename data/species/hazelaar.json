@@ -32,7 +32,11 @@
     "moisture": [
       "normaal"
     ],
-    "spacingCm": 300
+    "spacingCm": 300,
+    "height": {
+      "minCm": 300,
+      "maxCm": 500
+    }
   },
   "info": {
     "intro": "Een inheemse struik met gele katjes al in de winter en hazelnoten in de herfst. Een waardevolle plant voor bijen vroeg in het jaar, en voor eekhoorns en vogels.",

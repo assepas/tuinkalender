@@ -32,7 +32,11 @@
     "moisture": [
       "normaal"
     ],
-    "spacingCm": 100
+    "spacingCm": 100,
+    "height": {
+      "minCm": 200,
+      "maxCm": 400
+    }
   },
   "info": {
     "intro": "Een klimplant met grote of juist kleine sierlijke bloemen, voor een hek, pergola of muur. Er zijn soorten die in het voorjaar, de zomer of de herfst bloeien.",

@@ -33,7 +33,11 @@
       "droog",
       "normaal"
     ],
-    "spacingCm": 40
+    "spacingCm": 40,
+    "height": {
+      "minCm": 30,
+      "maxCm": 80
+    }
   },
   "info": {
     "intro": "Een inheemse bloem van bermen en hooilanden met lila, bolle bloemhoofdjes op lange stelen. Er komen veel bijen, hommels en vlinders op af.",

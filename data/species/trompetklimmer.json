@@ -31,7 +31,11 @@
     "moisture": [
       "normaal"
     ],
-    "spacingCm": 300
+    "spacingCm": 300,
+    "height": {
+      "minCm": 500,
+      "maxCm": 1000
+    }
   },
   "info": {
     "intro": "Een krachtige klimplant met oranje, trompetvormige bloemen in de nazomer. Hij hecht zich met luchtwortels aan muren en heeft een warme, zonnige plek nodig om goed te bloeien.",

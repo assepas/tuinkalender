@@ -32,7 +32,11 @@
     "moisture": [
       "normaal"
     ],
-    "spacingCm": 250
+    "spacingCm": 250,
+    "height": {
+      "minCm": 300,
+      "maxCm": 500
+    }
   },
   "info": {
     "intro": "Een grote struik met pluimen van heerlijk geurende lila, paarse of witte bloemen in mei. Hij is sterk, makkelijk en kan tientallen jaren oud worden.",

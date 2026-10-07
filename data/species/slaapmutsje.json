@@ -32,7 +32,11 @@
       "droog",
       "normaal"
     ],
-    "spacingCm": 20
+    "spacingCm": 20,
+    "height": {
+      "minCm": 20,
+      "maxCm": 40
+    }
   },
   "info": {
     "intro": "Een eenjarige met zijdeachtige oranje bloemen en fijn, blauwgroen blad. De bloemen gaan 's avonds en bij bewolkt weer dicht, als een slaapmutsje.",

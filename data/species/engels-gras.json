@@ -32,7 +32,11 @@
       "droog",
       "normaal"
     ],
-    "spacingCm": 25
+    "spacingCm": 25,
+    "height": {
+      "minCm": 15,
+      "maxCm": 30
+    }
   },
   "info": {
     "intro": "Een laag, groenblijvend kussen van grasachtig blad met roze bolletjes op dunne stelen. Van nature groeit hij in duinen en kwelders; in de tuin is hij mooi langs randen en in grind.",

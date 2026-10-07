@@ -31,7 +31,11 @@
     "moisture": [
       "normaal"
     ],
-    "spacingCm": 45
+    "spacingCm": 45,
+    "height": {
+      "minCm": 60,
+      "maxCm": 120
+    }
   },
   "info": {
     "intro": "Een snelgroeiende eenjarige met grote, glanzende bekerbloemen in roze of wit. Hij vormt in een paar weken een flinke struik vol bloemen.",

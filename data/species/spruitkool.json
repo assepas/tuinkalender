@@ -25,7 +25,11 @@
     "moisture": [
       "normaal"
     ],
-    "spacingCm": 60
+    "spacingCm": 60,
+    "height": {
+      "minCm": 60,
+      "maxCm": 100
+    }
   },
   "info": {
     "intro": "Een hoge kool met kleine spruitjes langs de stam. Spruitkool staat lang op het bed, maar je oogst dan ook van oktober tot in februari.",

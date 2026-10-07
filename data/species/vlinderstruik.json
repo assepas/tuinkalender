@@ -33,7 +33,11 @@
       "normaal",
       "droog"
     ],
-    "spacingCm": 200
+    "spacingCm": 200,
+    "height": {
+      "minCm": 200,
+      "maxCm": 300
+    }
   },
   "info": {
     "intro": "Een snelgroeiende struik met lange, geurende bloemtrossen in paars, roze of wit. De naam zegt het al: vlinders komen er massaal op af.",

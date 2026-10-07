@@ -33,7 +33,11 @@
     "moisture": [
       "normaal"
     ],
-    "spacingCm": 30
+    "spacingCm": 30,
+    "height": {
+      "minCm": 30,
+      "maxCm": 80
+    }
   },
   "info": {
     "intro": "Een zomerbloem met stevige, kleurrijke bloemen in felle kleuren. Hij houdt van warmte en is een van de beste snijbloemen: hoe meer je plukt, hoe meer hij bloeit.",

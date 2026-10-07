@@ -33,7 +33,11 @@
       "normaal",
       "vochtig"
     ],
-    "spacingCm": 45
+    "spacingCm": 45,
+    "height": {
+      "minCm": 40,
+      "maxCm": 80
+    }
   },
   "info": {
     "intro": "Een inheemse vaste plant met blauwpaarse schoteltjesbloemen in juni en juli. Hij hoort in bloemrijke graslanden en is een favoriet van bijen en hommels.",

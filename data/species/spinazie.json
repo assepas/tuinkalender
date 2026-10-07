@@ -28,7 +28,11 @@
       "normaal",
       "vochtig"
     ],
-    "spacingCm": 10
+    "spacingCm": 10,
+    "height": {
+      "minCm": 15,
+      "maxCm": 30
+    }
   },
   "info": {
     "intro": "Een snelle bladgroente voor voorjaar en najaar. Spinazie houdt van koel weer; in de zomer schiet hij snel door (gaat bloeien).",

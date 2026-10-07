@@ -31,7 +31,11 @@
     "moisture": [
       "normaal"
     ],
-    "spacingCm": 45
+    "spacingCm": 45,
+    "height": {
+      "minCm": 60,
+      "maxCm": 90
+    }
   },
   "info": {
     "intro": "Een vaste plant met grote, witte margrieten op stevige stelen. Een van de vrolijkste zomerbloeiers en een goede snijbloem.",

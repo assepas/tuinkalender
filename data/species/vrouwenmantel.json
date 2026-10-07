@@ -33,7 +33,11 @@
       "normaal",
       "vochtig"
     ],
-    "spacingCm": 40
+    "spacingCm": 40,
+    "height": {
+      "minCm": 30,
+      "maxCm": 50
+    }
   },
   "info": {
     "intro": "Een sterke vaste plant met zacht, rond blad waarop regendruppels als pareltjes blijven liggen. In juni bloeit hij met luchtige, geelgroene schermen.",

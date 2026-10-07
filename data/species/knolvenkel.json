@@ -27,7 +27,11 @@
       "normaal",
       "vochtig"
     ],
-    "spacingCm": 25
+    "spacingCm": 25,
+    "height": {
+      "minCm": 40,
+      "maxCm": 70
+    }
   },
   "info": {
     "intro": "Een groente met een dikke, witte knol die fris naar anijs smaakt. Lekker rauw in salade of gegrild. Zaai hem in de zomer: in het voorjaar schiet hij snel door.",

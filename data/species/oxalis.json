@@ -30,7 +30,11 @@
     "moisture": [
       "normaal"
     ],
-    "spacingCm": 15
+    "spacingCm": 15,
+    "height": {
+      "minCm": 10,
+      "maxCm": 25
+    }
   },
   "info": {
     "intro": "Klaverzuring is een laag plantje met klaverachtig blad in groen of paars, en kleine roze, witte of gele bloempjes. De bladeren vouwen 's avonds en bij regen dicht.",

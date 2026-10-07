@@ -25,7 +25,11 @@
     "moisture": [
       "normaal"
     ],
-    "spacingCm": 45
+    "spacingCm": 45,
+    "height": {
+      "minCm": 30,
+      "maxCm": 50
+    }
   },
   "info": {
     "intro": "Een snelle, puntige kool met mals, zoet blad. Hij groeit sneller dan ronde koolen en past goed in een kleine moestuin.",

@@ -32,7 +32,11 @@
       "droog",
       "normaal"
     ],
-    "spacingCm": 20
+    "spacingCm": 20,
+    "height": {
+      "minCm": 20,
+      "maxCm": 50
+    }
   },
   "info": {
     "intro": "Een vaste plant met een platte rozet van ruwe, gelobde blaadjes en gele bloemen op lange, kale stelen. Hij lijkt op een paardenbloem en is populair bij bijen en zweefvliegen.",

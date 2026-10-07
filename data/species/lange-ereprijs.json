@@ -33,7 +33,11 @@
       "normaal",
       "vochtig"
     ],
-    "spacingCm": 40
+    "spacingCm": 40,
+    "height": {
+      "minCm": 60,
+      "maxCm": 100
+    }
   },
   "info": {
     "intro": "Een inheemse vaste plant met slanke, blauwe bloemaren in de zomer. Hij groeit van nature langs rivieren en in vochtige graslanden, en is een echte trekpleister voor bijen en vlinders.",

@@ -32,7 +32,11 @@
     "moisture": [
       "normaal"
     ],
-    "spacingCm": 5
+    "spacingCm": 5,
+    "height": {
+      "minCm": 30,
+      "maxCm": 50
+    }
   },
   "info": {
     "intro": "Een snelle, milde ui waarvan je het groene blad en het witte onderste deel eet. De stengelui (Allium fistulosum) is meerjarig en blijft je het hele jaar voorzien.",

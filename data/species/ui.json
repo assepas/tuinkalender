@@ -26,7 +26,11 @@
     "moisture": [
       "normaal"
     ],
-    "spacingCm": 10
+    "spacingCm": 10,
+    "height": {
+      "minCm": 30,
+      "maxCm": 60
+    }
   },
   "info": {
     "intro": "Uien zijn makkelijk te telen uit plantuitjes (kleine bolletjes). In het voorjaar gepoot, oogst je ze in de zomer, en goed gedroogd bewaar je ze maanden.",

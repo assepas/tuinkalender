@@ -32,7 +32,11 @@
     "moisture": [
       "normaal"
     ],
-    "spacingCm": 500
+    "spacingCm": 500,
+    "height": {
+      "minCm": 300,
+      "maxCm": 600
+    }
   },
   "info": {
     "intro": "Een Pools moerbeiras met grote, hartvormige bladeren en langwerpige, diep roodzwarte bessen van zo'n 3 cm, stevig en heel sappig. Hij wordt 4 tot 6 meter hoog en rijpt niet in één keer, maar geleidelijk van half juni tot begin september.",

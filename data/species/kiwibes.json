@@ -33,7 +33,11 @@
       "normaal",
       "vochtig"
     ],
-    "spacingCm": 300
+    "spacingCm": 300,
+    "height": {
+      "minCm": 300,
+      "maxCm": 600
+    }
   },
   "info": {
     "intro": "Een winterharde klimmer met kleine, gladde kiwi's die je met schil en al eet. Ze zijn zoeter dan gewone kiwi's en de plant is in Nederland volledig winterhard.",

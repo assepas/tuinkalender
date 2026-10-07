@@ -32,7 +32,11 @@
       "droog",
       "normaal"
     ],
-    "spacingCm": 30
+    "spacingCm": 30,
+    "height": {
+      "minCm": 50,
+      "maxCm": 100
+    }
   },
   "info": {
     "intro": "Een distelachtige eenjarige met geeloranje bloemkwasten. Vroeger werd hij gekweekt als verfplant en voor olie; de gedroogde bloemblaadjes heten ook wel 'valse saffraan'.",

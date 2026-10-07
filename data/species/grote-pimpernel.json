@@ -33,7 +33,11 @@
       "normaal",
       "vochtig"
     ],
-    "spacingCm": 50
+    "spacingCm": 50,
+    "height": {
+      "minCm": 60,
+      "maxCm": 120
+    }
   },
   "info": {
     "intro": "Een inheemse plant van natte hooilanden met kleine, donkerrode bolletjes op lange stelen die boven het blad uitdansen. Hij is de waardplant van het pimpernelblauwtje, een zeldzame vlinder.",
