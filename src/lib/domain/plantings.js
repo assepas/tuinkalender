@@ -44,6 +44,34 @@ export const SOIL_LABELS = { zand: "Zand", klei: "Klei", leem: "Leem", veen: "Ve
 export const MOISTURE_ORDER = ["droog", "normaal", "vochtig", "nat"];
 export const MOISTURE_LABELS = { droog: "Droog", normaal: "Normaal", vochtig: "Vochtig", nat: "Nat" };
 
+/** { minCm: 60, maxCm: 120 } → "60–120 cm"; vanaf een meter in meters ("1,5–3 m"). */
+export function formatHeight(height) {
+  if (!height) return "";
+  const { minCm, maxCm } = height;
+  if (maxCm >= 100) {
+    const m = (cm) => String(Math.round(cm / 10) / 10).replace(".", ",");
+    return minCm === maxCm ? `${m(maxCm)} m` : `${m(minCm)}–${m(maxCm)} m`;
+  }
+  return minCm === maxCm ? `${maxCm} cm` : `${minCm}–${maxCm} cm`;
+}
+
+/**
+ * Grondsoort van een standplaats als vaste waarde (zand/klei/leem/veen), of
+ * null. Standplaatsen hadden vroeger een vrij tekstveld ("Zware klei") — dat
+ * blijft zo opgeslagen, deze functie herkent de grondsoort erin.
+ */
+export function normalizeSoil(text) {
+  const lower = (text ?? "").trim().toLowerCase();
+  if (!lower) return null;
+  return SOIL_ORDER.find((soil) => lower.includes(soil)) ?? null;
+}
+
+/** Leesbare grondsoort van een standplaats: het vaste label, anders de vrije tekst. */
+export function soilLabel(text) {
+  const soil = normalizeSoil(text);
+  return soil ? SOIL_LABELS[soil] : (text ?? "").trim();
+}
+
 /** ["halfschaduw", "zon"] → "Zon, halfschaduw" (in vaste volgorde). */
 export function formatEnumList(values, order, labels) {
   const text = order.filter((v) => values?.includes(v)).map((v) => labels[v].toLowerCase()).join(", ");

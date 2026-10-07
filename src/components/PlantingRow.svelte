@@ -7,6 +7,7 @@
   // tuin met tientallen planten overzichtelijk blijft.
   import { catalog } from "../lib/state/catalog.svelte.js";
   import { gardenState } from "../lib/state/garden.svelte.js";
+  import { soilLabel } from "../lib/domain/plantings.js";
   import LocationSelect from "./LocationSelect.svelte";
   import PlantIcon from "./PlantIcon.svelte";
 
@@ -99,7 +100,7 @@
         </div>
       </div>
       {#if location?.soil}
-        <p class="hint">Grondsoort van "{location.name}": {location.soil}.</p>
+        <p class="hint">Grondsoort van "{location.name}": {soilLabel(location.soil).toLowerCase()}.</p>
       {/if}
       <label for={`notes-${planting.uid}`}>Notities</label>
       <textarea

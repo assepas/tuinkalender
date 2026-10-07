@@ -12,6 +12,8 @@
     MOISTURE_ORDER,
     MOISTURE_LABELS,
     formatEnumList,
+    formatHeight,
+    soilLabel,
   } from "../lib/domain/plantings.js";
 
   let { detail, onclose } = $props();
@@ -23,6 +25,7 @@
       growing?.sun?.length && ["Licht", formatEnumList(growing.sun, SUN_ORDER, SUN_LABELS)],
       growing?.soil?.length && ["Grond", formatEnumList(growing.soil, SOIL_ORDER, SOIL_LABELS)],
       growing?.moisture?.length && ["Vocht", formatEnumList(growing.moisture, MOISTURE_ORDER, MOISTURE_LABELS)],
+      growing?.height && ["Hoogte", formatHeight(growing.height)],
       growing?.spacingCm && ["Plantafstand", `${growing.spacingCm} cm`],
     ].filter(Boolean)
   );
@@ -84,7 +87,7 @@
   {#if detail.location}
     <p class="modal-meta">
       Standplaats: {detail.location.name}.
-      {#if detail.location.soil}Grondsoort: {detail.location.soil}.{/if}
+      {#if detail.location.soil}Grondsoort: {soilLabel(detail.location.soil).toLowerCase()}.{/if}
     </p>
   {:else if detail.planting.locationId}
     <p class="error-text">Onbekende standplaats — mogelijk verwijderd.</p>

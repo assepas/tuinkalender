@@ -933,7 +933,7 @@ textarea {
   gap: var(--space-3);
 }
 
-/* Kolommen van de standplaatsenlijst: naam, soort plek, grondsoort, aantal
+/* Kolommen van de standplaatsenlijst: naam, soort plek, licht, grond, vocht, aantal
    planten, standaard, knop — gedeeld door de kolomkop, de toevoegregel en
    elke rij. Via grid-areas, zodat de toevoegregel (zonder aantal/standaard)
    toch in dezelfde kolommen valt. Aantal-, radio- en knopkolom zijn vast,
@@ -941,8 +941,8 @@ textarea {
    "Toevoegen" onder "Verwijderen" staat. Afstanden zoals .planting-row. */
 .location-list,
 .location-table-head {
-  --location-cols: minmax(0, 2fr) minmax(0, 1.3fr) minmax(0, 1.5fr) 6rem 7.5rem 7.5rem;
-  --location-areas: "name kind soil count default action";
+  --location-cols: minmax(0, 1.4fr) minmax(0, 1.25fr) minmax(0, 1.45fr) minmax(0, 1fr) minmax(0, 1.2fr) 5.5rem 7rem 7rem;
+  --location-areas: "name kind sun soil moisture count default action";
 }
 
 .location-table-head {
@@ -974,7 +974,9 @@ textarea {
 
 .location-row .location-name { grid-area: name; }
 .location-row .location-kind { grid-area: kind; }
+.location-row .location-sun { grid-area: sun; }
 .location-row .location-soil { grid-area: soil; }
+.location-row .location-moisture { grid-area: moisture; }
 .location-row .location-count { grid-area: count; }
 .location-row .radio-pill { grid-area: default; }
 .location-row > .btn { grid-area: action; }
@@ -1001,17 +1003,17 @@ textarea {
 }
 
 /* Smal: naam met het aantal planten eronder (zoals de Latijnse naam bij een
-   plant), dan soort plek + grondsoort, dan standaard + knop. Op de breedte
+   plant), dan soort plek + licht, grond + vocht, dan standaard + knop. Op de breedte
    van de lijst zelf (container query), niet van het scherm — de modal is
    smaller dan de pagina. */
 .location-manager {
   container-type: inline-size;
 }
 
-@container (max-width: 52rem) {
+@container (max-width: 60rem) {
   .location-list {
     --location-cols: 1fr 1fr;
-    --location-areas: "name name" "count count" "kind soil" "default action";
+    --location-areas: "name name" "count count" "kind sun" "soil moisture" "default action";
   }
 
   .location-table-head {
@@ -1023,12 +1025,27 @@ textarea {
   }
 
   .location-row-new {
-    --location-areas: "name name" "kind soil" ". action";
+    --location-areas: "name name" "kind sun" "soil moisture" ". action";
   }
 
   .location-row .radio-pill {
     justify-self: start;
   }
+
+  /* Geen kolomkop meer: een klein bijschrift boven elke keuzelijst. */
+  .location-row .location-kind::before,
+  .location-row .location-sun::before,
+  .location-row .location-soil::before,
+  .location-row .location-moisture::before {
+    display: block;
+    margin-bottom: 2px;
+    font-size: var(--step-1);
+    color: var(--color-ink-muted);
+  }
+  .location-row .location-kind::before { content: "Soort plek"; }
+  .location-row .location-sun::before { content: "Licht"; }
+  .location-row .location-soil::before { content: "Grond"; }
+  .location-row .location-moisture::before { content: "Vocht"; }
 
   .location-row > .btn {
     width: auto;

@@ -494,7 +494,7 @@ function createGardenState() {
       persist();
     },
 
-    addLocation({ name, kind = null, soil = "" }) {
+    addLocation({ name, kind = null, soil = "", sun = null, moisture = null }) {
       const trimmed = (name ?? "").trim();
       if (!trimmed) {
         throw new Error("Standplaats moet een naam hebben.");
@@ -502,6 +502,8 @@ function createGardenState() {
       const location = { id: makeLocationId(), name: trimmed };
       if (kind) location.kind = kind;
       if (soil) location.soil = soil;
+      if (sun) location.sun = sun;
+      if (moisture) location.moisture = moisture;
       garden.locations = [...(garden.locations ?? []), location];
       persist();
       return location;

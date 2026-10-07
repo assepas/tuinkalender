@@ -26,6 +26,9 @@ const FIELD_LABELS = {
   "/growing/soil": "grond",
   "/growing/moisture": "vocht",
   "/growing/spacingCm": "plantafstand",
+  "/growing/height": "hoogte",
+  "/growing/height/minCm": "hoogte van",
+  "/growing/height/maxCm": "hoogte tot",
   "/info/intro": "introductie",
   "/info/water": "water geven",
   "/info/tips": "tips",
@@ -84,6 +87,11 @@ export function validateSpecies(species, { taskTypeIds, existingIds = new Set(),
         errors.push(msg);
       }
     }
+  }
+
+  const height = species.growing?.height;
+  if (height && height.maxCm < height.minCm) {
+    errors.push("hoogte: \"tot\" moet minstens zo groot zijn als \"van\"");
   }
 
   if (isNew && existingIds.has(species.id)) {

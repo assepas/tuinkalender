@@ -85,6 +85,7 @@
     if (out.growing) {
       for (const k of ["sun", "soil", "moisture"]) if (!out.growing[k]?.length) delete out.growing[k];
       if (!out.growing.spacingCm) delete out.growing.spacingCm;
+      if (!out.growing.height?.minCm && !out.growing.height?.maxCm) delete out.growing.height;
       if (Object.keys(out.growing).length === 0) delete out.growing;
     }
     if (out.info) {
@@ -120,6 +121,22 @@
     const n = Number.parseInt(value, 10);
     if (Number.isFinite(n) && n > 0) draft.growing.spacingCm = n;
     else delete draft.growing.spacingCm;
+  }
+
+  // Hoogte van–tot. Vul je er maar één in, dan geldt die voor allebei
+  // (validatie meldt het als "tot" kleiner is dan "van").
+  function setHeight(key, value) {
+    const n = Number.parseInt(value, 10);
+    const height = { ...(draft.growing.height ?? {}) };
+    if (Number.isFinite(n) && n > 0) height[key] = n;
+    else delete height[key];
+    if (!height.minCm && !height.maxCm) {
+      delete draft.growing.height;
+      return;
+    }
+    height.minCm ??= height.maxCm;
+    height.maxCm ??= height.minCm;
+    draft.growing.height = height;
   }
 
   function setTags(value) {
@@ -279,6 +296,14 @@
       <div>
         <label for="sp-spacing">Plantafstand (cm)</label>
         <input id="sp-spacing" type="number" min="1" value={draft.growing.spacingCm ?? ""} onchange={(e) => setSpacing(e.currentTarget.value)} />
+      </div>
+      <div>
+        <label for="sp-height-min">Hoogte van–tot (cm)</label>
+        <div class="height-inputs">
+          <input id="sp-height-min" type="number" min="1" aria-label="Hoogte van (cm)" value={draft.growing.height?.minCm ?? ""} onchange={(e) => setHeight("minCm", e.currentTarget.value)} />
+          <span aria-hidden="true">–</span>
+          <input type="number" min="1" aria-label="Hoogte tot (cm)" value={draft.growing.height?.maxCm ?? ""} onchange={(e) => setHeight("maxCm", e.currentTarget.value)} />
+        </div>
       </div>
     </div>
     <label for="sp-intro">Introductie <span class="hint">(wat voor plant, waarom kweken)</span></label>
@@ -458,5 +483,15 @@
 
   .editor-actions {
     margin-top: var(--space-4);
+  }
+
+  .height-inputs {
+    display: flex;
+    align-items: center;
+    gap: var(--space-2);
+  }
+
+  .height-inputs input {
+    min-width: 0;
   }
 </style>

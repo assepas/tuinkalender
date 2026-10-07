@@ -8,7 +8,9 @@
   import { ui } from "../lib/state/ui.svelte.js";
   import SpeciesCombobox from "./SpeciesCombobox.svelte";
   import LocationSelect from "./LocationSelect.svelte";
+  import Modal from "./Modal.svelte";
   import PlantIcon from "./PlantIcon.svelte";
+  import SpeciesFinder from "./SpeciesFinder.svelte";
 
   let { onadded = null } = $props();
 
@@ -17,6 +19,8 @@
   ui.pendingSpeciesId = null;
   let locationId = $state(null);
   let submitError = $state("");
+  // Uitgebreid zoeken (SpeciesFinder): open met de getypte zoekterm.
+  let finder = $state(null); // { query } | null
 
   const species = $derived(speciesId ? catalog.speciesIndex[speciesId] : null);
   // Zonder expliciete keuze de standaardstandplaats — ook als die intussen
@@ -61,7 +65,12 @@
       <span class="planting-row-icon-placeholder" aria-hidden="true">+</span>
     {/if}
     <span class="planting-row-names" data-tour="add-plant">
-      <SpeciesCombobox id="new-planting-species" speciesList={catalog.speciesList} bind:value={speciesId} />
+      <SpeciesCombobox
+        id="new-planting-species"
+        speciesList={catalog.speciesList}
+        bind:value={speciesId}
+        onadvanced={(query) => (finder = { query })}
+      />
     </span>
     <span class="planting-row-location">
       <LocationSelect
@@ -82,3 +91,10 @@
     <p class="error-text">{submitError}</p>
   {/if}
 </li>
+
+{#if finder}
+  <Modal title="Uitgebreid zoeken" wide onclose={() => (finder = null)}>
+    <!-- Een standplaats die je in deze rij al koos, staat in de finder klaar. -->
+    <SpeciesFinder initialQuery={finder.query} initialLocationId={locationId} onadded={(uid) => onadded?.(uid)} />
+  </Modal>
+{/if}

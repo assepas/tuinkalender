@@ -30,7 +30,20 @@
           "enum": ["kas", "buiten", "pot"],
           "description": "Vast 'soort plek'-label, los van de vrije naam — houdt taak-condities (conditions.position in soortdata) betrouwbaar werkend."
         },
-        "soil": { "type": "string" }
+        "soil": {
+          "type": "string",
+          "description": "Grondsoort. Nu een van zand/klei/leem/veen; oudere tuinen kunnen hier nog vrije tekst hebben (zie normalizeSoil)."
+        },
+        "sun": {
+          "type": "string",
+          "enum": ["zon", "halfschaduw", "schaduw"],
+          "description": "Hoeveel licht de plek krijgt — voor 'past op deze plek' in Uitgebreid zoeken."
+        },
+        "moisture": {
+          "type": "string",
+          "enum": ["droog", "normaal", "vochtig", "nat"],
+          "description": "Hoe vochtig de grond op deze plek is."
+        }
       }
     },
     "planting": {

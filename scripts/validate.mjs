@@ -48,6 +48,12 @@ for (const f of speciesFiles) {
   }
   seenIds.set(data.id, f);
 
+  const height = data.growing?.height;
+  if (height && height.maxCm < height.minCm) {
+    errorCount++;
+    console.error(`\n✗ species/${f}\n  growing.height: maxCm (${height.maxCm}) is kleiner dan minCm (${height.minCm})`);
+  }
+
   // Taaktypes moeten bestaan in taskTypes.json (los gecheckt hieronder)
 }
 

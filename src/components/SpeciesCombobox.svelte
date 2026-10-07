@@ -6,9 +6,20 @@
   import { CATEGORY_ORDER, CATEGORY_LABELS } from "../lib/domain/plantings.js";
   import { auth } from "../lib/state/auth.svelte.js";
   import { requestNewSpecies } from "../lib/state/ui.svelte.js";
+  import Icon from "./Icon.svelte";
   import PlantIcon from "./PlantIcon.svelte";
 
-  let { speciesList, value = $bindable(null), id = undefined } = $props();
+  // onadvanced(zoekterm): toont een ingang naar Uitgebreid zoeken — in een
+  // breed veld als knop rechts in het veld, in een smal veld (mobiel) als
+  // vaste regel onder de lijst.
+  // Die regel is bewust geen optie: hij telt niet mee in de pijltjesnavigatie.
+  let { speciesList, value = $bindable(null), id = undefined, onadvanced = null } = $props();
+
+  // Op de breedte van het veld zelf, niet van het scherm: de knop moet naast
+  // de getypte tekst passen.
+  let width = $state(0);
+  const advancedInline = $derived(!!onadvanced && width >= 400);
+  const advancedInList = $derived(!!onadvanced && !advancedInline);
 
   let query = $state("");
   let open = $state(false);
@@ -74,6 +85,13 @@
     activeIndex = -1;
   }
 
+  function openAdvanced() {
+    const typed = open ? query.trim() : "";
+    closeList();
+    inputEl?.blur();
+    onadvanced(typed);
+  }
+
   function select(species) {
     value = species.id;
     closeList();
@@ -117,7 +135,7 @@
   }
 </script>
 
-<div class="combobox">
+<div class="combobox" class:has-advanced={advancedInline} bind:clientWidth={width}>
   <input
     bind:this={inputEl}
     {id}
@@ -138,13 +156,25 @@
     onkeydown={handleKeydown}
     onblur={closeList}
   />
+  {#if advancedInline}
+    <!-- mousedown tegenhouden: anders sluit de lijst (blur) en is de getypte tekst weg vóór de klik. -->
+    <button
+      type="button"
+      class="combobox-advanced"
+      onmousedown={(e) => e.preventDefault()}
+      onclick={openAdvanced}
+    >
+      <Icon name="filter" size={16} /> Uitgebreid zoeken…
+    </button>
+  {/if}
   {#if open}
+    <!-- svelte-ignore a11y_no_static_element_interactions -->
+    <div class="combobox-popup" onmousedown={(e) => e.preventDefault()}>
     <ul
       class="combobox-listbox"
       role="listbox"
       id="species-listbox"
       bind:this={listEl}
-      onmousedown={(e) => e.preventDefault()}
     >
       {#if flatOptions.length === 0}
         <li class="combobox-empty">Geen soorten gevonden.</li>
@@ -190,6 +220,12 @@
         </li>
       {/if}
     </ul>
+    {#if advancedInList}
+      <button type="button" class="combobox-advanced-row" onclick={openAdvanced}>
+        <Icon name="filter" size={18} /> Uitgebreid zoeken…
+      </button>
+    {/if}
+    </div>
   {/if}
 </div>
 
@@ -198,21 +234,74 @@
     position: relative;
   }
 
-  .combobox-listbox {
+  .combobox.has-advanced input {
+    padding-right: 11rem;
+  }
+
+  .combobox-advanced {
+    position: absolute;
+    top: 50%;
+    right: var(--space-1);
+    transform: translateY(-50%);
+    display: inline-flex;
+    align-items: center;
+    gap: var(--space-1);
+    height: calc(100% - 2 * var(--space-1));
+    padding: 0 var(--space-3);
+    background: var(--color-surface);
+    border: var(--border);
+    border-radius: var(--radius);
+    font-size: var(--step-1);
+    color: var(--color-primary);
+    white-space: nowrap;
+    cursor: pointer;
+  }
+
+  .combobox-advanced:hover {
+    background: var(--color-plant-bg);
+    border-color: var(--color-line-strong);
+  }
+
+  /* De lijst scrolt; de regel "Uitgebreid zoeken" eronder staat vast. */
+  .combobox-popup {
     position: absolute;
     z-index: 30;
     top: calc(100% + var(--space-1));
     left: 0;
     right: 0;
+    display: flex;
+    flex-direction: column;
     max-height: 18rem;
-    overflow-y: auto;
-    margin: 0;
-    padding: var(--space-1);
-    list-style: none;
     background: var(--color-surface-raised);
     border: var(--border);
     border-radius: var(--radius);
     box-shadow: 0 4px 16px rgba(35, 42, 30, 0.15);
+    overflow: hidden;
+  }
+
+  .combobox-listbox {
+    flex: 1 1 auto;
+    min-height: 0;
+    overflow-y: auto;
+    margin: 0;
+    padding: var(--space-1);
+    list-style: none;
+  }
+
+  .combobox-advanced-row {
+    flex: none;
+    display: flex;
+    align-items: center;
+    gap: var(--space-2);
+    min-height: 44px;
+    padding: var(--space-2) var(--space-3);
+    background: var(--color-surface);
+    border: none;
+    border-top: var(--border);
+    font-size: var(--step0);
+    color: var(--color-primary);
+    text-align: left;
+    cursor: pointer;
   }
 
   .combobox-empty {

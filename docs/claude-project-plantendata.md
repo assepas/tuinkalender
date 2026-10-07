@@ -53,6 +53,7 @@ Alleen deze velden; extra velden worden geweigerd. Verplicht: `schemaVersion`, `
   - `soil`: één of meer van `zand`, `klei`, `leem`, `veen`.
   - `moisture`: één of meer van `droog`, `normaal`, `vochtig`, `nat`.
   - `spacingCm`: plantafstand als geheel getal.
+  - `height`: gebruikelijke eindhoogte van–tot in centimeters: `{ "minCm": 60, "maxCm": 120 }`, hele getallen, `maxCm` minstens zo groot als `minCm`. Bij klimplanten de klimhoogte, bij fruitbomen de gangbare hoogte in een tuin. Wordt gebruikt voor het filter "Grootte" (laag tot 40 cm, middel tot 1 m, hoog tot 2,5 m, zeer hoog daarboven).
 - **info** (voor het detailvenster):
   - `intro`: 2–3 zinnen: wat voor plant het is en waarom je hem kweekt.
   - `water`: 1–2 zinnen: hoeveel en wanneer water geven.
@@ -128,7 +129,8 @@ Geen taken voor dingen die vanzelf gaan, zoals water geven bij een gevestigde va
     "sun": ["zon"],
     "soil": ["klei", "leem", "zand"],
     "moisture": ["normaal"],
-    "spacingCm": 50
+    "spacingCm": 50,
+    "height": { "minCm": 100, "maxCm": 200 }
   },
   "info": {
     "intro": "Zelfgekweekte tomaten zijn zoeter en geuriger dan welke winkeltomaat ook. Ze hebben veel warmte en zon nodig; in de kas of tegen een zuidmuur lukt het het best.",
