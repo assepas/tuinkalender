@@ -7,6 +7,7 @@
   import { ui } from "../lib/state/ui.svelte.js";
   import Icon from "./Icon.svelte";
   import Modal from "./Modal.svelte";
+  import { startTour } from "../lib/state/tour.svelte.js";
 
   // compact: knop voor de mobiele kopbalk — een icoon (44×44) met statusstip
   // i.p.v. het e-mailadres.
@@ -68,6 +69,7 @@
     <button
       type="button"
       class="account-button compact account-icon-button"
+      data-tour="account"
       aria-label={`Account: ${auth.user.email}`}
       onclick={() => (ui.accountOpen = true)}
     >
@@ -75,10 +77,10 @@
       <span class="account-icon-dot" class:warn={syncWarn}></span>
     </button>
   {:else}
-    <button type="button" class="account-button compact" onclick={() => (ui.accountOpen = true)}>Inloggen</button>
+    <button type="button" class="account-button compact" data-tour="account" onclick={() => (ui.accountOpen = true)}>Inloggen</button>
   {/if}
 {:else if auth.enabled}
-  <button type="button" class="account-button" onclick={() => (ui.accountOpen = true)}>
+  <button type="button" class="account-button" data-tour="account" onclick={() => (ui.accountOpen = true)}>
     {#if auth.user}
       <span class="account-dot" class:warn={syncWarn}></span>
       <span class="account-email">{auth.user.email}</span>
@@ -133,10 +135,37 @@
         </div>
       </form>
     {/if}
+    {#if ui.isMobile}
+      <!-- Op mobiel staat de rondleiding hier i.p.v. als losse knop (App.svelte). -->
+      <button
+        type="button"
+        class="tour-link"
+        onclick={() => {
+          close();
+          startTour();
+        }}
+      >
+        <Icon name="help" size={16} /> Rondleiding bekijken
+      </button>
+    {/if}
   </Modal>
 {/if}
 
 <style>
+  .tour-link {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--space-2);
+    margin-top: var(--space-4);
+    padding: var(--space-2) 0;
+    background: none;
+    border: none;
+    font-size: var(--step-1);
+    color: var(--color-ink-muted);
+    text-decoration: underline;
+    cursor: pointer;
+  }
+
   .account-button {
     display: inline-flex;
     align-items: center;

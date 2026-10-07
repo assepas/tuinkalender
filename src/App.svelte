@@ -13,22 +13,28 @@
   import { auth } from "./lib/state/auth.svelte.js";
   import { gardenState } from "./lib/state/garden.svelte.js";
   import { ui } from "./lib/state/ui.svelte.js";
+  import Tour from "./components/Tour.svelte";
+  import { tour, startTour, maybeAutoStart } from "./lib/state/tour.svelte.js";
+  import { onMount } from "svelte";
+
+  // Nieuwkomers krijgen bij het eerste bezoek de rondleiding (Tour.svelte).
+  onMount(maybeAutoStart);
 
   const tabs = [
-    { id: "tijdlijn", label: "Tijdlijn" },
-    { id: "kalender", label: "Maandoverzicht" },
+    { id: "tijdlijn", label: "Tijdlijn", tour: "timeline" },
+    { id: "kalender", label: "Maandoverzicht", tour: "calendar" },
   ];
   // "Mijn tuin ▾" in de header: een menu met deze twee weergaven.
   const gardenTabs = [
-    { id: "tuin", label: "Planten", icon: "sprout" },
-    { id: "standplaatsen", label: "Standplaatsen", short: "Plaatsen", icon: "location" },
+    { id: "tuin", label: "Planten", icon: "sprout", tour: "garden-menu" },
+    { id: "standplaatsen", label: "Standplaatsen", short: "Plaatsen", icon: "location", tour: "locations" },
   ];
   const adminTab = { id: "beheer", label: "Plantendata", icon: "flower" };
 
   // Mobiel staan alle weergaven naast elkaar in de onderbalk.
   const mobileTabs = $derived([
-    { id: "tijdlijn", label: "Tijdlijn", icon: "timeline" },
-    { id: "kalender", label: "Maandoverzicht", short: "Maanden", icon: "calendar" },
+    { id: "tijdlijn", label: "Tijdlijn", icon: "timeline", tour: "timeline" },
+    { id: "kalender", label: "Maandoverzicht", short: "Maanden", icon: "calendar", tour: "calendar" },
     ...gardenTabs,
     ...(auth.isAdmin ? [adminTab] : []),
   ]);
@@ -69,6 +75,7 @@
           <button
             type="button"
             class="tab"
+            data-tour={tab.tour}
             aria-current={ui.activeTab === tab.id ? "page" : undefined}
             onclick={() => (ui.activeTab = tab.id)}
           >
@@ -81,6 +88,7 @@
             <button
               type="button"
               class="tab tab-menu"
+              data-tour="garden-menu locations"
               aria-current={gardenTabActive ? "page" : undefined}
               aria-haspopup="menu"
               aria-expanded={open}
@@ -157,6 +165,24 @@
 
 {#if ui.isMobile}
   <MobileTabBar tabs={mobileTabs} active={ui.activeTab} onselect={(id) => (ui.activeTab = id)} />
+{/if}
+
+<!-- Rondleiding opnieuw: op desktop onopvallend rechtsonder; op mobiel in het
+     accountvenster (AccountMenu.svelte), tenzij er geen account bestaat. -->
+{#if !ui.isMobile || !auth.enabled}
+  <button
+    type="button"
+    class="tour-help-button no-print"
+    aria-label="Rondleiding"
+    title="Rondleiding"
+    onclick={startTour}
+  >
+    <Icon name="help" size={18} />
+  </button>
+{/if}
+
+{#if tour.open}
+  <Tour />
 {/if}
 
 {#if ui.gardenSettingsOpen}

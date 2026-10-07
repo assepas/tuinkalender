@@ -15,6 +15,7 @@
     <button
       type="button"
       class="mobile-tab"
+      data-tour={tab.tour}
       aria-label={tab.label}
       aria-current={active === tab.id ? "page" : undefined}
       onclick={() => onselect(tab.id)}

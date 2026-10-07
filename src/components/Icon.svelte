@@ -138,5 +138,9 @@
   {:else if name === "user"}
     <circle cx="12" cy="8.5" r="3.5" fill={color} fill-opacity="0.35" />
     <path d="M5 20c.8-3.6 3.6-5.5 7-5.5s6.2 1.9 7 5.5" />
+  {:else if name === "help"}
+    <circle cx="12" cy="12" r="9" />
+    <path d="M9.5 9.5a2.5 2.5 0 1 1 3.5 2.3c-.6.3-1 .9-1 1.6v.6" />
+    <circle cx="12" cy="17" r="0.6" fill={color} />
   {/if}
 </svg>

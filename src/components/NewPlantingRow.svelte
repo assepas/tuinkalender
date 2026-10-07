@@ -60,7 +60,7 @@
     {:else}
       <span class="planting-row-icon-placeholder" aria-hidden="true">+</span>
     {/if}
-    <span class="planting-row-names">
+    <span class="planting-row-names" data-tour="add-plant">
       <SpeciesCombobox id="new-planting-species" speciesList={catalog.speciesList} bind:value={speciesId} />
     </span>
     <span class="planting-row-location">
