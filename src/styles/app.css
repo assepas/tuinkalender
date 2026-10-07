@@ -941,7 +941,7 @@ textarea {
    "Toevoegen" onder "Verwijderen" staat. Afstanden zoals .planting-row. */
 .location-list,
 .location-table-head {
-  --location-cols: minmax(0, 1.4fr) minmax(0, 1.25fr) minmax(0, 1.45fr) minmax(0, 1fr) minmax(0, 1.2fr) 5.5rem 7rem 7rem;
+  --location-cols: minmax(0, 2fr) 5rem 5rem minmax(0, 1.3fr) 5rem 5.5rem 7rem 7rem;
   --location-areas: "name kind sun soil moisture count default action";
 }
 

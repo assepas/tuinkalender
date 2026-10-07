@@ -7,6 +7,10 @@
   import { gardenState } from "../lib/state/garden.svelte.js";
   import {
     LOCATION_KIND_LABELS,
+    LOCATION_KIND_ICONS,
+    SUN_ICONS,
+    SOIL_ICONS,
+    MOISTURE_ICONS,
     SUN_ORDER,
     SUN_LABELS,
     SOIL_ORDER,
@@ -32,20 +36,22 @@
   let addedIds = $state([]);
 
   const kindOptions = [
-    { value: "", label: "— geen —" },
-    ...Object.entries(LOCATION_KIND_LABELS).map(([value, label]) => ({ value, label })),
+    { value: "", label: "—" },
+    ...Object.entries(LOCATION_KIND_LABELS).map(([value, label]) => ({ value, label, ...LOCATION_KIND_ICONS[value] })),
   ];
 
   // Licht, grond en vocht: dezelfde vaste waarden als bij de soorten, zodat
   // Uitgebreid zoeken planten kan vinden die op deze plek passen. Op smalle
   // schermen (zonder kolomkop) zet app.css er een klein bijschrift boven.
-  const enumOptions = (order, labels, empty) => [
-    { value: "", label: empty },
-    ...order.map((value) => ({ value, label: labels[value] })),
+  // Gekozen licht/vocht/soort plek tonen alleen het icoon (iconOnly); grond
+  // houdt de tekst erbij — een grondsoort-icoontje alleen is te vaag.
+  const enumOptions = (order, labels, icons) => [
+    { value: "", label: "—" },
+    ...order.map((value) => ({ value, label: labels[value], ...icons[value] })),
   ];
-  const sunOptions = enumOptions(SUN_ORDER, SUN_LABELS, "—");
-  const moistureOptions = enumOptions(MOISTURE_ORDER, MOISTURE_LABELS, "—");
-  const baseSoilOptions = enumOptions(SOIL_ORDER, SOIL_LABELS, "—");
+  const sunOptions = enumOptions(SUN_ORDER, SUN_LABELS, SUN_ICONS);
+  const moistureOptions = enumOptions(MOISTURE_ORDER, MOISTURE_LABELS, MOISTURE_ICONS);
+  const baseSoilOptions = enumOptions(SOIL_ORDER, SOIL_LABELS, SOIL_ICONS);
 
   // Oude standplaatsen kunnen vrije tekst als grondsoort hebben. Herkennen we
   // die niet, dan blijft hij als extra optie staan i.p.v. stil te verdwijnen.
@@ -140,12 +146,13 @@
       />
       <Select
         class="location-kind"
+        iconOnly
         id={`${idPrefix}-location-kind`}
         aria-label="Soort plek"
         options={kindOptions}
         bind:value={kind}
       />
-      <Select class="location-sun" aria-label="Licht" options={sunOptions} bind:value={sun} />
+      <Select class="location-sun" aria-label="Licht" iconOnly options={sunOptions} bind:value={sun} />
       <Select
         class="location-soil"
         id={`${idPrefix}-location-soil`}
@@ -153,7 +160,7 @@
         options={baseSoilOptions}
         bind:value={soil}
       />
-      <Select class="location-moisture" aria-label="Vocht" options={moistureOptions} bind:value={moisture} />
+      <Select class="location-moisture" aria-label="Vocht" iconOnly options={moistureOptions} bind:value={moisture} />
       <button type="submit" class="btn btn-primary" disabled={!name.trim()}>Toevoegen</button>
     </form>
     {#if addError}
@@ -172,6 +179,7 @@
       />
       <Select
         class="location-kind"
+        iconOnly
         aria-label="Soort plek"
         options={kindOptions}
         value={location.kind ?? ""}
@@ -180,6 +188,7 @@
       <Select
         class="location-sun"
         aria-label="Licht"
+        iconOnly
         options={sunOptions}
         value={location.sun ?? ""}
         onchange={(value) => gardenState.updateLocation(location.id, { sun: value || undefined })}
@@ -194,6 +203,7 @@
       <Select
         class="location-moisture"
         aria-label="Vocht"
+        iconOnly
         options={moistureOptions}
         value={location.moisture ?? ""}
         onchange={(value) => gardenState.updateLocation(location.id, { moisture: value || undefined })}

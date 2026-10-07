@@ -72,6 +72,35 @@ export function soilLabel(text) {
   return soil ? SOIL_LABELS[soil] : (text ?? "").trim();
 }
 
+// Icoontjes (Icon.svelte) + kleur per waarde, voor keuzelijsten, filterchips,
+// de resultaatregel van Uitgebreid zoeken en het detailvenster (via
+// ConditionLabel.svelte). Kleuren zijn middentinten: leesbaar op licht én donker.
+const SUN_COLOR = "#c98f17";
+const MOISTURE_COLOR = "#3f7fc1";
+const KIND_COLOR = "#6f9150";
+export const SUN_ICONS = {
+  zon: { icon: "sun", color: SUN_COLOR },
+  halfschaduw: { icon: "half-shade", color: SUN_COLOR },
+  schaduw: { icon: "shade", color: SUN_COLOR },
+};
+export const SOIL_ICONS = {
+  zand: { icon: "soil-zand", color: "#c29a4e" },
+  klei: { icon: "soil-klei", color: "#a8603e" },
+  leem: { icon: "soil-leem", color: "#a57a48" },
+  veen: { icon: "soil-veen", color: "#7d604a" },
+};
+export const MOISTURE_ICONS = {
+  droog: { icon: "moisture-0", color: MOISTURE_COLOR },
+  normaal: { icon: "moisture-1", color: MOISTURE_COLOR },
+  vochtig: { icon: "moisture-2", color: MOISTURE_COLOR },
+  nat: { icon: "moisture-3", color: MOISTURE_COLOR },
+};
+export const LOCATION_KIND_ICONS = {
+  kas: { icon: "greenhouse", color: KIND_COLOR },
+  buiten: { icon: "ground", color: KIND_COLOR },
+  pot: { icon: "pot", color: KIND_COLOR },
+};
+
 /** ["halfschaduw", "zon"] → "Zon, halfschaduw" (in vaste volgorde). */
 export function formatEnumList(values, order, labels) {
   const text = order.filter((v) => values?.includes(v)).map((v) => labels[v].toLowerCase()).join(", ");

@@ -7,6 +7,12 @@
   // om een bestaande "icon"-naam gaat. Een echt nieuw icoon vraagt hier één
   // extra {#if}-tak.
   let { name, color = "currentColor", size = 16, strokeWidth = 1.6 } = $props();
+
+  // Druppel met de punt op (cx, top), schaal s (1 = ~7×11). Voor de vocht-iconen.
+  function drop(cx, top, s = 1) {
+    const r = 3.7 * s;
+    return `M${cx} ${top}c${2 * s} ${2.7 * s} ${r} ${5 * s} ${r} ${7 * s}a${r} ${r} 0 1 1 ${-2 * r} 0c0 ${-2 * s} ${r - 2 * s} ${-4.3 * s} ${r} ${-7 * s}Z`;
+  }
 </script>
 
 <svg
@@ -138,6 +144,56 @@
   {:else if name === "user"}
     <circle cx="12" cy="8.5" r="3.5" fill={color} fill-opacity="0.35" />
     <path d="M5 20c.8-3.6 3.6-5.5 7-5.5s6.2 1.9 7 5.5" />
+  {:else if name === "sun"}
+    <!-- Groeiomstandigheden (zie *_ICONS in plantings.js): licht zoals op plantlabels. -->
+    <circle cx="12" cy="12" r="4" fill={color} fill-opacity="0.45" />
+    <path d="M12 2.5v2.5M12 19v2.5M2.5 12H5M19 12h2.5M5.3 5.3l1.8 1.8M16.9 16.9l1.8 1.8M5.3 18.7l1.8-1.8M16.9 7.1l1.8-1.8" />
+  {:else if name === "half-shade"}
+    <circle cx="12" cy="12" r="7.5" />
+    <path d="M12 4.5a7.5 7.5 0 0 0 0 15Z" fill={color} fill-opacity="0.85" />
+  {:else if name === "shade"}
+    <circle cx="12" cy="12" r="7.5" fill={color} fill-opacity="0.85" />
+  {:else if name === "moisture-0"}
+    <path d={drop(12, 4, 1.25)} />
+  {:else if name === "moisture-1"}
+    <path d={drop(12, 4, 1.25)} fill={color} fill-opacity="0.6" />
+  {:else if name === "moisture-2"}
+    <path d={drop(7.5, 6.5, 1)} fill={color} fill-opacity="0.6" />
+    <path d={drop(16.5, 6.5, 1)} fill={color} fill-opacity="0.6" />
+  {:else if name === "moisture-3"}
+    <path d={drop(12, 2.5, 0.8)} fill={color} fill-opacity="0.6" />
+    <path d={drop(7.2, 11.5, 0.8)} fill={color} fill-opacity="0.6" />
+    <path d={drop(16.8, 11.5, 0.8)} fill={color} fill-opacity="0.6" />
+  {:else if name === "soil-zand"}
+    <rect x="3.5" y="5" width="17" height="14" rx="2" fill={color} fill-opacity="0.15" />
+    <g fill={color} stroke="none">
+      <circle cx="7.5" cy="9" r="1.1" /><circle cx="12" cy="8.5" r="1.1" /><circle cx="16.5" cy="9.5" r="1.1" />
+      <circle cx="9.5" cy="12.5" r="1.1" /><circle cx="14.5" cy="13" r="1.1" />
+      <circle cx="7" cy="15.8" r="1.1" /><circle cx="11.8" cy="16" r="1.1" /><circle cx="16.8" cy="16" r="1.1" />
+    </g>
+  {:else if name === "soil-klei"}
+    <rect x="3.5" y="5" width="17" height="14" rx="2" fill={color} fill-opacity="0.35" />
+    <path d="M3.5 9.7h17M3.5 14.3h17M9 5v4.7M15 9.7v4.6M8 14.3V19" />
+  {:else if name === "soil-leem"}
+    <rect x="3.5" y="5" width="17" height="14" rx="2" fill={color} fill-opacity="0.25" />
+    <path d="M3.5 12h17M12 12v7" />
+    <g fill={color} stroke="none">
+      <circle cx="7.5" cy="8.5" r="1.1" /><circle cx="12" cy="8" r="1.1" /><circle cx="16.5" cy="8.8" r="1.1" />
+    </g>
+  {:else if name === "soil-veen"}
+    <rect x="3.5" y="5" width="17" height="14" rx="2" fill={color} fill-opacity="0.3" />
+    <path d="M5.5 9c2-1.5 3.5 1.5 5.5 0s3.5 1.5 5.5 0 2 0 2 0M5.5 13c2-1.5 3.5 1.5 5.5 0s3.5 1.5 5.5 0 2 0 2 0M5.5 16.5c2-1.2 3.5 1.2 5.5 0s3.5 1.2 5.5 0" />
+  {:else if name === "greenhouse"}
+    <path d="M4 20v-9l8-6 8 6v9Z" fill={color} fill-opacity="0.2" />
+    <path d="M12 5v15M4 14.5h16M8 8v12M16 8v12" />
+  {:else if name === "ground"}
+    <path d="M3 17h18" />
+    <g fill={color} stroke="none">
+      <circle cx="6" cy="19.8" r="0.9" /><circle cx="11" cy="20.3" r="0.9" /><circle cx="16" cy="19.8" r="0.9" />
+    </g>
+    <path d="M12 17v-6" />
+    <path d="M12 11c0-3 2.2-5.3 5.3-5.3-0.3 3.2-2.4 5.3-5.3 5.3Z" fill={color} fill-opacity="0.5" />
+    <path d="M12 12c0-2.4-1.8-4.3-4.3-4.3 0.2 2.6 1.9 4.3 4.3 4.3Z" fill={color} fill-opacity="0.5" />
   {:else if name === "filter"}
     <path d="M4 7h10M18 7h2M4 17h4M12 17h8" />
     <circle cx="16" cy="7" r="2" />

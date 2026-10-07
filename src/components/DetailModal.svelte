@@ -4,6 +4,7 @@
   import NativeBadge from "./NativeBadge.svelte";
   import PlantIcon from "./PlantIcon.svelte";
   import Modal from "./Modal.svelte";
+  import ConditionLabel from "./ConditionLabel.svelte";
   import {
     SUN_ORDER,
     SUN_LABELS,
@@ -11,7 +12,9 @@
     SOIL_LABELS,
     MOISTURE_ORDER,
     MOISTURE_LABELS,
-    formatEnumList,
+    SUN_ICONS,
+    SOIL_ICONS,
+    MOISTURE_ICONS,
     formatHeight,
     soilLabel,
   } from "../lib/domain/plantings.js";
@@ -20,11 +23,14 @@
 
   const growing = $derived(detail.species?.growing);
   const info = $derived(detail.species?.info);
+  // Licht/grond/vocht als lijstje icoon + tekst, de rest als gewone tekst.
+  const conditions = (values, order, labels, icons) =>
+    order.filter((v) => values.includes(v)).map((v) => ({ ...icons[v], label: labels[v] }));
   const traits = $derived(
     [
-      growing?.sun?.length && ["Licht", formatEnumList(growing.sun, SUN_ORDER, SUN_LABELS)],
-      growing?.soil?.length && ["Grond", formatEnumList(growing.soil, SOIL_ORDER, SOIL_LABELS)],
-      growing?.moisture?.length && ["Vocht", formatEnumList(growing.moisture, MOISTURE_ORDER, MOISTURE_LABELS)],
+      growing?.sun?.length && ["Licht", conditions(growing.sun, SUN_ORDER, SUN_LABELS, SUN_ICONS)],
+      growing?.soil?.length && ["Grond", conditions(growing.soil, SOIL_ORDER, SOIL_LABELS, SOIL_ICONS)],
+      growing?.moisture?.length && ["Vocht", conditions(growing.moisture, MOISTURE_ORDER, MOISTURE_LABELS, MOISTURE_ICONS)],
       growing?.height && ["Hoogte", formatHeight(growing.height)],
       growing?.spacingCm && ["Plantafstand", `${growing.spacingCm} cm`],
     ].filter(Boolean)
@@ -102,7 +108,16 @@
     {#if traits.length > 0}
       <dl class="traits">
         {#each traits as [label, value] (label)}
-          <div><dt>{label}</dt><dd>{value}</dd></div>
+          <div>
+            <dt>{label}</dt>
+            {#if Array.isArray(value)}
+              <dd class="trait-conditions">
+                {#each value as condition (condition.label)}<ConditionLabel {...condition} size={16} />{/each}
+              </dd>
+            {:else}
+              <dd>{value}</dd>
+            {/if}
+          </div>
         {/each}
       </dl>
     {/if}
@@ -230,6 +245,12 @@
 
   .traits dd {
     margin: 0;
+  }
+
+  .trait-conditions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-1) var(--space-3);
   }
 
   .info-tips {

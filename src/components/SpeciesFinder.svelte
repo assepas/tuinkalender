@@ -15,6 +15,9 @@
     SOIL_LABELS,
     MOISTURE_ORDER,
     MOISTURE_LABELS,
+    SUN_ICONS,
+    SOIL_ICONS,
+    MOISTURE_ICONS,
     formatEnumList,
     formatHeight,
     toggleInSet,
@@ -34,6 +37,7 @@
   import { catalog } from "../lib/state/catalog.svelte.js";
   import { gardenState } from "../lib/state/garden.svelte.js";
   import { ui } from "../lib/state/ui.svelte.js";
+  import ConditionLabel from "./ConditionLabel.svelte";
   import PlantIcon from "./PlantIcon.svelte";
   import Select from "./Select.svelte";
 
@@ -104,10 +108,10 @@
     return months.length === 1 ? `bloei ${first}` : `bloei ${first}–${last}`;
   }
 
-  function summary(species) {
+  // Tekstdeel van de resultaatregel; licht en vocht staan ervoor als icoontjes.
+  function summaryText(species) {
     const g = species.growing ?? {};
     return [
-      g.sun?.length && formatEnumList(g.sun, SUN_ORDER, SUN_LABELS).toLowerCase(),
       g.soil?.length && formatEnumList(g.soil, SOIL_ORDER, SOIL_LABELS).toLowerCase(),
       g.height && formatHeight(g.height),
       bloomLabel(species),
@@ -120,7 +124,7 @@
   const lowerFirst = (text) => text.charAt(0).toLowerCase() + text.slice(1);
 </script>
 
-{#snippet chipGroup(label, key, order, labels, hints = {})}
+{#snippet chipGroup(label, key, order, labels, hints = {}, icons = null)}
   <div class="filter-bar" role="group" aria-label={label}>
     <span class="filter-bar-label">{label}</span>
     {#each order as value (value)}
@@ -131,10 +135,23 @@
         title={hints[value]}
         onclick={() => toggle(key, value)}
       >
-        {labels[value]}
+        {#if icons}
+          <ConditionLabel {...icons[value]} label={labels[value]} size={16} />
+        {:else}
+          {labels[value]}
+        {/if}
       </button>
     {/each}
   </div>
+{/snippet}
+
+<!-- Licht of vocht van een soort als rijtje icoontjes (naam in de tooltip). -->
+{#snippet iconRow(values, order, labels, icons)}
+  <span class="finder-icons">
+    {#each order.filter((v) => values?.includes(v)) as value (value)}
+      <ConditionLabel {...icons[value]} label={labels[value]} iconOnly size={16} />
+    {/each}
+  </span>
 {/snippet}
 
 <div class="finder">
@@ -175,9 +192,9 @@
 
   {#if showFilters}
     <div id="finder-filters" class="finder-filters">
-      {@render chipGroup("Licht", "sun", SUN_ORDER, SUN_LABELS)}
-      {@render chipGroup("Grond", "soil", SOIL_ORDER, SOIL_LABELS)}
-      {@render chipGroup("Vocht", "moisture", MOISTURE_ORDER, MOISTURE_LABELS)}
+      {@render chipGroup("Licht", "sun", SUN_ORDER, SUN_LABELS, {}, SUN_ICONS)}
+      {@render chipGroup("Grond", "soil", SOIL_ORDER, SOIL_LABELS, {}, SOIL_ICONS)}
+      {@render chipGroup("Vocht", "moisture", MOISTURE_ORDER, MOISTURE_LABELS, {}, MOISTURE_ICONS)}
 
       <div class="filter-bar" role="group" aria-label="Bloeikleur">
         <span class="filter-bar-label">Bloeikleur</span>
@@ -275,7 +292,11 @@
             >
               <span class="finder-name-text">{species.name}</span>
               {#if species.latin}<span class="finder-latin">{species.latin}</span>{/if}
-              <span class="finder-summary">{summary(species)}</span>
+              <span class="finder-summary">
+                {#if species.growing?.sun?.length}{@render iconRow(species.growing.sun, SUN_ORDER, SUN_LABELS, SUN_ICONS)}{/if}
+                {#if species.growing?.moisture?.length}{@render iconRow(species.growing.moisture, MOISTURE_ORDER, MOISTURE_LABELS, MOISTURE_ICONS)}{/if}
+                <span>{summaryText(species)}</span>
+              </span>
             </button>
             <div class="finder-actions">
               {#if inGarden.has(species.id) && !addedIds.has(species.id)}
@@ -301,7 +322,11 @@
                 {#if species.growing?.moisture?.length}
                   <div>
                     <dt>Vocht</dt>
-                    <dd>{formatEnumList(species.growing.moisture, MOISTURE_ORDER, MOISTURE_LABELS)}</dd>
+                    <dd class="finder-conditions">
+                      {#each MOISTURE_ORDER.filter((v) => species.growing.moisture.includes(v)) as value (value)}
+                        <ConditionLabel {...MOISTURE_ICONS[value]} label={MOISTURE_LABELS[value]} size={16} />
+                      {/each}
+                    </dd>
                   </div>
                 {/if}
                 {#if species.growing?.spacingCm}
@@ -438,7 +463,23 @@
   .finder-summary {
     font-size: var(--step-1);
     color: var(--color-ink-faint);
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: var(--space-1) var(--space-3);
   }
+
+  .finder-icons {
+    display: inline-flex;
+    gap: 2px;
+  }
+
+  .finder-conditions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-1) var(--space-3);
+  }
+
 
   .finder-actions {
     flex: none;

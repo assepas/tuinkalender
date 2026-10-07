@@ -11,6 +11,11 @@
   // waarde): met onchange past de aanroeper de waarde zelf aan (of niet, bv.
   // na een bevestiging), net als bij LocationSelect.
   // Een optie met value "__add__" krijgt de "toevoegen"-stijl (lijntje erboven).
+  // Opties mogen een `icon` (+ `color`) hebben: dat staat dan vóór het label.
+  // Met iconOnly toont de knop van een gekozen optie met icoon alléén het
+  // icoon; de naam staat dan in de tooltip en het aria-label.
+  import Icon from "./Icon.svelte";
+
   let {
     options,
     value = $bindable(),
@@ -20,6 +25,7 @@
     placeholder = "Kies…",
     class: className = "",
     "aria-label": ariaLabel = undefined,
+    iconOnly = false,
   } = $props();
 
   const uid = Math.random().toString(36).slice(2, 8);
@@ -31,6 +37,10 @@
 
   const selectedIndex = $derived(options.findIndex((o) => o.value === value));
   const selected = $derived(options[selectedIndex] ?? null);
+  const showIconOnly = $derived(iconOnly && !!selected?.icon);
+  const buttonLabel = $derived(
+    showIconOnly ? (ariaLabel ? `${ariaLabel}: ${selected.label}` : selected.label) : ariaLabel
+  );
 
   function firstEnabledFrom(start, step) {
     for (let i = start; i >= 0 && i < options.length; i += step) {
@@ -94,18 +104,23 @@
     type="button"
     class="select-button"
     class:open
+    class:icon-only={showIconOnly}
+    title={showIconOnly ? selected.label : undefined}
     role="combobox"
     aria-haspopup="listbox"
     aria-expanded={open}
     aria-controls={listboxId}
     aria-activedescendant={open && activeIndex >= 0 ? `${listboxId}-${activeIndex}` : undefined}
-    aria-label={ariaLabel}
+    aria-label={buttonLabel}
     {disabled}
     onclick={() => (open ? closeList() : openList())}
     onkeydown={handleKeydown}
     onblur={closeList}
   >
-    <span class="select-value" class:placeholder={!selected}>{selected ? selected.label : placeholder}</span>
+    <span class="select-value" class:placeholder={!selected}>
+      {#if selected?.icon}<Icon name={selected.icon} color={selected.color} size={20} />{/if}
+      {#if !showIconOnly}<span class="select-value-text">{selected ? selected.label : placeholder}</span>{/if}
+    </span>
     <svg class="select-chevron" viewBox="0 0 16 16" aria-hidden="true">
       <path d="M4 6l4 4 4-4" />
     </svg>
@@ -140,6 +155,7 @@
               <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3.5 8.5l3 3 6-7" /></svg>
             {/if}
           </span>
+          {#if option.icon}<Icon name={option.icon} color={option.color} size={20} />{/if}
           <span class="select-option-label">{option.label}</span>
         </li>
       {/each}
@@ -186,10 +202,21 @@
   }
 
   .select-value {
+    display: flex;
+    align-items: center;
+    gap: var(--space-2);
+    min-width: 0;
+  }
+
+  .select-value-text {
     min-width: 0;
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
+  }
+
+  .select-value :global(svg) {
+    flex: none;
   }
 
   .select-value.placeholder {
