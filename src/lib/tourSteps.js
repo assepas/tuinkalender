@@ -37,7 +37,7 @@ export function tourSteps({ isMobile, helpInMenu }) {
     {
       target: "calendar",
       title: "Maandoverzicht",
-      text: "Alle taken per maand op een rij — handig om af te drukken en mee te nemen naar de tuin.",
+      text: "Alle taken per maand op een rij. Handig om af te drukken en op te hangen.",
     },
     {
       target: "account",
@@ -47,8 +47,8 @@ export function tourSteps({ isMobile, helpInMenu }) {
     {
       title: "Klaar!",
       text: helpInMenu
-        ? "Deze rondleiding vind je terug in het accountmenu rechtsboven. Veel tuinplezier!"
-        : "Deze rondleiding vind je terug onder het vraagteken rechtsonder. Veel tuinplezier!",
+        ? "Deze rondleiding vind je terug in het accountmenu rechtsboven. Veel tuinierplezier!"
+        : "Deze rondleiding vind je terug onder het vraagteken rechtsonder. Veel tuinierplezier!",
       finish: { label: "Begin met planten", tab: "tuin" },
     },
   ];
