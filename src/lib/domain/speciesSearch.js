@@ -5,7 +5,7 @@
 // Tags zijn de uitzondering: "vlinderplant" + "eetbaar" betekent allebei.
 
 import { getBloomMonths } from "./calendar.js";
-import { compareByKey, normalizeSoil } from "./plantings.js";
+import { compareByKey, matchesCategories, normalizeSoil } from "./plantings.js";
 
 // De bloemkleurnamen in de data zijn vrij ("wit-roze", "crèmewit", "lila").
 // Voor het filter vallen ze via trefwoorden in een handvol families; een
@@ -94,7 +94,7 @@ export function searchSpecies(speciesList, filters) {
     ) {
       return false;
     }
-    if (filters.categories.size > 0 && !filters.categories.has(s.category)) return false;
+    if (!matchesCategories(s, filters.categories)) return false;
     if (filters.native.size > 0 && !filters.native.has(s.nativeStatus ?? "onbekend")) return false;
     if (!anyOf(filters.sun, s.growing?.sun)) return false;
     if (!anyOf(filters.soil, s.growing?.soil)) return false;

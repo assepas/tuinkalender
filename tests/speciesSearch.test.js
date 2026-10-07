@@ -114,6 +114,13 @@ describe("searchSpecies", () => {
   it("filtert op type", () => {
     expect(ids(searchSpecies(list, filters({ categories: new Set(["kruid"]) })))).toEqual(["peterselie"]);
   });
+
+  it("type-filter telt tags mee (perenboom onder fruit)", () => {
+    const peer = species("perenboom", { category: "boom", tags: ["fruitboom"] });
+    const bes = species("blauwe-bes", { category: "fruit", tags: ["struik"] });
+    expect(ids(searchSpecies([peer, bes, hosta], filters({ categories: new Set(["fruit"]) })))).toEqual(["blauwe-bes", "perenboom"]);
+    expect(ids(searchSpecies([peer, bes, hosta], filters({ categories: new Set(["struik"]) })))).toEqual(["blauwe-bes"]);
+  });
 });
 
 describe("hulpjes", () => {

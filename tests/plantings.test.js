@@ -113,6 +113,16 @@ describe("filterPlantingRows", () => {
     expect(result).toEqual([rows[1], rows[2]]);
   });
 
+  it("telt categorieën in tags mee; fruitboom is fruit én boom", () => {
+    const peer = { planting: { locationId: "loc1" }, species: { category: "boom", tags: ["fruitboom"] } };
+    const bes = { planting: { locationId: "loc1" }, species: { category: "fruit", tags: ["struik"] } };
+    const extra = [...rows, peer, bes];
+    expect(filterPlantingRows(extra, new Set(), new Set(["fruit"]))).toEqual([rows[1], rows[2], peer, bes]);
+    expect(filterPlantingRows(extra, new Set(), new Set(["boom"]))).toEqual([peer]);
+    expect(filterPlantingRows(extra, new Set(), new Set(["struik"]))).toEqual([bes]);
+    expect(filterPlantingRows(extra, new Set(), new Set(["groente"]))).toEqual([rows[0], rows[3]]);
+  });
+
   it("combineert beide filters (AND)", () => {
     const result = filterPlantingRows(rows, new Set(["loc1"]), new Set(["fruit"]));
     expect(result).toEqual([rows[2]]);

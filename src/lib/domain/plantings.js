@@ -32,6 +32,27 @@ export const CATEGORY_LABELS = {
   boom: "Boom",
 };
 
+// Een soort hoort bij zijn eigen categorie én bij categorieën die als tag op
+// de soort staan (blauwe bes: fruit + tag "struik"); "fruitboom" telt als
+// fruit én boom. Zo staat de perenboom ook onder het filter Fruit.
+const TAG_CATEGORIES = { fruitboom: ["fruit", "boom"] };
+
+export function speciesCategories(species) {
+  const result = new Set([species.category]);
+  for (const tag of species.tags ?? []) {
+    if (CATEGORY_ORDER.includes(tag)) result.add(tag);
+    for (const c of TAG_CATEGORIES[tag] ?? []) result.add(c);
+  }
+  return result;
+}
+
+/** Lege Set betekent "geen filter". */
+export function matchesCategories(species, categories) {
+  if (categories.size === 0) return true;
+  const own = speciesCategories(species);
+  return [...categories].some((c) => own.has(c));
+}
+
 // Groeiomstandigheden (species.growing, vaste enums in species.schema.json).
 // Gedeeld door het detailvenster, de beheer-editor en een eventueel filter.
 // "Licht" i.p.v. "standplaats": dat woord is in de app al de plek in je tuin.
@@ -179,7 +200,7 @@ export function filterPlantingRows(rows, locationIds, categories) {
     result = result.filter((r) => r.planting.locationId && locationIds.has(r.planting.locationId));
   }
   if (categories.size > 0) {
-    result = result.filter((r) => r.species && categories.has(r.species.category));
+    result = result.filter((r) => r.species && matchesCategories(r.species, categories));
   }
   return result;
 }
